@@ -1,0 +1,20 @@
+{
+  "implementation": "serial",
+  "dataset": "google",
+  "environment": "local workstation",
+  "nodes": 875713,
+  "edges": 5105039,
+  "alpha": 0.84999999999999998,
+  "tolerance_l1": 1e-08,
+  "max_iterations": 1000,
+  "fixed_iterations": 0,
+  "warmup_runs": 1,
+  "repeat_runs": 3,
+  "iterations": 90,
+  "converged": true,
+  "solve_median_s": 1.2894747,
+  "solve_min_s": 1.2555628000000001,
+  "solve_max_s": 1.8371812999999999,
+  "max_residual_l1": 7.5197238091690441e-09,
+  "max_rank_sum_error": 1.4777068457760834e-12
+}
