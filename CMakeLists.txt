@@ -21,3 +21,7 @@ target_link_libraries(pagerank_serial PRIVATE utility)
 find_package(OpenMP REQUIRED COMPONENTS CXX)
 add_executable(pagerank_openmp src/pagerank_openmp.cpp)
 target_link_libraries(pagerank_openmp PRIVATE utility OpenMP::OpenMP_CXX)
+
+find_package(MPI REQUIRED COMPONENTS CXX)
+add_executable(pagerank_mpi src/pagerank_mpi.cpp)
+target_link_libraries(pagerank_mpi PRIVATE utility MPI::MPI_CXX)
