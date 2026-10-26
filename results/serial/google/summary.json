@@ -12,9 +12,9 @@
   "repeat_runs": 3,
   "iterations": 90,
   "converged": true,
-  "solve_median_s": 1.2894747,
-  "solve_min_s": 1.2555628000000001,
-  "solve_max_s": 1.8371812999999999,
+  "solve_median_s": 1.8008135000000001,
+  "solve_min_s": 1.770556,
+  "solve_max_s": 1.8030352000000001,
   "max_residual_l1": 7.5197238091690441e-09,
   "max_rank_sum_error": 1.4777068457760834e-12
 }

@@ -1,38 +1,15 @@
-#include "graph_io.hpp"
-#include "pagerank_result.hpp"
+#include "utility.hpp"
 
 #include <algorithm>
 #include <chrono>
 #include <cmath>
-#include <filesystem>
-#include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <numeric>
 #include <sstream>
-#include <stdexcept>
 #include <string>
 
-double alpha = 0.85;
-double tolerance = 1e-8;
-std::size_t max_iterations = 1000;
-std::size_t fixed_iterations = 0;  // Zero uses the convergence rule.
-const int warmup_runs = 1;
-const int repeat_runs = 3;
 const std::string output_root = "results/serial";
-const std::string experiment_environment = "local workstation";
-
-struct Dataset {
-    std::string name, edges, nodes;
-};
-
-const Dataset datasets[] = {
-    {"google", "data/raw/web-Google.txt", ""},
-    {"uniform", "data/synthetic/uniform.edges",
-                "data/synthetic/uniform.nodes"},
-    {"hub", "data/synthetic/hub.edges",
-            "data/synthetic/hub.nodes"}
-};
 
 Result pagerank_serial(const Graph& g) {
     using Clock = std::chrono::steady_clock;
@@ -86,30 +63,6 @@ Result pagerank_serial(const Graph& g) {
     return result;
 }
 
-std::ofstream output_file(const std::string& path) {
-    const auto directory = std::filesystem::path(path).parent_path();
-    if (!directory.empty()) std::filesystem::create_directories(directory);
-    std::ofstream out(path);
-    if (!out) throw std::runtime_error("Cannot create output: " + path);
-    out << std::setprecision(17);
-    return out;
-}
-
-void write_ranks(const std::string& path, const Graph& graph, const Result& result) {
-    auto out = output_file(path);
-    out << "node_id,rank,in_degree,out_degree\n";
-    for (std::size_t v = 0; v < graph.size(); ++v)
-        out << graph.original_ids[v] << ',' << result.ranks[v] << ','
-            << graph.in_offsets[v + 1] - graph.in_offsets[v] << ',' << graph.out_degree[v] << '\n';
-}
-
-void write_history(const std::string& path, const Result& result) {
-    auto out = output_file(path);
-    out << "iteration,delta_l1\n";
-    for (std::size_t k = 0; k < result.deltas.size(); ++k)
-        out << k + 1 << ',' << result.deltas[k] << '\n';
-}
-
 int main() {
     bool success = true;
     for (const auto& dataset : datasets) {
@@ -134,9 +87,7 @@ int main() {
             timings << run << ',' << result.deltas.size() << ',' << result.converged << ','
                     << result.solve_seconds << ',' << result.residual_l1 << ',' << result.rank_sum << '\n';
         }
-        std::sort(times.begin(), times.end());
-        const auto middle = times.size() / 2;
-        const double median = times.size() % 2 ? times[middle] : (times[middle - 1] + times[middle]) / 2;
+        const auto timing = summarize_times(times);
 
         // Write files after measurements; ranks and history come from the last run.
         const auto folder = output_root + '/' + dataset.name;
@@ -158,14 +109,14 @@ int main() {
                 << ",\n  \"repeat_runs\": " << repeat_runs
                 << ",\n  \"iterations\": " << result.deltas.size()
                 << ",\n  \"converged\": " << converged
-                << ",\n  \"solve_median_s\": " << median
-                << ",\n  \"solve_min_s\": " << times.front()
-                << ",\n  \"solve_max_s\": " << times.back()
+                << ",\n  \"solve_median_s\": " << timing.median
+                << ",\n  \"solve_min_s\": " << timing.minimum
+                << ",\n  \"solve_max_s\": " << timing.maximum
                 << ",\n  \"max_residual_l1\": " << max_residual
                 << ",\n  \"max_rank_sum_error\": " << max_sum_error << "\n}\n";
         std::cout << dataset.name << ": iterations=" << result.deltas.size()
                 << ", converged=" << std::boolalpha << converged
-                << ", median=" << median << "s, residual=" << max_residual << '\n';
+                << ", median=" << timing.median << "s, residual=" << max_residual << '\n';
         success = success && (converged || fixed_iterations);
     }
     return success ? 0 : 2;
