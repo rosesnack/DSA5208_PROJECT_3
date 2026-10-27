@@ -23,5 +23,11 @@ add_executable(pagerank_openmp src/pagerank_openmp.cpp)
 target_link_libraries(pagerank_openmp PRIVATE utility OpenMP::OpenMP_CXX)
 
 find_package(MPI REQUIRED COMPONENTS CXX)
+add_library(mpi_graph src/mpi_graph.cpp)
+target_link_libraries(mpi_graph PUBLIC graph_io MPI::MPI_CXX)
+
 add_executable(pagerank_mpi src/pagerank_mpi.cpp)
-target_link_libraries(pagerank_mpi PRIVATE utility MPI::MPI_CXX)
+target_link_libraries(pagerank_mpi PRIVATE utility mpi_graph)
+
+add_executable(pagerank_hybrid src/pagerank_hybrid.cpp)
+target_link_libraries(pagerank_hybrid PRIVATE utility mpi_graph OpenMP::OpenMP_CXX)
