@@ -15,7 +15,7 @@
 const int thread_counts[] = {1, 2, 4, 8};
 const int max_total_threads = 8;
 const int chunk_size = 64;
-const std::string output_root = "results/hybrid";
+std::string output_root() { return results_root() + "/hybrid"; }
 
 Result pagerank_hybrid(const Partition& local, int thread_count) {
     const int count = local.counts[local.rank];
@@ -133,7 +133,7 @@ int main() {
     }
     bool success = true;
     try {
-        for (const auto& dataset : datasets) {
+        for (const auto& dataset : datasets()) {
             Graph graph;
             if (rank == 0) {
                 std::cout << "Running " << dataset.name << " p" << processes << "..." << std::endl;
@@ -142,7 +142,7 @@ int main() {
             const auto local = distribute_graph(graph);
             for (int thread_count : thread_counts) {
                 if (processes * thread_count > max_total_threads) continue;
-                for (int run = 0; run < warmup_runs; ++run) pagerank_hybrid(local, thread_count);
+                for (int run = 0; run < warmup_runs(); ++run) pagerank_hybrid(local, thread_count);
 
                 Result result;
                 std::vector<double> times;
@@ -153,7 +153,7 @@ int main() {
                 std::ostringstream timings;
                 timings << std::setprecision(17) << std::boolalpha
                         << "run,processes,threads_min,threads_max,total_threads,iterations,converged,solve_s,residual_l1,rank_sum\n";
-                for (int run = 1; run <= repeat_runs; ++run) {
+                for (int run = 1; run <= repeat_runs(); ++run) {
                     result = pagerank_hybrid(local, thread_count);
                     MPI_Allgather(&result.threads, 1, MPI_INT, threads_per_process.data(), 1, MPI_INT, MPI_COMM_WORLD);
                     total_threads = std::accumulate(threads_per_process.begin(), threads_per_process.end(), 0);
@@ -172,7 +172,7 @@ int main() {
                 if (rank != 0) continue;
 
                 const auto timing = summarize_times(times);
-                const auto folder = output_root + '/' + dataset.name + "/p" + std::to_string(processes) + "_t" + std::to_string(thread_count);
+                const auto folder = output_root() + '/' + dataset.name + "/p" + std::to_string(processes) + "_t" + std::to_string(thread_count);
                 output_file(folder + "/timings.csv") << timings.str();
                 write_ranks(folder + "/ranks.csv", graph, result);
                 write_history(folder + "/history.csv", result);
@@ -180,7 +180,8 @@ int main() {
                 summary << std::boolalpha
                         << "{\n  \"implementation\": \"hybrid\","
                         << "\n  \"dataset\": " << std::quoted(dataset.name)
-                        << ",\n  \"environment\": " << std::quoted(experiment_environment)
+                        << ",\n  \"environment\": " << std::quoted(experiment_environment())
+                        << ",\n  \"build_type\": " << std::quoted(build_type)
                         << ",\n  \"processes\": " << processes
                         << ",\n  \"requested_threads\": " << thread_count
                         << ",\n  \"total_threads\": " << total_threads
@@ -203,8 +204,8 @@ int main() {
                         << ",\n  \"tolerance_l1\": " << tolerance
                         << ",\n  \"max_iterations\": " << max_iterations
                         << ",\n  \"fixed_iterations\": " << fixed_iterations
-                        << ",\n  \"warmup_runs\": " << warmup_runs
-                        << ",\n  \"repeat_runs\": " << repeat_runs
+                        << ",\n  \"warmup_runs\": " << warmup_runs()
+                        << ",\n  \"repeat_runs\": " << repeat_runs()
                         << ",\n  \"iterations\": " << result.deltas.size()
                         << ",\n  \"converged\": " << converged
                         << ",\n  \"solve_median_s\": " << timing.median

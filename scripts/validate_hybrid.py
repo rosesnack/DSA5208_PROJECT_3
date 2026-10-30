@@ -1,16 +1,15 @@
 """Validate saved MPI + OpenMP runs and compare their ranks and timings with serial runs."""
+import argparse
 import csv
 import json
 import math
 
-from validate_serial import DATASETS, ROOT, read_csv, validate
+from validate_serial import DATASETS, RESULTS_ROOT, ROOT, read_csv, validate
 
-RESULTS = ROOT / "results/hybrid"
-SERIAL_RESULTS = ROOT / "results/serial"
-PROCESS_COUNTS = (1, 2, 4, 8)
+RESULTS = RESULTS_ROOT / "hybrid"
+SERIAL_RESULTS = RESULTS_ROOT / "serial"
 THREAD_COUNTS = (1, 2, 4, 8)
 MAX_TOTAL_THREADS = 8
-CONFIGURATIONS = [(p, t) for p in PROCESS_COUNTS for t in THREAD_COUNTS if p * t <= MAX_TOTAL_THREADS]
 RANK_L1_TOLERANCE = 1e-8
 
 
@@ -29,8 +28,8 @@ def compare(name, folder, processes, threads, baseline, serial_ranks):
         assert int(row["threads_min"]) == min(actual) and int(row["threads_max"]) == max(actual), "Team sizes changed between repeats"
         assert int(row["total_threads"]) == total_threads, "Total thread count changed between repeats"
     for key in ("dataset", "environment", "nodes", "edges", "alpha", "tolerance_l1",
-                "max_iterations", "fixed_iterations", "warmup_runs", "repeat_runs"):
-        assert summary[key] == baseline[key], f"Serial/hybrid settings differ: {key}"
+                "max_iterations", "fixed_iterations", "warmup_runs", "repeat_runs", "build_type"):
+        assert summary.get(key) == baseline.get(key), f"Serial/hybrid settings differ: {key}"
 
     # Match original IDs, so comparison does not depend on row order.
     parallel_ranks = {int(row["node_id"]): float(row["rank"]) for row in read_csv(folder / "ranks.csv")}
@@ -47,6 +46,12 @@ def compare(name, folder, processes, threads, baseline, serial_ranks):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--processes", nargs="+", type=int, choices=(1, 2, 4, 8),
+                        default=(1, 2, 4, 8), help="MPI process counts to validate")
+    processes_to_validate = tuple(dict.fromkeys(parser.parse_args().processes))
+    configurations = [(p, t) for p in processes_to_validate for t in THREAD_COUNTS
+                      if p * t <= MAX_TOTAL_THREADS]
     checks, scaling = [], []
     for name, (edge_path, node_path) in DATASETS.items():
         # Validate the serial reference before using it to assess the parallel output.
@@ -59,10 +64,10 @@ def main():
                             for row in read_csv(SERIAL_RESULTS / name / "ranks.csv")}
         except (AssertionError, OSError, ValueError, KeyError) as error:
             checks.extend({"dataset": name, "processes": p, "requested_threads": t, "passed": False,
-                        "error": f"Serial reference: {error}"} for p, t in CONFIGURATIONS)
+                        "error": f"Serial reference: {error}"} for p, t in configurations)
             print(f"FAIL: {name} serial reference: {error}", flush=True)
             continue
-        for processes, threads in CONFIGURATIONS:
+        for processes, threads in configurations:
             folder = RESULTS / name / f"p{processes}_t{threads}"
             print(f"Checking {name}/p{processes}_t{threads}...", flush=True)
             try:
@@ -77,6 +82,7 @@ def main():
             checks.append(check)
     passed = sum(check["passed"] for check in checks)
     report = {"passed": passed, "failed": len(checks) - passed,
+            "process_counts": processes_to_validate,
             "method": "Independent residual checks and full rank comparison with validated serial output",
             "rank_l1_tolerance": RANK_L1_TOLERANCE, "checks": checks}
     RESULTS.mkdir(parents=True, exist_ok=True)

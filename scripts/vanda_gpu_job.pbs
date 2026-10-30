@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+#PBS -N dsa5208-pagerank-gpu
+#PBS -q auto_free
+#PBS -l select=1:ncpus=36:mpiprocs=1:ompthreads=36:ngpus=1:mem=240gb
+#PBS -l walltime=04:00:00
+#PBS -j oe
+#PBS -V
+
+set -euo pipefail
+cd "${PBS_O_WORKDIR:?Submit with qsub from the project directory}"
+module load cuda12.4/toolkit/12.4.1 CMake/3.29.3-GCCcore-13.3.0
+
+export PAGERANK_ENVIRONMENT=vanda-a40-gpu
+export PAGERANK_RUN_ID="${PBS_JOBID:-manual}"
+export PAGERANK_RESULTS_ROOT="results/${PAGERANK_ENVIRONMENT}/${PAGERANK_RUN_ID}"
+export PAGERANK_REPEATS=5
+export PAGERANK_WARMUPS=1
+
+nvidia-smi
+test -x third_party/kokkos/bin/nvcc_wrapper || {
+    echo "Missing pinned Kokkos source at third_party/kokkos; see README/setup instructions." >&2
+    exit 2
+}
+
+cmake -S third_party/kokkos -B build-kokkos-source \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_CXX_COMPILER="$PWD/third_party/kokkos/bin/nvcc_wrapper" \
+    -DKokkos_ENABLE_CUDA=ON \
+    -DKokkos_ARCH_AMPERE86=ON \
+    -DCMAKE_INSTALL_PREFIX="$PWD/kokkos-install"
+cmake --build build-kokkos-source --parallel 8
+cmake --install build-kokkos-source
+
+cmake -S . -B build-cuda -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_CXX_COMPILER="$(command -v g++)" \
+    -DBUILD_CUDA=ON -DCMAKE_CUDA_ARCHITECTURES=86
+cmake --build build-cuda --parallel 8
+
+cmake -S . -B build-kokkos-cuda -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_CXX_COMPILER="$PWD/third_party/kokkos/bin/nvcc_wrapper" \
+    -DBUILD_KOKKOS=ON -DCMAKE_PREFIX_PATH="$PWD/kokkos-install"
+cmake --build build-kokkos-cuda --parallel 8
+
+CUDA_BUILD_DIR=build-cuda \
+KOKKOS_BUILD_DIR=build-kokkos-cuda \
+KOKKOS_BACKEND=Cuda \
+bash scripts/run_gpu_suite.sh

@@ -3,10 +3,10 @@ import csv
 import json
 import math
 
-from validate_serial import DATASETS, ROOT, read_csv, validate
+from validate_serial import DATASETS, RESULTS_ROOT, ROOT, read_csv, validate
 
-RESULTS = ROOT / "results/openmp"
-SERIAL_RESULTS = ROOT / "results/serial"
+RESULTS = RESULTS_ROOT / "openmp"
+SERIAL_RESULTS = RESULTS_ROOT / "serial"
 THREAD_COUNTS = (1, 2, 4, 8)
 RANK_L1_TOLERANCE = 1e-8
 
@@ -18,8 +18,8 @@ def compare(name, folder, threads, baseline, serial_ranks):
     assert 1 <= summary["threads"] <= threads, "Invalid actual thread count"
     assert all(int(row["threads"]) == summary["threads"] for row in read_csv(folder / "timings.csv")), "Team size changed between repeats"
     for key in ("dataset", "environment", "nodes", "edges", "alpha", "tolerance_l1",
-                "max_iterations", "fixed_iterations", "warmup_runs", "repeat_runs"):
-        assert summary[key] == baseline[key], f"Serial/OpenMP settings differ: {key}"
+                "max_iterations", "fixed_iterations", "warmup_runs", "repeat_runs", "build_type"):
+        assert summary.get(key) == baseline.get(key), f"Serial/OpenMP settings differ: {key}"
 
     # Match original IDs, so comparison does not depend on row order.
     parallel_ranks = {int(row["node_id"]): float(row["rank"]) for row in read_csv(folder / "ranks.csv")}

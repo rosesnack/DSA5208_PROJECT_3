@@ -1,24 +1,34 @@
 """Validate saved MPI runs and compare their ranks and timings with serial runs."""
 import csv
+import argparse
 import json
 import math
 
-from validate_serial import DATASETS, ROOT, read_csv, validate
+from validate_serial import DATASETS, RESULTS_ROOT, ROOT, read_csv, validate
 
-RESULTS = ROOT / "results/mpi"
-SERIAL_RESULTS = ROOT / "results/serial"
-PROCESS_COUNTS = (1, 2, 4, 8)
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("communication", nargs="?", choices=("allgather", "halo"), default="allgather")
+parser.add_argument("--processes", nargs="+", type=int, choices=(1, 2, 4, 8), default=(1, 2, 4, 8),
+                    help="MPI process counts to validate (default: 1 2 4 8)")
+ARGS = parser.parse_args()
+COMMUNICATION = ARGS.communication
+RESULTS = RESULTS_ROOT / ("mpi" if COMMUNICATION == "allgather" else "mpi_halo")
+SERIAL_RESULTS = RESULTS_ROOT / "serial"
+PROCESS_COUNTS = tuple(dict.fromkeys(ARGS.processes))
 RANK_L1_TOLERANCE = 1e-8
 
 
 def compare(name, folder, processes, baseline, serial_ranks):
     summary = json.loads((folder / "summary.json").read_text(encoding="utf-8"))
     assert summary["implementation"] == "mpi", "Wrong implementation label"
+    recorded_communication = summary.get("communication", "allgatherv")
+    accepted = ("allgather", "allgatherv") if COMMUNICATION == "allgather" else ("halo",)
+    assert recorded_communication in accepted, f"Expected {COMMUNICATION} communication, got {recorded_communication}"
     assert summary["processes"] == processes, "Wrong process count"
     assert all(int(row["processes"]) == summary["processes"] for row in read_csv(folder / "timings.csv")), "Process count changed between repeats"
     for key in ("dataset", "environment", "nodes", "edges", "alpha", "tolerance_l1",
-                "max_iterations", "fixed_iterations", "warmup_runs", "repeat_runs"):
-        assert summary[key] == baseline[key], f"Serial/MPI settings differ: {key}"
+                "max_iterations", "fixed_iterations", "warmup_runs", "repeat_runs", "build_type"):
+        assert summary.get(key) == baseline.get(key), f"Serial/MPI settings differ: {key}"
 
     # Match original IDs, so comparison does not depend on row order.
     parallel_ranks = {int(row["node_id"]): float(row["rank"]) for row in read_csv(folder / "ranks.csv")}
@@ -28,8 +38,12 @@ def compare(name, folder, processes, baseline, serial_ranks):
     assert l1_error <= RANK_L1_TOLERANCE, f"Serial/MPI rank error too large: {l1_error:.3e}"
     speedup = baseline["solve_median_s"] / summary["solve_median_s"]
     return {"dataset": name, "processes": summary["processes"],
+            "communication": COMMUNICATION,
             "serial_s": baseline["solve_median_s"], "mpi_s": summary["solve_median_s"],
             "speedup": speedup, "efficiency": speedup / summary["processes"],
+            "communication_s": summary.get("communication_max_s"),
+            "communication_bytes_per_iteration": summary.get("communication_bytes_per_iteration"),
+            "communication_setup_bytes": summary.get("communication_setup_bytes"),
             "rank_l1_error": l1_error, "rank_max_error": max_error}
 
 
@@ -63,14 +77,16 @@ def main():
                 print(f"FAIL: {name}/p{processes}: {error}", flush=True)
             checks.append(check)
     passed = sum(check["passed"] for check in checks)
-    report = {"passed": passed, "failed": len(checks) - passed,
+    report = {"passed": passed, "failed": len(checks) - passed, "process_counts": PROCESS_COUNTS,
             "method": "Independent residual checks and full rank comparison with validated serial output",
             "rank_l1_tolerance": RANK_L1_TOLERANCE, "checks": checks}
     RESULTS.mkdir(parents=True, exist_ok=True)
     (RESULTS / "validation.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     with (RESULTS / "scaling.csv").open("w", newline="", encoding="utf-8") as output:
-        writer = csv.DictWriter(output, fieldnames=["dataset", "processes", "serial_s", "mpi_s",
-                                                "speedup", "efficiency", "rank_l1_error", "rank_max_error"])
+        writer = csv.DictWriter(output, fieldnames=["dataset", "communication", "processes", "serial_s", "mpi_s",
+                                                "speedup", "efficiency", "communication_s",
+                                                "communication_bytes_per_iteration", "communication_setup_bytes",
+                                                "rank_l1_error", "rank_max_error"])
         writer.writeheader()
         writer.writerows(scaling)
     print(f"Validation and scaling results: {RESULTS}")

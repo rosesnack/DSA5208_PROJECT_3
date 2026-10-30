@@ -2,11 +2,15 @@
 import csv
 import json
 import math
+import os
 from pathlib import Path
 import statistics
 
 ROOT = Path(__file__).resolve().parents[1]
-RESULTS = ROOT / "results" / "serial"
+RESULTS_ROOT = Path(os.environ.get("PAGERANK_RESULTS_ROOT", "results"))
+if not RESULTS_ROOT.is_absolute():
+    RESULTS_ROOT = ROOT / RESULTS_ROOT
+RESULTS = RESULTS_ROOT / "serial"
 DATASETS = {
     "google": (ROOT / "data/raw/web-Google.txt", None),
     "uniform": (ROOT / "data/synthetic/uniform.edges", ROOT / "data/synthetic/uniform.nodes"),

@@ -12,7 +12,7 @@
 
 const int thread_counts[] = {1, 2, 4, 8};
 const int chunk_size = 64;
-const std::string output_root = "results/openmp";
+std::string output_root() { return results_root() + "/openmp"; }
 
 Result pagerank_openmp(const Graph& g, int thread_count) {
     using Clock = std::chrono::steady_clock;
@@ -87,12 +87,12 @@ Result pagerank_openmp(const Graph& g, int thread_count) {
 int main() {
     omp_set_dynamic(0);
     bool success = true;
-    for (const auto& dataset : datasets) {
+    for (const auto& dataset : datasets()) {
         std::cout << "Running " << dataset.name << "..." << std::endl;
         // Load once; every solver call starts again from equal ranks.
         const auto graph = load_graph(dataset.edges, dataset.nodes);
         for (int thread_count : thread_counts) {
-            for (int run = 0; run < warmup_runs; ++run) pagerank_openmp(graph, thread_count);
+            for (int run = 0; run < warmup_runs(); ++run) pagerank_openmp(graph, thread_count);
 
             Result result;
             std::vector<double> times;
@@ -102,7 +102,7 @@ int main() {
             timings << std::setprecision(17) << std::boolalpha
                     << "run,threads,iterations,converged,solve_s,residual_l1,rank_sum\n";
             
-            for (int run = 1; run <= repeat_runs; ++run) {
+            for (int run = 1; run <= repeat_runs(); ++run) {
                 result = pagerank_openmp(graph, thread_count);
                 times.push_back(result.solve_seconds);
                 converged = converged && result.converged;
@@ -114,7 +114,7 @@ int main() {
             const auto timing = summarize_times(times);
 
             // Write files after measurements; ranks and history come from the last run.
-            const auto folder = output_root + '/' + dataset.name + "/t" + std::to_string(thread_count);
+            const auto folder = output_root() + '/' + dataset.name + "/t" + std::to_string(thread_count);
             output_file(folder + "/timings.csv") << timings.str();
             write_ranks(folder + "/ranks.csv", graph, result);
             write_history(folder + "/history.csv", result);
@@ -122,7 +122,8 @@ int main() {
             summary << std::boolalpha
                     << "{\n  \"implementation\": \"openmp\","
                     << "\n  \"dataset\": " << std::quoted(dataset.name)
-                    << ",\n  \"environment\": " << std::quoted(experiment_environment)
+                    << ",\n  \"environment\": " << std::quoted(experiment_environment())
+                    << ",\n  \"build_type\": " << std::quoted(build_type)
                     << ",\n  \"requested_threads\": " << thread_count
                     << ",\n  \"threads\": " << result.threads
                     << ",\n  \"schedule\": \"dynamic\""
@@ -133,8 +134,8 @@ int main() {
                     << ",\n  \"tolerance_l1\": " << tolerance
                     << ",\n  \"max_iterations\": " << max_iterations
                     << ",\n  \"fixed_iterations\": " << fixed_iterations
-                    << ",\n  \"warmup_runs\": " << warmup_runs
-                    << ",\n  \"repeat_runs\": " << repeat_runs
+                    << ",\n  \"warmup_runs\": " << warmup_runs()
+                    << ",\n  \"repeat_runs\": " << repeat_runs()
                     << ",\n  \"iterations\": " << result.deltas.size()
                     << ",\n  \"converged\": " << converged
                     << ",\n  \"solve_median_s\": " << timing.median

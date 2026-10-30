@@ -9,7 +9,7 @@
 #include <sstream>
 #include <string>
 
-const std::string output_root = "results/serial";
+std::string output_root() { return results_root() + "/serial"; }
 
 Result pagerank_serial(const Graph& g) {
     using Clock = std::chrono::steady_clock;
@@ -65,11 +65,11 @@ Result pagerank_serial(const Graph& g) {
 
 int main() {
     bool success = true;
-    for (const auto& dataset : datasets) {
+    for (const auto& dataset : datasets()) {
         std::cout << "Running " << dataset.name << "..." << std::endl;
         // Load once; every solver call starts again from equal ranks.
         const auto graph = load_graph(dataset.edges, dataset.nodes);
-        for (int run = 0; run < warmup_runs; ++run) pagerank_serial(graph);
+        for (int run = 0; run < warmup_runs(); ++run) pagerank_serial(graph);
 
         Result result;
         std::vector<double> times;
@@ -78,7 +78,7 @@ int main() {
         std::ostringstream timings;
         timings << std::setprecision(17) << std::boolalpha
                 << "run,iterations,converged,solve_s,residual_l1,rank_sum\n";
-        for (int run = 1; run <= repeat_runs; ++run) {
+        for (int run = 1; run <= repeat_runs(); ++run) {
             result = pagerank_serial(graph);
             times.push_back(result.solve_seconds);
             converged = converged && result.converged;
@@ -90,7 +90,7 @@ int main() {
         const auto timing = summarize_times(times);
 
         // Write files after measurements; ranks and history come from the last run.
-        const auto folder = output_root + '/' + dataset.name;
+        const auto folder = output_root() + '/' + dataset.name;
         output_file(folder + "/timings.csv") << timings.str();
         write_ranks(folder + "/ranks.csv", graph, result);
         write_history(folder + "/history.csv", result);
@@ -98,15 +98,16 @@ int main() {
         summary << std::boolalpha
                 << "{\n  \"implementation\": \"serial\","
                 << "\n  \"dataset\": " << std::quoted(dataset.name)
-                << ",\n  \"environment\": " << std::quoted(experiment_environment)
+                << ",\n  \"environment\": " << std::quoted(experiment_environment())
+                << ",\n  \"build_type\": " << std::quoted(build_type)
                 << ",\n  \"nodes\": " << graph.size()
                 << ",\n  \"edges\": " << graph.in_sources.size()
                 << ",\n  \"alpha\": " << alpha
                 << ",\n  \"tolerance_l1\": " << tolerance
                 << ",\n  \"max_iterations\": " << max_iterations
                 << ",\n  \"fixed_iterations\": " << fixed_iterations
-                << ",\n  \"warmup_runs\": " << warmup_runs
-                << ",\n  \"repeat_runs\": " << repeat_runs
+                << ",\n  \"warmup_runs\": " << warmup_runs()
+                << ",\n  \"repeat_runs\": " << repeat_runs()
                 << ",\n  \"iterations\": " << result.deltas.size()
                 << ",\n  \"converged\": " << converged
                 << ",\n  \"solve_median_s\": " << timing.median
