@@ -1,0 +1,24 @@
+{
+  "implementation": "kokkos",
+  "backend": "Cuda",
+  "passed": 1,
+  "failed": 0,
+  "method": "Independent residual checks and full rank comparison with validated serial output",
+  "rank_l1_tolerance": 1e-08,
+  "checks": [
+    {
+      "dataset": "strong_hub",
+      "passed": true,
+      "implementation": "kokkos",
+      "backend": "Cuda",
+      "serial_s": 17.131766304,
+      "parallel_s": 2.029998562,
+      "speedup": 8.439299723996553,
+      "rank_l1_error": 9.228424291207847e-17,
+      "rank_max_error": 5.082197683525802e-21,
+      "iterations": 14,
+      "residual_l1": 6.569024361183162e-10,
+      "rank_sum_error": 5.983213924309894e-12
+    }
+  ]
+}

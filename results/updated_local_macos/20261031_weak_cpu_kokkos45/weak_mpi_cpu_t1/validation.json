@@ -1,0 +1,399 @@
+{
+  "implementation": "mpi",
+  "backend": "",
+  "threads_per_rank": 1,
+  "process_counts": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "passed": 36,
+  "failed": 0,
+  "checks": [
+    {
+      "dataset": "weak_uniform_p001",
+      "passed": true,
+      "nodes": 50000,
+      "edges": 800000,
+      "iterations": 12,
+      "independent_residual_l1": 1.389225399964599e-09,
+      "rank_sum_error": 0.0,
+      "communication": "allgather",
+      "family": "uniform",
+      "processes": 1
+    },
+    {
+      "dataset": "weak_uniform_p002",
+      "passed": true,
+      "nodes": 100000,
+      "edges": 1600000,
+      "iterations": 12,
+      "independent_residual_l1": 1.4291093171385892e-09,
+      "rank_sum_error": 0.0,
+      "communication": "allgather",
+      "family": "uniform",
+      "processes": 2
+    },
+    {
+      "dataset": "weak_uniform_p004",
+      "passed": true,
+      "nodes": 200000,
+      "edges": 3200000,
+      "iterations": 12,
+      "independent_residual_l1": 1.377737757321067e-09,
+      "rank_sum_error": 0.0,
+      "communication": "allgather",
+      "family": "uniform",
+      "processes": 4
+    },
+    {
+      "dataset": "weak_uniform_p008",
+      "passed": true,
+      "nodes": 400000,
+      "edges": 6400000,
+      "iterations": 12,
+      "independent_residual_l1": 1.4209888790300464e-09,
+      "rank_sum_error": 0.0,
+      "communication": "allgather",
+      "family": "uniform",
+      "processes": 8
+    },
+    {
+      "dataset": "weak_uniform_p001",
+      "passed": true,
+      "nodes": 50000,
+      "edges": 800000,
+      "iterations": 12,
+      "independent_residual_l1": 1.389225399964599e-09,
+      "rank_sum_error": 0.0,
+      "communication": "halo",
+      "family": "uniform",
+      "processes": 1
+    },
+    {
+      "dataset": "weak_uniform_p002",
+      "passed": true,
+      "nodes": 100000,
+      "edges": 1600000,
+      "iterations": 12,
+      "independent_residual_l1": 1.4291093171385892e-09,
+      "rank_sum_error": 0.0,
+      "communication": "halo",
+      "family": "uniform",
+      "processes": 2
+    },
+    {
+      "dataset": "weak_uniform_p004",
+      "passed": true,
+      "nodes": 200000,
+      "edges": 3200000,
+      "iterations": 12,
+      "independent_residual_l1": 1.377737757321067e-09,
+      "rank_sum_error": 0.0,
+      "communication": "halo",
+      "family": "uniform",
+      "processes": 4
+    },
+    {
+      "dataset": "weak_uniform_p008",
+      "passed": true,
+      "nodes": 400000,
+      "edges": 6400000,
+      "iterations": 12,
+      "independent_residual_l1": 1.4209888790300464e-09,
+      "rank_sum_error": 0.0,
+      "communication": "halo",
+      "family": "uniform",
+      "processes": 8
+    },
+    {
+      "dataset": "weak_hub_p001",
+      "passed": true,
+      "nodes": 50000,
+      "edges": 800000,
+      "iterations": 13,
+      "independent_residual_l1": 1.94666695900352e-09,
+      "rank_sum_error": 2.9976021664879227e-15,
+      "communication": "allgather",
+      "family": "hub",
+      "processes": 1
+    },
+    {
+      "dataset": "weak_hub_p002",
+      "passed": true,
+      "nodes": 100000,
+      "edges": 1600000,
+      "iterations": 14,
+      "independent_residual_l1": 5.749021711534414e-10,
+      "rank_sum_error": 3.3306690738754696e-15,
+      "communication": "allgather",
+      "family": "hub",
+      "processes": 2
+    },
+    {
+      "dataset": "weak_hub_p004",
+      "passed": true,
+      "nodes": 200000,
+      "edges": 3200000,
+      "iterations": 14,
+      "independent_residual_l1": 5.679963817195212e-10,
+      "rank_sum_error": 2.886579864025407e-15,
+      "communication": "allgather",
+      "family": "hub",
+      "processes": 4
+    },
+    {
+      "dataset": "weak_hub_p008",
+      "passed": true,
+      "nodes": 400000,
+      "edges": 6400000,
+      "iterations": 14,
+      "independent_residual_l1": 6.765121517500057e-10,
+      "rank_sum_error": 2.886579864025407e-15,
+      "communication": "allgather",
+      "family": "hub",
+      "processes": 8
+    },
+    {
+      "dataset": "weak_hub_p001",
+      "passed": true,
+      "nodes": 50000,
+      "edges": 800000,
+      "iterations": 13,
+      "independent_residual_l1": 1.94666695900352e-09,
+      "rank_sum_error": 2.9976021664879227e-15,
+      "communication": "halo",
+      "family": "hub",
+      "processes": 1
+    },
+    {
+      "dataset": "weak_hub_p002",
+      "passed": true,
+      "nodes": 100000,
+      "edges": 1600000,
+      "iterations": 14,
+      "independent_residual_l1": 5.749021711534414e-10,
+      "rank_sum_error": 3.3306690738754696e-15,
+      "communication": "halo",
+      "family": "hub",
+      "processes": 2
+    },
+    {
+      "dataset": "weak_hub_p004",
+      "passed": true,
+      "nodes": 200000,
+      "edges": 3200000,
+      "iterations": 14,
+      "independent_residual_l1": 5.679963817195212e-10,
+      "rank_sum_error": 2.886579864025407e-15,
+      "communication": "halo",
+      "family": "hub",
+      "processes": 4
+    },
+    {
+      "dataset": "weak_hub_p008",
+      "passed": true,
+      "nodes": 400000,
+      "edges": 6400000,
+      "iterations": 14,
+      "independent_residual_l1": 6.765121517500057e-10,
+      "rank_sum_error": 2.886579864025407e-15,
+      "communication": "halo",
+      "family": "hub",
+      "processes": 8
+    },
+    {
+      "dataset": "weak_controlled_p001",
+      "passed": true,
+      "nodes": 50000,
+      "edges": 800000,
+      "iterations": 16,
+      "independent_residual_l1": 2.691342086505917e-09,
+      "rank_sum_error": 6.661338147750939e-16,
+      "communication": "allgather",
+      "family": "controlled",
+      "processes": 1
+    },
+    {
+      "dataset": "weak_controlled_p002",
+      "passed": true,
+      "nodes": 100000,
+      "edges": 1600000,
+      "iterations": 17,
+      "independent_residual_l1": 9.173863003322916e-10,
+      "rank_sum_error": 6.661338147750939e-16,
+      "communication": "allgather",
+      "family": "controlled",
+      "processes": 2
+    },
+    {
+      "dataset": "weak_controlled_p004",
+      "passed": true,
+      "nodes": 200000,
+      "edges": 3200000,
+      "iterations": 17,
+      "independent_residual_l1": 1.0215769075635012e-09,
+      "rank_sum_error": 6.661338147750939e-16,
+      "communication": "allgather",
+      "family": "controlled",
+      "processes": 4
+    },
+    {
+      "dataset": "weak_controlled_p008",
+      "passed": true,
+      "nodes": 400000,
+      "edges": 6400000,
+      "iterations": 17,
+      "independent_residual_l1": 9.971045793432181e-10,
+      "rank_sum_error": 7.771561172376096e-16,
+      "communication": "allgather",
+      "family": "controlled",
+      "processes": 8
+    },
+    {
+      "dataset": "weak_controlled_p001",
+      "passed": true,
+      "nodes": 50000,
+      "edges": 800000,
+      "iterations": 16,
+      "independent_residual_l1": 2.691342086505917e-09,
+      "rank_sum_error": 6.661338147750939e-16,
+      "communication": "halo",
+      "family": "controlled",
+      "processes": 1
+    },
+    {
+      "dataset": "weak_controlled_p002",
+      "passed": true,
+      "nodes": 100000,
+      "edges": 1600000,
+      "iterations": 17,
+      "independent_residual_l1": 9.173863003322916e-10,
+      "rank_sum_error": 6.661338147750939e-16,
+      "communication": "halo",
+      "family": "controlled",
+      "processes": 2
+    },
+    {
+      "dataset": "weak_controlled_p004",
+      "passed": true,
+      "nodes": 200000,
+      "edges": 3200000,
+      "iterations": 17,
+      "independent_residual_l1": 1.0215769075635012e-09,
+      "rank_sum_error": 6.661338147750939e-16,
+      "communication": "halo",
+      "family": "controlled",
+      "processes": 4
+    },
+    {
+      "dataset": "weak_controlled_p008",
+      "passed": true,
+      "nodes": 400000,
+      "edges": 6400000,
+      "iterations": 17,
+      "independent_residual_l1": 9.971045793432181e-10,
+      "rank_sum_error": 7.771561172376096e-16,
+      "communication": "halo",
+      "family": "controlled",
+      "processes": 8
+    },
+    {
+      "dataset": "weak_uniform_p001",
+      "processes": 1,
+      "family": "uniform",
+      "comparison": "Allgatherv versus Halo",
+      "rank_l1_error": 0.0,
+      "passed": true
+    },
+    {
+      "dataset": "weak_uniform_p002",
+      "processes": 2,
+      "family": "uniform",
+      "comparison": "Allgatherv versus Halo",
+      "rank_l1_error": 0.0,
+      "passed": true
+    },
+    {
+      "dataset": "weak_uniform_p004",
+      "processes": 4,
+      "family": "uniform",
+      "comparison": "Allgatherv versus Halo",
+      "rank_l1_error": 0.0,
+      "passed": true
+    },
+    {
+      "dataset": "weak_uniform_p008",
+      "processes": 8,
+      "family": "uniform",
+      "comparison": "Allgatherv versus Halo",
+      "rank_l1_error": 0.0,
+      "passed": true
+    },
+    {
+      "dataset": "weak_hub_p001",
+      "processes": 1,
+      "family": "hub",
+      "comparison": "Allgatherv versus Halo",
+      "rank_l1_error": 0.0,
+      "passed": true
+    },
+    {
+      "dataset": "weak_hub_p002",
+      "processes": 2,
+      "family": "hub",
+      "comparison": "Allgatherv versus Halo",
+      "rank_l1_error": 0.0,
+      "passed": true
+    },
+    {
+      "dataset": "weak_hub_p004",
+      "processes": 4,
+      "family": "hub",
+      "comparison": "Allgatherv versus Halo",
+      "rank_l1_error": 0.0,
+      "passed": true
+    },
+    {
+      "dataset": "weak_hub_p008",
+      "processes": 8,
+      "family": "hub",
+      "comparison": "Allgatherv versus Halo",
+      "rank_l1_error": 0.0,
+      "passed": true
+    },
+    {
+      "dataset": "weak_controlled_p001",
+      "processes": 1,
+      "family": "controlled",
+      "comparison": "Allgatherv versus Halo",
+      "rank_l1_error": 0.0,
+      "passed": true
+    },
+    {
+      "dataset": "weak_controlled_p002",
+      "processes": 2,
+      "family": "controlled",
+      "comparison": "Allgatherv versus Halo",
+      "rank_l1_error": 0.0,
+      "passed": true
+    },
+    {
+      "dataset": "weak_controlled_p004",
+      "processes": 4,
+      "family": "controlled",
+      "comparison": "Allgatherv versus Halo",
+      "rank_l1_error": 0.0,
+      "passed": true
+    },
+    {
+      "dataset": "weak_controlled_p008",
+      "processes": 8,
+      "family": "controlled",
+      "comparison": "Allgatherv versus Halo",
+      "rank_l1_error": 0.0,
+      "passed": true
+    }
+  ]
+}

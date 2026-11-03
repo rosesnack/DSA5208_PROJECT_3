@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+#PBS -N dsa5208-gpu-weak
+#PBS -q auto
+#PBS -l select=2:ncpus=36:mpiprocs=1:ompthreads=8:ngpus=1:mem=120gb
+#PBS -l place=scatter
+#PBS -l walltime=02:00:00
+#PBS -j oe
+#PBS -V
+
+set -euo pipefail
+cd "${PBS_O_WORKDIR:?Submit from the project directory}"
+module load openmpi/gcc/64/4.1.8 cuda12.4/toolkit/12.4.1 CMake/3.29.3-GCCcore-13.3.0
+export LD_LIBRARY_PATH="/opt/pbs/lib:${LD_LIBRARY_PATH:-}"
+
+DATA_ROOT="${DATA_ROOT:?Set DATA_ROOT to shared Vanda /scratch}"
+RUN_ID="${RUN_ID:?Set RUN_ID when submitting the experiment suite}"
+RESULTS_ROOT="$DATA_ROOT/results/gpu_weak"
+export PAGERANK_ENVIRONMENT=vanda-a40-gcc13-release
+export PAGERANK_RUN_ID="$RUN_ID"
+export PAGERANK_RESULTS_ROOT="$RESULTS_ROOT"
+export PAGERANK_REPEATS=5 PAGERANK_WARMUPS=1
+mkdir -p "$RESULTS_ROOT"
+{
+    printf 'PBS job: %s\n' "$PBS_JOBID"
+    uname -a
+    mpicxx --showme:version
+    nvcc --version | tail -n 4
+    cat third_party/kokkos_commit.txt
+    module list 2>&1
+    sort -u "$PBS_NODEFILE"
+} > "$RESULTS_ROOT/job_environment.txt"
+
+for processes in 1 2; do
+    name=$(printf 'weak_p%03d' "$processes")
+    export PAGERANK_DATASET_MANIFEST="$DATA_ROOT/manifests/${name}.tsv"
+    CUDA_BUILD_DIR=build-vanda-matrix-cuda \
+    KOKKOS_BUILD_DIR=build-vanda-matrix-kokkos-cuda \
+    KOKKOS_BACKEND=Cuda \
+    PAGERANK_RUN_OPENMP_ABLATION=1 \
+    bash scripts/run_gpu_suite.sh
+    CHECK_ROOT="$RESULTS_ROOT/native_checks/p${processes}"
+    mkdir -p "$CHECK_ROOT/cuda" "$CHECK_ROOT/kokkos" "$CHECK_ROOT/openmp"
+    cp "$RESULTS_ROOT/cuda/validation.json" "$RESULTS_ROOT/cuda/scaling.csv" "$CHECK_ROOT/cuda/"
+    cp "$RESULTS_ROOT/kokkos/Cuda/validation.json" "$RESULTS_ROOT/kokkos/Cuda/scaling.csv" "$CHECK_ROOT/kokkos/"
+    cp "$RESULTS_ROOT/openmp/validation.json" "$RESULTS_ROOT/openmp/scaling.csv" "$CHECK_ROOT/openmp/"
+    PAGERANK_GPU_PROCESS_COUNTS="$processes" PAGERANK_SKIP_VALIDATION=1 \
+    CUDA_BUILD_DIR=build-vanda-matrix-cuda KOKKOS_BUILD_DIR=build-vanda-matrix-kokkos-cuda \
+        bash scripts/run_mpi_gpu_suite.sh
+done
+
+export PAGERANK_DATASET_MANIFEST="$DATA_ROOT/manifests/weak_scaling.tsv"
+python3 scripts/validate_weak_matrix.py mpi --processes 1 2
+for threads in 1 2 4 8; do
+    python3 scripts/validate_weak_matrix.py hybrid --threads "$threads" --processes 1 2
+done
+python3 scripts/validate_weak_matrix.py mpi_cuda --backend Cuda --processes 1 2
+python3 scripts/validate_weak_matrix.py mpi_kokkos --backend Cuda --processes 1 2
+
+find "$RESULTS_ROOT" -name ranks.csv -delete
+DESTINATION="$PBS_O_WORKDIR/results/updated_vanda_scaling/$RUN_ID/gpu_weak"
+mkdir -p "$DESTINATION"
+cp -a "$RESULTS_ROOT/." "$DESTINATION/"
+printf '%s\n' "$PBS_JOBID" > "$DESTINATION/complete.txt"

@@ -1,0 +1,3 @@
+run,processes,threads_min,threads_max,total_threads,iterations,converged,solve_s,communication_s,communication_bytes_per_iteration,communication_setup_bytes,residual_l1,rank_sum
+1,2,2,2,4,36,true,1.4040084159999999,1.4035297390000006,16,16,4.6658452657055705e-09,0.99999999999999978
+2,2,2,2,4,36,true,1.4100080840000002,1.4095074820000075,16,16,4.6658452657055705e-09,0.99999999999999978

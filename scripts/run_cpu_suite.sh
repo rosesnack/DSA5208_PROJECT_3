@@ -55,7 +55,8 @@ for processes in "${process_counts[@]}"; do
 done
 
 for processes in "${process_counts[@]}"; do
-    mpiexec -n "$processes" ./build/pagerank_hybrid
+    mpiexec -n "$processes" ./build/pagerank_hybrid --communication=allgather
+    mpiexec -n "$processes" ./build/pagerank_hybrid --communication=halo
 done
 
 python3 scripts/validate_serial.py
@@ -63,5 +64,6 @@ python3 scripts/validate_openmp.py
 python3 scripts/validate_mpi.py allgather --processes "${process_counts[@]}"
 python3 scripts/validate_mpi.py halo --processes "${process_counts[@]}"
 python3 scripts/validate_hybrid.py --processes "${process_counts[@]}"
+python3 scripts/validate_hybrid.py halo --processes "${process_counts[@]}"
 
 printf 'CPU suite complete: %s\n' "$PAGERANK_RESULTS_ROOT"

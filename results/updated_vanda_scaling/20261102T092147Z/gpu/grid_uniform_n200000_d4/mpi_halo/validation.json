@@ -1,0 +1,52 @@
+{
+  "passed": 2,
+  "failed": 0,
+  "process_counts": [
+    1,
+    2
+  ],
+  "method": "Independent residual checks and full rank comparison with validated serial output",
+  "rank_l1_tolerance": 1e-08,
+  "checks": [
+    {
+      "dataset": "grid_uniform_n200000_d4",
+      "passed": true,
+      "nodes": 200000,
+      "edges": 800000,
+      "iterations": 22,
+      "independent_residual_l1": 2.152384257603493e-09,
+      "rank_sum_error": 0.0,
+      "processes": 1,
+      "communication": "halo",
+      "serial_s": 0.055074679,
+      "mpi_s": 0.053122922,
+      "speedup": 1.0367403924053726,
+      "efficiency": 1.0367403924053726,
+      "communication_s": 0.0024154190000000297,
+      "communication_bytes_per_iteration": 0,
+      "communication_setup_bytes": 0,
+      "rank_l1_error": 0.0,
+      "rank_max_error": 0.0
+    },
+    {
+      "dataset": "grid_uniform_n200000_d4",
+      "passed": true,
+      "nodes": 200000,
+      "edges": 800000,
+      "iterations": 22,
+      "independent_residual_l1": 2.152384257603493e-09,
+      "rank_sum_error": 0.0,
+      "processes": 2,
+      "communication": "halo",
+      "serial_s": 0.055074679,
+      "mpi_s": 0.05650546599999999,
+      "speedup": 0.974678785942585,
+      "efficiency": 0.4873393929712925,
+      "communication_s": 0.030958663999999803,
+      "communication_bytes_per_iteration": 1600000,
+      "communication_setup_bytes": 1600000,
+      "rank_l1_error": 0.0,
+      "rank_max_error": 0.0
+    }
+  ]
+}

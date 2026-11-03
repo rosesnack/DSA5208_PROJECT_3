@@ -1,6 +1,17 @@
 .venv
 .vscode
 /build/
+/build-*/
+/kokkos-install-*/
+/third_party/kokkos/
 /data/
 __pycache__/
 *.pyc
+/results/updated_local_macos/**/ranks.csv
+/results/updated_vanda_scaling/**/ranks.csv
+/results/updated_vanda_scaling/**/amgr_cpu_transactions_*.csv
+/results/updated_vanda_scaling/**/amgr_cpu_reconciliation_evidence.csv
+/results/updated_vanda_scaling/**/free_cpu_archive/
+/results/updated_local_macos_local_runner.log
+/results/updated_local_weak_generation.log
+/results/updated_local_macos_weak_runner.log

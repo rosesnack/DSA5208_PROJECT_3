@@ -1,0 +1,2 @@
+dataset,implementation,backend,serial_s,parallel_s,speedup,rank_l1_error,rank_max_error
+grid_hub_n400000_d8,kokkos,OpenMP,0.213553308,0.091339124,2.3380266708053825,0.0,0.0

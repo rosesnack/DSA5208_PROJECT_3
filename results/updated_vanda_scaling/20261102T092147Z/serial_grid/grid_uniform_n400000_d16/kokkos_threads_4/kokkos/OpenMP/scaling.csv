@@ -1,0 +1,2 @@
+dataset,implementation,backend,serial_s,parallel_s,speedup,rank_l1_error,rank_max_error
+grid_uniform_n400000_d16,kokkos,OpenMP,0.207987928,0.066119234,3.14564938849715,0.0,0.0

@@ -1,0 +1,2 @@
+dataset,implementation,backend,serial_s,parallel_s,speedup,rank_l1_error,rank_max_error
+grid_hub_n200000_d4,cuda,CUDA,0.084816495,0.00572897,14.80484188257226,0.0,0.0

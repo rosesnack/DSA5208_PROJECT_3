@@ -1,0 +1,24 @@
+{
+  "implementation": "cuda",
+  "backend": null,
+  "passed": 1,
+  "failed": 0,
+  "method": "Independent residual checks and full rank comparison with validated serial output",
+  "rank_l1_tolerance": 1e-08,
+  "checks": [
+    {
+      "dataset": "grid_uniform_n50000_d4",
+      "passed": true,
+      "implementation": "cuda",
+      "backend": "CUDA",
+      "serial_s": 0.012874549,
+      "parallel_s": 0.001042614,
+      "speedup": 12.348336968427432,
+      "rank_l1_error": 0.0,
+      "rank_max_error": 0.0,
+      "iterations": 22,
+      "residual_l1": 2.166601864060034e-09,
+      "rank_sum_error": 2.298161660974074e-14
+    }
+  ]
+}

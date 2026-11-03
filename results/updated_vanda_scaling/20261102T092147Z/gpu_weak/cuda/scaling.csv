@@ -1,0 +1,4 @@
+dataset,implementation,backend,serial_s,parallel_s,speedup,rank_l1_error,rank_max_error
+weak_uniform_p002,cuda,CUDA,0.0226121,0.001303908,17.34179098525356,0.0,0.0
+weak_hub_p002,cuda,CUDA,0.027528324,0.007205299,3.82056650251433,0.0,0.0
+weak_controlled_p002,cuda,CUDA,0.033814284,0.008030145,4.210918233730524,1.2243437736087284e-17,2.168404344971009e-19

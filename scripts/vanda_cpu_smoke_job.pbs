@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+#PBS -N dsa5208-cpu-smoke
+#PBS -q auto_free
+#PBS -l select=1:ncpus=8:mpiprocs=8:ompthreads=1:mem=32gb
+#PBS -l walltime=02:00:00
+#PBS -j oe
+#PBS -V
+
+set -euo pipefail
+cd "${PBS_O_WORKDIR:?Submit from the project directory}"
+module load openmpi/gcc/64/4.1.8 CMake/3.29.3-GCCcore-13.3.0
+
+RUN_ID="${RUN_ID:?Set RUN_ID}"
+export PAGERANK_ENVIRONMENT=vanda-gcc13-release
+export PAGERANK_RUN_ID="$RUN_ID"
+export PAGERANK_RESULTS_ROOT="$PWD/results/updated_vanda_scaling/$RUN_ID/cpu_smoke_uniform"
+export PAGERANK_DATASET_MANIFEST="$PAGERANK_RESULTS_ROOT/dataset.tsv"
+export PAGERANK_REPEATS=5 PAGERANK_WARMUPS=1
+export PAGERANK_OPENMP_THREADS='1 2 4 8'
+export PAGERANK_HYBRID_MAX_TOTAL_THREADS=8
+export PAGERANK_PROCESS_COUNTS='1 2'
+export OMP_DYNAMIC=FALSE OMP_PROC_BIND=spread OMP_PLACES=cores
+mkdir -p "$PAGERANK_RESULTS_ROOT"
+printf 'uniform %s/data/synthetic/uniform.edges %s/data/synthetic/uniform.nodes\n' \
+    "$PWD" "$PWD" > "$PAGERANK_DATASET_MANIFEST"
+
+./build-vanda-matrix-cpu/pagerank_serial
+./build-vanda-matrix-cpu/pagerank_openmp
+OMP_NUM_THREADS=2 ./build-vanda-matrix-cpu/pagerank_kokkos
+python3 scripts/validate_serial.py
+python3 scripts/validate_openmp.py
+python3 scripts/validate_gpu.py kokkos OpenMP
+
+for mode in allgather halo; do
+    for processes in 1 2; do
+        mpiexec --map-by "ppr:${processes}:node:PE=1" --bind-to core -n "$processes" \
+            ./build-vanda-matrix-cpu/pagerank_mpi --communication="$mode"
+        OMP_NUM_THREADS=1 mpiexec --map-by "ppr:${processes}:node:PE=1" --bind-to core \
+            -n "$processes" ./build-vanda-matrix-cpu/pagerank_mpi_kokkos \
+            --communication="$mode"
+        for threads in 1 2; do
+            PAGERANK_HYBRID_THREADS="$threads" mpiexec \
+                --map-by "ppr:${processes}:node:PE=${threads}" --bind-to core \
+                -n "$processes" ./build-vanda-matrix-cpu/pagerank_hybrid \
+                --communication="$mode"
+        done
+    done
+    python3 scripts/validate_mpi.py "$mode" --processes 1 2
+    python3 scripts/validate_mpi_device.py mpi_kokkos OpenMP "$mode" --processes 1 2
+    PAGERANK_HYBRID_CONFIGS='1:1 1:2 2:1 2:2' \
+        python3 scripts/validate_hybrid.py "$mode" --processes 1 2
+done
+printf '%s\n' "$PBS_JOBID" > "$PAGERANK_RESULTS_ROOT/complete.txt"

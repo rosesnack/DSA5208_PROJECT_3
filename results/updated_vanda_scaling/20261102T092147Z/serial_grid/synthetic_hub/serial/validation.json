@@ -1,0 +1,18 @@
+{
+  "passed": 1,
+  "failed": 0,
+  "method": "Saved-output checks and an independent PageRank update over the original edges",
+  "mass_tolerance": 1e-10,
+  "rounding_tolerance": 1e-12,
+  "checks": [
+    {
+      "dataset": "synthetic_hub",
+      "passed": true,
+      "nodes": 100000,
+      "edges": 1000000,
+      "iterations": 16,
+      "independent_residual_l1": 8.1924031266588e-10,
+      "rank_sum_error": 1.2434497875801753e-14
+    }
+  ]
+}

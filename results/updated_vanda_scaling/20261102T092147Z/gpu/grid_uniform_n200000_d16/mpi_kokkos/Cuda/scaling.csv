@@ -1,0 +1,3 @@
+dataset,implementation,backend,communication,processes,serial_s,parallel_s,speedup,communication_s,communication_bytes_per_iteration,communication_setup_s,communication_setup_bytes,backend_compute_s,transfer_s,rank_l1_error
+grid_uniform_n200000_d16,mpi_kokkos,Cuda,allgather,1,0.049504475,0.012068810999999999,4.101851872566403,0.001294914000000015,0,0,0,0.0019688749999999997,0.008747924000000002,2.379302843343121e-16
+grid_uniform_n200000_d16,mpi_kokkos,Cuda,allgather,2,0.049504475,0.016252561000000013,3.045949189177014,0.009275811999999967,1600000,0,0,0.0012331650000000003,0.007257346000000001,2.379302843343121e-16

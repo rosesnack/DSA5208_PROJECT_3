@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+#PBS -N dsa5208-gpu-build
+#PBS -q auto_free
+#PBS -l select=1:ncpus=36:mpiprocs=1:ompthreads=1:ngpus=1:mem=120gb
+#PBS -l walltime=04:00:00
+#PBS -j oe
+#PBS -V
+
+set -euo pipefail
+cd "${PBS_O_WORKDIR:?Submit from the project directory}"
+module load openmpi/gcc/64/4.1.8 cuda12.4/toolkit/12.4.1 CMake/3.29.3-GCCcore-13.3.0
+
+test -x third_party/kokkos/bin/nvcc_wrapper
+cmake -S third_party/kokkos -B build-vanda-matrix-kokkos-source \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_CXX_COMPILER="$PWD/third_party/kokkos/bin/nvcc_wrapper" \
+    -DKokkos_ENABLE_CUDA=ON -DKokkos_ARCH_AMPERE86=ON \
+    -DCMAKE_INSTALL_PREFIX="$PWD/kokkos-install-vanda-matrix-cuda"
+cmake --build build-vanda-matrix-kokkos-source --parallel 8
+cmake --install build-vanda-matrix-kokkos-source
+
+cmake -S . -B build-vanda-matrix-cuda -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_CXX_COMPILER=mpicxx -DBUILD_CUDA=ON -DBUILD_MPI_CUDA=ON \
+    -DCMAKE_CUDA_ARCHITECTURES=86
+cmake --build build-vanda-matrix-cuda --parallel 8
+mpicxx -O3 -DNDEBUG scripts/mpi_rank_hosts.cpp -o build-vanda-matrix-cuda/mpi_rank_hosts
+
+cmake -S . -B build-vanda-matrix-kokkos-cuda -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_CXX_COMPILER="$PWD/third_party/kokkos/bin/nvcc_wrapper" \
+    -DBUILD_KOKKOS=ON -DBUILD_MPI_KOKKOS=ON \
+    -DCMAKE_PREFIX_PATH="$PWD/kokkos-install-vanda-matrix-cuda"
+cmake --build build-vanda-matrix-kokkos-cuda --parallel 8
+printf '%s\n' "$PBS_JOBID" > "results/updated_vanda_scaling/${RUN_ID:?}/gpu_build.complete"

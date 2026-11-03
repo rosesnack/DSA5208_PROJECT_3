@@ -1,0 +1,3 @@
+dataset,implementation,backend,communication,processes,serial_s,parallel_s,speedup,communication_s,communication_bytes_per_iteration,communication_setup_s,communication_setup_bytes,backend_compute_s,transfer_s,rank_l1_error
+grid_uniform_n100000_d4,mpi_cuda,Cuda,allgather,1,0.026564615,0.007632764000000004,3.4803401493875596,0.0012705359999999888,0,0,0,0.0017739799999999997,0.004559999000000002,0.0
+grid_uniform_n100000_d4,mpi_cuda,Cuda,allgather,2,0.026564615,0.012689370999999998,2.0934540411813956,0.008406604999999977,800000,0,0,0.0014335150000000002,0.003449267,0.0

@@ -1,0 +1,60 @@
+{
+  "implementation": "mpi_kokkos",
+  "backend": "Cuda",
+  "communication": "halo",
+  "process_counts": [
+    1,
+    2
+  ],
+  "passed": 2,
+  "failed": 0,
+  "method": "Independent residual and full-rank comparison to the same-environment Serial run",
+  "checks": [
+    {
+      "dataset": "synthetic_hub",
+      "passed": true,
+      "nodes": 100000,
+      "edges": 1000000,
+      "iterations": 16,
+      "independent_residual_l1": 8.192403068097059e-10,
+      "rank_sum_error": 1.2545520178264269e-14,
+      "implementation": "mpi_kokkos",
+      "backend": "Cuda",
+      "communication": "halo",
+      "processes": 1,
+      "serial_s": 0.039831984,
+      "parallel_s": 0.017103661000000006,
+      "speedup": 2.328857196128945,
+      "communication_s": 0.0008419370000000148,
+      "communication_bytes_per_iteration": 0,
+      "communication_setup_s": 0.007021809,
+      "communication_setup_bytes": 0,
+      "backend_compute_s": 0.009021381,
+      "transfer_s": 0.007174018999999999,
+      "rank_l1_error": 1.4022863375855437e-16
+    },
+    {
+      "dataset": "synthetic_hub",
+      "passed": true,
+      "nodes": 100000,
+      "edges": 1000000,
+      "iterations": 16,
+      "independent_residual_l1": 8.192403068097059e-10,
+      "rank_sum_error": 1.2545520178264269e-14,
+      "implementation": "mpi_kokkos",
+      "backend": "Cuda",
+      "communication": "halo",
+      "processes": 2,
+      "serial_s": 0.039831984,
+      "parallel_s": 0.023890588000000004,
+      "speedup": 1.6672667914243047,
+      "communication_s": 0.018033388999999955,
+      "communication_bytes_per_iteration": 707592,
+      "communication_setup_s": 0.05540798,
+      "communication_setup_bytes": 707592,
+      "backend_compute_s": 0.005817596999999998,
+      "transfer_s": 0.005380341000000001,
+      "rank_l1_error": 1.4022863375855437e-16
+    }
+  ]
+}

@@ -11,11 +11,32 @@ RESULTS_ROOT = Path(os.environ.get("PAGERANK_RESULTS_ROOT", "results"))
 if not RESULTS_ROOT.is_absolute():
     RESULTS_ROOT = ROOT / RESULTS_ROOT
 RESULTS = RESULTS_ROOT / "serial"
-DATASETS = {
-    "google": (ROOT / "data/raw/web-Google.txt", None),
-    "uniform": (ROOT / "data/synthetic/uniform.edges", ROOT / "data/synthetic/uniform.nodes"),
-    "hub": (ROOT / "data/synthetic/hub.edges", ROOT / "data/synthetic/hub.nodes"),
-}
+def load_datasets():
+    manifest_name = os.environ.get("PAGERANK_DATASET_MANIFEST")
+    if not manifest_name:
+        return {
+            "google": (ROOT / "data/raw/web-Google.txt", None),
+            "uniform": (ROOT / "data/synthetic/uniform.edges", ROOT / "data/synthetic/uniform.nodes"),
+            "hub": (ROOT / "data/synthetic/hub.edges", ROOT / "data/synthetic/hub.nodes"),
+        }
+    manifest_path = Path(manifest_name)
+    if not manifest_path.is_absolute():
+        manifest_path = ROOT / manifest_path
+    datasets = {}
+    with manifest_path.open(encoding="utf-8") as source:
+        for line in source:
+            if not line.strip() or line.lstrip().startswith("#"):
+                continue
+            name, edge_name, node_name = line.split()
+            edge_path = Path(edge_name)
+            node_path = None if node_name == "-" else Path(node_name)
+            datasets[name] = (edge_path if edge_path.is_absolute() else ROOT / edge_path,
+                              None if node_path is None else
+                              node_path if node_path.is_absolute() else ROOT / node_path)
+    return datasets
+
+
+DATASETS = load_datasets()
 MASS_TOLERANCE = 1e-10
 ROUNDING_TOLERANCE = 1e-12
 

@@ -1,0 +1,23 @@
+{
+  "implementation": "kokkos",
+  "backend": "OpenMP",
+  "environment": "vanda-gcc13-release",
+  "build_type": "Release",
+  "dataset": "grid_hub_n200000_d16",
+  "nodes": 200000,
+  "edges": 3200000,
+  "alpha": 0.84999999999999998,
+  "tolerance_l1": 1e-08,
+  "max_iterations": 1000,
+  "fixed_iterations": 0,
+  "warmup_runs": 1,
+  "repeat_runs": 5,
+  "iterations": 14,
+  "converged": true,
+  "solve_median_s": 0.02962712,
+  "solve_min_s": 0.029447773,
+  "solve_max_s": 0.033147175000000001,
+  "setup_transfer_median_s": 0.0025025609999999999,
+  "max_residual_l1": 5.6799638251509694e-10,
+  "max_rank_sum_error": 4.5408121707168903e-14
+}

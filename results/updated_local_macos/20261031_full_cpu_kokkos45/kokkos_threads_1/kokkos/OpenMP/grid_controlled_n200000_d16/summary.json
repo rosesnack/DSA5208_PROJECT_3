@@ -1,0 +1,23 @@
+{
+  "implementation": "kokkos",
+  "backend": "OpenMP",
+  "environment": "local-macos-clang23-kokkos4501-release",
+  "build_type": "Release",
+  "dataset": "grid_controlled_n200000_d16",
+  "nodes": 200000,
+  "edges": 3200000,
+  "alpha": 0.84999999999999998,
+  "tolerance_l1": 1e-08,
+  "max_iterations": 1000,
+  "fixed_iterations": 0,
+  "warmup_runs": 1,
+  "repeat_runs": 5,
+  "iterations": 17,
+  "converged": true,
+  "solve_median_s": 0.042619667,
+  "solve_min_s": 0.04239275,
+  "solve_max_s": 0.043109042,
+  "setup_transfer_median_s": 0.00053654099999999997,
+  "max_residual_l1": 1.0215769090259036e-09,
+  "max_rank_sum_error": 4.163336342344337e-14
+}

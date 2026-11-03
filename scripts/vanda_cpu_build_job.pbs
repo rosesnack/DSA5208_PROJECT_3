@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#PBS -N dsa5208-cpu-build
+#PBS -q auto_free
+#PBS -l select=1:ncpus=32:mpiprocs=1:ompthreads=1:mem=64gb
+#PBS -l walltime=04:00:00
+#PBS -j oe
+#PBS -V
+
+set -euo pipefail
+cd "${PBS_O_WORKDIR:?Submit from the project directory}"
+module load openmpi/gcc/64/4.1.8 CMake/3.29.3-GCCcore-13.3.0
+
+cmake -S third_party/kokkos -B build-vanda-matrix-kokkos-openmp-source \
+    -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER="$(command -v g++)" \
+    -DKokkos_ENABLE_OPENMP=ON -DCMAKE_INSTALL_PREFIX="$PWD/kokkos-install-vanda-matrix-openmp"
+cmake --build build-vanda-matrix-kokkos-openmp-source --parallel 16
+cmake --install build-vanda-matrix-kokkos-openmp-source
+cmake -S . -B build-vanda-matrix-cpu -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_CXX_COMPILER=mpicxx -DBUILD_KOKKOS=ON -DBUILD_MPI_KOKKOS=ON \
+    -DCMAKE_PREFIX_PATH="$PWD/kokkos-install-vanda-matrix-openmp"
+cmake --build build-vanda-matrix-cpu --parallel 16
+mpicxx -O3 -DNDEBUG scripts/mpi_rank_hosts.cpp -o build-vanda-matrix-cpu/mpi_rank_hosts
+printf '%s\n' "$PBS_JOBID" > "results/updated_vanda_scaling/${RUN_ID:?}/cpu_build.complete"

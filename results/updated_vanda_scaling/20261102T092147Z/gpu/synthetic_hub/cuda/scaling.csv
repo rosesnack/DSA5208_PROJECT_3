@@ -1,0 +1,2 @@
+dataset,implementation,backend,serial_s,parallel_s,speedup,rank_l1_error,rank_max_error
+synthetic_hub,cuda,CUDA,0.039831984,0.006081542,6.5496520454845175,2.4760297707548257e-16,7.589415207398531e-19

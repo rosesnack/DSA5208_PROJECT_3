@@ -3,12 +3,14 @@ import csv
 import argparse
 import json
 import math
+import os
 
 from validate_serial import DATASETS, RESULTS_ROOT, ROOT, read_csv, validate
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("communication", nargs="?", choices=("allgather", "halo"), default="allgather")
-parser.add_argument("--processes", nargs="+", type=int, choices=(1, 2, 4, 8), default=(1, 2, 4, 8),
+default_processes = tuple(int(value) for value in os.environ.get("PAGERANK_PROCESS_COUNTS", "1 2 4 8").split())
+parser.add_argument("--processes", nargs="+", type=int, default=default_processes,
                     help="MPI process counts to validate (default: 1 2 4 8)")
 ARGS = parser.parse_args()
 COMMUNICATION = ARGS.communication
@@ -81,8 +83,9 @@ def main():
             "method": "Independent residual checks and full rank comparison with validated serial output",
             "rank_l1_tolerance": RANK_L1_TOLERANCE, "checks": checks}
     RESULTS.mkdir(parents=True, exist_ok=True)
-    (RESULTS / "validation.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
-    with (RESULTS / "scaling.csv").open("w", newline="", encoding="utf-8") as output:
+    suffix = os.environ.get("PAGERANK_REPORT_SUFFIX", "")
+    (RESULTS / f"validation{suffix}.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    with (RESULTS / f"scaling{suffix}.csv").open("w", newline="", encoding="utf-8") as output:
         writer = csv.DictWriter(output, fieldnames=["dataset", "communication", "processes", "serial_s", "mpi_s",
                                                 "speedup", "efficiency", "communication_s",
                                                 "communication_bytes_per_iteration", "communication_setup_bytes",

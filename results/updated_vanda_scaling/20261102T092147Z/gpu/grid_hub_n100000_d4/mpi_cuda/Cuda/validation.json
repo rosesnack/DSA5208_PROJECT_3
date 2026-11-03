@@ -1,0 +1,60 @@
+{
+  "implementation": "mpi_cuda",
+  "backend": "Cuda",
+  "communication": "allgather",
+  "process_counts": [
+    1,
+    2
+  ],
+  "passed": 2,
+  "failed": 0,
+  "method": "Independent residual and full-rank comparison to the same-environment Serial run",
+  "checks": [
+    {
+      "dataset": "grid_hub_n100000_d4",
+      "passed": true,
+      "nodes": 100000,
+      "edges": 400000,
+      "iterations": 23,
+      "independent_residual_l1": 2.4828670964361606e-09,
+      "rank_sum_error": 6.439293542825908e-15,
+      "implementation": "mpi_cuda",
+      "backend": "Cuda",
+      "communication": "allgather",
+      "processes": 1,
+      "serial_s": 0.039933671,
+      "parallel_s": 0.010998747000000003,
+      "speedup": 3.6307473023972627,
+      "communication_s": 0.0017122299999999674,
+      "communication_bytes_per_iteration": 0,
+      "communication_setup_s": 0,
+      "communication_setup_bytes": 0,
+      "backend_compute_s": 0.004539986000000001,
+      "transfer_s": 0.004709102,
+      "rank_l1_error": 0.0
+    },
+    {
+      "dataset": "grid_hub_n100000_d4",
+      "passed": true,
+      "nodes": 100000,
+      "edges": 400000,
+      "iterations": 23,
+      "independent_residual_l1": 2.4828670964361606e-09,
+      "rank_sum_error": 6.439293542825908e-15,
+      "implementation": "mpi_cuda",
+      "backend": "Cuda",
+      "communication": "allgather",
+      "processes": 2,
+      "serial_s": 0.039933671,
+      "parallel_s": 0.020473423,
+      "speedup": 1.950512671965015,
+      "communication_s": 0.015728205999999953,
+      "communication_bytes_per_iteration": 800000,
+      "communication_setup_s": 0,
+      "communication_setup_bytes": 0,
+      "backend_compute_s": 0.004093186,
+      "transfer_s": 0.0035443850000000006,
+      "rank_l1_error": 0.0
+    }
+  ]
+}

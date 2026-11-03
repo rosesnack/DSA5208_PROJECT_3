@@ -9,10 +9,17 @@
 #include <numeric>
 #include <sstream>
 #include <string>
+#include <vector>
 
-const int thread_counts[] = {1, 2, 4, 8};
 const int chunk_size = 64;
 std::string output_root() { return results_root() + "/openmp"; }
+
+std::vector<int> configured_thread_counts() {
+    std::istringstream input(environment_string("PAGERANK_OPENMP_THREADS", "1 2 4 8 16 32"));
+    std::vector<int> counts;
+    for (int threads = 0; input >> threads;) counts.push_back(threads);
+    return counts;
+}
 
 Result pagerank_openmp(const Graph& g, int thread_count) {
     using Clock = std::chrono::steady_clock;
@@ -91,7 +98,7 @@ int main() {
         std::cout << "Running " << dataset.name << "..." << std::endl;
         // Load once; every solver call starts again from equal ranks.
         const auto graph = load_graph(dataset.edges, dataset.nodes);
-        for (int thread_count : thread_counts) {
+        for (int thread_count : configured_thread_counts()) {
             for (int run = 0; run < warmup_runs(); ++run) pagerank_openmp(graph, thread_count);
 
             Result result;

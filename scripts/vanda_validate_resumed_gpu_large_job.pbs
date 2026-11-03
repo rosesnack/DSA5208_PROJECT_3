@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+#PBS -N dsa5208-gpu-validate
+#PBS -q auto_free
+#PBS -l select=1:ncpus=32:mpiprocs=1:ompthreads=1:mem=120gb
+#PBS -l walltime=04:00:00
+#PBS -j oe
+#PBS -V
+
+set -euo pipefail
+cd "${PBS_O_WORKDIR:?Submit from the isolated validation directory}"
+module load openmpi/gcc/64/4.1.8 CMake/3.29.3-GCCcore-13.3.0
+GRAPH_NAME="${GRAPH_NAME:?Set GRAPH_NAME}"
+RUN_ID="${RUN_ID:?Set RUN_ID}"
+DATA_ROOT="${DATA_ROOT:?Set DATA_ROOT}"
+RESULT_ROOT="$DATA_ROOT/results/gpu/$GRAPH_NAME"
+DESTINATION="/scratch/hongxinran/DSA5208_PROJECT_3/results/updated_vanda_scaling/$RUN_ID/gpu/$GRAPH_NAME"
+export PAGERANK_RESULTS_ROOT="$RESULT_ROOT"
+export PAGERANK_DATASET_MANIFEST="$DATA_ROOT/manifests/gpu_${GRAPH_NAME}.tsv"
+export PAGERANK_HYBRID_THREADS='1 2 4 8'
+export PAGERANK_HYBRID_CONFIGS='1:1 1:2 1:4 1:8 2:1 2:2 2:4 2:8'
+export PAGERANK_HYBRID_MAX_TOTAL_THREADS=64
+test -f "$RESULT_ROOT/resume_gpu_complete.txt"
+
+for communication in allgather halo; do
+    python3 scripts/validate_mpi.py "$communication" --processes 1 2
+    python3 scripts/validate_hybrid.py "$communication" --processes 1 2
+    python3 scripts/validate_mpi_device.py mpi_cuda Cuda "$communication" --processes 1 2
+    python3 scripts/validate_mpi_device.py mpi_kokkos Cuda "$communication" --processes 1 2
+done
+
+mkdir -p "$DESTINATION"
+rsync -a --exclude='ranks.csv' "$RESULT_ROOT/." "$DESTINATION/"
+printf '%s\n' "$PBS_JOBID" > "$DESTINATION/complete.txt"

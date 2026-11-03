@@ -1,0 +1,2 @@
+dataset,implementation,backend,serial_s,parallel_s,speedup,rank_l1_error,rank_max_error
+synthetic_controlled,kokkos,Cuda,0.035837148,0.0093059,3.8510136580019125,1.4785743599800023e-16,6.505213034913027e-19

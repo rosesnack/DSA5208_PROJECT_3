@@ -2,12 +2,14 @@
 import csv
 import json
 import math
+import os
 
 from validate_serial import DATASETS, RESULTS_ROOT, ROOT, read_csv, validate
 
 RESULTS = RESULTS_ROOT / "openmp"
 SERIAL_RESULTS = RESULTS_ROOT / "serial"
-THREAD_COUNTS = (1, 2, 4, 8)
+THREAD_COUNTS = tuple(int(value) for value in os.environ.get(
+    "PAGERANK_OPENMP_THREADS", "1 2 4 8 16 32").split())
 RANK_L1_TOLERANCE = 1e-8
 
 

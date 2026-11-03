@@ -1,0 +1,6 @@
+PBS job: 1513003.stdct-mgmt-02
+CMAKE_BUILD_TYPE:STRING=Release
+CMAKE_CXX_COMPILER:STRING=/cm/shared/apps/openmpi4/gcc/4.1.8/bin/mpicxx
+f34d1977318c1abf962421c6bcd6fe436857d54051d12ddeb15b3544ecd40668  src/pagerank_mpi_kokkos.cpp
+b88e9a278a6fd7163a518d67dfb6df539f64f6800d3d1906c5e9dec160bfb99f  src/mpi_device_driver.hpp
+aaaa25abeb55e8208d0f6e151760798af37924b2cffa7a7820efc34ff5e6987a  build-vanda-matrix-cpu/pagerank_mpi_kokkos

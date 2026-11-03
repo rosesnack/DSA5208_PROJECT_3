@@ -1,0 +1,24 @@
+{
+  "implementation": "kokkos",
+  "backend": "OpenMP",
+  "passed": 1,
+  "failed": 0,
+  "method": "Independent residual checks and full rank comparison with validated serial output",
+  "rank_l1_tolerance": 1e-08,
+  "checks": [
+    {
+      "dataset": "grid_controlled_n100000_d8",
+      "passed": true,
+      "implementation": "kokkos",
+      "backend": "OpenMP",
+      "serial_s": 0.03138189,
+      "parallel_s": 0.020853843,
+      "speedup": 1.5048492500878616,
+      "rank_l1_error": 9.989271305206777e-18,
+      "rank_max_error": 2.168404344971009e-19,
+      "iterations": 22,
+      "residual_l1": 2.8180136955625055e-09,
+      "rank_sum_error": 8.060219158778636e-14
+    }
+  ]
+}

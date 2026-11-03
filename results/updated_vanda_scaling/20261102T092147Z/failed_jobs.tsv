@@ -1,0 +1,25 @@
+stage	graph	nodes	job_id
+serial	synthetic_uniform	1	1509209.stdct-mgmt-02
+mpi_strong	synthetic_uniform	1	1509210.stdct-mgmt-02
+mpi_strong	synthetic_uniform	2	1509211.stdct-mgmt-02
+mpi_strong	synthetic_uniform	4	1509212.stdct-mgmt-02
+mpi_strong	synthetic_uniform	8	1509213.stdct-mgmt-02
+mpi_strong_512	synthetic_uniform	8	1509214.stdct-mgmt-02
+mpi_strong	synthetic_uniform	2	1509222.stdct-mgmt-02
+mpi_strong	synthetic_uniform	4	1509223.stdct-mgmt-02
+layout_probe	-	2	1510477.stdct-mgmt-02	missing remote libstdc++
+layout_probe	-	2	1510484.stdct-mgmt-02	missing GCCcore runtime
+mpi_strong	synthetic_uniform	2	1509255.stdct-mgmt-02	missing PBS library in prior job
+mpi_strong	synthetic_uniform	4	1509256.stdct-mgmt-02	missing PBS library in prior job
+mpi_strong	synthetic_uniform	8	1509224.stdct-mgmt-02	missing PBS library in prior job
+mpi_strong_512	synthetic_uniform	8	1509225.stdct-mgmt-02	missing PBS library in prior job
+gpu_smoke	uniform	2	1509237.stdct-mgmt-02	missing PBS library in prior job
+mpi_strong	synthetic_uniform	2	1510488.stdct-mgmt-02	PE=1 MPI mapping stalled
+mpi_strong	synthetic_uniform	4	1510489.stdct-mgmt-02	PE=1 MPI mapping stalled
+mpi_strong	synthetic_uniform	8	1510490.stdct-mgmt-02	PE=1 MPI mapping stalled
+gpu_smoke	uniform	2	1510492.stdct-mgmt-02	PE=1 MPI mapping stalled
+mpi_strong	synthetic_uniform	2	1510556.stdct-mgmt-02	OpenMPI PE mapping stalled; replaced by explicit CPU affinity
+mpi_strong	synthetic_uniform	4	1510557.stdct-mgmt-02	OpenMPI PE mapping stalled; replaced by explicit CPU affinity
+mpi_strong	synthetic_uniform	8	1510558.stdct-mgmt-02	OpenMPI PE mapping stalled; replaced by explicit CPU affinity
+mpi_strong_512	synthetic_uniform	8	1510491.stdct-mgmt-02	OpenMPI PE mapping stalled; replaced by explicit CPU affinity
+gpu_smoke	uniform	2	1510559.stdct-mgmt-02	OpenMPI PE mapping stalled; replaced by explicit CPU affinity

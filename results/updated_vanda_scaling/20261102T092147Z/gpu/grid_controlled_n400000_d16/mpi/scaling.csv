@@ -1,0 +1,3 @@
+dataset,communication,processes,serial_s,mpi_s,speedup,efficiency,communication_s,communication_bytes_per_iteration,communication_setup_bytes,rank_l1_error,rank_max_error
+grid_controlled_n400000_d16,allgather,1,0.286095158,0.2940427990000001,0.9729711422043699,0.9729711422043699,0.005656763999999592,0,0,0.0,0.0
+grid_controlled_n400000_d16,allgather,2,0.286095158,0.255817132,1.1183580855718451,0.5591790427859226,0.1926099409999995,3200000,0,0.0,0.0

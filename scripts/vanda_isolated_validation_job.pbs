@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+#PBS -N dsa5208-code-validation
+#PBS -q auto_free
+#PBS -l select=2:ncpus=18:mpiprocs=1:ompthreads=8:ngpus=1:mem=120gb
+#PBS -l place=scatter
+#PBS -l walltime=02:00:00
+#PBS -j oe
+#PBS -V
+
+set -euo pipefail
+cd "${PBS_O_WORKDIR:?Submit from the isolated validation directory}"
+module load openmpi/gcc/64/4.1.8 cuda12.4/toolkit/12.4.1 CMake/3.29.3-GCCcore-13.3.0
+export LD_LIBRARY_PATH="/opt/pbs/lib:${LD_LIBRARY_PATH:-}"
+export PAGERANK_ENVIRONMENT=vanda-a40-gcc13-release
+export PAGERANK_RUN_ID="${PAGERANK_RUN_ID:?Set PAGERANK_RUN_ID}"
+export PAGERANK_DATASET_MANIFEST="$PWD/data/smoke.tsv"
+export PAGERANK_RESULTS_ROOT="$PWD/results/$PAGERANK_RUN_ID"
+export PAGERANK_REPEATS=2 PAGERANK_WARMUPS=1
+export PAGERANK_OPENMP_THREADS='1 2 4 8'
+export PAGERANK_GPU_PROCESS_COUNTS='1 2'
+export PAGERANK_GPU_HYBRID_THREADS='1 2 4 8'
+export OMP_DYNAMIC=FALSE OMP_PROC_BIND=spread OMP_PLACES=cores
+mkdir -p "$PAGERANK_RESULTS_ROOT"
+
+KOKKOS_CPU=/scratch/hongxinran/DSA5208_PROJECT_3/kokkos-install-vanda-matrix-openmp
+KOKKOS_CUDA=/scratch/hongxinran/DSA5208_PROJECT_3/kokkos-install-vanda-matrix-cuda
+NVCC_WRAPPER=/scratch/hongxinran/DSA5208_PROJECT_3/third_party/kokkos/bin/nvcc_wrapper
+cmake -S . -B build-cpu -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=mpicxx \
+    -DBUILD_KOKKOS=ON -DBUILD_MPI_KOKKOS=ON -DCMAKE_PREFIX_PATH="$KOKKOS_CPU"
+cmake --build build-cpu --parallel 8
+cmake -S . -B build-cuda -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=mpicxx \
+    -DBUILD_CUDA=ON -DBUILD_MPI_CUDA=ON -DCMAKE_CUDA_ARCHITECTURES=86
+cmake --build build-cuda --parallel 8
+mpicxx -O3 -DNDEBUG scripts/mpi_rank_hosts.cpp -o build-cuda/mpi_rank_hosts
+cmake -S . -B build-kokkos-cuda -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_CXX_COMPILER="$NVCC_WRAPPER" -DBUILD_KOKKOS=ON -DBUILD_MPI_KOKKOS=ON \
+    -DCMAKE_PREFIX_PATH="$KOKKOS_CUDA"
+cmake --build build-kokkos-cuda --parallel 8
+
+{
+    printf 'PBS job: %s\n' "$PBS_JOBID"
+    sort -u "$PBS_NODEFILE"
+    lscpu | grep -E 'Model name|Socket\(s\)|Core\(s\) per socket|CPU\(s\)'
+    nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
+    mpicxx --showme:version
+    nvcc --version | tail -n 4
+    grep -E '^(CMAKE_BUILD_TYPE|CMAKE_CXX_COMPILER|CMAKE_CUDA_COMPILER):' build-cuda/CMakeCache.txt
+    grep -E '^(CMAKE_BUILD_TYPE|CMAKE_CXX_COMPILER):' build-cpu/CMakeCache.txt
+    grep -E '^(CMAKE_BUILD_TYPE|CMAKE_CXX_COMPILER):' build-kokkos-cuda/CMakeCache.txt
+} > "$PAGERANK_RESULTS_ROOT/job_environment.txt"
+
+CUDA_BUILD_DIR=build-cuda KOKKOS_BUILD_DIR=build-kokkos-cuda KOKKOS_BACKEND=Cuda \
+PAGERANK_RUN_OPENMP_ABLATION=1 bash scripts/run_gpu_suite.sh
+CUDA_BUILD_DIR=build-cuda KOKKOS_BUILD_DIR=build-kokkos-cuda \
+    bash scripts/run_mpi_gpu_suite.sh
+
+OMP_NUM_THREADS=2 ./build-cpu/pagerank_kokkos
+python3 scripts/validate_gpu.py kokkos OpenMP
+for communication in allgather halo; do
+    for processes in 1 2; do
+        OMP_NUM_THREADS=2 PAGERANK_KOKKOS_THREADS=2 \
+            mpiexec -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x PAGERANK_KOKKOS_THREADS \
+            --map-by ppr:1:node --bind-to none -n "$processes" \
+            python3 scripts/mpi_affinity_exec.py 2 \
+            ./build-cpu/pagerank_mpi_kokkos --communication="$communication"
+    done
+    python3 scripts/validate_mpi_device.py mpi_kokkos OpenMP "$communication" \
+        --threads 2 --processes 1 2
+done
+printf '%s\n' "$PBS_JOBID" > "$PAGERANK_RESULTS_ROOT/complete.txt"

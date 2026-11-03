@@ -1,0 +1,52 @@
+{
+  "implementation": "kokkos",
+  "backend": "Cuda",
+  "passed": 3,
+  "failed": 0,
+  "method": "Independent residual checks and full rank comparison with validated serial output",
+  "rank_l1_tolerance": 1e-08,
+  "checks": [
+    {
+      "dataset": "weak_uniform_p001",
+      "passed": true,
+      "implementation": "kokkos",
+      "backend": "Cuda",
+      "serial_s": 0.011278943,
+      "parallel_s": 0.00066378,
+      "speedup": 16.99198981590286,
+      "rank_l1_error": 2.3999492714324444e-16,
+      "rank_max_error": 2.0328790734103208e-20,
+      "iterations": 12,
+      "residual_l1": 1.389225399964599e-09,
+      "rank_sum_error": 5.995204332975845e-15
+    },
+    {
+      "dataset": "weak_hub_p001",
+      "passed": true,
+      "implementation": "kokkos",
+      "backend": "Cuda",
+      "serial_s": 0.012450246,
+      "parallel_s": 0.005115296,
+      "speedup": 2.433924840322046,
+      "rank_l1_error": 8.823626914842772e-17,
+      "rank_max_error": 4.336808689942018e-19,
+      "iterations": 13,
+      "residual_l1": 1.94666695900352e-09,
+      "rank_sum_error": 2.5868196473766147e-14
+    },
+    {
+      "dataset": "weak_controlled_p001",
+      "passed": true,
+      "implementation": "kokkos",
+      "backend": "Cuda",
+      "serial_s": 0.015417742,
+      "parallel_s": 0.006217404,
+      "speedup": 2.4797716217250803,
+      "rank_l1_error": 1.47182986013749e-16,
+      "rank_max_error": 1.0842021724855044e-18,
+      "iterations": 16,
+      "residual_l1": 2.691342088192783e-09,
+      "rank_sum_error": 1.8540724511240114e-14
+    }
+  ]
+}

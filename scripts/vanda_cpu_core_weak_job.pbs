@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#PBS -N dsa5208-core-weak
+#PBS -q auto
+#PBS -l select=8:ncpus=32:mpiprocs=32:ompthreads=1:mem=32gb
+#PBS -l place=scatter
+#PBS -l walltime=04:00:00
+#PBS -j oe
+#PBS -V
+
+set -euo pipefail
+cd "${PBS_O_WORKDIR:?Submit from the project directory}"
+module load openmpi/gcc/64/4.1.8 CMake/3.29.3-GCCcore-13.3.0
+export LD_LIBRARY_PATH="/opt/pbs/lib:${LD_LIBRARY_PATH:-}"
+CORE_WEAK_SIZES='4 8 16 32 64 128 256' bash scripts/run_vanda_cpu_core_weak.sh

@@ -4,7 +4,10 @@
 #include <cstdlib>
 #include <cstddef>
 #include <fstream>
+#include <stdexcept>
+#include <sstream>
 #include <string>
+#include <utility>
 #include <vector>
 
 #ifndef PAGERANK_BUILD_TYPE
@@ -63,13 +66,30 @@ struct Dataset {
 };
 
 inline const std::vector<Dataset>& datasets() {
-    static const std::vector<Dataset> value = {
-        {"google", "data/raw/web-Google.txt", ""},
-        {"uniform", "data/synthetic/uniform.edges",
-                    "data/synthetic/uniform.nodes"},
-        {"hub", "data/synthetic/hub.edges",
-                "data/synthetic/hub.nodes"}
-    };
+    static const std::vector<Dataset> value = [] {
+        const char* manifest_path = std::getenv("PAGERANK_DATASET_MANIFEST");
+        if (!manifest_path || !*manifest_path) {
+            return std::vector<Dataset>{
+                {"google", "data/raw/web-Google.txt", ""},
+                {"uniform", "data/synthetic/uniform.edges", "data/synthetic/uniform.nodes"},
+                {"hub", "data/synthetic/hub.edges", "data/synthetic/hub.nodes"}
+            };
+        }
+
+        std::ifstream manifest(manifest_path);
+        if (!manifest) throw std::runtime_error("Cannot open dataset manifest: " + std::string(manifest_path));
+        std::vector<Dataset> configured;
+        std::string line;
+        while (std::getline(manifest, line)) {
+            if (line.empty() || line.front() == '#') continue;
+            std::istringstream row(line);
+            Dataset dataset;
+            row >> dataset.name >> dataset.edges >> dataset.nodes;
+            if (dataset.nodes == "-") dataset.nodes.clear();
+            configured.push_back(std::move(dataset));
+        }
+        return configured;
+    }();
     return value;
 }
 

@@ -1,0 +1,60 @@
+{
+  "implementation": "mpi_kokkos",
+  "backend": "Cuda",
+  "communication": "allgather",
+  "process_counts": [
+    1,
+    2
+  ],
+  "passed": 2,
+  "failed": 0,
+  "method": "Independent residual and full-rank comparison to the same-environment Serial run",
+  "checks": [
+    {
+      "dataset": "grid_hub_n200000_d4",
+      "passed": true,
+      "nodes": 200000,
+      "edges": 800000,
+      "iterations": 23,
+      "independent_residual_l1": 2.716440322321888e-09,
+      "rank_sum_error": 7.549516567451064e-15,
+      "implementation": "mpi_kokkos",
+      "backend": "Cuda",
+      "communication": "allgather",
+      "processes": 1,
+      "serial_s": 0.084816495,
+      "parallel_s": 0.035587893,
+      "speedup": 2.3832963362006288,
+      "communication_s": 0.0036164759999999588,
+      "communication_bytes_per_iteration": 0,
+      "communication_setup_s": 0,
+      "communication_setup_bytes": 0,
+      "backend_compute_s": 0.011873943000000005,
+      "transfer_s": 0.019960479000000003,
+      "rank_l1_error": 1.0869380889051358e-16
+    },
+    {
+      "dataset": "grid_hub_n200000_d4",
+      "passed": true,
+      "nodes": 200000,
+      "edges": 800000,
+      "iterations": 23,
+      "independent_residual_l1": 2.716440322321888e-09,
+      "rank_sum_error": 7.549516567451064e-15,
+      "implementation": "mpi_kokkos",
+      "backend": "Cuda",
+      "communication": "allgather",
+      "processes": 2,
+      "serial_s": 0.084816495,
+      "parallel_s": 0.03646038300000001,
+      "speedup": 2.3262645101671033,
+      "communication_s": 0.022454331000000077,
+      "communication_bytes_per_iteration": 1600000,
+      "communication_setup_s": 0,
+      "communication_setup_bytes": 0,
+      "backend_compute_s": 0.006291054999999999,
+      "transfer_s": 0.013846625000000001,
+      "rank_l1_error": 1.0869380889051358e-16
+    }
+  ]
+}

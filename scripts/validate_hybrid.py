@@ -3,19 +3,21 @@ import argparse
 import csv
 import json
 import math
+import os
 
 from validate_serial import DATASETS, RESULTS_ROOT, ROOT, read_csv, validate
 
-RESULTS = RESULTS_ROOT / "hybrid"
 SERIAL_RESULTS = RESULTS_ROOT / "serial"
-THREAD_COUNTS = (1, 2, 4, 8)
-MAX_TOTAL_THREADS = 8
+THREAD_COUNTS = tuple(int(value) for value in os.environ.get("PAGERANK_HYBRID_THREADS", "1 2 4 8").split())
+MAX_TOTAL_THREADS = int(os.environ.get("PAGERANK_HYBRID_MAX_TOTAL_THREADS", "8"))
 RANK_L1_TOLERANCE = 1e-8
 
 
-def compare(name, folder, processes, threads, baseline, serial_ranks):
+def compare(name, folder, processes, threads, communication, baseline, serial_ranks):
     summary = json.loads((folder / "summary.json").read_text(encoding="utf-8"))
     assert summary["implementation"] == "hybrid", "Wrong implementation label"
+    accepted = ("allgather", "allgatherv") if communication == "allgather" else ("halo",)
+    assert summary["communication"] in accepted, "Wrong communication mode"
     assert summary["processes"] == processes, "Wrong process count"
     assert all(int(row["processes"]) == summary["processes"] for row in read_csv(folder / "timings.csv")), "Process count changed between repeats"
     assert summary["requested_threads"] == threads, "Wrong requested thread count"
@@ -39,19 +41,32 @@ def compare(name, folder, processes, threads, baseline, serial_ranks):
     assert l1_error <= RANK_L1_TOLERANCE, f"Serial/hybrid rank error too large: {l1_error:.3e}"
     speedup = baseline["solve_median_s"] / summary["solve_median_s"]
     return {"dataset": name, "processes": processes, "requested_threads": threads,
+            "communication": communication,
             "threads_min": min(actual), "threads_max": max(actual), "total_threads": total_threads,
             "serial_s": baseline["solve_median_s"], "hybrid_s": summary["solve_median_s"],
             "speedup": speedup, "efficiency": speedup / total_threads,
+            "communication_s": summary.get("communication_max_s"),
+            "communication_bytes_per_iteration": summary.get("communication_bytes_per_iteration"),
+            "communication_setup_s": summary.get("communication_setup_s"),
+            "communication_setup_bytes": summary.get("communication_setup_bytes"),
             "rank_l1_error": l1_error, "rank_max_error": max_error}
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--processes", nargs="+", type=int, choices=(1, 2, 4, 8),
-                        default=(1, 2, 4, 8), help="MPI process counts to validate")
-    processes_to_validate = tuple(dict.fromkeys(parser.parse_args().processes))
-    configurations = [(p, t) for p in processes_to_validate for t in THREAD_COUNTS
-                      if p * t <= MAX_TOTAL_THREADS]
+    parser.add_argument("communication", nargs="?", choices=("allgather", "halo"), default="allgather")
+    default_processes = tuple(int(value) for value in os.environ.get("PAGERANK_PROCESS_COUNTS", "1 2 4 8").split())
+    parser.add_argument("--processes", nargs="+", type=int, default=default_processes,
+                        help="MPI process counts to validate")
+    args = parser.parse_args()
+    processes_to_validate = tuple(dict.fromkeys(args.processes))
+    results = RESULTS_ROOT / ("hybrid_halo" if args.communication == "halo" else "hybrid")
+    configured = os.environ.get("PAGERANK_HYBRID_CONFIGS")
+    if configured:
+        configurations = [tuple(map(int, item.split(":"))) for item in configured.split()]
+    else:
+        configurations = [(p, t) for p in processes_to_validate for t in THREAD_COUNTS
+                          if p * t <= MAX_TOTAL_THREADS]
     checks, scaling = [], []
     for name, (edge_path, node_path) in DATASETS.items():
         # Validate the serial reference before using it to assess the parallel output.
@@ -68,11 +83,11 @@ def main():
             print(f"FAIL: {name} serial reference: {error}", flush=True)
             continue
         for processes, threads in configurations:
-            folder = RESULTS / name / f"p{processes}_t{threads}"
+            folder = results / name / f"p{processes}_t{threads}"
             print(f"Checking {name}/p{processes}_t{threads}...", flush=True)
             try:
                 check = validate(name, edge_path, node_path, folder)
-                comparison = compare(name, folder, processes, threads, baseline, serial_ranks)
+                comparison = compare(name, folder, processes, threads, args.communication, baseline, serial_ranks)
                 check.update(comparison)
                 scaling.append(comparison)
                 print(f"PASS: L1 error={comparison['rank_l1_error']:.3e}, speedup={comparison['speedup']:.2f}", flush=True)
@@ -85,14 +100,16 @@ def main():
             "process_counts": processes_to_validate,
             "method": "Independent residual checks and full rank comparison with validated serial output",
             "rank_l1_tolerance": RANK_L1_TOLERANCE, "checks": checks}
-    RESULTS.mkdir(parents=True, exist_ok=True)
-    (RESULTS / "validation.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
-    with (RESULTS / "scaling.csv").open("w", newline="", encoding="utf-8") as output:
-        writer = csv.DictWriter(output, fieldnames=["dataset", "processes", "requested_threads", "threads_min", "threads_max", "total_threads", "serial_s", "hybrid_s",
-                                                "speedup", "efficiency", "rank_l1_error", "rank_max_error"])
+    results.mkdir(parents=True, exist_ok=True)
+    suffix = os.environ.get("PAGERANK_REPORT_SUFFIX", "")
+    (results / f"validation{suffix}.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    with (results / f"scaling{suffix}.csv").open("w", newline="", encoding="utf-8") as output:
+        writer = csv.DictWriter(output, fieldnames=["dataset", "processes", "requested_threads", "communication", "threads_min", "threads_max", "total_threads", "serial_s", "hybrid_s",
+                                                "speedup", "efficiency", "communication_s", "communication_bytes_per_iteration",
+                                                "communication_setup_s", "communication_setup_bytes", "rank_l1_error", "rank_max_error"])
         writer.writeheader()
         writer.writerows(scaling)
-    print(f"Validation and scaling results: {RESULTS}")
+    print(f"Validation and scaling results: {results}")
     return 0 if report["failed"] == 0 else 1
 
 

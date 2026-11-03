@@ -1,0 +1,100 @@
+Loading CMake/3.29.3-GCCcore-13.3.0
+  Loading requirement: GCCcore/13.3.0 ncurses/6.5-GCCcore-13.3.0
+    zlib/1.3.1-GCCcore-13.3.0 bzip2/1.0.8-GCCcore-13.3.0 OpenSSL/3
+    cURL/8.7.1-GCCcore-13.3.0 XZ/5.4.5-GCCcore-13.3.0
+    libarchive/3.7.4-GCCcore-13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /cm/shared/apps/openmpi4/gcc/4.1.8/bin/mpicxx - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenMP_CXX: -fopenmp (found version "4.5")
+-- Found OpenMP: TRUE (found version "4.5") found components: CXX
+-- Found MPI_CXX: /cm/shared/apps/openmpi4/gcc/4.1.8/bin/mpicxx (found version "3.1")
+-- Found MPI: TRUE (found version "3.1") found components: CXX
+-- The CUDA compiler identification is NVIDIA 12.4.131
+-- Detecting CUDA compiler ABI info
+-- Detecting CUDA compiler ABI info - done
+-- Check for working CUDA compiler: /cm/shared/apps/cuda12.4/toolkit/12.4.1/bin/nvcc - skipped
+-- Detecting CUDA compile features
+-- Detecting CUDA compile features - done
+-- Found CUDAToolkit: /cm/shared/apps/cuda12.4/toolkit/12.4.1/targets/x86_64-linux/include (found version "12.4.131")
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (16.6s)
+-- Generating done (0.8s)
+-- Build files have been written to: /scratch/hongxinran/proj3_validation_20261103/build-cuda-cpucheck
+[  5%] Building CXX object CMakeFiles/graph_io.dir/src/graph_io.cpp.o
+[ 11%] Linking CXX static library libgraph_io.a
+[ 11%] Built target graph_io
+[ 22%] Building CXX object CMakeFiles/utility.dir/src/utility.cpp.o
+[ 22%] Building CXX object CMakeFiles/mpi_graph.dir/src/mpi_graph.cpp.o
+[ 27%] Linking CXX static library libutility.a
+[ 33%] Linking CXX static library libmpi_graph.a
+[ 33%] Built target utility
+[ 50%] Building CXX object CMakeFiles/pagerank_serial.dir/src/pagerank_serial.cpp.o
+[ 50%] Building CUDA object CMakeFiles/pagerank_cuda.dir/src/pagerank_cuda.cu.o
+[ 50%] Building CXX object CMakeFiles/pagerank_openmp.dir/src/pagerank_openmp.cpp.o
+[ 50%] Built target mpi_graph
+[ 55%] Building CXX object CMakeFiles/pagerank_hybrid.dir/src/pagerank_hybrid.cpp.o
+[ 66%] Building CUDA object CMakeFiles/pagerank_mpi_cuda.dir/src/pagerank_mpi_cuda.cu.o
+[ 66%] Building CXX object CMakeFiles/pagerank_mpi.dir/src/pagerank_mpi.cpp.o
+[ 72%] Linking CXX executable pagerank_serial
+[ 77%] Linking CXX executable pagerank_openmp
+[ 77%] Built target pagerank_serial
+[ 77%] Built target pagerank_openmp
+[ 83%] Linking CXX executable pagerank_mpi
+[ 88%] Linking CXX executable pagerank_hybrid
+[ 88%] Built target pagerank_mpi
+[ 88%] Built target pagerank_hybrid
+[ 94%] Linking CXX executable pagerank_cuda
+[ 94%] Built target pagerank_cuda
+[100%] Linking CXX executable pagerank_mpi_cuda
+[100%] Built target pagerank_mpi_cuda
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /scratch/hongxinran/DSA5208_PROJECT_3/third_party/kokkos/bin/nvcc_wrapper - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenMP_CXX: -fopenmp (found version "4.5")
+-- Found OpenMP: TRUE (found version "4.5") found components: CXX
+-- Found MPI_CXX: /app1/admin/shared/apps/openmpi4/gcc/4.1.8/lib/libmpi.so (found version "3.1")
+-- Found MPI: TRUE (found version "3.1") found components: CXX
+-- Found CUDAToolkit: /cm/shared/apps/cuda12.4/toolkit/12.4.1/targets/x86_64-linux/include (found version "12.4.131")
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Enabled Kokkos devices: SERIAL;CUDA
+-- Configuring done (15.4s)
+-- Generating done (0.7s)
+-- Build files have been written to: /scratch/hongxinran/proj3_validation_20261103/build-kokkos-cuda-cpucheck
+[  5%] Building CXX object CMakeFiles/graph_io.dir/src/graph_io.cpp.o
+[ 11%] Linking CXX static library libgraph_io.a
+[ 11%] Built target graph_io
+[ 22%] Building CXX object CMakeFiles/utility.dir/src/utility.cpp.o
+[ 22%] Building CXX object CMakeFiles/mpi_graph.dir/src/mpi_graph.cpp.o
+[ 27%] Linking CXX static library libmpi_graph.a
+[ 27%] Built target mpi_graph
+[ 33%] Linking CXX static library libutility.a
+[ 33%] Built target utility
+[ 55%] Building CXX object CMakeFiles/pagerank_serial.dir/src/pagerank_serial.cpp.o
+[ 66%] Building CXX object CMakeFiles/pagerank_hybrid.dir/src/pagerank_hybrid.cpp.o
+[ 66%] Building CXX object CMakeFiles/pagerank_openmp.dir/src/pagerank_openmp.cpp.o
+[ 66%] Building CXX object CMakeFiles/pagerank_mpi.dir/src/pagerank_mpi.cpp.o
+[ 66%] Building CXX object CMakeFiles/pagerank_mpi_kokkos.dir/src/pagerank_mpi_kokkos.cpp.o
+[ 66%] Building CXX object CMakeFiles/pagerank_kokkos.dir/src/pagerank_kokkos.cpp.o
+[ 72%] Linking CXX executable pagerank_serial
+[ 72%] Built target pagerank_serial
+[ 77%] Linking CXX executable pagerank_openmp
+[ 83%] Linking CXX executable pagerank_mpi
+[ 83%] Built target pagerank_openmp
+[ 88%] Linking CXX executable pagerank_hybrid
+[ 88%] Built target pagerank_mpi
+[ 88%] Built target pagerank_hybrid
+[ 94%] Linking CXX executable pagerank_kokkos
+[100%] Linking CXX executable pagerank_mpi_kokkos
+[100%] Built target pagerank_kokkos
+[100%] Built target pagerank_mpi_kokkos

@@ -1,6 +1,6 @@
-# PageRank: Serial, OpenMP, MPI, and Hybrid
+# PageRank: Serial, OpenMP, MPI, MPI+OpenMP, MPI+CUDA, and MPI+Kokkos
 
-A C++17 implementation of synchronous pull-based PageRank for DSA5208 Project 3. The project compares serial, OpenMP, MPI, and MPI + OpenMP implementations on three directed graphs. It explores irregular graph workloads, load balancing, synchronization, and communication overhead.
+A C++17 implementation of synchronous pull-based PageRank for DSA5208 Project 3. The fixed-graph matrix compares Serial, OpenMP, CUDA, Kokkos OpenMP/CUDA, pure MPI, MPI+OpenMP, MPI+CUDA, and MPI+Kokkos. Every MPI method implements both Allgatherv and Halo; the standalone methods have no MPI communication mode.
 
 ## Project structure
 
@@ -14,9 +14,13 @@ DSA5208_PROJECT_3/
 │   ├── pagerank_serial.cpp  # Serial implementation and experiments
 │   ├── pagerank_openmp.cpp  # OpenMP implementation and experiments
 │   ├── pagerank_mpi.cpp     # MPI implementation and experiments
-│   └── pagerank_hybrid.cpp  # MPI + OpenMP implementation and experiments
+│   ├── pagerank_hybrid.cpp  # MPI + OpenMP; Allgatherv and Halo
+│   ├── pagerank_cuda.cu / pagerank_kokkos.cpp # Standalone GPU/CPU backends
+│   ├── pagerank_mpi_cuda.cu / pagerank_mpi_kokkos.cpp # MPI + device backends
+│   └── mpi_device_driver.hpp # Shared distributed PageRank driver
 ├── scripts/
 │   ├── prepare_data.py     # Download Google and generate Uniform and Hub
+│   ├── generate_scaling_graphs.py # Reproducible serial-grid and MPI scale graphs
 │   ├── validate_serial.py  # Independent checks of saved serial results
 │   ├── validate_openmp.py  # OpenMP validation and scaling analysis
 │   ├── validate_mpi.py     # MPI validation and scaling analysis
@@ -30,7 +34,7 @@ DSA5208_PROJECT_3/
     └── hybrid/{google,uniform,hub}/p<P>_t<T>/
 ```
 
-Refreshed experiment runs are stored separately under `results/updated_local_macos/`, `results/updated_vanda/`, and `results/updated_vanda_gpu/`; they do not overwrite the original result set. The completed 31 October local run is summarized in [`updated_experimental_conclusions_20261031.md`](updated_experimental_conclusions_20261031.md).
+Refreshed experiment runs are stored separately under `results/updated_local_macos/`, `results/updated_vanda/`, `results/updated_vanda_gpu/`, and `results/updated_vanda_scaling/`; they do not overwrite the original result set. The completed 31 October local run is summarized in [`updated_experimental_conclusions_20261031.md`](updated_experimental_conclusions_20261031.md).
 
 `P` is the number of MPI processes; `T` is the requested number of OpenMP threads per process.
 
@@ -39,7 +43,7 @@ Refreshed experiment runs are stored separately under `results/updated_local_mac
 - A C++17 compiler with OpenMP support.
 - An MPI implementation with development headers and libraries, such as MPICH or Open MPI on Linux, or MS-MPI with compiler-compatible development libraries on Windows.
 - CMake 3.16 or newer and Ninja.
-- Python 3.9 or newer. The scripts use only the standard library.
+- Python 3.9 or newer. Experiment generation and validation use the standard library; `scripts/plot_scaling.py` additionally requires Matplotlib (`python -m pip install -r requirements-plot.txt`).
 
 ## Build and run
 
@@ -72,9 +76,9 @@ CMake locates the installed OpenMP and MPI libraries and configures an optimized
 cmake --build build
 ```
 
-All four executables are written to `build/`. Repeat this step after changing C++ source files.
+The base build writes Serial, OpenMP, MPI, and MPI+OpenMP executables to `build/`. Repeat this step after changing C++ source files.
 
-GPU targets are optional. Configure native CUDA with `-DBUILD_CUDA=ON`. Configure Kokkos with `-DBUILD_KOKKOS=ON -DCMAKE_PREFIX_PATH=<kokkos-install>`. Use separate build directories for different Kokkos backends; the target uses the execution space selected by the Kokkos build. Run the GPU executables and validate their saved results with:
+GPU targets are optional at build time. Configure native CUDA and MPI+CUDA with `-DBUILD_CUDA=ON -DBUILD_MPI_CUDA=ON`. Configure standalone Kokkos and MPI+Kokkos with `-DBUILD_KOKKOS=ON -DBUILD_MPI_KOKKOS=ON -DCMAKE_PREFIX_PATH=<kokkos-install>`. Use separate build directories for Kokkos OpenMP and CUDA backends. Run the standalone GPU executables and validate their saved results with:
 
 ```bash
 ./build/pagerank_cuda
@@ -84,6 +88,22 @@ python scripts/validate_gpu.py kokkos Cuda  # use the execution-space name print
 ```
 
 The Kokkos validation name may be `OpenMP`, `Serial`, or `Cuda`, depending on how Kokkos was built. On a CUDA GPU host, `scripts/run_gpu_suite.sh` runs both GPU executables and their validators; set `CUDA_BUILD_DIR`, `KOKKOS_BUILD_DIR`, and `KOKKOS_BACKEND` if your build paths/backend differ.
+
+For MPI+CUDA and MPI+Kokkos, use a shared `PAGERANK_RESULTS_ROOT` and the same graph manifest as the Serial reference. Run each communication mode with the same MPI placement:
+
+```bash
+./build-cuda/pagerank_serial
+mpiexec -n 2 ./build-cuda/pagerank_mpi_cuda --communication=allgather
+mpiexec -n 2 ./build-cuda/pagerank_mpi_cuda --communication=halo
+mpiexec -n 2 ./build-kokkos-cuda/pagerank_mpi_kokkos --communication=allgather
+mpiexec -n 2 ./build-kokkos-cuda/pagerank_mpi_kokkos --communication=halo
+python3 scripts/validate_mpi_device.py mpi_cuda Cuda allgather --processes 2
+python3 scripts/validate_mpi_device.py mpi_cuda Cuda halo --processes 2
+python3 scripts/validate_mpi_device.py mpi_kokkos Cuda allgather --processes 2
+python3 scripts/validate_mpi_device.py mpi_kokkos Cuda halo --processes 2
+```
+
+The MPI+GPU implementations stage contribution values through host memory for MPI. Halo reduces the network payload to distinct remote source contributions; device-to-host staging is timed separately. Use one GPU per rank for the multi-node comparisons.
 
 ### 4. Run the experiments
 
@@ -162,7 +182,7 @@ For a deliberately partial MPI sweep, the validator accepts a process subset, e.
 
 The scripts read saved outputs and original graphs. They check node IDs, degrees, nonnegative ranks, rank sums, convergence histories, repeated-run records, and timing summaries. An independent PageRank update checks the final L1 residual against the convergence threshold plus `1e-12`; rank-sum error must not exceed `1e-10`.
 
-Parallel results are also compared with validated serial ranks by node ID, with an L1 error limit of `1e-8`. Floating-point reduction order may differ, so bitwise equality is not required. The validators cover the current three duplicate-free datasets: 3 serial results, 12 OpenMP configurations, 12 MPI configurations, and 30 hybrid configurations. Any failed check produces a nonzero exit status.
+Parallel results are compared with validated serial ranks by node ID, with an L1 error limit of `1e-8`. Floating-point reduction order may differ, so bitwise equality is not required. The pre-existing result set covers the original three datasets; the expanded Vanda matrix has 45 fixed datasets and three synthetic weak-scaling families. Any failed check produces a nonzero exit status.
 
 ## Implementation
 
@@ -196,7 +216,7 @@ Each configuration saves the following files. Set `PAGERANK_RESULTS_ROOT` to a r
 
 `scripts/run_cpu_suite.sh` runs the CPU suite and validators inside an existing PBS allocation. `scripts/vanda_cpu_job.pbs` targets Vanda's zero-charge `auto_free` queue, builds Kokkos OpenMP and the project in Release mode with GCC 13.3/Open MPI 4.1.8, then runs Serial, OpenMP, MPI Allgatherv/halo, Hybrid, and Kokkos OpenMP with the same warm-up/repeat counts and datasets. The run directory records the host, compiler, MPI, CMake, and module versions.
 
-On Vanda, `scripts/vanda_gpu_job.pbs` requests one A40 GPU from the `auto_free` queue, builds the native CUDA target and a CUDA-enabled Kokkos 4.5.01 backend with the same GCC 13.3 host compiler, then runs both GPU implementations against a Serial reference. It records GCC, NVCC, CMake, GPU, and module details. Stage the pinned Kokkos source under `third_party/kokkos` before submission:
+The earlier three-graph Vanda job, `scripts/vanda_gpu_job.pbs`, requests one A40 GPU from the `auto_free` queue and runs native CUDA and Kokkos CUDA against a Serial reference. It is separate from the 45-graph MPI+GPU matrix below. Stage the pinned Kokkos source under `third_party/kokkos` before submitting either suite:
 
 ```bash
 mkdir -p third_party
@@ -206,16 +226,113 @@ qsub scripts/vanda_gpu_job.pbs
 
 The GPU job stores results separately under `results/vanda-a40-gpu/<PBS_JOBID>/`. The actual queue, resource availability, and job state should be checked with `qstat`; a submitted job is not a completed experiment.
 
-Keep the existing Git-tracked `results/` runs unchanged. After both Vanda jobs finish and validate, copy the new measurements into separate `updated_*` directories with:
+## Updated experiment matrix and coverage
+
+The target matrix is specified in [`updated_experiment_matrix_20261103.md`](updated_experiment_matrix_20261103.md). It covers the three original graphs and all 42 reproducible fixed graphs, plus three separate weak-scaling graph families. The generated grid crosses 50k/100k/200k/400k vertices with average out-degree 4/8/16 for each family. The 45 fixed graphs are used for standalone comparisons and strong scaling; the weak-scaling graphs are generated separately as resource counts grow. The target matrix is larger than the currently validated result set.
+
+The live 2 November 2026 submission snapshot and PBS job IDs are recorded in [`updated_vanda_run_status_20261102.md`](updated_vanda_run_status_20261102.md).
+
+- **Standalone ablations:** Serial; OpenMP with 1/2/4/8/16/32 threads; Kokkos OpenMP with the same thread counts; native CUDA and Kokkos CUDA with one A40. These methods have no MPI communication choice.
+- **CPU distributed methods:** Pure MPI and MPI+Kokkos OpenMP at T=1 use 1/2/4/8 nodes crossed with 1/2/4/8/16/32 ranks per node, plus a separate 8-node × 64-rank 512-core point. MPI+OpenMP adds every T=1/2/4/8/16/32 that fits 32 CPU cores per node, plus 512×1 and 128×4 on 8 nodes with 64 cores per node. The matching MPI+Kokkos OpenMP T>1 grid is implemented as a separate extension pipeline, so older queued CPU batches retain their original workload. Each graph, rank, thread, and node layout runs **both** `--communication=allgather` and `--communication=halo`.
+- **Matched GPU-node methods:** The Vanda queues currently permit at most two GPUs per job. On the same allocated GPU nodes, pure MPI, MPI+OpenMP T=1/2/4/8, MPI+CUDA, and MPI+Kokkos CUDA have completed p=n=1/2 with one rank and one A40 per node. Each method runs both communication modes on the same graph and layout. T=1 is a CPU control; T=2/4/8 exercises OpenMP inside each MPI rank. Serial and standalone OpenMP/CUDA/Kokkos CUDA are measured on that GPU-node environment as ablations. Vanda p=4/8 remains in the target matrix but requires NUS HPC to raise the per-job GPU and node limits.
+- **Weak scaling:** Three synthetic graph families keep 50k vertices and 800k edges per rank. Pure MPI and MPI+Kokkos OpenMP cover p=1…512; MPI+OpenMP T=4 covers p=1…128, reaching 512 CPU cores. The p=512 graphs have 25.6m vertices and 409.6m edges each. The matched Vanda GPU-node MPI methods cover p=1/2, with MPI+OpenMP T=1/2/4/8. CUDA and Kokkos CUDA also run independently on those weak graphs.
+
+The original weak curves hold work **per rank** constant. For a matched work-per-CPU-core comparison at T=4, `scripts/run_vanda_cpu_core_weak.sh` reuses the `weak_pC` graph for `C=p×4` CPU cores, so vertices and edges scale with C. It runs both MPI+OpenMP and MPI+Kokkos OpenMP, each with both communication modes, for C=4/8/16/32/64/128/256/512. Submit it only when Vanda CPU credits can reserve its walltime:
 
 ```bash
-bash scripts/sync_updated_vanda_results.sh <CPU_PBS_JOBID> <GPU_PBS_JOBID>
+MAX_NEW_FAMILIES=1 bash scripts/submit_vanda_core_weak.sh <run-id> <project-name>
 ```
 
-This writes the CPU suite to `results/updated_vanda/<CPU_PBS_JOBID>/` and CUDA/Kokkos-CUDA results to `results/updated_vanda_gpu/<GPU_PBS_JOBID>/`.
+The p=512 graph is already generated by the existing data pipeline; this comparison changes its rank/thread layout rather than its edges. These extra core-normalized curves are separate from the original rank-normalized weak curves and have no Vanda performance measurements yet.
+
+For strong scaling, one graph stays fixed as resources increase. For weak scaling, graph size grows in proportion to rank count. Record total solve time and iteration count in both cases; weak scaling additionally compares time per iteration against p=1. `solve_s` times the iterative solver, including its MPI waits and device transfers. Halo setup time and bytes are separate fields. Use Release builds, one warmup, five measured repeats, and the median throughout.
+
+### Submit and monitor on Vanda
+
+The jobs require Kokkos 4.5.01 source at `third_party/kokkos`. Stage the repository and Kokkos on Vanda, then submit free-queue data/build/smoke jobs:
+
+```bash
+mkdir -p third_party
+git clone --depth 1 --branch 4.5.01 https://github.com/kokkos/kokkos.git third_party/kokkos
+bash scripts/submit_vanda_bootstrap.sh
+```
+
+After the data, builds, and CPU/GPU smoke tests pass, obtain a Vanda project name and balance with `amgr login` followed by `hpc project`. The paid project queue is required for the coursework's ≥256-core runs: the free CPU queue caps a job at 160 cores; the paid CPU queue permits up to 10 nodes and 720 cores. Submit the independent fixed-graph baselines and weak-scaling suites with:
+
+```bash
+bash scripts/submit_vanda_serial_grid.sh <run-id> <project-name>
+bash scripts/submit_vanda_gpu_grid.sh <run-id> <project-name>
+bash scripts/submit_vanda_cpu_weak.sh <run-id> <project-name>
+MAX_NEW_GRAPHS=1 bash scripts/submit_vanda_full_experiments.sh <run-id> <project-name>
+```
+
+All submitters skip already recorded batches, so the last command can be repeated after each CPU batch completes. Increase `MAX_NEW_GRAPHS` only when project CPU credits permit the additional reserved walltime. Job IDs are recorded in `results/updated_vanda_scaling/<run-id>/submitted_jobs.tsv`. The original CPU batches reach 8 nodes × 32 cores; the extra 512-core endpoint uses 8 nodes × 64 cores. The p=512 weak graphs are split by synthetic family because each has 409.6 million edges. Vanda GPU batches request two nodes × one A40 and run p=1/2. Check completed batches, active jobs, allocations, and rank placement with:
+
+```bash
+python3 scripts/check_vanda_progress.py <run-id> --qstat
+python3 scripts/check_vanda_progress.py <run-id> --missing
+python3 scripts/audit_fixed_matrix.py vanda results/updated_vanda_scaling/<run-id>
+```
+
+The fixed-graph audit enumerates every expected method, graph, communication mode, and resource layout. It reports completed cells against the target rather than counting submitted PBS jobs as finished experiments. The full Vanda fixed-graph target has 18,315 CPU cells and 1,665 GPU-node cells; the GPU-node standalone OpenMP sweep includes T=16/32 as well as T=1/2/4/8. The CPU Kokkos thread-grid extension is submitted separately after the serial baseline passes, only when project credits allow its reserved walltime:
+
+```bash
+MAX_NEW_GRAPHS=1 bash scripts/submit_vanda_kokkos_cpu_grid.sh <run-id> <project-name>
+```
+
+This submits four 32-core node-layout jobs and one 512-core endpoint per graph. The endpoint adds Kokkos OpenMP `p=128,T=4`; the original CPU job already covers Kokkos OpenMP `p=512,T=1`. Do not infer an actual 512-core result from the submission alone.
+
+After the jobs finish, generate a tidy summary of every validated MPI+Kokkos OpenMP CPU layout and example strong-scaling figures with:
+
+```bash
+python3 scripts/plot_kokkos_cpu_grid.py results/updated_vanda_scaling/<run-id> \
+  results/updated_vanda_scaling/<run-id>/figures --graphs google uniform hub
+```
+
+Each successful batch writes `complete.txt` only after all validators pass and its output is copied. The job's `environment.txt` and `mapping/*.csv` record the actual allocation. Vanda's OpenMPI stalls with `PE=` in `--map-by` on this system, so multi-threaded MPI ranks use `scripts/mpi_affinity_exec.py` to pin nonoverlapping CPU sets; `affinity_probe_mapping.csv` records the actual two-rank placement. A queued job is not an observed runtime.
+
+After jobs pass their independent residual, mass, history, rank comparison, and repeated timing checks, their JSON/CSV outputs are copied to `results/updated_vanda_scaling/<run-id>/`. The large per-vertex `ranks.csv` files remain in scratch only until validation finishes. `scripts/plot_scaling.py` plots the completed matrix; its plots must not be treated as evidence until all plotted rows are validated. The Vanda CUDA and Kokkos CUDA Release builds and two-node correctness tests passed on 2 November 2026. The latest dated batch snapshot is in [`updated_vanda_run_status_20261103.md`](updated_vanda_run_status_20261103.md); the validated results and current limits are indexed in [`updated_results_snapshot_20261104.md`](updated_results_snapshot_20261104.md).
+
+Keep the existing Git-tracked `results/` runs unchanged. Synchronize the current matrix with:
+
+```bash
+bash scripts/sync_updated_vanda_scaling.sh <run-id>
+```
+
+This writes the current Vanda run to `results/updated_vanda_scaling/<run-id>/`. The older `scripts/sync_updated_vanda_results.sh` remains for the earlier two-job layout.
 
 Validators write `results/<version>/validation.json`; parallel validators also write `scaling.csv`. **Speedup** is serial median time divided by parallel median time. **Efficiency** divides speedup by the actual thread count, process count, or total hybrid thread count.
 
 Current results are labeled `local workstation`. The coursework report requires Atlas or Vanda measurements with the environment and resource configuration documented. Preserve each environment's results separately to avoid overwriting them.
 
-See [`updated_experimental_conclusions_20261031.md`](updated_experimental_conclusions_20261031.md) for the latest refreshed local results, validation scope, halo communication comparison, and outstanding cluster/GPU runs. The earlier [`updated_experimental_conclusions_20261030.md`](updated_experimental_conclusions_20261030.md) is retained as the previous snapshot.
+### Vanda 4/8 GPU extension
+
+The active experiment plan uses Vanda only. All 45 fixed graphs already have validated A40 p=1/2 GPU results. The extension scripts run p=4/8 on the same Vanda A40 node class, with one MPI rank and one GPU per node, preserving the existing builds, graphs, warmup, and five-repeat rule. They save separate p=4/8 validation and scaling files while retaining p=1/2 results.
+
+Vanda currently caps `batch_gpu` and `batch_gpux` jobs at **2 GPUs and 2 nodes**. The following commands become usable only after NUS HPC grants an 8-GPU, 8-node allocation for the project:
+
+```bash
+MAX_NEW_GRAPHS=1 bash scripts/submit_vanda_gpu_extension.sh <run-id> <project-name>
+bash scripts/submit_vanda_gpu_weak_extension.sh <run-id> <project-name>
+python3 scripts/audit_fixed_matrix.py vanda results/updated_vanda_scaling/<run-id> \
+  --include-vanda-gpu-extension
+```
+
+The queue evidence and a request to NUS HPC are in [`updated_vanda_gpu_queue_limits_20261103.md`](updated_vanda_gpu_queue_limits_20261103.md). No 4/8 GPU runtime has been measured yet.
+
+### Workstation CPU subset
+
+The Mac CPU subset uses the same Release, one-warmup, five-repeat timing rule and independent validators. It includes the original three graphs, the three canonical synthetic graphs, and all 36 size/degree grid graphs. The three 12.8m-vertex strong-scaling graphs and the 512-core configurations require Vanda. The separate local weak-scaling subset uses three families at p=1/2/4/8. Local runs are **workstation observations**, not substitutes for the required Vanda runtime figures.
+
+```bash
+python3 scripts/generate_scaling_graphs.py --output-root data/local_matrix_20261031 --fixed-only
+python3 scripts/generate_local_weak_graphs.py --output-root data/local_weak_20261031
+LOCAL_BUILD_DIR=/path/to/release-build LOCAL_MPIEXEC=/path/to/mpiexec \
+  bash scripts/run_local_matrix.sh
+LOCAL_BUILD_DIR=/path/to/release-build LOCAL_MPIEXEC=/path/to/mpiexec \
+  bash scripts/run_local_weak_matrix.sh
+```
+
+The local scripts write to `results/updated_local_macos/20261031_full_cpu_kokkos45/` and `results/updated_local_macos/20261031_weak_cpu_kokkos45/`. The first covers Serial, OpenMP, standalone Kokkos OpenMP, pure MPI, MPI+OpenMP, and MPI+Kokkos OpenMP; the latter repeats the available methods on the weak-scaling graphs. Both MPI communication modes are paired at every local MPI configuration.
+
+See [`updated_experimental_conclusions_20261101.md`](updated_experimental_conclusions_20261101.md) for the completed 42-graph fixed and 12-graph local weak matrices, validation scope, halo communication comparison, and remaining cluster/GPU runs. The earlier [`updated_experimental_conclusions_20261031.md`](updated_experimental_conclusions_20261031.md) and [`updated_experimental_conclusions_20261030.md`](updated_experimental_conclusions_20261030.md) snapshots are retained.

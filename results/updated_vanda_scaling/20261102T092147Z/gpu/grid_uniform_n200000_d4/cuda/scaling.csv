@@ -1,0 +1,2 @@
+dataset,implementation,backend,serial_s,parallel_s,speedup,rank_l1_error,rank_max_error
+grid_uniform_n200000_d4,cuda,CUDA,0.055074679,0.00286313,19.235828970392543,0.0,0.0

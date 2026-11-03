@@ -1,0 +1,18 @@
+{
+  "passed": 1,
+  "failed": 0,
+  "method": "Saved-output checks and an independent PageRank update over the original edges",
+  "mass_tolerance": 1e-10,
+  "rounding_tolerance": 1e-12,
+  "checks": [
+    {
+      "dataset": "grid_controlled_n200000_d8",
+      "passed": true,
+      "nodes": 200000,
+      "edges": 1600000,
+      "iterations": 22,
+      "independent_residual_l1": 3.9811256106128345e-09,
+      "rank_sum_error": 5.551115123125783e-16
+    }
+  ]
+}

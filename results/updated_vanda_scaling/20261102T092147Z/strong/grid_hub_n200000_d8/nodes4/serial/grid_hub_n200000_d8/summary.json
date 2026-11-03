@@ -1,0 +1,21 @@
+{
+  "implementation": "serial",
+  "dataset": "grid_hub_n200000_d8",
+  "environment": "vanda-gcc13-release",
+  "build_type": "Release",
+  "nodes": 200000,
+  "edges": 1600000,
+  "alpha": 0.84999999999999998,
+  "tolerance_l1": 1e-08,
+  "max_iterations": 1000,
+  "fixed_iterations": 0,
+  "warmup_runs": 1,
+  "repeat_runs": 5,
+  "iterations": 17,
+  "converged": true,
+  "solve_median_s": 0.084351667000000005,
+  "solve_min_s": 0.082424486000000005,
+  "solve_max_s": 0.084529101999999995,
+  "max_residual_l1": 1.5908634849222431e-09,
+  "max_rank_sum_error": 5.3512749786932545e-14
+}
