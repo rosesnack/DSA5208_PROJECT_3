@@ -2,6 +2,8 @@
 
 主运行 ID：`20261102T092147Z`。只把完整 `complete.txt` 标记和独立校验通过的批次计为完成；PBS 运行或已退出不等于实验完成。
 
+严格完成清单、全部缺口和阶段性性能结论见 [`updated_experimental_conclusions_20261105.md`](updated_experimental_conclusions_20261105.md)。
+
 本地同步后，固定图逐格审计为 **12,300/19,980** 个配置；这不包含仍在 scratch 的 1/2 节点部分结果。
 
 | 部分 | 已校验/已提交批次 | 状态 |
