@@ -20,6 +20,16 @@ submitted=0
 for graph in "${GRAPH_NAMES[@]}"; do
     (( submitted < MAX_NEW_GRAPHS )) || break
     test -f "results/updated_vanda_scaling/$RUN_ID/serial_grid/$graph/complete.txt" || continue
+    needs_batch=0
+    for nodes in 1 2 4 8; do
+        awk -F '\t' -v graph="$graph" -v nodes="$nodes" \
+            '$1 == "kokkos_cpu_grid" && $2 == graph && $3 == nodes {found=1} END {exit !found}' \
+            "$JOB_TABLE" || needs_batch=1
+    done
+    awk -F '\t' -v graph="$graph" \
+        '$1 == "kokkos_cpu_512" && $2 == graph {found=1} END {exit !found}' \
+        "$JOB_TABLE" || needs_batch=1
+    (( needs_batch == 1 )) || continue
     for nodes in 1 2 4 8; do
         awk -F '\t' -v graph="$graph" -v nodes="$nodes" \
             '$1 == "kokkos_cpu_grid" && $2 == graph && $3 == nodes {found=1} END {exit !found}' \

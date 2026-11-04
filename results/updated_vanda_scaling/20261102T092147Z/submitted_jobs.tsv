@@ -345,3 +345,7 @@ kokkos_cpu_grid	hub	8	1513560.stdct-mgmt-02
 kokkos_cpu_512	hub	8	1513561.stdct-mgmt-02
 cpu_core_weak	uniform	8	1513565.stdct-mgmt-02
 cpu_core_weak_512	uniform	8	1513566.stdct-mgmt-02
+kokkos_cpu_grid	synthetic_uniform	2	1519860.stdct-mgmt-02
+kokkos_cpu_grid	synthetic_uniform	4	1519861.stdct-mgmt-02
+kokkos_cpu_grid	synthetic_uniform	8	1519862.stdct-mgmt-02
+kokkos_cpu_512	synthetic_uniform	8	1519863.stdct-mgmt-02

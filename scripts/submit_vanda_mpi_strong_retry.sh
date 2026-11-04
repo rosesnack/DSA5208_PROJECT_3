@@ -8,6 +8,8 @@ PROJECT="${2:?Pass the Vanda project name}"
 GRAPH_NAME="${3:?Pass the failed graph name}"
 NODE_COUNT="${4:?Pass the failed node count}"
 ORIGINAL_JOB="${5:?Pass the failed PBS job ID}"
+REASON="${6:-walltime}"
+WALLTIME="${7:-04:00:00}"
 DATA_ROOT="${DATA_ROOT:-/scratch/$USER/dsa5208_scaling/$RUN_ID}"
 RUN_ROOT="results/updated_vanda_scaling/$RUN_ID"
 RETRY_TABLE="$RUN_ROOT/retry_jobs.tsv"
@@ -20,12 +22,12 @@ if [[ -f "$RETRY_TABLE" ]] && awk -F '\t' -v graph="$GRAPH_NAME" -v nodes="$NODE
 fi
 
 variables="RUN_ID=$RUN_ID,DATA_ROOT=$DATA_ROOT,GRAPH_NAME=$GRAPH_NAME,PAGERANK_NODE_COUNTS=$NODE_COUNT"
-job=$(qsub -P "$PROJECT" -q auto -l walltime=04:00:00 \
+job=$(qsub -P "$PROJECT" -q auto -l "walltime=$WALLTIME" \
     -l "select=$NODE_COUNT:ncpus=32:mpiprocs=32:ompthreads=1:mem=32gb" \
     -v "$variables" scripts/vanda_retry_mpi_strong_job.pbs)
 if [[ ! -f "$RETRY_TABLE" ]]; then
     printf 'stage\tgraph\tnodes\toriginal_job\treplacement_job\treason\n' > "$RETRY_TABLE"
 fi
-printf 'mpi_strong\t%s\t%s\t%s\t%s\twalltime\n' \
-    "$GRAPH_NAME" "$NODE_COUNT" "$ORIGINAL_JOB" "$job" >> "$RETRY_TABLE"
+printf 'mpi_strong\t%s\t%s\t%s\t%s\t%s\n' \
+    "$GRAPH_NAME" "$NODE_COUNT" "$ORIGINAL_JOB" "$job" "$REASON" >> "$RETRY_TABLE"
 printf 'Retry submitted: %s nodes=%s job=%s\n' "$GRAPH_NAME" "$NODE_COUNT" "$job"

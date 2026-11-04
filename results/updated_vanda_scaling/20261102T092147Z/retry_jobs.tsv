@@ -1,3 +1,4 @@
 stage	graph	nodes	original_job	replacement_job	reason
 mpi_strong	strong_uniform	1	1513531.stdct-mgmt-02	1515650.stdct-mgmt-02	walltime
 mpi_strong	strong_uniform	2	1513532.stdct-mgmt-02	1515651.stdct-mgmt-02	walltime
+mpi_strong	grid_uniform_n100000_d16	8	1513379.stdct-mgmt-02	1519851.stdct-mgmt-02	mpi_transport_bind

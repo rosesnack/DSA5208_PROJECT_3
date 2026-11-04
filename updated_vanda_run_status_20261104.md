@@ -1,5 +1,13 @@
 # Vanda 实验运行状态（2026-11-04 14:33 SGT）
 
+## 20:09 SGT 最新进展
+
+Vanda 已校验批次由 **243/346** 增为 **254/350**：固定图 CPU MPI 强扩展 **140/180**，Kokkos OpenMP 多线程网格 **13/16**，按核配平 T=4 弱扩展 **1/1**。分母增加 4 是后来提交的 `synthetic_uniform` Kokkos CPU 三个常规节点布局和一个 512 核端点，不是已完成批次失效。本地已同步新增校验结果；固定图逐格审计为 **11,880/19,980**。
+
+上一批释放的 12 个作业中，11 个以 PBS `Exit_status=0` 完成并通过校验。`1513379`（`grid_uniform_n100000_d16`、8 节点）以 `Exit_status=16` 结束；[PBS 输出](results/updated_vanda_scaling/20261102T092147Z/pbs_failure_1513379.log)显示节点 `CN-108` 上 MPI TCP 端口绑定返回 `Address already in use`，随后 `MPI_Barrier` 失败。该次不计为有效测量。已用同图、同布局、同 Release/预热/重复口径重投 `1519851`；重试脚本会将失败尝试的部分 scratch 输出归档，重试原因在 `retry_jobs.tsv` 记为 `mpi_transport_bind`。
+
+用户提供最新 CPU 余额 **4622.378 核小时**后，另释放了原先暂挂的 `strong_uniform` 重跑 `1515650/1515651` 和 4 个普通强扩展作业；提交 `synthetic_uniform` 的 4 个 Kokkos CPU 待补批次 `1519860`–`1519863`。20:09 PBS 显示 **4 个 R、60 个 Q、33 个 H**，CPU Net Balance **3854.378 核小时**，GPU 余额 **978.587 GPU 小时**。`1519851`、`1515650/1515651` 正在运行；新提交的 Kokkos 图已有一个作业运行。512 核端点仍没有完成标记。当前不继续批量释放，先等待已运行任务校验与额度对账。
+
 ## 14:42 SGT 后续进展
 
 用户重新执行 `amgr login` 后，`hpc project` 已可查询：项目 `personal-hongxinran` 的 CPU Net Balance 为 **6218.183 核小时**，GPU Net Balance 为 **978.587 GPU 小时**。分两批调用 `scripts/release_vanda_existing_cpu.py`，共释放 **12 个现有暂挂的 CPU 作业**：强扩展 8 个、Kokkos OpenMP 网格 3 个、按核配平弱扩展 1 个。首批作业 `1513357` 已于 14:41 开始运行，其余已释放作业进入队列。运行后的 CPU 余额为 **5962.183**，减少 256 核小时，与一个 8 节点×32 核、1 小时作业的预扣一致。
