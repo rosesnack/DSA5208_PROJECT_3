@@ -12,7 +12,7 @@
 | CPU 原定义弱扩展 p=1…256 | 1/1 | 完成；512 核端点未完成 |
 | GPU 弱扩展 p=1/2 | 1/1 | 完成；p=4/8 未运行 |
 | MPI+Kokkos OpenMP T>1 固定图试跑 | 10/13 | 已提交的四张图只有部分布局完成；其余图尚未提交 |
-| CPU 512 核与 GPU 4/8 扩展 | 0 | 不能列为实测 |
+| CPU 512 核 | 0 | 不能列为实测；GPU 4/8 是可选扩展，不计入默认目标 |
 
 [`audit_fixed_matrix.py`](scripts/audit_fixed_matrix.py) 在本快照报告 **11,328/19,980** 个预期固定图配置已具备 `summary.json` 和对应批次完成标记。主运行目录（排除不同 CPU 型号的 `free_cpu_archive`）有 **2,184 份** `validation.json`，全部 `failed=0`；另存的 Vanda 独立烟雾验证有 11 份报告，全部通过。本地 Mac 两组结果也分别保留在 `results/updated_local_macos/`，只作为本机观察，不混入 Vanda 性能曲线。完成标记、构建与节点环境、MPI 进程布局、单次计时、收敛历史、汇总和校验报告均在 [`results/updated_vanda_scaling/20261102T092147Z/`](results/updated_vanda_scaling/20261102T092147Z/) 下。逐顶点 rank 文件和个人账户交易导出体积大或与论文性能分析无关，未纳入 Git 快照；独立校验已在 Vanda 原始运行中完成。
 
@@ -30,7 +30,7 @@
 | 同一固定图 p=2，Halo 每迭代通信字节 / Allgatherv | 中位 **0.962** |
 | 45 张图 CPU OpenMP T=32 / Serial | 中位加速 **12.199×**；Google 图单独只有 **1.005×** |
 
-Halo 在 p=2 减少的通信数据通常不多，额外的建立/交换开销可能抵消收益；上述结果不能外推为所有进程数下 Halo 都较慢。CPU 8 节点和 512 核大部分尚未完成，不能据此下完整强扩展结论。Vanda GPU 队列仍限制单作业 2 GPU/2 节点，故没有真实 p=4/8 GPU 端点。详细待补项和预算对账见 [`updated_vanda_run_status_20261103.md`](updated_vanda_run_status_20261103.md)。
+Halo 在 p=2 减少的通信数据通常不多，额外的建立/交换开销可能抵消收益；上述结果不能外推为所有进程数下 Halo 都较慢。CPU 8 节点和 512 核大部分尚未完成，不能据此下完整强扩展结论。Vanda GPU 队列仍限制单作业 2 GPU/2 节点，故没有真实 p=4/8 GPU 端点；课程文本未要求 4/8 GPU，这部分现为可选扩展。最新队列状态见 [`updated_vanda_run_status_20261104.md`](updated_vanda_run_status_20261104.md)，旧预算对账见 [`updated_vanda_budget_issue_20261103.md`](updated_vanda_budget_issue_20261103.md)。
 
 复核命令：
 

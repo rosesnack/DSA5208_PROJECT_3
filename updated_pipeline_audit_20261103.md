@@ -1,5 +1,7 @@
 # 45 图实验代码与流水线审计（2026-11-03）
 
+**2026-11-04 范围更新：**本文件保留 11 月 3 日按 4/8 GPU 扩展目标统计的历史审计。课程文本未要求 4/8 GPU，现改为可选；当前默认目标为 19,980 个固定图单元。实时批次和队列状态见 `updated_vanda_run_status_20261104.md`。
+
 ## 审计范围与结果
 
 按 `updated_experiment_matrix_20261103.md` 核对 45 张固定图的 Serial、单独后端、纯 MPI、MPI+OpenMP、MPI+Kokkos OpenMP、MPI+CUDA、MPI+Kokkos CUDA，以及两种 MPI 通信策略、节点/rank/线程布局、Release 构建、正确性校验与结果汇总。45 张固定图 = 原仓库 3 + 典型合成 3 + 顶点/边密度网格 36 + 大图 3；弱扩展图另列。

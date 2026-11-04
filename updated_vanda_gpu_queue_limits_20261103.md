@@ -1,5 +1,7 @@
 # Vanda 4/8 GPU 扩展的队列限制（2026-11-03）
 
+**2026-11-04 更新：**4/8 GPU 已调整为可选扩展。下文的额度申请仅是留存草稿；当前作业矩阵无需申请或等待 4/8 GPU，默认核查也不计这些端点。
+
 用户要求所有实验只在 Vanda 运行。现有 45 张固定图的 Vanda A40 `p=1/2` GPU 配置已完成并通过校验；`p=4/8` 要求每节点一张 GPU、一个 MPI rank，分别在 4/8 个节点上运行同一图和两种通信策略。
 
 Vanda 登录节点实时 `qstat -Qf` 显示；原始输出保存在 `results/updated_vanda_scaling/20261102T092147Z/vanda_gpu_queue_limits_20261103.txt`：
@@ -17,7 +19,7 @@ Vanda 登录节点实时 `qstat -Qf` 显示；原始输出保存在 `results/upd
 
 三种合成图家族的弱扩展也已备好 `scripts/vanda_gpu_weak_extension_compute.pbs`、`scripts/vanda_gpu_weak_extension_validate.pbs`、`scripts/submit_vanda_gpu_weak_extension.sh`。它在每节点 1 GPU、1 rank 的 `p=4/8` 布局上运行，沿用现有弱扩展图与同一计时规则，并把新验证报告另存为 `_p4_p8`。这部分同样等待 Vanda 队列上限调整。
 
-需要用户向 NUS HPC 申请：为 `personal-hongxinran` 提供同一 PBS 作业至少 8 张 A40 GPU、8 个 GPU 节点的合法队列额度，或告知课程项目可使用的等效 Vanda 队列。该申请尚未发送。可直接使用以下文字：
+仅当以后决定做可选扩展时，才需要向 NUS HPC 申请：为 `personal-hongxinran` 提供同一 PBS 作业至少 8 张 A40 GPU、8 个 GPU 节点的合法队列额度，或告知课程项目可使用的等效 Vanda 队列。该申请尚未发送。留存草稿如下：
 
 > Subject: Request for 8-node / 8-GPU Vanda MPI scaling job for DSA5208 project
 >
