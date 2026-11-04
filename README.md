@@ -230,7 +230,7 @@ The GPU job stores results separately under `results/vanda-a40-gpu/<PBS_JOBID>/`
 
 The target matrix is specified in [`updated_experiment_matrix_20261103.md`](updated_experiment_matrix_20261103.md). It covers the three original graphs and all 42 reproducible fixed graphs, plus three separate weak-scaling graph families. The generated grid crosses 50k/100k/200k/400k vertices with average out-degree 4/8/16 for each family. The 45 fixed graphs are used for standalone comparisons and strong scaling; the weak-scaling graphs are generated separately as resource counts grow. The target matrix is larger than the currently validated result set.
 
-The latest PBS and validated-batch snapshot is in [`updated_vanda_run_status_20261104.md`](updated_vanda_run_status_20261104.md); earlier dated snapshots retain the submission history.
+The latest PBS and validated-batch snapshot is in [`updated_vanda_run_status_20261105.md`](updated_vanda_run_status_20261105.md); earlier dated snapshots retain the submission history.
 
 - **Standalone ablations:** Serial; OpenMP with 1/2/4/8/16/32 threads; Kokkos OpenMP with the same thread counts; native CUDA and Kokkos CUDA with one A40. These methods have no MPI communication choice.
 - **CPU distributed methods:** Pure MPI and MPI+Kokkos OpenMP at T=1 use 1/2/4/8 nodes crossed with 1/2/4/8/16/32 ranks per node, plus a separate 8-node × 64-rank 512-core point. MPI+OpenMP adds every T=1/2/4/8/16/32 that fits 32 CPU cores per node, plus 512×1 and 128×4 on 8 nodes with 64 cores per node. The matching MPI+Kokkos OpenMP T>1 grid is implemented as a separate extension pipeline, so older queued CPU batches retain their original workload. Each graph, rank, thread, and node layout runs **both** `--communication=allgather` and `--communication=halo`.
@@ -291,7 +291,16 @@ python3 scripts/plot_kokkos_cpu_grid.py results/updated_vanda_scaling/<run-id> \
 
 Each successful batch writes `complete.txt` only after all validators pass and its output is copied. The job's `environment.txt` and `mapping/*.csv` record the actual allocation. Vanda's OpenMPI stalls with `PE=` in `--map-by` on this system, so multi-threaded MPI ranks use `scripts/mpi_affinity_exec.py` to pin nonoverlapping CPU sets; `affinity_probe_mapping.csv` records the actual two-rank placement. A queued job is not an observed runtime.
 
-After jobs pass their independent residual, mass, history, rank comparison, and repeated timing checks, their JSON/CSV outputs are copied to `results/updated_vanda_scaling/<run-id>/`. The large per-vertex `ranks.csv` files remain in scratch only until validation finishes. `scripts/plot_scaling.py` plots the completed matrix; its plots must not be treated as evidence until all plotted rows are validated. The Vanda CUDA and Kokkos CUDA Release builds and two-node correctness tests passed on 2 November 2026. The latest dated batch snapshot is in [`updated_vanda_run_status_20261104.md`](updated_vanda_run_status_20261104.md); the validated results and current limits are indexed in [`updated_results_snapshot_20261104.md`](updated_results_snapshot_20261104.md).
+For a fixed-graph MPI batch that reaches its walltime after saving partial results, submit a continuation only after checking project credits:
+
+```bash
+bash scripts/submit_vanda_mpi_strong_retry.sh <run-id> <project-name> \
+  <graph-name> <node-count> <failed-job-id> resume_after_walltime 08:00:00
+```
+
+This continuation reuses only measurements with all five timed repeats, the summary, history, and rank output present in the same scratch run. It reuses complete validation reports, computes missing configurations, and writes a batch completion marker only after all validators pass. The original failed job and each replacement are retained in `retry_jobs.tsv`.
+
+After jobs pass their independent residual, mass, history, rank comparison, and repeated timing checks, their JSON/CSV outputs are copied to `results/updated_vanda_scaling/<run-id>/`. The large per-vertex `ranks.csv` files remain in scratch only until validation finishes. `scripts/plot_scaling.py` plots the completed matrix; its plots must not be treated as evidence until all plotted rows are validated. The Vanda CUDA and Kokkos CUDA Release builds and two-node correctness tests passed on 2 November 2026. The latest dated batch snapshot is in [`updated_vanda_run_status_20261105.md`](updated_vanda_run_status_20261105.md); the validated results and current limits are indexed in [`updated_results_snapshot_20261104.md`](updated_results_snapshot_20261104.md).
 
 Keep the existing Git-tracked `results/` runs unchanged. Synchronize the current matrix with:
 

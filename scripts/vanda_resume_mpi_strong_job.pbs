@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#PBS -N dsa5208-mpi-resume
+#PBS -q auto
+#PBS -l select=1:ncpus=32:mpiprocs=32:ompthreads=1:mem=32gb
+#PBS -l place=scatter
+#PBS -l walltime=08:00:00
+#PBS -j oe
+#PBS -V
+
+set -euo pipefail
+cd "${PBS_O_WORKDIR:?Submit from the project directory}"
+export PAGERANK_RESUME_EXISTING=1 PAGERANK_RUN_STRONG=1 PAGERANK_RUN_WEAK=0
+bash scripts/vanda_mpi_scaling_job.pbs

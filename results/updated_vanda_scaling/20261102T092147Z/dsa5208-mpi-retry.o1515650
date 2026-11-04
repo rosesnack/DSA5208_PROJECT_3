@@ -1,0 +1,498 @@
+Loading CMake/3.29.3-GCCcore-13.3.0
+  Loading requirement: GCCcore/13.3.0 ncurses/6.5-GCCcore-13.3.0
+    zlib/1.3.1-GCCcore-13.3.0 bzip2/1.0.8-GCCcore-13.3.0 OpenSSL/3
+    cURL/8.7.1-GCCcore-13.3.0 XZ/5.4.5-GCCcore-13.3.0
+    libarchive/3.7.4-GCCcore-13.3.0
+Checking strong_uniform...
+PASS: strong_uniform, residual=1.426e-09
+Report: /scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/strong/strong_uniform/nodes1/serial/validation.json
+Strong scaling: nodes=1 ranks/node=1 p=1 communication=allgather
+[CN-124:779134] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:779195] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p1...
+strong_uniform p1 allgather: iterations=12, converged=true, median=22.3118s, residual=1.42628e-09
+[CN-124:779488] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p1 on mpi_kokkos/OpenMP allgather...
+strong_uniform p1 allgather: iterations=12, median=22.6221s, residual=1.42628e-09
+Strong scaling: nodes=1 ranks/node=1 p=1 communication=halo
+[CN-124:779702] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:779761] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p1...
+strong_uniform p1 halo: iterations=12, converged=true, median=22.2975s, residual=1.42628e-09
+[CN-124:779965] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p1 on mpi_kokkos/OpenMP halo...
+strong_uniform p1 halo: iterations=12, median=22.5147s, residual=1.42628e-09
+Strong scaling: nodes=1 ranks/node=2 p=2 communication=allgather
+[CN-124:780184] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:780185] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:780246] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:780247] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p2...
+strong_uniform p2 allgather: iterations=12, converged=true, median=11.6984s, residual=1.42628e-09
+[CN-124:780397] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:780398] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p2 on mpi_kokkos/OpenMP allgather...
+strong_uniform p2 allgather: iterations=12, median=11.8707s, residual=1.42628e-09
+Strong scaling: nodes=1 ranks/node=2 p=2 communication=halo
+[CN-124:780599] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:780598] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:780661] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:780660] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p2...
+strong_uniform p2 halo: iterations=12, converged=true, median=11.7976s, residual=1.42628e-09
+[CN-124:780868] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:780867] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p2 on mpi_kokkos/OpenMP halo...
+strong_uniform p2 halo: iterations=12, median=11.9024s, residual=1.42628e-09
+Strong scaling: nodes=1 ranks/node=4 p=4 communication=allgather
+[CN-124:781016] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781019] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781017] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781018] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781086] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781087] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781085] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781088] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p4...
+strong_uniform p4 allgather: iterations=12, converged=true, median=6.85987s, residual=1.42628e-09
+[CN-124:781239] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781241] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781242] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781240] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p4 on mpi_kokkos/OpenMP allgather...
+strong_uniform p4 allgather: iterations=12, median=6.96701s, residual=1.42628e-09
+Strong scaling: nodes=1 ranks/node=4 p=4 communication=halo
+[CN-124:781397] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781399] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781398] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781396] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781467] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781465] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781464] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781466] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p4...
+strong_uniform p4 halo: iterations=12, converged=true, median=7.05039s, residual=1.42628e-09
+[CN-124:781612] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781611] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781609] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781610] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p4 on mpi_kokkos/OpenMP halo...
+strong_uniform p4 halo: iterations=12, median=7.1193s, residual=1.42628e-09
+Strong scaling: nodes=1 ranks/node=8 p=8 communication=allgather
+[CN-124:781819] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781813] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781814] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781816] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781818] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781822] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781815] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781817] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781895] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781897] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781904] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781898] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781899] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781893] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781894] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:781896] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p8...
+strong_uniform p8 allgather: iterations=12, converged=true, median=3.70911s, residual=1.42628e-09
+[CN-124:782049] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782046] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782047] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782050] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782052] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782053] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782048] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782051] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p8 on mpi_kokkos/OpenMP allgather...
+strong_uniform p8 allgather: iterations=12, median=3.85649s, residual=1.42628e-09
+Strong scaling: nodes=1 ranks/node=8 p=8 communication=halo
+[CN-124:782152] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782155] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782154] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782156] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782157] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782162] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782153] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782159] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782246] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782241] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782252] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782236] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782242] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782237] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782244] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782239] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p8...
+strong_uniform p8 halo: iterations=12, converged=true, median=4.00686s, residual=1.42628e-09
+[CN-124:782826] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782828] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782829] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782830] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782825] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782831] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782827] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782824] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p8 on mpi_kokkos/OpenMP halo...
+strong_uniform p8 halo: iterations=12, median=4.11193s, residual=1.42628e-09
+Strong scaling: nodes=1 ranks/node=16 p=16 communication=allgather
+[CN-124:783015] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782992] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782993] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783006] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782987] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782989] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783012] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783009] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782991] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783003] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782990] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782988] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783000] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:782996] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783018] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783021] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783108] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783098] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783095] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783111] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783091] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783093] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783092] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783096] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783105] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783094] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783102] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783113] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783117] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783120] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783122] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783126] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p16...
+strong_uniform p16 allgather: iterations=12, converged=true, median=2.26556s, residual=1.42628e-09
+[CN-124:783237] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783216] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783231] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783217] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783235] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783215] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783218] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783227] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783214] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783223] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783243] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783220] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783219] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783240] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783245] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783248] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p16 on mpi_kokkos/OpenMP allgather...
+strong_uniform p16 allgather: iterations=12, median=2.49425s, residual=1.42628e-09
+Strong scaling: nodes=1 ranks/node=16 p=16 communication=halo
+[CN-124:783402] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783398] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783406] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783393] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783394] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783395] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783415] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783399] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783397] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783396] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783426] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783424] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783423] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783420] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783421] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783419] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783525] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783507] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783514] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783521] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783499] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783517] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783501] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783504] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783503] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783502] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783511] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783498] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783500] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783529] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783528] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783532] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p16...
+strong_uniform p16 halo: iterations=12, converged=true, median=2.37974s, residual=1.42628e-09
+[CN-124:783756] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783753] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783734] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783742] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783759] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783750] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783731] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783735] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783732] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783737] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783736] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783733] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783747] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783739] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783762] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783765] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p16 on mpi_kokkos/OpenMP halo...
+strong_uniform p16 halo: iterations=12, median=2.52263s, residual=1.42628e-09
+Strong scaling: nodes=1 ranks/node=32 p=32 communication=allgather
+[CN-124:783889] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783861] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783877] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783884] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783886] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783863] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783860] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783859] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783879] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783890] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783887] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783865] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783878] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783868] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783874] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783867] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783880] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783881] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783872] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783882] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783870] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783873] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783885] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783864] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783866] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783888] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783862] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783871] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783875] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783869] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783876] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:783883] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784070] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784093] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784088] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784092] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784089] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784071] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784087] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784080] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784067] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784073] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784069] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784085] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784083] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784078] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784086] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784094] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784084] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784072] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784095] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784079] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784082] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784096] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784066] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784076] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784075] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784074] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784077] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784097] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784090] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784081] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784091] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784068] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p32...
+strong_uniform p32 allgather: iterations=12, converged=true, median=1.77809s, residual=1.42628e-09
+[CN-124:784270] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784264] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784263] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784267] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784271] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784245] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784249] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784250] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784255] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784272] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784256] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784254] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784266] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784242] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784251] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784273] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784260] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784261] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784269] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784268] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784257] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784259] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784262] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784243] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784253] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784265] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784244] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784252] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784248] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784247] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784258] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784246] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p32 on mpi_kokkos/OpenMP allgather...
+strong_uniform p32 allgather: iterations=12, median=2.13472s, residual=1.42628e-09
+Strong scaling: nodes=1 ranks/node=32 p=32 communication=halo
+[CN-124:784479] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784483] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784491] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784496] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784476] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784478] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784484] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784489] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784502] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784488] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784490] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784498] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784501] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784482] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784494] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784505] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784492] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784500] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784493] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784477] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784504] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784485] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784480] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784506] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784499] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784507] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784495] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784487] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784481] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784486] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784497] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784503] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784642] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784633] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784653] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784659] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784646] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784648] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784645] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784650] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784663] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784651] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784640] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784638] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784654] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784658] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784643] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784662] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784634] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784656] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784636] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784661] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784660] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784639] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784635] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784657] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784644] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784649] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784637] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784652] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784655] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784632] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784647] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784641] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p32...
+strong_uniform p32 halo: iterations=12, converged=true, median=1.63321s, residual=1.42628e-09
+[CN-124:784869] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784870] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784876] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784892] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784880] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784863] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784884] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784875] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784865] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784878] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784874] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784882] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784885] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784862] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784867] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784890] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784871] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784883] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784866] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784893] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784872] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784888] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784881] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784887] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784877] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784886] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784889] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784873] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784868] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784879] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784891] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-124:784864] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+Running strong_uniform p32 on mpi_kokkos/OpenMP halo...
+strong_uniform p32 halo: iterations=12, median=1.8024s, residual=1.42628e-09
+Checking strong_uniform serial reference...
+Checking strong_uniform/p1...
+PASS: L1 error=0.000e+00, speedup=0.71
+Checking strong_uniform/p2...
+PASS: L1 error=0.000e+00, speedup=1.36
+Checking strong_uniform/p4...
+PASS: L1 error=0.000e+00, speedup=2.31
+Checking strong_uniform/p8...
+PASS: L1 error=0.000e+00, speedup=4.28
+Checking strong_uniform/p16...
+PASS: L1 error=0.000e+00, speedup=7.00
+Checking strong_uniform/p32...
+PASS: L1 error=0.000e+00, speedup=8.92
+Validation and scaling results: /scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/strong/strong_uniform/nodes1/mpi
+Checking Serial baseline for strong_uniform...
+Checking mpi_kokkos/OpenMP/allgather/strong_uniform/p1...
+PASS: rank L1=0.000e+00, speedup=0.701
+Checking mpi_kokkos/OpenMP/allgather/strong_uniform/p2...
+PASS: rank L1=0.000e+00, speedup=1.34
+Checking mpi_kokkos/OpenMP/allgather/strong_uniform/p4...
+PASS: rank L1=0.000e+00, speedup=2.28
+Checking mpi_kokkos/OpenMP/allgather/strong_uniform/p8...
+PASS: rank L1=0.000e+00, speedup=4.11
+Checking mpi_kokkos/OpenMP/allgather/strong_uniform/p16...
+PASS: rank L1=0.000e+00, speedup=6.36
+Checking mpi_kokkos/OpenMP/allgather/strong_uniform/p32...
+PASS: rank L1=0.000e+00, speedup=7.43
+Checking strong_uniform serial reference...
+Checking strong_uniform/p1...
+PASS: L1 error=0.000e+00, speedup=0.71
+Checking strong_uniform/p2...
+PASS: L1 error=0.000e+00, speedup=1.34
+Checking strong_uniform/p4...
+PASS: L1 error=0.000e+00, speedup=2.25
+Checking strong_uniform/p8...
+PASS: L1 error=0.000e+00, speedup=3.96
+Checking strong_uniform/p16...
+PASS: L1 error=0.000e+00, speedup=6.67
+Checking strong_uniform/p32...
+PASS: L1 error=0.000e+00, speedup=9.72
+Validation and scaling results: /scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/strong/strong_uniform/nodes1/mpi_halo
+Checking Serial baseline for strong_uniform...
+Checking mpi_kokkos/OpenMP/halo/strong_uniform/p1...
+PASS: rank L1=0.000e+00, speedup=0.705
+Checking mpi_kokkos/OpenMP/halo/strong_uniform/p2...
+PASS: rank L1=0.000e+00, speedup=1.33
+Checking mpi_kokkos/OpenMP/halo/strong_uniform/p4...
+PASS: rank L1=0.000e+00, speedup=2.23
+Checking mpi_kokkos/OpenMP/halo/strong_uniform/p8...
+PASS: rank L1=0.000e+00, speedup=3.86
+Checking mpi_kokkos/OpenMP/halo/strong_uniform/p16...
+=>> PBS: job killed: walltime 14434 exceeded limit 14400

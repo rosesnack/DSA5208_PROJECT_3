@@ -14,17 +14,21 @@ DATA_ROOT="${DATA_ROOT:-/scratch/$USER/dsa5208_scaling/$RUN_ID}"
 RUN_ROOT="results/updated_vanda_scaling/$RUN_ID"
 RETRY_TABLE="$RUN_ROOT/retry_jobs.tsv"
 
-if [[ -f "$RETRY_TABLE" ]] && awk -F '\t' -v graph="$GRAPH_NAME" -v nodes="$NODE_COUNT" \
-    '$1 == "mpi_strong" && $2 == graph && $3 == nodes {found=1} END {exit !found}' \
+if [[ -f "$RETRY_TABLE" ]] && awk -F '\t' -v graph="$GRAPH_NAME" -v nodes="$NODE_COUNT" -v original="$ORIGINAL_JOB" \
+    '$1 == "mpi_strong" && $2 == graph && $3 == nodes && $4 == original {found=1} END {exit !found}' \
     "$RETRY_TABLE"; then
-    echo "A retry is already recorded for $GRAPH_NAME nodes=$NODE_COUNT"
+    echo "A retry is already recorded for $GRAPH_NAME nodes=$NODE_COUNT original=$ORIGINAL_JOB"
     exit 0
 fi
 
 variables="RUN_ID=$RUN_ID,DATA_ROOT=$DATA_ROOT,GRAPH_NAME=$GRAPH_NAME,PAGERANK_NODE_COUNTS=$NODE_COUNT"
+pbs_script="scripts/vanda_retry_mpi_strong_job.pbs"
+if [[ "$REASON" == resume_after_walltime ]]; then
+    pbs_script="scripts/vanda_resume_mpi_strong_job.pbs"
+fi
 job=$(qsub -P "$PROJECT" -q auto -l "walltime=$WALLTIME" \
     -l "select=$NODE_COUNT:ncpus=32:mpiprocs=32:ompthreads=1:mem=32gb" \
-    -v "$variables" scripts/vanda_retry_mpi_strong_job.pbs)
+    -v "$variables" "$pbs_script")
 if [[ ! -f "$RETRY_TABLE" ]]; then
     printf 'stage\tgraph\tnodes\toriginal_job\treplacement_job\treason\n' > "$RETRY_TABLE"
 fi

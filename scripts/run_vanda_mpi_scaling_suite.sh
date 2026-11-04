@@ -13,6 +13,7 @@ read -r -a NODE_COUNTS <<< "${PAGERANK_NODE_COUNTS:-1 2 4 8}"
 RUN_STRONG="${PAGERANK_RUN_STRONG:-1}"
 RUN_WEAK="${PAGERANK_RUN_WEAK:-1}"
 GRAPH_NAME="${GRAPH_NAME:-}"
+RESUME_EXISTING="${PAGERANK_RESUME_EXISTING:-0}"
 export PAGERANK_REPEATS PAGERANK_WARMUPS
 export PAGERANK_HYBRID_MAX_TOTAL_THREADS=256
 
@@ -34,6 +35,37 @@ run_on_layout() {
         mpiexec -x LD_LIBRARY_PATH --map-by "$mapping" --bind-to none \
             -n "$processes" python3 scripts/mpi_affinity_exec.py "$processing_elements" "$@"
     fi
+}
+
+saved_measurement() {
+    local folder="$1"
+    [[ "$RESUME_EXISTING" == 1 && -n "$GRAPH_NAME" &&
+       -s "$folder/summary.json" && -s "$folder/ranks.csv" &&
+       -s "$folder/history.csv" && -s "$folder/timings.csv" &&
+       $(wc -l < "$folder/timings.csv") -eq $((PAGERANK_REPEATS + 1)) ]]
+}
+
+run_or_reuse() {
+    local folder="$1"
+    shift
+    if saved_measurement "$folder"; then
+        printf 'Reusing completed measurement: %s\n' "$folder"
+    else
+        "$@"
+    fi
+}
+
+report_passed() {
+    [[ "$RESUME_EXISTING" == 1 && -n "$GRAPH_NAME" && -s "$1" ]] || return 1
+    python3 - "$1" "$2" <<'PY'
+import json
+import sys
+with open(sys.argv[1], encoding="utf-8") as source:
+    report = json.load(source)
+expected = int(sys.argv[2])
+raise SystemExit(0 if report.get("failed") == 0 and report.get("passed") == expected
+                 and len(report.get("checks", [])) == expected else 1)
+PY
 }
 
 record_mapping() {
@@ -64,33 +96,46 @@ for nodes in "${NODE_COUNTS[@]}"; do
     export PAGERANK_RESULTS_ROOT="$NODE_ROOT"
     mkdir -p "$NODE_ROOT/serial"
     if [[ -n "$GRAPH_NAME" ]]; then
-        cp -al "$DATA_ROOT/results/serial_grid/$GRAPH_NAME/serial/$GRAPH_NAME" "$NODE_ROOT/serial/"
+        if [[ ! -d "$NODE_ROOT/serial/$GRAPH_NAME" ]]; then
+            cp -al "$DATA_ROOT/results/serial_grid/$GRAPH_NAME/serial/$GRAPH_NAME" "$NODE_ROOT/serial/"
+        fi
     else
         cp -al "$DATA_ROOT/results/serial_grid/serial/." "$NODE_ROOT/serial/"
     fi
-    python3 scripts/validate_serial.py
+    report_passed "$NODE_ROOT/serial/validation.json" 1 || python3 scripts/validate_serial.py
     node_process_counts=()
     for ranks_per_node in "${RANKS_PER_NODE[@]}"; do
         processes=$((nodes * ranks_per_node))
         node_process_counts+=("$processes")
         for communication in allgather halo; do
+            suffix=""
+            if [[ "$communication" == halo ]]; then suffix="_halo"; fi
             printf 'Strong scaling: nodes=%s ranks/node=%s p=%s communication=%s\n' \
                 "$nodes" "$ranks_per_node" "$processes" "$communication"
             record_mapping "$nodes" "$processes" 1 \
                 "$NODE_ROOT/mapping/${communication}_p${processes}.csv"
             if [[ "$communication" == halo ]]; then
-                run_on_layout "$nodes" "$processes" 1 ./build-vanda-matrix-cpu/pagerank_mpi --communication=halo
+                run_or_reuse "$NODE_ROOT/mpi_halo/$GRAPH_NAME/p$processes" \
+                    run_on_layout "$nodes" "$processes" 1 \
+                    ./build-vanda-matrix-cpu/pagerank_mpi --communication=halo
             else
-                run_on_layout "$nodes" "$processes" 1 ./build-vanda-matrix-cpu/pagerank_mpi --communication=allgather
+                run_or_reuse "$NODE_ROOT/mpi/$GRAPH_NAME/p$processes" \
+                    run_on_layout "$nodes" "$processes" 1 \
+                    ./build-vanda-matrix-cpu/pagerank_mpi --communication=allgather
             fi
             OMP_NUM_THREADS=1 OMP_PROC_BIND=spread OMP_PLACES=cores \
+                run_or_reuse "$NODE_ROOT/mpi_kokkos$suffix/OpenMP/$GRAPH_NAME/p$processes" \
                 run_on_layout "$nodes" "$processes" 1 \
                 ./build-vanda-matrix-cpu/pagerank_mpi_kokkos --communication="$communication"
         done
     done
     for communication in allgather halo; do
-        python3 scripts/validate_mpi.py "$communication" --processes "${node_process_counts[@]}"
-        python3 scripts/validate_mpi_device.py mpi_kokkos OpenMP "$communication" \
+        suffix=""
+        if [[ "$communication" == halo ]]; then suffix="_halo"; fi
+        report_passed "$NODE_ROOT/mpi$suffix/validation.json" "${#node_process_counts[@]}" || \
+            python3 scripts/validate_mpi.py "$communication" --processes "${node_process_counts[@]}"
+        report_passed "$NODE_ROOT/mpi_kokkos$suffix/OpenMP/validation.json" "${#node_process_counts[@]}" || \
+            python3 scripts/validate_mpi_device.py mpi_kokkos OpenMP "$communication" \
             --processes "${node_process_counts[@]}"
     done
 
@@ -104,9 +149,12 @@ for nodes in "${NODE_COUNTS[@]}"; do
             printf 'MPI+OpenMP: nodes=%s ranks/node=%s p=%s threads/rank=%s\n' \
                 "$nodes" "$ranks_per_node" "$processes" "$threads"
             for communication in allgather halo; do
+                suffix=""
+                if [[ "$communication" == halo ]]; then suffix="_halo"; fi
                 record_mapping "$nodes" "$processes" "$threads" \
                     "$NODE_ROOT/mapping/hybrid_${communication}_p${processes}_t${threads}.csv"
                 PAGERANK_HYBRID_THREADS="$threads" \
+                    run_or_reuse "$NODE_ROOT/hybrid$suffix/$GRAPH_NAME/p${processes}_t${threads}" \
                     run_on_layout "$nodes" "$processes" "$threads" \
                     ./build-vanda-matrix-cpu/pagerank_hybrid --communication="$communication"
             done
@@ -116,7 +164,10 @@ for nodes in "${NODE_COUNTS[@]}"; do
     export PAGERANK_HYBRID_THREADS='1 2 4 8 16 32'
     export PAGERANK_HYBRID_CONFIGS="${hybrid_configurations[*]}"
     for communication in allgather halo; do
-        python3 scripts/validate_hybrid.py "$communication" --processes "${node_process_counts[@]}"
+        suffix=""
+        if [[ "$communication" == halo ]]; then suffix="_halo"; fi
+        report_passed "$NODE_ROOT/hybrid$suffix/validation.json" "${#hybrid_configurations[@]}" || \
+            python3 scripts/validate_hybrid.py "$communication" --processes "${node_process_counts[@]}"
     done
 done
 fi
