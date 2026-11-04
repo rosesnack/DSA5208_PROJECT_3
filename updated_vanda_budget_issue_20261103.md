@@ -1,5 +1,7 @@
 # Vanda CPU 额度暂挂核查（2026-11-03 23:35 SGT）
 
+**2026-11-04 14:42 SGT 更新：**项目 CPU 余额已对账回升至 6218.183 核小时；已分批释放 12 个暂挂 CPU 作业，其中 1 个开始运行，余额 5962.183。下文 19.427 核小时及未对账数量仅是 11 月 3 日历史快照。最新队列状态见 `updated_vanda_run_status_20261104.md`。
+
 项目 `personal-hongxinran` 当前 CPU Net Balance 为 **19.427 核小时**。PBS 的 `am_hook` 已把约 50 个 CPU 作业设为用户暂挂；新投的 `strong_uniform` 两个 4 小时重跑作业 `1515650/1515651` 显示 `Budgets: runjob` 等待预算。另约 52 个作业在排队，其中 512 核配置符合 `batch_cpu` 的 720 核、10 节点上限，但当前节点不足。
 
 这不是已经花掉 9,980.573 核小时的证据。当天的 [`amgr` CPU 交易导出](results/updated_vanda_scaling/20261102T092147Z/amgr_cpu_transactions_20261103.csv) 中，**79 个已结束**的作业仍标记 `reconciled=no`，预扣合计 **8,768 核小时**。相同作业的 PBS `resources_used.ncpus × resources_used.walltime` 合计约 **2,569.9 核小时**；两者差约 **6,198.1 核小时**。后者只是按分配核心数和实际墙钟时间估算，并不声称等于 NUS 最终计费。当天已有 140 笔已对账的 CPU 返还，合计 15,175.761 核小时，最近一笔在 16:52 SGT；`hpc project-usage` 明确说明负用量代表已完成作业的额度返还。
