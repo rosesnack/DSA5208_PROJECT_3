@@ -71,4 +71,4 @@ CPU 的 512 核端点与 GPU 1/2 卡比较回答相同类型的扩展性问题�
 
 所有配置使用 Release、1 次预热、5 次计时和中位数，保存求解时间、迭代数、进程/线程/节点布局、通信时间与字节、Halo 预处理、GPU 传输/计算时间，以及正确性校验。强扩展应同时区分 **相对 Serial 的速度比**与**同方法 p=1 基线的强扩展加速/效率**；现有验证 CSV 的 `speedup` 是前者，最终图表还需计算后者。弱扩展报告总时间、每轮时间、迭代数及相对同方法 p=1 的效率。
 
-Vanda p=1/2 GPU 的 G45 已全部校验；CPU 后续状态见最新运行快照。默认逐格核查目标共有 18,315 个 CPU、1,665 个 GPU 节点单元，总计 19,980。仅在选择可选 4/8 GPU 扩展时使用 `scripts/audit_fixed_matrix.py --include-vanda-gpu-extension`，额外加入 1,260 个单元，总计 21,240。最终 PDF 报告仍需根据实际完成的 Vanda 结果制作，包括 Google 真实图结论与 AI 使用说明。
+Vanda p=1/2 GPU 的 G45 已全部校验；CPU 后续状态见最新运行快照。默认逐格核查目标共有 18,315 个 CPU、1,665 个 GPU 节点单元，总计 19,980。这个数只覆盖 45 张固定图上的配置，**不包含弱扩展、五次计时重复或 PBS 作业数量**；每图 444 个单元的明细和逐作业墙钟时间见 [`updated_vanda_runtime_budget_20261105.md`](updated_vanda_runtime_budget_20261105.md)。仅在选择可选 4/8 GPU 扩展时使用 `scripts/audit_fixed_matrix.py --include-vanda-gpu-extension`，额外加入 1,260 个单元，总计 21,240。最终 PDF 报告仍需根据实际完成的 Vanda 结果制作，包括 Google 真实图结论与 AI 使用说明。
