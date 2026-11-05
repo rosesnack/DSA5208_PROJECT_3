@@ -234,8 +234,8 @@ The latest PBS and validated-batch snapshot is in [`updated_vanda_run_status_202
 
 - **Standalone ablations:** Serial; OpenMP with 1/2/4/8/16/32 threads; Kokkos OpenMP with the same thread counts; native CUDA and Kokkos CUDA with one A40. These methods have no MPI communication choice.
 - **CPU distributed methods:** Pure MPI and MPI+Kokkos OpenMP at T=1 use 1/2/4/8 nodes crossed with 1/2/4/8/16/32 ranks per node, plus a separate 8-node × 64-rank 512-core point. MPI+OpenMP adds every T=1/2/4/8/16/32 that fits 32 CPU cores per node, plus 512×1 and 128×4 on 8 nodes with 64 cores per node. The matching MPI+Kokkos OpenMP T>1 grid is implemented as a separate extension pipeline, so older queued CPU batches retain their original workload. Each graph, rank, thread, and node layout runs **both** `--communication=allgather` and `--communication=halo`.
-- **Matched GPU-node methods:** The Vanda queues currently permit at most two GPUs per job. On the same allocated GPU nodes, pure MPI, MPI+OpenMP T=1/2/4/8, MPI+CUDA, and MPI+Kokkos CUDA have completed p=n=1/2 with one rank and one A40 per node. Each method runs both communication modes on the same graph and layout. T=1 is a CPU control; T=2/4/8 exercises OpenMP inside each MPI rank. Serial and standalone OpenMP/CUDA/Kokkos CUDA are measured on that GPU-node environment as ablations. The p=4/8 GPU scripts are an optional extension, excluded from the default coverage target: the assignment specifies no GPU count, and Vanda limits jobs to two GPUs and two nodes.
-- **Weak scaling:** Three synthetic graph families keep 50k vertices and 800k edges per rank. Pure MPI and MPI+Kokkos OpenMP cover p=1…512; MPI+OpenMP T=4 covers p=1…128, reaching 512 CPU cores. The p=512 graphs have 25.6m vertices and 409.6m edges each. The matched Vanda GPU-node MPI methods cover p=1/2, with MPI+OpenMP T=1/2/4/8. CUDA and Kokkos CUDA also run independently on those weak graphs.
+- **Matched GPU-node methods:** On the same allocated GPU nodes, pure MPI, MPI+OpenMP T=1/2/4/8, MPI+CUDA, and MPI+Kokkos CUDA cover p=n=1/2 with one rank and one A40 per node. Each method runs both communication modes on the same graph and layout. T=1 is a CPU control; T=2/4/8 exercises OpenMP inside each MPI rank. Serial and standalone OpenMP/CUDA/Kokkos CUDA are measured on that GPU-node environment as ablations. GPU p=4/8 is excluded from the experiment plan and will not be submitted.
+- **Weak scaling (required in this project plan):** Three synthetic graph families keep 50k vertices and 800k edges per rank. Pure MPI and MPI+Kokkos OpenMP cover p=1…256 plus the p=512 endpoint; MPI+OpenMP T=4 covers p=1…64 plus p=128,T=4, paired at 512 CPU cores. Both communication modes are run at every MPI point. The p=512 graphs have 25.6m vertices and 409.6m edges each. Matched Vanda GPU-node MPI methods cover p=1/2, with MPI+OpenMP T=1/2/4/8; standalone CUDA/Kokkos CUDA also run on these weak graphs. No p=4/8 GPU extension is in scope.
 
 The original weak curves hold work **per rank** constant. For a matched work-per-CPU-core comparison at T=4, `scripts/run_vanda_cpu_core_weak.sh` reuses the `weak_pC` graph for `C=p×4` CPU cores, so vertices and edges scale with C. It runs both MPI+OpenMP and MPI+Kokkos OpenMP, each with both communication modes, for C=4/8/16/32/64/128/256/512. Submit it only when Vanda CPU credits can reserve its walltime:
 
@@ -314,20 +314,9 @@ Validators write `results/<version>/validation.json`; parallel validators also w
 
 Current results are labeled `local workstation`. The coursework report requires Atlas or Vanda measurements with the environment and resource configuration documented. Preserve each environment's results separately to avoid overwriting them.
 
-### Optional Vanda 4/8 GPU extension
+### GPU scope
 
-The active experiment plan uses Vanda only. All 45 fixed graphs already have validated A40 p=1/2 GPU results. The coursework does not require 4/8 GPUs, and the default audit excludes those points. The optional extension scripts run p=4/8 on the same Vanda A40 node class, with one MPI rank and one GPU per node, preserving the existing builds, graphs, warmup, and five-repeat rule. They save separate p=4/8 validation and scaling files while retaining p=1/2 results.
-
-Vanda currently caps `batch_gpu` and `batch_gpux` jobs at **2 GPUs and 2 nodes**. The following commands become usable only after NUS HPC grants an 8-GPU, 8-node allocation for the project:
-
-```bash
-MAX_NEW_GRAPHS=1 bash scripts/submit_vanda_gpu_extension.sh <run-id> <project-name>
-bash scripts/submit_vanda_gpu_weak_extension.sh <run-id> <project-name>
-python3 scripts/audit_fixed_matrix.py vanda results/updated_vanda_scaling/<run-id> \
-  --include-vanda-gpu-extension
-```
-
-The queue evidence and an unsent optional quota request are in [`updated_vanda_gpu_queue_limits_20261103.md`](updated_vanda_gpu_queue_limits_20261103.md). No 4/8 GPU runtime has been measured or is required by the assignment text.
+The GPU experiment scope ends at one and two A40 nodes, with one MPI rank and one GPU per node. The 4/8 GPU scripts and queue-limit notes are retained as historical implementation artifacts, but those jobs are excluded from the matrix, coverage audit, and runtime budget. Continue the required three-family weak-scaling runs at the CPU layouts and GPU p=1/2 layouts described above.
 
 ### Workstation CPU subset
 

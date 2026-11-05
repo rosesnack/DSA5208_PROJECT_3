@@ -1,6 +1,6 @@
 # Project 3 实验矩阵澄清（2026-11-03）
 
-**2026-11-04 范围调整：**课程作业要求探索并行方法、扩展性与效率，未指定 4/8 GPU；Vanda 每作业最多 2 GPU/2 节点。因此当前必做 GPU 矩阵为同一环境的 p=1/2，4/8 GPU 保留为可选扩展，不计入默认覆盖目标。p=1/2 可计算强扩展效率，但只有两个资源点，报告须明确其外推限制。
+**2026-11-05 范围确认：**弱扩展是本项目正式实验，按下文三个合成图家族运行并报告；此前 4/8 GPU 只作为候选拓展，现明确从实验目标中移除。Vanda GPU 只比较 p=1/2，已有 45 张固定图及三个弱扩展家族的 p=1/2 GPU 批次。不要提交或计入 p=4/8 GPU 作业。p=1/2 GPU 强扩展只有两个资源点，报告须明确其外推限制。
 
 ## 强扩展、弱扩展和资源数量
 
@@ -53,22 +53,22 @@ G45 = 原仓库的 Google、uniform、hub 3 图 + 三个家族各一张典型合
 |---|---|---|
 | Vanda CPU | 上表中的 n/r/T 布局；常规最高 256 个实际 CPU 核，另有两个 512 核 rank/线程拆分 | Serial、单独 OpenMP/Kokkos OpenMP、纯 MPI、MPI+OpenMP、MPI+Kokkos OpenMP；MPI+Kokkos 多线程网格仍待补齐 |
 | Vanda GPU 已运行 | 1/2 A40 GPU 节点，每节点 1 MPI rank、1 GPU | 同节点 Serial/纯 MPI/MPI+OpenMP CPU 对照；单独 CUDA/Kokkos CUDA；MPI+CUDA/MPI+Kokkos CUDA。GPU 节点 MPI+OpenMP 对照 T=1/2/4/8 |
-| Vanda GPU 可选扩展 | 同一 A40 环境的 4/8 节点，每节点 1 rank、1 GPU | 同一 G45 的纯 MPI、MPI+OpenMP CPU 对照、MPI+CUDA、MPI+Kokkos CUDA；每个 MPI 方法逐格配对 Allgatherv/Halo。当前 Vanda GPU 队列每作业最多 2 GPU、2 节点，须先由 NUS HPC 放宽额度；不计入当前必做目标 |
+| Vanda GPU | 1/2 节点，每节点 1 rank、1 GPU | 同一 G45 的纯 MPI、MPI+OpenMP CPU 对照、MPI+CUDA、MPI+Kokkos CUDA；每个 MPI 方法逐格配对 Allgatherv/Halo |
 
-同一 Vanda A40 环境中已完成的 p=1/2 可以作为后续 p=4/8 的曲线起点；新端点仍须记录具体节点型号、构建和重复口径。GPU 的资源单位是 GPU 卡数，不与 512 CPU 核直接画成同一条效率曲线。
+GPU 的资源单位是 GPU 卡数，不与 512 CPU 核直接画成同一条效率曲线。4/8 GPU 不在当前目标、预算或覆盖率分母中。
 
-GPU 布局记 `g=每节点 GPU 数`。当前设计固定 `g=1`、每 GPU 一个 MPI rank，所以 Vanda 的 `(n,p,GPU总数)` 必做目标为 `(1,1,1)/(2,2,2)`；`(4,4,4)/(8,8,8)` 仅是可选扩展，受队列上限阻挡，不能称为已完成。CPU 对照在同一 GPU 节点上使用相同 n/p，MPI+OpenMP 另取 T=1/2/4/8；GPU 实现的 CUDA/Kokkos kernel 不存在同含义的 OpenMP T。每节点 PBS 所申请的主机 CPU 核数固定并记录，不把它当作 GPU 并行度。不把一 GPU 共享给多个 rank 的争用运行混进这条曲线。
+GPU 布局记 `g=每节点 GPU 数`。当前设计固定 `g=1`、每 GPU 一个 MPI rank，所以 Vanda 的 `(n,p,GPU总数)` 为 `(1,1,1)/(2,2,2)`。CPU 对照在同一 GPU 节点上使用相同 n/p，MPI+OpenMP 另取 T=1/2/4/8；GPU 实现的 CUDA/Kokkos kernel 不存在同含义的 OpenMP T。每节点 PBS 所申请的主机 CPU 核数固定并记录，不把它当作 GPU 并行度。不把一 GPU 共享给多个 rank 的争用运行混进这条曲线。
 
-CPU 的 512 核端点与 GPU 1/2 卡比较回答相同类型的扩展性问题，但对应不同硬件规模；“GPU 也跑 512”意味着 512 张 GPU，绝不等于每卡开 512 个 CUDA 线程。当前 GPU p>2 仅为可选计划，不是已验证结果。Vanda 4/8 GPU 的队列限制与申请文字见 `updated_vanda_gpu_queue_limits_20261103.md`。
+CPU 的 512 核端点与 GPU 1/2 卡比较回答相同类型的扩展性问题，但对应不同硬件规模；“GPU 也跑 512”意味着 512 张 GPU，绝不等于每卡开 512 个 CUDA 线程。GPU p>2 不属于本项目当前目标。
 
 ### 弱扩展：三个可复现合成家族
 
-当前 CPU **按 rank 定义**的弱扩展：纯 MPI、MPI+Kokkos OpenMP T=1 在 p=1/2/4/8/16/32/64/128/256/512 跑三个家族；MPI+OpenMP T=4 目前在 p=1/2/4/8/16/32/64/128 跑三个家族。图规模为 `N=50,000p; M=800,000p`。固定 T 的每条曲线都有相同每 rank 工作量；T=1 与 T=4 的**每核**工作量不同，不能称为同一条按核数配平的弱扩展比较。已新增**按核定义**的补充脚本：复用现有 `weak_pC` 合成图，令 `N=50,000C; M=800,000C`，`C=p×4`；MPI+OpenMP 与 MPI+Kokkos OpenMP 同取 T=4、C=4/8/16/32/64/128/256/512，两种 MPI 通信模式逐格配对。C≤256 用每节点 32 核，C=512 用 8 节点×64 核。该路径已在本机小图校验，并在 Vanda 提交首个家族。GPU MPI 弱扩展在 Vanda p=1/2 跑三个家族；p=4/8 仅为受队列上限阻挡的可选扩展。所有必做 MPI 弱扩展点都有 Allgatherv/Halo 配对。
+弱扩展是正式目标，覆盖三个可复现合成家族（uniform、hub、controlled），MPI 方法逐格配对 Allgatherv/Halo。CPU **按 rank 定义**的目标为纯 MPI、MPI+Kokkos OpenMP T=1 的 p=1/2/4/8/16/32/64/128/256，以及 p=512 端点；MPI+OpenMP T=4 为 p=1/2/4/8/16/32/64/128，以及 p=128,T=4 作为 512 核配对端点。图规模为 `N=50,000p; M=800,000p`。固定 T 的每条曲线都有相同每 rank 工作量；T=1 与 T=4 的每核工作量不同，不能称为同一条按核数配平曲线。按核定义的补充弱扩展复用 `weak_pC` 图，令 `N=50,000C; M=800,000C`，MPI+OpenMP 与 MPI+Kokkos OpenMP 同取 T=4、C=4/8/16/32/64/128/256/512，两种通信模式逐格配对。GPU 弱扩展保留 p=1/2；不做 p=4/8 GPU。实际完成情况以逐项校验标记为准，不能用批次提交数代替。
 
-原始 Google 图不能一边保持“同一张原图”，一边让其规模随 p 增长；若复制或抽样成图，那是新数据集，必须另列而不能称为原图的弱扩展。单独后端在弱扩展图上的规模消融与 MPI 弱扩展是不同分析。当前脚本尚未让单独 Kokkos OpenMP 覆盖全部弱扩展图，这与“所有有效组合都跑”的个人目标仍有缺口。
+原始 Google 图不能一边保持“同一张原图”，一边让其规模随 p 增长；若复制或抽样成图，那是新数据集，必须另列而不能称为原图的弱扩展。弱扩展使用可复现合成图，实际完成与待补组合以校验标记为准。
 
 ## 统一测量与当前缺口
 
 所有配置使用 Release、1 次预热、5 次计时和中位数，保存求解时间、迭代数、进程/线程/节点布局、通信时间与字节、Halo 预处理、GPU 传输/计算时间，以及正确性校验。强扩展应同时区分 **相对 Serial 的速度比**与**同方法 p=1 基线的强扩展加速/效率**；现有验证 CSV 的 `speedup` 是前者，最终图表还需计算后者。弱扩展报告总时间、每轮时间、迭代数及相对同方法 p=1 的效率。
 
-Vanda p=1/2 GPU 的 G45 已全部校验；CPU 后续状态见最新运行快照。默认逐格核查目标共有 18,315 个 CPU、1,665 个 GPU 节点单元，总计 19,980。这个数只覆盖 45 张固定图上的配置，**不包含弱扩展、五次计时重复或 PBS 作业数量**；每图 444 个单元的明细和逐作业墙钟时间见 [`updated_vanda_runtime_budget_20261105.md`](updated_vanda_runtime_budget_20261105.md)。仅在选择可选 4/8 GPU 扩展时使用 `scripts/audit_fixed_matrix.py --include-vanda-gpu-extension`，额外加入 1,260 个单元，总计 21,240。最终 PDF 报告仍需根据实际完成的 Vanda 结果制作，包括 Google 真实图结论与 AI 使用说明。
+Vanda p=1/2 GPU 的 G45 已全部校验；CPU 后续状态见最新运行快照。默认逐格核查目标共有 18,315 个 CPU、1,665 个 GPU 节点单元，总计 19,980。这个数只覆盖 45 张固定图上的配置，**不包含弱扩展、五次计时重复或 PBS 作业数量**；弱扩展是独立的合成图实验组。4/8 GPU 已从目标中移除，不再扩大分母。每图 444 个固定图单元的明细和逐作业墙钟时间见 [`updated_vanda_runtime_budget_20261105.md`](updated_vanda_runtime_budget_20261105.md)。最终 PDF 报告仍需根据实际完成的 Vanda 结果制作，包括 Google 真实图结论与 AI 使用说明。
