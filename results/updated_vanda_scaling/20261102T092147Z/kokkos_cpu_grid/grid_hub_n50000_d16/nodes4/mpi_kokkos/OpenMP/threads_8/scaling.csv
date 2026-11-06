@@ -1,0 +1,4 @@
+dataset,implementation,backend,communication,processes,serial_s,requested_threads,parallel_s,speedup,communication_s,communication_bytes_per_iteration,communication_setup_s,communication_setup_bytes,backend_compute_s,transfer_s,rank_l1_error
+grid_hub_n50000_d16,mpi_kokkos,OpenMP,allgather,4,0.020609428,8,0.025395846000000007,0.8115275230445166,0.024249334999999997,1200000,0,0,0.008239307000000001,0.000607794,0.0
+grid_hub_n50000_d16,mpi_kokkos,OpenMP,allgather,8,0.020609428,8,0.026064077000000005,0.7907215743722671,0.025182805999999995,2800000,0,0,0.008275889,0.000524856,0.0
+grid_hub_n50000_d16,mpi_kokkos,OpenMP,allgather,16,0.020609428,8,0.018815141999999993,1.095363936131867,0.017923614999999962,6000000,0,0,0.006749981,0.0006929179999999999,0.0

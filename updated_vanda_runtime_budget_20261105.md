@@ -1,4 +1,4 @@
-# Vanda 实验数量与运行时间预算（2026-11-05 15:00 SGT）
+# Vanda 实验数量与运行时间预算（更新至 2026-11-06 19:00 SGT）
 
 ## 19,980 的含义
 
@@ -17,6 +17,26 @@
 ## 每个 PBS 作业的用时记录
 
 [`pbs_job_usage.csv`](results/updated_vanda_scaling/20261102T092147Z/pbs_job_usage.csv) 是 14:59:45 的 PBS 快照，共 **485 行**：主作业清单中的 473 个作业、6 个重试作业，以及 6 个 Serial/GPU 续跑作业。每行列出作业 ID、图、节点数、队列、PBS 状态、退出码、申请核心/GPU 数、墙钟上限和实际墙钟时间。运行 `python3 scripts/collect_vanda_job_usage.py 20261102T092147Z` 可在 Vanda 登录节点刷新；脚本现还会补查历史失败与辅助校验作业，当前 CSV 尚未包含这 37 条额外记录。15:20 后 Vanda 的 PBS 历史查询响应缓慢，多次刷新未完成，因此不把未查到的墙钟时间写成估计值。`Exit_status=0` 仍需结合 `complete.txt` 与独立校验判断实验是否严格完成。
+
+**2026-11-06 19:00 SGT 定点更新：**Vanda 恢复后直接查到三个 512 核弱扩展作业的 PBS 历史，并已更新 CSV 对应行。hub 与 controlled 的按 rank 512 作业均超出 1 小时上限；uniform 的按核配平 C=512 成功。对 95 个新完成 Kokkos CPU 网格作业的批量历史查询遇到 SSH 超时，因此 CSV 其余行仍保留旧的 14:59 快照，不能用它们估算最新 Kokkos 作业用时。
+
+| PBS 作业 | 配置 | PBS 结果 | 实际墙钟 | 按 512 核折算 |
+|---|---|---|---:|---:|
+| `1510691` | hub，MPI p=512 | walltime 超限，`Exit_status=-29` | 1:00:31 | 516.409 核小时 |
+| `1510692` | controlled，MPI p=512 | walltime 超限，`Exit_status=-29` | 1:00:27 | 515.840 核小时 |
+| `1513566` | uniform，MPI+OpenMP/Kokkos T=4，C=512 | 成功，`Exit_status=0` 且校验完成 | 1:04:03 | 546.560 核小时 |
+
+同一 PBS 历史查询还确认 9 个 Kokkos CPU 大图批次均在 `cpu_parallel` 免费队列运行至 2 小时 walltime 后失败（`Exit_status=-29`）。这些作业没有贡献实验结果，但实际 elapsed time 可用于重新设置时限：
+
+| 图 | 1 节点 | 2 节点 | 4 节点 |
+|---|---:|---:|---:|
+| `strong_uniform` | 2:00:09 | 2:00:14 | 2:00:46 |
+| `strong_hub` | 2:00:20 | 2:00:57 | 2:00:43 |
+| `strong_controlled` | 2:00:17 | 2:00:18 | 2:01:32 |
+
+因为计时到达墙钟上限时仍未写出完整标记，这 9 项都不能用于性能分析；重跑时需提高作业时限或拆分图/通信配置。PBS CSV 中这 12 个端点已按历史记录更新；其余新完成 Kokkos 作业的实际作业用时仍待更稳定的批量历史查询补齐。
+
+19:00 查询时 `hpc project` 的 CPU Net Balance 为 **1570.921 核小时**、GPU Net Balance 为 **978.587 GPU 小时**。项目余额变化不一定等于 PBS 申请核数乘实际墙钟，额度对账以 NUS HPC 项目记录为准。
 
 付费 `batch_cpu` 队列的 `queue_charge_rate=1`，免费 `cpu_parallel` 为 `0`。下表用 **PBS 实际墙钟时间**，包含程序启动、计时、校验与文件同步；它比单次 `solve_median_s` 更适合估算整个作业的额度。P90 为已结束且 PBS 退出码为 0 的样本第 90 百分位，均非墙钟上限。
 

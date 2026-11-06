@@ -5,3 +5,14 @@ mpi_strong	grid_uniform_n100000_d16	8	1513379.stdct-mgmt-02	1519851.stdct-mgmt-0
 mpi_strong	strong_uniform	1	1515650.stdct-mgmt-02	1520951.stdct-mgmt-02	resume_after_walltime
 mpi_strong	strong_uniform	2	1515651.stdct-mgmt-02	1520952.stdct-mgmt-02	resume_after_walltime
 mpi_weak_512	uniform	8	1510690.stdct-mgmt-02	1521114.stdct-mgmt-02	validate_after_walltime
+mpi_weak_512	controlled	8	1510692.stdct-mgmt-02	1526615.stdct-mgmt-02	validate_after_timeout
+mpi_weak_512	hub	8	1510691.stdct-mgmt-02	1526616.stdct-mgmt-02	walltime_retry_2h
+kokkos_cpu_grid	strong_uniform	1	1523221.stdct-mgmt-02	1526604.stdct-mgmt-02	walltime_retry_6h
+kokkos_cpu_grid	strong_uniform	2	1523222.stdct-mgmt-02	1526605.stdct-mgmt-02	walltime_retry_6h
+kokkos_cpu_grid	strong_uniform	4	1523223.stdct-mgmt-02	1526606.stdct-mgmt-02	walltime_retry_6h
+kokkos_cpu_grid	strong_hub	1	1523224.stdct-mgmt-02	1526607.stdct-mgmt-02	walltime_retry_6h
+kokkos_cpu_grid	strong_hub	2	1523225.stdct-mgmt-02	1526608.stdct-mgmt-02	walltime_retry_6h
+kokkos_cpu_grid	strong_hub	4	1523226.stdct-mgmt-02	1526609.stdct-mgmt-02	walltime_retry_6h
+kokkos_cpu_grid	strong_controlled	1	1523227.stdct-mgmt-02	1526610.stdct-mgmt-02	walltime_retry_6h
+kokkos_cpu_grid	strong_controlled	2	1523228.stdct-mgmt-02	1526611.stdct-mgmt-02	walltime_retry_6h
+kokkos_cpu_grid	strong_controlled	4	1523229.stdct-mgmt-02	1526612.stdct-mgmt-02	walltime_retry_6h

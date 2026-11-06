@@ -1,0 +1,63 @@
+{
+  "implementation": "mpi_kokkos",
+  "backend": "OpenMP",
+  "communication": "halo",
+  "process_counts": [
+    4,
+    8
+  ],
+  "requested_threads": 16,
+  "passed": 2,
+  "failed": 0,
+  "method": "Independent residual and full-rank comparison to the same-environment Serial run",
+  "checks": [
+    {
+      "dataset": "grid_controlled_n200000_d16",
+      "passed": true,
+      "nodes": 200000,
+      "edges": 3200000,
+      "iterations": 17,
+      "independent_residual_l1": 1.021576905322358e-09,
+      "rank_sum_error": 7.771561172376096e-16,
+      "implementation": "mpi_kokkos",
+      "backend": "OpenMP",
+      "communication": "halo",
+      "processes": 4,
+      "serial_s": 0.14571093,
+      "requested_threads": 16,
+      "parallel_s": 0.061764755000000005,
+      "speedup": 2.3591274667891096,
+      "communication_s": 0.057622989999999985,
+      "communication_bytes_per_iteration": 3493256,
+      "communication_setup_s": 0.102007698,
+      "communication_setup_bytes": 3493256,
+      "backend_compute_s": 0.03691209200000001,
+      "transfer_s": 0.004698053000000001,
+      "rank_l1_error": 7.531605208748425e-18
+    },
+    {
+      "dataset": "grid_controlled_n200000_d16",
+      "passed": true,
+      "nodes": 200000,
+      "edges": 3200000,
+      "iterations": 17,
+      "independent_residual_l1": 1.021576905322358e-09,
+      "rank_sum_error": 7.771561172376096e-16,
+      "implementation": "mpi_kokkos",
+      "backend": "OpenMP",
+      "communication": "halo",
+      "processes": 8,
+      "serial_s": 0.14571093,
+      "requested_threads": 16,
+      "parallel_s": 0.049928643000000106,
+      "speedup": 2.918383541887964,
+      "communication_s": 0.04772328799999975,
+      "communication_bytes_per_iteration": 5367952,
+      "communication_setup_s": 0.153853211,
+      "communication_setup_bytes": 5367952,
+      "backend_compute_s": 0.030027591000000006,
+      "transfer_s": 0.0030829929999999987,
+      "rank_l1_error": 7.531605208748425e-18
+    }
+  ]
+}

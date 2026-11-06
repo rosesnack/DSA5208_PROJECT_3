@@ -1,0 +1,63 @@
+{
+  "implementation": "mpi_kokkos",
+  "backend": "OpenMP",
+  "communication": "halo",
+  "process_counts": [
+    4,
+    8
+  ],
+  "requested_threads": 16,
+  "passed": 2,
+  "failed": 0,
+  "method": "Independent residual and full-rank comparison to the same-environment Serial run",
+  "checks": [
+    {
+      "dataset": "grid_hub_n50000_d8",
+      "passed": true,
+      "nodes": 50000,
+      "edges": 400000,
+      "iterations": 17,
+      "independent_residual_l1": 1.2084400301084226e-09,
+      "rank_sum_error": 6.217248937900877e-15,
+      "implementation": "mpi_kokkos",
+      "backend": "OpenMP",
+      "communication": "halo",
+      "processes": 4,
+      "serial_s": 0.018943748,
+      "requested_threads": 16,
+      "parallel_s": 0.016281249999999997,
+      "speedup": 1.1635315470249523,
+      "communication_s": 0.015214097999999995,
+      "communication_bytes_per_iteration": 754696,
+      "communication_setup_s": 0.02827410100000005,
+      "communication_setup_bytes": 754696,
+      "backend_compute_s": 0.005701431,
+      "transfer_s": 0.0008474469999999998,
+      "rank_l1_error": 0.0
+    },
+    {
+      "dataset": "grid_hub_n50000_d8",
+      "passed": true,
+      "nodes": 50000,
+      "edges": 400000,
+      "iterations": 17,
+      "independent_residual_l1": 1.2084400301084226e-09,
+      "rank_sum_error": 6.217248937900877e-15,
+      "implementation": "mpi_kokkos",
+      "backend": "OpenMP",
+      "communication": "halo",
+      "processes": 8,
+      "serial_s": 0.018943748,
+      "requested_threads": 16,
+      "parallel_s": 0.00972742,
+      "speedup": 1.947458627261905,
+      "communication_s": 0.00911007400000001,
+      "communication_bytes_per_iteration": 968872,
+      "communication_setup_s": 0.03075354,
+      "communication_setup_bytes": 968872,
+      "backend_compute_s": 0.004761406,
+      "transfer_s": 0.0007996509999999999,
+      "rank_l1_error": 0.0
+    }
+  ]
+}

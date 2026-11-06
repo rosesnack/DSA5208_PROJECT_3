@@ -1,0 +1,2 @@
+dataset,implementation,backend,communication,processes,serial_s,requested_threads,parallel_s,speedup,communication_s,communication_bytes_per_iteration,communication_setup_s,communication_setup_bytes,backend_compute_s,transfer_s,rank_l1_error
+grid_uniform_n200000_d16,mpi_kokkos,OpenMP,allgather,4,0.078238811,32,0.014000186000000001,5.588412253951483,0.01026548000000001,4800000,0,0,0.0017068229999999999,0.0026650210000000005,0.0

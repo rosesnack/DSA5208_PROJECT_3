@@ -1,0 +1,2 @@
+dataset,implementation,backend,communication,processes,serial_s,requested_threads,parallel_s,speedup,communication_s,communication_bytes_per_iteration,communication_setup_s,communication_setup_bytes,backend_compute_s,transfer_s,rank_l1_error
+grid_hub_n200000_d4,mpi_kokkos,OpenMP,halo,4,0.084332228,32,0.033672429000000004,2.5044889989967754,0.03008318200000004,2110176,0.045728251,2110176,0.014853988,0.00421458,0.0

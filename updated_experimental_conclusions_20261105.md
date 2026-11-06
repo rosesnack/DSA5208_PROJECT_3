@@ -1,6 +1,6 @@
-# Vanda 实验严格完成清单与阶段性结论（2026-11-05 15:16 SGT）
+# Vanda 实验严格完成清单与阶段性结论（更新至 2026-11-06 19:00 SGT）
 
-主运行 `20261102T092147Z`。只计 `complete.txt` 对应原作业或记录在 `retry_jobs.tsv` 的替代作业，且所有独立校验通过的批次；排队、运行中、失败和 scratch 部分输出均不计。所有下述性能结果来自 Vanda Release 构建、1 次预热、5 次计时的中位数；原仓库旧口径与本地 Mac 结果不并入。2026-11-05 16:55 SGT 已提交批次 **316/473** 完成；473 不包括尚未提交的 Kokkos 8 节点与多数 512 核图。默认固定图矩阵已验证 **14,106/19,980** 个配置单元。主运行目录的同步校验报告均通过。固定图单元与 PBS 作业数量及用时的区别见 [`updated_vanda_runtime_budget_20261105.md`](updated_vanda_runtime_budget_20261105.md)。
+主运行 `20261102T092147Z`。只计 `complete.txt` 对应原作业或登记替代作业，且所有独立校验通过的批次；排队、运行中、失败和 scratch 部分输出均不计。所有下述性能结果来自 Vanda Release 构建、1 次预热、5 次计时的中位数；原仓库旧口径与本地 Mac 结果不并入。2026-11-06 19:00 SGT 已提交批次 **384/473** 完成；473 不包括尚未提交的 Kokkos 8 节点与多数 512 核图。默认固定图矩阵已验证 **16,116/19,980** 个配置单元。PBS 作业用时见 [`updated_vanda_runtime_budget_20261105.md`](updated_vanda_runtime_budget_20261105.md)。
 
 ## 已严格完成
 
@@ -9,9 +9,9 @@
 | Vanda CPU 单独方法 | 45/45 固定图：Serial、OpenMP T=1/2/4/8/16/32、Kokkos OpenMP T=1/2/4/8/16/32 |
 | Vanda GPU 节点配对 | 45/45 固定图：同节点 Serial/OpenMP/纯 MPI/MPI+OpenMP 对照、单独 CUDA/Kokkos CUDA、MPI+CUDA/MPI+Kokkos CUDA；MPI 方法 p=1/2，各有 Allgatherv 与 Halo；MPI+OpenMP T=1/2/4/8 |
 | Vanda CPU 常规 MPI 强扩展 | 151/180 图×节点批次：23 张图完成 1/2/4/8 节点，19 张图完成 1/2/4 节点，`strong_uniform` 完成 1/2 节点；每个完成批次包含纯 MPI、MPI+OpenMP、MPI+Kokkos OpenMP T=1 的该节点全部有效 rank/线程布局与两种通信方式 |
-| MPI+Kokkos OpenMP T>1 | 63/139 个已提交批次校验通过：原有 4 张图完成 1/2/4/8 节点，本轮新增 123 个免费队列 1/2/4 节点批次，已完成其中 47 个；其余 41 张图的 8 节点批次尚未提交 |
-| CPU 按 rank 弱扩展 | 3 个合成家族，纯 MPI 与 MPI+Kokkos OpenMP T=1 的 p=1…256；MPI+OpenMP T=4 的 p=1…64，均有两种通信策略。uniform 家族还完成纯 MPI/Kokkos p=512、MPI+OpenMP p=128,T=4 的补充端点 |
-| CPU 按核配平弱扩展 | uniform 家族，MPI+OpenMP 与 MPI+Kokkos OpenMP T=4、C=4…256，两种通信策略 |
+| MPI+Kokkos OpenMP T>1 | 130/139 个已提交批次校验通过：普通 45 张图的 1/2/4 节点点及原有 4 张图的 8 节点点已完成；尚缺三张特大图的 1/2/4 节点点 |
+| CPU 按 rank 弱扩展 | 3 个合成家族的常规 p=1…256 已完成；uniform 家族的 512-rank 端点（纯 MPI、MPI+Kokkos T=1）及 MPI+OpenMP p=128,T=4 通过。hub/controlled 的 512-rank PBS 作业因 1 小时 walltime 上限失败，需续跑 |
+| CPU 按核配平弱扩展 | uniform 家族 MPI+OpenMP 与 MPI+Kokkos OpenMP T=4、C=4…512 的两种通信策略已通过 |
 | GPU 弱扩展 | 3 个合成家族，p=1/2 的单独 CUDA/Kokkos CUDA 及相应 MPI+GPU 方法，并有同 GPU 节点 CPU 对照与两种通信策略 |
 
 常规 CPU 强扩展的 23 张全节点图为原仓库 3 张、典型合成图 3 张、uniform 网格 12 张，以及 `grid_hub_n50000_d4/d8/d16` 与 `grid_hub_n100000_d4/d8`。另 19 张 hub/controlled 网格图只有 1/2/4 节点完整批次。三张特大图中，`strong_uniform` 已完成 1/2 节点，`strong_hub/strong_controlled` 仍无完整节点批次。
@@ -23,7 +23,7 @@
 | CPU 常规强扩展 | 29/180 批：19 张普通图的 8 节点点，`strong_uniform` 的 4/8 节点，以及 `strong_hub/strong_controlled` 各 1/2/4/8 节点 |
 | 512 CPU 核固定图端点 | 纯 MPI、MPI+OpenMP、MPI+Kokkos OpenMP T=1/T=4 均无通过校验的完整批次；首个 512 核作业因 MPI TCP 地址绑定失败，其余排队作业暂挂待排查 |
 | Kokkos CPU T>1 全图网格 | 45 图的 1/2/4 节点批次已全部提交免费队列，尚有大量排队；另外 41 张图的 8 节点批次未提交。全部 45 图的 Kokkos T=4、512 核端点均未通过校验 |
-| CPU 弱扩展补充 | 按 rank 的 p=512 三家族中 uniform 已完成、hub/controlled 未完成；MPI+OpenMP T=4 的 p=128 也仅 uniform 完成；按核配平的 hub/controlled 家族未提交，uniform 的 C=512 未完成。uniform 的六组 512/128 核输出经免费队列续作业 `1521114` 独立校验通过 |
+| CPU 弱扩展补充 | 按 rank 的 hub/controlled p=512 作业 `1510691/1510692` 分别在 1:00:31/1:00:27 因 walltime 终止，尚未通过；按核配平目前仅 uniform 家族完成，hub/controlled 尚未提交。uniform 的六组按 rank 512/128 核输出经免费队列续作业 `1521114` 独立校验通过 |
 | GPU 4/8 卡 | 已从实验目标移除，不提交、不纳入预算与覆盖率 |
 
 ## 目前能支持的结论
