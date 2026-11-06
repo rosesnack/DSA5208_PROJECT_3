@@ -9,6 +9,11 @@ RUN_ROOT="results/updated_vanda_scaling/$RUN_ID"
 JOB_TABLE="$RUN_ROOT/submitted_jobs.tsv"
 RECOVERY_TABLE="$RUN_ROOT/free_cpu_recovery.tsv"
 MAX_NEW_JOBS="${MAX_NEW_JOBS:-8}"
+FREE_MPI_WALLTIME="${FREE_MPI_WALLTIME:-08:00:00}"
+
+if [[ ! -f "$RECOVERY_TABLE" ]]; then
+    printf 'stage\tgraph\tnodes\toriginal_job\treplacement_job\n' > "$RECOVERY_TABLE"
+fi
 
 submitted=0
 while IFS= read -r graph; do
@@ -28,7 +33,7 @@ while IFS= read -r graph; do
                 '$1 == "serial" && $2 == graph {print $5}' "$RECOVERY_TABLE")
             dependency=(-W "depend=afterok:$serial_job")
         fi
-        replacement=$(qsub -q auto_free -l walltime=02:00:00 \
+        replacement=$(qsub -q auto_free -l "walltime=$FREE_MPI_WALLTIME" \
             -l "select=${nodes}:ncpus=32:mpiprocs=32:ompthreads=1:mem=32gb" \
             "${dependency[@]}" \
             -v "RUN_ID=$RUN_ID,DATA_ROOT=$DATA_ROOT,GRAPH_NAME=$graph,PAGERANK_NODE_COUNTS=$nodes,PAGERANK_RUN_STRONG=1,PAGERANK_RUN_WEAK=0" \

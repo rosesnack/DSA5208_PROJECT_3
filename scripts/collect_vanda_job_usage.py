@@ -28,6 +28,19 @@ with (root / "retry_jobs.tsv").open(newline="", encoding="utf-8") as source:
     rows += [{"stage": row["stage"], "graph": row["graph"], "nodes": row["nodes"],
               "job_id": row["replacement_job"], "job_role": row["reason"]}
              for row in csv.DictReader(source, delimiter="\t")]
+recovery_table = root / "free_cpu_recovery.tsv"
+if recovery_table.is_file():
+    with recovery_table.open(newline="", encoding="utf-8") as source:
+        rows += [{"stage": row["stage"], "graph": row["graph"], "nodes": row["nodes"],
+                  "job_id": row["replacement_job"], "job_role": "free_queue_recovery"}
+                 for row in csv.DictReader(source, delimiter="\t")]
+partial_core_table = root / "free_core_weak_jobs.tsv"
+if partial_core_table.is_file():
+    with partial_core_table.open(newline="", encoding="utf-8") as source:
+        rows += [{"stage": "cpu_core_weak_partial", "graph": row["family"],
+                  "nodes": "1/2/4", "job_id": row["job_id"],
+                  "job_role": row["scope"]}
+                 for row in csv.DictReader(source, delimiter="\t")]
 for table, role in (("failed_jobs.tsv", "earlier_failed_attempt"),
                     ("replaced_jobs.tsv", "superseded_attempt")):
     with (root / table).open(newline="", encoding="utf-8") as source:

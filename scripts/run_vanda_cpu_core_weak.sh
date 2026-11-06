@@ -7,6 +7,7 @@ DATA_ROOT="${DATA_ROOT:?Set DATA_ROOT}"
 RUN_ID="${RUN_ID:?Set RUN_ID}"
 WEAK_FAMILY="${WEAK_FAMILY:?Set WEAK_FAMILY}"
 read -r -a core_counts <<< "${CORE_WEAK_SIZES:-4 8 16 32 64 128 256}"
+max_cores="${core_counts[$((${#core_counts[@]} - 1))]}"
 RESULT_ROOT="$DATA_ROOT/results/weak_core/$WEAK_FAMILY"
 DESTINATION="$ROOT/results/updated_vanda_scaling/$RUN_ID/weak_core/$WEAK_FAMILY"
 export PAGERANK_RESULTS_ROOT="$RESULT_ROOT"
@@ -15,11 +16,7 @@ export PAGERANK_REPEATS=5 PAGERANK_WARMUPS=1
 export PAGERANK_HYBRID_MAX_TOTAL_THREADS=512
 export OMP_DYNAMIC=FALSE OMP_PROC_BIND=spread OMP_PLACES=cores
 mkdir -p "$RESULT_ROOT/manifests" "$RESULT_ROOT/mapping"
-if [[ "${core_counts[*]}" == '512' ]]; then
-    environment_file="$RESULT_ROOT/environment_p512.txt"
-else
-    environment_file="$RESULT_ROOT/environment_p256.txt"
-fi
+environment_file="$RESULT_ROOT/environment_p${max_cores}.txt"
 {
     printf 'PBS job: %s\n' "$PBS_JOBID"
     lscpu | grep 'Model name'
@@ -72,8 +69,4 @@ python3 scripts/validate_weak_matrix.py mpi_kokkos --backend OpenMP --threads 4 
 
 mkdir -p "$DESTINATION"
 rsync -a --exclude='ranks.csv' "$RESULT_ROOT/." "$DESTINATION/"
-if [[ "${core_counts[*]}" == '512' ]]; then
-    printf '%s\n' "$PBS_JOBID" > "$DESTINATION/complete_p512.txt"
-else
-    printf '%s\n' "$PBS_JOBID" > "$DESTINATION/complete_p256.txt"
-fi
+printf '%s\n' "$PBS_JOBID" > "$DESTINATION/complete_p${max_cores}.txt"
