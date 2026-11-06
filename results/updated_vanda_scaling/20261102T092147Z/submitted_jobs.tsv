@@ -472,3 +472,5 @@ kokkos_cpu_grid	strong_hub	4	1523226.stdct-mgmt-02
 kokkos_cpu_grid	strong_controlled	1	1523227.stdct-mgmt-02
 kokkos_cpu_grid	strong_controlled	2	1523228.stdct-mgmt-02
 kokkos_cpu_grid	strong_controlled	4	1523229.stdct-mgmt-02
+mpi_strong	grid_hub_n100000_d16	8	1527001.stdct-mgmt-02
+mpi_strong	grid_controlled_n50000_d4	8	1527002.stdct-mgmt-02

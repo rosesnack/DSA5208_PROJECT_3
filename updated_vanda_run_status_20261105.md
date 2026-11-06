@@ -1,5 +1,7 @@
 # Vanda 实验运行状态（2026-11-05 16:55 SGT）
 
+> 历史状态快照，不是当前结果口径。后续 PBS 来源审计已确认部分免费队列 Kokkos CPU 和 uniform 弱扩展 p=512 数据不符合统一硬件/布局要求；相关性能目录已从当前结果树删除。请以 [`updated_vanda_run_status_20261106.md`](updated_vanda_run_status_20261106.md) 和 [`HANDOFF_VANDA_EXPERIMENTS_20261106.md`](HANDOFF_VANDA_EXPERIMENTS_20261106.md) 为准。
+
 ## 最新状态（2026-11-06 19:00 SGT）
 
 Vanda 已恢复并在 19:00 可登录；`hpc project` 显示 CPU 余额 **1570.921 核小时**、GPU 余额 **978.587 GPU 小时**。最新同步后进度为 **384/473 批次**、固定图 **16,116/19,980 配置**。Kokkos CPU 多线程网格 **130/139**；剩余 9 批为三张特大图 `strong_uniform/strong_hub/strong_controlled` 的 1/2/4 节点点，PBS 历史确认全部以 `Exit_status=-29` 在约 2 小时墙钟上限失败，需调整上限或拆分后续跑。
