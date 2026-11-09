@@ -1,0 +1,26 @@
+{
+  "repository_url": "https://github.com/rosesnack/DSA5208_PROJECT_3",
+  "repository_visibility": "private",
+  "repository_private": true,
+  "rank_csv_headers": [
+    "node_id,rank,in_degree,out_degree"
+  ],
+  "graph_headers": [
+    "# Authoritative node list, including isolated vertices",
+    "# Directed graph (each unordered pair of nodes is saved once): web-Google.txt",
+    "# Directed synthetic controlled graph; source destination; seed=5208",
+    "# Directed synthetic hub graph; source destination; seed=5208",
+    "# Directed synthetic uniform graph; source destination; seed=5208",
+    "# Directed unweighted edges: source destination",
+    "<numeric vertex IDs / edge endpoints>"
+  ],
+  "runtime_secret_pattern_matches": [],
+  "excluded": [
+    "build products and caches",
+    "Git metadata",
+    "private amgr accounting CSV files",
+    "PID and lock files",
+    "Vanda-only raw files not present on this Mac"
+  ],
+  "scope": "Release inherits the existing private repository audience. No repository visibility or access-control change."
+}
