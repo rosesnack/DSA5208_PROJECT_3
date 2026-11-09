@@ -1,0 +1,9 @@
+grid_controlled_n50000_d4
+grid_controlled_n50000_d8
+grid_controlled_n50000_d16
+grid_controlled_n100000_d4
+grid_controlled_n100000_d8
+grid_controlled_n100000_d16
+grid_hub_n200000_d4
+grid_hub_n200000_d8
+grid_hub_n200000_d16

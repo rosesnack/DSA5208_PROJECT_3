@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "unknown_hosts": [],
+  "wrong_models": {},
+  "models": {
+    "CN-083": "Intel(R) Xeon(R) Platinum 8452Y",
+    "CN-120": "Intel(R) Xeon(R) Platinum 8452Y",
+    "CN-012": "Intel(R) Xeon(R) Platinum 8452Y",
+    "CN-132": "Intel(R) Xeon(R) Platinum 8452Y",
+    "CN-091": "Intel(R) Xeon(R) Platinum 8452Y",
+    "CN-090": "Intel(R) Xeon(R) Platinum 8452Y",
+    "CN-096": "Intel(R) Xeon(R) Platinum 8452Y",
+    "CN-101": "Intel(R) Xeon(R) Platinum 8452Y"
+  }
+}

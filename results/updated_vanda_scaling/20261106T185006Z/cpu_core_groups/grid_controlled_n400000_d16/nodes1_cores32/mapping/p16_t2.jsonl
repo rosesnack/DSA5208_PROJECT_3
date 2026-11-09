@@ -1,0 +1,16 @@
+{"rank": 0, "host": "CN-112", "cpus": [0, 2]}
+{"rank": 2, "host": "CN-112", "cpus": [8, 10]}
+{"rank": 1, "host": "CN-112", "cpus": [4, 6]}
+{"rank": 4, "host": "CN-112", "cpus": [16, 18]}
+{"rank": 3, "host": "CN-112", "cpus": [12, 14]}
+{"rank": 6, "host": "CN-112", "cpus": [24, 26]}
+{"rank": 5, "host": "CN-112", "cpus": [20, 22]}
+{"rank": 7, "host": "CN-112", "cpus": [28, 30]}
+{"rank": 8, "host": "CN-112", "cpus": [32, 34]}
+{"rank": 10, "host": "CN-112", "cpus": [40, 42]}
+{"rank": 11, "host": "CN-112", "cpus": [44, 46]}
+{"rank": 13, "host": "CN-112", "cpus": [52, 54]}
+{"rank": 9, "host": "CN-112", "cpus": [36, 38]}
+{"rank": 14, "host": "CN-112", "cpus": [56, 58]}
+{"rank": 12, "host": "CN-112", "cpus": [48, 50]}
+{"rank": 15, "host": "CN-112", "cpus": [60, 62]}

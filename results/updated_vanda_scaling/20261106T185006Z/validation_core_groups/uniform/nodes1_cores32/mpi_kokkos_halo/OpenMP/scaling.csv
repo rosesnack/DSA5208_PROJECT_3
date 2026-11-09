@@ -1,0 +1,2 @@
+dataset,implementation,backend,communication,processes,serial_s,requested_threads,parallel_s,speedup,communication_s,communication_bytes_per_iteration,communication_setup_s,communication_setup_bytes,backend_compute_s,transfer_s,rank_l1_error
+uniform,mpi_kokkos,OpenMP,halo,32,0.037309532,1,0.004381502999999995,8.515235981808079,0.0032478259999999953,6658320,0.007075181,6658320,0.001057425,0.00016887499999999994,5.883384972509963e-17

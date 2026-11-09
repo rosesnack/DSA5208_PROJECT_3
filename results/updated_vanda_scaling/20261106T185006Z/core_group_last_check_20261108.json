@@ -1,0 +1,11 @@
+{
+  "observed_at": "2026-11-08T20:31:31.034960+08:00",
+  "submitted": true,
+  "balance": 576.1280000000006,
+  "balance_source": "hpc_project",
+  "prior_pending_reservations": 512.0,
+  "margin": 64.0,
+  "new_reservations": 0,
+  "uncommitted_after_margin": 0.12800000000061118,
+  "groups": []
+}

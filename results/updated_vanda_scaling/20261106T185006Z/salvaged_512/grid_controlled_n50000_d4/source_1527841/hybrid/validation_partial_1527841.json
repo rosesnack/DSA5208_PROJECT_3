@@ -1,0 +1,62 @@
+{
+  "passed": 2,
+  "failed": 0,
+  "process_counts": [
+    512,
+    128
+  ],
+  "method": "Independent residual checks and full rank comparison with validated serial output",
+  "rank_l1_tolerance": 1e-08,
+  "checks": [
+    {
+      "dataset": "grid_controlled_n50000_d4",
+      "passed": true,
+      "nodes": 50000,
+      "edges": 200000,
+      "iterations": 35,
+      "independent_residual_l1": 3.834085549995166e-09,
+      "rank_sum_error": 1.5543122344752192e-15,
+      "processes": 512,
+      "requested_threads": 1,
+      "communication": "allgather",
+      "threads_min": 1,
+      "threads_max": 1,
+      "total_threads": 512,
+      "serial_s": 0.029723641,
+      "hybrid_s": 0.141794912,
+      "speedup": 0.2096241718461661,
+      "efficiency": 0.0004094222106370432,
+      "communication_s": 0.14002038800000005,
+      "communication_bytes_per_iteration": 204400000,
+      "communication_setup_s": 0,
+      "communication_setup_bytes": 0,
+      "rank_l1_error": 0.0,
+      "rank_max_error": 0.0
+    },
+    {
+      "dataset": "grid_controlled_n50000_d4",
+      "passed": true,
+      "nodes": 50000,
+      "edges": 200000,
+      "iterations": 35,
+      "independent_residual_l1": 3.834085549995166e-09,
+      "rank_sum_error": 1.5543122344752192e-15,
+      "processes": 128,
+      "requested_threads": 4,
+      "communication": "allgather",
+      "threads_min": 4,
+      "threads_max": 4,
+      "total_threads": 512,
+      "serial_s": 0.029723641,
+      "hybrid_s": 0.12019892399999998,
+      "speedup": 0.24728708053992232,
+      "efficiency": 0.0004829825791795358,
+      "communication_s": 0.143002411,
+      "communication_bytes_per_iteration": 50800000,
+      "communication_setup_s": 0,
+      "communication_setup_bytes": 0,
+      "rank_l1_error": 0.0,
+      "rank_max_error": 0.0
+    }
+  ]
+}

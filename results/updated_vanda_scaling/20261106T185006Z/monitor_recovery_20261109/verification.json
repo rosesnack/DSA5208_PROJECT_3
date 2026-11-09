@@ -1,0 +1,9 @@
+{
+  "captured_at": "2026-11-09T14:46:39.550731+08:00",
+  "pid": 2879720,
+  "process_status": "State:\tS (sleeping)",
+  "script_sha256": "2c90060525ae8b9f27eae2e1d0617f7e71295a06fbfefce40b1d4991738012aa",
+  "qstat_exit": 255,
+  "qstat_stdout": "",
+  "qstat_stderr": "Connection refused\nqstat: cannot connect to server stdct-mgmt-02 (errno=15010)\n"
+}

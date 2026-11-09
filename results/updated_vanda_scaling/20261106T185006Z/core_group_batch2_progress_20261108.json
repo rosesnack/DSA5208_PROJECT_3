@@ -1,0 +1,16 @@
+{
+  "observed_at": "2026-11-08T16:24:11.356734+08:00",
+  "groups": 9,
+  "cells_submitted": 149,
+  "performance_states": {
+    "Q": 2,
+    "R": 4,
+    "F": 3
+  },
+  "validation_states": {
+    "H": 6,
+    "R": 1,
+    "F": 2
+  },
+  "performance_failures": []
+}

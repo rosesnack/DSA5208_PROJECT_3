@@ -1,0 +1,1656 @@
+{
+  "observed_at": "2026-11-07T21:31:39.575064+08:00",
+  "validated_fixed_cells": 14076,
+  "expected_fixed_cells": 19980,
+  "counts": {
+    "cuda": 45,
+    "gpu_node_mpi_cpu": 180,
+    "gpu_node_mpi_openmp": 720,
+    "gpu_node_openmp": 270,
+    "gpu_node_serial": 45,
+    "kokkos_cuda": 45,
+    "kokkos_openmp": 270,
+    "mpi_cpu": 1932,
+    "mpi_cuda": 180,
+    "mpi_kokkos_cpu_t1": 1932,
+    "mpi_kokkos_cpu_threads": 1200,
+    "mpi_kokkos_cuda": 180,
+    "mpi_openmp": 6762,
+    "openmp": 270,
+    "serial": 45
+  },
+  "checks": {
+    "thread_configurations": 9492,
+    "rank_host_maps": 9744,
+    "standalone_kokkos_requested_thread_records": 252,
+    "thread_configurations_with_actual_thread_metadata": 9222
+  },
+  "configuration_issue_count": 0,
+  "mapping_issue_count": 0,
+  "configuration_issues": [],
+  "mapping_issues": [],
+  "scope": "Saved local results with summary plus completion marker, combining old and new runs; no new measurements. Standalone Serial has no MPI process field. Standalone Kokkos missing actual concurrency is reported separately; request records are checked when saved.",
+  "metadata_gap_count": 270,
+  "metadata_gaps": [
+    {
+      "summary": "20261102T092147Z/serial_grid/google/kokkos_threads_1/kokkos/OpenMP/google/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/google/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/google/kokkos_threads_2/kokkos/OpenMP/google/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/google/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/google/kokkos_threads_4/kokkos/OpenMP/google/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/google/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/google/kokkos_threads_8/kokkos/OpenMP/google/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/google/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/google/kokkos_threads_16/kokkos/OpenMP/google/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/google/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/google/kokkos_threads_32/kokkos/OpenMP/google/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/google/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/uniform/kokkos_threads_1/kokkos/OpenMP/uniform/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/uniform/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/uniform/kokkos_threads_2/kokkos/OpenMP/uniform/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/uniform/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/uniform/kokkos_threads_4/kokkos/OpenMP/uniform/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/uniform/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/uniform/kokkos_threads_8/kokkos/OpenMP/uniform/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/uniform/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/uniform/kokkos_threads_16/kokkos/OpenMP/uniform/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/uniform/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/uniform/kokkos_threads_32/kokkos/OpenMP/uniform/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/uniform/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/hub/kokkos_threads_1/kokkos/OpenMP/hub/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/hub/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/hub/kokkos_threads_2/kokkos/OpenMP/hub/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/hub/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/hub/kokkos_threads_4/kokkos/OpenMP/hub/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/hub/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/hub/kokkos_threads_8/kokkos/OpenMP/hub/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/hub/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/hub/kokkos_threads_16/kokkos/OpenMP/hub/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/hub/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/hub/kokkos_threads_32/kokkos/OpenMP/hub/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/hub/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/synthetic_uniform/kokkos_threads_1/kokkos/OpenMP/synthetic_uniform/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/synthetic_uniform/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/synthetic_uniform/kokkos_threads_2/kokkos/OpenMP/synthetic_uniform/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/synthetic_uniform/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/synthetic_uniform/kokkos_threads_4/kokkos/OpenMP/synthetic_uniform/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/synthetic_uniform/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/synthetic_uniform/kokkos_threads_8/kokkos/OpenMP/synthetic_uniform/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/synthetic_uniform/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/synthetic_uniform/kokkos_threads_16/kokkos/OpenMP/synthetic_uniform/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/synthetic_uniform/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/synthetic_uniform/kokkos_threads_32/kokkos/OpenMP/synthetic_uniform/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/synthetic_uniform/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n50000_d4/kokkos_threads_1/kokkos/OpenMP/grid_uniform_n50000_d4/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n50000_d4/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n50000_d4/kokkos_threads_2/kokkos/OpenMP/grid_uniform_n50000_d4/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n50000_d4/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n50000_d4/kokkos_threads_4/kokkos/OpenMP/grid_uniform_n50000_d4/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n50000_d4/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n50000_d4/kokkos_threads_8/kokkos/OpenMP/grid_uniform_n50000_d4/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n50000_d4/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n50000_d4/kokkos_threads_16/kokkos/OpenMP/grid_uniform_n50000_d4/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n50000_d4/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n50000_d4/kokkos_threads_32/kokkos/OpenMP/grid_uniform_n50000_d4/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n50000_d4/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n50000_d8/kokkos_threads_1/kokkos/OpenMP/grid_uniform_n50000_d8/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n50000_d8/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n50000_d8/kokkos_threads_2/kokkos/OpenMP/grid_uniform_n50000_d8/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n50000_d8/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n50000_d8/kokkos_threads_4/kokkos/OpenMP/grid_uniform_n50000_d8/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n50000_d8/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n50000_d8/kokkos_threads_8/kokkos/OpenMP/grid_uniform_n50000_d8/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n50000_d8/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n50000_d8/kokkos_threads_16/kokkos/OpenMP/grid_uniform_n50000_d8/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n50000_d8/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n50000_d8/kokkos_threads_32/kokkos/OpenMP/grid_uniform_n50000_d8/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n50000_d8/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n50000_d16/kokkos_threads_1/kokkos/OpenMP/grid_uniform_n50000_d16/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n50000_d16/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n50000_d16/kokkos_threads_2/kokkos/OpenMP/grid_uniform_n50000_d16/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n50000_d16/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n50000_d16/kokkos_threads_4/kokkos/OpenMP/grid_uniform_n50000_d16/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n50000_d16/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n50000_d16/kokkos_threads_8/kokkos/OpenMP/grid_uniform_n50000_d16/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n50000_d16/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n50000_d16/kokkos_threads_16/kokkos/OpenMP/grid_uniform_n50000_d16/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n50000_d16/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n50000_d16/kokkos_threads_32/kokkos/OpenMP/grid_uniform_n50000_d16/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n50000_d16/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n100000_d4/kokkos_threads_1/kokkos/OpenMP/grid_uniform_n100000_d4/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n100000_d4/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n100000_d4/kokkos_threads_2/kokkos/OpenMP/grid_uniform_n100000_d4/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n100000_d4/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n100000_d4/kokkos_threads_4/kokkos/OpenMP/grid_uniform_n100000_d4/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n100000_d4/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n100000_d4/kokkos_threads_8/kokkos/OpenMP/grid_uniform_n100000_d4/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n100000_d4/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n100000_d4/kokkos_threads_16/kokkos/OpenMP/grid_uniform_n100000_d4/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n100000_d4/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n100000_d4/kokkos_threads_32/kokkos/OpenMP/grid_uniform_n100000_d4/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n100000_d4/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n100000_d8/kokkos_threads_1/kokkos/OpenMP/grid_uniform_n100000_d8/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n100000_d8/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n100000_d8/kokkos_threads_2/kokkos/OpenMP/grid_uniform_n100000_d8/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n100000_d8/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n100000_d8/kokkos_threads_4/kokkos/OpenMP/grid_uniform_n100000_d8/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n100000_d8/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n100000_d8/kokkos_threads_8/kokkos/OpenMP/grid_uniform_n100000_d8/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n100000_d8/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n100000_d8/kokkos_threads_16/kokkos/OpenMP/grid_uniform_n100000_d8/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n100000_d8/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n100000_d8/kokkos_threads_32/kokkos/OpenMP/grid_uniform_n100000_d8/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n100000_d8/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n100000_d16/kokkos_threads_1/kokkos/OpenMP/grid_uniform_n100000_d16/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n100000_d16/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n100000_d16/kokkos_threads_2/kokkos/OpenMP/grid_uniform_n100000_d16/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n100000_d16/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n100000_d16/kokkos_threads_4/kokkos/OpenMP/grid_uniform_n100000_d16/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n100000_d16/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n100000_d16/kokkos_threads_8/kokkos/OpenMP/grid_uniform_n100000_d16/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n100000_d16/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n100000_d16/kokkos_threads_16/kokkos/OpenMP/grid_uniform_n100000_d16/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n100000_d16/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n100000_d16/kokkos_threads_32/kokkos/OpenMP/grid_uniform_n100000_d16/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n100000_d16/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n200000_d4/kokkos_threads_1/kokkos/OpenMP/grid_uniform_n200000_d4/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n200000_d4/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n200000_d4/kokkos_threads_2/kokkos/OpenMP/grid_uniform_n200000_d4/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n200000_d4/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n200000_d4/kokkos_threads_4/kokkos/OpenMP/grid_uniform_n200000_d4/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n200000_d4/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n200000_d4/kokkos_threads_8/kokkos/OpenMP/grid_uniform_n200000_d4/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n200000_d4/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n200000_d4/kokkos_threads_16/kokkos/OpenMP/grid_uniform_n200000_d4/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n200000_d4/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n200000_d4/kokkos_threads_32/kokkos/OpenMP/grid_uniform_n200000_d4/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n200000_d4/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n200000_d8/kokkos_threads_1/kokkos/OpenMP/grid_uniform_n200000_d8/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n200000_d8/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n200000_d8/kokkos_threads_2/kokkos/OpenMP/grid_uniform_n200000_d8/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n200000_d8/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n200000_d8/kokkos_threads_4/kokkos/OpenMP/grid_uniform_n200000_d8/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n200000_d8/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n200000_d8/kokkos_threads_8/kokkos/OpenMP/grid_uniform_n200000_d8/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n200000_d8/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n200000_d8/kokkos_threads_16/kokkos/OpenMP/grid_uniform_n200000_d8/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n200000_d8/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n200000_d8/kokkos_threads_32/kokkos/OpenMP/grid_uniform_n200000_d8/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n200000_d8/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n200000_d16/kokkos_threads_1/kokkos/OpenMP/grid_uniform_n200000_d16/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n200000_d16/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n200000_d16/kokkos_threads_2/kokkos/OpenMP/grid_uniform_n200000_d16/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n200000_d16/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n200000_d16/kokkos_threads_4/kokkos/OpenMP/grid_uniform_n200000_d16/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n200000_d16/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n200000_d16/kokkos_threads_8/kokkos/OpenMP/grid_uniform_n200000_d16/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n200000_d16/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n200000_d16/kokkos_threads_16/kokkos/OpenMP/grid_uniform_n200000_d16/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n200000_d16/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n200000_d16/kokkos_threads_32/kokkos/OpenMP/grid_uniform_n200000_d16/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n200000_d16/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n400000_d4/kokkos_threads_1/kokkos/OpenMP/grid_uniform_n400000_d4/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n400000_d4/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n400000_d4/kokkos_threads_2/kokkos/OpenMP/grid_uniform_n400000_d4/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n400000_d4/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n400000_d4/kokkos_threads_4/kokkos/OpenMP/grid_uniform_n400000_d4/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n400000_d4/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n400000_d4/kokkos_threads_8/kokkos/OpenMP/grid_uniform_n400000_d4/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n400000_d4/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n400000_d4/kokkos_threads_16/kokkos/OpenMP/grid_uniform_n400000_d4/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n400000_d4/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n400000_d4/kokkos_threads_32/kokkos/OpenMP/grid_uniform_n400000_d4/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n400000_d4/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n400000_d8/kokkos_threads_1/kokkos/OpenMP/grid_uniform_n400000_d8/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n400000_d8/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n400000_d8/kokkos_threads_2/kokkos/OpenMP/grid_uniform_n400000_d8/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n400000_d8/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n400000_d8/kokkos_threads_4/kokkos/OpenMP/grid_uniform_n400000_d8/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n400000_d8/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n400000_d8/kokkos_threads_8/kokkos/OpenMP/grid_uniform_n400000_d8/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n400000_d8/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n400000_d8/kokkos_threads_16/kokkos/OpenMP/grid_uniform_n400000_d8/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n400000_d8/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n400000_d8/kokkos_threads_32/kokkos/OpenMP/grid_uniform_n400000_d8/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n400000_d8/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n400000_d16/kokkos_threads_1/kokkos/OpenMP/grid_uniform_n400000_d16/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n400000_d16/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n400000_d16/kokkos_threads_2/kokkos/OpenMP/grid_uniform_n400000_d16/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n400000_d16/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n400000_d16/kokkos_threads_4/kokkos/OpenMP/grid_uniform_n400000_d16/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n400000_d16/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n400000_d16/kokkos_threads_8/kokkos/OpenMP/grid_uniform_n400000_d16/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n400000_d16/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n400000_d16/kokkos_threads_16/kokkos/OpenMP/grid_uniform_n400000_d16/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n400000_d16/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_uniform_n400000_d16/kokkos_threads_32/kokkos/OpenMP/grid_uniform_n400000_d16/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_uniform_n400000_d16/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/synthetic_hub/kokkos_threads_1/kokkos/OpenMP/synthetic_hub/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/synthetic_hub/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/synthetic_hub/kokkos_threads_2/kokkos/OpenMP/synthetic_hub/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/synthetic_hub/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/synthetic_hub/kokkos_threads_4/kokkos/OpenMP/synthetic_hub/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/synthetic_hub/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/synthetic_hub/kokkos_threads_8/kokkos/OpenMP/synthetic_hub/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/synthetic_hub/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/synthetic_hub/kokkos_threads_16/kokkos/OpenMP/synthetic_hub/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/synthetic_hub/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/synthetic_hub/kokkos_threads_32/kokkos/OpenMP/synthetic_hub/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/synthetic_hub/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n50000_d4/kokkos_threads_1/kokkos/OpenMP/grid_hub_n50000_d4/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n50000_d4/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n50000_d4/kokkos_threads_2/kokkos/OpenMP/grid_hub_n50000_d4/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n50000_d4/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n50000_d4/kokkos_threads_4/kokkos/OpenMP/grid_hub_n50000_d4/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n50000_d4/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n50000_d4/kokkos_threads_8/kokkos/OpenMP/grid_hub_n50000_d4/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n50000_d4/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n50000_d4/kokkos_threads_16/kokkos/OpenMP/grid_hub_n50000_d4/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n50000_d4/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n50000_d4/kokkos_threads_32/kokkos/OpenMP/grid_hub_n50000_d4/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n50000_d4/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n50000_d8/kokkos_threads_1/kokkos/OpenMP/grid_hub_n50000_d8/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n50000_d8/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n50000_d8/kokkos_threads_2/kokkos/OpenMP/grid_hub_n50000_d8/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n50000_d8/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n50000_d8/kokkos_threads_4/kokkos/OpenMP/grid_hub_n50000_d8/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n50000_d8/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n50000_d8/kokkos_threads_8/kokkos/OpenMP/grid_hub_n50000_d8/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n50000_d8/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n50000_d8/kokkos_threads_16/kokkos/OpenMP/grid_hub_n50000_d8/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n50000_d8/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n50000_d8/kokkos_threads_32/kokkos/OpenMP/grid_hub_n50000_d8/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n50000_d8/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n50000_d16/kokkos_threads_1/kokkos/OpenMP/grid_hub_n50000_d16/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n50000_d16/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n50000_d16/kokkos_threads_2/kokkos/OpenMP/grid_hub_n50000_d16/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n50000_d16/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n50000_d16/kokkos_threads_4/kokkos/OpenMP/grid_hub_n50000_d16/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n50000_d16/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n50000_d16/kokkos_threads_8/kokkos/OpenMP/grid_hub_n50000_d16/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n50000_d16/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n50000_d16/kokkos_threads_16/kokkos/OpenMP/grid_hub_n50000_d16/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n50000_d16/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n50000_d16/kokkos_threads_32/kokkos/OpenMP/grid_hub_n50000_d16/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n50000_d16/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n100000_d4/kokkos_threads_1/kokkos/OpenMP/grid_hub_n100000_d4/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n100000_d4/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n100000_d4/kokkos_threads_2/kokkos/OpenMP/grid_hub_n100000_d4/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n100000_d4/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n100000_d4/kokkos_threads_4/kokkos/OpenMP/grid_hub_n100000_d4/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n100000_d4/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n100000_d4/kokkos_threads_8/kokkos/OpenMP/grid_hub_n100000_d4/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n100000_d4/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n100000_d4/kokkos_threads_16/kokkos/OpenMP/grid_hub_n100000_d4/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n100000_d4/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n100000_d4/kokkos_threads_32/kokkos/OpenMP/grid_hub_n100000_d4/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n100000_d4/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n100000_d8/kokkos_threads_1/kokkos/OpenMP/grid_hub_n100000_d8/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n100000_d8/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n100000_d8/kokkos_threads_2/kokkos/OpenMP/grid_hub_n100000_d8/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n100000_d8/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n100000_d8/kokkos_threads_4/kokkos/OpenMP/grid_hub_n100000_d8/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n100000_d8/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n100000_d8/kokkos_threads_8/kokkos/OpenMP/grid_hub_n100000_d8/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n100000_d8/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n100000_d8/kokkos_threads_16/kokkos/OpenMP/grid_hub_n100000_d8/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n100000_d8/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n100000_d8/kokkos_threads_32/kokkos/OpenMP/grid_hub_n100000_d8/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n100000_d8/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n100000_d16/kokkos_threads_1/kokkos/OpenMP/grid_hub_n100000_d16/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n100000_d16/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n100000_d16/kokkos_threads_2/kokkos/OpenMP/grid_hub_n100000_d16/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n100000_d16/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n100000_d16/kokkos_threads_4/kokkos/OpenMP/grid_hub_n100000_d16/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n100000_d16/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n100000_d16/kokkos_threads_8/kokkos/OpenMP/grid_hub_n100000_d16/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n100000_d16/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n100000_d16/kokkos_threads_16/kokkos/OpenMP/grid_hub_n100000_d16/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n100000_d16/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n100000_d16/kokkos_threads_32/kokkos/OpenMP/grid_hub_n100000_d16/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n100000_d16/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n200000_d4/kokkos_threads_1/kokkos/OpenMP/grid_hub_n200000_d4/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n200000_d4/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n200000_d4/kokkos_threads_2/kokkos/OpenMP/grid_hub_n200000_d4/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n200000_d4/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n200000_d4/kokkos_threads_4/kokkos/OpenMP/grid_hub_n200000_d4/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n200000_d4/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n200000_d4/kokkos_threads_8/kokkos/OpenMP/grid_hub_n200000_d4/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n200000_d4/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n200000_d4/kokkos_threads_16/kokkos/OpenMP/grid_hub_n200000_d4/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n200000_d4/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n200000_d4/kokkos_threads_32/kokkos/OpenMP/grid_hub_n200000_d4/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n200000_d4/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n200000_d8/kokkos_threads_1/kokkos/OpenMP/grid_hub_n200000_d8/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n200000_d8/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n200000_d8/kokkos_threads_2/kokkos/OpenMP/grid_hub_n200000_d8/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n200000_d8/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n200000_d8/kokkos_threads_4/kokkos/OpenMP/grid_hub_n200000_d8/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n200000_d8/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n200000_d8/kokkos_threads_8/kokkos/OpenMP/grid_hub_n200000_d8/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n200000_d8/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n200000_d8/kokkos_threads_16/kokkos/OpenMP/grid_hub_n200000_d8/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n200000_d8/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n200000_d8/kokkos_threads_32/kokkos/OpenMP/grid_hub_n200000_d8/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n200000_d8/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n200000_d16/kokkos_threads_1/kokkos/OpenMP/grid_hub_n200000_d16/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n200000_d16/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n200000_d16/kokkos_threads_2/kokkos/OpenMP/grid_hub_n200000_d16/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n200000_d16/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n200000_d16/kokkos_threads_4/kokkos/OpenMP/grid_hub_n200000_d16/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n200000_d16/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n200000_d16/kokkos_threads_8/kokkos/OpenMP/grid_hub_n200000_d16/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n200000_d16/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n200000_d16/kokkos_threads_16/kokkos/OpenMP/grid_hub_n200000_d16/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n200000_d16/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n200000_d16/kokkos_threads_32/kokkos/OpenMP/grid_hub_n200000_d16/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n200000_d16/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n400000_d4/kokkos_threads_1/kokkos/OpenMP/grid_hub_n400000_d4/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n400000_d4/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n400000_d4/kokkos_threads_2/kokkos/OpenMP/grid_hub_n400000_d4/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n400000_d4/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n400000_d4/kokkos_threads_4/kokkos/OpenMP/grid_hub_n400000_d4/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n400000_d4/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n400000_d4/kokkos_threads_8/kokkos/OpenMP/grid_hub_n400000_d4/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n400000_d4/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n400000_d4/kokkos_threads_16/kokkos/OpenMP/grid_hub_n400000_d4/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n400000_d4/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n400000_d4/kokkos_threads_32/kokkos/OpenMP/grid_hub_n400000_d4/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n400000_d4/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n400000_d8/kokkos_threads_1/kokkos/OpenMP/grid_hub_n400000_d8/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n400000_d8/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n400000_d8/kokkos_threads_2/kokkos/OpenMP/grid_hub_n400000_d8/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n400000_d8/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n400000_d8/kokkos_threads_4/kokkos/OpenMP/grid_hub_n400000_d8/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n400000_d8/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n400000_d8/kokkos_threads_8/kokkos/OpenMP/grid_hub_n400000_d8/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n400000_d8/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n400000_d8/kokkos_threads_16/kokkos/OpenMP/grid_hub_n400000_d8/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n400000_d8/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n400000_d8/kokkos_threads_32/kokkos/OpenMP/grid_hub_n400000_d8/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n400000_d8/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n400000_d16/kokkos_threads_1/kokkos/OpenMP/grid_hub_n400000_d16/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n400000_d16/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n400000_d16/kokkos_threads_2/kokkos/OpenMP/grid_hub_n400000_d16/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n400000_d16/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n400000_d16/kokkos_threads_4/kokkos/OpenMP/grid_hub_n400000_d16/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n400000_d16/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n400000_d16/kokkos_threads_8/kokkos/OpenMP/grid_hub_n400000_d16/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n400000_d16/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n400000_d16/kokkos_threads_16/kokkos/OpenMP/grid_hub_n400000_d16/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n400000_d16/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_hub_n400000_d16/kokkos_threads_32/kokkos/OpenMP/grid_hub_n400000_d16/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_hub_n400000_d16/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/synthetic_controlled/kokkos_threads_1/kokkos/OpenMP/synthetic_controlled/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/synthetic_controlled/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/synthetic_controlled/kokkos_threads_2/kokkos/OpenMP/synthetic_controlled/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/synthetic_controlled/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/synthetic_controlled/kokkos_threads_4/kokkos/OpenMP/synthetic_controlled/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/synthetic_controlled/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/synthetic_controlled/kokkos_threads_8/kokkos/OpenMP/synthetic_controlled/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/synthetic_controlled/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/synthetic_controlled/kokkos_threads_16/kokkos/OpenMP/synthetic_controlled/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/synthetic_controlled/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/synthetic_controlled/kokkos_threads_32/kokkos/OpenMP/synthetic_controlled/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/synthetic_controlled/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n50000_d4/kokkos_threads_1/kokkos/OpenMP/grid_controlled_n50000_d4/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n50000_d4/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n50000_d4/kokkos_threads_2/kokkos/OpenMP/grid_controlled_n50000_d4/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n50000_d4/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n50000_d4/kokkos_threads_4/kokkos/OpenMP/grid_controlled_n50000_d4/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n50000_d4/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n50000_d4/kokkos_threads_8/kokkos/OpenMP/grid_controlled_n50000_d4/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n50000_d4/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n50000_d4/kokkos_threads_16/kokkos/OpenMP/grid_controlled_n50000_d4/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n50000_d4/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n50000_d4/kokkos_threads_32/kokkos/OpenMP/grid_controlled_n50000_d4/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n50000_d4/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n50000_d8/kokkos_threads_1/kokkos/OpenMP/grid_controlled_n50000_d8/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n50000_d8/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n50000_d8/kokkos_threads_2/kokkos/OpenMP/grid_controlled_n50000_d8/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n50000_d8/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n50000_d8/kokkos_threads_4/kokkos/OpenMP/grid_controlled_n50000_d8/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n50000_d8/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n50000_d8/kokkos_threads_8/kokkos/OpenMP/grid_controlled_n50000_d8/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n50000_d8/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n50000_d8/kokkos_threads_16/kokkos/OpenMP/grid_controlled_n50000_d8/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n50000_d8/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n50000_d8/kokkos_threads_32/kokkos/OpenMP/grid_controlled_n50000_d8/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n50000_d8/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n50000_d16/kokkos_threads_1/kokkos/OpenMP/grid_controlled_n50000_d16/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n50000_d16/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n50000_d16/kokkos_threads_2/kokkos/OpenMP/grid_controlled_n50000_d16/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n50000_d16/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n50000_d16/kokkos_threads_4/kokkos/OpenMP/grid_controlled_n50000_d16/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n50000_d16/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n50000_d16/kokkos_threads_8/kokkos/OpenMP/grid_controlled_n50000_d16/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n50000_d16/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n50000_d16/kokkos_threads_16/kokkos/OpenMP/grid_controlled_n50000_d16/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n50000_d16/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n50000_d16/kokkos_threads_32/kokkos/OpenMP/grid_controlled_n50000_d16/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n50000_d16/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n100000_d4/kokkos_threads_1/kokkos/OpenMP/grid_controlled_n100000_d4/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n100000_d4/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n100000_d4/kokkos_threads_2/kokkos/OpenMP/grid_controlled_n100000_d4/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n100000_d4/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n100000_d4/kokkos_threads_4/kokkos/OpenMP/grid_controlled_n100000_d4/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n100000_d4/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n100000_d4/kokkos_threads_8/kokkos/OpenMP/grid_controlled_n100000_d4/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n100000_d4/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n100000_d4/kokkos_threads_16/kokkos/OpenMP/grid_controlled_n100000_d4/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n100000_d4/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n100000_d4/kokkos_threads_32/kokkos/OpenMP/grid_controlled_n100000_d4/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n100000_d4/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n100000_d8/kokkos_threads_1/kokkos/OpenMP/grid_controlled_n100000_d8/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n100000_d8/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n100000_d8/kokkos_threads_2/kokkos/OpenMP/grid_controlled_n100000_d8/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n100000_d8/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n100000_d8/kokkos_threads_4/kokkos/OpenMP/grid_controlled_n100000_d8/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n100000_d8/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n100000_d8/kokkos_threads_8/kokkos/OpenMP/grid_controlled_n100000_d8/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n100000_d8/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n100000_d8/kokkos_threads_16/kokkos/OpenMP/grid_controlled_n100000_d8/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n100000_d8/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n100000_d8/kokkos_threads_32/kokkos/OpenMP/grid_controlled_n100000_d8/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n100000_d8/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n100000_d16/kokkos_threads_1/kokkos/OpenMP/grid_controlled_n100000_d16/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n100000_d16/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n100000_d16/kokkos_threads_2/kokkos/OpenMP/grid_controlled_n100000_d16/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n100000_d16/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n100000_d16/kokkos_threads_4/kokkos/OpenMP/grid_controlled_n100000_d16/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n100000_d16/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n100000_d16/kokkos_threads_8/kokkos/OpenMP/grid_controlled_n100000_d16/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n100000_d16/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n100000_d16/kokkos_threads_16/kokkos/OpenMP/grid_controlled_n100000_d16/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n100000_d16/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n100000_d16/kokkos_threads_32/kokkos/OpenMP/grid_controlled_n100000_d16/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n100000_d16/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n200000_d4/kokkos_threads_1/kokkos/OpenMP/grid_controlled_n200000_d4/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n200000_d4/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n200000_d4/kokkos_threads_2/kokkos/OpenMP/grid_controlled_n200000_d4/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n200000_d4/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n200000_d4/kokkos_threads_4/kokkos/OpenMP/grid_controlled_n200000_d4/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n200000_d4/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n200000_d4/kokkos_threads_8/kokkos/OpenMP/grid_controlled_n200000_d4/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n200000_d4/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n200000_d4/kokkos_threads_16/kokkos/OpenMP/grid_controlled_n200000_d4/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n200000_d4/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n200000_d4/kokkos_threads_32/kokkos/OpenMP/grid_controlled_n200000_d4/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n200000_d4/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n200000_d8/kokkos_threads_1/kokkos/OpenMP/grid_controlled_n200000_d8/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n200000_d8/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n200000_d8/kokkos_threads_2/kokkos/OpenMP/grid_controlled_n200000_d8/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n200000_d8/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n200000_d8/kokkos_threads_4/kokkos/OpenMP/grid_controlled_n200000_d8/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n200000_d8/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n200000_d8/kokkos_threads_8/kokkos/OpenMP/grid_controlled_n200000_d8/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n200000_d8/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n200000_d8/kokkos_threads_16/kokkos/OpenMP/grid_controlled_n200000_d8/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n200000_d8/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n200000_d8/kokkos_threads_32/kokkos/OpenMP/grid_controlled_n200000_d8/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n200000_d8/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n200000_d16/kokkos_threads_1/kokkos/OpenMP/grid_controlled_n200000_d16/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n200000_d16/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n200000_d16/kokkos_threads_2/kokkos/OpenMP/grid_controlled_n200000_d16/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n200000_d16/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n200000_d16/kokkos_threads_4/kokkos/OpenMP/grid_controlled_n200000_d16/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n200000_d16/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n200000_d16/kokkos_threads_8/kokkos/OpenMP/grid_controlled_n200000_d16/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n200000_d16/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n200000_d16/kokkos_threads_16/kokkos/OpenMP/grid_controlled_n200000_d16/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n200000_d16/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n200000_d16/kokkos_threads_32/kokkos/OpenMP/grid_controlled_n200000_d16/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n200000_d16/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n400000_d4/kokkos_threads_1/kokkos/OpenMP/grid_controlled_n400000_d4/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n400000_d4/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n400000_d4/kokkos_threads_2/kokkos/OpenMP/grid_controlled_n400000_d4/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n400000_d4/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n400000_d4/kokkos_threads_4/kokkos/OpenMP/grid_controlled_n400000_d4/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n400000_d4/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n400000_d4/kokkos_threads_8/kokkos/OpenMP/grid_controlled_n400000_d4/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n400000_d4/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n400000_d4/kokkos_threads_16/kokkos/OpenMP/grid_controlled_n400000_d4/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n400000_d4/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n400000_d4/kokkos_threads_32/kokkos/OpenMP/grid_controlled_n400000_d4/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n400000_d4/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n400000_d8/kokkos_threads_1/kokkos/OpenMP/grid_controlled_n400000_d8/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n400000_d8/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n400000_d8/kokkos_threads_2/kokkos/OpenMP/grid_controlled_n400000_d8/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n400000_d8/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n400000_d8/kokkos_threads_4/kokkos/OpenMP/grid_controlled_n400000_d8/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n400000_d8/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n400000_d8/kokkos_threads_8/kokkos/OpenMP/grid_controlled_n400000_d8/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n400000_d8/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n400000_d8/kokkos_threads_16/kokkos/OpenMP/grid_controlled_n400000_d8/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n400000_d8/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n400000_d8/kokkos_threads_32/kokkos/OpenMP/grid_controlled_n400000_d8/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n400000_d8/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n400000_d16/kokkos_threads_1/kokkos/OpenMP/grid_controlled_n400000_d16/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n400000_d16/kokkos_threads_1/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n400000_d16/kokkos_threads_2/kokkos/OpenMP/grid_controlled_n400000_d16/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n400000_d16/kokkos_threads_2/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n400000_d16/kokkos_threads_4/kokkos/OpenMP/grid_controlled_n400000_d16/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n400000_d16/kokkos_threads_4/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n400000_d16/kokkos_threads_8/kokkos/OpenMP/grid_controlled_n400000_d16/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n400000_d16/kokkos_threads_8/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n400000_d16/kokkos_threads_16/kokkos/OpenMP/grid_controlled_n400000_d16/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n400000_d16/kokkos_threads_16/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/grid_controlled_n400000_d16/kokkos_threads_32/kokkos/OpenMP/grid_controlled_n400000_d16/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": "results/updated_vanda_scaling/20261102T092147Z/serial_grid/grid_controlled_n400000_d16/kokkos_threads_32/thread_config.txt",
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/strong_uniform/kokkos_threads_1/kokkos/OpenMP/strong_uniform/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": null,
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/strong_uniform/kokkos_threads_2/kokkos/OpenMP/strong_uniform/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": null,
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/strong_uniform/kokkos_threads_4/kokkos/OpenMP/strong_uniform/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": null,
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/strong_uniform/kokkos_threads_8/kokkos/OpenMP/strong_uniform/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": null,
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/strong_uniform/kokkos_threads_16/kokkos/OpenMP/strong_uniform/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": null,
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/strong_uniform/kokkos_threads_32/kokkos/OpenMP/strong_uniform/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": null,
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/strong_hub/kokkos_threads_1/kokkos/OpenMP/strong_hub/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": null,
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/strong_hub/kokkos_threads_2/kokkos/OpenMP/strong_hub/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": null,
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/strong_hub/kokkos_threads_4/kokkos/OpenMP/strong_hub/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": null,
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/strong_hub/kokkos_threads_8/kokkos/OpenMP/strong_hub/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": null,
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/strong_hub/kokkos_threads_16/kokkos/OpenMP/strong_hub/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": null,
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/strong_hub/kokkos_threads_32/kokkos/OpenMP/strong_hub/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": null,
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/strong_controlled/kokkos_threads_1/kokkos/OpenMP/strong_controlled/summary.json",
+      "requested_threads_from_layout": 1,
+      "requested_evidence": null,
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/strong_controlled/kokkos_threads_2/kokkos/OpenMP/strong_controlled/summary.json",
+      "requested_threads_from_layout": 2,
+      "requested_evidence": null,
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/strong_controlled/kokkos_threads_4/kokkos/OpenMP/strong_controlled/summary.json",
+      "requested_threads_from_layout": 4,
+      "requested_evidence": null,
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/strong_controlled/kokkos_threads_8/kokkos/OpenMP/strong_controlled/summary.json",
+      "requested_threads_from_layout": 8,
+      "requested_evidence": null,
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/strong_controlled/kokkos_threads_16/kokkos/OpenMP/strong_controlled/summary.json",
+      "requested_threads_from_layout": 16,
+      "requested_evidence": null,
+      "missing_field": "actual runtime thread count"
+    },
+    {
+      "summary": "20261102T092147Z/serial_grid/strong_controlled/kokkos_threads_32/kokkos/OpenMP/strong_controlled/summary.json",
+      "requested_threads_from_layout": 32,
+      "requested_evidence": null,
+      "missing_field": "actual runtime thread count"
+    }
+  ]
+}

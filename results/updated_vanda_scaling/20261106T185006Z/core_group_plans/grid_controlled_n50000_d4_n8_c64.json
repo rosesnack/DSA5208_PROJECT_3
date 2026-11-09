@@ -1,0 +1,49 @@
+{
+  "graph": "grid_controlled_n50000_d4",
+  "nodes": 8,
+  "cores_per_node": 64,
+  "cores": 512,
+  "priority": 3,
+  "walltime": "01:00:00",
+  "prerequisite": "",
+  "cells": [
+    {
+      "implementation": "mpi_kokkos",
+      "processes": 512,
+      "threads": 1,
+      "communication": "halo",
+      "canonical_summary": "strong/grid_controlled_n50000_d4/nodes8_p512/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d4/p512/summary.json"
+    },
+    {
+      "implementation": "hybrid",
+      "processes": 512,
+      "threads": 1,
+      "communication": "halo",
+      "canonical_summary": "strong/grid_controlled_n50000_d4/nodes8_p512/hybrid_halo/grid_controlled_n50000_d4/p512_t1/summary.json"
+    },
+    {
+      "implementation": "mpi_kokkos",
+      "processes": 128,
+      "threads": 4,
+      "communication": "allgather",
+      "canonical_summary": "kokkos_cpu_512/grid_controlled_n50000_d4/mpi_kokkos/OpenMP/grid_controlled_n50000_d4/p128_t4/summary.json"
+    },
+    {
+      "implementation": "mpi_kokkos",
+      "processes": 128,
+      "threads": 4,
+      "communication": "halo",
+      "canonical_summary": "kokkos_cpu_512/grid_controlled_n50000_d4/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d4/p128_t4/summary.json"
+    },
+    {
+      "implementation": "hybrid",
+      "processes": 128,
+      "threads": 4,
+      "communication": "halo",
+      "canonical_summary": "strong/grid_controlled_n50000_d4/nodes8_p512/hybrid_halo/grid_controlled_n50000_d4/p128_t4/summary.json"
+    }
+  ],
+  "dense_launch_pause_s": 65,
+  "dependency": "1532725.stdct-mgmt-02",
+  "validation_basis": "Previously validated 8-node/512-core T=1 and T=4 allocation and original native results; per-rank affinity rechecked before measurement."
+}

@@ -1,0 +1,16 @@
+{"rank": 2, "host": "GN-A40-047", "cpus": [9, 11]}
+{"rank": 0, "host": "GN-A40-047", "cpus": [1, 3]}
+{"rank": 1, "host": "GN-A40-047", "cpus": [5, 7]}
+{"rank": 3, "host": "GN-A40-047", "cpus": [13, 15]}
+{"rank": 5, "host": "GN-A40-047", "cpus": [21, 23]}
+{"rank": 4, "host": "GN-A40-047", "cpus": [17, 19]}
+{"rank": 6, "host": "GN-A40-047", "cpus": [25, 27]}
+{"rank": 9, "host": "GN-A40-047", "cpus": [37, 39]}
+{"rank": 10, "host": "GN-A40-047", "cpus": [41, 43]}
+{"rank": 11, "host": "GN-A40-047", "cpus": [45, 47]}
+{"rank": 7, "host": "GN-A40-047", "cpus": [29, 31]}
+{"rank": 12, "host": "GN-A40-047", "cpus": [49, 51]}
+{"rank": 13, "host": "GN-A40-047", "cpus": [53, 55]}
+{"rank": 8, "host": "GN-A40-047", "cpus": [33, 35]}
+{"rank": 15, "host": "GN-A40-047", "cpus": [61, 63]}
+{"rank": 14, "host": "GN-A40-047", "cpus": [57, 59]}

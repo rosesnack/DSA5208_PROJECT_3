@@ -1,0 +1,2 @@
+stage	graph	nodes	source_job	source_run	cells	reason
+strong	grid_controlled_n50000_d4	8	1527002.stdct-mgmt-02	20261102T092147Z	66	67 correctness checks passed; all eight CPU hosts now verified Platinum 8452Y

@@ -1,0 +1,4 @@
+stage	graph	nodes	job_id
+cpu_build	-	1	1527524.stdct-mgmt-02
+kokkos_cpu_grid	grid_controlled_n50000_d4	1	1527561.stdct-mgmt-02
+kokkos_cpu_grid	grid_controlled_n50000_d4	2	1527562.stdct-mgmt-02

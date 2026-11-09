@@ -1,0 +1,8 @@
+2026-11-07T05:39:53.394942+08:00
+
+ To check PBS Project, credits and members, run this command in terminal first:
+   #  amgr login 
+
+ Please enter with your NUS password to login.
+
+

@@ -1,0 +1,111 @@
+{
+  "observed_at": "2026-11-08T16:02:01.113092+08:00",
+  "submitted": true,
+  "balance": 3564.797,
+  "balance_source": "user_confirmed",
+  "prior_pending_reservations": 0,
+  "margin": 128,
+  "new_reservations": 3434.6666666666665,
+  "uncommitted_after_margin": 2.1303333333333594,
+  "groups": [
+    {
+      "graph": "grid_controlled_n50000_d4",
+      "nodes": 8,
+      "cores": 512,
+      "cells": 5,
+      "walltime": "01:00:00",
+      "reservation": 512.0,
+      "performance_job": "1532794.stdct-mgmt-02",
+      "validation_job": "1532795.stdct-mgmt-02",
+      "dependency": "1532725.stdct-mgmt-02"
+    },
+    {
+      "graph": "strong_controlled",
+      "nodes": 2,
+      "cores": 64,
+      "cells": 26,
+      "walltime": "03:00:00",
+      "reservation": 192.0,
+      "performance_job": "1532796.stdct-mgmt-02",
+      "validation_job": "1532797.stdct-mgmt-02",
+      "dependency": "1530741.stdct-mgmt-02"
+    },
+    {
+      "graph": "strong_controlled",
+      "nodes": 4,
+      "cores": 128,
+      "cells": 26,
+      "walltime": "04:00:00",
+      "reservation": 512.0,
+      "performance_job": "1532798.stdct-mgmt-02",
+      "validation_job": "1532799.stdct-mgmt-02",
+      "dependency": "1530741.stdct-mgmt-02"
+    },
+    {
+      "graph": "strong_controlled",
+      "nodes": 8,
+      "cores": 256,
+      "cells": 26,
+      "walltime": "06:00:00",
+      "reservation": 1536.0,
+      "performance_job": "1532800.stdct-mgmt-02",
+      "validation_job": "1532801.stdct-mgmt-02",
+      "dependency": "1530741.stdct-mgmt-02"
+    },
+    {
+      "graph": "strong_hub",
+      "nodes": 2,
+      "cores": 64,
+      "cells": 26,
+      "walltime": "03:30:00",
+      "reservation": 224.0,
+      "performance_job": "1532802.stdct-mgmt-02",
+      "validation_job": "1532803.stdct-mgmt-02",
+      "dependency": "1530741.stdct-mgmt-02"
+    },
+    {
+      "graph": "strong_uniform",
+      "nodes": 2,
+      "cores": 64,
+      "cells": 10,
+      "walltime": "02:00:00",
+      "reservation": 128.0,
+      "performance_job": "1532804.stdct-mgmt-02",
+      "validation_job": "1532805.stdct-mgmt-02",
+      "dependency": "1530741.stdct-mgmt-02"
+    },
+    {
+      "graph": "grid_controlled_n100000_d8",
+      "nodes": 4,
+      "cores": 128,
+      "cells": 10,
+      "walltime": "00:30:00",
+      "reservation": 64.0,
+      "performance_job": "1532806.stdct-mgmt-02",
+      "validation_job": "1532807.stdct-mgmt-02",
+      "dependency": "1530741.stdct-mgmt-02"
+    },
+    {
+      "graph": "grid_controlled_n100000_d8",
+      "nodes": 8,
+      "cores": 256,
+      "cells": 10,
+      "walltime": "01:00:00",
+      "reservation": 256.0,
+      "performance_job": "1532808.stdct-mgmt-02",
+      "validation_job": "1532809.stdct-mgmt-02",
+      "dependency": "1530741.stdct-mgmt-02"
+    },
+    {
+      "graph": "grid_controlled_n400000_d16",
+      "nodes": 1,
+      "cores": 32,
+      "cells": 10,
+      "walltime": "00:20:00",
+      "reservation": 10.666666666666666,
+      "performance_job": "1532810.stdct-mgmt-02",
+      "validation_job": "1532811.stdct-mgmt-02",
+      "dependency": "1530741.stdct-mgmt-02"
+    }
+  ]
+}

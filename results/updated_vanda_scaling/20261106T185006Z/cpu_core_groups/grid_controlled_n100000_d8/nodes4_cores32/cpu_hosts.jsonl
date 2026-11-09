@@ -1,0 +1,4 @@
+{"host": "GN-A40-084", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 32, "tcp_ephemeral_port_range": "32768\t61439", "tcp_tw_reuse": "2"}
+{"host": "CN-015", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 32, "tcp_ephemeral_port_range": "32768\t61439", "tcp_tw_reuse": "2"}
+{"host": "GN-A40-082", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 32, "tcp_ephemeral_port_range": "32768\t61439", "tcp_tw_reuse": "2"}
+{"host": "CN-150", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 32, "tcp_ephemeral_port_range": "32768\t61439", "tcp_tw_reuse": "2"}

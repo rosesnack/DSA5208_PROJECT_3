@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Independent checks run in a dependent free-queue job when requested.
+validate_result() {
+    if [[ "${PAGERANK_DEFER_VALIDATION:-0}" != 1 ]]; then
+        python3 "$@"
+    fi
+}
+
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 DATA_ROOT="${DATA_ROOT:?Set DATA_ROOT to the generated shared graph directory}"
@@ -93,16 +100,16 @@ if [[ "$RUN_STRONG" == 1 ]]; then
 for nodes in "${NODE_COUNTS[@]}"; do
     NODE_ROOT="$STRONG_ROOT/nodes${nodes}"
     mkdir -p "$NODE_ROOT/mapping"
+    bash scripts/record_vanda_allocation.sh "$NODE_ROOT/cpu_hosts.jsonl"
     export PAGERANK_RESULTS_ROOT="$NODE_ROOT"
     mkdir -p "$NODE_ROOT/serial"
     if [[ -n "$GRAPH_NAME" ]]; then
-        if [[ ! -d "$NODE_ROOT/serial/$GRAPH_NAME" ]]; then
-            cp -al "$DATA_ROOT/results/serial_grid/$GRAPH_NAME/serial/$GRAPH_NAME" "$NODE_ROOT/serial/"
-        fi
+        mkdir -p "$NODE_ROOT/serial/$GRAPH_NAME"
+        cp -al --remove-destination "$DATA_ROOT/results/serial_grid/$GRAPH_NAME/serial/$GRAPH_NAME/."             "$NODE_ROOT/serial/$GRAPH_NAME/"
     else
         cp -al "$DATA_ROOT/results/serial_grid/serial/." "$NODE_ROOT/serial/"
     fi
-    report_passed "$NODE_ROOT/serial/validation.json" 1 || python3 scripts/validate_serial.py
+    report_passed "$NODE_ROOT/serial/validation.json" 1 || validate_result scripts/validate_serial.py
     node_process_counts=()
     for ranks_per_node in "${RANKS_PER_NODE[@]}"; do
         processes=$((nodes * ranks_per_node))
@@ -133,9 +140,9 @@ for nodes in "${NODE_COUNTS[@]}"; do
         suffix=""
         if [[ "$communication" == halo ]]; then suffix="_halo"; fi
         report_passed "$NODE_ROOT/mpi$suffix/validation.json" "${#node_process_counts[@]}" || \
-            python3 scripts/validate_mpi.py "$communication" --processes "${node_process_counts[@]}"
+            validate_result scripts/validate_mpi.py "$communication" --processes "${node_process_counts[@]}"
         report_passed "$NODE_ROOT/mpi_kokkos$suffix/OpenMP/validation.json" "${#node_process_counts[@]}" || \
-            python3 scripts/validate_mpi_device.py mpi_kokkos OpenMP "$communication" \
+            validate_result scripts/validate_mpi_device.py mpi_kokkos OpenMP "$communication" \
             --processes "${node_process_counts[@]}"
     done
 
@@ -167,7 +174,7 @@ for nodes in "${NODE_COUNTS[@]}"; do
         suffix=""
         if [[ "$communication" == halo ]]; then suffix="_halo"; fi
         report_passed "$NODE_ROOT/hybrid$suffix/validation.json" "${#hybrid_configurations[@]}" || \
-            python3 scripts/validate_hybrid.py "$communication" --processes "${node_process_counts[@]}"
+            validate_result scripts/validate_hybrid.py "$communication" --processes "${node_process_counts[@]}"
     done
 done
 fi
@@ -198,8 +205,8 @@ export PAGERANK_DATASET_MANIFEST="$DATA_ROOT/manifests/weak_scaling.tsv"
 export PAGERANK_PROCESS_COUNTS='1 2 4 8 16 32 64 128 256'
 export PAGERANK_WEAK_VERTICES_PER_RANK=50000
 export PAGERANK_WEAK_EDGES_PER_RANK=800000
-python3 scripts/validate_weak_scaling.py
-python3 scripts/validate_weak_matrix.py mpi_kokkos --backend OpenMP \
+validate_result scripts/validate_weak_scaling.py
+validate_result scripts/validate_weak_matrix.py mpi_kokkos --backend OpenMP \
     --processes "${PROCESS_COUNTS[@]}"
 
 for processes in 1 2 4 8 16 32 64; do
@@ -215,7 +222,19 @@ for processes in 1 2 4 8 16 32 64; do
     done
 done
 export PAGERANK_DATASET_MANIFEST="$DATA_ROOT/manifests/weak_scaling.tsv"
-python3 scripts/validate_weak_hybrid.py
+validate_result scripts/validate_weak_hybrid.py
+fi
+
+if [[ "${PAGERANK_DEFER_VALIDATION:-0}" == 1 ]]; then
+    if [[ "$RUN_STRONG" == 1 ]]; then
+        for nodes in "${NODE_COUNTS[@]}"; do
+            printf '%s\n' "$PBS_JOBID" > "$STRONG_ROOT/nodes${nodes}/measurement_complete.txt"
+        done
+    fi
+    if [[ "$RUN_WEAK" == 1 ]]; then
+        printf '%s\n' "$PBS_JOBID" > "$WEAK_ROOT/measurement_complete.txt"
+    fi
+    exit 0
 fi
 
 if [[ "$RUN_STRONG" == 1 ]]; then

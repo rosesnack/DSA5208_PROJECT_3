@@ -1,0 +1,20 @@
+{
+  "performance_job": "1527002.stdct-mgmt-02",
+  "performance_date": "2026-11-06",
+  "host_observation_date": "2026-11-07",
+  "hosts": [
+    "CN-003",
+    "CN-015",
+    "CN-150",
+    "GN-A40-079",
+    "GN-A40-082",
+    "GN-A40-084",
+    "GN-A40-085",
+    "GN-A40-086"
+  ],
+  "same_cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+  "correctness_checks_passed": 67,
+  "cpu_evidence_run": "20261106T185006Z",
+  "reused_performance_cells": 66,
+  "duplicate_performance_job_stopped": "1527815.stdct-mgmt-02"
+}

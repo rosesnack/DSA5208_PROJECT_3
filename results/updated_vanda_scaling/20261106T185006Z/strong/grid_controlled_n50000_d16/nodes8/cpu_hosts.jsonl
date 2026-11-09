@@ -1,0 +1,8 @@
+{"host": "CN-136", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 32}
+{"host": "CN-075", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 32}
+{"host": "CN-110", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 32}
+{"host": "CN-103", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 32}
+{"host": "CN-139", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 32}
+{"host": "CN-141", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 32}
+{"host": "CN-109", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 32}
+{"host": "CN-089", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 32}

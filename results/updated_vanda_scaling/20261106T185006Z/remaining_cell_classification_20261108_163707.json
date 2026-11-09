@@ -1,0 +1,42 @@
+{
+  "snapshot_at": "2026-11-08T16:37:07.518134+08:00",
+  "validated_original_cells": 14279,
+  "missing_original_cells": 5701,
+  "counts": {
+    "original_fixed_matrix": {
+      "first_run": 1250,
+      "excluded_result": 2742,
+      "submitted_incomplete": 1634,
+      "awaiting_validation": 75
+    },
+    "additional_512_splits": {
+      "first_run": 720,
+      "excluded_result": 0,
+      "submitted_incomplete": 0,
+      "awaiting_validation": 0
+    }
+  },
+  "currently_covered_by_category": {
+    "first_run": 0,
+    "excluded_result": 5,
+    "submitted_incomplete": 49,
+    "awaiting_validation": 75
+  },
+  "waiting_by_parent_state": {
+    "F": 10,
+    "R": 65
+  },
+  "excluded_result_by_basis": {
+    "excluded_complete_batch": 2620,
+    "old_free_partial_cell": 122
+  },
+  "submitted_incomplete_with_current_job": 49,
+  "precedence": [
+    "validated results excluded",
+    "complete raw measurement awaiting validation",
+    "explicitly excluded result",
+    "submission/partial output",
+    "no matching record"
+  ],
+  "scope_note": "Formal Vanda fixed-graph cells only. No-history means absent from preserved records, not proof that no ad-hoc or local run ever occurred."
+}

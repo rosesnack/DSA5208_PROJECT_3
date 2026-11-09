@@ -12,6 +12,9 @@ __pycache__/
 /results/updated_vanda_scaling/**/amgr_cpu_transactions_*.csv
 /results/updated_vanda_scaling/**/amgr_cpu_reconciliation_evidence.csv
 /results/updated_vanda_scaling/**/free_cpu_archive/
+/results/updated_vanda_scaling/**/auto_monitor*
+/results/updated_vanda_scaling/**/*.lock
+/results/updated_vanda_scaling/**/*.pid
 /results/updated_local_macos_local_runner.log
 /results/updated_local_weak_generation.log
 /results/updated_local_macos_weak_runner.log

@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+#PBS -N dsa5208-serial-reference
+#PBS -q auto_free
+#PBS -l select=1:ncpus=4:mpiprocs=1:ompthreads=1:mem=64gb
+#PBS -l walltime=24:00:00
+#PBS -j oe
+#PBS -V
+
+set -euo pipefail
+cd "${PBS_O_WORKDIR:?Submit from the project directory}"
+module load openmpi/gcc/64/4.1.8 CMake/3.29.3-GCCcore-13.3.0
+
+RUN_ID="${RUN_ID:?Set RUN_ID}"
+DATA_ROOT="${DATA_ROOT:?Set DATA_ROOT}"
+GRAPH_LIST="${GRAPH_LIST:?Set GRAPH_LIST}"
+VALIDATION_ROOT="$DATA_ROOT/results/serial_reference_validation"
+
+export PAGERANK_ENVIRONMENT=vanda-gcc13-release
+export PAGERANK_RUN_ID="$RUN_ID"
+export PAGERANK_RESULTS_ROOT="$DATA_ROOT/results/serial_reference_rank_generation"
+export PAGERANK_REPEATS=1 PAGERANK_WARMUPS=0
+mkdir -p "$VALIDATION_ROOT" "$DATA_ROOT/manifests/serial_reference"
+
+while IFS= read -r graph; do
+    [[ -z "$graph" ]] && continue
+    manifest="$DATA_ROOT/manifests/serial_reference/${graph}_${PBS_JOBID}.tsv"
+    python3 scripts/select_graph_manifest.py "$DATA_ROOT/manifests/fixed_graphs.tsv" \
+        "$graph" "$manifest"
+    export PAGERANK_DATASET_MANIFEST="$manifest"
+    ./build-vanda-matrix-cpu/pagerank_serial
+    python3 scripts/validate_serial.py
+    cp "$PAGERANK_RESULTS_ROOT/serial/validation.json" \
+        "$VALIDATION_ROOT/${graph}.json"
+done < "$GRAPH_LIST"
+
+printf '%s\n' "$PBS_JOBID" > \
+    "results/updated_vanda_scaling/$RUN_ID/serial_reference_validation.complete"

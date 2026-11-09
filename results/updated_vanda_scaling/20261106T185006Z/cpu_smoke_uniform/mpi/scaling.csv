@@ -1,0 +1,3 @@
+dataset,communication,processes,serial_s,mpi_s,speedup,efficiency,communication_s,communication_bytes_per_iteration,communication_setup_bytes,rank_l1_error,rank_max_error
+uniform,allgather,1,0.037276664,0.03614579700000001,1.031286265454321,1.031286265454321,0.0010484929999999004,0,0,0.0,0.0
+uniform,allgather,2,0.037276664,0.019172997999999997,1.944227188674406,0.972113594337203,0.0017310869999999506,800000,0,0.0,0.0

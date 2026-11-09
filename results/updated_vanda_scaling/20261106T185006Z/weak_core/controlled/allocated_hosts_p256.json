@@ -1,0 +1,17 @@
+{
+  "performance_job": "1527538",
+  "hosts": [
+    "CN-089",
+    "CN-109",
+    "CN-110",
+    "CN-136",
+    "CN-139",
+    "CN-141",
+    "CN-143",
+    "CN-145"
+  ],
+  "exec_host": "CN-089/1*32+CN-109/0*32+CN-110/1*32+CN-136/1*32+CN-139/1*32+CN-141/1*32+CN-143/1*32+CN-145/1*32",
+  "performance_measurements": 28,
+  "interrupted_phase": "independent Python validation",
+  "elapsed_at_stop": "00:50:14"
+}

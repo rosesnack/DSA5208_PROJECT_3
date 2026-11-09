@@ -1,0 +1,78 @@
+{
+  "observed_at": "2026-11-08T20:10:09.357194+08:00",
+  "submitted": false,
+  "balance": 642.1300000000001,
+  "balance_source": "hpc_project",
+  "prior_pending_reservations": 512.0,
+  "margin": 64.0,
+  "new_reservations": 63.99999999999999,
+  "uncommitted_after_margin": 2.13000000000012,
+  "groups": [
+    {
+      "graph": "grid_hub_n200000_d4",
+      "nodes": 1,
+      "cores": 32,
+      "cells": 10,
+      "walltime": "00:20:00",
+      "reservation": 10.666666666666666,
+      "performance_job": "dry-run",
+      "validation_job": "dry-run",
+      "dependency": "1530741.stdct-mgmt-02"
+    },
+    {
+      "graph": "grid_hub_n200000_d8",
+      "nodes": 1,
+      "cores": 32,
+      "cells": 10,
+      "walltime": "00:20:00",
+      "reservation": 10.666666666666666,
+      "performance_job": "dry-run",
+      "validation_job": "dry-run",
+      "dependency": "1530741.stdct-mgmt-02"
+    },
+    {
+      "graph": "grid_hub_n200000_d16",
+      "nodes": 1,
+      "cores": 32,
+      "cells": 10,
+      "walltime": "00:20:00",
+      "reservation": 10.666666666666666,
+      "performance_job": "dry-run",
+      "validation_job": "dry-run",
+      "dependency": "1530741.stdct-mgmt-02"
+    },
+    {
+      "graph": "grid_hub_n400000_d4",
+      "nodes": 1,
+      "cores": 32,
+      "cells": 10,
+      "walltime": "00:20:00",
+      "reservation": 10.666666666666666,
+      "performance_job": "dry-run",
+      "validation_job": "dry-run",
+      "dependency": "1530741.stdct-mgmt-02"
+    },
+    {
+      "graph": "grid_hub_n400000_d8",
+      "nodes": 1,
+      "cores": 32,
+      "cells": 10,
+      "walltime": "00:20:00",
+      "reservation": 10.666666666666666,
+      "performance_job": "dry-run",
+      "validation_job": "dry-run",
+      "dependency": "1530741.stdct-mgmt-02"
+    },
+    {
+      "graph": "grid_hub_n400000_d16",
+      "nodes": 1,
+      "cores": 32,
+      "cells": 10,
+      "walltime": "00:20:00",
+      "reservation": 10.666666666666666,
+      "performance_job": "dry-run",
+      "validation_job": "dry-run",
+      "dependency": "1530741.stdct-mgmt-02"
+    }
+  ]
+}

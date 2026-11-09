@@ -1,0 +1,281 @@
+{
+  "captured_at": "2026-11-08T20:12:20.352873+08:00",
+  "Jobs": {
+    "1533366.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "comment": "Job run at Sun Nov 08 at 20:10 on (CN-011[1]:ncpus=32:mem=222gb) and finished",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 1200, \"job.ncpus\": 32.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "222gb",
+        "mpiprocs": 32,
+        "ncpus": 32,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 156,
+        "cput": "00:03:50",
+        "mem": "157740kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "4129652kb",
+        "walltime": "00:00:43"
+      },
+      "stime": "Sun Nov  8 20:10:50 2026",
+      "obittime": "Sun Nov  8 20:11:35 2026",
+      "Hold_Types": "n"
+    },
+    "1533367.stdct-mgmt-02": {
+      "job_state": "Q",
+      "comment": "Not Running: User has reached queue cpu_parallel running job limit.",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "Hold_Types": "n"
+    },
+    "1533368.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "comment": "Job run at Sun Nov 08 at 20:10 on (CN-012[1]:ncpus=32:mem=222gb) and finished",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 1200, \"job.ncpus\": 32.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "222gb",
+        "mpiprocs": 32,
+        "ncpus": 32,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 128,
+        "cput": "00:02:25",
+        "mem": "88284kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "1174436kb",
+        "walltime": "00:00:43"
+      },
+      "stime": "Sun Nov  8 20:10:55 2026",
+      "obittime": "Sun Nov  8 20:11:40 2026",
+      "Hold_Types": "n"
+    },
+    "1533369.stdct-mgmt-02": {
+      "job_state": "Q",
+      "comment": "Not Running: User has reached queue cpu_parallel running job limit.",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "Hold_Types": "n"
+    },
+    "1533370.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "comment": "Job run at Sun Nov 08 at 20:10 on (CN-017[0]:ncpus=32:mem=222gb) and finished",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 1200, \"job.ncpus\": 32.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "222gb",
+        "mpiprocs": 32,
+        "ncpus": 32,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 269,
+        "cput": "00:02:34",
+        "mem": "11140kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "115884kb",
+        "walltime": "00:00:37"
+      },
+      "stime": "Sun Nov  8 20:10:55 2026",
+      "obittime": "Sun Nov  8 20:11:34 2026",
+      "Hold_Types": "n"
+    },
+    "1533371.stdct-mgmt-02": {
+      "job_state": "Q",
+      "comment": "Not Running: User has reached queue cpu_parallel running job limit.",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "Hold_Types": "n"
+    },
+    "1533372.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "comment": "Job run at Sun Nov 08 at 20:10 on (CN-087[1]:ncpus=32:mem=222gb) and finished",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 1200, \"job.ncpus\": 32.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "222gb",
+        "mpiprocs": 32,
+        "ncpus": 32,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 912,
+        "cput": "00:05:48",
+        "mem": "172660kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "2086916kb",
+        "walltime": "00:00:46"
+      },
+      "stime": "Sun Nov  8 20:10:55 2026",
+      "obittime": "Sun Nov  8 20:11:43 2026",
+      "Hold_Types": "n"
+    },
+    "1533373.stdct-mgmt-02": {
+      "job_state": "Q",
+      "comment": "Not Running: User has reached queue cpu_parallel running job limit.",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "Hold_Types": "n"
+    },
+    "1533374.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "comment": "Job run at Sun Nov 08 at 20:10 on (CN-145[1]:ncpus=32:mem=222gb) and finished",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 1200, \"job.ncpus\": 32.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "222gb",
+        "mpiprocs": 32,
+        "ncpus": 32,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 144,
+        "cput": "00:05:51",
+        "mem": "206576kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "2024004kb",
+        "walltime": "00:01:00"
+      },
+      "stime": "Sun Nov  8 20:10:56 2026",
+      "obittime": "Sun Nov  8 20:11:57 2026",
+      "Hold_Types": "n"
+    },
+    "1533375.stdct-mgmt-02": {
+      "job_state": "Q",
+      "comment": "Not Running: User has reached queue cpu_parallel running job limit.",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "Hold_Types": "n"
+    },
+    "1533376.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "comment": "Job run at Sun Nov 08 at 20:10 on (CN-103[1]:ncpus=32:mem=222gb) and finished",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 1200, \"job.ncpus\": 32.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "222gb",
+        "mpiprocs": 32,
+        "ncpus": 32,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 207,
+        "cput": "00:06:58",
+        "mem": "300588kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "4173596kb",
+        "walltime": "00:01:10"
+      },
+      "stime": "Sun Nov  8 20:10:56 2026",
+      "obittime": "Sun Nov  8 20:12:06 2026",
+      "Hold_Types": "n"
+    },
+    "1533377.stdct-mgmt-02": {
+      "job_state": "Q",
+      "comment": "Not Running: User has reached queue cpu_parallel running job limit.",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "Hold_Types": "n"
+    }
+  }
+}

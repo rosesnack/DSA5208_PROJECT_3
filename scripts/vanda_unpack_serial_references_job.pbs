@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+#PBS -N dsa5208-unpack-refs
+#PBS -q auto_free
+#PBS -l select=1:ncpus=4:mem=16gb
+#PBS -l walltime=02:00:00
+#PBS -j oe
+
+set -euo pipefail
+cd "${PBS_O_WORKDIR:?Submit from the project directory}"
+DATA_ROOT="${DATA_ROOT:?Set target DATA_ROOT}"
+ARCHIVE="${ARCHIVE:?Set transferred original-reference archive}"
+python3 - "$ARCHIVE" <<'PY'
+import hashlib
+from pathlib import Path
+import sys
+archive = Path(sys.argv[1])
+expected = Path(str(archive) + '.sha256').read_text().split()[0]
+digest = hashlib.sha256()
+with archive.open('rb') as source:
+    for chunk in iter(lambda: source.read(8 * 1024 * 1024), b''):
+        digest.update(chunk)
+assert digest.hexdigest() == expected, 'Original-reference archive checksum differs'
+print('Original-reference archive SHA-256 matched')
+PY
+mkdir -p "$DATA_ROOT/results/serial_grid"
+tar --unlink-first -xzf "$ARCHIVE" -C "$DATA_ROOT/results/serial_grid"
+python3 - "$DATA_ROOT/results/serial_grid" <<'PY'
+import json
+from pathlib import Path
+import sys
+sys.path.insert(0, 'scripts')
+from audit_fixed_matrix import graph_names
+root = Path(sys.argv[1])
+for graph in graph_names():
+    folder = root / graph / 'serial' / graph
+    summary = json.loads((folder / 'summary.json').read_text())
+    assert summary['repeat_runs'] == 5 and summary['warmup_runs'] == 1
+    assert summary['build_type'] == 'Release'
+    assert (folder / 'ranks.csv').stat().st_size > 0
+print('Original Serial artifacts staged for 45/45 graphs; no algorithm executed')
+PY
+printf '%s\n' "$PBS_JOBID" > "$DATA_ROOT/results/serial_grid/original_references_ready.txt"

@@ -1,0 +1,7 @@
+{
+  "job": "1532766.stdct-mgmt-02",
+  "previous_state": "Q",
+  "action": "cancelled_before_start",
+  "reason": "Existing successful 8-node/512-core T=1/T=4 native and independent validation already cover selected layouts",
+  "reused_validation_job": "1532725.stdct-mgmt-02"
+}

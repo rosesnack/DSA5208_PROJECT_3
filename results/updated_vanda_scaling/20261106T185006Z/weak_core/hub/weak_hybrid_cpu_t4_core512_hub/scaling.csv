@@ -1,0 +1,3 @@
+family,implementation,backend,communication,processes,threads_per_rank,cpu_cores,graph_scale,vertices,edges,iterations,median_s,seconds_per_iteration,iteration_efficiency,solve_time_efficiency,communication_s,communication_bytes_per_iteration,communication_setup_s
+hub,hybrid,,allgather,128,4,512,4,25600000,409600000,14,11.881817081000001,0.8487012200714287,0.003268160562923924,0.003268160562923924,11.834545252999987,26009600000,0
+hub,hybrid,,halo,128,4,512,4,25600000,409600000,14,14.442644944000001,1.0316174960000002,0.0026377819400612425,0.002637781940061243,14.417144623000013,1214233696,28.752767365

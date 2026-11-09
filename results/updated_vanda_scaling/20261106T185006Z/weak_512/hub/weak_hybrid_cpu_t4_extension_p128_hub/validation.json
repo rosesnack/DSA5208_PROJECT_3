@@ -1,0 +1,45 @@
+{
+  "implementation": "hybrid",
+  "backend": "",
+  "threads_per_rank": 4,
+  "graph_scale": 1,
+  "process_counts": [
+    128
+  ],
+  "passed": 3,
+  "failed": 0,
+  "checks": [
+    {
+      "dataset": "weak_hub_p128",
+      "passed": true,
+      "nodes": 6400000,
+      "edges": 102400000,
+      "iterations": 14,
+      "independent_residual_l1": 6.502909353077554e-10,
+      "rank_sum_error": 3.1086244689504383e-15,
+      "communication": "allgather",
+      "family": "hub",
+      "processes": 128
+    },
+    {
+      "dataset": "weak_hub_p128",
+      "passed": true,
+      "nodes": 6400000,
+      "edges": 102400000,
+      "iterations": 14,
+      "independent_residual_l1": 6.502909353077554e-10,
+      "rank_sum_error": 3.1086244689504383e-15,
+      "communication": "halo",
+      "family": "hub",
+      "processes": 128
+    },
+    {
+      "dataset": "weak_hub_p128",
+      "processes": 128,
+      "family": "hub",
+      "comparison": "Allgatherv versus Halo",
+      "rank_l1_error": 0.0,
+      "passed": true
+    }
+  ]
+}

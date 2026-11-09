@@ -23,6 +23,17 @@ def cell(stage, graph, layout, summary, marker):
             "summary": summary, "marker": marker}
 
 
+def resolve_cell(item, root, reuse_roots=()):
+    """Accept either a validated whole batch or a validated resource-group cell."""
+    for source in (root, *reuse_roots):
+        summary = source / item["summary"].relative_to(root)
+        batch_marker = source / item["marker"].relative_to(root)
+        for marker in (summary.parent / "complete.txt", batch_marker):
+            if summary.is_file() and marker.is_file():
+                return {**item, "summary": summary, "marker": marker}, source
+    return item, root
+
+
 def vanda_cells(root, include_gpu_extension=False):
     for graph in graph_names():
         serial = root / "serial_grid" / graph
@@ -113,6 +124,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("environment", choices=("vanda", "cloud"))
     parser.add_argument("results_root", type=Path)
+    parser.add_argument("--reuse-root", type=Path, action="append", default=[],
+                        help="Reuse validated cells from another run without copying or rerunning them")
     parser.add_argument("--include-vanda-gpu-extension", action="store_true")
     parser.add_argument("--csv", type=Path)
     args = parser.parse_args()
@@ -126,6 +139,7 @@ def main():
     counts = Counter()
     rows = []
     for item in cells:
+        item, source_root = resolve_cell(item, root, args.reuse_root)
         produced = item["summary"].is_file()
         validated = produced and item["marker"].is_file()
         counts[(item["stage"], "expected")] += 1
@@ -133,6 +147,7 @@ def main():
         counts[(item["stage"], "validated")] += validated
         if args.csv:
             rows.append({**item, "summary": str(item["summary"]), "marker": str(item["marker"]),
+                         "source_root": str(source_root),
                          "produced": produced, "validated": validated})
     for stage in sorted({key[0] for key in counts}):
         print(f"{stage:28s} {counts[(stage, 'validated')]:5d}/{counts[(stage, 'expected')]:5d} validated"

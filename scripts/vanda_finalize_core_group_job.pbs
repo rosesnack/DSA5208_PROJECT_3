@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#PBS -N dsa5208-core-check
+#PBS -q auto_free
+#PBS -l select=1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb
+#PBS -l walltime=24:00:00
+#PBS -j oe
+#PBS -V
+set -euo pipefail
+cd "${PBS_O_WORKDIR:?Submit from the project directory}"
+python3 scripts/run_vanda_core_group.py finalize "${CORE_GROUP_PLAN:?Set CORE_GROUP_PLAN}"

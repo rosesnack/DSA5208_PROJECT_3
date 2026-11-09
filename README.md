@@ -214,6 +214,8 @@ Each configuration saves the following files. Set `PAGERANK_RESULTS_ROOT` to a r
 | `ranks.csv` | Final ranks and node degrees from the last run |
 | `history.csv` | Per-iteration L1 differences from the last run |
 
+**Current Vanda continuation (2026-11-09):** follow the [handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md), [service and result status](updated_vanda_run_status_20261109.md), and [non-512 priority / complete missing configurations](updated_non512_priority_and_remaining_20261109.md). The fixed matrix has 14,393/19,980 validated cells. Only missing or invalid performance measurements use the paid queue; dependent jobs use `auto_free` for independent checks and publishing. Automatic continuation currently prioritizes all non-512-core configurations and defers new 512-core work. Existing valid Serial/GPU results and saved five-repeat measurements are reused. The three-graph suites below are historical demonstration/validation entry points, separate from this continuation.
+
 `scripts/run_cpu_suite.sh` runs the CPU suite and validators inside an existing PBS allocation. `scripts/vanda_cpu_job.pbs` targets Vanda's zero-charge `auto_free` queue, builds Kokkos OpenMP and the project in Release mode with GCC 13.3/Open MPI 4.1.8, then runs Serial, OpenMP, MPI Allgatherv/halo, Hybrid, and Kokkos OpenMP with the same warm-up/repeat counts and datasets. The run directory records the host, compiler, MPI, CMake, and module versions.
 
 The earlier three-graph Vanda job, `scripts/vanda_gpu_job.pbs`, requests one A40 GPU from the `auto_free` queue and runs native CUDA and Kokkos CUDA against a Serial reference. It is separate from the 45-graph MPI+GPU matrix below. Stage the pinned Kokkos source under `third_party/kokkos` before submitting either suite:

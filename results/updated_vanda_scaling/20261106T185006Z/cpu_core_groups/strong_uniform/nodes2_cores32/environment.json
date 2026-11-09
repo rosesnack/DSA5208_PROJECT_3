@@ -1,0 +1,90 @@
+{
+  "performance_job": "1532804.stdct-mgmt-02",
+  "group": {
+    "graph": "strong_uniform",
+    "nodes": 2,
+    "cores_per_node": 32,
+    "cores": 64,
+    "priority": 3,
+    "walltime": "02:00:00",
+    "prerequisite": "cpu_core_groups/strong_uniform/nodes1_cores32/complete.txt",
+    "cells": [
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 2,
+        "threads": 32,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p2_t32/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 2,
+        "threads": 32,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p2_t32/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 4,
+        "threads": 16,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p4_t16/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 4,
+        "threads": 16,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p4_t16/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 8,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p8_t8/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 8,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p8_t8/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 16,
+        "threads": 4,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p16_t4/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 16,
+        "threads": 4,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p16_t4/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 32,
+        "threads": 2,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p32_t2/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 32,
+        "threads": 2,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p32_t2/summary.json"
+      }
+    ]
+  },
+  "mpi": "mpicxx: Open MPI 4.1.8 (Language: C++)",
+  "compiler": "g++ (GCC) 13.3.0",
+  "cmake": [
+    "CMAKE_BUILD_TYPE:STRING=Release",
+    "CMAKE_CXX_COMPILER:STRING=/cm/shared/apps/openmpi4/gcc/4.1.8/bin/mpicxx"
+  ]
+}

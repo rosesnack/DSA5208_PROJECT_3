@@ -1,0 +1,7 @@
+[
+  "mpi/grid_controlled_n50000_d4/p512",
+  "mpi_halo/grid_controlled_n50000_d4/p512",
+  "mpi_kokkos/OpenMP/grid_controlled_n50000_d4/p512",
+  "hybrid/grid_controlled_n50000_d4/p512_t1",
+  "hybrid/grid_controlled_n50000_d4/p128_t4"
+]

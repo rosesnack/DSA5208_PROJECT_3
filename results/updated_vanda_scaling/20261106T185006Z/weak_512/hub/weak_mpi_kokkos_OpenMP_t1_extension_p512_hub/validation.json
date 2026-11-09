@@ -1,0 +1,45 @@
+{
+  "implementation": "mpi_kokkos",
+  "backend": "OpenMP",
+  "threads_per_rank": 1,
+  "graph_scale": 1,
+  "process_counts": [
+    512
+  ],
+  "passed": 3,
+  "failed": 0,
+  "checks": [
+    {
+      "dataset": "weak_hub_p512",
+      "passed": true,
+      "nodes": 25600000,
+      "edges": 409600000,
+      "iterations": 14,
+      "independent_residual_l1": 6.439374357763454e-10,
+      "rank_sum_error": 3.1086244689504383e-15,
+      "communication": "allgather",
+      "family": "hub",
+      "processes": 512
+    },
+    {
+      "dataset": "weak_hub_p512",
+      "passed": true,
+      "nodes": 25600000,
+      "edges": 409600000,
+      "iterations": 14,
+      "independent_residual_l1": 6.439374357763454e-10,
+      "rank_sum_error": 3.1086244689504383e-15,
+      "communication": "halo",
+      "family": "hub",
+      "processes": 512
+    },
+    {
+      "dataset": "weak_hub_p512",
+      "processes": 512,
+      "family": "hub",
+      "comparison": "Allgatherv versus Halo",
+      "rank_l1_error": 0.0,
+      "passed": true
+    }
+  ]
+}

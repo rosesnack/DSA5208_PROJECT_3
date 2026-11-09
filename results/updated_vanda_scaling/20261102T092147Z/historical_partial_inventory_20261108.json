@@ -1,0 +1,1292 @@
+{
+  "captured_at": "2026-11-08T16:53:43.376005+08:00",
+  "cells": [
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos/OpenMP/strong_uniform/p1_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526604.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos/OpenMP/strong_uniform/p1_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos/OpenMP/strong_uniform/p1_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526604.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos/OpenMP/strong_uniform/p1_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos/OpenMP/strong_uniform/p4_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526604.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos/OpenMP/strong_uniform/p4_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos/OpenMP/strong_uniform/p4_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526604.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos/OpenMP/strong_uniform/p4_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos/OpenMP/strong_uniform/p8_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526604.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos/OpenMP/strong_uniform/p8_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos/OpenMP/strong_uniform/p8_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526604.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos/OpenMP/strong_uniform/p8_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos/OpenMP/strong_uniform/p16_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526604.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos/OpenMP/strong_uniform/p16_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos/OpenMP/strong_uniform/p2_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526604.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos/OpenMP/strong_uniform/p2_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos/OpenMP/strong_uniform/p2_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526604.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos/OpenMP/strong_uniform/p2_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos_halo/OpenMP/strong_uniform/p1_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526604.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos_halo/OpenMP/strong_uniform/p1_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos_halo/OpenMP/strong_uniform/p1_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526604.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos_halo/OpenMP/strong_uniform/p1_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos_halo/OpenMP/strong_uniform/p4_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526604.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos_halo/OpenMP/strong_uniform/p4_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos_halo/OpenMP/strong_uniform/p4_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526604.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos_halo/OpenMP/strong_uniform/p4_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos_halo/OpenMP/strong_uniform/p8_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526604.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos_halo/OpenMP/strong_uniform/p8_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos_halo/OpenMP/strong_uniform/p8_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526604.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos_halo/OpenMP/strong_uniform/p8_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos_halo/OpenMP/strong_uniform/p16_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526604.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos_halo/OpenMP/strong_uniform/p16_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos_halo/OpenMP/strong_uniform/p2_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526604.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos_halo/OpenMP/strong_uniform/p2_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos_halo/OpenMP/strong_uniform/p2_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526604.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes1/mpi_kokkos_halo/OpenMP/strong_uniform/p2_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p4_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523222.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p4_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p16_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523222.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p16_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p4_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523222.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p4_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p8_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523222.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p8_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p8_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523222.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p8_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p16_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523222.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p16_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p2_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523222.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p2_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p2_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523222.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p2_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p32_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523222.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos/OpenMP/strong_uniform/p32_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p4_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523222.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p4_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p16_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523222.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p16_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p4_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523222.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p4_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p8_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523222.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p8_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p8_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523222.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p8_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p16_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523222.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p16_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p2_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523222.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p2_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p2_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523222.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p2_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p32_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523222.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes2/mpi_kokkos_halo/OpenMP/strong_uniform/p32_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos/OpenMP/strong_uniform/p4_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523223.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos/OpenMP/strong_uniform/p4_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos/OpenMP/strong_uniform/p64_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523223.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos/OpenMP/strong_uniform/p64_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos/OpenMP/strong_uniform/p16_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523223.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos/OpenMP/strong_uniform/p16_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos/OpenMP/strong_uniform/p4_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523223.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos/OpenMP/strong_uniform/p4_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos/OpenMP/strong_uniform/p8_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523223.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos/OpenMP/strong_uniform/p8_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos/OpenMP/strong_uniform/p8_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523223.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos/OpenMP/strong_uniform/p8_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos/OpenMP/strong_uniform/p16_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523223.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos/OpenMP/strong_uniform/p16_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos/OpenMP/strong_uniform/p32_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523223.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos/OpenMP/strong_uniform/p32_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos_halo/OpenMP/strong_uniform/p4_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523223.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos_halo/OpenMP/strong_uniform/p4_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos_halo/OpenMP/strong_uniform/p64_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523223.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos_halo/OpenMP/strong_uniform/p64_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos_halo/OpenMP/strong_uniform/p4_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523223.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos_halo/OpenMP/strong_uniform/p4_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos_halo/OpenMP/strong_uniform/p8_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523223.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos_halo/OpenMP/strong_uniform/p8_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos_halo/OpenMP/strong_uniform/p8_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523223.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos_halo/OpenMP/strong_uniform/p8_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos_halo/OpenMP/strong_uniform/p16_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523223.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos_halo/OpenMP/strong_uniform/p16_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos_halo/OpenMP/strong_uniform/p32_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523223.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_uniform/nodes4/mpi_kokkos_halo/OpenMP/strong_uniform/p32_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p1_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526607.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p1_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p1_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526607.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p1_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p4_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526607.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p4_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p4_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526607.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p4_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p8_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526607.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p8_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p8_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526607.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p8_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p16_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526607.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p16_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p2_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526607.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p2_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p2_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526607.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p2_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p1_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526607.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p1_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p1_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526607.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p1_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p4_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526607.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p4_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p4_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526607.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p4_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p8_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526607.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p8_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p8_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526607.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p8_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p16_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526607.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p16_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p2_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526607.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p2_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p2_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1526607.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p2_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos/OpenMP/strong_hub/p4_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523225.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos/OpenMP/strong_hub/p4_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos/OpenMP/strong_hub/p8_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523225.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos/OpenMP/strong_hub/p8_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos/OpenMP/strong_hub/p16_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523225.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos/OpenMP/strong_hub/p16_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos/OpenMP/strong_hub/p2_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523225.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos/OpenMP/strong_hub/p2_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos/OpenMP/strong_hub/p2_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523225.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos/OpenMP/strong_hub/p2_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos/OpenMP/strong_hub/p32_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523225.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos/OpenMP/strong_hub/p32_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos_halo/OpenMP/strong_hub/p4_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523225.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos_halo/OpenMP/strong_hub/p4_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos_halo/OpenMP/strong_hub/p8_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523225.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos_halo/OpenMP/strong_hub/p8_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos_halo/OpenMP/strong_hub/p16_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523225.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos_halo/OpenMP/strong_hub/p16_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos_halo/OpenMP/strong_hub/p2_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523225.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos_halo/OpenMP/strong_hub/p2_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos_halo/OpenMP/strong_hub/p2_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523225.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos_halo/OpenMP/strong_hub/p2_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos_halo/OpenMP/strong_hub/p32_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523225.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes2/mpi_kokkos_halo/OpenMP/strong_hub/p32_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos/OpenMP/strong_hub/p4_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523226.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos/OpenMP/strong_hub/p4_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos/OpenMP/strong_hub/p64_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523226.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos/OpenMP/strong_hub/p64_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos/OpenMP/strong_hub/p4_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523226.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos/OpenMP/strong_hub/p4_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos/OpenMP/strong_hub/p8_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523226.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos/OpenMP/strong_hub/p8_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos/OpenMP/strong_hub/p8_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523226.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos/OpenMP/strong_hub/p8_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos/OpenMP/strong_hub/p16_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523226.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos/OpenMP/strong_hub/p16_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos/OpenMP/strong_hub/p32_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523226.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos/OpenMP/strong_hub/p32_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos_halo/OpenMP/strong_hub/p4_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523226.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos_halo/OpenMP/strong_hub/p4_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos_halo/OpenMP/strong_hub/p64_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523226.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos_halo/OpenMP/strong_hub/p64_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos_halo/OpenMP/strong_hub/p4_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523226.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos_halo/OpenMP/strong_hub/p4_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos_halo/OpenMP/strong_hub/p8_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523226.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos_halo/OpenMP/strong_hub/p8_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos_halo/OpenMP/strong_hub/p8_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523226.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos_halo/OpenMP/strong_hub/p8_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos_halo/OpenMP/strong_hub/p16_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523226.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos_halo/OpenMP/strong_hub/p16_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos_halo/OpenMP/strong_hub/p32_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523226.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_hub/nodes4/mpi_kokkos_halo/OpenMP/strong_hub/p32_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p1_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523227.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p1_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p1_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523227.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p1_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p4_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523227.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p4_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p4_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523227.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p4_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p8_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523227.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p8_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p8_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523227.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p8_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p16_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523227.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p16_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p2_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523227.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p2_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p2_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523227.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p2_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p1_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523227.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p1_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p1_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523227.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p1_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p4_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523227.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p4_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p4_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523227.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p4_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p8_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523227.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p8_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p8_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523227.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p8_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p16_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523227.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p16_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p2_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523227.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p2_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p2_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523227.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p2_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos/OpenMP/strong_controlled/p4_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523228.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos/OpenMP/strong_controlled/p4_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos/OpenMP/strong_controlled/p8_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523228.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos/OpenMP/strong_controlled/p8_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos/OpenMP/strong_controlled/p16_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523228.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos/OpenMP/strong_controlled/p16_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos/OpenMP/strong_controlled/p2_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523228.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos/OpenMP/strong_controlled/p2_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos/OpenMP/strong_controlled/p32_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523228.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos/OpenMP/strong_controlled/p32_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos_halo/OpenMP/strong_controlled/p4_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523228.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos_halo/OpenMP/strong_controlled/p4_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos_halo/OpenMP/strong_controlled/p8_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523228.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos_halo/OpenMP/strong_controlled/p8_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos_halo/OpenMP/strong_controlled/p16_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523228.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos_halo/OpenMP/strong_controlled/p16_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos_halo/OpenMP/strong_controlled/p2_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523228.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos_halo/OpenMP/strong_controlled/p2_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos_halo/OpenMP/strong_controlled/p32_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523228.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Platinum 8452Y",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes2/mpi_kokkos_halo/OpenMP/strong_controlled/p32_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos/OpenMP/strong_controlled/p4_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523229.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos/OpenMP/strong_controlled/p4_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos/OpenMP/strong_controlled/p64_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523229.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos/OpenMP/strong_controlled/p64_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos/OpenMP/strong_controlled/p16_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523229.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos/OpenMP/strong_controlled/p16_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos/OpenMP/strong_controlled/p4_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523229.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos/OpenMP/strong_controlled/p4_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos/OpenMP/strong_controlled/p32_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523229.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos/OpenMP/strong_controlled/p32_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos/OpenMP/strong_controlled/p8_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523229.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos/OpenMP/strong_controlled/p8_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos/OpenMP/strong_controlled/p8_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523229.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos/OpenMP/strong_controlled/p8_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos/OpenMP/strong_controlled/p16_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523229.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos/OpenMP/strong_controlled/p16_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos/OpenMP/strong_controlled/p32_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523229.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos/OpenMP/strong_controlled/p32_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p4_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523229.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p4_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p64_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523229.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p64_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p16_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523229.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p16_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p4_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523229.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p4_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p32_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523229.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p32_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p8_t4/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523229.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p8_t4/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p8_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523229.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p8_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p16_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523229.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p16_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    },
+    {
+      "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p32_t2/summary.json",
+      "complete": true,
+      "queue": "cpu_parallel",
+      "environment_job": "1523229.stdct-mgmt-02",
+      "cpu_leader_line": "Model name:                           Intel(R) Xeon(R) Gold 6438N",
+      "source_raw_summary": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/results/kokkos_cpu_grid/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p32_t2/summary.json",
+      "reason": "Historical partial batch only ran on the free CPU queue; timings are excluded from the paid unified matrix."
+    }
+  ],
+  "source_job_queues": {
+    "1523222.stdct-mgmt-02": "cpu_parallel",
+    "1523223.stdct-mgmt-02": "cpu_parallel",
+    "1523225.stdct-mgmt-02": "cpu_parallel",
+    "1523226.stdct-mgmt-02": "cpu_parallel",
+    "1523227.stdct-mgmt-02": "cpu_parallel",
+    "1523228.stdct-mgmt-02": "cpu_parallel",
+    "1523229.stdct-mgmt-02": "cpu_parallel",
+    "1526604.stdct-mgmt-02": "cpu_parallel",
+    "1526607.stdct-mgmt-02": "cpu_parallel"
+  },
+  "archived_large_summary_counts": {
+    "strong_uniform": 50
+  },
+  "archived_node_counts": {
+    "nodes2": 25,
+    "nodes1": 25
+  }
+}

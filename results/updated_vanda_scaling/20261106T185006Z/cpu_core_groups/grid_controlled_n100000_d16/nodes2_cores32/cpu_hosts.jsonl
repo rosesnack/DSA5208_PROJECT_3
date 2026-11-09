@@ -1,0 +1,2 @@
+{"host": "GN-A40-079", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 32}
+{"host": "GN-A40-085", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 32}

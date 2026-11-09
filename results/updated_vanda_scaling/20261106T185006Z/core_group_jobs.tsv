@@ -1,0 +1,30 @@
+graph	nodes	cores_per_node	cores	performance_job	validation_job	walltime	cells	plan	dependency
+strong_controlled	1	32	32	1530742.stdct-mgmt-02	1530743.stdct-mgmt-02	08:00:00	26	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n1_c32.json	
+strong_hub	1	32	32	1530744.stdct-mgmt-02	1530745.stdct-mgmt-02	08:00:00	26	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_hub_n1_c32.json	
+strong_uniform	1	32	32	1530746.stdct-mgmt-02	1530747.stdct-mgmt-02	08:00:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_uniform_n1_c32.json	
+grid_controlled_n200000_d4	2	32	64	1530748.stdct-mgmt-02	1530749.stdct-mgmt-02	00:45:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d4_n2_c32.json	
+grid_controlled_n200000_d4	4	32	128	1530750.stdct-mgmt-02	1530751.stdct-mgmt-02	00:45:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d4_n4_c32.json	
+grid_controlled_n200000_d4	8	32	256	1530752.stdct-mgmt-02	1530753.stdct-mgmt-02	01:30:00	26	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d4_n8_c32.json	
+grid_controlled_n100000_d16	2	32	64	1530754.stdct-mgmt-02	1530755.stdct-mgmt-02	00:45:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n2_c32.json	
+grid_controlled_n100000_d16	4	32	128	1530756.stdct-mgmt-02	1530757.stdct-mgmt-02	00:45:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n4_c32.json	
+grid_controlled_n100000_d4	2	32	64	1530758.stdct-mgmt-02	1530759.stdct-mgmt-02	00:45:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n2_c32.json	
+grid_controlled_n100000_d4	4	32	128	1530760.stdct-mgmt-02	1530761.stdct-mgmt-02	00:45:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n4_c32.json	
+grid_controlled_n100000_d8	2	32	64	1530762.stdct-mgmt-02	1530763.stdct-mgmt-02	00:45:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d8_n2_c32.json	
+grid_controlled_n200000_d16	1	32	32	1530764.stdct-mgmt-02	1530765.stdct-mgmt-02	00:45:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d16_n1_c32.json	
+grid_controlled_n200000_d8	1	32	32	1530766.stdct-mgmt-02	1530767.stdct-mgmt-02	00:45:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d8_n1_c32.json	
+grid_controlled_n50000_d4	8	64	512	1532794.stdct-mgmt-02	1532795.stdct-mgmt-02	01:00:00	5	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n50000_d4_n8_c64.json	1532725.stdct-mgmt-02
+strong_controlled	2	32	64	1532796.stdct-mgmt-02	1532797.stdct-mgmt-02	03:00:00	26	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n2_c32.json	1530741.stdct-mgmt-02
+strong_controlled	4	32	128	1532798.stdct-mgmt-02	1532799.stdct-mgmt-02	04:00:00	26	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n4_c32.json	1530741.stdct-mgmt-02
+strong_controlled	8	32	256	1532800.stdct-mgmt-02	1532801.stdct-mgmt-02	06:00:00	26	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n8_c32.json	1530741.stdct-mgmt-02
+strong_hub	2	32	64	1532802.stdct-mgmt-02	1532803.stdct-mgmt-02	03:30:00	26	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_hub_n2_c32.json	1530741.stdct-mgmt-02
+strong_uniform	2	32	64	1532804.stdct-mgmt-02	1532805.stdct-mgmt-02	02:00:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_uniform_n2_c32.json	1530741.stdct-mgmt-02
+grid_controlled_n100000_d8	4	32	128	1532806.stdct-mgmt-02	1532807.stdct-mgmt-02	00:30:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d8_n4_c32.json	1530741.stdct-mgmt-02
+grid_controlled_n100000_d8	8	32	256	1532808.stdct-mgmt-02	1532809.stdct-mgmt-02	01:00:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d8_n8_c32.json	1530741.stdct-mgmt-02
+grid_controlled_n400000_d16	1	32	32	1532810.stdct-mgmt-02	1532811.stdct-mgmt-02	00:20:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d16_n1_c32.json	1530741.stdct-mgmt-02
+grid_hub_n200000_d4	1	32	32	1533366.stdct-mgmt-02	1533367.stdct-mgmt-02	00:20:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n200000_d4_n1_c32.json	1530741.stdct-mgmt-02
+grid_hub_n200000_d8	1	32	32	1533368.stdct-mgmt-02	1533369.stdct-mgmt-02	00:20:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n200000_d8_n1_c32.json	1530741.stdct-mgmt-02
+grid_hub_n200000_d16	1	32	32	1533370.stdct-mgmt-02	1533371.stdct-mgmt-02	00:20:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n200000_d16_n1_c32.json	1530741.stdct-mgmt-02
+grid_hub_n400000_d4	1	32	32	1533372.stdct-mgmt-02	1533373.stdct-mgmt-02	00:20:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d4_n1_c32.json	1530741.stdct-mgmt-02
+grid_hub_n400000_d8	1	32	32	1533374.stdct-mgmt-02	1533375.stdct-mgmt-02	00:20:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d8_n1_c32.json	1530741.stdct-mgmt-02
+grid_hub_n400000_d16	1	32	32	1533376.stdct-mgmt-02	1533377.stdct-mgmt-02	00:20:00	10	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d16_n1_c32.json	1530741.stdct-mgmt-02
+grid_controlled_n100000_d16	2	2	4	1533432.stdct-mgmt-02	1533433.stdct-mgmt-02	00:30:00	2	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n2_c2.json	1530741.stdct-mgmt-02

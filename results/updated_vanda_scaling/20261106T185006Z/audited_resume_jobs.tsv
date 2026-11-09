@@ -1,0 +1,39 @@
+stage	graph	nodes	old_job	performance_job	validation_job	walltime	ncpus	memory_per_node	missing_cells
+strong	grid_controlled_n50000_d4	8	1527565	1527815.stdct-mgmt-02	1527816.stdct-mgmt-02	01:00:00	256	32gb	66
+strong	grid_controlled_n50000_d8	8	1527542	1527817.stdct-mgmt-02	1527818.stdct-mgmt-02	01:00:00	256	32gb	66
+strong	grid_controlled_n50000_d16	8	1527543	1527819.stdct-mgmt-02	1527820.stdct-mgmt-02	01:00:00	256	32gb	66
+strong	grid_controlled_n100000_d4	8	1527544	1527821.stdct-mgmt-02	1527822.stdct-mgmt-02	01:00:00	256	32gb	66
+strong	grid_controlled_n100000_d8	8	1527545	1527823.stdct-mgmt-02	1527824.stdct-mgmt-02	01:00:00	256	32gb	66
+strong	grid_controlled_n100000_d16	8	1527546	1527825.stdct-mgmt-02	1527826.stdct-mgmt-02	01:00:00	256	32gb	66
+strong	grid_hub_n200000_d4	8	1527547	1527827.stdct-mgmt-02	1527828.stdct-mgmt-02	01:00:00	256	32gb	66
+strong	grid_hub_n200000_d8	8	1527548	1527829.stdct-mgmt-02	1527830.stdct-mgmt-02	01:00:00	256	32gb	66
+strong	grid_hub_n200000_d16	8	1527549	1527831.stdct-mgmt-02	1527832.stdct-mgmt-02	01:15:00	256	32gb	66
+kokkos_cpu_grid	grid_controlled_n50000_d4	1		1527833.stdct-mgmt-02	1527834.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	grid_controlled_n50000_d4	2		1527835.stdct-mgmt-02	1527836.stdct-mgmt-02	00:30:00	64	32gb	30
+kokkos_cpu_grid	grid_controlled_n50000_d4	4	1527563	1527837.stdct-mgmt-02	1527838.stdct-mgmt-02	00:30:00	128	32gb	30
+kokkos_cpu_grid	grid_controlled_n50000_d4	8	1527564	1527839.stdct-mgmt-02	1527840.stdct-mgmt-02	01:00:00	256	32gb	30
+strong512	grid_controlled_n50000_d4	8	1527534	1527841.stdct-mgmt-02	1527842.stdct-mgmt-02	02:00:00	512	64gb	8
+weak_core	hub	8	1527536	1527850.stdct-mgmt-02	1527851.stdct-mgmt-02	02:00:00	512	128gb	4
+weak_core	controlled	8	1527539	1527852.stdct-mgmt-02	1527853.stdct-mgmt-02	02:00:00	512	128gb	4
+weak512	uniform	8	1527540	1527854.stdct-mgmt-02	1527855.stdct-mgmt-02	04:00:00	512	128gb	6
+weak512	hub	8	1527537	1527856.stdct-mgmt-02	1527857.stdct-mgmt-02	04:00:00	512	128gb	6
+kokkos_cpu_grid	grid_hub_n50000_d4	1		1527880.stdct-mgmt-02	1527881.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	grid_uniform_n50000_d4	1		1527882.stdct-mgmt-02	1527883.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	grid_controlled_n50000_d8	1		1527884.stdct-mgmt-02	1527885.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	grid_hub_n50000_d8	1		1527886.stdct-mgmt-02	1527887.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	grid_uniform_n50000_d8	1		1527888.stdct-mgmt-02	1527889.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	grid_controlled_n50000_d16	1		1527890.stdct-mgmt-02	1527891.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	grid_hub_n50000_d16	1		1527892.stdct-mgmt-02	1527893.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	grid_uniform_n50000_d16	1		1527894.stdct-mgmt-02	1527895.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	grid_controlled_n100000_d4	1		1527896.stdct-mgmt-02	1527897.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	grid_hub_n100000_d4	1		1527898.stdct-mgmt-02	1527899.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	grid_uniform_n100000_d4	1		1527900.stdct-mgmt-02	1527901.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	grid_controlled_n100000_d8	1		1527902.stdct-mgmt-02	1527903.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	grid_hub_n100000_d8	1		1527904.stdct-mgmt-02	1527905.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	grid_uniform_n100000_d8	1		1527906.stdct-mgmt-02	1527907.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	synthetic_controlled	1		1527908.stdct-mgmt-02	1527909.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	synthetic_hub	1		1527910.stdct-mgmt-02	1527911.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	grid_controlled_n100000_d16	1		1527912.stdct-mgmt-02	1527913.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	grid_hub_n100000_d16	1		1527914.stdct-mgmt-02	1527915.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	grid_uniform_n100000_d16	1		1527916.stdct-mgmt-02	1527917.stdct-mgmt-02	00:30:00	32	32gb	30
+kokkos_cpu_grid	grid_controlled_n200000_d4	1		1527918.stdct-mgmt-02	1527919.stdct-mgmt-02	00:30:00	32	32gb	30
