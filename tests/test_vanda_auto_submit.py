@@ -18,6 +18,47 @@ from watch_vanda_core_groups import unregistered_groups
 
 
 class AutoSubmitTests(unittest.TestCase):
+    def test_requested_hosts_keep_actual_small_core_budget_and_node_count(self):
+        group = {'graph': 'grid_hub_a', 'nodes': 2, 'cores_per_node': 2,
+                 'requested_hosts': ['cn-051', 'cn-053']}
+        self.assertEqual(submit.allocation_request(group),
+                         '1:ncpus=2:mpiprocs=2:ompthreads=1:mem=4gb:host=cn-051+'
+                         '1:ncpus=2:mpiprocs=2:ompthreads=1:mem=4gb:host=cn-053')
+        del group['requested_hosts']
+        self.assertEqual(submit.allocation_request(group),
+                         '2:ncpus=2:mpiprocs=2:ompthreads=1:mem=4gb')
+
+    def test_legacy_holds_are_forwarded_to_the_budget_check(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'core_group_jobs.tsv').write_text('performance_job\tvalidation_job\tplan\tcores\n')
+            plan = root / 'plan.json'
+            plan.write_text(json.dumps([{'cores': 64, 'prerequisite': '',
+                                         'cells': [{'canonical_summary': 'new/summary.json'}]}]))
+            args = SimpleNamespace(plan=plan, dependency='proof', defer_held_job=['legacy'],
+                                   max_total_cores=128, project='personal-test', max_pending=6,
+                                   max_unvalidated=24, run_id='test', margin=64,
+                                   submit_script=Path('submit.py'))
+            jobs = {'proof': {'job_state': 'F', 'Exit_status': 0},
+                    'legacy': {'job_state': 'H', 'Hold_Types': 'su'}}
+            commands = []
+
+            def fake_command(parts, timeout=60):
+                commands.append(parts)
+                if parts == ['hpc', 'project']:
+                    return 'personal-test | 10000 | 1000 | 1000 | 1000'
+                date = watch.datetime.now(watch.ZoneInfo('Asia/Singapore')).strftime('%Y%m%d')
+                (root / f'core_group_last_check_{date}.json').write_text('{"groups": []}')
+                return ''
+
+            with patch.object(watch, 'job_snapshot', return_value=jobs), \
+                 patch.object(watch, 'command', side_effect=fake_command), \
+                 contextlib.redirect_stdout(io.StringIO()):
+                state, _ = watch.cycle(args, root, jobs)
+            submit_command = next(parts for parts in commands if parts[0] == 'python3')
+            self.assertEqual(submit_command[-2:], ['--defer-held-job', 'legacy'])
+            self.assertEqual(state['deferred_held_jobs'], ['legacy'])
+
     def test_non512_priority_excludes_endpoints_even_after_their_proof_passes(self):
         normal = {'cores': 256, 'prerequisite': '', 'cells': [{'canonical_summary': 'a/summary.json'}]}
         endpoint = {'cores': 512, 'prerequisite': '', 'cells': [{'canonical_summary': 'b/summary.json'}]}

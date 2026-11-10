@@ -1,0 +1,1981 @@
+{
+  "observed_at": "2026-11-11T01:23:03.015362+08:00",
+  "user": "hongxinran",
+  "new_groups": [
+    {
+      "graph": "grid_hub_n100000_d16",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1537745.stdct-mgmt-02",
+      "validation_job": "1537748.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d16_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_hub_n100000_d4",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1537752.stdct-mgmt-02",
+      "validation_job": "1537754.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d4_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_hub_n100000_d8",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1537755.stdct-mgmt-02",
+      "validation_job": "1537756.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d8_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_hub_n200000_d16",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1537757.stdct-mgmt-02",
+      "validation_job": "1537758.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_hub_n200000_d4",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1537759.stdct-mgmt-02",
+      "validation_job": "1537760.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_hub_n200000_d8",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1537762.stdct-mgmt-02",
+      "validation_job": "1537763.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_hub_n400000_d16",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1537799.stdct-mgmt-02",
+      "validation_job": "1537800.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n2_c32.json",
+      "validated_cells": 0,
+      "performance_state": "R",
+      "performance_exit": null,
+      "validation_state": "H",
+      "validation_exit": null
+    },
+    {
+      "graph": "grid_hub_n400000_d4",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1537801.stdct-mgmt-02",
+      "validation_job": "1537802.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d4_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_hub_n400000_d8",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1537803.stdct-mgmt-02",
+      "validation_job": "1537804.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d8_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_hub_n50000_d16",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1537805.stdct-mgmt-02",
+      "validation_job": "1537806.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d16_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_hub_n50000_d4",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1537833.stdct-mgmt-02",
+      "validation_job": "1537834.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d4_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_hub_n50000_d8",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1537835.stdct-mgmt-02",
+      "validation_job": "1537836.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d8_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_hub_n100000_d16",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "10",
+      "walltime": "00:45:00",
+      "performance_job": "1537837.stdct-mgmt-02",
+      "validation_job": "1537838.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d16_n4_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_hub_n100000_d4",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "10",
+      "walltime": "00:45:00",
+      "performance_job": "1537889.stdct-mgmt-02",
+      "validation_job": "1537890.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d4_n4_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_hub_n100000_d8",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "10",
+      "walltime": "00:45:00",
+      "performance_job": "1537891.stdct-mgmt-02",
+      "validation_job": "1537892.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d8_n4_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_hub_n200000_d16",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "10",
+      "walltime": "00:45:00",
+      "performance_job": "1537893.stdct-mgmt-02",
+      "validation_job": "1537894.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n4_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_hub_n200000_d4",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "10",
+      "walltime": "00:45:00",
+      "performance_job": "1537946.stdct-mgmt-02",
+      "validation_job": "1537947.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n4_c32.json",
+      "validated_cells": 0,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "R",
+      "validation_exit": null
+    },
+    {
+      "graph": "grid_hub_n200000_d8",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "10",
+      "walltime": "00:45:00",
+      "performance_job": "1537948.stdct-mgmt-02",
+      "validation_job": "1537949.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n4_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_hub_n400000_d16",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "10",
+      "walltime": "00:45:00",
+      "performance_job": "1537950.stdct-mgmt-02",
+      "validation_job": "1537951.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n4_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    }
+  ],
+  "jobs": {
+    "1510708.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1510713.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1510718.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1510743.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1510748.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513353.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513358.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513363.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513370.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513375.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513380.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513385.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513390.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513395.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513400.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513405.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513410.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513415.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513420.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513425.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513430.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513435.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513439.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513440.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513444.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513445.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513449.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513450.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513454.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513455.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513459.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513460.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513464.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513465.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513469.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513470.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513474.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513475.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513479.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513480.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513484.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513485.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513489.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513490.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513494.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513495.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513499.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513500.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513504.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513505.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513509.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513510.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513514.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513515.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513519.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513520.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513524.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513525.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513529.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513530.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513534.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513535.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513539.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513540.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513544.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1513545.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513551.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "02:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513556.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "02:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1513561.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "02:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1519863.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "u",
+      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
+      "Resource_List": {
+        "ncpus": 512,
+        "nodect": 8,
+        "walltime": "02:00:00",
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB"
+      }
+    },
+    "1537725.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 00:51 on (IN-001[0]:mem=64gb:ncpus=11+IN-001[1]:ncpus=21) and finished",
+      "resources_used": {
+        "cpupercent": 84,
+        "cput": "00:04:56",
+        "mem": "499172kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "5940276kb",
+        "walltime": "00:02:13"
+      },
+      "Resource_List": {
+        "ncpus": 32,
+        "nodect": 1,
+        "walltime": "01:00:00",
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=64gb"
+      }
+    },
+    "1537745.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 00:54 on (CN-083[1]:ncpus=32:mem=222gb)+(CN-087[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 509,
+        "cput": "00:02:54",
+        "mem": "75972kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "2895216kb",
+        "walltime": "00:00:35"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "2:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537748.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 00:55 on (IN-006[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 177,
+        "cput": "00:00:45",
+        "mem": "118700kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "295464kb",
+        "walltime": "00:00:27"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1537752.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 00:54 on (CN-105[0]:ncpus=32:mem=222gb)+(CN-116[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 432,
+        "cput": "00:04:13",
+        "mem": "40484kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1669928kb",
+        "walltime": "00:00:49"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "2:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537754.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 00:55 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 100,
+        "cput": "00:00:23",
+        "mem": "88744kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "265508kb",
+        "walltime": "00:00:24"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1537755.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 00:54 on (CN-101[0]:ncpus=32:mem=222gb)+(CN-102[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 341,
+        "cput": "00:05:07",
+        "mem": "132668kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "4063520kb",
+        "walltime": "00:01:12"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "2:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537756.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 00:56 on (IN-001[0]:mem=96677mb:ncpus=4+IN-001[1]:mem=34395mb) and finished",
+      "resources_used": {
+        "cpupercent": 155,
+        "cput": "00:00:32",
+        "mem": "75800kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "253068kb",
+        "walltime": "00:00:28"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1537757.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 00:54 on (CN-101[1]:ncpus=32:mem=222gb)+(CN-102[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 547,
+        "cput": "00:09:01",
+        "mem": "260896kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "4177300kb",
+        "walltime": "00:01:31"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "2:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537758.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 00:56 on (IN-006[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 200,
+        "cput": "00:01:32",
+        "mem": "219488kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "396552kb",
+        "walltime": "00:00:51"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1537759.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 00:54 on (GN-A40-050[1]:ncpus=32:mem=222gb)+(GN-A40-051[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 203,
+        "cput": "00:03:49",
+        "mem": "16312kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "4124632kb",
+        "walltime": "00:05:47"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "2:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537760.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:00 on (IN-006[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 166,
+        "cput": "00:00:40",
+        "mem": "211604kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "388464kb",
+        "walltime": "00:00:23"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1537762.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 00:54 on (GN-A40-052[1]:ncpus=32:mem=222gb)+(GN-A40-053[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 175,
+        "cput": "00:04:15",
+        "mem": "72100kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "2993336kb",
+        "walltime": "00:06:54"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "2:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537763.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:01 on (IN-001[0]:mem=63909mb:ncpus=4+IN-001[1]:mem=67163mb) and finished",
+      "resources_used": {
+        "cpupercent": 200,
+        "cput": "00:01:00",
+        "mem": "139036kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "303856kb",
+        "walltime": "00:00:33"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1537799.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 00:59 on (CN-148[0]:ncpus=32:mem=222gb)+(CN-151[0]:ncpus=32:mem=222gb)",
+      "resources_used": {
+        "cpupercent": 0,
+        "cput": "00:00:00",
+        "mem": "16288kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "273740kb",
+        "walltime": "00:23:03"
+      },
+      "run_count": 1,
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "2:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537800.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_parallel",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1537801.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 00:59 on (GN-A40-054[1]:ncpus=32:mem=222gb)+(GN-A40-055[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 261,
+        "cput": "00:10:07",
+        "mem": "15856kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "4075264kb",
+        "walltime": "00:06:36"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "2:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537802.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:06 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 190,
+        "cput": "00:01:17",
+        "mem": "407716kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "584712kb",
+        "walltime": "00:00:41"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1537803.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 00:59 on (GN-A40-056[1]:ncpus=32:mem=222gb)+(GN-A40-057[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 359,
+        "cput": "00:11:54",
+        "mem": "88884kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "4241244kb",
+        "walltime": "00:06:49"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "2:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537804.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:07 on (IN-006[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 80,
+        "cput": "00:01:59",
+        "mem": "420592kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "597320kb",
+        "walltime": "00:01:05"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1537805.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 00:59 on (CN-073[0]:ncpus=32:mem=222gb)+(CN-054[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 329,
+        "cput": "00:03:16",
+        "mem": "81488kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "2908560kb",
+        "walltime": "00:00:44"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "2:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537806.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:00 on (IN-001[0]:mem=63909mb:ncpus=4+IN-001[1]:mem=67163mb) and finished",
+      "resources_used": {
+        "cpupercent": 190,
+        "cput": "00:00:25",
+        "mem": "70520kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "247472kb",
+        "walltime": "00:00:17"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1537833.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:04 on (GN-A40-050[1]:ncpus=32:mem=222gb)+(GN-A40-051[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 82,
+        "cput": "00:01:37",
+        "mem": "19596kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "4091104kb",
+        "walltime": "00:06:19"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "2:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537834.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:11 on (CN-161[0]:mem=53713mb:ncpus=1+CN-161[1]:mem=77359mb:ncpus=3) and finished",
+      "resources_used": {
+        "cpupercent": 162,
+        "cput": "00:00:13",
+        "mem": "7460kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "159464kb",
+        "walltime": "00:00:10"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1537835.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:04 on (GN-A40-052[1]:ncpus=32:mem=222gb)+(GN-A40-053[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 57,
+        "cput": "00:01:42",
+        "mem": "13296kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "265552kb",
+        "walltime": "00:06:58"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "2:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537836.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:12 on (IN-008[0]:mem=125391mb:ncpus=4+IN-008[1]:mem=5681mb) and finished",
+      "resources_used": {
+        "cpupercent": 53,
+        "cput": "00:00:15",
+        "mem": "47088kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "225224kb",
+        "walltime": "00:00:12"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1537837.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:04 on (CN-073[0]:ncpus=32:mem=222gb)+(CN-054[0]:ncpus=32:mem=222gb)+(CN-051[1]:ncpus=32:mem=222gb)+(CN-059[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 927,
+        "cput": "00:12:23",
+        "mem": "145220kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "4053388kb",
+        "walltime": "00:00:51"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537838.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:06 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 165,
+        "cput": "00:00:45",
+        "mem": "75804kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "252728kb",
+        "walltime": "00:00:27"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1537889.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:10 on (GN-A40-054[1]:ncpus=32:mem=222gb)+(GN-A40-055[1]:ncpus=32:mem=222gb)+(GN-A40-056[1]:ncpus=32:mem=222gb)+(GN-A40-057[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 293,
+        "cput": "00:08:12",
+        "mem": "189244kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "273764kb",
+        "walltime": "00:06:43"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537890.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:17 on (CN-161[0]:mem=53713mb:ncpus=1+CN-161[1]:mem=77359mb:ncpus=3) and finished",
+      "resources_used": {
+        "cpupercent": 55,
+        "cput": "00:00:22",
+        "mem": "116488kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "293384kb",
+        "walltime": "00:00:14"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1537891.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:10 on (CN-066[1]:ncpus=32:mem=222gb)+(CN-041[1]:ncpus=32:mem=222gb)+(CN-036[0]:ncpus=32:mem=222gb)+(CN-045[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 2745,
+        "cput": "00:20:50",
+        "mem": "280040kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "4098068kb",
+        "walltime": "00:01:01"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537892.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:11 on (IN-008[0]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 166,
+        "cput": "00:00:25",
+        "mem": "112908kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "286248kb",
+        "walltime": "00:00:15"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1537893.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:10 on (CN-088[1]:ncpus=32:mem=222gb)+(CN-091[1]:ncpus=32:mem=222gb)+(CN-097[1]:ncpus=32:mem=222gb)+(CN-100[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 1504,
+        "cput": "00:18:57",
+        "mem": "322416kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "4188860kb",
+        "walltime": "00:01:06"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537894.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:12 on (CN-161[0]:mem=53713mb:ncpus=1+CN-161[1]:mem=77359mb:ncpus=3) and finished",
+      "resources_used": {
+        "cpupercent": 200,
+        "cput": "00:01:33",
+        "mem": "219944kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "396860kb",
+        "walltime": "00:00:50"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1537946.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:15 on (GN-A40-050[1]:ncpus=32:mem=222gb)+(GN-A40-051[1]:ncpus=32:mem=222gb)+(GN-A40-052[1]:ncpus=32:mem=222gb)+(GN-A40-053[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 291,
+        "cput": "00:09:31",
+        "mem": "34252kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "273768kb",
+        "walltime": "00:06:46"
+      },
+      "run_count": 1,
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537947.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:22 on (CN-161[0]:mem=53713mb:ncpus=1+CN-161[1]:mem=77359mb:ncpus=3)",
+      "resources_used": {
+        "cpupercent": 0,
+        "cput": "00:00:00",
+        "mem": "0kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "0kb",
+        "walltime": "00:00:00"
+      },
+      "run_count": 1,
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1537948.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:15 on (CN-051[1]:ncpus=32:mem=222gb)+(CN-059[1]:ncpus=32:mem=222gb)+(CN-160[1]:ncpus=32:mem=222gb)+(CN-066[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 1001,
+        "cput": "00:12:27",
+        "mem": "135008kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "4071444kb",
+        "walltime": "00:00:48"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537949.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:16 on (IN-008[0]:mem=125391mb:ncpus=4+IN-008[1]:mem=5681mb) and finished",
+      "resources_used": {
+        "cpupercent": 165,
+        "cput": "00:00:47",
+        "mem": "219636kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "396400kb",
+        "walltime": "00:00:32"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1537950.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:15 on (CN-063[1]:ncpus=32:mem=222gb)+(CN-053[1]:ncpus=32:mem=222gb)+(GN-A40-066[1]:ncpus=32:mem=222gb)+(CN-069[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 1832,
+        "cput": "00:29:16",
+        "mem": "565656kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "4173628kb",
+        "walltime": "00:01:54"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1537951.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 01:17 on (IN-008[0]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 156,
+        "cput": "00:02:32",
+        "mem": "418064kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "594696kb",
+        "walltime": "00:01:20"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    }
+  }
+}

@@ -120,6 +120,24 @@ def gpu_cells(root, graph, marker, processes, openmp_threads):
                        root / f"mpi_kokkos{suffix}" / "Cuda" / graph / f"p{p}" / "summary.json", marker)
 
 
+def additional_512_cells(root):
+    """The later requested T=2/8/16/32 splits; the original T=1/4 stay in vanda_cells."""
+    for graph in graph_names():
+        marker = root / 'cpu_core_groups_extra512' / graph / 'nodes8_cores64/complete.txt'
+        for method in ('hybrid', 'mpi_kokkos'):
+            for threads in (2, 8, 16, 32):
+                processes = 512 // threads
+                for mode in ('allgather', 'halo'):
+                    suffix = '_halo' if mode == 'halo' else ''
+                    base = root / 'strong' / graph / 'nodes8_p512' if method == 'hybrid' else root / 'kokkos_cpu_512' / graph
+                    folder = base / (method + suffix)
+                    if method == 'mpi_kokkos':
+                        folder /= 'OpenMP'
+                    summary = folder / graph / f'p{processes}_t{threads}/summary.json'
+                    stage = 'mpi_openmp_512_extra' if method == 'hybrid' else 'mpi_kokkos_cpu_512_extra'
+                    yield cell(stage, graph, f'n=8,p={processes},T={threads},{mode}', summary, marker)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("environment", choices=("vanda", "cloud"))
@@ -127,11 +145,15 @@ def main():
     parser.add_argument("--reuse-root", type=Path, action="append", default=[],
                         help="Reuse validated cells from another run without copying or rerunning them")
     parser.add_argument("--include-vanda-gpu-extension", action="store_true")
+    parser.add_argument('--include-additional-512', action='store_true',
+                        help='Audit the full 20,700 fixed-graph target, including the later requested 720 CPU splits')
     parser.add_argument("--csv", type=Path)
     args = parser.parse_args()
     root = args.results_root
     if args.environment == "vanda":
-        cells = vanda_cells(root, args.include_vanda_gpu_extension)
+        from itertools import chain
+        cells = chain(vanda_cells(root, args.include_vanda_gpu_extension),
+                      additional_512_cells(root) if args.include_additional_512 else ())
     else:
         cells = (cell_item for graph in graph_names()
                  for cell_item in gpu_cells(root, graph, root / "complete.txt", (1, 2, 4, 8),

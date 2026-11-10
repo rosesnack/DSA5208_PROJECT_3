@@ -1,0 +1,27 @@
+{
+  "observed_at": "2026-11-11T01:46:37.436335+08:00",
+  "source_job": "1537799.stdct-mgmt-02",
+  "previous_registry_row": {
+    "graph": "grid_hub_n400000_d16",
+    "nodes": "2",
+    "cores_per_node": "32",
+    "cores": "64",
+    "performance_job": "1537799.stdct-mgmt-02",
+    "validation_job": "1537800.stdct-mgmt-02",
+    "walltime": "00:30:00",
+    "cells": "10",
+    "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n2_c32.json",
+    "dependency": "1537725.stdct-mgmt-02"
+  },
+  "previous_exit_status": "-29",
+  "hosts": [
+    "cn-051",
+    "cn-053"
+  ],
+  "balance_before": 329.6769999999997,
+  "prior_pending_reservations": 0.0,
+  "new_reservation_cpu_hours": 32.0,
+  "performance_job": "1538102.stdct-mgmt-02",
+  "validation_job": "1538103.stdct-mgmt-02",
+  "status": "released"
+}

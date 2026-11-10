@@ -19,6 +19,17 @@ def cpu_hours(job):
     return int(job["Resource_List"]["ncpus"]) * (h + m / 60 + s / 3600)
 
 
+def allocation_request(group):
+    per_node = group['cores_per_node']
+    memory = max(per_node, 64) if group['graph'].startswith('strong_') else max(per_node, 4)
+    chunk = f'ncpus={per_node}:mpiprocs={per_node}:ompthreads=1:mem={memory}gb'
+    hosts = group.get('requested_hosts')
+    if hosts:
+        assert len(hosts) == len(set(hosts)) == group['nodes']
+        return '+'.join(f'1:{chunk}:host={host}' for host in hosts)
+    return f'{group["nodes"]}:{chunk}'
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("run_id")
@@ -86,10 +97,8 @@ def main():
                 plan.parent.mkdir(exist_ok=True)
                 plan.write_text(json.dumps(group, indent=2) + "\n")
                 env["CORE_GROUP_PLAN"] = str(plan.resolve())
-                per_node = group["cores_per_node"]
                 dependency = group.get("dependency", args.dependency)
-                memory = max(per_node, 64) if group["graph"].startswith("strong_") else max(per_node, 4)
-                resources = f'select={group["nodes"]}:ncpus={per_node}:mpiprocs={per_node}:ompthreads=1:mem={memory}gb'
+                resources = 'select=' + allocation_request(group)
                 perf = subprocess.check_output(["qsub", "-h", "-P", args.project, "-q", "auto", "-l", resources,
                     "-l", "walltime=" + group["walltime"], "-W", "depend=afterok:" + dependency,
                     "scripts/vanda_core_group_job.pbs"], env=env, text=True).strip()
@@ -107,7 +116,8 @@ def main():
                     writer = csv.DictWriter(output, fieldnames=fields, delimiter="\t")
                     writer.writeheader(); writer.writerows(existing)
                 allocated = json.loads(run("qstat", "-f", "-F", "json", perf))["Jobs"][perf]["Resource_List"]
-                if int(allocated["ncpus"]) != group["cores"] or int(allocated["nodect"]) != group["nodes"]:
+                hosts_match = all(h.lower() in allocated['select'].lower() for h in group.get('requested_hosts', []))
+                if int(allocated["ncpus"]) != group["cores"] or int(allocated["nodect"]) != group["nodes"] or not hosts_match:
                     run("qdel", val)
                     run("qdel", perf)
                     raise RuntimeError(f"Cancelled held allocation {perf}: PBS resources differ from the full-core plan")

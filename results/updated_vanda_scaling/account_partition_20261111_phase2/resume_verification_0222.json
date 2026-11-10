@@ -1,0 +1,14 @@
+{
+  "validated": 15393,
+  "expected": 19980,
+  "cross_account_registered_overlap": 0,
+  "assist_owned_cells": 448,
+  "phase2_new_groups": 59,
+  "phase2_new_cells": 258,
+  "phase2_reservations_cpu_hours": 220,
+  "primary_margin_cpu_hours": 16,
+  "assist_margin_cpu_hours": 64,
+  "interval_seconds": 60,
+  "primary_pid": 251391,
+  "assist_pid": 155730
+}

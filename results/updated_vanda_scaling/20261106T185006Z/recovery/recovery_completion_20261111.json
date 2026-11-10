@@ -1,0 +1,30 @@
+[
+  {
+    "source_job": "1537507",
+    "performance_job": "1538193.stdct-mgmt-02",
+    "validation_job": "1538194.stdct-mgmt-02",
+    "validated_cells": 10,
+    "group_complete": true
+  },
+  {
+    "source_job": "1537509",
+    "performance_job": "1538195.stdct-mgmt-02",
+    "validation_job": "1538196.stdct-mgmt-02",
+    "validated_cells": 10,
+    "group_complete": true
+  },
+  {
+    "source_job": "1537572",
+    "performance_job": "1538197.stdct-mgmt-02",
+    "validation_job": "1538198.stdct-mgmt-02",
+    "validated_cells": 10,
+    "group_complete": true
+  },
+  {
+    "source_job": "1537630",
+    "performance_job": "1538265.stdct-mgmt-02",
+    "validation_job": "1538266.stdct-mgmt-02",
+    "validated_cells": 10,
+    "group_complete": true
+  }
+]

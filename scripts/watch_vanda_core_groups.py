@@ -62,14 +62,18 @@ def job_snapshot(ids, cached):
 
 
 def cycle(args, root, jobs):
-    rows = list(csv.DictReader((root / 'core_group_jobs.tsv').open(), delimiter='\t'))
+    with (root / 'core_group_jobs.tsv').open() as source:
+        rows = list(csv.DictReader(source, delimiter='\t'))
     plan = json.loads(args.plan.read_text())
     ids = {r[c] for r in rows for c in ('performance_job', 'validation_job') if r[c]}
     ids.add(args.dependency)
+    ids.update(args.defer_held_job)
     ids.update(g['required_job'] for g in plan if g.get('required_job'))
     jobs = job_snapshot(ids, jobs)
     deferred = [r['performance_job'] for r in rows if int(r['cores']) > args.max_total_cores
                 and jobs.get(r['performance_job'], {}).get('job_state') in ('Q', 'H')]
+    deferred = sorted(set(deferred) | {i for i in args.defer_held_job
+                                      if jobs.get(i, {}).get('job_state') in ('Q', 'H')})
     for job_id in deferred:
         if 'u' not in jobs[job_id].get('Hold_Types', ''):
             command(['qhold', '-h', 'u', job_id])
@@ -142,6 +146,8 @@ def main():
     parser.add_argument('--once', action='store_true')
     parser.add_argument('--state-dir', type=Path, help='Keep heartbeat/log metadata outside a full results filesystem')
     parser.add_argument('--max-total-cores', type=int, default=512, help='Defer larger queued groups and only submit within this limit')
+    parser.add_argument('--defer-held-job', action='append', default=[],
+                        help='Keep a named legacy job user-held and exclude its confirmed hold from new reservations')
     parser.add_argument('--submit-script', type=Path, default=Path('scripts/submit_vanda_core_groups.py'))
     args = parser.parse_args()
     root = Path('results/updated_vanda_scaling') / args.run_id

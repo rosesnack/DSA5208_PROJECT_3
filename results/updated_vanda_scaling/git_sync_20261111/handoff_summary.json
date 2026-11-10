@@ -1,0 +1,112 @@
+{
+  "target": 20700,
+  "original_target": 19980,
+  "later_512_splits": 720,
+  "status_counts": {
+    "validated": 15541,
+    "deferred_512": 1160,
+    "unsubmitted": 3984,
+    "held": 5,
+    "performance_failed": 10
+  },
+  "submitted_group_counts": {
+    "xtt_ella": 83,
+    "hongxinran": 78
+  },
+  "mainline_coverage": [
+    {
+      "cores": 1,
+      "mainline_nodes": 1,
+      "expected_configs": 270,
+      "in_original_19980": 270,
+      "added_targets": 0,
+      "validated_configs": 258
+    },
+    {
+      "cores": 2,
+      "mainline_nodes": 1,
+      "expected_configs": 450,
+      "in_original_19980": 450,
+      "added_targets": 0,
+      "validated_configs": 410
+    },
+    {
+      "cores": 4,
+      "mainline_nodes": 1,
+      "expected_configs": 630,
+      "in_original_19980": 630,
+      "added_targets": 0,
+      "validated_configs": 554
+    },
+    {
+      "cores": 8,
+      "mainline_nodes": 1,
+      "expected_configs": 810,
+      "in_original_19980": 810,
+      "added_targets": 0,
+      "validated_configs": 702
+    },
+    {
+      "cores": 16,
+      "mainline_nodes": 1,
+      "expected_configs": 990,
+      "in_original_19980": 990,
+      "added_targets": 0,
+      "validated_configs": 850
+    },
+    {
+      "cores": 32,
+      "mainline_nodes": 1,
+      "expected_configs": 1170,
+      "in_original_19980": 1170,
+      "added_targets": 0,
+      "validated_configs": 1140
+    },
+    {
+      "cores": 64,
+      "mainline_nodes": 2,
+      "expected_configs": 1170,
+      "in_original_19980": 1170,
+      "added_targets": 0,
+      "validated_configs": 1060
+    },
+    {
+      "cores": 128,
+      "mainline_nodes": 4,
+      "expected_configs": 1170,
+      "in_original_19980": 1170,
+      "added_targets": 0,
+      "validated_configs": 988
+    },
+    {
+      "cores": 256,
+      "mainline_nodes": 8,
+      "expected_configs": 1170,
+      "in_original_19980": 1170,
+      "added_targets": 0,
+      "validated_configs": 978
+    },
+    {
+      "cores": 512,
+      "mainline_nodes": 8,
+      "expected_configs": 1170,
+      "in_original_19980": 450,
+      "added_targets": 720,
+      "validated_configs": 5
+    }
+  ],
+  "registered_cross_account_overlap": 0,
+  "snapshots": {
+    "xtt_ella": {
+      "observed_at": "2026-11-11T03:06:13.796472+08:00",
+      "monitor_action": "waiting_real_credits",
+      "active_job_count": 8
+    },
+    "hongxinran": {
+      "observed_at": "2026-11-11T03:06:13.798135+08:00",
+      "monitor_action": "no_eligible_unregistered_cells",
+      "active_job_count": 70
+    }
+  },
+  "scope_note": "Thread range is 1/2/4/8/16/32. Regular per-node CPU budget is at most 32; the 512 endpoint uses 8 nodes x 64. Weak scaling is separate."
+}

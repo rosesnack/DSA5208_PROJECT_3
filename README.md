@@ -1,5 +1,9 @@
 # PageRank: Serial, OpenMP, MPI, MPI+OpenMP, MPI+CUDA, and MPI+Kokkos
 
+Latest Vanda progress: [Nov 11 complete audit, successful batches, and remaining configurations](updated_vanda_progress_20261111.md).
+
+Full fixed-graph target: **20,700 configurations** (original 19,980 plus 720 later requested 512-core splits). See [CPU split coverage, submission IDs, and the complete handoff manifest](updated_cpu_layout_coverage_20261111.md).
+
 A C++17 implementation of synchronous pull-based PageRank for DSA5208 Project 3. The fixed-graph matrix compares Serial, OpenMP, CUDA, Kokkos OpenMP/CUDA, pure MPI, MPI+OpenMP, MPI+CUDA, and MPI+Kokkos. Every MPI method implements both Allgatherv and Halo; the standalone methods have no MPI communication mode.
 
 ## Project structure

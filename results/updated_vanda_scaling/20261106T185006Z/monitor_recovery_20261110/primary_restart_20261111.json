@@ -1,0 +1,25 @@
+{
+  "observed_at": "2026-11-11T00:53:46.841953+08:00",
+  "pid": 3416408,
+  "args": [
+    "python3",
+    "-u",
+    "scripts/watch_vanda_core_groups.py",
+    "20261106T185006Z",
+    "personal-xtt_ella",
+    "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111.json",
+    "--state-dir",
+    "results/updated_vanda_scaling/20261106T185006Z/monitor_recovery_20261110",
+    "--dependency",
+    "1530741.stdct-mgmt-02",
+    "--until",
+    "2026-11-12T23:59:00+08:00",
+    "--interval",
+    "300",
+    "--max-total-cores",
+    "256",
+    "--submit-script",
+    "scripts/submit_vanda_core_groups.py"
+  ],
+  "delegated_cells": 190
+}

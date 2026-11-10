@@ -1,0 +1,41 @@
+{
+  "performance_job": "1538223.stdct-mgmt-02",
+  "group": {
+    "graph": "grid_hub_n400000_d16",
+    "nodes": 1,
+    "cores_per_node": 2,
+    "cores": 2,
+    "priority": 1,
+    "walltime": "00:20:00",
+    "prerequisite": "",
+    "required_job": "1537725.stdct-mgmt-02",
+    "dense_launch_pause_s": 0,
+    "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
+    "cells": [
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 1,
+        "threads": 2,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_hub_n400000_d16/nodes1/mpi_kokkos/OpenMP/grid_hub_n400000_d16/p1_t2/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 1,
+        "threads": 2,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_hub_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_hub_n400000_d16/p1_t2/summary.json"
+      }
+    ],
+    "dependency": "1537725.stdct-mgmt-02",
+    "requested_hosts": [
+      "cn-051"
+    ]
+  },
+  "mpi": "mpicxx: Open MPI 4.1.8 (Language: C++)",
+  "compiler": "g++ (GCC) 13.3.0",
+  "cmake": [
+    "CMAKE_BUILD_TYPE:STRING=Release",
+    "CMAKE_CXX_COMPILER:STRING=/cm/shared/apps/openmpi4/gcc/4.1.8/bin/mpicxx"
+  ]
+}

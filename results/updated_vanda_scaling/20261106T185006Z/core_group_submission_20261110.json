@@ -1,0 +1,81 @@
+{
+  "observed_at": "2026-11-10T23:53:10.169492+08:00",
+  "submitted": true,
+  "balance": 7223.474,
+  "balance_source": "hpc_project",
+  "prior_pending_reservations": 0,
+  "margin": 64.0,
+  "deferred_user_held_jobs": [
+    "1532794.stdct-mgmt-02"
+  ],
+  "new_reservations": 928.0,
+  "uncommitted_after_margin": 6231.474,
+  "groups": [
+    {
+      "graph": "grid_controlled_n100000_d16",
+      "nodes": 8,
+      "cores": 256,
+      "cells": 10,
+      "walltime": "01:00:00",
+      "reservation": 256.0,
+      "performance_job": "1537463.stdct-mgmt-02",
+      "validation_job": "1537464.stdct-mgmt-02",
+      "dependency": "1530741.stdct-mgmt-02"
+    },
+    {
+      "graph": "grid_controlled_n100000_d4",
+      "nodes": 8,
+      "cores": 256,
+      "cells": 10,
+      "walltime": "01:00:00",
+      "reservation": 256.0,
+      "performance_job": "1537465.stdct-mgmt-02",
+      "validation_job": "1537466.stdct-mgmt-02",
+      "dependency": "1530741.stdct-mgmt-02"
+    },
+    {
+      "graph": "grid_controlled_n200000_d16",
+      "nodes": 2,
+      "cores": 64,
+      "cells": 10,
+      "walltime": "00:30:00",
+      "reservation": 32.0,
+      "performance_job": "1537467.stdct-mgmt-02",
+      "validation_job": "1537468.stdct-mgmt-02",
+      "dependency": "1530741.stdct-mgmt-02"
+    },
+    {
+      "graph": "grid_controlled_n200000_d16",
+      "nodes": 4,
+      "cores": 128,
+      "cells": 10,
+      "walltime": "00:45:00",
+      "reservation": 96.0,
+      "performance_job": "1537469.stdct-mgmt-02",
+      "validation_job": "1537470.stdct-mgmt-02",
+      "dependency": "1530741.stdct-mgmt-02"
+    },
+    {
+      "graph": "grid_controlled_n200000_d16",
+      "nodes": 8,
+      "cores": 256,
+      "cells": 26,
+      "walltime": "01:00:00",
+      "reservation": 256.0,
+      "performance_job": "1537471.stdct-mgmt-02",
+      "validation_job": "1537472.stdct-mgmt-02",
+      "dependency": "1530741.stdct-mgmt-02"
+    },
+    {
+      "graph": "grid_controlled_n200000_d8",
+      "nodes": 2,
+      "cores": 64,
+      "cells": 10,
+      "walltime": "00:30:00",
+      "reservation": 32.0,
+      "performance_job": "1537473.stdct-mgmt-02",
+      "validation_job": "1537474.stdct-mgmt-02",
+      "dependency": "1530741.stdct-mgmt-02"
+    }
+  ]
+}
