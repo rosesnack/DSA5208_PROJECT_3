@@ -2,7 +2,7 @@
 
 Latest Vanda progress: [Nov 11 complete audit, successful batches, and remaining configurations](updated_vanda_progress_20261111.md).
 
-Full fixed-graph target: **20,700 configurations** (original 19,980 plus 720 later requested 512-core splits). See [CPU split coverage, submission IDs, and the complete handoff manifest](updated_cpu_layout_coverage_20261111.md).
+Full fixed-graph target: **20,700 configurations** (original 19,980 plus 720 later requested 512-core splits). **Current execution and teammate handover: [Vanda handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md).** It distinguishes completed, submitted, held, failed, deferred and owner-assigned missing cells; do not submit from an old plan or a fresh RUN_ID without ownership transfer. See also [CPU split coverage](updated_cpu_layout_coverage_20261111.md).
 
 A C++17 implementation of synchronous pull-based PageRank for DSA5208 Project 3. The fixed-graph matrix compares Serial, OpenMP, CUDA, Kokkos OpenMP/CUDA, pure MPI, MPI+OpenMP, MPI+CUDA, and MPI+Kokkos. Every MPI method implements both Allgatherv and Halo; the standalone methods have no MPI communication mode.
 
@@ -218,7 +218,7 @@ Each configuration saves the following files. Set `PAGERANK_RESULTS_ROOT` to a r
 | `ranks.csv` | Final ranks and node degrees from the last run |
 | `history.csv` | Per-iteration L1 differences from the last run |
 
-**Current Vanda continuation (2026-11-09):** follow the [handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md), [service and result status](updated_vanda_run_status_20261109.md), and [non-512 priority / complete missing configurations](updated_non512_priority_and_remaining_20261109.md). The fixed matrix has 14,393/19,980 validated cells. Only missing or invalid performance measurements use the paid queue; dependent jobs use `auto_free` for independent checks and publishing. Automatic continuation currently prioritizes all non-512-core configurations and defers new 512-core work. Existing valid Serial/GPU results and saved five-repeat measurements are reused. The three-graph suites below are historical demonstration/validation entry points, separate from this continuation.
+**Current Vanda continuation (2026-11-11):** use the [single current handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md) and [full per-cell ownership manifest](results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv). The full fixed matrix has 15,541/20,700 validated cells; the 03:31 SGT live check found no running/queued work. Unsubmitted cells remain owned by the primary continuation plan; teammates must coordinate transfer before submission. Only missing/invalid performance uses paid queues; builds, data preparation and independent validation use free queues. Existing validated results are reused. The suites below document general entry points and are not instructions to rerun the current campaign.
 
 **Complete local backup:** source, scripts and result tables are tracked here. The [full backup guide](FULL_PROJECT_BACKUP_20261109.md) links the same repository's Release containing all local graph inputs, raw rank vectors, pinned Kokkos source, checksums and restore instructions.
 
@@ -236,26 +236,24 @@ The GPU job stores results separately under `results/vanda-a40-gpu/<PBS_JOBID>/`
 
 ## Updated experiment matrix and coverage
 
-The target matrix is specified in [`updated_experiment_matrix_20261103.md`](updated_experiment_matrix_20261103.md). It covers the three original graphs and all 42 reproducible fixed graphs, plus three separate weak-scaling graph families. The generated grid crosses 50k/100k/200k/400k vertices with average out-degree 4/8/16 for each family. The 45 fixed graphs are used for standalone comparisons and strong scaling; the weak-scaling graphs are generated separately as resource counts grow. The target matrix is larger than the currently validated result set.
+The full current target matrix and statuses are specified in the [handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md); [`updated_experiment_matrix_20261103.md`](updated_experiment_matrix_20261103.md) preserves the earlier design. It covers the three original graphs and all 42 reproducible fixed graphs, plus three separate weak-scaling graph families. The generated grid crosses 50k/100k/200k/400k vertices with average out-degree 4/8/16 for each family. The 45 fixed graphs are used for standalone comparisons and strong scaling; the weak-scaling graphs are generated separately as resource counts grow. The target matrix is larger than the currently validated result set.
 
-The latest PBS and validated-batch snapshot is in [`updated_vanda_run_status_20261106.md`](updated_vanda_run_status_20261106.md). The strict completed/missing inventory and current conclusions are in [`updated_experimental_conclusions_20261105.md`](updated_experimental_conclusions_20261105.md). The fixed-matrix cell count, per-job PBS walltimes, and CPU-hour budget are in [`updated_vanda_runtime_budget_20261105.md`](updated_vanda_runtime_budget_20261105.md). The group handoff, including live queue states, completed/missing matrix cells, and Vanda onboarding steps, is in [`HANDOFF_VANDA_EXPERIMENTS_20261106.md`](HANDOFF_VANDA_EXPERIMENTS_20261106.md); earlier dated snapshots retain the submission history.
+The current completed/missing matrix, live-state snapshot times, ownership and teammate prompt are in the [handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md). Older dated status/conclusion/budget documents are historical observations, not current submission instructions.
 
 - **Standalone ablations:** Serial; OpenMP with 1/2/4/8/16/32 threads; Kokkos OpenMP with the same thread counts; native CUDA and Kokkos CUDA with one A40. These methods have no MPI communication choice.
-- **CPU distributed methods:** Pure MPI and MPI+Kokkos OpenMP at T=1 use 1/2/4/8 nodes crossed with 1/2/4/8/16/32 ranks per node, plus a separate 8-node × 64-rank 512-core point. MPI+OpenMP adds every T=1/2/4/8/16/32 that fits 32 CPU cores per node, plus 512×1 and 128×4 on 8 nodes with 64 cores per node. The matching MPI+Kokkos OpenMP T>1 grid is implemented as a separate extension pipeline, so older queued CPU batches retain their original workload. Each graph, rank, thread, and node layout runs **both** `--communication=allgather` and `--communication=halo`.
+- **CPU distributed methods:** Pure MPI and MPI+Kokkos OpenMP at T=1 use 1/2/4/8 nodes crossed with 1/2/4/8/16/32 ranks per node, plus a separate 8-node × 64-rank 512-core point. MPI+OpenMP adds every T=1/2/4/8/16/32 that fits 32 CPU cores per node, plus 512×1 and 128×4 on 8 nodes with 64 cores per node. The matching MPI+Kokkos OpenMP T>1 grid is implemented as a separate extension pipeline. The later requested 512-core T=2/8/16/32 splits add 720 cells for the two hybrid methods; these remain in the full target. Each graph, rank, thread, and node layout runs **both** `--communication=allgather` and `--communication=halo`.
 - **Matched GPU-node methods:** On the same allocated GPU nodes, pure MPI, MPI+OpenMP T=1/2/4/8, MPI+CUDA, and MPI+Kokkos CUDA cover p=n=1/2 with one rank and one A40 per node. Each method runs both communication modes on the same graph and layout. T=1 is a CPU control; T=2/4/8 exercises OpenMP inside each MPI rank. Serial and standalone OpenMP/CUDA/Kokkos CUDA are measured on that GPU-node environment as ablations. GPU p=4/8 is excluded from the experiment plan and will not be submitted.
 - **Weak scaling (required in this project plan):** Three synthetic graph families keep 50k vertices and 800k edges per rank. Pure MPI and MPI+Kokkos OpenMP cover p=1…256 plus the p=512 endpoint; MPI+OpenMP T=4 covers p=1…64 plus p=128,T=4, paired at 512 CPU cores. Both communication modes are run at every MPI point. The p=512 graphs have 25.6m vertices and 409.6m edges each. Matched Vanda GPU-node MPI methods cover p=1/2, with MPI+OpenMP T=1/2/4/8; standalone CUDA/Kokkos CUDA also run on these weak graphs. No p=4/8 GPU extension is in scope.
 
-The original weak curves hold work **per rank** constant. For a matched work-per-CPU-core comparison at T=4, `scripts/run_vanda_cpu_core_weak.sh` reuses the `weak_pC` graph for `C=p×4` CPU cores, so vertices and edges scale with C. It runs both MPI+OpenMP and MPI+Kokkos OpenMP, each with both communication modes, for C=4/8/16/32/64/128/256/512. Submit it only when Vanda CPU credits can reserve its walltime:
+The original weak curves hold work **per rank** constant. For a matched work-per-CPU-core comparison at T=4, `scripts/run_vanda_cpu_core_weak.sh` reuses the `weak_pC` graph for `C=p×4` CPU cores, so vertices and edges scale with C. It runs both MPI+OpenMP and MPI+Kokkos OpenMP, each with both communication modes, for C=4/8/16/32/64/128/256/512. All 96 of these cells have validated local evidence; reuse them. The separate weak inventory and evidence gaps are in the handoff.
 
-```bash
-MAX_NEW_FAMILIES=1 bash scripts/submit_vanda_core_weak.sh <run-id> <project-name>
-```
-
-The p=512 graph is already generated by the existing data pipeline; this comparison changes its rank/thread layout rather than its edges. These extra core-normalized curves are separate from the original rank-normalized weak curves and have no Vanda performance measurements yet.
+The p=512 graph is already generated by the existing data pipeline; this comparison changes its rank/thread layout rather than its edges. These core-normalized curves are separate from the original rank-normalized weak curves; their 96 Vanda measurements are complete. The controlled family rank-normalized 512-core endpoint has six cells whose remote evidence must be checked before any rerun.
 
 For strong scaling, one graph stays fixed as resources increase. For weak scaling, graph size grows in proportion to rank count. Record total solve time and iteration count in both cases; weak scaling additionally compares time per iteration against p=1. `solve_s` times the iterative solver, including its MPI waits and device transfers. Halo setup time and bytes are separate fields. Use Release builds, one warmup, five measured repeats, and the median throughout.
 
 ### Submit and monitor on Vanda
+
+**Current campaign:** follow the ownership-transfer procedure in the [handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md) before using any submission command below. These general scripts do not coordinate ownership across accounts or a new RUN_ID. Serial, standalone methods and GPU sections are already complete; do not resubmit them.
 
 The jobs require Kokkos 4.5.01 source at `third_party/kokkos`. Stage the repository and Kokkos on Vanda, then submit free-queue data/build/smoke jobs:
 
@@ -274,7 +272,7 @@ bash scripts/submit_vanda_cpu_weak.sh <run-id> <project-name>
 MAX_NEW_GRAPHS=1 bash scripts/submit_vanda_full_experiments.sh <run-id> <project-name>
 ```
 
-All submitters skip already recorded batches, so the last command can be repeated after each CPU batch completes. Increase `MAX_NEW_GRAPHS` only when project CPU credits permit the additional reserved walltime. Job IDs are recorded in `results/updated_vanda_scaling/<run-id>/submitted_jobs.tsv`. The original CPU batches reach 8 nodes × 32 cores; the extra 512-core endpoint uses 8 nodes × 64 cores. The p=512 weak graphs are split by synthetic family because each has 409.6 million edges. Vanda GPU batches request two nodes × one A40 and run p=1/2. Check completed batches, active jobs, allocations, and rank placement with:
+Submitters skip batches recorded in their own run registry. They do not deduplicate against other accounts or a fresh RUN_ID; do not use a broad plan to continue the current campaign. Use only a coordinated missing-cell plan with transferred ownership. Increase `MAX_NEW_GRAPHS` only when project CPU credits permit the additional reserved walltime. Job IDs are recorded in `results/updated_vanda_scaling/<run-id>/submitted_jobs.tsv`. The original CPU batches reach 8 nodes × 32 cores; the extra 512-core endpoint uses 8 nodes × 64 cores. The p=512 weak graphs are split by synthetic family because each has 409.6 million edges. Vanda GPU batches request two nodes × one A40 and run p=1/2. Check completed batches, active jobs, allocations, and rank placement with:
 
 ```bash
 python3 scripts/check_vanda_progress.py <run-id> --qstat
@@ -282,7 +280,7 @@ python3 scripts/check_vanda_progress.py <run-id> --missing
 python3 scripts/audit_fixed_matrix.py vanda results/updated_vanda_scaling/<run-id>
 ```
 
-The fixed-graph audit enumerates every expected method, graph, communication mode, and resource layout. It reports completed cells against the target rather than counting submitted PBS jobs as finished experiments. The full Vanda fixed-graph target has 18,315 CPU cells and 1,665 GPU-node cells; the GPU-node standalone OpenMP sweep includes T=16/32 as well as T=1/2/4/8. The CPU Kokkos thread-grid extension is submitted separately after the serial baseline passes, only when project credits allow its reserved walltime:
+The fixed-graph audit enumerates every expected method, graph, communication mode, and resource layout. It reports completed cells against the target rather than counting submitted PBS jobs as finished experiments. The original Vanda fixed-graph target has 18,315 CPU cells and 1,665 GPU-node cells; the full target adds 720 CPU splits, giving 19,035 CPU and 1,665 GPU-node cells; the GPU-node standalone OpenMP sweep includes T=16/32 as well as T=1/2/4/8. The CPU Kokkos thread-grid extension is submitted separately after the serial baseline passes, only when project credits allow its reserved walltime:
 
 ```bash
 MAX_NEW_GRAPHS=1 bash scripts/submit_vanda_kokkos_cpu_grid.sh <run-id> <project-name>

@@ -96,14 +96,38 @@
     }
   ],
   "registered_cross_account_overlap": 0,
+  "future_plan_cross_account_overlap": 0,
+  "unfinished_owner_counts": {
+    "xtt_ella": 5159
+  },
+  "future_plans": {
+    "xtt_ella": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111_phase2_small_balance.json",
+    "hongxinran": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261111_phase2.json"
+  },
+  "handoff_rule": "Frozen snapshot: no row grants submission permission. Unsubmitted cells remain owned; transfer ownership out of the live source plan and check both live queues before a teammate submits. Local RUN_ID deduplication is not cross-account locking.",
+  "weak_scaling_separate": {
+    "core_cpu": {
+      "validated": 96
+    },
+    "gpu_node": {
+      "validated": 138
+    },
+    "rank_cpu_512": {
+      "validated": 12,
+      "evidence_missing_verify_remote_first": 6
+    },
+    "rank_cpu_regular": {
+      "validated": 150
+    }
+  },
   "snapshots": {
     "xtt_ella": {
-      "observed_at": "2026-11-11T03:06:13.796472+08:00",
+      "observed_at": "2026-11-11T03:31:45.168818+08:00",
       "monitor_action": "waiting_real_credits",
       "active_job_count": 8
     },
     "hongxinran": {
-      "observed_at": "2026-11-11T03:06:13.798135+08:00",
+      "observed_at": "2026-11-11T03:31:46.608008+08:00",
       "monitor_action": "no_eligible_unregistered_cells",
       "active_job_count": 70
     }

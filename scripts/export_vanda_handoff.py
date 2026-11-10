@@ -6,12 +6,12 @@ import json
 from pathlib import Path
 import re
 
-from audit_fixed_matrix import additional_512_cells, graph_names, vanda_cells
+from audit_fixed_matrix import additional_512_cells, graph_names, gpu_cells, vanda_cells
 
 
-def write_csv(path, rows):
+def write_csv(path, rows, fieldnames=None):
     with path.open('w', newline='') as output:
-        writer = csv.DictWriter(output, fieldnames=list(rows[0]), lineterminator='\n')
+        writer = csv.DictWriter(output, fieldnames=fieldnames or list(rows[0]), lineterminator='\n')
         writer.writeheader()
         writer.writerows(rows)
 
@@ -55,17 +55,94 @@ def cpu_path(root, graph, nodes, cores, method, threads, communication):
     return folder / graph / config / 'summary.json'
 
 
+def plan_owners(plans):
+    """Future plans are ownership records, including cells not yet submitted."""
+    owners = {}
+    for account, path in plans.items():
+        for group in json.loads(path.read_text()):
+            for item in group['cells']:
+                key = item['canonical_summary']
+                if key in owners:
+                    raise ValueError(f'Duplicate future ownership: {key}')
+                owners[key] = account
+    return owners
+
+
+def handoff_action(status):
+    if status == 'validated':
+        return 'reuse_do_not_rerun'
+    if status == 'unsubmitted':
+        return 'owner_transfer_required_before_submission'
+    if status == 'deferred_512':
+        return 'deferred_do_not_submit'
+    if status == 'performance_failed':
+        return 'owner_review_failure_and_partial_results'
+    if status == 'held':
+        return 'owner_review_existing_job_do_not_duplicate'
+    return 'track_existing_jobs_do_not_resubmit'
+
+
+def export_weak_inventory(output, roots):
+    """Keep the separate weak curves visible without assigning an unverified rerun."""
+    rows = []
+
+    def add(suite, family, path, marker):
+        source = next((root for root in roots if (root / path).is_file() and (root / marker).is_file()), None)
+        rows.append({'suite': suite, 'family': family, 'canonical_summary': str(path),
+                     'status': 'validated' if source else 'evidence_missing_verify_remote_first',
+                     'source_root': str(source) if source else '',
+                     'marker': str(source / marker) if source else '',
+                     'handoff_action': 'reuse_do_not_rerun' if source else 'owner_review_remote_outputs_and_legacy_jobs',
+                     'submission_allowed_from_snapshot': False})
+
+    for family in ('uniform', 'hub', 'controlled'):
+        for method in ('mpi', 'mpi_kokkos', 'hybrid'):
+            for endpoint in (False, True):
+                counts = (128,) if method == 'hybrid' else (512,)
+                if not endpoint:
+                    counts = (1, 2, 4, 8, 16, 32, 64) if method == 'hybrid' else (1, 2, 4, 8, 16, 32, 64, 128, 256)
+                folder = Path('weak_512') / family if endpoint else Path('weak')
+                for p in counts:
+                    for mode in ('', '_halo'):
+                        base = folder / (method + mode)
+                        if method == 'mpi_kokkos':
+                            base /= 'OpenMP'
+                        config = f'p{p}_t4' if method == 'hybrid' else f'p{p}'
+                        add('rank_cpu_512' if endpoint else 'rank_cpu_regular', family,
+                            base / f'weak_{family}_p{p:03d}' / config / 'summary.json', folder / 'complete.txt')
+        for cores in (4, 8, 16, 32, 64, 128, 256, 512):
+            folder = Path('weak_core') / family
+            for method in ('hybrid', 'mpi_kokkos'):
+                for mode in ('', '_halo'):
+                    base = folder / (method + mode)
+                    if method == 'mpi_kokkos':
+                        base /= 'OpenMP'
+                    add('core_cpu', family, base / f'weak_{family}_p{cores:03d}' / f'p{cores // 4}_t4/summary.json',
+                        folder / f'complete_p{512 if cores == 512 else 256}.txt')
+        for scale in (1, 2):
+            for item in gpu_cells(Path('gpu_weak'), f'weak_{family}_p{scale:03d}',
+                                  Path('gpu_weak/complete.txt'), (scale,), (1, 2, 4, 8, 16, 32)):
+                add('gpu_node', family, item['summary'], item['marker'])
+    write_csv(output / 'weak_experiment_manifest.csv', rows)
+    return {suite: dict(Counter(r['status'] for r in rows if r['suite'] == suite))
+            for suite in sorted({r['suite'] for r in rows})}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--audit', required=True, type=Path)
     parser.add_argument('--main-root', required=True, type=Path)
     parser.add_argument('--assist-root', required=True, type=Path)
     parser.add_argument('--snapshots', required=True, type=Path)
+    parser.add_argument('--main-plan', required=True, type=Path)
+    parser.add_argument('--assist-plan', required=True, type=Path)
     parser.add_argument('--output', required=True, type=Path)
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     with args.audit.open() as source:
         audit = list(csv.DictReader(source))
+    plans = {'xtt_ella': args.main_plan, 'hongxinran': args.assist_plan}
+    owners = plan_owners(plans)
     registered, snapshots, submitted = {}, {}, []
     for account, root in [('xtt_ella', args.main_root), ('hongxinran', args.assist_root)]:
         snapshots[account] = json.loads((args.snapshots / f'queue_{account}.json').read_text())
@@ -99,14 +176,27 @@ def main():
             status = 'deferred_512' if '512' in row['stage'] else 'unsubmitted'
         if not validated:
             completion, candidates = '', perf
+            if key not in owners:
+                raise ValueError(f'Unfinished cell has no future owner: {key}')
+            if assignment and owners[key] != account:
+                raise ValueError(f'Submitted cell conflicts with future ownership: {key}')
         item = {**row, 'canonical_summary': key, 'status': status, 'assigned_account': account,
                 'performance_job': perf, 'validation_job': val, 'completion_job': completion,
                 'performance_job_candidates': candidates, 'pbs_state': job.get('job_state', ''),
-                'hold_types': job.get('Hold_Types', ''), 'submission_plan': assignment['plan'] if assignment else ''}
+                'hold_types': job.get('Hold_Types', ''), 'submission_plan': assignment['plan'] if assignment else '',
+                'future_owner': '' if validated else owners[key],
+                'future_plan': '' if validated else str(plans[owners[key]]),
+                'handoff_action': handoff_action(status), 'submission_allowed_from_snapshot': False}
         manifest.append(item)
         coverage[key] = item
     write_csv(args.output / 'experiment_manifest_20700.csv', manifest)
     write_csv(args.output / 'submitted_core_groups.csv', submitted)
+    # These are frozen inventories, not reservations or runnable submission plans.
+    statuses = ('validated', 'unsubmitted', 'deferred_512', 'performance_failed', 'held',
+                'queued', 'running', 'exiting', 'awaiting_validation', 'registered_unconfirmed')
+    for status in statuses:
+        write_csv(args.output / f'cells_{status}.csv', [r for r in manifest if r['status'] == status],
+                  fieldnames=list(manifest[0]))
 
     original = {str(c['summary'].relative_to(args.main_root)) for c in vanda_cells(args.main_root)}
     full = {str(c['summary'].relative_to(args.main_root)) for c in additional_512_cells(args.main_root)} | original
@@ -132,10 +222,17 @@ def main():
                        'added_targets': sum(not x['in_original_19980'] for x in rows),
                        'validated_configs': sum(x['status'] == 'validated' for x in rows)})
     write_csv(args.output / 'cpu_core_layouts.csv', layouts)
+    weak = export_weak_inventory(args.output, list(dict.fromkeys([args.main_root, args.assist_root,
+                                *(Path(r['source_root']) for r in audit)])))
     summary = {'target': 20700, 'original_target': 19980, 'later_512_splits': 720,
                'status_counts': dict(Counter(x['status'] for x in manifest)),
                'submitted_group_counts': dict(Counter(x['account'] for x in submitted)),
                'mainline_coverage': totals, 'registered_cross_account_overlap': 0,
+               'future_plan_cross_account_overlap': 0,
+               'unfinished_owner_counts': dict(Counter(x['future_owner'] for x in manifest if x['future_owner'])),
+               'future_plans': {user: str(path) for user, path in plans.items()},
+               'handoff_rule': 'Frozen snapshot: no row grants submission permission. Unsubmitted cells remain owned; transfer ownership out of the live source plan and check both live queues before a teammate submits. Local RUN_ID deduplication is not cross-account locking.',
+               'weak_scaling_separate': weak,
                'snapshots': {user: {'observed_at': snap['observed_at'], 'monitor_action': snap['monitor']['action'],
                                      'active_job_count': len(snap['active_jobs'])} for user, snap in snapshots.items()},
                'scope_note': 'Thread range is 1/2/4/8/16/32. Regular per-node CPU budget is at most 32; the 512 endpoint uses 8 nodes x 64. Weak scaling is separate.'}
