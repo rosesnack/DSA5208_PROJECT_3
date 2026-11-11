@@ -15100,7 +15100,18 @@
         "canonical_summary": "strong/grid_hub_n400000_d8/nodes8/hybrid_halo/grid_hub_n400000_d8/p8_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_controlled_n200000_d16",
@@ -15522,7 +15533,18 @@
         "canonical_summary": "strong/grid_controlled_n400000_d4/nodes8/hybrid_halo/grid_controlled_n400000_d4/p16_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_controlled_n400000_d8",
@@ -15607,7 +15629,18 @@
         "canonical_summary": "strong/grid_controlled_n400000_d8/nodes8/hybrid_halo/grid_controlled_n400000_d8/p16_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n400000_d16",
@@ -15692,7 +15725,18 @@
         "canonical_summary": "strong/grid_hub_n400000_d16/nodes8/hybrid_halo/grid_hub_n400000_d16/p16_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n400000_d4",
@@ -15777,7 +15821,18 @@
         "canonical_summary": "strong/grid_hub_n400000_d4/nodes8/hybrid_halo/grid_hub_n400000_d4/p16_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n400000_d8",
@@ -15862,7 +15917,18 @@
         "canonical_summary": "strong/grid_hub_n400000_d8/nodes8/hybrid_halo/grid_hub_n400000_d8/p16_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_controlled_n200000_d16",
@@ -16424,7 +16490,18 @@
         "canonical_summary": "strong/grid_controlled_n400000_d4/nodes8/hybrid_halo/grid_controlled_n400000_d4/p32_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_controlled_n400000_d8",
@@ -16537,7 +16614,18 @@
         "canonical_summary": "strong/grid_controlled_n400000_d8/nodes8/hybrid_halo/grid_controlled_n400000_d8/p32_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n400000_d16",
@@ -16650,7 +16738,18 @@
         "canonical_summary": "strong/grid_hub_n400000_d16/nodes8/hybrid_halo/grid_hub_n400000_d16/p32_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n400000_d4",
@@ -16763,7 +16862,18 @@
         "canonical_summary": "strong/grid_hub_n400000_d4/nodes8/hybrid_halo/grid_hub_n400000_d4/p32_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n400000_d8",
@@ -16876,7 +16986,18 @@
         "canonical_summary": "strong/grid_hub_n400000_d8/nodes8/hybrid_halo/grid_hub_n400000_d8/p32_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_controlled_n200000_d16",
@@ -17578,7 +17699,18 @@
         "canonical_summary": "strong/grid_controlled_n400000_d4/nodes8/hybrid_halo/grid_controlled_n400000_d4/p64_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_controlled_n400000_d8",
@@ -17719,7 +17851,18 @@
         "canonical_summary": "strong/grid_controlled_n400000_d8/nodes8/hybrid_halo/grid_controlled_n400000_d8/p64_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n400000_d16",
@@ -17860,7 +18003,18 @@
         "canonical_summary": "strong/grid_hub_n400000_d16/nodes8/hybrid_halo/grid_hub_n400000_d16/p64_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n400000_d4",
@@ -18001,7 +18155,18 @@
         "canonical_summary": "strong/grid_hub_n400000_d4/nodes8/hybrid_halo/grid_hub_n400000_d4/p64_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n400000_d8",
@@ -18142,7 +18307,18 @@
         "canonical_summary": "strong/grid_hub_n400000_d8/nodes8/hybrid_halo/grid_hub_n400000_d8/p64_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_controlled_n200000_d16",
@@ -18984,7 +19160,18 @@
         "canonical_summary": "strong/grid_controlled_n400000_d4/nodes8/hybrid_halo/grid_controlled_n400000_d4/p128_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_controlled_n400000_d8",
@@ -19153,7 +19340,18 @@
         "canonical_summary": "strong/grid_controlled_n400000_d8/nodes8/hybrid_halo/grid_controlled_n400000_d8/p128_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n400000_d16",
@@ -19322,7 +19520,18 @@
         "canonical_summary": "strong/grid_hub_n400000_d16/nodes8/hybrid_halo/grid_hub_n400000_d16/p128_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n400000_d4",
@@ -19491,7 +19700,18 @@
         "canonical_summary": "strong/grid_hub_n400000_d4/nodes8/hybrid_halo/grid_hub_n400000_d4/p128_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n400000_d8",
@@ -19660,7 +19880,18 @@
         "canonical_summary": "strong/grid_hub_n400000_d8/nodes8/hybrid_halo/grid_hub_n400000_d8/p128_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_controlled_n100000_d16",
@@ -19773,7 +20004,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n50000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d16/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_controlled_n50000_d8",
@@ -19802,7 +20044,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n50000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d8/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n100000_d16",
@@ -19831,7 +20084,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n100000_d16/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n100000_d4",
@@ -19860,7 +20124,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n100000_d4/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n100000_d8",
@@ -19889,7 +20164,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n100000_d8/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n200000_d16",
@@ -19918,7 +20204,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n200000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n200000_d16/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n200000_d4",
@@ -19947,7 +20244,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n200000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n200000_d4/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n200000_d8",
@@ -19976,7 +20284,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n200000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n200000_d8/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n50000_d16",
@@ -20005,7 +20324,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n50000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n50000_d16/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n50000_d4",
@@ -20034,7 +20364,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n50000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n50000_d4/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n50000_d8",
@@ -20063,7 +20404,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n50000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n50000_d8/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n100000_d16",
@@ -20092,7 +20444,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d16/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n100000_d4",
@@ -20121,7 +20484,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d4/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n100000_d8",
@@ -20150,7 +20524,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d8/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n200000_d16",
@@ -20179,7 +20564,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n200000_d4",
@@ -20208,7 +20604,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n200000_d8",
@@ -20237,7 +20644,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n400000_d16",
@@ -20266,7 +20684,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n400000_d4",
@@ -20295,7 +20724,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n400000_d8",
@@ -20324,7 +20764,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n50000_d16",
@@ -20353,7 +20804,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d16/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n50000_d4",
@@ -20382,7 +20844,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d4/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n50000_d8",
@@ -20411,7 +20884,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d8/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "synthetic_controlled",
@@ -20440,7 +20924,18 @@
         "canonical_summary": "kokkos_cpu_grid/synthetic_controlled/nodes8/mpi_kokkos_halo/OpenMP/synthetic_controlled/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "synthetic_hub",
@@ -20469,7 +20964,18 @@
         "canonical_summary": "kokkos_cpu_grid/synthetic_hub/nodes8/mpi_kokkos_halo/OpenMP/synthetic_hub/p8_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_controlled_n100000_d16",
@@ -20638,7 +21144,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n50000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d16/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_controlled_n50000_d8",
@@ -20681,7 +21198,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n50000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d8/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n100000_d16",
@@ -20724,7 +21252,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n100000_d16/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n100000_d4",
@@ -20767,7 +21306,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n100000_d4/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n100000_d8",
@@ -20810,7 +21360,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n100000_d8/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n200000_d16",
@@ -20853,7 +21414,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n200000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n200000_d16/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n200000_d4",
@@ -20896,7 +21468,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n200000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n200000_d4/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n200000_d8",
@@ -20939,7 +21522,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n200000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n200000_d8/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n50000_d16",
@@ -20982,7 +21576,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n50000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n50000_d16/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n50000_d4",
@@ -21025,7 +21630,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n50000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n50000_d4/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n50000_d8",
@@ -21068,7 +21684,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n50000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n50000_d8/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n100000_d16",
@@ -21111,7 +21738,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d16/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n100000_d4",
@@ -21154,7 +21792,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d4/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n100000_d8",
@@ -21197,7 +21846,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d8/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n200000_d16",
@@ -21240,7 +21900,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n200000_d4",
@@ -21283,7 +21954,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n200000_d8",
@@ -21326,7 +22008,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n400000_d16",
@@ -21369,7 +22062,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n400000_d4",
@@ -21412,7 +22116,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n400000_d8",
@@ -21455,7 +22170,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n50000_d16",
@@ -21498,7 +22224,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d16/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n50000_d4",
@@ -21541,7 +22278,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d4/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n50000_d8",
@@ -21584,7 +22332,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d8/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "synthetic_controlled",
@@ -21627,7 +22386,18 @@
         "canonical_summary": "kokkos_cpu_grid/synthetic_controlled/nodes8/mpi_kokkos_halo/OpenMP/synthetic_controlled/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "synthetic_hub",
@@ -21670,7 +22440,18 @@
         "canonical_summary": "kokkos_cpu_grid/synthetic_hub/nodes8/mpi_kokkos_halo/OpenMP/synthetic_hub/p16_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_controlled_n200000_d16",
@@ -23247,7 +24028,7 @@
     "cores": 8,
     "priority": 1,
     "walltime": "08:00:00",
-    "prerequisite": "cpu_core_groups/strong_controlled/nodes1_cores32/complete.txt",
+    "prerequisite": "requirements/large_graph_one_core_memory_verified.json",
     "required_job": "",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
@@ -23295,7 +24076,9 @@
         "canonical_summary": "strong/strong_controlled/nodes8/hybrid_halo/strong_controlled/p8_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "ccid-10",
+    "original_prerequisite": "cpu_core_groups/strong_controlled/nodes1_cores32/complete.txt",
+    "blocked_reason": "Per-node allocation was reduced to 6GB; Kokkos rank zero was killed at this resource setting. Verify sufficient memory before submitting remaining same-setting cases."
   },
   {
     "graph": "strong_hub",
@@ -23304,7 +24087,7 @@
     "cores": 8,
     "priority": 1,
     "walltime": "08:00:00",
-    "prerequisite": "cpu_core_groups/strong_hub/nodes1_cores32/complete.txt",
+    "prerequisite": "requirements/large_graph_one_core_memory_verified.json",
     "required_job": "",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
@@ -23352,7 +24135,9 @@
         "canonical_summary": "strong/strong_hub/nodes8/hybrid_halo/strong_hub/p8_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "ccid-10",
+    "original_prerequisite": "cpu_core_groups/strong_hub/nodes1_cores32/complete.txt",
+    "blocked_reason": "Per-node allocation was reduced to 6GB; Kokkos rank zero was killed at this resource setting. Verify sufficient memory before submitting remaining same-setting cases."
   },
   {
     "graph": "strong_uniform",
@@ -23409,7 +24194,18 @@
         "canonical_summary": "strong/strong_uniform/nodes8/hybrid_halo/strong_uniform/p8_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_controlled_n100000_d16",
@@ -23634,7 +24430,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n50000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d16/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_controlled_n50000_d8",
@@ -23691,7 +24498,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n50000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d8/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n100000_d16",
@@ -23748,7 +24566,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n100000_d16/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n100000_d4",
@@ -23805,7 +24634,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n100000_d4/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n100000_d8",
@@ -23862,7 +24702,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n100000_d8/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n200000_d16",
@@ -23919,7 +24770,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n200000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n200000_d16/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n200000_d4",
@@ -23976,7 +24838,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n200000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n200000_d4/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n200000_d8",
@@ -24033,7 +24906,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n200000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n200000_d8/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n50000_d16",
@@ -24090,7 +24974,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n50000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n50000_d16/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n50000_d4",
@@ -24147,7 +25042,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n50000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n50000_d4/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n50000_d8",
@@ -24204,7 +25110,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n50000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n50000_d8/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n100000_d16",
@@ -24261,7 +25178,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d16/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n100000_d4",
@@ -24318,7 +25246,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d4/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n100000_d8",
@@ -24375,7 +25314,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d8/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n200000_d16",
@@ -24432,7 +25382,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n200000_d4",
@@ -24489,7 +25450,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n200000_d8",
@@ -24546,7 +25518,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n400000_d16",
@@ -24603,7 +25586,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n400000_d4",
@@ -24660,7 +25654,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n400000_d8",
@@ -24717,7 +25722,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n50000_d16",
@@ -24774,7 +25790,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d16/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n50000_d4",
@@ -24831,7 +25858,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d4/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n50000_d8",
@@ -24888,7 +25926,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d8/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "synthetic_controlled",
@@ -24945,7 +25994,18 @@
         "canonical_summary": "kokkos_cpu_grid/synthetic_controlled/nodes8/mpi_kokkos_halo/OpenMP/synthetic_controlled/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "synthetic_hub",
@@ -25002,7 +26062,18 @@
         "canonical_summary": "kokkos_cpu_grid/synthetic_hub/nodes8/mpi_kokkos_halo/OpenMP/synthetic_hub/p32_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "strong_controlled",
@@ -25087,7 +26158,18 @@
         "canonical_summary": "strong/strong_controlled/nodes8/hybrid_halo/strong_controlled/p16_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "strong_hub",
@@ -25172,7 +26254,18 @@
         "canonical_summary": "strong/strong_hub/nodes8/hybrid_halo/strong_hub/p16_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "strong_uniform",
@@ -25257,7 +26350,18 @@
         "canonical_summary": "strong/strong_uniform/nodes8/hybrid_halo/strong_uniform/p16_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_controlled_n100000_d16",
@@ -25538,7 +26642,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n50000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d16/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_controlled_n50000_d8",
@@ -25609,7 +26724,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n50000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d8/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n100000_d16",
@@ -25680,7 +26806,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n100000_d16/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n100000_d4",
@@ -25751,7 +26888,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n100000_d4/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n100000_d8",
@@ -25822,7 +26970,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n100000_d8/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n200000_d16",
@@ -25893,7 +27052,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n200000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n200000_d16/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n200000_d4",
@@ -25964,7 +27134,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n200000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n200000_d4/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n200000_d8",
@@ -26035,7 +27216,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n200000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n200000_d8/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n50000_d16",
@@ -26106,7 +27298,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n50000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n50000_d16/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n50000_d4",
@@ -26177,7 +27380,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n50000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n50000_d4/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_hub_n50000_d8",
@@ -26248,7 +27462,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n50000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n50000_d8/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n100000_d16",
@@ -26319,7 +27544,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d16/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n100000_d4",
@@ -26390,7 +27626,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d4/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n100000_d8",
@@ -26461,7 +27708,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d8/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n200000_d16",
@@ -26532,7 +27790,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n200000_d4",
@@ -26603,7 +27872,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n200000_d8",
@@ -26674,7 +27954,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n400000_d16",
@@ -26745,7 +28036,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n400000_d4",
@@ -26816,7 +28118,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n400000_d8",
@@ -26887,7 +28200,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n50000_d16",
@@ -26958,7 +28282,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d16/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n50000_d4",
@@ -27029,7 +28364,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d4/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d4/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_uniform_n50000_d8",
@@ -27100,7 +28446,18 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d8/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "synthetic_controlled",
@@ -27171,7 +28528,18 @@
         "canonical_summary": "kokkos_cpu_grid/synthetic_controlled/nodes8/mpi_kokkos_halo/OpenMP/synthetic_controlled/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "synthetic_hub",
@@ -27242,7 +28610,18 @@
         "canonical_summary": "kokkos_cpu_grid/synthetic_hub/nodes8/mpi_kokkos_halo/OpenMP/synthetic_hub/p64_t2/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "strong_controlled",
@@ -27355,7 +28734,18 @@
         "canonical_summary": "strong/strong_controlled/nodes8/hybrid_halo/strong_controlled/p32_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "strong_hub",
@@ -27468,7 +28858,18 @@
         "canonical_summary": "strong/strong_hub/nodes8/hybrid_halo/strong_hub/p32_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "strong_uniform",
@@ -27581,7 +28982,18 @@
         "canonical_summary": "strong/strong_uniform/nodes8/hybrid_halo/strong_uniform/p32_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "grid_controlled_n100000_d16",
@@ -30074,7 +31486,18 @@
         "canonical_summary": "strong/strong_controlled/nodes8/hybrid_halo/strong_controlled/p64_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "strong_hub",
@@ -30215,7 +31638,18 @@
         "canonical_summary": "strong/strong_hub/nodes8/hybrid_halo/strong_hub/p64_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "strong_uniform",
@@ -30356,7 +31790,18 @@
         "canonical_summary": "strong/strong_uniform/nodes8/hybrid_halo/strong_uniform/p64_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "google",
@@ -35859,7 +37304,18 @@
         "canonical_summary": "strong/strong_controlled/nodes8/hybrid_halo/strong_controlled/p128_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "strong_hub",
@@ -36028,7 +37484,18 @@
         "canonical_summary": "strong/strong_hub/nodes8/hybrid_halo/strong_hub/p128_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "strong_uniform",
@@ -36197,7 +37664,18 @@
         "canonical_summary": "strong/strong_uniform/nodes8/hybrid_halo/strong_uniform/p128_t1/summary.json"
       }
     ],
-    "scheduler_cpu_pool": "ccid-10"
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-005",
+      "cn-146",
+      "cn-007",
+      "cn-011",
+      "cn-135",
+      "cn-136",
+      "cn-140",
+      "cn-142"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02"
   },
   {
     "graph": "google",

@@ -1,0 +1,633 @@
+{
+  "observed_at": "2026-11-12T03:12:40.462591+08:00",
+  "reason": "Queued validation uses one CPU and <=20GB; auto_free routes it to cpu_serial with 32 concurrent jobs, instead of two concurrent cpu_parallel jobs. Preserve running validation, original validation code/tolerances, and all paid measurements.",
+  "jobs": [
+    {
+      "performance_job": "1543495.stdct-mgmt-02",
+      "old_validation_job": "1543496.stdct-mgmt-02",
+      "new_validation_job": "1543971.stdct-mgmt-02",
+      "cells": 10,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n1_c2.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543497.stdct-mgmt-02",
+      "old_validation_job": "1543498.stdct-mgmt-02",
+      "new_validation_job": "1543972.stdct-mgmt-02",
+      "cells": 10,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_hub_n1_c2.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543502.stdct-mgmt-02",
+      "old_validation_job": "1543503.stdct-mgmt-02",
+      "new_validation_job": "1543973.stdct-mgmt-02",
+      "cells": 14,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n1_c4.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543504.stdct-mgmt-02",
+      "old_validation_job": "1543505.stdct-mgmt-02",
+      "new_validation_job": "1543974.stdct-mgmt-02",
+      "cells": 14,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_hub_n1_c4.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543527.stdct-mgmt-02",
+      "old_validation_job": "1543528.stdct-mgmt-02",
+      "new_validation_job": "1543975.stdct-mgmt-02",
+      "cells": 10,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n2_c2.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543531.stdct-mgmt-02",
+      "old_validation_job": "1543532.stdct-mgmt-02",
+      "new_validation_job": "1543976.stdct-mgmt-02",
+      "cells": 10,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_hub_n2_c2.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543549.stdct-mgmt-02",
+      "old_validation_job": "1543550.stdct-mgmt-02",
+      "new_validation_job": "1543977.stdct-mgmt-02",
+      "cells": 18,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n1_c8.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543553.stdct-mgmt-02",
+      "old_validation_job": "1543554.stdct-mgmt-02",
+      "new_validation_job": "1543978.stdct-mgmt-02",
+      "cells": 18,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_hub_n1_c8.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543563.stdct-mgmt-02",
+      "old_validation_job": "1543564.stdct-mgmt-02",
+      "new_validation_job": "1543979.stdct-mgmt-02",
+      "cells": 14,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n2_c4.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543568.stdct-mgmt-02",
+      "old_validation_job": "1543569.stdct-mgmt-02",
+      "new_validation_job": "1543980.stdct-mgmt-02",
+      "cells": 14,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_hub_n2_c4.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543640.stdct-mgmt-02",
+      "old_validation_job": "1543641.stdct-mgmt-02",
+      "new_validation_job": "1543984.stdct-mgmt-02",
+      "cells": 6,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_uniform_n4_c1.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543650.stdct-mgmt-02",
+      "old_validation_job": "1543651.stdct-mgmt-02",
+      "new_validation_job": "1543985.stdct-mgmt-02",
+      "cells": 10,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n4_c2.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543687.stdct-mgmt-02",
+      "old_validation_job": "1543688.stdct-mgmt-02",
+      "new_validation_job": "1543986.stdct-mgmt-02",
+      "cells": 10,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_hub_n4_c2.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543691.stdct-mgmt-02",
+      "old_validation_job": "1543692.stdct-mgmt-02",
+      "new_validation_job": "1543987.stdct-mgmt-02",
+      "cells": 10,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_uniform_n4_c2.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543694.stdct-mgmt-02",
+      "old_validation_job": "1543695.stdct-mgmt-02",
+      "new_validation_job": "1543988.stdct-mgmt-02",
+      "cells": 18,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n2_c8.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543701.stdct-mgmt-02",
+      "old_validation_job": "1543702.stdct-mgmt-02",
+      "new_validation_job": "1543989.stdct-mgmt-02",
+      "cells": 18,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_hub_n2_c8.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543761.stdct-mgmt-02",
+      "old_validation_job": "1543762.stdct-mgmt-02",
+      "new_validation_job": "1543990.stdct-mgmt-02",
+      "cells": 2,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_uniform_n1_c2.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543767.stdct-mgmt-02",
+      "old_validation_job": "1543768.stdct-mgmt-02",
+      "new_validation_job": "1543991.stdct-mgmt-02",
+      "cells": 4,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_uniform_n1_c4.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543772.stdct-mgmt-02",
+      "old_validation_job": "1543773.stdct-mgmt-02",
+      "new_validation_job": "1543992.stdct-mgmt-02",
+      "cells": 14,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n4_c4.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543782.stdct-mgmt-02",
+      "old_validation_job": "1543783.stdct-mgmt-02",
+      "new_validation_job": "1543993.stdct-mgmt-02",
+      "cells": 14,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_hub_n4_c4.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543798.stdct-mgmt-02",
+      "old_validation_job": "1543799.stdct-mgmt-02",
+      "new_validation_job": "1543994.stdct-mgmt-02",
+      "cells": 14,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_uniform_n4_c4.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543806.stdct-mgmt-02",
+      "old_validation_job": "1543807.stdct-mgmt-02",
+      "new_validation_job": "1543995.stdct-mgmt-02",
+      "cells": 6,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_uniform_n1_c8.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543822.stdct-mgmt-02",
+      "old_validation_job": "1543823.stdct-mgmt-02",
+      "new_validation_job": "1543996.stdct-mgmt-02",
+      "cells": 18,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n4_c8.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543852.stdct-mgmt-02",
+      "old_validation_job": "1543853.stdct-mgmt-02",
+      "new_validation_job": "1543997.stdct-mgmt-02",
+      "cells": 2,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_uniform_n2_c2.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543243.stdct-mgmt-02",
+      "old_validation_job": "1543244.stdct-mgmt-02",
+      "new_validation_job": "1543998.stdct-mgmt-02",
+      "cells": 22,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d4_n8_c16.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543362.stdct-mgmt-02",
+      "old_validation_job": "1543363.stdct-mgmt-02",
+      "new_validation_job": "1543999.stdct-mgmt-02",
+      "cells": 10,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d16_n8_c2.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543380.stdct-mgmt-02",
+      "old_validation_job": "1543381.stdct-mgmt-02",
+      "new_validation_job": "1544000.stdct-mgmt-02",
+      "cells": 14,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d16_n8_c4.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543408.stdct-mgmt-02",
+      "old_validation_job": "1543409.stdct-mgmt-02",
+      "new_validation_job": "1544001.stdct-mgmt-02",
+      "cells": 18,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d16_n8_c8.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543414.stdct-mgmt-02",
+      "old_validation_job": "1543415.stdct-mgmt-02",
+      "new_validation_job": "1544002.stdct-mgmt-02",
+      "cells": 22,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d16_n8_c16.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543856.stdct-mgmt-02",
+      "old_validation_job": "1543857.stdct-mgmt-02",
+      "new_validation_job": "1544003.stdct-mgmt-02",
+      "cells": 6,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d4_n8_c1.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543888.stdct-mgmt-02",
+      "old_validation_job": "1543889.stdct-mgmt-02",
+      "new_validation_job": "1544004.stdct-mgmt-02",
+      "cells": 6,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d8_n8_c1.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543890.stdct-mgmt-02",
+      "old_validation_job": "1543891.stdct-mgmt-02",
+      "new_validation_job": "1544005.stdct-mgmt-02",
+      "cells": 6,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d16_n8_c1.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    {
+      "performance_job": "1543917.stdct-mgmt-02",
+      "old_validation_job": "1543918.stdct-mgmt-02",
+      "new_validation_job": "1544006.stdct-mgmt-02",
+      "cells": 6,
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d4_n8_c1.json",
+      "resources": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    }
+  ]
+}

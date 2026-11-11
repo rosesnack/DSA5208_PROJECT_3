@@ -1,0 +1,29 @@
+{
+  "observed_at": "2026-11-12T03:10:33.970241+08:00",
+  "job": "1543968.stdct-mgmt-02",
+  "account": "hongxinran",
+  "queue_charge_rate": 0,
+  "resources": {
+    "am_job_cache": "\"{}\"",
+    "mem": "32gb",
+    "mpiprocs": 8,
+    "ncpus": 8,
+    "ngpus": 0,
+    "nodect": 8,
+    "place": "scatter",
+    "queue_charge_rate": 0,
+    "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=4gb:node_pool=cpu_node:switch=cpu_all:host=cn-005+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=4gb:node_pool=cpu_node:switch=cpu_all:host=cn-006+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=4gb:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=4gb:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=4gb:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=4gb:node_pool=cpu_node:switch=cpu_all:host=cn-136+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=4gb:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=4gb:node_pool=cpu_node:switch=cpu_all:host=cn-142",
+    "walltime": "00:10:00"
+  },
+  "hosts": [
+    "cn-005",
+    "cn-006",
+    "cn-007",
+    "cn-011",
+    "cn-135",
+    "cn-136",
+    "cn-140",
+    "cn-142"
+  ],
+  "purpose": "Free eight-physical-host transport and hardware validation; one repeat per communication; never publish as performance data."
+}

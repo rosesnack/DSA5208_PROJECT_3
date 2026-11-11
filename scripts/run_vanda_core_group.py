@@ -1,7 +1,6 @@
 """Measure one core budget or validate/publish it using the original solvers and checks."""
 import argparse
 from collections import defaultdict
-from concurrent.futures import ThreadPoolExecutor
 import csv
 import json
 import os
@@ -148,9 +147,8 @@ def finalize(group, raw, env):
                 tasks.append((["python3", "scripts/validate_mpi_device.py", "mpi_kokkos", "OpenMP", mode,
                                "--threads", str(cell["threads"]), "--processes", str(cell["processes"])],
                               settings, logs / f'{method}_{mode}_t{cell["threads"]}.log'))
-    workers = 1 if group["graph"].startswith("strong_") else 2
-    with ThreadPoolExecutor(max_workers=workers) as pool:
-        list(pool.map(lambda task: command(*task), tasks))
+    for task in tasks:
+        command(*task)
     root = Path.cwd() / "results/updated_vanda_scaling" / env["RUN_ID"]
     group_relative = raw.relative_to(Path(env["DATA_ROOT"]) / "results")
     archived = root / group_relative

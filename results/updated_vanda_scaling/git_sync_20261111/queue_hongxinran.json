@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-12T00:04:05.045241+08:00",
+  "observed_at": "2026-11-12T03:41:21.773047+08:00",
   "account": "hongxinran",
   "source_project": "/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111",
   "run_id": "20261111_hongxinran_assist",
@@ -96,7 +96,7 @@
     },
     "balance_cpu_hours": 142.9400000000005,
     "action": "no_eligible_unregistered_cells",
-    "observed_at": "2026-11-12T00:03:06.318955+08:00",
+    "observed_at": "2026-11-12T03:41:12.452665+08:00",
     "pid": 3601173,
     "interval_seconds": 60,
     "until": "2026-11-12T23:59:00+08:00",
@@ -15138,7 +15138,7 @@
     }
   },
   "registered_groups": 316,
-  "queue_observed_at": "2026-11-12T00:04:05.045241+08:00",
+  "queue_observed_at": "2026-11-12T03:41:21.773047+08:00",
   "project_query_authenticated": true,
   "balance_cpu_hours": 142.9400000000005,
   "queue_counts_observed_at": "2026-11-11T20:37:10+08:00",

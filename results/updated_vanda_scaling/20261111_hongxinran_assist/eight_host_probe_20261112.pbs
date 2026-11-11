@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+#PBS -N dsa5208-eight-host-check
+#PBS -q auto_free
+#PBS -l place=scatter
+#PBS -l walltime=00:10:00
+#PBS -j oe
+#PBS -V
+set -euo pipefail
+cd "${PBS_O_WORKDIR:?}"
+module load openmpi/gcc/64/4.1.8 CMake/3.29.3-GCCcore-13.3.0
+export LD_LIBRARY_PATH="/opt/pbs/lib:${LD_LIBRARY_PATH:-}"
+export OMPI_MCA_btl=self,vader,tcp OMPI_MCA_pml=ob1 UCX_NET_DEVICES=
+r="results/updated_vanda_scaling/20261111_hongxinran_assist/eight_host_probe_20261112"
+mkdir -p "$r"
+mpiexec -x LD_LIBRARY_PATH --map-by ppr:1:node --bind-to none -n 8 python3 scripts/record_cpu_host.py > "$r/hosts.jsonl"
+python3 - "$r/hosts.jsonl" <<'CHECK'
+from pathlib import Path
+import json,sys
+rows=[json.loads(x) for x in Path(sys.argv[1]).read_text().splitlines()]
+assert len(rows)==len({r['host'] for r in rows})==8
+assert all('Platinum 8452Y' in r['cpu_model'] and r['affinity_cpus']==1 for r in rows),rows
+CHECK
+python3 scripts/select_graph_manifest.py /scratch/hongxinran/dsa5208_scaling/20261111_hongxinran_assist/manifests/strong_scaling.tsv synthetic_hub "$r/dataset.tsv"
+export PAGERANK_DATASET_MANIFEST="$PWD/$r/dataset.tsv"
+export PAGERANK_RESULTS_ROOT="$PWD/$r/results" PAGERANK_ENVIRONMENT=vanda-validation-only PAGERANK_RUN_ID=eight_host_probe_20261112
+export PAGERANK_REPEATS=1 PAGERANK_WARMUPS=0 OMP_NUM_THREADS=1 OMP_DYNAMIC=FALSE
+mpiexec -x LD_LIBRARY_PATH --map-by ppr:1:node --bind-to none -n 8 ./build-vanda-matrix-cpu/pagerank_mpi --communication=allgather
+mpiexec -x LD_LIBRARY_PATH --map-by ppr:1:node --bind-to none -n 8 ./build-vanda-matrix-cpu/pagerank_mpi --communication=halo
+printf '%s\n' "$PBS_JOBID" > "$r/complete.txt"

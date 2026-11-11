@@ -1,10 +1,8 @@
-# Vanda 实验交接（2026-11-11 复核版）
+# Vanda 实验交接（2026-11-12 03:41 SGT）
 
-**这是当前唯一执行交接入口，状态更新至 11-12 00:04 SGT。** hongxinran 前三批 448+730+100=1,278 项均已独立校验通过并同步。 本批另转交 **64 组/306 项**，已从主账号远端真实源计划移除，跨账号实际登记与未来计划交集均为零。本批 64 组/306 项（四节点、总核数 8/16/32），实际已登记 64/64 组、306/306 项；性能状态 F=64。其中 306/306 项已独立校验并同步。
+**这是当前唯一执行交接入口。严格完成 17,611/20,700，剩余 3,089。** hongxinran 已分配的 1,584 项（含最近 306 项）全部通过并同步；所有剩余配置仍归 xtt_ella。两账号已登记和未来计划交集均为零。
 
-固定图严格完成 **17,489/20,700**，剩余 3,211；尚未完成归属 xtt_ella **3,211**、hongxinran **0**。这是本地已同步且独立校验的数量。未提交仍有负责人，队友不能直接领取缺项 CSV。
-
-免费四节点准备 **1543299** 已通过，复用已有图与 Serial；没有重测 Serial 或重新构建。性能付费，准备/校验免费；全部 p×T=请求核数、同编译器、五次重复及原计时口径。当前细节见 [双账号状态](updated_vanda_two_accounts_20261111.md)。
+付费性能当前 R=0、Q=0；免费校验 R=26。已有测量但等校验/同步 336 项，不应重复跑。六个新失败组覆盖 36 项，其中 18 项测量已保存；详细处理见 [本次恢复记录](updated_vanda_validation_recovery_20261112.md)。
 
 ## 1. 先分清状态与下一步
 
@@ -12,15 +10,15 @@
 
 | 固定图状态 | 配置数 | 下一步 |
 |---|---:|---|
-| `validated` | **17,489** | 复用，不重跑 |
-| `running` | **58** | 跟踪原作业 |
-| `queued` | **86** | 等原作业，不复制提交 |
-| `awaiting_validation` | **38** | 等独立校验或结果同步 |
-| `performance_failed` | **66** | 原账号先查失败及部分输出 |
+| `validated` | **17,557** | 复用，不重跑 |
+| `running` | **22** | 跟踪原作业 |
+| `queued` | **0** | 等原作业，不复制提交 |
+| `awaiting_validation` | **362** | 等独立校验或结果同步 |
+| `performance_failed` | **102** | 原账号先查失败及部分输出 |
 | `held` | **5** | 原 512 组延期 |
-| `unsubmitted` | **1,798** | 按 future_owner 续投，队友接手先转交 |
+| `unsubmitted` | **1,492** | 按 future_owner 续投，队友接手先转交 |
 | `deferred_512` | **1,160** | 原优先级延期 |
-| **合计** | **20,700** | 已验证 17,489，剩余 3,211 |
+| **合计** | **20,700** | 已验证 17,557，剩余 3,143 |
 
 [全部 20,700 行状态及来源](results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv) 是固定图逐配置依据。另有按状态拆出的 [完成](results/updated_vanda_scaling/git_sync_20261111/cells_validated.csv)、[未提交](results/updated_vanda_scaling/git_sync_20261111/cells_unsubmitted.csv)、[失败](results/updated_vanda_scaling/git_sync_20261111/cells_performance_failed.csv)、[暂挂](results/updated_vanda_scaling/git_sync_20261111/cells_held.csv)、[延期 512](results/updated_vanda_scaling/git_sync_20261111/cells_deferred_512.csv) 清单；均不能直接当提交计划。
 
@@ -37,13 +35,13 @@ CSV 中 `canonical_summary` 是跨账号匹配同一配置的唯一键。`assign
 | Serial CPU | n=1,p=1,T=1；无通信 | 45 | 45 | 0 |
 | 单独 OpenMP CPU | n=1,p=1,T=1/2/4/8/16/32；无通信 | 270 | 270 | 0 |
 | 单独 Kokkos OpenMP CPU | 同上，OpenMP 后端；无通信 | 270 | 270 | 0 |
-| 纯 MPI CPU 常规 | n=1/2/4/8，r=1/2/4/8/16/32，T=1；每布局两通信 | 2,160 | 1,992 | 168 |
-| MPI+OpenMP CPU 常规 | 同 n、r，T=1/2/4/8/16/32，rT≤32；每布局两通信 | 7,560 | 7,028 | 532 |
-| MPI+Kokkos OpenMP CPU 常规 | 与 MPI+OpenMP 同一套布局；每布局两通信 | 7,560 | 6,214 | 1,346 |
+| 纯 MPI CPU 常规 | n=1/2/4/8，r=1/2/4/8/16/32，T=1；每布局两通信 | 2,160 | 2,004 | 156 |
+| MPI+OpenMP CPU 常规 | 同 n、r，T=1/2/4/8/16/32，rT≤32；每布局两通信 | 7,560 | 7,050 | 510 |
+| MPI+Kokkos OpenMP CPU 常规 | 与 MPI+OpenMP 同一套布局；每布局两通信 | 7,560 | 6,248 | 1,312 |
 | 原 CPU 512 核端点 | 纯 MPI p512,T1；两混合方法各 p512,T1 和 p128,T4；每布局两通信 | 450 | 5 | 445 |
 | 后追加 CPU 512 核拆分 | 两混合方法各 T=2/8/16/32，p=512/T；每布局两通信 | 720 | 0 | 720 |
 | GPU 节点完整配对区块 | 下表，包含真实 GPU 计算及同机 CPU 对照 | 1,665 | 1,665 | 0 |
-| **固定图合计** | | **20,700** | **17,489** | **3,211** |
+| **固定图合计** | | **20,700** | **17,557** | **3,143** |
 
 两通信是 Allgatherv（参数 `allgather`）与 Halo。单独方法没有 MPI，不扩展通信维度。
 
@@ -71,31 +69,33 @@ CSV 中 `canonical_summary` 是跨账号匹配同一配置的唯一键。`assign
 
 此表按本地可审阅摘要及独立完成标记统计。controlled 的六项状态为 `evidence_missing_verify_remote_first`，不把“未找到本地证据”写成“已经失败”或“从未提交”；核实远端已保存测量、校验和旧作业后再决定接手动作。这六项尚未分派给新队友，也独立于固定图缺项。
 
-## 4. 两账号当前负责什么
+## 4. 当前资源、失败和分工
 
-| 账号 | 当前分工与登记 | 未完成固定图归属 |
+| 账号 | 当前分工 | 固定图未完成归属 |
 |---|---|---:|
-| xtt_ella | 195 个登记组；持续运行原大图；已移除新转交 306 项 | 3,211 |
-| hongxinran | 原 1,278 项全部通过；本批 64 组/306 项（四节点、总核数 8/16/32），实际已登记 64/64 组、306/306 项；性能状态 F=64。其中 306/306 项已独立校验并同步。 | 0 |
+| xtt_ella | 226 个登记组；性能 R=0、Q=0；免费校验 26 个运行 | 3,089 |
+| hongxinran | 316 个登记组、1,584 项全部完成；最近余额 142.94 CPUh | 0 |
 
-监控 PID **3924673 / 3601173**，每 60 秒检查、主账号最多十二组、分担账号最多六组在途性能任务，截止 Nov 12 23:59 SGT。本次 306 项全部四节点、总核数 8/16/32，墙钟 45 分钟；原矩阵和 p×T=请求核数不变。转交前余额 1,234.94 CPUh，请求上限 1,092 CPUh，全额承诺后余 142.94，高于控制器 64 CPUh 余量。
+主账号最近余额 19.57 CPUh，原九个请求已按 400 CPUh 上限在启动时预扣；不代表实际全部花掉，仍等系统结算。监控每 60 秒、最多 12 组在途、留 16 CPUh，不提前动用将来返还，继续优先普通缺项。分担账号最多六组在途、留 64 CPUh，目前没有未分配新任务。新增提交截止 Nov 12 23:59 SGT。
 
-后续未登记 CPU 组由调度器在 `node_pool=cpu_node:switch=ccid-10` 中选择物理主机。运行前与独立发布前均核对 Platinum 8452Y，并保存实际主机、affinity、进程与线程记录。已有运行组保持原作业。多个物理节点需同时可用，Q 不代表失败或已完成。
+免费校验改为一核/20GB/24小时的 auto_free→cpu_serial，并按一核顺序运行相同校验；当前该队列每用户可运行 32 个。原先正在运行的两个 cpu_parallel 校验保留。已有 33 个等待/依赖请求被替换，原与新 job ID 写入 [记录](results/updated_vanda_scaling/20261106T185006Z/free_validation_reroute_20261112.json) 和实际注册表；追踪新有效 job，不释放已取消的旧 job，不重复计数。付费只做性能，校验全部免费。
 
-| 账号 | 项目目录 | 当前源计划（相对于项目根目录） |
+当前八节点普通缺项使用已验证的八个物理 Platinum 8452Y：CN-005/146/007/011/135/136/140/142；四节点及以下仍在 ccid-10 池选取。八节点跨交换机，实际主机、通信参数与 affinity 保存，同一性能组的实现和两种通信共享分配。免费测试 1543968 已通过；CN-146 替换后来被占满的 CN-006，有已有完整正式 MPI 组校验证据。CPU 核数/节点/线程/内存/墙钟均未因此改变。
+
+原失败的 1537511（10项）、1538617（4项）以及零产出启动 1543209/1543315/1543317（共52项）没有盲目重投。新增六个大图组详见 [失败记录](results/updated_vanda_scaling/20261106T185006Z/large_graph_failures_20261112.json)：一核/节点、每节点 6GB 时 Kokkos 被 signal 9 杀死，36 个目标中有 18 项完整测量保留，尚未独立校验。内存上限为主要嫌疑，不宣称已确诊。另两个未提交的 strong_controlled/hub n8/C8 组共 12 项有明确内存验证前置条件，不能强行提交。失败和资源阻塞没有从分母剔除。
+
+旧 H 保留原延期；其中 512 组 1532794/1532795 对应五个 held 配置，其他旧 H 可能与新计划/成功结果重叠，不能批量 qrls。新增校验依赖 H 会随性能成功自动解除，意义不同。
+
+| 账号 | 目录 | 当前源计划 |
 |---|---|---|
-| xtt_ella / personal-xtt_ella | `/scratch/xtt_ella/DSA5208_PROJECT_3_20261107` | `results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111_phase5.json` |
-| hongxinran / personal-hongxinran | `/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111` | `results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261111_phase5.json` |
+| xtt_ella | `/scratch/xtt_ella/DSA5208_PROJECT_3_20261107` | `results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111_phase5.json` |
+| hongxinran | `/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111` | `results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261111_phase5.json` |
 
-[实际登记的 511 个资源组及作业 ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv) 包含付费性能与免费校验两个 job；不能重复算成两组实验。[主队列](results/updated_vanda_scaling/git_sync_20261111/queue_xtt_ella.json)、[分担队列](results/updated_vanda_scaling/git_sync_20261111/queue_hongxinran.json) 各有准确时间。
-
-**旧 H 不能批量释放。** 原有 78 个旧 H job（主账号 8、分担 70）仍保持原延期，其中当前 512 组的 `1532794` 与依赖校验 `1532795` 对应 5 个 held 配置；其他旧请求可能已被替代或与计划重叠，不是可领取的新实验。新增免费校验的依赖 H 在性能成功后自动解除，含义不同。
-
-失败先检查证据与部分输出，不能盲目重投。原 `1537511` 的 128 核十项与 `1538617` 的 16 核四项尚未成功。新 `1543209`、`1543315`、`1543317`因 MPI 主机信息采集卡住、持续 CPU 时间为零且无任何测量而停止以节约额度，日志及资源记录保留于各 `stalled_start_*_20261111.json`。没有把这些算成算法性能结果；后续源计划已改用已验证的 CPU 池。已登记失败仍归原账号，需明确处理旧注册后才能补跑，不由控制器自动重试。
+[实际资源组及 job ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv)、[主账号快照](results/updated_vanda_scaling/git_sync_20261111/queue_xtt_ella.json)、[分担快照](results/updated_vanda_scaling/git_sync_20261111/queue_hongxinran.json) 有准确时间；所有未提交仍归原账号，队友须先按下文转交。
 
 ## 5. 防重复接手流程（必须先做，再提交）
 
-当前两个账号**已登记配置交集为零、未来源计划交集为零**；全部 3,211 个固定图缺项都有明确归属。这个结论针对快照，不能代替未来转交。
+当前两个账号**已登记配置交集为零、未来源计划交集为零**；全部 3,143 个固定图缺项都有明确归属。这个结论针对快照，不能代替未来转交。
 
 1. 队友先读取本文件与完整 CSV，只拟定要接手的 `canonical_summary` 集合；不从历史 handover、旧宽计划或剩余 CSV 直接 qsub。已验证、R/Q、待检、H、延期和失败各按上文处理。
 2. 由原账号负责人协调暂停相关自动续投：在对应 `monitor_recovery_20261110/` 或 `monitor_assist_20261111/` **状态目录**创建 `STOP_AUTO_SUBMIT`，等待监控退出，并核对是否已有正在执行的提交。它只停止后续提交，不取消 PBS 作业。不要在队友目录创建一个 STOP 就以为停掉了原账号。
@@ -140,8 +140,8 @@ python3 scripts/audit_fixed_matrix.py vanda \
 
 续投查询已修正：预算快照使用 PBS 历史查询 `qstat -x`，避免小任务在 qselect 后结束导致查询报错。修正已部署两个账号，仅影响调度信息查询；五次重复、指标与原性能结果均不变。
 
-续投预算快照已改用 PBS 历史查询 `qstat -x`，避免小任务在 qselect 后结束导致查询报错。修正已部署两个账号，只影响调度查询，不改变五次重复、性能指标或既有结果。
 
-续投预算快照已改用 PBS 历史查询 `qstat -x`，避免小任务在 qselect 后结束导致查询报错。修正已部署两个账号，只影响调度查询，不改变五次重复、性能指标或既有结果。
 
 00:03 SGT 的续投调整：主账号在途上限现为 12，优先已有小节点缺项，已实际从 1 R 提升到 6 R；PBS 显示达到用户同时运行作业数上限。原墙钟、实验集合及预算扣除规则不变，详见 [额度和续投记录](updated_vanda_budget_backfill_20261112.md)。
+
+本轮原九个八节点任务已有 9/9 个性能作业 Exit 0，110 项配置均已独立校验并下载。监控又补投一个 8 核组（6 项），性能已结束、等校验/同步；当前余额 19.57 CPUh，控制器在预算余量下等待真实返还。校验积压上限已与免费单核队列容量对齐为 32，付费在途仍最多 12 组。

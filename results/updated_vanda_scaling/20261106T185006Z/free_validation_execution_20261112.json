@@ -1,0 +1,8 @@
+{
+  "observed_at": "2026-11-12T03:46:14.494307+08:00",
+  "sha256": {
+    "scripts/run_vanda_core_group.py": "7d88cf290551f5961bd4214f45b5d8d6312eab1ea491203dc840c86542ea8cd6",
+    "scripts/vanda_finalize_core_group_job.pbs": "4bbf735a6632eef08d42eb86c0ffa95472359213029098eba2d650759f4def3b"
+  },
+  "validation_execution": "Sequential original validator commands in one-CPU free jobs; 20GB, original 24-hour limit. Same residual checks and full rank comparisons. Performance solve code and timing unchanged."
+}

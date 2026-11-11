@@ -1,0 +1,7 @@
+{
+  "observed_at": "2026-11-12T03:08:23.859336+08:00",
+  "change": "Pending large-graph free validation jobs use four independent validator subprocesses, matching their four allocated CPUs; existing running validators continue unchanged. Same validation programs and tolerances, no performance rerun.",
+  "sha256": "866aa5bb52241c48e5de3c28fd92adf2f47e5d188be0fcef9d144aa5c06d9cc2",
+  "superseded_by": "free_validation_reroute_20261112.json",
+  "current_execution": "Sequential one-CPU jobs; see free_validation_execution_20261112.json"
+}

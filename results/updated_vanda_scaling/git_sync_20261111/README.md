@@ -37,3 +37,5 @@ python3 scripts/export_vanda_handoff.py \
 ```
 
 Both commands are local audits; neither submits, releases or cancels jobs. Add new transferred-account roots and ownership records before using this inventory for later handovers. A successful export checks unique future ownership and consistency with current registered assignments; it does not certify that an old local snapshot equals the live remote queues.
+
+The 2026-11-12 validation reroute preserves performance job IDs and records replaced free validation jobs in `../20261106T185006Z/free_validation_reroute_20261112.json`. Follow the registry's current validation ID; cancelled old validation IDs do not grant permission to remeasure a performance cell.

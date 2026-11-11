@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-12T00:03:50.553227+08:00",
+  "observed_at": "2026-11-12T03:41:09.196790+08:00",
   "completed": [
     {
       "performance_job": "1530742.stdct-mgmt-02",
@@ -1010,6 +1010,12 @@
       "validated": 18
     },
     {
+      "performance_job": "1543243.stdct-mgmt-02",
+      "validation_job": "1543998.stdct-mgmt-02",
+      "cells": 22,
+      "validated": 22
+    },
+    {
       "performance_job": "1543245.stdct-mgmt-02",
       "validation_job": "1543246.stdct-mgmt-02",
       "cells": 4,
@@ -1056,7 +1062,67 @@
       "validation_job": "1543347.stdct-mgmt-02",
       "cells": 6,
       "validated": 6
+    },
+    {
+      "performance_job": "1543362.stdct-mgmt-02",
+      "validation_job": "1543999.stdct-mgmt-02",
+      "cells": 10,
+      "validated": 10
+    },
+    {
+      "performance_job": "1543380.stdct-mgmt-02",
+      "validation_job": "1544000.stdct-mgmt-02",
+      "cells": 14,
+      "validated": 14
+    },
+    {
+      "performance_job": "1543408.stdct-mgmt-02",
+      "validation_job": "1544001.stdct-mgmt-02",
+      "cells": 18,
+      "validated": 18
+    },
+    {
+      "performance_job": "1543414.stdct-mgmt-02",
+      "validation_job": "1544002.stdct-mgmt-02",
+      "cells": 22,
+      "validated": 22
+    },
+    {
+      "performance_job": "1543486.stdct-mgmt-02",
+      "validation_job": "1543487.stdct-mgmt-02",
+      "cells": 6,
+      "validated": 6
+    },
+    {
+      "performance_job": "1543489.stdct-mgmt-02",
+      "validation_job": "1543490.stdct-mgmt-02",
+      "cells": 6,
+      "validated": 6
+    },
+    {
+      "performance_job": "1543856.stdct-mgmt-02",
+      "validation_job": "1544003.stdct-mgmt-02",
+      "cells": 6,
+      "validated": 6
+    },
+    {
+      "performance_job": "1543888.stdct-mgmt-02",
+      "validation_job": "1544004.stdct-mgmt-02",
+      "cells": 6,
+      "validated": 6
+    },
+    {
+      "performance_job": "1543890.stdct-mgmt-02",
+      "validation_job": "1544005.stdct-mgmt-02",
+      "cells": 6,
+      "validated": 6
+    },
+    {
+      "performance_job": "1543917.stdct-mgmt-02",
+      "validation_job": "1544006.stdct-mgmt-02",
+      "cells": 6,
+      "validated": 6
     }
   ],
-  "files": 880
+  "files": 935
 }
