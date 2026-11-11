@@ -7,7 +7,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -40,10 +40,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n200000_d8",
@@ -53,7 +51,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -86,10 +84,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d16",
@@ -99,7 +95,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -132,10 +128,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d16/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d4",
@@ -145,7 +139,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -164,10 +158,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p1_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d4",
@@ -177,7 +169,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -210,10 +202,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d8",
@@ -223,7 +213,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -242,10 +232,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d8/p1_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d8",
@@ -255,7 +243,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -288,10 +276,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d8/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d16",
@@ -301,7 +287,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -320,10 +306,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p1_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d16",
@@ -333,7 +317,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -366,10 +350,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d4",
@@ -379,7 +361,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -398,10 +380,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p1_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d4",
@@ -411,7 +391,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -444,10 +424,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d8",
@@ -457,7 +435,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -476,10 +454,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p1_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d8",
@@ -489,7 +465,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -522,10 +498,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d16",
@@ -535,7 +509,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -554,10 +528,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p1_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d16",
@@ -567,7 +539,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -600,10 +572,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d4",
@@ -613,7 +583,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -632,10 +602,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p1_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d4",
@@ -645,7 +613,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -678,10 +646,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d8",
@@ -691,7 +657,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -710,10 +676,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p1_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d8",
@@ -723,7 +687,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -756,10 +720,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n200000_d16",
@@ -769,7 +731,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -816,10 +778,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n200000_d8",
@@ -829,7 +789,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -876,10 +836,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d16",
@@ -889,7 +847,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -936,10 +894,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d16/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d4",
@@ -949,7 +905,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -996,10 +952,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d8",
@@ -1009,7 +963,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -1056,10 +1010,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d8/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d16",
@@ -1069,7 +1021,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -1116,10 +1068,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d4",
@@ -1129,7 +1079,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -1176,10 +1126,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d8",
@@ -1189,7 +1137,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -1236,10 +1184,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d16",
@@ -1249,7 +1195,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -1296,10 +1242,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d4",
@@ -1309,7 +1253,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -1356,10 +1300,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d8",
@@ -1369,7 +1311,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -1416,10 +1358,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n200000_d16",
@@ -1429,7 +1369,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -1490,10 +1430,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n200000_d8",
@@ -1503,7 +1441,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -1564,10 +1502,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d16",
@@ -1577,7 +1513,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -1638,10 +1574,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d16/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d4",
@@ -1651,7 +1585,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -1712,10 +1646,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d8",
@@ -1725,7 +1657,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -1786,10 +1718,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d8/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d16",
@@ -1799,7 +1729,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -1860,10 +1790,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d4",
@@ -1873,7 +1801,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -1934,10 +1862,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d8",
@@ -1947,7 +1873,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2008,10 +1934,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d16",
@@ -2021,7 +1945,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2082,10 +2006,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d4",
@@ -2095,7 +2017,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2156,10 +2078,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d8",
@@ -2169,7 +2089,7 @@
     "priority": 1,
     "walltime": "00:20:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2230,10 +2150,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n200000_d16",
@@ -2243,7 +2161,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2262,11 +2180,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n200000_d16",
@@ -2276,7 +2191,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2309,11 +2224,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n200000_d4",
@@ -2323,7 +2235,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2342,11 +2254,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d4/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n200000_d4",
@@ -2356,7 +2265,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2389,11 +2298,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d4/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n200000_d8",
@@ -2403,7 +2309,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2422,11 +2328,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n200000_d8",
@@ -2436,7 +2339,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2469,11 +2372,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d16",
@@ -2483,7 +2383,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2502,11 +2402,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d16/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d16",
@@ -2516,7 +2413,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2549,11 +2446,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d16/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d4",
@@ -2563,7 +2457,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2582,11 +2476,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d4",
@@ -2596,7 +2487,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2629,11 +2520,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d8",
@@ -2643,7 +2531,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2662,11 +2550,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d8/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d8",
@@ -2676,7 +2561,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2709,11 +2594,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d8/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n50000_d16",
@@ -2723,7 +2605,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2742,11 +2624,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n50000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d16/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n50000_d16",
@@ -2756,7 +2635,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2789,11 +2668,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n50000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d16/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n50000_d8",
@@ -2803,7 +2679,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2822,11 +2698,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n50000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d8/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n50000_d8",
@@ -2836,7 +2709,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2869,11 +2742,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n50000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d8/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n100000_d16",
@@ -2883,7 +2753,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2902,11 +2772,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d16/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n100000_d16",
@@ -2916,7 +2783,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2949,11 +2816,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d16/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n100000_d4",
@@ -2963,7 +2827,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -2982,11 +2846,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d4/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n100000_d4",
@@ -2996,7 +2857,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3029,11 +2890,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d4/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n100000_d8",
@@ -3043,7 +2901,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3062,11 +2920,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d8/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n100000_d8",
@@ -3076,7 +2931,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3109,11 +2964,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d8/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d16",
@@ -3123,7 +2975,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3142,11 +2994,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d16",
@@ -3156,7 +3005,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3189,11 +3038,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d4",
@@ -3203,7 +3049,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3222,11 +3068,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d4",
@@ -3236,7 +3079,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3269,11 +3112,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d8",
@@ -3283,7 +3123,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3302,11 +3142,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d8",
@@ -3316,7 +3153,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3349,11 +3186,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d16",
@@ -3363,7 +3197,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3382,11 +3216,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d16",
@@ -3396,7 +3227,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3429,11 +3260,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d4",
@@ -3443,7 +3271,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3462,11 +3290,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d4",
@@ -3476,7 +3301,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3509,11 +3334,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d8",
@@ -3523,7 +3345,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3542,11 +3364,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d8",
@@ -3556,7 +3375,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3589,11 +3408,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n50000_d16",
@@ -3603,7 +3419,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3622,11 +3438,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d16/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n50000_d16",
@@ -3636,7 +3449,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3669,11 +3482,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d16/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n50000_d4",
@@ -3683,7 +3493,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3702,11 +3512,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d4/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n50000_d4",
@@ -3716,7 +3523,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3749,11 +3556,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d4/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n50000_d8",
@@ -3763,7 +3567,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3782,11 +3586,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d8/p2_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n50000_d8",
@@ -3796,7 +3597,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3829,11 +3630,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d8/p4_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n100000_d8",
@@ -3843,7 +3641,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3890,11 +3688,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n100000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n100000_d8/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n200000_d16",
@@ -3904,7 +3699,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -3951,11 +3746,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n200000_d4",
@@ -3965,7 +3757,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -4012,11 +3804,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d4/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n200000_d8",
@@ -4026,7 +3815,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -4073,11 +3862,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d16",
@@ -4087,7 +3873,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -4134,11 +3920,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d16/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d4",
@@ -4148,7 +3931,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -4195,11 +3978,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d8",
@@ -4209,7 +3989,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -4256,11 +4036,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d8/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n50000_d16",
@@ -4270,7 +4047,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -4317,11 +4094,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n50000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d16/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n50000_d8",
@@ -4331,7 +4105,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -4378,11 +4152,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n50000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d8/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_hub_n50000_d8",
@@ -4392,7 +4163,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -4439,11 +4210,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n50000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_hub_n50000_d8/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n100000_d16",
@@ -4453,7 +4221,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -4500,11 +4268,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d16/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n100000_d4",
@@ -4514,7 +4279,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -4561,11 +4326,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d4/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n100000_d8",
@@ -4575,7 +4337,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -4622,11 +4384,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d8/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d16",
@@ -4636,7 +4395,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -4683,11 +4442,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d4",
@@ -4697,7 +4453,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -4744,11 +4500,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d8",
@@ -4758,7 +4511,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -4805,11 +4558,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d16",
@@ -4819,7 +4569,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -4866,11 +4616,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d4",
@@ -4880,7 +4627,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -4927,11 +4674,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d8",
@@ -4941,7 +4685,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -4988,11 +4732,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n50000_d16",
@@ -5002,7 +4743,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -5049,11 +4790,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d16/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n50000_d4",
@@ -5063,7 +4801,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -5110,11 +4848,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d4/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n50000_d8",
@@ -5124,7 +4859,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -5171,11 +4906,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d8/p8_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n100000_d8",
@@ -5185,7 +4917,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -5246,11 +4978,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n100000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n100000_d8/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n200000_d16",
@@ -5260,7 +4989,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -5321,11 +5050,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n200000_d4",
@@ -5335,7 +5061,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -5396,11 +5122,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d4/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n200000_d8",
@@ -5410,7 +5133,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -5471,11 +5194,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d16",
@@ -5485,7 +5205,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -5546,11 +5266,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d16/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d4",
@@ -5560,7 +5277,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -5621,11 +5338,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n400000_d8",
@@ -5635,7 +5349,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -5696,11 +5410,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d8/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n50000_d16",
@@ -5710,7 +5421,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -5771,11 +5482,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n50000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d16/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_controlled_n50000_d8",
@@ -5785,7 +5493,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -5846,11 +5554,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_controlled_n50000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d8/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_hub_n100000_d16",
@@ -5860,7 +5565,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -5921,11 +5626,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_hub_n100000_d16/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_hub_n100000_d4",
@@ -5935,7 +5637,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -5996,11 +5698,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_hub_n100000_d4/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_hub_n100000_d8",
@@ -6010,7 +5709,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -6071,11 +5770,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_hub_n100000_d8/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_hub_n200000_d16",
@@ -6085,7 +5781,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -6146,11 +5842,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n200000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_hub_n200000_d16/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_hub_n200000_d4",
@@ -6160,7 +5853,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -6221,11 +5914,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n200000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_hub_n200000_d4/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_hub_n200000_d8",
@@ -6235,7 +5925,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -6296,11 +5986,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n200000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_hub_n200000_d8/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_hub_n400000_d16",
@@ -6310,7 +5997,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -6371,11 +6058,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n400000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_hub_n400000_d16/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_hub_n400000_d4",
@@ -6385,7 +6069,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -6446,11 +6130,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n400000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_hub_n400000_d4/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_hub_n400000_d8",
@@ -6460,7 +6141,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -6521,11 +6202,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n400000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_hub_n400000_d8/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_hub_n50000_d16",
@@ -6535,7 +6213,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -6596,11 +6274,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n50000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_hub_n50000_d16/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_hub_n50000_d4",
@@ -6610,7 +6285,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -6671,11 +6346,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n50000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_hub_n50000_d4/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_hub_n50000_d8",
@@ -6685,7 +6357,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -6746,11 +6418,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_hub_n50000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_hub_n50000_d8/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n100000_d16",
@@ -6760,7 +6429,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -6821,11 +6490,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d16/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n100000_d4",
@@ -6835,7 +6501,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -6896,11 +6562,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d4/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n100000_d8",
@@ -6910,7 +6573,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -6971,11 +6634,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n100000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n100000_d8/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d16",
@@ -6985,7 +6645,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -7046,11 +6706,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d4",
@@ -7060,7 +6717,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -7121,11 +6778,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n200000_d8",
@@ -7135,7 +6789,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -7196,11 +6850,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n200000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d16",
@@ -7210,7 +6861,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -7271,11 +6922,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d4",
@@ -7285,7 +6933,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -7346,11 +6994,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n400000_d8",
@@ -7360,7 +7005,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -7421,11 +7066,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n400000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n50000_d16",
@@ -7435,7 +7077,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -7496,11 +7138,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d16/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n50000_d4",
@@ -7510,7 +7149,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -7571,11 +7210,8 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d4/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   },
   {
     "graph": "grid_uniform_n50000_d8",
@@ -7585,7 +7221,7 @@
     "priority": 1,
     "walltime": "00:30:00",
     "prerequisite": "",
-    "required_job": "1542434.stdct-mgmt-02",
+    "required_job": "1542730.stdct-mgmt-02",
     "dense_launch_pause_s": 0,
     "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
     "cells": [
@@ -7646,10 +7282,7 @@
         "canonical_summary": "kokkos_cpu_grid/grid_uniform_n50000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_uniform_n50000_d8/p16_t2/summary.json"
       }
     ],
-    "requested_hosts": [
-      "cn-007",
-      "cn-053"
-    ],
-    "dependency": "1542434.stdct-mgmt-02"
+    "dependency": "1542730.stdct-mgmt-02",
+    "scheduler_cpu_pool": "ccid-10"
   }
 ]

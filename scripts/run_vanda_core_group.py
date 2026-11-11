@@ -65,6 +65,9 @@ def compute(group, raw, env):
         if not (destination / name).exists():
             os.link(reference / name, destination / name)
     command(["bash", "scripts/record_vanda_allocation.sh", str(raw / "cpu_hosts.jsonl")], env)
+    if not group.get("validation_only"):
+        hosts = [json.loads(line) for line in (raw / "cpu_hosts.jsonl").read_text().splitlines()]
+        assert all("Platinum 8452Y" in host["cpu_model"] for host in hosts), hosts
     command(["python3", "scripts/select_graph_manifest.py",
              str(Path(env["DATA_ROOT"]) / "manifests/strong_scaling.tsv"), group["graph"],
              str(raw / "dataset.tsv")], env)

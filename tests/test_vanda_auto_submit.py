@@ -28,6 +28,13 @@ class AutoSubmitTests(unittest.TestCase):
         self.assertEqual(submit.allocation_request(group),
                          '2:ncpus=2:mpiprocs=2:ompthreads=1:mem=4gb')
 
+    def test_cpu_pool_lets_scheduler_place_ranks_without_changing_core_budget(self):
+        group = {'graph': 'grid_hub_a', 'nodes': 2, 'cores_per_node': 16,
+                 'scheduler_cpu_pool': 'cpu_all'}
+        self.assertEqual(submit.allocation_request(group),
+                         '2:ncpus=16:mpiprocs=16:ompthreads=1:mem=16gb:'
+                         'node_pool=cpu_node:switch=cpu_all')
+
     def test_legacy_holds_are_forwarded_to_the_budget_check(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)

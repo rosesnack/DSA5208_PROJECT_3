@@ -5,16 +5,15 @@
   "status_counts": {
     "validated": 16131,
     "deferred_512": 1160,
-    "unsubmitted": 3304,
-    "awaiting_validation": 74,
-    "running": 6,
-    "queued": 6,
+    "unsubmitted": 3172,
+    "awaiting_validation": 208,
     "held": 5,
-    "performance_failed": 14
+    "performance_failed": 14,
+    "running": 10
   },
   "submitted_group_counts": {
     "xtt_ella": 149,
-    "hongxinran": 106
+    "hongxinran": 130
   },
   "mainline_coverage": [
     {
@@ -126,14 +125,14 @@
   },
   "snapshots": {
     "xtt_ella": {
-      "observed_at": "2026-11-11T21:27:26.102472+08:00",
+      "observed_at": "2026-11-11T22:07:10.089963+08:00",
       "monitor_action": "waiting_real_credits",
       "active_job_count": 8
     },
     "hongxinran": {
-      "observed_at": "2026-11-11T21:27:43.553339+08:00",
+      "observed_at": "2026-11-11T22:07:24.149576+08:00",
       "monitor_action": "submitted",
-      "active_job_count": 78
+      "active_job_count": 84
     }
   },
   "scope_note": "Thread range is 1/2/4/8/16/32. Regular per-node CPU budget is at most 32; the 512 endpoint uses 8 nodes x 64. Weak scaling is separate."

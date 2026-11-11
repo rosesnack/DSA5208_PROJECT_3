@@ -13,10 +13,6 @@
   "source_plan_removed_cells": 730,
   "old_assist_cells": 448,
   "walltimes": "Original 00:20:00 for 1 node and 00:30:00 for 2 nodes; no shortening",
-  "new_hosts": [
-    "cn-007",
-    "cn-053"
-  ],
   "primary_plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111_phase3.json",
   "assist_plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261111_phase3.json",
   "preparation_job": "1542434.stdct-mgmt-02",
@@ -25,13 +21,20 @@
   "assist_new_remaining_cells": 702,
   "superseded_preparation_job": "1542429.stdct-mgmt-02",
   "host_adjustment_reason": "Original host is full; the first alternate pair is outside the scheduler placement set for these jobs. Use proven Platinum8452Y nodes cn-007/cn-053 with current spare capacity, restoring the original memory-per-core requests. Core counts, walltimes and job IDs remain unchanged.",
-  "submitted_new_groups": 28,
-  "submitted_new_cells": 114,
+  "submitted_new_groups": 52,
+  "submitted_new_cells": 246,
   "performance_states": {
-    "R": 1,
-    "Q": 1,
+    "R": 3,
+    "Q": 0,
     "H": 0,
-    "F": 26
+    "F": 49
   },
-  "observed_at": "2026-11-11T21:27:43.553339+08:00"
+  "observed_at": "2026-11-11T22:07:24.149576+08:00",
+  "initial_requested_hosts": [
+    "cn-007",
+    "cn-053"
+  ],
+  "scheduler_cpu_pool": "ccid-10",
+  "placement_policy": "PBS chooses nodes in cpu_node/ccid-10; no fixed host names for remaining work",
+  "pool_probe_job": "1542730.stdct-mgmt-02"
 }

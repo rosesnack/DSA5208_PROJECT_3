@@ -1,8 +1,8 @@
 # Vanda 实验交接（2026-11-11 复核版）
 
-**这是当前唯一的执行交接入口。文件名沿用 Nov 6，当前归属已更新至 Nov 11 21:27 SGT。** 已把 **136 组/730 个尚缺配置**从 xtt_ella 的真实源计划移除，交给 hongxinran；现有有效结果没有重跑。首次免费预检只因多检查了未使用的辅助程序失败，修正后的免费预检 **1542434** 已 Exit 0；没有重测 Serial。
+**这是当前唯一的执行交接入口。文件名沿用 Nov 6，当前归属已更新至 Nov 11 22:07 SGT。** 已把 **136 组/730 个尚缺配置**从 xtt_ella 的真实源计划移除，交给 hongxinran；现有有效结果没有重跑。首次免费预检只因多检查了未使用的辅助程序失败，修正后的免费预检 **1542434** 已 Exit 0；没有重测 Serial。
 
-新计划总请求上限 **932 CPUh**，沿用单节点 20 分钟、两节点 30 分钟；只测付费性能，独立校验用免费。当前新登记 **28 组/114 项**，其中性能 R=1、Q=1、H=0、F=26；其余分担配置由后台监控分批续投。实际作业 ID、请求和观测时间见清单。
+新计划总请求上限 **932 CPUh**，沿用单节点 20 分钟、两节点 30 分钟；只测付费性能，独立校验用免费。当前新登记 **52 组/246 项**，其中性能 R=3、Q=0、H=0、F=49；其余分担配置由后台监控分批续投。实际作业 ID、请求和观测时间见清单。
 
 **未提交不代表无人负责。** 当前未完成固定图归属为 xtt_ella **3,867** 项、hongxinran **702** 项；队友仍须按下面流程完成所有权转交，不能从缺项 CSV 直接 qsub。两边未来计划和已登记配置均无交集。
 
@@ -13,12 +13,12 @@
 | 固定图状态 | 配置数 | 队友怎么处理 |
 |---|---:|---|
 | `validated` | **16,131** | 已校验，直接复用 |
-| `running` | **6** | 跟踪原作业，不重复提交 |
-| `queued` | **6** | 跟踪原作业，不重复提交 |
-| `awaiting_validation` | **74** | 原测量结束，等校验或结果同步，不重复测量 |
+| `running` | **10** | 跟踪原作业，不重复提交 |
+| `queued` | **0** | 跟踪原作业，不重复提交 |
+| `awaiting_validation` | **208** | 原测量结束，等校验或结果同步，不重复测量 |
 | `performance_failed` | **14** | 由原账号检查失败及可复用部分 |
 | `held` | **5** | 当前原 512 核组延期，不复制提交 |
-| `unsubmitted` | **3,304** | 仍有明确 future_owner，先转交再提交 |
+| `unsubmitted` | **3,172** | 仍有明确 future_owner，先转交再提交 |
 | `deferred_512` | **1,160** | 按原优先级延期 |
 | **合计** | **20,700** | 已验证 16,131；其余 4,569 |
 
@@ -75,19 +75,19 @@ CSV 中 `canonical_summary` 是跨账号匹配同一配置的唯一键。`assign
 
 | 账号 | 当前登记和动作 | 继续负责的固定图缺项 |
 |---|---|---:|
-| xtt_ella | 149 组；waiting_real_credits；已移除这次转交的 730 项 | 3,867 |
-| hongxinran | 原 78 组/448 项全部完成；新增登记 28 组/114 项；新计划共 136 组/730 项 | 702 |
+| xtt_ella | 149 组；wait_real_credits；已移除这次转交的 730 项 | 3,867 |
+| hongxinran | 原 78 组/448 项全部完成；新增登记 52 组/246 项；新计划共 136 组/730 项 | 702 |
 
-两个监控每 60 秒查询，新 PID **765730 / 765579**，截止 Nov 12 23:59 SGT。最多六个在途性能组；主账号最高 256 核、分担账号上限 128 核，本次实际申请为 1/2 节点、总 2/4/8/16/32 核，每个配置 p×T 等于请求核数。原 20/30 分钟墙钟不缩短。本批总预留 932 CPUh，按交接前余额 1,257.712 CPUh 计算仍保留 325.712；监控另留 64 CPUh，实际可提交量以实时余额为准。
+两个监控每 60 秒查询，新 PID **765730 / 765579**，截止 Nov 12 23:59 SGT。最多六个在途性能组；主账号最高 256 核、分担账号上限 128 核，本次实际申请为 1/2 节点、总 1–32 核，每个配置 p×T 等于请求核数。原 20/30 分钟墙钟不缩短。本批总预留 932 CPUh，按交接前余额 1,257.712 CPUh 计算仍保留 325.712；监控另留 64 CPUh，实际可提交量以实时余额为准。
 
-第一组原定 CN-051 已满；仅对仍在 Q 的新作业调整主机请求，核数、墙钟和 job ID 保留。最新节点及 PBS 资源限制说明见 [主机调整记录](results/updated_vanda_scaling/20261111_hongxinran_assist/phase3_host_adjustment_20261111.json)。新请求继续限定已有 Platinum 8452Y 证据的 CPU 节点，不能把未调度的请求当作已测量结果。
+当前剩余任务已取消固定主机绑定，交由 PBS 在 `node_pool=cpu_node, switch=ccid-10` 内分配；核数、线程、内存和墙钟不变。免费两节点预检 **1542730** 使用与性能任务相同的 TCP/OpenMPI 配置成功，计算前与独立发布前均检查 Platinum 8452Y。详见 [本次排队修复](updated_vanda_queue_recovery_20261111.md)。 新的主机分配由调度器决定，实际节点仍由 cpu_hosts 和 affinity 记录，不把 Q 当作测量结果。
 
 | 账号 | 项目目录 | 当前源计划（相对于项目根目录） |
 |---|---|---|
 | xtt_ella / personal-xtt_ella | `/scratch/xtt_ella/DSA5208_PROJECT_3_20261107` | `results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111_phase3.json` |
 | hongxinran / personal-hongxinran | `/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111` | `results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261111_phase3.json` |
 
-[实际登记的 255 个资源组及作业 ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv) 与 [主队列快照](results/updated_vanda_scaling/git_sync_20261111/queue_xtt_ella.json)、[分担队列快照](results/updated_vanda_scaling/git_sync_20261111/queue_hongxinran.json) 分开列出“注册组”和“PBS 作业”。一个资源组的性能、免费校验是两个 job，不能重复当两组实验。
+[实际登记的 279 个资源组及作业 ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv) 与 [主队列快照](results/updated_vanda_scaling/git_sync_20261111/queue_xtt_ella.json)、[分担队列快照](results/updated_vanda_scaling/git_sync_20261111/queue_hongxinran.json) 分开列出“注册组”和“PBS 作业”。一个资源组的性能、免费校验是两个 job，不能重复当两组实验。
 
 **旧 H 不能直接释放。** 两边原有 78 个旧 H job：主账号 8、hongxinran 70。其中只有当前 512 组的性能 `1532794` 与依赖校验 `1532795` 对应上表 `held` 的 5 项；主账号另 6 个是已被成功补跑替代的旧性能/校验。hongxinran 的 70 个是此前延期的旧请求，可能与新计划或缺项重叠，不能称它们“70 个待领取实验”，也不能称为“全部完成”。继续保留旧请求暂挂；本批转交时已核对目标并保持旧请求延期，禁止批量 qrls。新增免费校验的依赖 H 会在相应性能成功后自动解除，不等同于这些旧 H。`u` 是用户暂挂，`s` 是系统暂挂，`d` 是依赖暂挂；H 不会自动等同于 Q。
 

@@ -23,6 +23,8 @@ def allocation_request(group):
     per_node = group['cores_per_node']
     memory = max(per_node, 64) if group['graph'].startswith('strong_') else max(per_node, 4)
     chunk = f'ncpus={per_node}:mpiprocs={per_node}:ompthreads=1:mem={memory}gb'
+    if group.get('scheduler_cpu_pool'):
+        chunk += ':node_pool=cpu_node:switch=' + group['scheduler_cpu_pool']
     hosts = group.get('requested_hosts')
     if hosts:
         assert len(hosts) == len(set(hosts)) == group['nodes']

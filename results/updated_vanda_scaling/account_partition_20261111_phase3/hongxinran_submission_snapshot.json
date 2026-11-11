@@ -1,7 +1,7 @@
 {
-  "observed_at": "2026-11-11T21:27:43.553339+08:00",
+  "observed_at": "2026-11-11T22:07:24.149576+08:00",
   "account": "hongxinran",
-  "registry": "graph\tnodes\tcores_per_node\tcores\tperformance_job\tvalidation_job\twalltime\tcells\tplan\tdependency\ngrid_hub_n100000_d16\t2\t32\t64\t1537745.stdct-mgmt-02\t1537748.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d16_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d4\t2\t32\t64\t1537752.stdct-mgmt-02\t1537754.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d4_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d8\t2\t32\t64\t1537755.stdct-mgmt-02\t1537756.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d8_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d16\t2\t32\t64\t1537757.stdct-mgmt-02\t1537758.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d4\t2\t32\t64\t1537759.stdct-mgmt-02\t1537760.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d8\t2\t32\t64\t1537762.stdct-mgmt-02\t1537763.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d16\t2\t32\t64\t1538102.stdct-mgmt-02\t1538103.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n2_c32_retry_1537799.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d4\t2\t32\t64\t1537801.stdct-mgmt-02\t1537802.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d4_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d8\t2\t32\t64\t1537803.stdct-mgmt-02\t1537804.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d8_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d16\t2\t32\t64\t1537805.stdct-mgmt-02\t1537806.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d16_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d4\t2\t32\t64\t1537833.stdct-mgmt-02\t1537834.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d4_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d8\t2\t32\t64\t1537835.stdct-mgmt-02\t1537836.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d8_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d16\t4\t32\t128\t1537837.stdct-mgmt-02\t1537838.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d16_n4_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d4\t4\t32\t128\t1537889.stdct-mgmt-02\t1537890.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d4_n4_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d8\t4\t32\t128\t1537891.stdct-mgmt-02\t1537892.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d8_n4_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d16\t4\t32\t128\t1537893.stdct-mgmt-02\t1537894.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n4_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d4\t4\t32\t128\t1537946.stdct-mgmt-02\t1537947.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n4_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d8\t4\t32\t128\t1537948.stdct-mgmt-02\t1537949.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n4_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d16\t4\t32\t128\t1537950.stdct-mgmt-02\t1537951.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n4_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d16\t1\t2\t2\t1538211.stdct-mgmt-02\t1538212.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n1_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d16\t1\t4\t4\t1538213.stdct-mgmt-02\t1538214.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n1_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d4\t1\t2\t2\t1538215.stdct-mgmt-02\t1538216.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n1_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d4\t1\t4\t4\t1538217.stdct-mgmt-02\t1538218.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n1_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d8\t1\t2\t2\t1538219.stdct-mgmt-02\t1538220.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n1_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d8\t1\t4\t4\t1538221.stdct-mgmt-02\t1538222.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n1_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d16\t1\t2\t2\t1538223.stdct-mgmt-02\t1538224.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n1_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d16\t1\t4\t4\t1538225.stdct-mgmt-02\t1538226.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n1_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d4\t1\t2\t2\t1538227.stdct-mgmt-02\t1538228.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d4_n1_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d4\t1\t4\t4\t1538229.stdct-mgmt-02\t1538230.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d4_n1_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d8\t1\t2\t2\t1538231.stdct-mgmt-02\t1538232.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d8_n1_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d8\t1\t4\t4\t1538233.stdct-mgmt-02\t1538234.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d8_n1_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d16\t1\t8\t8\t1538237.stdct-mgmt-02\t1538238.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n1_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d4\t1\t8\t8\t1538239.stdct-mgmt-02\t1538240.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n1_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d8\t1\t8\t8\t1538241.stdct-mgmt-02\t1538242.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n1_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d16\t1\t8\t8\t1538243.stdct-mgmt-02\t1538244.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n1_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d4\t1\t8\t8\t1538245.stdct-mgmt-02\t1538246.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d4_n1_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d8\t1\t8\t8\t1538247.stdct-mgmt-02\t1538248.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d8_n1_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d16\t1\t16\t16\t1538252.stdct-mgmt-02\t1538253.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n1_c16.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d4\t1\t16\t16\t1538254.stdct-mgmt-02\t1538255.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n1_c16.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d8\t1\t16\t16\t1538256.stdct-mgmt-02\t1538257.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n1_c16.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d16\t1\t16\t16\t1538258.stdct-mgmt-02\t1538259.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n1_c16.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d4\t1\t16\t16\t1538260.stdct-mgmt-02\t1538261.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d4_n1_c16.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d8\t1\t16\t16\t1538262.stdct-mgmt-02\t1538263.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d8_n1_c16.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d16\t2\t2\t4\t1538270.stdct-mgmt-02\t1538271.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d16_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d16\t2\t4\t8\t1538272.stdct-mgmt-02\t1538273.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d16_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d4\t2\t2\t4\t1538274.stdct-mgmt-02\t1538275.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d4_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d4\t2\t4\t8\t1538276.stdct-mgmt-02\t1538277.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d4_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d8\t2\t2\t4\t1538278.stdct-mgmt-02\t1538279.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d8_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d8\t2\t4\t8\t1538280.stdct-mgmt-02\t1538281.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d8_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d16\t2\t2\t4\t1538282.stdct-mgmt-02\t1538283.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d16\t2\t4\t8\t1538284.stdct-mgmt-02\t1538285.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d4\t2\t2\t4\t1538286.stdct-mgmt-02\t1538287.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d4\t2\t4\t8\t1538300.stdct-mgmt-02\t1538301.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d8\t2\t2\t4\t1538302.stdct-mgmt-02\t1538303.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d8\t2\t4\t8\t1538304.stdct-mgmt-02\t1538305.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d16\t2\t2\t4\t1538306.stdct-mgmt-02\t1538307.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d16\t2\t4\t8\t1538308.stdct-mgmt-02\t1538309.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d4\t2\t2\t4\t1538310.stdct-mgmt-02\t1538311.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d4_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d4\t2\t4\t8\t1538315.stdct-mgmt-02\t1538316.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d4_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d8\t2\t2\t4\t1538317.stdct-mgmt-02\t1538318.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d8_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d8\t2\t4\t8\t1538319.stdct-mgmt-02\t1538320.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d8_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d16\t2\t2\t4\t1538321.stdct-mgmt-02\t1538322.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d16_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d16\t2\t4\t8\t1538323.stdct-mgmt-02\t1538324.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d16_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d4\t2\t2\t4\t1538325.stdct-mgmt-02\t1538326.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d4_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d4\t2\t4\t8\t1538327.stdct-mgmt-02\t1538328.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d4_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d8\t2\t2\t4\t1538329.stdct-mgmt-02\t1538330.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d8_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d8\t2\t4\t8\t1538331.stdct-mgmt-02\t1538332.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d8_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d16\t2\t8\t16\t1538333.stdct-mgmt-02\t1538334.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d16_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d4\t2\t8\t16\t1538335.stdct-mgmt-02\t1538336.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d4_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d8\t2\t8\t16\t1538337.stdct-mgmt-02\t1538338.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d8_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d16\t2\t8\t16\t1538339.stdct-mgmt-02\t1538340.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d4\t2\t8\t16\t1538341.stdct-mgmt-02\t1538342.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d8\t2\t8\t16\t1538343.stdct-mgmt-02\t1538344.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d16\t2\t8\t16\t1538345.stdct-mgmt-02\t1538346.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d4\t2\t8\t16\t1538347.stdct-mgmt-02\t1538348.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d4_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d8\t2\t8\t16\t1538349.stdct-mgmt-02\t1538350.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d8_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d16\t2\t8\t16\t1538351.stdct-mgmt-02\t1538352.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d16_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d4\t2\t8\t16\t1538353.stdct-mgmt-02\t1538354.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d4_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_controlled_n200000_d16\t1\t4\t4\t1542438.stdct-mgmt-02\t1542439.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d16_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_controlled_n200000_d8\t1\t4\t4\t1542440.stdct-mgmt-02\t1542441.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d8_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d16\t1\t4\t4\t1542442.stdct-mgmt-02\t1542443.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d16_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d4\t1\t2\t2\t1542444.stdct-mgmt-02\t1542445.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d4_n1_c2.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d4\t1\t4\t4\t1542446.stdct-mgmt-02\t1542447.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d4_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d8\t1\t2\t2\t1542448.stdct-mgmt-02\t1542449.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d8_n1_c2.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d8\t1\t4\t4\t1542499.stdct-mgmt-02\t1542500.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d8_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d16\t1\t2\t2\t1542501.stdct-mgmt-02\t1542502.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d16_n1_c2.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d16\t1\t4\t4\t1542503.stdct-mgmt-02\t1542504.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d16_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d4\t1\t2\t2\t1542505.stdct-mgmt-02\t1542506.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d4_n1_c2.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d4\t1\t4\t4\t1542507.stdct-mgmt-02\t1542508.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d4_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d8\t1\t2\t2\t1542509.stdct-mgmt-02\t1542510.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d8_n1_c2.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d8\t1\t4\t4\t1542518.stdct-mgmt-02\t1542519.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d8_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d16\t1\t2\t2\t1542520.stdct-mgmt-02\t1542521.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d16_n1_c2.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d16\t1\t4\t4\t1542522.stdct-mgmt-02\t1542523.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d16_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d4\t1\t2\t2\t1542524.stdct-mgmt-02\t1542525.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d4_n1_c2.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d4\t1\t4\t4\t1542526.stdct-mgmt-02\t1542527.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d4_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d8\t1\t2\t2\t1542528.stdct-mgmt-02\t1542529.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d8_n1_c2.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d8\t1\t4\t4\t1542534.stdct-mgmt-02\t1542535.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d8_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_controlled_n200000_d16\t1\t8\t8\t1542536.stdct-mgmt-02\t1542537.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d16_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_controlled_n200000_d8\t1\t8\t8\t1542538.stdct-mgmt-02\t1542539.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d8_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d16\t1\t8\t8\t1542540.stdct-mgmt-02\t1542541.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d16_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d4\t1\t8\t8\t1542542.stdct-mgmt-02\t1542543.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d4_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d8\t1\t8\t8\t1542544.stdct-mgmt-02\t1542545.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d8_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d16\t1\t8\t8\t1542557.stdct-mgmt-02\t1542558.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d16_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d4\t1\t8\t8\t1542559.stdct-mgmt-02\t1542560.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d4_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d8\t1\t8\t8\t1542561.stdct-mgmt-02\t1542562.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d8_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d16\t1\t8\t8\t1542563.stdct-mgmt-02\t1542564.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d16_n1_c8.json\t1542434.stdct-mgmt-02\n",
+  "registry": "graph\tnodes\tcores_per_node\tcores\tperformance_job\tvalidation_job\twalltime\tcells\tplan\tdependency\ngrid_hub_n100000_d16\t2\t32\t64\t1537745.stdct-mgmt-02\t1537748.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d16_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d4\t2\t32\t64\t1537752.stdct-mgmt-02\t1537754.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d4_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d8\t2\t32\t64\t1537755.stdct-mgmt-02\t1537756.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d8_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d16\t2\t32\t64\t1537757.stdct-mgmt-02\t1537758.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d4\t2\t32\t64\t1537759.stdct-mgmt-02\t1537760.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d8\t2\t32\t64\t1537762.stdct-mgmt-02\t1537763.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d16\t2\t32\t64\t1538102.stdct-mgmt-02\t1538103.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n2_c32_retry_1537799.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d4\t2\t32\t64\t1537801.stdct-mgmt-02\t1537802.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d4_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d8\t2\t32\t64\t1537803.stdct-mgmt-02\t1537804.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d8_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d16\t2\t32\t64\t1537805.stdct-mgmt-02\t1537806.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d16_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d4\t2\t32\t64\t1537833.stdct-mgmt-02\t1537834.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d4_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d8\t2\t32\t64\t1537835.stdct-mgmt-02\t1537836.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d8_n2_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d16\t4\t32\t128\t1537837.stdct-mgmt-02\t1537838.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d16_n4_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d4\t4\t32\t128\t1537889.stdct-mgmt-02\t1537890.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d4_n4_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d8\t4\t32\t128\t1537891.stdct-mgmt-02\t1537892.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d8_n4_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d16\t4\t32\t128\t1537893.stdct-mgmt-02\t1537894.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n4_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d4\t4\t32\t128\t1537946.stdct-mgmt-02\t1537947.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n4_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d8\t4\t32\t128\t1537948.stdct-mgmt-02\t1537949.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n4_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d16\t4\t32\t128\t1537950.stdct-mgmt-02\t1537951.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n4_c32.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d16\t1\t2\t2\t1538211.stdct-mgmt-02\t1538212.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n1_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d16\t1\t4\t4\t1538213.stdct-mgmt-02\t1538214.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n1_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d4\t1\t2\t2\t1538215.stdct-mgmt-02\t1538216.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n1_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d4\t1\t4\t4\t1538217.stdct-mgmt-02\t1538218.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n1_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d8\t1\t2\t2\t1538219.stdct-mgmt-02\t1538220.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n1_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d8\t1\t4\t4\t1538221.stdct-mgmt-02\t1538222.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n1_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d16\t1\t2\t2\t1538223.stdct-mgmt-02\t1538224.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n1_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d16\t1\t4\t4\t1538225.stdct-mgmt-02\t1538226.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n1_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d4\t1\t2\t2\t1538227.stdct-mgmt-02\t1538228.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d4_n1_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d4\t1\t4\t4\t1538229.stdct-mgmt-02\t1538230.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d4_n1_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d8\t1\t2\t2\t1538231.stdct-mgmt-02\t1538232.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d8_n1_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d8\t1\t4\t4\t1538233.stdct-mgmt-02\t1538234.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d8_n1_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d16\t1\t8\t8\t1538237.stdct-mgmt-02\t1538238.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n1_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d4\t1\t8\t8\t1538239.stdct-mgmt-02\t1538240.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n1_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d8\t1\t8\t8\t1538241.stdct-mgmt-02\t1538242.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n1_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d16\t1\t8\t8\t1538243.stdct-mgmt-02\t1538244.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n1_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d4\t1\t8\t8\t1538245.stdct-mgmt-02\t1538246.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d4_n1_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d8\t1\t8\t8\t1538247.stdct-mgmt-02\t1538248.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d8_n1_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d16\t1\t16\t16\t1538252.stdct-mgmt-02\t1538253.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n1_c16.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d4\t1\t16\t16\t1538254.stdct-mgmt-02\t1538255.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n1_c16.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d8\t1\t16\t16\t1538256.stdct-mgmt-02\t1538257.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n1_c16.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d16\t1\t16\t16\t1538258.stdct-mgmt-02\t1538259.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n1_c16.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d4\t1\t16\t16\t1538260.stdct-mgmt-02\t1538261.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d4_n1_c16.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d8\t1\t16\t16\t1538262.stdct-mgmt-02\t1538263.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d8_n1_c16.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d16\t2\t2\t4\t1538270.stdct-mgmt-02\t1538271.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d16_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d16\t2\t4\t8\t1538272.stdct-mgmt-02\t1538273.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d16_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d4\t2\t2\t4\t1538274.stdct-mgmt-02\t1538275.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d4_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d4\t2\t4\t8\t1538276.stdct-mgmt-02\t1538277.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d4_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d8\t2\t2\t4\t1538278.stdct-mgmt-02\t1538279.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d8_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d8\t2\t4\t8\t1538280.stdct-mgmt-02\t1538281.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d8_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d16\t2\t2\t4\t1538282.stdct-mgmt-02\t1538283.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d16\t2\t4\t8\t1538284.stdct-mgmt-02\t1538285.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d4\t2\t2\t4\t1538286.stdct-mgmt-02\t1538287.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d4\t2\t4\t8\t1538300.stdct-mgmt-02\t1538301.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d8\t2\t2\t4\t1538302.stdct-mgmt-02\t1538303.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d8\t2\t4\t8\t1538304.stdct-mgmt-02\t1538305.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d16\t2\t2\t4\t1538306.stdct-mgmt-02\t1538307.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d16\t2\t4\t8\t1538308.stdct-mgmt-02\t1538309.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d4\t2\t2\t4\t1538310.stdct-mgmt-02\t1538311.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d4_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d4\t2\t4\t8\t1538315.stdct-mgmt-02\t1538316.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d4_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d8\t2\t2\t4\t1538317.stdct-mgmt-02\t1538318.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d8_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d8\t2\t4\t8\t1538319.stdct-mgmt-02\t1538320.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d8_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d16\t2\t2\t4\t1538321.stdct-mgmt-02\t1538322.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d16_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d16\t2\t4\t8\t1538323.stdct-mgmt-02\t1538324.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d16_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d4\t2\t2\t4\t1538325.stdct-mgmt-02\t1538326.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d4_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d4\t2\t4\t8\t1538327.stdct-mgmt-02\t1538328.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d4_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d8\t2\t2\t4\t1538329.stdct-mgmt-02\t1538330.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d8_n2_c2.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d8\t2\t4\t8\t1538331.stdct-mgmt-02\t1538332.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d8_n2_c4.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d16\t2\t8\t16\t1538333.stdct-mgmt-02\t1538334.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d16_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d4\t2\t8\t16\t1538335.stdct-mgmt-02\t1538336.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d4_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n100000_d8\t2\t8\t16\t1538337.stdct-mgmt-02\t1538338.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n100000_d8_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d16\t2\t8\t16\t1538339.stdct-mgmt-02\t1538340.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d16_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d4\t2\t8\t16\t1538341.stdct-mgmt-02\t1538342.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d4_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n200000_d8\t2\t8\t16\t1538343.stdct-mgmt-02\t1538344.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n200000_d8_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d16\t2\t8\t16\t1538345.stdct-mgmt-02\t1538346.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d16_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d4\t2\t8\t16\t1538347.stdct-mgmt-02\t1538348.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d4_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n400000_d8\t2\t8\t16\t1538349.stdct-mgmt-02\t1538350.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n400000_d8_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d16\t2\t8\t16\t1538351.stdct-mgmt-02\t1538352.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d16_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_hub_n50000_d4\t2\t8\t16\t1538353.stdct-mgmt-02\t1538354.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_hub_n50000_d4_n2_c8.json\t1537725.stdct-mgmt-02\ngrid_controlled_n200000_d16\t1\t4\t4\t1542438.stdct-mgmt-02\t1542439.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d16_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_controlled_n200000_d8\t1\t4\t4\t1542440.stdct-mgmt-02\t1542441.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d8_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d16\t1\t4\t4\t1542442.stdct-mgmt-02\t1542443.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d16_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d4\t1\t2\t2\t1542444.stdct-mgmt-02\t1542445.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d4_n1_c2.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d4\t1\t4\t4\t1542446.stdct-mgmt-02\t1542447.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d4_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d8\t1\t2\t2\t1542448.stdct-mgmt-02\t1542449.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d8_n1_c2.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d8\t1\t4\t4\t1542499.stdct-mgmt-02\t1542500.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d8_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d16\t1\t2\t2\t1542501.stdct-mgmt-02\t1542502.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d16_n1_c2.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d16\t1\t4\t4\t1542503.stdct-mgmt-02\t1542504.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d16_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d4\t1\t2\t2\t1542505.stdct-mgmt-02\t1542506.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d4_n1_c2.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d4\t1\t4\t4\t1542507.stdct-mgmt-02\t1542508.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d4_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d8\t1\t2\t2\t1542509.stdct-mgmt-02\t1542510.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d8_n1_c2.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d8\t1\t4\t4\t1542518.stdct-mgmt-02\t1542519.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d8_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d16\t1\t2\t2\t1542520.stdct-mgmt-02\t1542521.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d16_n1_c2.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d16\t1\t4\t4\t1542522.stdct-mgmt-02\t1542523.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d16_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d4\t1\t2\t2\t1542524.stdct-mgmt-02\t1542525.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d4_n1_c2.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d4\t1\t4\t4\t1542526.stdct-mgmt-02\t1542527.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d4_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d8\t1\t2\t2\t1542528.stdct-mgmt-02\t1542529.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d8_n1_c2.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d8\t1\t4\t4\t1542534.stdct-mgmt-02\t1542535.stdct-mgmt-02\t00:20:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d8_n1_c4.json\t1542434.stdct-mgmt-02\ngrid_controlled_n200000_d16\t1\t8\t8\t1542536.stdct-mgmt-02\t1542537.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d16_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_controlled_n200000_d8\t1\t8\t8\t1542538.stdct-mgmt-02\t1542539.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d8_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d16\t1\t8\t8\t1542540.stdct-mgmt-02\t1542541.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d16_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d4\t1\t8\t8\t1542542.stdct-mgmt-02\t1542543.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d4_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d8\t1\t8\t8\t1542544.stdct-mgmt-02\t1542545.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d8_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d16\t1\t8\t8\t1542557.stdct-mgmt-02\t1542558.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d16_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d4\t1\t8\t8\t1542559.stdct-mgmt-02\t1542560.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d4_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d8\t1\t8\t8\t1542561.stdct-mgmt-02\t1542562.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d8_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d16\t1\t8\t8\t1542563.stdct-mgmt-02\t1542564.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d16_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d4\t1\t8\t8\t1542571.stdct-mgmt-02\t1542572.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d4_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d8\t1\t8\t8\t1542573.stdct-mgmt-02\t1542574.stdct-mgmt-02\t00:20:00\t6\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d8_n1_c8.json\t1542434.stdct-mgmt-02\ngrid_controlled_n200000_d16\t1\t16\t16\t1542575.stdct-mgmt-02\t1542576.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d16_n1_c16.json\t1542434.stdct-mgmt-02\ngrid_controlled_n200000_d8\t1\t16\t16\t1542577.stdct-mgmt-02\t1542578.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d8_n1_c16.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d16\t1\t16\t16\t1542580.stdct-mgmt-02\t1542581.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d16_n1_c16.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d4\t1\t16\t16\t1542582.stdct-mgmt-02\t1542583.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d4_n1_c16.json\t1542434.stdct-mgmt-02\ngrid_controlled_n400000_d8\t1\t16\t16\t1542584.stdct-mgmt-02\t1542585.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d8_n1_c16.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d16\t1\t16\t16\t1542609.stdct-mgmt-02\t1542611.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d16_n1_c16.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d4\t1\t16\t16\t1542617.stdct-mgmt-02\t1542618.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d4_n1_c16.json\t1542434.stdct-mgmt-02\ngrid_uniform_n200000_d8\t1\t16\t16\t1542624.stdct-mgmt-02\t1542625.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d8_n1_c16.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d16\t1\t16\t16\t1542626.stdct-mgmt-02\t1542627.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d16_n1_c16.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d4\t1\t16\t16\t1542636.stdct-mgmt-02\t1542637.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d4_n1_c16.json\t1542434.stdct-mgmt-02\ngrid_uniform_n400000_d8\t1\t16\t16\t1542638.stdct-mgmt-02\t1542639.stdct-mgmt-02\t00:20:00\t8\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d8_n1_c16.json\t1542434.stdct-mgmt-02\ngrid_controlled_n200000_d16\t2\t2\t4\t1542643.stdct-mgmt-02\t1542644.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d16_n2_c2.json\t1542434.stdct-mgmt-02\ngrid_controlled_n200000_d16\t2\t4\t8\t1542742.stdct-mgmt-02\t1542743.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d16_n2_c4.json\t1542730.stdct-mgmt-02\ngrid_controlled_n200000_d4\t2\t2\t4\t1542744.stdct-mgmt-02\t1542745.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d4_n2_c2.json\t1542730.stdct-mgmt-02\ngrid_controlled_n200000_d4\t2\t4\t8\t1542746.stdct-mgmt-02\t1542747.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d4_n2_c4.json\t1542730.stdct-mgmt-02\ngrid_controlled_n200000_d8\t2\t2\t4\t1542748.stdct-mgmt-02\t1542749.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d8_n2_c2.json\t1542730.stdct-mgmt-02\ngrid_controlled_n200000_d8\t2\t4\t8\t1542751.stdct-mgmt-02\t1542752.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d8_n2_c4.json\t1542730.stdct-mgmt-02\ngrid_controlled_n400000_d16\t2\t2\t4\t1542753.stdct-mgmt-02\t1542754.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d16_n2_c2.json\t1542730.stdct-mgmt-02\ngrid_controlled_n400000_d16\t2\t4\t8\t1542755.stdct-mgmt-02\t1542756.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d16_n2_c4.json\t1542730.stdct-mgmt-02\ngrid_controlled_n400000_d4\t2\t2\t4\t1542757.stdct-mgmt-02\t1542758.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d4_n2_c2.json\t1542730.stdct-mgmt-02\ngrid_controlled_n400000_d4\t2\t4\t8\t1542759.stdct-mgmt-02\t1542760.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d4_n2_c4.json\t1542730.stdct-mgmt-02\ngrid_controlled_n400000_d8\t2\t2\t4\t1542761.stdct-mgmt-02\t1542762.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d8_n2_c2.json\t1542730.stdct-mgmt-02\n",
   "new_plans": {
     "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d16_n1_c4.json": "{\n  \"graph\": \"grid_controlled_n200000_d16\",\n  \"nodes\": 1,\n  \"cores_per_node\": 4,\n  \"cores\": 4,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d16/nodes1/mpi_kokkos/OpenMP/grid_controlled_n200000_d16/p1_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p1_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d16/nodes1/mpi_kokkos/OpenMP/grid_controlled_n200000_d16/p2_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p2_t2/summary.json\"\n    }\n  ],\n  \"requested_hosts\": [\n    \"cn-007\"\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\"\n}\n",
     "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d8_n1_c4.json": "{\n  \"graph\": \"grid_controlled_n200000_d8\",\n  \"nodes\": 1,\n  \"cores_per_node\": 4,\n  \"cores\": 4,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d8/nodes1/mpi_kokkos/OpenMP/grid_controlled_n200000_d8/p1_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p1_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d8/nodes1/mpi_kokkos/OpenMP/grid_controlled_n200000_d8/p2_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p2_t2/summary.json\"\n    }\n  ],\n  \"requested_hosts\": [\n    \"cn-053\"\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\"\n}\n",
@@ -30,7 +30,31 @@
     "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d16_n1_c8.json": "{\n  \"graph\": \"grid_uniform_n200000_d16\",\n  \"nodes\": 1,\n  \"cores_per_node\": 8,\n  \"cores\": 8,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 8,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d16/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d16/p1_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 8,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p1_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d16/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d16/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d16/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d16/p4_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p4_t2/summary.json\"\n    }\n  ],\n  \"requested_hosts\": [\n    \"cn-007\"\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\"\n}\n",
     "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d4_n1_c8.json": "{\n  \"graph\": \"grid_uniform_n200000_d4\",\n  \"nodes\": 1,\n  \"cores_per_node\": 8,\n  \"cores\": 8,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 8,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d4/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d4/p1_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 8,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p1_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d4/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d4/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d4/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d4/p4_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p4_t2/summary.json\"\n    }\n  ],\n  \"requested_hosts\": [\n    \"cn-053\"\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\"\n}\n",
     "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d8_n1_c8.json": "{\n  \"graph\": \"grid_uniform_n200000_d8\",\n  \"nodes\": 1,\n  \"cores_per_node\": 8,\n  \"cores\": 8,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 8,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d8/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d8/p1_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 8,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p1_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d8/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d8/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d8/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d8/p4_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p4_t2/summary.json\"\n    }\n  ],\n  \"requested_hosts\": [\n    \"cn-007\"\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\"\n}\n",
-    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d16_n1_c8.json": "{\n  \"graph\": \"grid_uniform_n400000_d16\",\n  \"nodes\": 1,\n  \"cores_per_node\": 8,\n  \"cores\": 8,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 8,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d16/p1_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 8,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p1_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d16/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d16/p4_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p4_t2/summary.json\"\n    }\n  ],\n  \"requested_hosts\": [\n    \"cn-053\"\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\"\n}\n"
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d16_n1_c8.json": "{\n  \"graph\": \"grid_uniform_n400000_d16\",\n  \"nodes\": 1,\n  \"cores_per_node\": 8,\n  \"cores\": 8,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 8,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d16/p1_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 8,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p1_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d16/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d16/p4_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p4_t2/summary.json\"\n    }\n  ],\n  \"requested_hosts\": [\n    \"cn-053\"\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d4_n1_c8.json": "{\n  \"graph\": \"grid_uniform_n400000_d4\",\n  \"nodes\": 1,\n  \"cores_per_node\": 8,\n  \"cores\": 8,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 8,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d4/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d4/p1_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 8,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p1_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d4/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d4/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d4/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d4/p4_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p4_t2/summary.json\"\n    }\n  ],\n  \"requested_hosts\": [\n    \"cn-007\"\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d8_n1_c8.json": "{\n  \"graph\": \"grid_uniform_n400000_d8\",\n  \"nodes\": 1,\n  \"cores_per_node\": 8,\n  \"cores\": 8,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 8,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d8/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d8/p1_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 8,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p1_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d8/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d8/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d8/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d8/p4_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p4_t2/summary.json\"\n    }\n  ],\n  \"requested_hosts\": [\n    \"cn-053\"\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d16_n1_c16.json": "{\n  \"graph\": \"grid_controlled_n200000_d16\",\n  \"nodes\": 1,\n  \"cores_per_node\": 16,\n  \"cores\": 16,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d16/nodes1/mpi_kokkos/OpenMP/grid_controlled_n200000_d16/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d16/nodes1/mpi_kokkos/OpenMP/grid_controlled_n200000_d16/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d16/nodes1/mpi_kokkos/OpenMP/grid_controlled_n200000_d16/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d16/nodes1/mpi_kokkos/OpenMP/grid_controlled_n200000_d16/p8_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p8_t2/summary.json\"\n    }\n  ],\n  \"requested_hosts\": [\n    \"cn-007\"\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d8_n1_c16.json": "{\n  \"graph\": \"grid_controlled_n200000_d8\",\n  \"nodes\": 1,\n  \"cores_per_node\": 16,\n  \"cores\": 16,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d8/nodes1/mpi_kokkos/OpenMP/grid_controlled_n200000_d8/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d8/nodes1/mpi_kokkos/OpenMP/grid_controlled_n200000_d8/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d8/nodes1/mpi_kokkos/OpenMP/grid_controlled_n200000_d8/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d8/nodes1/mpi_kokkos/OpenMP/grid_controlled_n200000_d8/p8_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p8_t2/summary.json\"\n    }\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\",\n  \"scheduler_cpu_pool\": \"ccid-10\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d16_n1_c16.json": "{\n  \"graph\": \"grid_controlled_n400000_d16\",\n  \"nodes\": 1,\n  \"cores_per_node\": 16,\n  \"cores\": 16,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d16/nodes1/mpi_kokkos/OpenMP/grid_controlled_n400000_d16/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d16/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d16/nodes1/mpi_kokkos/OpenMP/grid_controlled_n400000_d16/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d16/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d16/nodes1/mpi_kokkos/OpenMP/grid_controlled_n400000_d16/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d16/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d16/nodes1/mpi_kokkos/OpenMP/grid_controlled_n400000_d16/p8_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d16/p8_t2/summary.json\"\n    }\n  ],\n  \"requested_hosts\": [\n    \"cn-007\"\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d4_n1_c16.json": "{\n  \"graph\": \"grid_controlled_n400000_d4\",\n  \"nodes\": 1,\n  \"cores_per_node\": 16,\n  \"cores\": 16,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d4/nodes1/mpi_kokkos/OpenMP/grid_controlled_n400000_d4/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d4/nodes1/mpi_kokkos/OpenMP/grid_controlled_n400000_d4/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d4/nodes1/mpi_kokkos/OpenMP/grid_controlled_n400000_d4/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d4/nodes1/mpi_kokkos/OpenMP/grid_controlled_n400000_d4/p8_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p8_t2/summary.json\"\n    }\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\",\n  \"scheduler_cpu_pool\": \"ccid-10\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d8_n1_c16.json": "{\n  \"graph\": \"grid_controlled_n400000_d8\",\n  \"nodes\": 1,\n  \"cores_per_node\": 16,\n  \"cores\": 16,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d8/nodes1/mpi_kokkos/OpenMP/grid_controlled_n400000_d8/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d8/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d8/nodes1/mpi_kokkos/OpenMP/grid_controlled_n400000_d8/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d8/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d8/nodes1/mpi_kokkos/OpenMP/grid_controlled_n400000_d8/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d8/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d8/nodes1/mpi_kokkos/OpenMP/grid_controlled_n400000_d8/p8_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d8/p8_t2/summary.json\"\n    }\n  ],\n  \"requested_hosts\": [\n    \"cn-007\"\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d16_n1_c16.json": "{\n  \"graph\": \"grid_uniform_n200000_d16\",\n  \"nodes\": 1,\n  \"cores_per_node\": 16,\n  \"cores\": 16,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d16/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d16/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d16/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d16/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d16/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d16/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d16/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d16/p8_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d16/p8_t2/summary.json\"\n    }\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\",\n  \"scheduler_cpu_pool\": \"ccid-10\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d4_n1_c16.json": "{\n  \"graph\": \"grid_uniform_n200000_d4\",\n  \"nodes\": 1,\n  \"cores_per_node\": 16,\n  \"cores\": 16,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d4/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d4/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d4/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d4/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d4/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d4/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d4/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d4/p8_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d4/p8_t2/summary.json\"\n    }\n  ],\n  \"requested_hosts\": [\n    \"cn-007\"\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n200000_d8_n1_c16.json": "{\n  \"graph\": \"grid_uniform_n200000_d8\",\n  \"nodes\": 1,\n  \"cores_per_node\": 16,\n  \"cores\": 16,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d8/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d8/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d8/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d8/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d8/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d8/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d8/nodes1/mpi_kokkos/OpenMP/grid_uniform_n200000_d8/p8_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n200000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n200000_d8/p8_t2/summary.json\"\n    }\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\",\n  \"scheduler_cpu_pool\": \"ccid-10\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d16_n1_c16.json": "{\n  \"graph\": \"grid_uniform_n400000_d16\",\n  \"nodes\": 1,\n  \"cores_per_node\": 16,\n  \"cores\": 16,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d16/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d16/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d16/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d16/p8_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d16/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d16/p8_t2/summary.json\"\n    }\n  ],\n  \"requested_hosts\": [\n    \"cn-007\"\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d4_n1_c16.json": "{\n  \"graph\": \"grid_uniform_n400000_d4\",\n  \"nodes\": 1,\n  \"cores_per_node\": 16,\n  \"cores\": 16,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d4/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d4/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d4/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d4/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d4/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d4/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d4/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d4/p8_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d4/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d4/p8_t2/summary.json\"\n    }\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\",\n  \"scheduler_cpu_pool\": \"ccid-10\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n400000_d8_n1_c16.json": "{\n  \"graph\": \"grid_uniform_n400000_d8\",\n  \"nodes\": 1,\n  \"cores_per_node\": 16,\n  \"cores\": 16,\n  \"priority\": 1,\n  \"walltime\": \"00:20:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d8/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d8/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 1,\n      \"threads\": 16,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p1_t16/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d8/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d8/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 8,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p2_t8/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d8/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d8/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p4_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d8/nodes1/mpi_kokkos/OpenMP/grid_uniform_n400000_d8/p8_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 8,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_uniform_n400000_d8/nodes1/mpi_kokkos_halo/OpenMP/grid_uniform_n400000_d8/p8_t2/summary.json\"\n    }\n  ],\n  \"requested_hosts\": [\n    \"cn-007\"\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d16_n2_c2.json": "{\n  \"graph\": \"grid_controlled_n200000_d16\",\n  \"nodes\": 2,\n  \"cores_per_node\": 2,\n  \"cores\": 4,\n  \"priority\": 1,\n  \"walltime\": \"00:30:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542434.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d16/nodes2/mpi_kokkos/OpenMP/grid_controlled_n200000_d16/p2_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p2_t2/summary.json\"\n    }\n  ],\n  \"dependency\": \"1542434.stdct-mgmt-02\",\n  \"scheduler_cpu_pool\": \"ccid-10\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d16_n2_c4.json": "{\n  \"graph\": \"grid_controlled_n200000_d16\",\n  \"nodes\": 2,\n  \"cores_per_node\": 4,\n  \"cores\": 8,\n  \"priority\": 1,\n  \"walltime\": \"00:30:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542730.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d16/nodes2/mpi_kokkos/OpenMP/grid_controlled_n200000_d16/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d16/nodes2/mpi_kokkos/OpenMP/grid_controlled_n200000_d16/p4_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p4_t2/summary.json\"\n    }\n  ],\n  \"dependency\": \"1542730.stdct-mgmt-02\",\n  \"scheduler_cpu_pool\": \"ccid-10\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d4_n2_c2.json": "{\n  \"graph\": \"grid_controlled_n200000_d4\",\n  \"nodes\": 2,\n  \"cores_per_node\": 2,\n  \"cores\": 4,\n  \"priority\": 1,\n  \"walltime\": \"00:30:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542730.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d4/nodes2/mpi_kokkos/OpenMP/grid_controlled_n200000_d4/p2_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d4/p2_t2/summary.json\"\n    }\n  ],\n  \"dependency\": \"1542730.stdct-mgmt-02\",\n  \"scheduler_cpu_pool\": \"ccid-10\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d4_n2_c4.json": "{\n  \"graph\": \"grid_controlled_n200000_d4\",\n  \"nodes\": 2,\n  \"cores_per_node\": 4,\n  \"cores\": 8,\n  \"priority\": 1,\n  \"walltime\": \"00:30:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542730.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d4/nodes2/mpi_kokkos/OpenMP/grid_controlled_n200000_d4/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d4/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d4/nodes2/mpi_kokkos/OpenMP/grid_controlled_n200000_d4/p4_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d4/p4_t2/summary.json\"\n    }\n  ],\n  \"dependency\": \"1542730.stdct-mgmt-02\",\n  \"scheduler_cpu_pool\": \"ccid-10\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d8_n2_c2.json": "{\n  \"graph\": \"grid_controlled_n200000_d8\",\n  \"nodes\": 2,\n  \"cores_per_node\": 2,\n  \"cores\": 4,\n  \"priority\": 1,\n  \"walltime\": \"00:30:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542730.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d8/nodes2/mpi_kokkos/OpenMP/grid_controlled_n200000_d8/p2_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p2_t2/summary.json\"\n    }\n  ],\n  \"dependency\": \"1542730.stdct-mgmt-02\",\n  \"scheduler_cpu_pool\": \"ccid-10\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n200000_d8_n2_c4.json": "{\n  \"graph\": \"grid_controlled_n200000_d8\",\n  \"nodes\": 2,\n  \"cores_per_node\": 4,\n  \"cores\": 8,\n  \"priority\": 1,\n  \"walltime\": \"00:30:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542730.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d8/nodes2/mpi_kokkos/OpenMP/grid_controlled_n200000_d8/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d8/nodes2/mpi_kokkos/OpenMP/grid_controlled_n200000_d8/p4_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n200000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p4_t2/summary.json\"\n    }\n  ],\n  \"dependency\": \"1542730.stdct-mgmt-02\",\n  \"scheduler_cpu_pool\": \"ccid-10\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d16_n2_c2.json": "{\n  \"graph\": \"grid_controlled_n400000_d16\",\n  \"nodes\": 2,\n  \"cores_per_node\": 2,\n  \"cores\": 4,\n  \"priority\": 1,\n  \"walltime\": \"00:30:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542730.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d16/nodes2/mpi_kokkos/OpenMP/grid_controlled_n400000_d16/p2_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d16/p2_t2/summary.json\"\n    }\n  ],\n  \"dependency\": \"1542730.stdct-mgmt-02\",\n  \"scheduler_cpu_pool\": \"ccid-10\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d16_n2_c4.json": "{\n  \"graph\": \"grid_controlled_n400000_d16\",\n  \"nodes\": 2,\n  \"cores_per_node\": 4,\n  \"cores\": 8,\n  \"priority\": 1,\n  \"walltime\": \"00:30:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542730.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d16/nodes2/mpi_kokkos/OpenMP/grid_controlled_n400000_d16/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d16/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d16/nodes2/mpi_kokkos/OpenMP/grid_controlled_n400000_d16/p4_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d16/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d16/p4_t2/summary.json\"\n    }\n  ],\n  \"dependency\": \"1542730.stdct-mgmt-02\",\n  \"scheduler_cpu_pool\": \"ccid-10\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d4_n2_c2.json": "{\n  \"graph\": \"grid_controlled_n400000_d4\",\n  \"nodes\": 2,\n  \"cores_per_node\": 2,\n  \"cores\": 4,\n  \"priority\": 1,\n  \"walltime\": \"00:30:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542730.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d4/nodes2/mpi_kokkos/OpenMP/grid_controlled_n400000_d4/p2_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p2_t2/summary.json\"\n    }\n  ],\n  \"dependency\": \"1542730.stdct-mgmt-02\",\n  \"scheduler_cpu_pool\": \"ccid-10\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d4_n2_c4.json": "{\n  \"graph\": \"grid_controlled_n400000_d4\",\n  \"nodes\": 2,\n  \"cores_per_node\": 4,\n  \"cores\": 8,\n  \"priority\": 1,\n  \"walltime\": \"00:30:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542730.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d4/nodes2/mpi_kokkos/OpenMP/grid_controlled_n400000_d4/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 4,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p2_t4/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d4/nodes2/mpi_kokkos/OpenMP/grid_controlled_n400000_d4/p4_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 4,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d4/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p4_t2/summary.json\"\n    }\n  ],\n  \"dependency\": \"1542730.stdct-mgmt-02\",\n  \"scheduler_cpu_pool\": \"ccid-10\"\n}\n",
+    "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_controlled_n400000_d8_n2_c2.json": "{\n  \"graph\": \"grid_controlled_n400000_d8\",\n  \"nodes\": 2,\n  \"cores_per_node\": 2,\n  \"cores\": 4,\n  \"priority\": 1,\n  \"walltime\": \"00:30:00\",\n  \"prerequisite\": \"\",\n  \"required_job\": \"1542730.stdct-mgmt-02\",\n  \"dense_launch_pause_s\": 0,\n  \"walltime_basis\": \"Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.\",\n  \"cells\": [\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 2,\n      \"communication\": \"allgather\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d8/nodes2/mpi_kokkos/OpenMP/grid_controlled_n400000_d8/p2_t2/summary.json\"\n    },\n    {\n      \"implementation\": \"mpi_kokkos\",\n      \"processes\": 2,\n      \"threads\": 2,\n      \"communication\": \"halo\",\n      \"canonical_summary\": \"kokkos_cpu_grid/grid_controlled_n400000_d8/nodes2/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d8/p2_t2/summary.json\"\n    }\n  ],\n  \"dependency\": \"1542730.stdct-mgmt-02\",\n  \"scheduler_cpu_pool\": \"ccid-10\"\n}\n"
   },
   "jobs": {
     "1510708.stdct-mgmt-02": {
@@ -2636,10 +2660,11 @@
       }
     },
     "1542541.stdct-mgmt-02": {
-      "job_state": "R",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_parallel",
       "Hold_Types": "n",
-      "comment": "Job run at Wed Nov 11 at 21:27 on (IN-001[0]:ncpus=4:mem=128gb)",
+      "comment": "Job run at Wed Nov 11 at 21:27 on (IN-001[0]:ncpus=4:mem=128gb) and finished",
       "project": "personal-hongxinran",
       "Resource_List": {
         "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
@@ -2655,12 +2680,12 @@
       },
       "resources_used": {
         "cpupercent": 185,
-        "cput": "00:00:43",
+        "cput": "00:01:57",
         "mem": "242136kb",
         "ncpus": 4,
         "ngpus": 0,
         "vmem": "419788kb",
-        "walltime": "00:00:22"
+        "walltime": "00:01:00"
       }
     },
     "1542542.stdct-mgmt-02": {
@@ -2751,13 +2776,14 @@
       }
     },
     "1542545.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_parallel",
       "Hold_Types": "n",
-      "comment": "Not Running: User has reached queue cpu_parallel running job limit.",
+      "comment": "Job run at Wed Nov 11 at 21:28 on (IN-001[0]:ncpus=4:mem=128gb) and finished",
       "project": "personal-hongxinran",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "128gb",
         "mpiprocs": 1,
         "ncpus": 4,
@@ -2767,6 +2793,15 @@
         "queue_charge_rate": 0,
         "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
         "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 107,
+        "cput": "00:01:14",
+        "mem": "239684kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "417488kb",
+        "walltime": "00:00:41"
       }
     },
     "1542557.stdct-mgmt-02": {
@@ -2799,10 +2834,11 @@
       }
     },
     "1542558.stdct-mgmt-02": {
-      "job_state": "R",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_parallel",
       "Hold_Types": "n",
-      "comment": "Job run at Wed Nov 11 at 21:27 on (IN-001[1]:ncpus=4:mem=128gb)",
+      "comment": "Job run at Wed Nov 11 at 21:27 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
       "project": "personal-hongxinran",
       "Resource_List": {
         "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
@@ -2817,20 +2853,21 @@
         "walltime": "24:00:00"
       },
       "resources_used": {
-        "cpupercent": 0,
-        "cput": "00:00:00",
-        "mem": "0kb",
+        "cpupercent": 187,
+        "cput": "00:01:14",
+        "mem": "222612kb",
         "ncpus": 4,
         "ngpus": 0,
-        "vmem": "0kb",
-        "walltime": "00:00:01"
+        "vmem": "399728kb",
+        "walltime": "00:00:43"
       }
     },
     "1542559.stdct-mgmt-02": {
-      "job_state": "R",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Job run at Wed Nov 11 at 21:27 on (CN-053[1]:ncpus=8:mem=55gb)",
+      "comment": "Job run at Wed Nov 11 at 21:27 on (CN-053[1]:ncpus=8:mem=55gb) and finished",
       "project": "personal-hongxinran",
       "Resource_List": {
         "am_job_cache": "{\"job.walltime\": 1200, \"job.ncpus\": 8.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
@@ -2845,22 +2882,24 @@
         "walltime": "00:20:00"
       },
       "resources_used": {
-        "cpupercent": 0,
-        "cput": "00:00:00",
-        "mem": "0kb",
+        "cpupercent": 50,
+        "cput": "00:00:19",
+        "mem": "14696kb",
         "ncpus": 8,
         "ngpus": 0,
-        "vmem": "0kb",
-        "walltime": "00:00:00"
+        "vmem": "264576kb",
+        "walltime": "00:00:25"
       }
     },
     "1542560.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_parallel",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:28 on (IN-003[0]:ncpus=4:mem=128gb) and finished",
       "project": "personal-hongxinran",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "128gb",
         "mpiprocs": 1,
         "ncpus": 4,
@@ -2870,6 +2909,15 @@
         "queue_charge_rate": 0,
         "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
         "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 175,
+        "cput": "00:00:30",
+        "mem": "131292kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "308208kb",
+        "walltime": "00:00:18"
       }
     },
     "1542561.stdct-mgmt-02": {
@@ -2902,6 +2950,990 @@
       }
     },
     "1542562.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:28 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 151,
+        "cput": "00:00:45",
+        "mem": "217464kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "394608kb",
+        "walltime": "00:00:24"
+      }
+    },
+    "1542563.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:28 on (CN-053[1]:ncpus=8:mem=55gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1200, \"job.ncpus\": 8.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "55gb",
+        "mpiprocs": 8,
+        "ncpus": 8,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:host=cn-053",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 55,
+        "cput": "00:00:52",
+        "mem": "292500kb",
+        "ncpus": 8,
+        "ngpus": 0,
+        "vmem": "1204444kb",
+        "walltime": "00:00:38"
+      }
+    },
+    "1542564.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:29 on (IN-001[0]:ncpus=4:mem=128gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 180,
+        "cput": "00:02:30",
+        "mem": "418048kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "594696kb",
+        "walltime": "00:01:17"
+      }
+    },
+    "1542571.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:28 on (CN-007[1]:ncpus=8:mem=55gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1200, \"job.ncpus\": 8.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "55gb",
+        "mpiprocs": 8,
+        "ncpus": 8,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:host=cn-007",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 54,
+        "cput": "00:00:31",
+        "mem": "89868kb",
+        "ncpus": 8,
+        "ngpus": 0,
+        "vmem": "1128868kb",
+        "walltime": "00:00:29"
+      }
+    },
+    "1542572.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:29 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 106,
+        "cput": "00:00:58",
+        "mem": "415272kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "592136kb",
+        "walltime": "00:00:31"
+      }
+    },
+    "1542573.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:28 on (CN-053[1]:ncpus=8:mem=55gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1200, \"job.ncpus\": 8.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "55gb",
+        "mpiprocs": 8,
+        "ncpus": 8,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:host=cn-053",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 101,
+        "cput": "00:00:39",
+        "mem": "223728kb",
+        "ncpus": 8,
+        "ngpus": 0,
+        "vmem": "1261868kb",
+        "walltime": "00:00:33"
+      }
+    },
+    "1542574.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:29 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 190,
+        "cput": "00:01:27",
+        "mem": "412720kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "589608kb",
+        "walltime": "00:00:50"
+      }
+    },
+    "1542575.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:28 on (CN-007[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1200, \"job.ncpus\": 16.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "111gb",
+        "mpiprocs": 16,
+        "ncpus": 16,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:host=cn-007",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 74,
+        "cput": "00:01:50",
+        "mem": "20092kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "283636kb",
+        "walltime": "00:00:42"
+      }
+    },
+    "1542576.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:30 on (IN-001[0]:ncpus=4:mem=128gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 152,
+        "cput": "00:01:16",
+        "mem": "222664kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "399500kb",
+        "walltime": "00:00:40"
+      }
+    },
+    "1542577.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:04 on (CN-136[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1200, \"job.ncpus\": 16.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "111gb",
+        "mpiprocs": 16,
+        "ncpus": 16,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=ccid-10",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 64,
+        "cput": "00:01:15",
+        "mem": "103956kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "1984932kb",
+        "walltime": "00:00:37"
+      }
+    },
+    "1542578.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:05 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 105,
+        "cput": "00:00:51",
+        "mem": "216208kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "393084kb",
+        "walltime": "00:00:32"
+      }
+    },
+    "1542580.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:29 on (CN-007[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1200, \"job.ncpus\": 16.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "111gb",
+        "mpiprocs": 16,
+        "ncpus": 16,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:host=cn-007",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 146,
+        "cput": "00:03:30",
+        "mem": "197780kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "1669116kb",
+        "walltime": "00:00:58"
+      }
+    },
+    "1542581.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:30 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 180,
+        "cput": "00:02:32",
+        "mem": "417872kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "594724kb",
+        "walltime": "00:01:18"
+      }
+    },
+    "1542582.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:04 on (CN-147[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1200, \"job.ncpus\": 16.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "111gb",
+        "mpiprocs": 16,
+        "ncpus": 16,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=ccid-10",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 128,
+        "cput": "00:02:10",
+        "mem": "152084kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "1616484kb",
+        "walltime": "00:00:44"
+      }
+    },
+    "1542583.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:05 on (IN-003[0]:ncpus=4:mem=128gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 179,
+        "cput": "00:01:11",
+        "mem": "395600kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "572180kb",
+        "walltime": "00:00:39"
+      }
+    },
+    "1542584.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:30 on (CN-007[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1200, \"job.ncpus\": 16.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "111gb",
+        "mpiprocs": 16,
+        "ncpus": 16,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:host=cn-007",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 91,
+        "cput": "00:02:47",
+        "mem": "172572kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "1155740kb",
+        "walltime": "00:00:46"
+      }
+    },
+    "1542585.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:31 on (IN-001[0]:ncpus=4:mem=128gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 190,
+        "cput": "00:01:39",
+        "mem": "414408kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "591108kb",
+        "walltime": "00:00:54"
+      }
+    },
+    "1542609.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:04 on (CN-147[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1200, \"job.ncpus\": 16.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "111gb",
+        "mpiprocs": 16,
+        "ncpus": 16,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=ccid-10",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 42,
+        "cput": "00:01:00",
+        "mem": "95352kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "1993268kb",
+        "walltime": "00:00:42"
+      }
+    },
+    "1542611.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:05 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 187,
+        "cput": "00:01:54",
+        "mem": "222632kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "399736kb",
+        "walltime": "00:01:03"
+      }
+    },
+    "1542617.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:31 on (CN-007[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1200, \"job.ncpus\": 16.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "111gb",
+        "mpiprocs": 16,
+        "ncpus": 16,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:host=cn-007",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 101,
+        "cput": "00:00:40",
+        "mem": "13652kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "130244kb",
+        "walltime": "00:00:32"
+      }
+    },
+    "1542618.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:32 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 57,
+        "cput": "00:00:42",
+        "mem": "158328kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "335112kb",
+        "walltime": "00:00:23"
+      }
+    },
+    "1542624.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:05 on (CN-136[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1200, \"job.ncpus\": 16.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "111gb",
+        "mpiprocs": 16,
+        "ncpus": 16,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=ccid-10",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 54,
+        "cput": "00:00:45",
+        "mem": "70840kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "1960520kb",
+        "walltime": "00:00:36"
+      }
+    },
+    "1542625.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:06 on (IN-003[0]:ncpus=4:mem=128gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 166,
+        "cput": "00:01:01",
+        "mem": "211932kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "388728kb",
+        "walltime": "00:00:35"
+      }
+    },
+    "1542626.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:32 on (CN-007[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1200, \"job.ncpus\": 16.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "111gb",
+        "mpiprocs": 16,
+        "ncpus": 16,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:host=cn-007",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 118,
+        "cput": "00:01:53",
+        "mem": "148236kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "1989124kb",
+        "walltime": "00:00:49"
+      }
+    },
+    "1542627.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:33 on (IN-001[0]:ncpus=4:mem=128gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 157,
+        "cput": "00:03:22",
+        "mem": "418036kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "594696kb",
+        "walltime": "00:01:45"
+      }
+    },
+    "1542636.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:05 on (CN-147[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1200, \"job.ncpus\": 16.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "111gb",
+        "mpiprocs": 16,
+        "ncpus": 16,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=ccid-10",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 59,
+        "cput": "00:01:03",
+        "mem": "164312kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "2049872kb",
+        "walltime": "00:00:38"
+      }
+    },
+    "1542637.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:06 on (IN-003[0]:ncpus=4:mem=128gb)",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 151,
+        "cput": "00:00:28",
+        "mem": "243524kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "421336kb",
+        "walltime": "00:00:16"
+      }
+    },
+    "1542638.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:34 on (CN-007[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1200, \"job.ncpus\": 16.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "111gb",
+        "mpiprocs": 16,
+        "ncpus": 16,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:host=cn-007",
+        "walltime": "00:20:00"
+      },
+      "resources_used": {
+        "cpupercent": 110,
+        "cput": "00:01:18",
+        "mem": "108884kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "1927720kb",
+        "walltime": "00:00:50"
+      }
+    },
+    "1542639.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 21:35 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 180,
+        "cput": "00:01:56",
+        "mem": "418272kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "594984kb",
+        "walltime": "00:01:01"
+      }
+    },
+    "1542643.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:04 on (CN-135[1]:ncpus=2:mem=13gb)+(CN-136[1]:ncpus=2:mem=13gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1800, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "26gb",
+        "mpiprocs": 4,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB:node_pool=cpu_node:switch=ccid-10+1:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB:node_pool=cpu_node:switch=ccid-10",
+        "walltime": "00:30:00"
+      },
+      "resources_used": {
+        "cpupercent": 175,
+        "cput": "00:00:09",
+        "mem": "15972kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "115304kb",
+        "walltime": "00:00:13"
+      }
+    },
+    "1542644.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:04 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 150,
+        "cput": "00:00:20",
+        "mem": "122896kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "300028kb",
+        "walltime": "00:00:12"
+      }
+    },
+    "1542742.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:05 on (CN-135[1]:ncpus=4:mem=27gb)+(CN-136[1]:ncpus=4:mem=27gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1800, \"job.ncpus\": 8.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "54gb",
+        "mpiprocs": 8,
+        "ncpus": 8,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "2:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB:node_pool=cpu_node:switch=ccid-10",
+        "walltime": "00:30:00"
+      },
+      "resources_used": {
+        "cpupercent": 184,
+        "cput": "00:00:32",
+        "mem": "116948kb",
+        "ncpus": 8,
+        "ngpus": 0,
+        "vmem": "771348kb",
+        "walltime": "00:00:24"
+      }
+    },
+    "1542743.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:07 on (IN-001[1]:ncpus=4:mem=128gb)",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 100,
+        "cput": "00:00:11",
+        "mem": "93900kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "270644kb",
+        "walltime": "00:00:09"
+      }
+    },
+    "1542744.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:05 on (CN-136[1]:ncpus=2:mem=13gb)+(CN-143[1]:ncpus=2:mem=13gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1800, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "26gb",
+        "mpiprocs": 4,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "2:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB:node_pool=cpu_node:switch=ccid-10",
+        "walltime": "00:30:00"
+      },
+      "resources_used": {
+        "cpupercent": 150,
+        "cput": "00:00:11",
+        "mem": "56688kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "535516kb",
+        "walltime": "00:00:17"
+      }
+    },
+    "1542745.stdct-mgmt-02": {
       "job_state": "Q",
       "queue": "cpu_parallel",
       "Hold_Types": "n",
@@ -2920,26 +3952,178 @@
         "walltime": "24:00:00"
       }
     },
-    "1542563.stdct-mgmt-02": {
-      "job_state": "Q",
+    "1542746.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Not Running: Insufficient amount of resource: host ",
+      "comment": "Job run at Wed Nov 11 at 22:05 on (CN-143[1]:ncpus=4:mem=27gb)+(CN-147[1]:ncpus=4:mem=27gb) and finished",
       "project": "personal-hongxinran",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "55gb",
+        "am_job_cache": "{\"job.walltime\": 1800, \"job.ncpus\": 8.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "54gb",
         "mpiprocs": 8,
         "ncpus": 8,
         "ngpus": 0,
-        "nodect": 1,
+        "nodect": 2,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:host=cn-053",
-        "walltime": "00:20:00"
+        "select": "2:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB:node_pool=cpu_node:switch=ccid-10",
+        "walltime": "00:30:00"
+      },
+      "resources_used": {
+        "cpupercent": 200,
+        "cput": "00:00:29",
+        "mem": "66048kb",
+        "ncpus": 8,
+        "ngpus": 0,
+        "vmem": "540452kb",
+        "walltime": "00:00:24"
       }
     },
-    "1542564.stdct-mgmt-02": {
+    "1542747.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Not Running: User has reached queue cpu_parallel running job limit.",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1542748.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:05 on (CN-136[1]:ncpus=2:mem=13gb)+(CN-143[1]:ncpus=2:mem=13gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1800, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "26gb",
+        "mpiprocs": 4,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "2:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB:node_pool=cpu_node:switch=ccid-10",
+        "walltime": "00:30:00"
+      },
+      "resources_used": {
+        "cpupercent": 200,
+        "cput": "00:00:09",
+        "mem": "87436kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "569272kb",
+        "walltime": "00:00:14"
+      }
+    },
+    "1542749.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Not Running: User has reached queue cpu_parallel running job limit.",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1542751.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:06 on (CN-135[1]:ncpus=4:mem=27gb)+(CN-136[1]:ncpus=4:mem=27gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1800, \"job.ncpus\": 8.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "54gb",
+        "mpiprocs": 8,
+        "ncpus": 8,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "2:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB:node_pool=cpu_node:switch=ccid-10",
+        "walltime": "00:30:00"
+      },
+      "resources_used": {
+        "cpupercent": 250,
+        "cput": "00:00:26",
+        "mem": "100352kb",
+        "ncpus": 8,
+        "ngpus": 0,
+        "vmem": "571112kb",
+        "walltime": "00:00:26"
+      }
+    },
+    "1542752.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1542753.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:06 on (CN-136[1]:ncpus=2:mem=13gb)+(CN-143[1]:ncpus=2:mem=13gb)",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1800, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "26gb",
+        "mpiprocs": 4,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "2:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB:node_pool=cpu_node:switch=ccid-10",
+        "walltime": "00:30:00"
+      },
+      "resources_used": {
+        "cpupercent": 100,
+        "cput": "00:00:02",
+        "mem": "125468kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "642572kb",
+        "walltime": "00:00:20"
+      }
+    },
+    "1542754.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "cpu_parallel",
       "Hold_Types": "d",
@@ -2956,10 +4140,197 @@
         "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
         "walltime": "24:00:00"
       }
+    },
+    "1542755.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:06 on (CN-136[1]:ncpus=4:mem=27gb)+(CN-143[1]:ncpus=4:mem=27gb)",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1800, \"job.ncpus\": 8.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "54gb",
+        "mpiprocs": 8,
+        "ncpus": 8,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "2:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB:node_pool=cpu_node:switch=ccid-10",
+        "walltime": "00:30:00"
+      },
+      "resources_used": {
+        "cpupercent": 100,
+        "cput": "00:00:08",
+        "mem": "193624kb",
+        "ncpus": 8,
+        "ngpus": 0,
+        "vmem": "684688kb",
+        "walltime": "00:00:20"
+      }
+    },
+    "1542756.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_parallel",
+      "Hold_Types": "d",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1542757.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:06 on (CN-136[1]:ncpus=2:mem=13gb)+(CN-143[1]:ncpus=2:mem=13gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1800, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "26gb",
+        "mpiprocs": 4,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "2:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB:node_pool=cpu_node:switch=ccid-10",
+        "walltime": "00:30:00"
+      },
+      "resources_used": {
+        "cpupercent": 183,
+        "cput": "00:00:14",
+        "mem": "135412kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "587700kb",
+        "walltime": "00:00:22"
+      }
+    },
+    "1542758.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Not Running: User has reached queue cpu_parallel running job limit.",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1542759.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:06 on (CN-136[1]:ncpus=4:mem=27gb)+(CN-147[1]:ncpus=4:mem=27gb)",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1800, \"job.ncpus\": 8.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "54gb",
+        "mpiprocs": 8,
+        "ncpus": 8,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "2:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB:node_pool=cpu_node:switch=ccid-10",
+        "walltime": "00:30:00"
+      },
+      "resources_used": {
+        "cpupercent": 100,
+        "cput": "00:00:07",
+        "mem": "91536kb",
+        "ncpus": 8,
+        "ngpus": 0,
+        "vmem": "579752kb",
+        "walltime": "00:00:20"
+      }
+    },
+    "1542760.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_parallel",
+      "Hold_Types": "d",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1542761.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 22:06 on (CN-136[1]:ncpus=2:mem=13gb)+(CN-147[1]:ncpus=2:mem=13gb) and finished",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1800, \"job.ncpus\": 4.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "26gb",
+        "mpiprocs": 4,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "2:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB:node_pool=cpu_node:switch=ccid-10",
+        "walltime": "00:30:00"
+      },
+      "resources_used": {
+        "cpupercent": 200,
+        "cput": "00:00:16",
+        "mem": "192488kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "638024kb",
+        "walltime": "00:00:23"
+      }
+    },
+    "1542762.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      }
     }
   },
   "monitor": {
-    "pending_performance_groups": 2,
+    "pending_performance_groups": 0,
     "deferred_held_jobs": [
       "1510708.stdct-mgmt-02",
       "1510713.stdct-mgmt-02",
@@ -3032,32 +4403,29 @@
       "1513561.stdct-mgmt-02",
       "1519863.stdct-mgmt-02"
     ],
-    "pending_validation_groups": 4,
+    "pending_validation_groups": 7,
     "failed_jobs_not_retried": [],
     "performance_states": {
-      "F": 100,
-      "R": 1,
-      "Q": 1
+      "F": 124
     },
     "validation_states": {
-      "F": 96,
+      "F": 117,
       "R": 2,
-      "Q": 2,
-      "H": 2
+      "Q": 5
     },
-    "eligible_unregistered_groups": 112,
-    "eligible_unregistered_cells": 640,
+    "eligible_unregistered_groups": 90,
+    "eligible_unregistered_cells": 502,
     "endpoint_proof_state": {
       "1537725.stdct-mgmt-02": "F",
-      "1542434.stdct-mgmt-02": "F"
+      "1542730.stdct-mgmt-02": "F"
     },
-    "balance_cpu_hours": 1227.0449999999996,
+    "balance_cpu_hours": 1135.7129999999995,
     "submission_check": {
-      "observed_at": "2026-11-11T21:26:45.381859+08:00",
+      "observed_at": "2026-11-11T22:06:48.343441+08:00",
       "submitted": true,
-      "balance": 1227.0449999999996,
+      "balance": 1135.7129999999995,
       "balance_source": "hpc_project",
-      "prior_pending_reservations": 2.6666666666666665,
+      "prior_pending_reservations": 0,
       "margin": 64.0,
       "deferred_user_held_jobs": [
         "1510708.stdct-mgmt-02",
@@ -3131,57 +4499,79 @@
         "1513561.stdct-mgmt-02",
         "1519863.stdct-mgmt-02"
       ],
-      "new_reservations": 10.666666666666666,
-      "uncommitted_after_margin": 1149.711666666666,
+      "new_reservations": 18.0,
+      "uncommitted_after_margin": 1053.7129999999995,
       "groups": [
         {
-          "graph": "grid_uniform_n200000_d16",
-          "nodes": 1,
+          "graph": "grid_controlled_n200000_d8",
+          "nodes": 2,
           "cores": 8,
-          "cells": 6,
-          "walltime": "00:20:00",
-          "reservation": 2.6666666666666665,
-          "performance_job": "1542557.stdct-mgmt-02",
-          "validation_job": "1542558.stdct-mgmt-02",
-          "dependency": "1542434.stdct-mgmt-02"
+          "cells": 4,
+          "walltime": "00:30:00",
+          "reservation": 4.0,
+          "performance_job": "1542751.stdct-mgmt-02",
+          "validation_job": "1542752.stdct-mgmt-02",
+          "dependency": "1542730.stdct-mgmt-02"
         },
         {
-          "graph": "grid_uniform_n200000_d4",
-          "nodes": 1,
-          "cores": 8,
-          "cells": 6,
-          "walltime": "00:20:00",
-          "reservation": 2.6666666666666665,
-          "performance_job": "1542559.stdct-mgmt-02",
-          "validation_job": "1542560.stdct-mgmt-02",
-          "dependency": "1542434.stdct-mgmt-02"
+          "graph": "grid_controlled_n400000_d16",
+          "nodes": 2,
+          "cores": 4,
+          "cells": 2,
+          "walltime": "00:30:00",
+          "reservation": 2.0,
+          "performance_job": "1542753.stdct-mgmt-02",
+          "validation_job": "1542754.stdct-mgmt-02",
+          "dependency": "1542730.stdct-mgmt-02"
         },
         {
-          "graph": "grid_uniform_n200000_d8",
-          "nodes": 1,
+          "graph": "grid_controlled_n400000_d16",
+          "nodes": 2,
           "cores": 8,
-          "cells": 6,
-          "walltime": "00:20:00",
-          "reservation": 2.6666666666666665,
-          "performance_job": "1542561.stdct-mgmt-02",
-          "validation_job": "1542562.stdct-mgmt-02",
-          "dependency": "1542434.stdct-mgmt-02"
+          "cells": 4,
+          "walltime": "00:30:00",
+          "reservation": 4.0,
+          "performance_job": "1542755.stdct-mgmt-02",
+          "validation_job": "1542756.stdct-mgmt-02",
+          "dependency": "1542730.stdct-mgmt-02"
         },
         {
-          "graph": "grid_uniform_n400000_d16",
-          "nodes": 1,
+          "graph": "grid_controlled_n400000_d4",
+          "nodes": 2,
+          "cores": 4,
+          "cells": 2,
+          "walltime": "00:30:00",
+          "reservation": 2.0,
+          "performance_job": "1542757.stdct-mgmt-02",
+          "validation_job": "1542758.stdct-mgmt-02",
+          "dependency": "1542730.stdct-mgmt-02"
+        },
+        {
+          "graph": "grid_controlled_n400000_d4",
+          "nodes": 2,
           "cores": 8,
-          "cells": 6,
-          "walltime": "00:20:00",
-          "reservation": 2.6666666666666665,
-          "performance_job": "1542563.stdct-mgmt-02",
-          "validation_job": "1542564.stdct-mgmt-02",
-          "dependency": "1542434.stdct-mgmt-02"
+          "cells": 4,
+          "walltime": "00:30:00",
+          "reservation": 4.0,
+          "performance_job": "1542759.stdct-mgmt-02",
+          "validation_job": "1542760.stdct-mgmt-02",
+          "dependency": "1542730.stdct-mgmt-02"
+        },
+        {
+          "graph": "grid_controlled_n400000_d8",
+          "nodes": 2,
+          "cores": 4,
+          "cells": 2,
+          "walltime": "00:30:00",
+          "reservation": 2.0,
+          "performance_job": "1542761.stdct-mgmt-02",
+          "validation_job": "1542762.stdct-mgmt-02",
+          "dependency": "1542730.stdct-mgmt-02"
         }
       ]
     },
     "action": "submitted",
-    "observed_at": "2026-11-11T21:26:16.912854+08:00",
+    "observed_at": "2026-11-11T22:06:29.319820+08:00",
     "pid": 765579,
     "interval_seconds": 60,
     "until": "2026-11-12T23:59:00+08:00",
@@ -3189,7 +4579,7 @@
     "state_directory": "results/updated_vanda_scaling/20261111_hongxinran_assist/monitor_assist_20261111",
     "max_total_cores": 128
   },
-  "new_groups": 4,
+  "new_groups": 24,
   "input_receipt": {
     "preparation_job": "1542434.stdct-mgmt-02",
     "graphs": [
