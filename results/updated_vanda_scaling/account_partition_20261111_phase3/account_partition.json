@@ -1,0 +1,37 @@
+{
+  "source_observed_at": "2026-11-11T20:58:45.603573+08:00",
+  "source_registry_sha256": "b8f5de134644769525dff66f785c42c9a5872cb542dd77981b82af7552f6de63",
+  "new_groups": 136,
+  "new_cells": 730,
+  "requested_cpu_hours": 932.0,
+  "graphs": 33,
+  "owner": "hongxinran",
+  "source_owner": "xtt_ella",
+  "cross_account_overlap": 0,
+  "completed_overlap": 0,
+  "registered_overlap": 0,
+  "source_plan_removed_cells": 730,
+  "old_assist_cells": 448,
+  "walltimes": "Original 00:20:00 for 1 node and 00:30:00 for 2 nodes; no shortening",
+  "new_hosts": [
+    "cn-007",
+    "cn-053"
+  ],
+  "primary_plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111_phase3.json",
+  "assist_plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261111_phase3.json",
+  "preparation_job": "1542434.stdct-mgmt-02",
+  "combined_assist_cells": 1178,
+  "main_remaining_cells": 3867,
+  "assist_new_remaining_cells": 702,
+  "superseded_preparation_job": "1542429.stdct-mgmt-02",
+  "host_adjustment_reason": "Original host is full; the first alternate pair is outside the scheduler placement set for these jobs. Use proven Platinum8452Y nodes cn-007/cn-053 with current spare capacity, restoring the original memory-per-core requests. Core counts, walltimes and job IDs remain unchanged.",
+  "submitted_new_groups": 28,
+  "submitted_new_cells": 114,
+  "performance_states": {
+    "R": 1,
+    "Q": 1,
+    "H": 0,
+    "F": 26
+  },
+  "observed_at": "2026-11-11T21:27:43.553339+08:00"
+}

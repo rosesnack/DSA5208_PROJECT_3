@@ -1,8 +1,10 @@
 # Vanda 实验交接（2026-11-11 复核版）
 
-**这是当前唯一的执行交接入口。文件名沿用 Nov 6，内容已更新至 Nov 11。** 固定图结果已重新审计；主账号 20:46、分担账号 20:37 的队列复查都没有 R/Q，本轮在途性能和校验均已结束。机器快照的准确观测时间见各 JSON。文档和 CSV 是快照，接手前还须实时核对。
+**这是当前唯一的执行交接入口。文件名沿用 Nov 6，当前归属已更新至 Nov 11 21:27 SGT。** 已把 **136 组/730 个尚缺配置**从 xtt_ella 的真实源计划移除，交给 hongxinran；现有有效结果没有重跑。首次免费预检只因多检查了未使用的辅助程序失败，修正后的免费预检 **1542434** 已 Exit 0；没有重测 Serial。
 
-**队友现在不能直接提交任何一行缺项。** 非 512 核未提交的 3,418 项仍归 `xtt_ella` 活跃自动续跑计划；余额返还后它可能继续提交。“未提交”指没有当前有效登记作业，绝不表示“无人负责”或“从未跑过”。必须先完成下文的所有权转交，才能开始队友的独立提交。
+新计划总请求上限 **932 CPUh**，沿用单节点 20 分钟、两节点 30 分钟；只测付费性能，独立校验用免费。当前新登记 **28 组/114 项**，其中性能 R=1、Q=1、H=0、F=26；其余分担配置由后台监控分批续投。实际作业 ID、请求和观测时间见清单。
+
+**未提交不代表无人负责。** 当前未完成固定图归属为 xtt_ella **3,867** 项、hongxinran **702** 项；队友仍须按下面流程完成所有权转交，不能从缺项 CSV 直接 qsub。两边未来计划和已登记配置均无交集。
 
 ## 1. 先分清状态与下一步
 
@@ -10,13 +12,15 @@
 
 | 固定图状态 | 配置数 | 队友怎么处理 |
 |---|---:|---|
-| `validated`：测量及独立校验已完成 | **16,103** | 复用，禁止重跑 |
-| `running / queued / awaiting_validation` | **0** | 后续若出现，只跟踪原作业，不重复投递 |
-| `held`：当前登记的 512 核作业仍暂挂 | **5** | 原性能 `1532794`、免费校验 `1532795`；延期，不复制提交 |
-| `performance_failed`：128 核及 16 核失败组 | **14** | 归 xtt_ella；先查失败及可复用部分，协调后补缺项 |
-| `unsubmitted`：非 512 核无当前有效登记作业 | **3,418** | **归 xtt_ella 续跑；转交后才能提交** |
-| `deferred_512`：其他 512 核缺项 | **1,160** | 归 xtt_ella 计划、目前延期，未经调整优先级不提交 |
-| **合计** | **20,700** | 完成 16,103；缺 4,597；非 512 核缺 3,432 |
+| `validated` | **16,131** | 已校验，直接复用 |
+| `running` | **6** | 跟踪原作业，不重复提交 |
+| `queued` | **6** | 跟踪原作业，不重复提交 |
+| `awaiting_validation` | **74** | 原测量结束，等校验或结果同步，不重复测量 |
+| `performance_failed` | **14** | 由原账号检查失败及可复用部分 |
+| `held` | **5** | 当前原 512 核组延期，不复制提交 |
+| `unsubmitted` | **3,304** | 仍有明确 future_owner，先转交再提交 |
+| `deferred_512` | **1,160** | 按原优先级延期 |
+| **合计** | **20,700** | 已验证 16,131；其余 4,569 |
 
 [全部 20,700 行状态及来源](results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv) 是固定图逐配置依据。另有按状态拆出的 [完成](results/updated_vanda_scaling/git_sync_20261111/cells_validated.csv)、[未提交](results/updated_vanda_scaling/git_sync_20261111/cells_unsubmitted.csv)、[失败](results/updated_vanda_scaling/git_sync_20261111/cells_performance_failed.csv)、[暂挂](results/updated_vanda_scaling/git_sync_20261111/cells_held.csv)、[延期 512](results/updated_vanda_scaling/git_sync_20261111/cells_deferred_512.csv) 清单；均不能直接当提交计划。
 
@@ -35,11 +39,11 @@ CSV 中 `canonical_summary` 是跨账号匹配同一配置的唯一键。`assign
 | 单独 Kokkos OpenMP CPU | 同上，OpenMP 后端；无通信 | 270 | 270 | 0 |
 | 纯 MPI CPU 常规 | n=1/2/4/8，r=1/2/4/8/16/32，T=1；每布局两通信 | 2,160 | 1,966 | 194 |
 | MPI+OpenMP CPU 常规 | 同 n、r，T=1/2/4/8/16/32，rT≤32；每布局两通信 | 7,560 | 6,966 | 594 |
-| MPI+Kokkos OpenMP CPU 常规 | 与 MPI+OpenMP 同一套布局；每布局两通信 | 7,560 | 4,916 | 2,644 |
+| MPI+Kokkos OpenMP CPU 常规 | 与 MPI+OpenMP 同一套布局；每布局两通信 | 7,560 | 4,944 | 2,616 |
 | 原 CPU 512 核端点 | 纯 MPI p512,T1；两混合方法各 p512,T1 和 p128,T4；每布局两通信 | 450 | 5 | 445 |
 | 后追加 CPU 512 核拆分 | 两混合方法各 T=2/8/16/32，p=512/T；每布局两通信 | 720 | 0 | 720 |
 | GPU 节点完整配对区块 | 下表，包含真实 GPU 计算及同机 CPU 对照 | 1,665 | 1,665 | 0 |
-| **固定图合计** | | **20,700** | **16,103** | **4,597** |
+| **固定图合计** | | **20,700** | **16,131** | **4,597** |
 
 两通信是 Allgatherv（参数 `allgather`）与 Halo。单独方法没有 MPI，不扩展通信维度。
 
@@ -69,27 +73,29 @@ CSV 中 `canonical_summary` 是跨账号匹配同一配置的唯一键。`assign
 
 ## 4. 两账号当前负责什么
 
-| 账号 | 本轮登记与完成 | 自动监控当前动作 | 继续负责的固定图缺项 |
-|---|---|---|---:|
-| xtt_ella | 当前注册表 149 个资源组；保留两个失败组和一个 512 H 组 | `waiting_real_credits`；最近余额 16.097 CPUh、余量 16 | 4,597（含延期 512） |
-| hongxinran | 78 组、448/448 配置已完成；性能和免费校验均成功 | `no_eligible_unregistered_cells`；最近余额 1,257.712、余量 64 | 0；不会自动领取主账号任务 |
+| 账号 | 当前登记和动作 | 继续负责的固定图缺项 |
+|---|---|---:|
+| xtt_ella | 149 组；waiting_real_credits；已移除这次转交的 730 项 | 3,867 |
+| hongxinran | 原 78 组/448 项全部完成；新增登记 28 组/114 项；新计划共 136 组/730 项 | 702 |
 
-两个监控每 60 秒检查，新增提交截止 Nov 12 23:59 SGT。PID 251391 / 155730 是本次观测值；接手时读实时状态，不仅看 PID。主账号当前只续非 512、最高 256 核；分担账号最高 128 核。余额包含预扣影响，以实时 `hpc project` 为准。
+两个监控每 60 秒查询，新 PID **765730 / 765579**，截止 Nov 12 23:59 SGT。最多六个在途性能组；主账号最高 256 核、分担账号上限 128 核，本次实际申请为 1/2 节点、总 2/4/8/16/32 核，每个配置 p×T 等于请求核数。原 20/30 分钟墙钟不缩短。本批总预留 932 CPUh，按交接前余额 1,257.712 CPUh 计算仍保留 325.712；监控另留 64 CPUh，实际可提交量以实时余额为准。
+
+第一组原定 CN-051 已满；仅对仍在 Q 的新作业调整主机请求，核数、墙钟和 job ID 保留。最新节点及 PBS 资源限制说明见 [主机调整记录](results/updated_vanda_scaling/20261111_hongxinran_assist/phase3_host_adjustment_20261111.json)。新请求继续限定已有 Platinum 8452Y 证据的 CPU 节点，不能把未调度的请求当作已测量结果。
 
 | 账号 | 项目目录 | 当前源计划（相对于项目根目录） |
 |---|---|---|
-| xtt_ella / personal-xtt_ella | `/scratch/xtt_ella/DSA5208_PROJECT_3_20261107` | `results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111_phase2_small_balance.json` |
-| hongxinran / personal-hongxinran | `/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111` | `results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261111_phase2.json` |
+| xtt_ella / personal-xtt_ella | `/scratch/xtt_ella/DSA5208_PROJECT_3_20261107` | `results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111_phase3.json` |
+| hongxinran / personal-hongxinran | `/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111` | `results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261111_phase3.json` |
 
-[实际登记的 227 个资源组及作业 ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv) 与 [主队列快照](results/updated_vanda_scaling/git_sync_20261111/queue_xtt_ella.json)、[分担队列快照](results/updated_vanda_scaling/git_sync_20261111/queue_hongxinran.json) 分开列出“注册组”和“PBS 作业”。一个资源组的性能、免费校验是两个 job，不能重复当两组实验。
+[实际登记的 255 个资源组及作业 ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv) 与 [主队列快照](results/updated_vanda_scaling/git_sync_20261111/queue_xtt_ella.json)、[分担队列快照](results/updated_vanda_scaling/git_sync_20261111/queue_hongxinran.json) 分开列出“注册组”和“PBS 作业”。一个资源组的性能、免费校验是两个 job，不能重复当两组实验。
 
-**旧 H 不能直接释放。** 20:46 两边合计 78 个 H job：主账号 8、hongxinran 70。其中只有当前 512 组的性能 `1532794` 与依赖校验 `1532795` 对应上表 `held` 的 5 项；主账号另 6 个是已被成功补跑替代的旧性能/校验。hongxinran 的 70 个是此前延期的旧请求，可能与新计划或缺项重叠，不能称它们“70 个待领取实验”，也不能称为“全部完成”。继续保留暂挂；转交涉及相同目标时由原账号核对并取消/保持延期，禁止批量 qrls。`u` 是用户暂挂，`s` 是系统暂挂，`d` 是依赖暂挂；H 不会自动等同于 Q。
+**旧 H 不能直接释放。** 两边原有 78 个旧 H job：主账号 8、hongxinran 70。其中只有当前 512 组的性能 `1532794` 与依赖校验 `1532795` 对应上表 `held` 的 5 项；主账号另 6 个是已被成功补跑替代的旧性能/校验。hongxinran 的 70 个是此前延期的旧请求，可能与新计划或缺项重叠，不能称它们“70 个待领取实验”，也不能称为“全部完成”。继续保留旧请求暂挂；本批转交时已核对目标并保持旧请求延期，禁止批量 qrls。新增免费校验的依赖 H 会在相应性能成功后自动解除，不等同于这些旧 H。`u` 是用户暂挂，`s` 是系统暂挂，`d` 是依赖暂挂；H 不会自动等同于 Q。
 
 尚未补成功的常规失败组之一为 `1537511`：controlled n400000/d4，n4×32=128 核，Kokkos T=2/4/8/16/32 × 两通信，共 10 项。原 45 分钟、上限 96 CPUh，退出 -29，日志停在 MPI 分配信息采集、CPU 时间为零；先排查启动与部分输出，不据此缩短墙钟或认定算法很慢。
 
 新增失败组 `1538617`：controlled n100000/d16，n4×4=16 核，Kokkos OpenMP 四项；45 分钟墙钟超限 -29，实际 46:27、CPU 时间 0。实际节点 CN-148/151/153/154。尚未定位原因，未盲目重投。这四项与原 128 核十项合计 14 项，不计完成。
 
-今晚新核对的 66 个资源组共 566 项，其中 65 组/562 项测量及独立校验成功并已同步本地；一组四项失败。主账号累计登记 149 组，分担账号仍为 78 组/448 项。hongxinran 的返还余额增加到 1,257.712，但现有计划已做完；没有自动领取主账号缺项，也没有在本轮状态核查中新增或转交任务。
+此前 66 组新结果中 562 项已通过并同步。本次新增的 730 项只改变后续执行归属，已完成结果仍复用；新完成项以摘要和独立校验标记同步后再纳入严格审计。
 
 ## 5. 防重复接手流程（必须先做，再提交）
 
@@ -132,6 +138,6 @@ python3 scripts/audit_fixed_matrix.py vanda \
 
 ## 7. 可以直接给队友的参考 prompt
 
-> 请接手这个仓库的 Vanda 实验。先读 HANDOFF_VANDA_EXPERIMENTS_20261106.md 和 git_sync_20261111 下完整固定图、弱扩展、资源组及 ownership 清单。先只做只读核对，向原负责人取得明确转交的 canonical_summary 配置与新源计划；当前 unsubmitted 仍归 xtt_ella 自动续跑，不能直接提交。严格复用已校验结果，不重跑 Serial/GPU 等完整部分；在途、待校验和 H 不重复提交；失败先查可复用部分，controlled 的 rank 弱扩展 512 端点先核实远端证据。暂停/移除原账号真实续跑计划中的拟接手项，核对实时两边队列及旧 H，确认所有权互斥后再 dry-run、提交和登记 job ID。优先非 512 核；正式性能用付费、构建处理校验用免费，p×T 等于请求核数，保持既有硬件/编译/五次重复/指标口径。不要直接套旧宽计划或新 RUN_ID 重跑全矩阵。每次更新已完成、已提交、未提交和交接归属并同步 Git。
+> 请接手这个仓库的 Vanda 实验。先读 HANDOFF_VANDA_EXPERIMENTS_20261106.md 和 git_sync_20261111 下完整固定图、弱扩展、资源组及 ownership 清单。先只做只读核对，向原负责人取得明确转交的 canonical_summary 配置与新源计划；当前 unsubmitted 分属 xtt_ella 与 hongxinran 的互斥自动续跑计划，必须先读 future_owner，不能直接提交。严格复用已校验结果，不重跑 Serial/GPU 等完整部分；在途、待校验和 H 不重复提交；失败先查可复用部分，controlled 的 rank 弱扩展 512 端点先核实远端证据。暂停/移除原账号真实续跑计划中的拟接手项，核对实时两边队列及旧 H，确认所有权互斥后再 dry-run、提交和登记 job ID。优先非 512 核；正式性能用付费、构建处理校验用免费，p×T 等于请求核数，保持既有硬件/编译/五次重复/指标口径。不要直接套旧宽计划或新 RUN_ID 重跑全矩阵。每次更新已完成、已提交、未提交和交接归属并同步 Git。
 
 此前堆叠的旧 handover、双账号状态及 Nov 8 提交计划已移至 [历史目录](docs/history/)。里面的旧“最新”状态、旧免费性能命令与旧提交范围只作追溯，不作为当前操作说明。

@@ -3,15 +3,18 @@
   "original_target": 19980,
   "later_512_splits": 720,
   "status_counts": {
-    "validated": 16103,
+    "validated": 16131,
     "deferred_512": 1160,
-    "unsubmitted": 3418,
+    "unsubmitted": 3304,
+    "awaiting_validation": 74,
+    "running": 6,
+    "queued": 6,
     "held": 5,
     "performance_failed": 14
   },
   "submitted_group_counts": {
     "xtt_ella": 149,
-    "hongxinran": 78
+    "hongxinran": 106
   },
   "mainline_coverage": [
     {
@@ -28,7 +31,7 @@
       "expected_configs": 450,
       "in_original_19980": 450,
       "added_targets": 0,
-      "validated_configs": 412
+      "validated_configs": 420
     },
     {
       "cores": 4,
@@ -36,7 +39,7 @@
       "expected_configs": 630,
       "in_original_19980": 630,
       "added_targets": 0,
-      "validated_configs": 554
+      "validated_configs": 574
     },
     {
       "cores": 8,
@@ -98,11 +101,12 @@
   "registered_cross_account_overlap": 0,
   "future_plan_cross_account_overlap": 0,
   "unfinished_owner_counts": {
-    "xtt_ella": 4597
+    "xtt_ella": 3867,
+    "hongxinran": 702
   },
   "future_plans": {
-    "xtt_ella": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111_phase2_small_balance.json",
-    "hongxinran": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261111_phase2.json"
+    "xtt_ella": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111_phase3.json",
+    "hongxinran": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261111_phase3.json"
   },
   "handoff_rule": "Frozen snapshot: no row grants submission permission. Unsubmitted cells remain owned; transfer ownership out of the live source plan and check both live queues before a teammate submits. Local RUN_ID deduplication is not cross-account locking.",
   "weak_scaling_separate": {
@@ -122,14 +126,14 @@
   },
   "snapshots": {
     "xtt_ella": {
-      "observed_at": "2026-11-11T20:46:15.040470+08:00",
+      "observed_at": "2026-11-11T21:27:26.102472+08:00",
       "monitor_action": "waiting_real_credits",
       "active_job_count": 8
     },
     "hongxinran": {
-      "observed_at": "2026-11-11T20:29:19.950357+08:00",
-      "monitor_action": "no_eligible_unregistered_cells",
-      "active_job_count": 70
+      "observed_at": "2026-11-11T21:27:43.553339+08:00",
+      "monitor_action": "submitted",
+      "active_job_count": 78
     }
   },
   "scope_note": "Thread range is 1/2/4/8/16/32. Regular per-node CPU budget is at most 32; the 512 endpoint uses 8 nodes x 64. Weak scaling is separate."

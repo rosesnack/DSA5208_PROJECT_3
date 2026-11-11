@@ -1,0 +1,9 @@
+{
+  "job": "1542434.stdct-mgmt-02",
+  "queue": "auto_free",
+  "purpose": "Link and check existing inputs; no Serial measurement and no performance repeats",
+  "new_groups": 136,
+  "new_cells": 730,
+  "superseded_job": "1542429.stdct-mgmt-02",
+  "correction": "Check only the three solver executables used by the core-group pipeline; mpi_rank_hosts is not used."
+}

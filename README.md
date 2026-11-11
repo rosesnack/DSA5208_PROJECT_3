@@ -1,6 +1,6 @@
 # PageRank: Serial, OpenMP, MPI, MPI+OpenMP, MPI+CUDA, and MPI+Kokkos
 
-Latest Vanda progress: [Nov 11 complete audit, successful batches, and remaining configurations](updated_vanda_progress_20261111.md).
+Latest Vanda progress and newly assigned work: [two-account status](updated_vanda_two_accounts_20261111.md).
 
 Full fixed-graph target: **20,700 configurations** (original 19,980 plus 720 later requested 512-core splits). **Current execution and teammate handover: [Vanda handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md).** It distinguishes completed, submitted, held, failed, deferred and owner-assigned missing cells; do not submit from an old plan or a fresh RUN_ID without ownership transfer. See also [CPU split coverage](updated_cpu_layout_coverage_20261111.md).
 
@@ -218,7 +218,7 @@ Each configuration saves the following files. Set `PAGERANK_RESULTS_ROOT` to a r
 | `ranks.csv` | Final ranks and node degrees from the last run |
 | `history.csv` | Per-iteration L1 differences from the last run |
 
-**Current Vanda continuation (2026-11-11):** use the [single current handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md) and [full per-cell ownership manifest](results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv). The full fixed matrix has 16,103/20,700 validated cells; the 20:46 SGT live check found no running/queued work. Unsubmitted cells remain owned by the primary continuation plan; teammates must coordinate transfer before submission. Only missing/invalid performance uses paid queues; builds, data preparation and independent validation use free queues. Existing validated results are reused. The suites below document general entry points and are not instructions to rerun the current campaign.
+**Current Vanda continuation (2026-11-11):** follow the [handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md) and [current two-account status](updated_vanda_two_accounts_20261111.md). A disjoint new batch of 136 groups / 730 missing cells is assigned to hongxinran, with a 932 CPU-hour request ceiling and original 20/30-minute walltimes. Its cells were removed from the primary live source plan. Paid jobs measure performance; preparation and independent validation use free queues. The controllers submit in batches and never treat an assigned plan as completed results. Consult future_owner before transferring any further work.
 
 **Complete local backup:** source, scripts and result tables are tracked here. The [full backup guide](FULL_PROJECT_BACKUP_20261109.md) links the same repository's Release containing all local graph inputs, raw rank vectors, pinned Kokkos source, checksums and restore instructions.
 

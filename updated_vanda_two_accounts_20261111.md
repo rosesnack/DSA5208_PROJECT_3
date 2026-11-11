@@ -1,33 +1,28 @@
-# 两账号当前状态（Nov 11 20:46 SGT）
+# 两账号续跑：Nov 11 21:27 SGT
 
-**本轮新增 562 项独立校验通过，固定图累计完成 16,103/20,700（77.8%），尚缺 4,597。** 新测量、计时、校验标记及硬件/布局记录已下载。主账号 20:46、分担账号 20:37 的查询均无 R/Q；详细矩阵、所有权及队友接手流程统一见 [Vanda handover](HANDOFF_VANDA_EXPERIMENTS_20261106.md)。
+**已正式给 hongxinran 新分配 136 组/730 个缺项，总请求上限 932 CPUh。** 主账号已移除相同配置；已完成的 16,131 项固定图结果不重跑。当前执行以 [handover](HANDOFF_VANDA_EXPERIMENTS_20261106.md) 和 [逐配置归属清单](results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv) 为准。
 
-| 账号 | 当前状态 | 最近 CPU 余额 | 现有分配 |
-|---|---|---:|---|
-| xtt_ella | waiting_real_credits；无在途性能/校验 | 16.097 CPUh，余量 16 | 当前注册 149 组；继续负责全部 4,597 个固定图缺项 |
-| hongxinran | no_eligible_unregistered_cells；无在途性能/校验 | 1,257.712 CPUh，余量 64 | 原两批 78 组、448/448 项全部通过，尚未接手新配置 |
+| 项目 | 当前安排 |
+|---|---|
+| 新工作量 | 33 张网格图，uniform/hub/controlled 三家族，136 组/730 项 |
+| 布局 | 1/2 节点，总 2/4/8/16/32 核；每个配置 p×T=申请核数 |
+| 通信和方法 | 按原矩阵只补缺项，不重跑已完成部分；MPI 方法仍分别有 Allgatherv/Halo |
+| 墙钟 | 单节点 20 分钟、两节点 30 分钟，沿用原值 |
+| 正式性能 | personal-hongxinran，付费 batch_cpu |
+| 准备/独立校验 | 免费 auto_free；修正后的准备 1542434 已成功，未重测 Serial |
+| 后台监控 | 主账号 PID 765730，分担 PID 765579；每 60 秒查余额和状态，最多六个在途性能组 |
+| 截止 | Nov 12 23:59 SGT 后不新增提交 |
 
-主账号相比上次新增 66 组/566 项，其中 **65 组/562 项全部通过**。一组四项 `1538617`（controlled n100000/d16，四节点、每节点四核，总 16 核）墙钟超限 -29，实际 46:27、CPU 时间 0；尚未确定根因，未重复提交。加上此前 128 核失败组十项，共 14 项待处理。
+本次快照已登记 **28 组/114 个新配置**：性能 R=1、Q=1、H=0、F=26。首批性能 ID 为 1542438/1542440/1542442/1542444/1542446/1542448，每个均有免费校验依赖。剩余计划由监控继续分批提交；**计划 730 项不代表 730 项已经 qsub，更不代表已完成。**
 
-| 固定图状态 | 配置数 |
-|---|---:|
-| validated | 16,103 |
-| unsubmitted（仍归主账号） | 3,418 |
-| performance_failed | 14 |
-| held（当前 512 作业） | 5 |
-| deferred_512（其他 512） | 1,160 |
-| **合计** | **20,700** |
+节点调整依据和最新主机请求见 [记录](results/updated_vanda_scaling/20261111_hongxinran_assist/phase3_host_adjustment_20261111.json)；原 CN-051 已满。只调整未启动作业的主机选择，不改进程/线程、总核数、通信、计时口径或墙钟。
 
-非 512 核缺 3,432（未提交 3,418＋失败 14）；全部 512 核缺 1,165，仍有五个有效完成配置。GPU 固定图全部完成：真实 GPU 450、同机 CPU 对照 1,215。弱扩展单列，controlled rank 曲线的 512 核端点六项仍须先核实远端证据。
+当前固定图未完成归属：xtt_ella **3,867**、hongxinran **702**。未来计划和当前登记配置的跨账号交集均为零。主账号两个既有失败组共 14 项及 512 核延期范围没有转交给本批；旧 H 继续保持延期，禁止批量释放。
 
-主账号 8 个 H、hongxinran 70 个旧 H 均不是正在计算，不能批量释放。只有当前 512 性能 1532794/校验 1532795 对应完整清单的 held 五项，其余是已替代或此前延期的旧请求。
+- [转交与预算凭据](results/updated_vanda_scaling/account_partition_20261111_phase3/account_partition.json)
+- [主账号当前源计划](results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111_phase3.json)
+- [hongxinran 当前源计划，含原 448 项和新 730 项](results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261111_phase3.json)
+- [实际注册组和 job ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv)
+- [hongxinran 作业快照](results/updated_vanda_scaling/account_partition_20261111_phase3/hongxinran_submission_snapshot.json)
 
-监控 PID 251391 / 155730，每 60 秒查询，提交截止 Nov 12 23:59 SGT。hongxinran 的余额已返还，但其原清单做完；若继续分担，先停止相关续投、从主账号真实源计划移除拟转交项、检查两边实时队列，再发布互斥新计划。**不能直接把未提交清单当作队友可领取任务。** 本轮仅核查、下载与更新文档，没有新增、释放或取消性能作业。
-
-- [完整矩阵、状态及 future_owner](results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv)
-- [当前登记的 227 个资源组及 job ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv)
-- [主账号队列及监控](results/updated_vanda_scaling/git_sync_20261111/queue_xtt_ella.json)
-- [hongxinran 队列及监控](results/updated_vanda_scaling/git_sync_20261111/queue_hongxinran.json)
-- [今晚新增 66 组的独立校验、退出状态与资源用时](results/updated_vanda_scaling/20261106T185006Z/monitor_recovery_20261110/account_progress_20261111.json)
-
-余额以实时 hpc project 为准，不等同于实际用量；冻结清单不构成跨账号提交锁。
+准备作业第一遍误查了当前流水线不用的 mpi_rank_hosts，免费失败后已修正；第二遍免费准备一秒成功，所有新性能均依赖它，没有因此产生失败的付费测量。

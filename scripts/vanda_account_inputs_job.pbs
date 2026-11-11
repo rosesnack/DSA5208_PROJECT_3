@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#PBS -N dsa5208-account-inputs
+#PBS -q auto_free
+#PBS -l select=1:ncpus=2:mpiprocs=1:ompthreads=1:mem=4gb
+#PBS -l walltime=00:20:00
+#PBS -j oe
+set -euo pipefail
+cd "${PBS_O_WORKDIR:?Submit from the project directory}"
+python3 scripts/prepare_vanda_account_inputs.py "$PHASE3_INPUT_PLAN" "$REFERENCE_DATA_ROOT"
