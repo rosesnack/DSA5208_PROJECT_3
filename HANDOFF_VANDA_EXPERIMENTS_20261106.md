@@ -1,8 +1,8 @@
 # Vanda 实验交接（2026-11-11 复核版）
 
-**这是当前唯一执行交接入口，状态更新至 11-11 23:53 SGT。** hongxinran 前三批 448+730+100=1,278 项均已独立校验通过并同步。 本批另转交 **64 组/306 项**，已从主账号远端真实源计划移除，跨账号实际登记与未来计划交集均为零。本批 64 组/306 项（四节点、总核数 8/16/32），实际已登记 42/64 组、174/306 项；性能状态 F=40, R=2。其中 138/306 项已独立校验并同步。
+**这是当前唯一执行交接入口，状态更新至 11-12 00:04 SGT。** hongxinran 前三批 448+730+100=1,278 项均已独立校验通过并同步。 本批另转交 **64 组/306 项**，已从主账号远端真实源计划移除，跨账号实际登记与未来计划交集均为零。本批 64 组/306 项（四节点、总核数 8/16/32），实际已登记 64/64 组、306/306 项；性能状态 F=64。其中 306/306 项已独立校验并同步。
 
-固定图严格完成 **17,321/20,700**，剩余 3,379；尚未完成归属 xtt_ella **3,211**、hongxinran **168**。这是本地已同步且独立校验的数量。未提交仍有负责人，队友不能直接领取缺项 CSV。
+固定图严格完成 **17,489/20,700**，剩余 3,211；尚未完成归属 xtt_ella **3,211**、hongxinran **0**。这是本地已同步且独立校验的数量。未提交仍有负责人，队友不能直接领取缺项 CSV。
 
 免费四节点准备 **1543299** 已通过，复用已有图与 Serial；没有重测 Serial 或重新构建。性能付费，准备/校验免费；全部 p×T=请求核数、同编译器、五次重复及原计时口径。当前细节见 [双账号状态](updated_vanda_two_accounts_20261111.md)。
 
@@ -12,15 +12,15 @@
 
 | 固定图状态 | 配置数 | 下一步 |
 |---|---:|---|
-| `validated` | **17,321** | 复用，不重跑 |
-| `running` | **38** | 跟踪原作业 |
+| `validated` | **17,489** | 复用，不重跑 |
+| `running` | **58** | 跟踪原作业 |
 | `queued` | **86** | 等原作业，不复制提交 |
-| `awaiting_validation` | **50** | 等独立校验或结果同步 |
+| `awaiting_validation` | **38** | 等独立校验或结果同步 |
 | `performance_failed` | **66** | 原账号先查失败及部分输出 |
 | `held` | **5** | 原 512 组延期 |
-| `unsubmitted` | **1,974** | 按 future_owner 续投，队友接手先转交 |
+| `unsubmitted` | **1,798** | 按 future_owner 续投，队友接手先转交 |
 | `deferred_512` | **1,160** | 原优先级延期 |
-| **合计** | **20,700** | 已验证 17,321，剩余 3,379 |
+| **合计** | **20,700** | 已验证 17,489，剩余 3,211 |
 
 [全部 20,700 行状态及来源](results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv) 是固定图逐配置依据。另有按状态拆出的 [完成](results/updated_vanda_scaling/git_sync_20261111/cells_validated.csv)、[未提交](results/updated_vanda_scaling/git_sync_20261111/cells_unsubmitted.csv)、[失败](results/updated_vanda_scaling/git_sync_20261111/cells_performance_failed.csv)、[暂挂](results/updated_vanda_scaling/git_sync_20261111/cells_held.csv)、[延期 512](results/updated_vanda_scaling/git_sync_20261111/cells_deferred_512.csv) 清单；均不能直接当提交计划。
 
@@ -39,11 +39,11 @@ CSV 中 `canonical_summary` 是跨账号匹配同一配置的唯一键。`assign
 | 单独 Kokkos OpenMP CPU | 同上，OpenMP 后端；无通信 | 270 | 270 | 0 |
 | 纯 MPI CPU 常规 | n=1/2/4/8，r=1/2/4/8/16/32，T=1；每布局两通信 | 2,160 | 1,992 | 168 |
 | MPI+OpenMP CPU 常规 | 同 n、r，T=1/2/4/8/16/32，rT≤32；每布局两通信 | 7,560 | 7,028 | 532 |
-| MPI+Kokkos OpenMP CPU 常规 | 与 MPI+OpenMP 同一套布局；每布局两通信 | 7,560 | 6,046 | 1,514 |
+| MPI+Kokkos OpenMP CPU 常规 | 与 MPI+OpenMP 同一套布局；每布局两通信 | 7,560 | 6,214 | 1,346 |
 | 原 CPU 512 核端点 | 纯 MPI p512,T1；两混合方法各 p512,T1 和 p128,T4；每布局两通信 | 450 | 5 | 445 |
 | 后追加 CPU 512 核拆分 | 两混合方法各 T=2/8/16/32，p=512/T；每布局两通信 | 720 | 0 | 720 |
 | GPU 节点完整配对区块 | 下表，包含真实 GPU 计算及同机 CPU 对照 | 1,665 | 1,665 | 0 |
-| **固定图合计** | | **20,700** | **17,321** | **3,379** |
+| **固定图合计** | | **20,700** | **17,489** | **3,211** |
 
 两通信是 Allgatherv（参数 `allgather`）与 Halo。单独方法没有 MPI，不扩展通信维度。
 
@@ -75,10 +75,10 @@ CSV 中 `canonical_summary` 是跨账号匹配同一配置的唯一键。`assign
 
 | 账号 | 当前分工与登记 | 未完成固定图归属 |
 |---|---|---:|
-| xtt_ella | 189 个登记组；持续运行原大图；已移除新转交 306 项 | 3,211 |
-| hongxinran | 原 1,278 项全部通过；本批 64 组/306 项（四节点、总核数 8/16/32），实际已登记 42/64 组、174/306 项；性能状态 F=40, R=2。其中 138/306 项已独立校验并同步。 | 168 |
+| xtt_ella | 195 个登记组；持续运行原大图；已移除新转交 306 项 | 3,211 |
+| hongxinran | 原 1,278 项全部通过；本批 64 组/306 项（四节点、总核数 8/16/32），实际已登记 64/64 组、306/306 项；性能状态 F=64。其中 306/306 项已独立校验并同步。 | 0 |
 
-监控 PID **3695677 / 3601173**，每 60 秒检查、最多六个在途性能组，截止 Nov 12 23:59 SGT。本次 306 项全部四节点、总核数 8/16/32，墙钟 45 分钟；原矩阵和 p×T=请求核数不变。转交前余额 1,234.94 CPUh，请求上限 1,092 CPUh，全额承诺后余 142.94，高于控制器 64 CPUh 余量。
+监控 PID **3924673 / 3601173**，每 60 秒检查、主账号最多十二组、分担账号最多六组在途性能任务，截止 Nov 12 23:59 SGT。本次 306 项全部四节点、总核数 8/16/32，墙钟 45 分钟；原矩阵和 p×T=请求核数不变。转交前余额 1,234.94 CPUh，请求上限 1,092 CPUh，全额承诺后余 142.94，高于控制器 64 CPUh 余量。
 
 后续未登记 CPU 组由调度器在 `node_pool=cpu_node:switch=ccid-10` 中选择物理主机。运行前与独立发布前均核对 Platinum 8452Y，并保存实际主机、affinity、进程与线程记录。已有运行组保持原作业。多个物理节点需同时可用，Q 不代表失败或已完成。
 
@@ -87,7 +87,7 @@ CSV 中 `canonical_summary` 是跨账号匹配同一配置的唯一键。`assign
 | xtt_ella / personal-xtt_ella | `/scratch/xtt_ella/DSA5208_PROJECT_3_20261107` | `results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111_phase5.json` |
 | hongxinran / personal-hongxinran | `/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111` | `results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261111_phase5.json` |
 
-[实际登记的 483 个资源组及作业 ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv) 包含付费性能与免费校验两个 job；不能重复算成两组实验。[主队列](results/updated_vanda_scaling/git_sync_20261111/queue_xtt_ella.json)、[分担队列](results/updated_vanda_scaling/git_sync_20261111/queue_hongxinran.json) 各有准确时间。
+[实际登记的 511 个资源组及作业 ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv) 包含付费性能与免费校验两个 job；不能重复算成两组实验。[主队列](results/updated_vanda_scaling/git_sync_20261111/queue_xtt_ella.json)、[分担队列](results/updated_vanda_scaling/git_sync_20261111/queue_hongxinran.json) 各有准确时间。
 
 **旧 H 不能批量释放。** 原有 78 个旧 H job（主账号 8、分担 70）仍保持原延期，其中当前 512 组的 `1532794` 与依赖校验 `1532795` 对应 5 个 held 配置；其他旧请求可能已被替代或与计划重叠，不是可领取的新实验。新增免费校验的依赖 H 在性能成功后自动解除，含义不同。
 
@@ -95,7 +95,7 @@ CSV 中 `canonical_summary` 是跨账号匹配同一配置的唯一键。`assign
 
 ## 5. 防重复接手流程（必须先做，再提交）
 
-当前两个账号**已登记配置交集为零、未来源计划交集为零**；全部 3,379 个固定图缺项都有明确归属。这个结论针对快照，不能代替未来转交。
+当前两个账号**已登记配置交集为零、未来源计划交集为零**；全部 3,211 个固定图缺项都有明确归属。这个结论针对快照，不能代替未来转交。
 
 1. 队友先读取本文件与完整 CSV，只拟定要接手的 `canonical_summary` 集合；不从历史 handover、旧宽计划或剩余 CSV 直接 qsub。已验证、R/Q、待检、H、延期和失败各按上文处理。
 2. 由原账号负责人协调暂停相关自动续投：在对应 `monitor_recovery_20261110/` 或 `monitor_assist_20261111/` **状态目录**创建 `STOP_AUTO_SUBMIT`，等待监控退出，并核对是否已有正在执行的提交。它只停止后续提交，不取消 PBS 作业。不要在队友目录创建一个 STOP 就以为停掉了原账号。
@@ -141,3 +141,7 @@ python3 scripts/audit_fixed_matrix.py vanda \
 续投查询已修正：预算快照使用 PBS 历史查询 `qstat -x`，避免小任务在 qselect 后结束导致查询报错。修正已部署两个账号，仅影响调度信息查询；五次重复、指标与原性能结果均不变。
 
 续投预算快照已改用 PBS 历史查询 `qstat -x`，避免小任务在 qselect 后结束导致查询报错。修正已部署两个账号，只影响调度查询，不改变五次重复、性能指标或既有结果。
+
+续投预算快照已改用 PBS 历史查询 `qstat -x`，避免小任务在 qselect 后结束导致查询报错。修正已部署两个账号，只影响调度查询，不改变五次重复、性能指标或既有结果。
+
+00:03 SGT 的续投调整：主账号在途上限现为 12，优先已有小节点缺项，已实际从 1 R 提升到 6 R；PBS 显示达到用户同时运行作业数上限。原墙钟、实验集合及预算扣除规则不变，详见 [额度和续投记录](updated_vanda_budget_backfill_20261112.md)。

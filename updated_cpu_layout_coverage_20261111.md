@@ -26,22 +26,22 @@ T=64 或把常规其他布局也扩到每节点 64 核，会增加此前未确�
 
 - 原矩阵：19,980，包含 450 个 512 核配置。
 - 后续确认的 512 核拆分：720，属于待完成任务。
-- **完整固定图目标：20,700；当前严格通过 17,321，尚缺 3,379。**
+- **完整固定图目标：20,700；当前严格通过 17,489，尚缺 3,211。**
 
 弱扩展独立统计。4/8 GPU 按已确认决定不在目标中。
 
 ## 当前安排与结果
 
-hongxinran 前三批 448+730+100=1,278 项均已独立校验通过并同步。 本批 64 组/306 项（四节点、总核数 8/16/32），实际已登记 42/64 组、174/306 项；性能状态 F=40, R=2。其中 138/306 项已独立校验并同步。 新批请求上限 1,092 CPUh，四节点原墙钟 45 分钟；两账号互斥转交已落实到远端源计划。
+hongxinran 前三批 448+730+100=1,278 项均已独立校验通过并同步。 本批 64 组/306 项（四节点、总核数 8/16/32），实际已登记 64/64 组、306/306 项；性能状态 F=64。其中 306/306 项已独立校验并同步。 新批请求上限 1,092 CPUh，四节点原墙钟 45 分钟；两账号互斥转交已落实到远端源计划。
 
-当前严格审计 **17,321/20,700**，缺 3,379。逐状态：validated=17,321, deferred_512=1,160, unsubmitted=1,974, running=38, held=5, awaiting_validation=50, performance_failed=66, queued=86。未完成归属主账号 3,211、分担账号 168；登记组分别 189 / 294，跨账号未来计划和登记交集为零。
+当前严格审计 **17,489/20,700**，缺 3,211。逐状态：validated=17,489, deferred_512=1,160, unsubmitted=1,798, awaiting_validation=38, held=5, performance_failed=66, queued=86, running=58。未完成归属主账号 3,211、分担账号 0；登记组分别 195 / 316，跨账号未来计划和登记交集为零。
 
 准确作业与时间见 [双账号状态](updated_vanda_two_accounts_20261111.md)。已完成、在途、待校验/待同步均不重复提交；卡住的零产出启动有证据并明确标失败，不混入性能表。
 
 ## 审阅入口
 
 - [完整 20,700 项状态与任务 ID](results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv)
-- [483 个当前资源组及性能/免费校验作业 ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv)
+- [511 个当前资源组及性能/免费校验作业 ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv)
 - [各核心数主线的逐配置覆盖](results/updated_vanda_scaling/git_sync_20261111/cpu_core_layouts.csv)
 - [覆盖汇总及快照时间](results/updated_vanda_scaling/git_sync_20261111/handoff_summary.json)
 - [主账号 PBS 快照](results/updated_vanda_scaling/git_sync_20261111/queue_xtt_ella.json)
