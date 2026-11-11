@@ -1,0 +1,9 @@
+{
+  "performance_job": "1543404.stdct-mgmt-02",
+  "validation_job": "1543405.stdct-mgmt-02",
+  "group": "cpu_core_groups/synthetic_hub/nodes4_cores4",
+  "cores": 16,
+  "nodes": 4,
+  "processes": 8,
+  "threads": 2
+}

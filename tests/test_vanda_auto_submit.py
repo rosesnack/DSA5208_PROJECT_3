@@ -136,7 +136,7 @@ class AutoSubmitTests(unittest.TestCase):
                 self.assertEqual(unregistered_groups([group], [], Path(folder), {'proof': record}), [])
             self.assertEqual(len(unregistered_groups([group], [], Path(folder), {'proof': {'job_state': 'F', 'Exit_status': 0}})), 1)
 
-    def check_budget(self, deferred=False, user_hold=False):
+    def check_budget(self, deferred=False, user_hold=False, finished=False):
         prior = Path.cwd()
         with tempfile.TemporaryDirectory() as folder:
             try:
@@ -151,9 +151,12 @@ class AutoSubmitTests(unittest.TestCase):
                           'Resource_List': {'ncpus': 512, 'walltime': '01:00:00'}}
                 if user_hold:
                     queued.update(job_state='H', Hold_Types='u')
+                if finished:
+                    queued.update(job_state='F', Exit_status=0)
 
                 def fake_run(*parts):
                     if parts[0] == 'qstat':
+                        self.assertEqual(parts[1], '-x')
                         return json.dumps({'Jobs': {'queued': queued}})
                     return 'personal-test | 10000 | 642.130 | 1000 | 1000'
 
@@ -176,6 +179,11 @@ class AutoSubmitTests(unittest.TestCase):
         self.assertAlmostEqual(summary['prior_pending_reservations'], 512)
         self.assertAlmostEqual(summary['new_reservations'], 64)
         self.assertAlmostEqual(summary['uncommitted_after_margin'], 2.13)
+
+    def test_job_finishing_after_qselect_does_not_block_or_reserve_budget(self):
+        summary = self.check_budget(finished=True)
+        self.assertEqual(summary['prior_pending_reservations'], 0)
+        self.assertEqual(len(summary['groups']), 7)
 
     def test_deferral_does_not_ignore_a_job_that_is_still_queued(self):
         summary = self.check_budget(deferred=True)

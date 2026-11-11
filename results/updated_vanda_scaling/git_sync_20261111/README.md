@@ -30,8 +30,8 @@ python3 scripts/export_vanda_handoff.py \
   --audit results/updated_vanda_scaling/git_sync_20261111/fixed_matrix_audit_20700.csv \
   --main-root results/updated_vanda_scaling/20261106T185006Z \
   --assist-root results/updated_vanda_scaling/20261111_hongxinran_assist \
-  --main-plan results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111_phase4.json \
-  --assist-plan results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261111_phase4.json \
+  --main-plan results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111_phase5.json \
+  --assist-plan results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261111_phase5.json \
   --snapshots results/updated_vanda_scaling/git_sync_20261111 \
   --output results/updated_vanda_scaling/git_sync_20261111
 ```

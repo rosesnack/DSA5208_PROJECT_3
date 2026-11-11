@@ -1,15 +1,15 @@
 {
   "account": "xtt_ella",
-  "observed_at": "2026-11-11T22:48:08.610252+08:00",
+  "observed_at": "2026-11-11T23:14:09.504389+08:00",
   "monitor": {
-    "pending_performance_groups": 0,
+    "pending_performance_groups": 4,
     "deferred_held_jobs": [
       "1532794.stdct-mgmt-02",
       "1537507.stdct-mgmt-02",
       "1537509.stdct-mgmt-02",
       "1537572.stdct-mgmt-02"
     ],
-    "pending_validation_groups": 0,
+    "pending_validation_groups": 2,
     "failed_jobs_not_retried": [
       "1537511.stdct-mgmt-02",
       "1537512.stdct-mgmt-02",
@@ -17,23 +17,25 @@
       "1538618.stdct-mgmt-02"
     ],
     "performance_states": {
-      "F": 148,
-      "H": 1
+      "F": 165,
+      "H": 1,
+      "R": 4
     },
     "validation_states": {
-      "F": 148,
-      "H": 1
+      "F": 163,
+      "H": 5,
+      "R": 2
     },
-    "eligible_unregistered_groups": 319,
-    "eligible_unregistered_cells": 2588,
+    "eligible_unregistered_groups": 298,
+    "eligible_unregistered_cells": 2384,
     "endpoint_proof_state": {
       "1532795.stdct-mgmt-02": "H"
     },
-    "balance_cpu_hours": 16.096999999999753,
+    "balance_cpu_hours": 2775.5699999999997,
     "submission_check": {
-      "observed_at": "2026-11-11T22:47:53.992779+08:00",
+      "observed_at": "2026-11-11T23:13:01.896424+08:00",
       "submitted": true,
-      "balance": 16.096999999999753,
+      "balance": 2775.5699999999997,
       "balance_source": "hpc_project",
       "prior_pending_reservations": 0,
       "margin": 16.0,
@@ -43,12 +45,35 @@
         "1537509.stdct-mgmt-02",
         "1537572.stdct-mgmt-02"
       ],
-      "new_reservations": 0,
-      "uncommitted_after_margin": 0.09699999999975262,
-      "groups": []
+      "new_reservations": 24.0,
+      "uncommitted_after_margin": 2735.5699999999997,
+      "groups": [
+        {
+          "graph": "grid_controlled_n200000_d4",
+          "nodes": 8,
+          "cores": 8,
+          "cells": 6,
+          "walltime": "01:00:00",
+          "reservation": 8.0,
+          "performance_job": "1543225.stdct-mgmt-02",
+          "validation_job": "1543226.stdct-mgmt-02",
+          "dependency": "1530741.stdct-mgmt-02"
+        },
+        {
+          "graph": "grid_controlled_n200000_d4",
+          "nodes": 8,
+          "cores": 16,
+          "cells": 10,
+          "walltime": "01:00:00",
+          "reservation": 16.0,
+          "performance_job": "1543227.stdct-mgmt-02",
+          "validation_job": "1543228.stdct-mgmt-02",
+          "dependency": "1530741.stdct-mgmt-02"
+        }
+      ]
     },
-    "action": "waiting_real_credits",
-    "observed_at": "2026-11-11T22:47:46.704232+08:00",
+    "action": "submitted",
+    "observed_at": "2026-11-11T23:12:52.485156+08:00",
     "pid": 2632870,
     "interval_seconds": 60,
     "until": "2026-11-12T23:59:00+08:00",

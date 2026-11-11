@@ -54,7 +54,7 @@ def main():
         groups = json.loads(args.plan.read_text())
         ids = subprocess.run(["qselect", "-u", os.environ["USER"]], text=True,
                              capture_output=True, check=True).stdout.split()
-        jobs = json.loads(run("qstat", "-f", "-F", "json", *ids))["Jobs"] if ids else {}
+        jobs = json.loads(run("qstat", "-x", "-f", "-F", "json", *ids))["Jobs"] if ids else {}
         if args.confirmed_balance is None:
             balance_text = run("hpc", "project")
             balance = float(next(line for line in balance_text.splitlines()

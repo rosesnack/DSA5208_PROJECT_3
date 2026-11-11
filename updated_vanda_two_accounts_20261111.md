@@ -1,30 +1,26 @@
-# 两账号状态：Nov 11 22:52 SGT
+# 两账号状态：11-11 23:53 SGT
 
-**上一批 hongxinran 的 136 组/730 项已全部通过独立校验并下载；本轮又补了 38 组/100 项。** 已从主账号实际源计划移除新转交项，跨账号登记和未来计划均无交集。固定图严格完成 **16,833/20,700（81.3%）**，剩余 3,867。
+**两边已恢复续投。** hongxinran 前三批 448+730+100=1,278 项均已独立校验通过并同步。 本次将另 **64 组/306 个缺项**从主账号实时源计划转交 hongxinran；实际提交、完成和待提交分开记录。
 
-| 账号 | 当前情况 |
+固定图严格完成 **17,321/20,700（83.7%）**，剩余 3,379。这是已下载摘要和独立校验标记的计数，未计尚未同步的新产出。
+
+| 账号 | 当前归属与登记 |
 |---|---|
-| hongxinran | 之前 448+730=1,178 项全部通过；新批已登记 30/38 组、84/100 项；性能 R=6、Q=0、F=24 |
-| xtt_ella | 仍等实际额度，最近余额约 16.097 CPUh；本轮已移除 100 项，继续负责 3,767 个未完成目标 |
+| xtt_ella | 当前 189 个登记组，尚未完成归属 3,211 项；原大图 256 核作业持续产出；具体 R/Q 见队列快照 |
+| hongxinran | 当前 294 个登记组，尚未完成归属 168 项；本批 64 组/306 项（四节点、总核数 8/16/32），实际已登记 42/64 组、174/306 项；性能状态 F=40, R=2。其中 138/306 项已独立校验并同步。 |
 
-新批转交前余额 **325.713 CPUh**，完整请求上限 **240 CPUh**，请求全部承诺后仍留 **85.713 CPUh**，高于控制器 64 CPUh 余量。请求上限不等同于实际花费；返还到账前不提前使用。
+新批转交前余额 **1,234.94 CPUh**，全批原墙钟请求上限 **1,092 CPUh**，全额预留后仍余 **142.94 CPUh**，另有控制器 64 CPUh 余量。全部四节点保持 **45 分钟**；每项 p×T=请求总核数。不提前使用预计返还。
 
-| 新批配置 | 组数 | 配置数 | 总核数 | 原墙钟 |
-|---|---:|---:|---|---|
-| 两节点，synthetic_controlled / synthetic_hub 的已有缺项 | 8 | 40 | 4/8/16/32 | 00:30:00 |
-| 四节点，每节点两核，原网格中的缺项 | 30 | 60 | 8，p=4,T=2 | 00:45:00 |
-| **合计** | **38** | **100** | 每配置 p×T=请求核数 | 未缩短 |
+免费预检 **1543299** 已成功：CN-135/136/140/141 四个物理 Platinum 8452Y 节点、每节点两核，同 TCP/ob1 配置；复用 32 张图与已有付费 Serial 参考，没有重测 Serial 或重新构建。新性能只走付费，独立校验免费。新批付费 job 从 **1543319** 开始，详见登记清单。
 
-免费准备 **1543003** 已成功：复用 32 张已有图及 Serial 参考，四节点 MPI 使用相同 TCP/ob1 配置，实际 CN-135/136/140/142，每节点两核且均为 Platinum 8452Y。没有重跑 Serial 性能或重新构建。付费只测性能，校验继续免费。
+主账号出现 MPI 启动采集卡住：已记录并停止 `1543209`、`1543315`、`1543317`证实持续零 CPU、无主机记录、无任何测量的请求，保留全部证据；不计为已完成，不盲目重投。后续未登记 CPU 组已与分担账号统一使用调度器选择的 `cpu_node/ccid-10`，保留核数、节点数、墙钟和实验口径。仍在计算的大图未取消。队列 Q 可因缺少同时可用的节点或每用户并发核数上限等待；不表示实验已完成。
 
-监控 PID **2632870 / 2632859**，每 60 秒检查，最多六个在途性能组；截止 Nov 12 23:59 SGT。采用同一 CPU 分区 `cpu_node/ccid-10` 的调度器分配，不再固定主机。主账号原 14 项失败和旧 H 保持原归属，512 核仍延期。
+两个监控 PID **3695677 / 3601173**，每 60 秒检查，最多六个在途性能组，新增提交截止 Nov 12 23:59 SGT。旧 H 保持延期，512 核仍排在普通缺项之后。登记和未来计划交集均为零；队友不能直接从缺项 CSV 提交。
 
 - [唯一执行 handover 与完整矩阵](HANDOFF_VANDA_EXPERIMENTS_20261106.md)
-- [本轮 100 项转交/预算记录](results/updated_vanda_scaling/account_partition_20261111_phase4/account_partition.json)
-- [主账号当前源计划](results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111_phase4.json)
-- [hongxinran 当前源计划](results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261111_phase4.json)
-- [免费四节点准备结果](results/updated_vanda_scaling/20261111_hongxinran_assist/phase4_prepare_status_20261111.json)
-- [上一批 730 项全部完成并下载的记录](results/updated_vanda_scaling/account_partition_20261111_phase4/previous_completed_snapshot.json)
-- [本轮实际 job ID 与状态](results/updated_vanda_scaling/account_partition_20261111_phase4/hongxinran_submission_snapshot.json)
+- [306 项转交及预算记录](results/updated_vanda_scaling/account_partition_20261111_phase5/account_partition.json)
+- [实际新批作业快照](results/updated_vanda_scaling/account_partition_20261111_phase5/hongxinran_submission_snapshot.json)
+- [当前主账号队列](results/updated_vanda_scaling/git_sync_20261111/queue_xtt_ella.json)、[当前分担队列](results/updated_vanda_scaling/git_sync_20261111/queue_hongxinran.json)
+- [完整逐项状态、负责人及作业 ID](results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv)
 
-计划、实际提交和严格完成分别记录。已有完整有效部分复用，R/Q、待校验/待同步均不重复提交。队友先读 future_owner，再转交所有权，不能直接领取缺项 CSV。
+续投预算快照已改用 PBS 历史查询 `qstat -x`，避免小任务在 qselect 后结束导致查询报错。修正已部署两个账号，只影响调度查询，不改变五次重复、性能指标或既有结果。

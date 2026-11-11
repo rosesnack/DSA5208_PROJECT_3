@@ -1,0 +1,7 @@
+{
+  "job": "1543299.stdct-mgmt-02",
+  "queue": "auto_free",
+  "purpose": "Link and check existing inputs; no Serial measurement and no performance repeats",
+  "new_groups": 64,
+  "new_cells": 306
+}

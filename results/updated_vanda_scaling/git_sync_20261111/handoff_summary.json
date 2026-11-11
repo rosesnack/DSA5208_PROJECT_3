@@ -3,17 +3,18 @@
   "original_target": 19980,
   "later_512_splits": 720,
   "status_counts": {
-    "validated": 16833,
+    "validated": 17321,
     "deferred_512": 1160,
-    "unsubmitted": 2604,
-    "running": 12,
-    "awaiting_validation": 72,
+    "unsubmitted": 1974,
+    "running": 38,
     "held": 5,
-    "performance_failed": 14
+    "awaiting_validation": 50,
+    "performance_failed": 66,
+    "queued": 86
   },
   "submitted_group_counts": {
-    "xtt_ella": 149,
-    "hongxinran": 244
+    "xtt_ella": 189,
+    "hongxinran": 294
   },
   "mainline_coverage": [
     {
@@ -100,12 +101,12 @@
   "registered_cross_account_overlap": 0,
   "future_plan_cross_account_overlap": 0,
   "unfinished_owner_counts": {
-    "xtt_ella": 3767,
-    "hongxinran": 100
+    "xtt_ella": 3211,
+    "hongxinran": 168
   },
   "future_plans": {
-    "xtt_ella": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111_phase4.json",
-    "hongxinran": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261111_phase4.json"
+    "xtt_ella": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111_phase5.json",
+    "hongxinran": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261111_phase5.json"
   },
   "handoff_rule": "Frozen snapshot: no row grants submission permission. Unsubmitted cells remain owned; transfer ownership out of the live source plan and check both live queues before a teammate submits. Local RUN_ID deduplication is not cross-account locking.",
   "weak_scaling_separate": {
@@ -125,14 +126,14 @@
   },
   "snapshots": {
     "xtt_ella": {
-      "observed_at": "2026-11-11T22:52:21.648396+08:00",
-      "monitor_action": "waiting_real_credits",
-      "active_job_count": 8
+      "observed_at": "2026-11-11T23:53:00.886182+08:00",
+      "monitor_action": "waiting_existing_jobs",
+      "active_job_count": 21
     },
     "hongxinran": {
-      "observed_at": "2026-11-11T22:52:37.157099+08:00",
+      "observed_at": "2026-11-11T23:53:10.043770+08:00",
       "monitor_action": "submitted",
-      "active_job_count": 82
+      "active_job_count": 76
     }
   },
   "scope_note": "Thread range is 1/2/4/8/16/32. Regular per-node CPU budget is at most 32; the 512 endpoint uses 8 nodes x 64. Weak scaling is separate."
