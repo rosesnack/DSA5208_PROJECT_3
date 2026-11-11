@@ -1,0 +1,40 @@
+{
+  "observed_at": "2026-11-11T05:43:13.600390+08:00",
+  "submitted": true,
+  "balance": 28.764000000000124,
+  "balance_source": "hpc_project",
+  "prior_pending_reservations": 0,
+  "margin": 16.0,
+  "deferred_user_held_jobs": [
+    "1532794.stdct-mgmt-02",
+    "1537507.stdct-mgmt-02",
+    "1537509.stdct-mgmt-02",
+    "1537572.stdct-mgmt-02"
+  ],
+  "new_reservations": 6.0,
+  "uncommitted_after_margin": 6.764000000000124,
+  "groups": [
+    {
+      "graph": "grid_controlled_n100000_d8",
+      "nodes": 2,
+      "cores": 4,
+      "cells": 2,
+      "walltime": "00:30:00",
+      "reservation": 2.0,
+      "performance_job": "1538651.stdct-mgmt-02",
+      "validation_job": "1538652.stdct-mgmt-02",
+      "dependency": "1530741.stdct-mgmt-02"
+    },
+    {
+      "graph": "grid_controlled_n100000_d8",
+      "nodes": 2,
+      "cores": 8,
+      "cells": 4,
+      "walltime": "00:30:00",
+      "reservation": 4.0,
+      "performance_job": "1538653.stdct-mgmt-02",
+      "validation_job": "1538654.stdct-mgmt-02",
+      "dependency": "1530741.stdct-mgmt-02"
+    }
+  ]
+}

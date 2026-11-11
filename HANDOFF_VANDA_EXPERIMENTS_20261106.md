@@ -1,8 +1,8 @@
 # Vanda 实验交接（2026-11-11 复核版）
 
-**这是当前唯一的执行交接入口。文件名沿用 Nov 6，内容已更新至 Nov 11。** 固定图结果审计为 02:37 SGT；03:31 SGT 实时复查两个账号都没有 R/Q，本轮在途性能和校验均已结束。机器快照的准确观测时间见各 JSON。文档和 CSV 是快照，接手前还须实时核对。
+**这是当前唯一的执行交接入口。文件名沿用 Nov 6，内容已更新至 Nov 11。** 固定图结果已重新审计；主账号 20:46、分担账号 20:37 的队列复查都没有 R/Q，本轮在途性能和校验均已结束。机器快照的准确观测时间见各 JSON。文档和 CSV 是快照，接手前还须实时核对。
 
-**队友现在不能直接提交任何一行缺项。** 非 512 核未提交的 3,984 项仍归 `xtt_ella` 活跃自动续跑计划；余额返还后它可能继续提交。“未提交”指没有当前有效登记作业，绝不表示“无人负责”或“从未跑过”。必须先完成下文的所有权转交，才能开始队友的独立提交。
+**队友现在不能直接提交任何一行缺项。** 非 512 核未提交的 3,418 项仍归 `xtt_ella` 活跃自动续跑计划；余额返还后它可能继续提交。“未提交”指没有当前有效登记作业，绝不表示“无人负责”或“从未跑过”。必须先完成下文的所有权转交，才能开始队友的独立提交。
 
 ## 1. 先分清状态与下一步
 
@@ -10,13 +10,13 @@
 
 | 固定图状态 | 配置数 | 队友怎么处理 |
 |---|---:|---|
-| `validated`：测量及独立校验已完成 | **15,541** | 复用，禁止重跑 |
+| `validated`：测量及独立校验已完成 | **16,103** | 复用，禁止重跑 |
 | `running / queued / awaiting_validation` | **0** | 后续若出现，只跟踪原作业，不重复投递 |
 | `held`：当前登记的 512 核作业仍暂挂 | **5** | 原性能 `1532794`、免费校验 `1532795`；延期，不复制提交 |
-| `performance_failed`：128 核历史失败组 | **10** | 归 xtt_ella；先查失败及可复用部分，协调后补缺项 |
-| `unsubmitted`：非 512 核无当前有效登记作业 | **3,984** | **归 xtt_ella 续跑；转交后才能提交** |
+| `performance_failed`：128 核及 16 核失败组 | **14** | 归 xtt_ella；先查失败及可复用部分，协调后补缺项 |
+| `unsubmitted`：非 512 核无当前有效登记作业 | **3,418** | **归 xtt_ella 续跑；转交后才能提交** |
 | `deferred_512`：其他 512 核缺项 | **1,160** | 归 xtt_ella 计划、目前延期，未经调整优先级不提交 |
-| **合计** | **20,700** | 完成 15,541；缺 5,159；非 512 核缺 3,994 |
+| **合计** | **20,700** | 完成 16,103；缺 4,597；非 512 核缺 3,432 |
 
 [全部 20,700 行状态及来源](results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv) 是固定图逐配置依据。另有按状态拆出的 [完成](results/updated_vanda_scaling/git_sync_20261111/cells_validated.csv)、[未提交](results/updated_vanda_scaling/git_sync_20261111/cells_unsubmitted.csv)、[失败](results/updated_vanda_scaling/git_sync_20261111/cells_performance_failed.csv)、[暂挂](results/updated_vanda_scaling/git_sync_20261111/cells_held.csv)、[延期 512](results/updated_vanda_scaling/git_sync_20261111/cells_deferred_512.csv) 清单；均不能直接当提交计划。
 
@@ -33,13 +33,13 @@ CSV 中 `canonical_summary` 是跨账号匹配同一配置的唯一键。`assign
 | Serial CPU | n=1,p=1,T=1；无通信 | 45 | 45 | 0 |
 | 单独 OpenMP CPU | n=1,p=1,T=1/2/4/8/16/32；无通信 | 270 | 270 | 0 |
 | 单独 Kokkos OpenMP CPU | 同上，OpenMP 后端；无通信 | 270 | 270 | 0 |
-| 纯 MPI CPU 常规 | n=1/2/4/8，r=1/2/4/8/16/32，T=1；每布局两通信 | 2,160 | 1,962 | 198 |
-| MPI+OpenMP CPU 常规 | 同 n、r，T=1/2/4/8/16/32，rT≤32；每布局两通信 | 7,560 | 6,942 | 618 |
-| MPI+Kokkos OpenMP CPU 常规 | 与 MPI+OpenMP 同一套布局；每布局两通信 | 7,560 | 4,382 | 3,178 |
+| 纯 MPI CPU 常规 | n=1/2/4/8，r=1/2/4/8/16/32，T=1；每布局两通信 | 2,160 | 1,966 | 194 |
+| MPI+OpenMP CPU 常规 | 同 n、r，T=1/2/4/8/16/32，rT≤32；每布局两通信 | 7,560 | 6,966 | 594 |
+| MPI+Kokkos OpenMP CPU 常规 | 与 MPI+OpenMP 同一套布局；每布局两通信 | 7,560 | 4,916 | 2,644 |
 | 原 CPU 512 核端点 | 纯 MPI p512,T1；两混合方法各 p512,T1 和 p128,T4；每布局两通信 | 450 | 5 | 445 |
 | 后追加 CPU 512 核拆分 | 两混合方法各 T=2/8/16/32，p=512/T；每布局两通信 | 720 | 0 | 720 |
 | GPU 节点完整配对区块 | 下表，包含真实 GPU 计算及同机 CPU 对照 | 1,665 | 1,665 | 0 |
-| **固定图合计** | | **20,700** | **15,541** | **5,159** |
+| **固定图合计** | | **20,700** | **16,103** | **4,597** |
 
 两通信是 Allgatherv（参数 `allgather`）与 Halo。单独方法没有 MPI，不扩展通信维度。
 
@@ -65,14 +65,14 @@ CSV 中 `canonical_summary` 是跨账号匹配同一配置的唯一键。`assign
 | CPU 按核归一曲线 | 同 C 使用 weak_pC 图；Hybrid/Kokkos OpenMP 均 T4,p=C/4，C=4…512 的 2 次幂；两通信 | 96/96 | 复用 |
 | GPU 节点弱扩展 | n=p=1/2、两通信及同机消融/CPU 对照 | 138/138 | 复用；其中真实 GPU 36 项 |
 
-此表按本地可审阅摘要及独立完成标记统计。controlled 的六项状态为 `evidence_missing_verify_remote_first`，不把“未找到本地证据”写成“已经失败”或“从未提交”；核实远端已保存测量、校验和旧作业后再决定接手动作。这六项尚未分派给新队友，也不在固定图 5,159 缺项里。
+此表按本地可审阅摘要及独立完成标记统计。controlled 的六项状态为 `evidence_missing_verify_remote_first`，不把“未找到本地证据”写成“已经失败”或“从未提交”；核实远端已保存测量、校验和旧作业后再决定接手动作。这六项尚未分派给新队友，也不在固定图 4,597 缺项里。
 
 ## 4. 两账号当前负责什么
 
 | 账号 | 本轮登记与完成 | 自动监控当前动作 | 继续负责的固定图缺项 |
 |---|---|---|---:|
-| xtt_ella | 当前注册表 83 个资源组；保留一个失败组和一个 512 H 组 | `waiting_real_credits`；最近余额 16.138 CPUh、余量 16 | 5,159（含延期 512） |
-| hongxinran | 78 组、448/448 配置已完成；性能和免费校验均成功 | `no_eligible_unregistered_cells`；最近余额 77.677、余量 64 | 0；不会自动领取主账号任务 |
+| xtt_ella | 当前注册表 149 个资源组；保留两个失败组和一个 512 H 组 | `waiting_real_credits`；最近余额 16.097 CPUh、余量 16 | 4,597（含延期 512） |
+| hongxinran | 78 组、448/448 配置已完成；性能和免费校验均成功 | `no_eligible_unregistered_cells`；最近余额 1,257.712、余量 64 | 0；不会自动领取主账号任务 |
 
 两个监控每 60 秒检查，新增提交截止 Nov 12 23:59 SGT。PID 251391 / 155730 是本次观测值；接手时读实时状态，不仅看 PID。主账号当前只续非 512、最高 256 核；分担账号最高 128 核。余额包含预扣影响，以实时 `hpc project` 为准。
 
@@ -81,15 +81,19 @@ CSV 中 `canonical_summary` 是跨账号匹配同一配置的唯一键。`assign
 | xtt_ella / personal-xtt_ella | `/scratch/xtt_ella/DSA5208_PROJECT_3_20261107` | `results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261111_phase2_small_balance.json` |
 | hongxinran / personal-hongxinran | `/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111` | `results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261111_phase2.json` |
 
-[实际登记的 161 个资源组及作业 ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv) 与 [主队列快照](results/updated_vanda_scaling/git_sync_20261111/queue_xtt_ella.json)、[分担队列快照](results/updated_vanda_scaling/git_sync_20261111/queue_hongxinran.json) 分开列出“注册组”和“PBS 作业”。一个资源组的性能、免费校验是两个 job，不能重复当两组实验。
+[实际登记的 227 个资源组及作业 ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv) 与 [主队列快照](results/updated_vanda_scaling/git_sync_20261111/queue_xtt_ella.json)、[分担队列快照](results/updated_vanda_scaling/git_sync_20261111/queue_hongxinran.json) 分开列出“注册组”和“PBS 作业”。一个资源组的性能、免费校验是两个 job，不能重复当两组实验。
 
-**旧 H 不能直接释放。** 03:31 两边合计 78 个 H job：主账号 8、hongxinran 70。其中只有当前 512 组的性能 `1532794` 与依赖校验 `1532795` 对应上表 `held` 的 5 项；主账号另 6 个是已被成功补跑替代的旧性能/校验。hongxinran 的 70 个是此前延期的旧请求，可能与新计划或缺项重叠，不能称它们“70 个待领取实验”，也不能称为“全部完成”。继续保留暂挂；转交涉及相同目标时由原账号核对并取消/保持延期，禁止批量 qrls。`u` 是用户暂挂，`s` 是系统暂挂，`d` 是依赖暂挂；H 不会自动等同于 Q。
+**旧 H 不能直接释放。** 20:46 两边合计 78 个 H job：主账号 8、hongxinran 70。其中只有当前 512 组的性能 `1532794` 与依赖校验 `1532795` 对应上表 `held` 的 5 项；主账号另 6 个是已被成功补跑替代的旧性能/校验。hongxinran 的 70 个是此前延期的旧请求，可能与新计划或缺项重叠，不能称它们“70 个待领取实验”，也不能称为“全部完成”。继续保留暂挂；转交涉及相同目标时由原账号核对并取消/保持延期，禁止批量 qrls。`u` 是用户暂挂，`s` 是系统暂挂，`d` 是依赖暂挂；H 不会自动等同于 Q。
 
-唯一尚未补成功的常规失败组为 `1537511`：controlled n400000/d4，n4×32=128 核，Kokkos T=2/4/8/16/32 × 两通信，共 10 项。原 45 分钟、上限 96 CPUh，退出 -29，日志停在 MPI 分配信息采集、CPU 时间为零；先排查启动与部分输出，不据此缩短墙钟或认定算法很慢。
+尚未补成功的常规失败组之一为 `1537511`：controlled n400000/d4，n4×32=128 核，Kokkos T=2/4/8/16/32 × 两通信，共 10 项。原 45 分钟、上限 96 CPUh，退出 -29，日志停在 MPI 分配信息采集、CPU 时间为零；先排查启动与部分输出，不据此缩短墙钟或认定算法很慢。
+
+新增失败组 `1538617`：controlled n100000/d16，n4×4=16 核，Kokkos OpenMP 四项；45 分钟墙钟超限 -29，实际 46:27、CPU 时间 0。实际节点 CN-148/151/153/154。尚未定位原因，未盲目重投。这四项与原 128 核十项合计 14 项，不计完成。
+
+今晚新核对的 66 个资源组共 566 项，其中 65 组/562 项测量及独立校验成功并已同步本地；一组四项失败。主账号累计登记 149 组，分担账号仍为 78 组/448 项。hongxinran 的返还余额增加到 1,257.712，但现有计划已做完；没有自动领取主账号缺项，也没有在本轮状态核查中新增或转交任务。
 
 ## 5. 防重复接手流程（必须先做，再提交）
 
-当前两个账号**已登记配置交集为零、未来源计划交集为零**；全部 5,159 个固定图缺项都有明确归属。这个结论针对快照，不能代替未来转交。
+当前两个账号**已登记配置交集为零、未来源计划交集为零**；全部 4,597 个固定图缺项都有明确归属。这个结论针对快照，不能代替未来转交。
 
 1. 队友先读取本文件与完整 CSV，只拟定要接手的 `canonical_summary` 集合；不从历史 handover、旧宽计划或剩余 CSV 直接 qsub。已验证、R/Q、待检、H、延期和失败各按上文处理。
 2. 由原账号负责人协调暂停相关自动续投：在对应 `monitor_recovery_20261110/` 或 `monitor_assist_20261111/` **状态目录**创建 `STOP_AUTO_SUBMIT`，等待监控退出，并核对是否已有正在执行的提交。它只停止后续提交，不取消 PBS 作业。不要在队友目录创建一个 STOP 就以为停掉了原账号。

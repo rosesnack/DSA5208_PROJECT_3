@@ -1,0 +1,29 @@
+{
+  "observed_at": "2026-11-11T05:23:47.133713+08:00",
+  "submitted": true,
+  "balance": 4602.098,
+  "balance_source": "hpc_project",
+  "prior_pending_reservations": 256.0,
+  "margin": 16.0,
+  "deferred_user_held_jobs": [
+    "1532794.stdct-mgmt-02",
+    "1537507.stdct-mgmt-02",
+    "1537509.stdct-mgmt-02",
+    "1537572.stdct-mgmt-02"
+  ],
+  "new_reservations": 10.666666666666666,
+  "uncommitted_after_margin": 4319.431333333333,
+  "groups": [
+    {
+      "graph": "grid_uniform_n400000_d4",
+      "nodes": 1,
+      "cores": 32,
+      "cells": 10,
+      "walltime": "00:20:00",
+      "reservation": 10.666666666666666,
+      "performance_job": "1538542.stdct-mgmt-02",
+      "validation_job": "1538543.stdct-mgmt-02",
+      "dependency": "1530741.stdct-mgmt-02"
+    }
+  ]
+}

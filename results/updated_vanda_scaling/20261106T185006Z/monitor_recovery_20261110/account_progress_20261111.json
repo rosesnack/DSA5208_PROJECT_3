@@ -1,661 +1,16 @@
 {
-  "observed_at": "2026-11-11T02:37:06.623921+08:00",
+  "observed_at": "2026-11-11T20:34:32.446404+08:00",
   "user": "xtt_ella",
   "new_groups": [
     {
-      "graph": "grid_controlled_n100000_d16",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "10",
-      "walltime": "01:00:00",
-      "performance_job": "1537463.stdct-mgmt-02",
-      "validation_job": "1537464.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n8_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n100000_d4",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "10",
-      "walltime": "01:00:00",
-      "performance_job": "1537465.stdct-mgmt-02",
-      "validation_job": "1537466.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n8_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n200000_d16",
-      "nodes": "2",
-      "cores": "64",
-      "cells": "10",
-      "walltime": "00:30:00",
-      "performance_job": "1537467.stdct-mgmt-02",
-      "validation_job": "1537468.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d16_n2_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n200000_d16",
-      "nodes": "4",
-      "cores": "128",
-      "cells": "10",
-      "walltime": "00:45:00",
-      "performance_job": "1537469.stdct-mgmt-02",
-      "validation_job": "1537470.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d16_n4_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n200000_d16",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "26",
-      "walltime": "01:00:00",
-      "performance_job": "1537471.stdct-mgmt-02",
-      "validation_job": "1537472.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d16_n8_c32.json",
-      "validated_cells": 26,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n200000_d8",
-      "nodes": "2",
-      "cores": "64",
-      "cells": "10",
-      "walltime": "00:30:00",
-      "performance_job": "1537473.stdct-mgmt-02",
-      "validation_job": "1537474.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d8_n2_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n200000_d8",
-      "nodes": "4",
-      "cores": "128",
-      "cells": "10",
-      "walltime": "00:45:00",
-      "performance_job": "1537489.stdct-mgmt-02",
-      "validation_job": "1537490.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d8_n4_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n200000_d8",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "26",
-      "walltime": "01:00:00",
-      "performance_job": "1537491.stdct-mgmt-02",
-      "validation_job": "1537492.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d8_n8_c32.json",
-      "validated_cells": 26,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n400000_d16",
-      "nodes": "2",
-      "cores": "64",
-      "cells": "10",
-      "walltime": "00:30:00",
-      "performance_job": "1537493.stdct-mgmt-02",
-      "validation_job": "1537494.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d16_n2_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n400000_d16",
-      "nodes": "4",
-      "cores": "128",
-      "cells": "10",
-      "walltime": "00:45:00",
-      "performance_job": "1537495.stdct-mgmt-02",
-      "validation_job": "1537496.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d16_n4_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n400000_d16",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "26",
-      "walltime": "01:00:00",
-      "performance_job": "1537497.stdct-mgmt-02",
-      "validation_job": "1537498.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d16_n8_c32.json",
-      "validated_cells": 26,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n400000_d4",
-      "nodes": "1",
-      "cores": "32",
-      "cells": "10",
-      "walltime": "00:20:00",
-      "performance_job": "1538193.stdct-mgmt-02",
-      "validation_job": "1538194.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d4_n1_c32_retry_1537507.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n400000_d4",
-      "nodes": "2",
-      "cores": "64",
-      "cells": "10",
-      "walltime": "00:30:00",
-      "performance_job": "1538195.stdct-mgmt-02",
-      "validation_job": "1538196.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d4_n2_c32_retry_1537509.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n400000_d4",
-      "nodes": "4",
-      "cores": "128",
-      "cells": "10",
-      "walltime": "00:45:00",
-      "performance_job": "1537511.stdct-mgmt-02",
-      "validation_job": "1537512.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d4_n4_c32.json",
-      "validated_cells": 0,
-      "performance_state": "F",
-      "performance_exit": "-29",
-      "validation_state": "F",
-      "validation_exit": null
-    },
-    {
-      "graph": "grid_controlled_n400000_d4",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "26",
-      "walltime": "01:00:00",
-      "performance_job": "1537513.stdct-mgmt-02",
-      "validation_job": "1537514.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d4_n8_c32.json",
-      "validated_cells": 26,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n400000_d8",
-      "nodes": "1",
-      "cores": "32",
-      "cells": "10",
-      "walltime": "00:20:00",
-      "performance_job": "1537570.stdct-mgmt-02",
-      "validation_job": "1537571.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d8_n1_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n400000_d8",
-      "nodes": "2",
-      "cores": "64",
-      "cells": "10",
-      "walltime": "00:30:00",
-      "performance_job": "1538197.stdct-mgmt-02",
-      "validation_job": "1538198.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d8_n2_c32_retry_1537572.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n400000_d8",
-      "nodes": "4",
-      "cores": "128",
-      "cells": "10",
-      "walltime": "00:45:00",
-      "performance_job": "1537604.stdct-mgmt-02",
-      "validation_job": "1537605.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d8_n4_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n400000_d8",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "26",
-      "walltime": "01:00:00",
-      "performance_job": "1537619.stdct-mgmt-02",
-      "validation_job": "1537620.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d8_n8_c32.json",
-      "validated_cells": 26,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n50000_d16",
-      "nodes": "2",
-      "cores": "64",
-      "cells": "10",
-      "walltime": "00:30:00",
-      "performance_job": "1538265.stdct-mgmt-02",
-      "validation_job": "1538266.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n50000_d16_n2_c32_retry_1537630.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n50000_d16",
-      "nodes": "4",
-      "cores": "128",
-      "cells": "10",
-      "walltime": "00:45:00",
-      "performance_job": "1537669.stdct-mgmt-02",
-      "validation_job": "1537670.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n50000_d16_n4_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n50000_d16",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "10",
-      "walltime": "01:00:00",
-      "performance_job": "1537686.stdct-mgmt-02",
-      "validation_job": "1537687.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n50000_d16_n8_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n50000_d8",
-      "nodes": "2",
-      "cores": "64",
-      "cells": "10",
-      "walltime": "00:30:00",
-      "performance_job": "1537703.stdct-mgmt-02",
-      "validation_job": "1537704.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n50000_d8_n2_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n50000_d8",
-      "nodes": "4",
-      "cores": "128",
-      "cells": "10",
-      "walltime": "00:45:00",
-      "performance_job": "1537738.stdct-mgmt-02",
-      "validation_job": "1537739.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n50000_d8_n4_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_controlled_n50000_d8",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "10",
-      "walltime": "01:00:00",
-      "performance_job": "1537740.stdct-mgmt-02",
-      "validation_job": "1537741.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n50000_d8_n8_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_hub_n100000_d16",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "10",
-      "walltime": "01:00:00",
-      "performance_job": "1537790.stdct-mgmt-02",
-      "validation_job": "1537791.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n100000_d16_n8_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_hub_n100000_d4",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "10",
-      "walltime": "01:00:00",
-      "performance_job": "1537792.stdct-mgmt-02",
-      "validation_job": "1537793.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n100000_d4_n8_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_hub_n100000_d8",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "10",
-      "walltime": "01:00:00",
-      "performance_job": "1537794.stdct-mgmt-02",
-      "validation_job": "1537795.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n100000_d8_n8_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_hub_n200000_d16",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "10",
-      "walltime": "01:00:00",
-      "performance_job": "1537826.stdct-mgmt-02",
-      "validation_job": "1537827.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n200000_d16_n8_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_hub_n200000_d4",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "10",
-      "walltime": "01:00:00",
-      "performance_job": "1537828.stdct-mgmt-02",
-      "validation_job": "1537829.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n200000_d4_n8_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_hub_n200000_d8",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "10",
-      "walltime": "01:00:00",
-      "performance_job": "1537830.stdct-mgmt-02",
-      "validation_job": "1537831.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n200000_d8_n8_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_hub_n400000_d16",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "26",
-      "walltime": "01:00:00",
-      "performance_job": "1537881.stdct-mgmt-02",
-      "validation_job": "1537882.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d16_n8_c32.json",
-      "validated_cells": 26,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_hub_n400000_d4",
-      "nodes": "4",
-      "cores": "128",
-      "cells": "10",
-      "walltime": "00:45:00",
-      "performance_job": "1537883.stdct-mgmt-02",
-      "validation_job": "1537884.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d4_n4_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_hub_n400000_d4",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "26",
-      "walltime": "01:00:00",
-      "performance_job": "1537885.stdct-mgmt-02",
-      "validation_job": "1537886.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d4_n8_c32.json",
-      "validated_cells": 26,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_hub_n400000_d8",
-      "nodes": "4",
-      "cores": "128",
-      "cells": "10",
-      "walltime": "00:45:00",
-      "performance_job": "1537929.stdct-mgmt-02",
-      "validation_job": "1537930.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d8_n4_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_hub_n400000_d8",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "26",
-      "walltime": "01:00:00",
-      "performance_job": "1537931.stdct-mgmt-02",
-      "validation_job": "1537932.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d8_n8_c32.json",
-      "validated_cells": 26,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_hub_n50000_d16",
-      "nodes": "4",
-      "cores": "128",
-      "cells": "10",
-      "walltime": "00:45:00",
-      "performance_job": "1537981.stdct-mgmt-02",
-      "validation_job": "1537982.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n50000_d16_n4_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_hub_n50000_d16",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "10",
-      "walltime": "01:00:00",
-      "performance_job": "1537983.stdct-mgmt-02",
-      "validation_job": "1537984.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n50000_d16_n8_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_hub_n50000_d4",
-      "nodes": "4",
-      "cores": "128",
-      "cells": "10",
-      "walltime": "00:45:00",
-      "performance_job": "1537985.stdct-mgmt-02",
-      "validation_job": "1537986.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n50000_d4_n4_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_hub_n50000_d4",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "10",
-      "walltime": "01:00:00",
-      "performance_job": "1538006.stdct-mgmt-02",
-      "validation_job": "1538007.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n50000_d4_n8_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_hub_n50000_d8",
-      "nodes": "4",
-      "cores": "128",
-      "cells": "10",
-      "walltime": "00:45:00",
-      "performance_job": "1538008.stdct-mgmt-02",
-      "validation_job": "1538009.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n50000_d8_n4_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_hub_n50000_d8",
-      "nodes": "8",
-      "cores": "256",
-      "cells": "10",
-      "walltime": "01:00:00",
-      "performance_job": "1538020.stdct-mgmt-02",
-      "validation_job": "1538021.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n50000_d8_n8_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
       "graph": "grid_uniform_n100000_d16",
-      "nodes": "2",
-      "cores": "64",
+      "nodes": "8",
+      "cores": "256",
       "cells": "10",
-      "walltime": "00:30:00",
-      "performance_job": "1538022.stdct-mgmt-02",
-      "validation_job": "1538023.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n100000_d16_n2_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_uniform_n100000_d16",
-      "nodes": "4",
-      "cores": "128",
-      "cells": "10",
-      "walltime": "00:45:00",
-      "performance_job": "1538024.stdct-mgmt-02",
-      "validation_job": "1538025.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n100000_d16_n4_c32.json",
+      "walltime": "01:00:00",
+      "performance_job": "1538490.stdct-mgmt-02",
+      "validation_job": "1538491.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n100000_d16_n8_c32.json",
       "validated_cells": 10,
       "performance_state": "F",
       "performance_exit": 0,
@@ -664,28 +19,13 @@
     },
     {
       "graph": "grid_uniform_n100000_d4",
-      "nodes": "2",
-      "cores": "64",
+      "nodes": "8",
+      "cores": "256",
       "cells": "10",
-      "walltime": "00:30:00",
-      "performance_job": "1538049.stdct-mgmt-02",
-      "validation_job": "1538050.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n100000_d4_n2_c32.json",
-      "validated_cells": 10,
-      "performance_state": "F",
-      "performance_exit": 0,
-      "validation_state": "F",
-      "validation_exit": 0
-    },
-    {
-      "graph": "grid_uniform_n100000_d4",
-      "nodes": "4",
-      "cores": "128",
-      "cells": "10",
-      "walltime": "00:45:00",
-      "performance_job": "1538051.stdct-mgmt-02",
-      "validation_job": "1538053.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n100000_d4_n4_c32.json",
+      "walltime": "01:00:00",
+      "performance_job": "1538492.stdct-mgmt-02",
+      "validation_job": "1538493.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n100000_d4_n8_c32.json",
       "validated_cells": 10,
       "performance_state": "F",
       "performance_exit": 0,
@@ -694,13 +34,28 @@
     },
     {
       "graph": "grid_uniform_n100000_d8",
-      "nodes": "2",
-      "cores": "64",
+      "nodes": "4",
+      "cores": "128",
       "cells": "10",
-      "walltime": "00:30:00",
-      "performance_job": "1538077.stdct-mgmt-02",
-      "validation_job": "1538078.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n100000_d8_n2_c32.json",
+      "walltime": "00:45:00",
+      "performance_job": "1538494.stdct-mgmt-02",
+      "validation_job": "1538495.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n100000_d8_n4_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n100000_d8",
+      "nodes": "8",
+      "cores": "256",
+      "cells": "10",
+      "walltime": "01:00:00",
+      "performance_job": "1538496.stdct-mgmt-02",
+      "validation_job": "1538497.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n100000_d8_n8_c32.json",
       "validated_cells": 10,
       "performance_state": "F",
       "performance_exit": 0,
@@ -709,13 +64,43 @@
     },
     {
       "graph": "grid_uniform_n200000_d16",
-      "nodes": "1",
-      "cores": "32",
+      "nodes": "2",
+      "cores": "64",
       "cells": "10",
-      "walltime": "00:20:00",
-      "performance_job": "1538079.stdct-mgmt-02",
-      "validation_job": "1538080.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d16_n1_c32.json",
+      "walltime": "00:30:00",
+      "performance_job": "1538498.stdct-mgmt-02",
+      "validation_job": "1538499.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d16_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n200000_d16",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "10",
+      "walltime": "00:45:00",
+      "performance_job": "1538500.stdct-mgmt-02",
+      "validation_job": "1538501.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d16_n4_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n200000_d16",
+      "nodes": "8",
+      "cores": "256",
+      "cells": "10",
+      "walltime": "01:00:00",
+      "performance_job": "1538507.stdct-mgmt-02",
+      "validation_job": "1538508.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d16_n8_c32.json",
       "validated_cells": 10,
       "performance_state": "F",
       "performance_exit": 0,
@@ -724,13 +109,13 @@
     },
     {
       "graph": "grid_uniform_n200000_d4",
-      "nodes": "1",
-      "cores": "32",
+      "nodes": "2",
+      "cores": "64",
       "cells": "10",
-      "walltime": "00:20:00",
-      "performance_job": "1538081.stdct-mgmt-02",
-      "validation_job": "1538082.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d4_n1_c32.json",
+      "walltime": "00:30:00",
+      "performance_job": "1538509.stdct-mgmt-02",
+      "validation_job": "1538510.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d4_n2_c32.json",
       "validated_cells": 10,
       "performance_state": "F",
       "performance_exit": 0,
@@ -738,15 +123,30 @@
       "validation_exit": 0
     },
     {
-      "graph": "grid_controlled_n100000_d4",
-      "nodes": "2",
-      "cores": "4",
-      "cells": "2",
-      "walltime": "00:30:00",
-      "performance_job": "1538095.stdct-mgmt-02",
-      "validation_job": "1538096.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n2_c2.json",
-      "validated_cells": 2,
+      "graph": "grid_uniform_n200000_d4",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "10",
+      "walltime": "00:45:00",
+      "performance_job": "1538511.stdct-mgmt-02",
+      "validation_job": "1538512.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d4_n4_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n200000_d4",
+      "nodes": "8",
+      "cores": "256",
+      "cells": "10",
+      "walltime": "01:00:00",
+      "performance_job": "1538514.stdct-mgmt-02",
+      "validation_job": "1538515.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d4_n8_c32.json",
+      "validated_cells": 10,
       "performance_state": "F",
       "performance_exit": 0,
       "validation_state": "F",
@@ -754,14 +154,479 @@
     },
     {
       "graph": "grid_uniform_n200000_d8",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1538516.stdct-mgmt-02",
+      "validation_job": "1538517.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d8_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n200000_d8",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "10",
+      "walltime": "00:45:00",
+      "performance_job": "1538518.stdct-mgmt-02",
+      "validation_job": "1538519.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d8_n4_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n200000_d8",
+      "nodes": "8",
+      "cores": "256",
+      "cells": "10",
+      "walltime": "01:00:00",
+      "performance_job": "1538520.stdct-mgmt-02",
+      "validation_job": "1538521.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d8_n8_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n400000_d16",
       "nodes": "1",
       "cores": "32",
       "cells": "10",
       "walltime": "00:20:00",
-      "performance_job": "1538288.stdct-mgmt-02",
-      "validation_job": "1538289.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d8_n1_c32.json",
+      "performance_job": "1538532.stdct-mgmt-02",
+      "validation_job": "1538533.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d16_n1_c32.json",
       "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n400000_d16",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1538534.stdct-mgmt-02",
+      "validation_job": "1538535.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d16_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n400000_d16",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "10",
+      "walltime": "00:45:00",
+      "performance_job": "1538536.stdct-mgmt-02",
+      "validation_job": "1538537.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d16_n4_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n400000_d16",
+      "nodes": "8",
+      "cores": "256",
+      "cells": "10",
+      "walltime": "01:00:00",
+      "performance_job": "1538538.stdct-mgmt-02",
+      "validation_job": "1538539.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d16_n8_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n400000_d4",
+      "nodes": "1",
+      "cores": "32",
+      "cells": "10",
+      "walltime": "00:20:00",
+      "performance_job": "1538542.stdct-mgmt-02",
+      "validation_job": "1538543.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d4_n1_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n400000_d4",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1538549.stdct-mgmt-02",
+      "validation_job": "1538550.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d4_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n400000_d4",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "10",
+      "walltime": "00:45:00",
+      "performance_job": "1538551.stdct-mgmt-02",
+      "validation_job": "1538552.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d4_n4_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n400000_d4",
+      "nodes": "8",
+      "cores": "256",
+      "cells": "10",
+      "walltime": "01:00:00",
+      "performance_job": "1538553.stdct-mgmt-02",
+      "validation_job": "1538554.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d4_n8_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n400000_d8",
+      "nodes": "1",
+      "cores": "32",
+      "cells": "10",
+      "walltime": "00:20:00",
+      "performance_job": "1538555.stdct-mgmt-02",
+      "validation_job": "1538556.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d8_n1_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n400000_d8",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1538557.stdct-mgmt-02",
+      "validation_job": "1538558.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d8_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n400000_d8",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "10",
+      "walltime": "00:45:00",
+      "performance_job": "1538559.stdct-mgmt-02",
+      "validation_job": "1538560.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d8_n4_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n400000_d8",
+      "nodes": "8",
+      "cores": "256",
+      "cells": "10",
+      "walltime": "01:00:00",
+      "performance_job": "1538561.stdct-mgmt-02",
+      "validation_job": "1538562.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d8_n8_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n50000_d16",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1538563.stdct-mgmt-02",
+      "validation_job": "1538564.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d16_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n50000_d16",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "10",
+      "walltime": "00:45:00",
+      "performance_job": "1538565.stdct-mgmt-02",
+      "validation_job": "1538566.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d16_n4_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n50000_d16",
+      "nodes": "8",
+      "cores": "256",
+      "cells": "10",
+      "walltime": "01:00:00",
+      "performance_job": "1538567.stdct-mgmt-02",
+      "validation_job": "1538568.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d16_n8_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n50000_d4",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1538569.stdct-mgmt-02",
+      "validation_job": "1538570.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d4_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n50000_d4",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "10",
+      "walltime": "00:45:00",
+      "performance_job": "1538571.stdct-mgmt-02",
+      "validation_job": "1538572.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d4_n4_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n50000_d4",
+      "nodes": "8",
+      "cores": "256",
+      "cells": "10",
+      "walltime": "01:00:00",
+      "performance_job": "1538573.stdct-mgmt-02",
+      "validation_job": "1538574.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d4_n8_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n50000_d8",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1538576.stdct-mgmt-02",
+      "validation_job": "1538577.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d8_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n50000_d8",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "10",
+      "walltime": "00:45:00",
+      "performance_job": "1538578.stdct-mgmt-02",
+      "validation_job": "1538579.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d8_n4_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_uniform_n50000_d8",
+      "nodes": "8",
+      "cores": "256",
+      "cells": "10",
+      "walltime": "01:00:00",
+      "performance_job": "1538580.stdct-mgmt-02",
+      "validation_job": "1538581.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d8_n8_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "synthetic_controlled",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1538582.stdct-mgmt-02",
+      "validation_job": "1538583.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/synthetic_controlled_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "synthetic_controlled",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "10",
+      "walltime": "00:45:00",
+      "performance_job": "1538584.stdct-mgmt-02",
+      "validation_job": "1538585.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/synthetic_controlled_n4_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "synthetic_controlled",
+      "nodes": "8",
+      "cores": "256",
+      "cells": "10",
+      "walltime": "01:00:00",
+      "performance_job": "1538586.stdct-mgmt-02",
+      "validation_job": "1538587.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/synthetic_controlled_n8_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "synthetic_hub",
+      "nodes": "2",
+      "cores": "64",
+      "cells": "10",
+      "walltime": "00:30:00",
+      "performance_job": "1538601.stdct-mgmt-02",
+      "validation_job": "1538602.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/synthetic_hub_n2_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "synthetic_hub",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "10",
+      "walltime": "00:45:00",
+      "performance_job": "1538603.stdct-mgmt-02",
+      "validation_job": "1538604.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/synthetic_hub_n4_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "synthetic_hub",
+      "nodes": "8",
+      "cores": "256",
+      "cells": "10",
+      "walltime": "01:00:00",
+      "performance_job": "1538605.stdct-mgmt-02",
+      "validation_job": "1538606.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/synthetic_hub_n8_c32.json",
+      "validated_cells": 10,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "strong_hub",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "26",
+      "walltime": "04:00:00",
+      "performance_job": "1538607.stdct-mgmt-02",
+      "validation_job": "1538608.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_hub_n4_c32.json",
+      "validated_cells": 26,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "strong_uniform",
+      "nodes": "4",
+      "cores": "128",
+      "cells": "26",
+      "walltime": "04:00:00",
+      "performance_job": "1538609.stdct-mgmt-02",
+      "validation_job": "1538610.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_uniform_n4_c32.json",
+      "validated_cells": 26,
       "performance_state": "F",
       "performance_exit": 0,
       "validation_state": "F",
@@ -770,27 +635,42 @@
     {
       "graph": "grid_controlled_n100000_d16",
       "nodes": "2",
-      "cores": "8",
-      "cells": "4",
+      "cores": "16",
+      "cells": "6",
       "walltime": "00:30:00",
-      "performance_job": "1538290.stdct-mgmt-02",
-      "validation_job": "1538291.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n2_c4.json",
-      "validated_cells": 4,
+      "performance_job": "1538611.stdct-mgmt-02",
+      "validation_job": "1538612.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n2_c8.json",
+      "validated_cells": 6,
       "performance_state": "F",
       "performance_exit": 0,
       "validation_state": "F",
       "validation_exit": 0
     },
     {
-      "graph": "grid_controlled_n200000_d16",
-      "nodes": "1",
-      "cores": "2",
+      "graph": "grid_controlled_n100000_d16",
+      "nodes": "2",
+      "cores": "32",
+      "cells": "8",
+      "walltime": "00:30:00",
+      "performance_job": "1538613.stdct-mgmt-02",
+      "validation_job": "1538614.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n2_c16.json",
+      "validated_cells": 8,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d16",
+      "nodes": "4",
+      "cores": "8",
       "cells": "2",
-      "walltime": "00:20:00",
-      "performance_job": "1538292.stdct-mgmt-02",
-      "validation_job": "1538293.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d16_n1_c2.json",
+      "walltime": "00:45:00",
+      "performance_job": "1538615.stdct-mgmt-02",
+      "validation_job": "1538616.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n4_c2.json",
       "validated_cells": 2,
       "performance_state": "F",
       "performance_exit": 0,
@@ -798,14 +678,314 @@
       "validation_exit": 0
     },
     {
-      "graph": "grid_controlled_n200000_d8",
+      "graph": "grid_controlled_n100000_d16",
+      "nodes": "4",
+      "cores": "16",
+      "cells": "4",
+      "walltime": "00:45:00",
+      "performance_job": "1538617.stdct-mgmt-02",
+      "validation_job": "1538618.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n4_c4.json",
+      "validated_cells": 0,
+      "performance_state": "F",
+      "performance_exit": "-29",
+      "validation_state": "F",
+      "validation_exit": null
+    },
+    {
+      "graph": "grid_controlled_n100000_d16",
+      "nodes": "4",
+      "cores": "32",
+      "cells": "6",
+      "walltime": "00:45:00",
+      "performance_job": "1538619.stdct-mgmt-02",
+      "validation_job": "1538620.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n4_c8.json",
+      "validated_cells": 6,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d16",
+      "nodes": "4",
+      "cores": "64",
+      "cells": "8",
+      "walltime": "00:45:00",
+      "performance_job": "1538621.stdct-mgmt-02",
+      "validation_job": "1538622.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n4_c16.json",
+      "validated_cells": 8,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d16",
+      "nodes": "8",
+      "cores": "16",
+      "cells": "2",
+      "walltime": "01:00:00",
+      "performance_job": "1538623.stdct-mgmt-02",
+      "validation_job": "1538624.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n8_c2.json",
+      "validated_cells": 2,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d16",
+      "nodes": "8",
+      "cores": "32",
+      "cells": "4",
+      "walltime": "01:00:00",
+      "performance_job": "1538625.stdct-mgmt-02",
+      "validation_job": "1538626.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n8_c4.json",
+      "validated_cells": 4,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d16",
+      "nodes": "8",
+      "cores": "64",
+      "cells": "6",
+      "walltime": "01:00:00",
+      "performance_job": "1538627.stdct-mgmt-02",
+      "validation_job": "1538628.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n8_c8.json",
+      "validated_cells": 6,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d16",
+      "nodes": "8",
+      "cores": "128",
+      "cells": "8",
+      "walltime": "01:00:00",
+      "performance_job": "1538629.stdct-mgmt-02",
+      "validation_job": "1538630.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n8_c16.json",
+      "validated_cells": 8,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d4",
+      "nodes": "2",
+      "cores": "8",
+      "cells": "4",
+      "walltime": "00:30:00",
+      "performance_job": "1538631.stdct-mgmt-02",
+      "validation_job": "1538632.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n2_c4.json",
+      "validated_cells": 4,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d4",
+      "nodes": "2",
+      "cores": "16",
+      "cells": "6",
+      "walltime": "00:30:00",
+      "performance_job": "1538633.stdct-mgmt-02",
+      "validation_job": "1538634.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n2_c8.json",
+      "validated_cells": 6,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d4",
+      "nodes": "2",
+      "cores": "32",
+      "cells": "8",
+      "walltime": "00:30:00",
+      "performance_job": "1538635.stdct-mgmt-02",
+      "validation_job": "1538636.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n2_c16.json",
+      "validated_cells": 8,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d4",
+      "nodes": "4",
+      "cores": "8",
+      "cells": "2",
+      "walltime": "00:45:00",
+      "performance_job": "1538637.stdct-mgmt-02",
+      "validation_job": "1538638.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n4_c2.json",
+      "validated_cells": 2,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d4",
+      "nodes": "4",
+      "cores": "16",
+      "cells": "4",
+      "walltime": "00:45:00",
+      "performance_job": "1538639.stdct-mgmt-02",
+      "validation_job": "1538640.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n4_c4.json",
+      "validated_cells": 4,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d4",
+      "nodes": "4",
+      "cores": "32",
+      "cells": "6",
+      "walltime": "00:45:00",
+      "performance_job": "1538641.stdct-mgmt-02",
+      "validation_job": "1538642.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n4_c8.json",
+      "validated_cells": 6,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d4",
+      "nodes": "4",
+      "cores": "64",
+      "cells": "8",
+      "walltime": "00:45:00",
+      "performance_job": "1538643.stdct-mgmt-02",
+      "validation_job": "1538644.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n4_c16.json",
+      "validated_cells": 8,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d4",
+      "nodes": "8",
+      "cores": "16",
+      "cells": "2",
+      "walltime": "01:00:00",
+      "performance_job": "1538645.stdct-mgmt-02",
+      "validation_job": "1538646.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n8_c2.json",
+      "validated_cells": 2,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d4",
+      "nodes": "8",
+      "cores": "32",
+      "cells": "4",
+      "walltime": "01:00:00",
+      "performance_job": "1538647.stdct-mgmt-02",
+      "validation_job": "1538648.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n8_c4.json",
+      "validated_cells": 4,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d4",
+      "nodes": "8",
+      "cores": "64",
+      "cells": "6",
+      "walltime": "01:00:00",
+      "performance_job": "1538649.stdct-mgmt-02",
+      "validation_job": "1538650.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n8_c8.json",
+      "validated_cells": 6,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d8",
+      "nodes": "2",
+      "cores": "4",
+      "cells": "2",
+      "walltime": "00:30:00",
+      "performance_job": "1538651.stdct-mgmt-02",
+      "validation_job": "1538652.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d8_n2_c2.json",
+      "validated_cells": 2,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d8",
+      "nodes": "2",
+      "cores": "8",
+      "cells": "4",
+      "walltime": "00:30:00",
+      "performance_job": "1538653.stdct-mgmt-02",
+      "validation_job": "1538654.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d8_n2_c4.json",
+      "validated_cells": 4,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n100000_d8",
+      "nodes": "4",
+      "cores": "8",
+      "cells": "2",
+      "walltime": "00:45:00",
+      "performance_job": "1538655.stdct-mgmt-02",
+      "validation_job": "1538656.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d8_n4_c2.json",
+      "validated_cells": 2,
+      "performance_state": "F",
+      "performance_exit": 0,
+      "validation_state": "F",
+      "validation_exit": 0
+    },
+    {
+      "graph": "grid_controlled_n400000_d16",
       "nodes": "1",
       "cores": "2",
       "cells": "2",
       "walltime": "00:20:00",
-      "performance_job": "1538294.stdct-mgmt-02",
-      "validation_job": "1538295.stdct-mgmt-02",
-      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d8_n1_c2.json",
+      "performance_job": "1538657.stdct-mgmt-02",
+      "validation_job": "1538658.stdct-mgmt-02",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d16_n1_c2.json",
       "validated_cells": 2,
       "performance_state": "F",
       "performance_exit": 0,
@@ -4555,6 +4735,2899 @@
         "ngpus": 0,
         "vmem": "157924kb",
         "walltime": "00:00:08"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538490.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:18 on (CN-135[0]:ncpus=32:mem=222gb)+(CN-136[0]:ncpus=32:mem=222gb)+(CN-137[0]:ncpus=32:mem=222gb)+(CN-138[0]:ncpus=32:mem=222gb)+(CN-139[0]:ncpus=32:mem=222gb)+(CN-140[0]:ncpus=32:mem=222gb)+(CN-141[1]:ncpus=32:mem=222gb)+(... and finished",
+      "resources_used": {
+        "cpupercent": 1693,
+        "cput": "00:23:11",
+        "mem": "466648kb",
+        "ncpus": 256,
+        "ngpus": 0,
+        "vmem": "1978800kb",
+        "walltime": "00:00:58"
+      },
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538491.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:19 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 165,
+        "cput": "00:00:40",
+        "mem": "78032kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "254744kb",
+        "walltime": "00:00:21"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538492.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:18 on (GN-A40-050[1]:ncpus=32:mem=222gb)+(GN-A40-051[1]:ncpus=32:mem=222gb)+(GN-A40-052[1]:ncpus=32:mem=222gb)+(GN-A40-053[1]:ncpus=32:mem=222gb)+(GN-A40-054[1]:ncpus=32:mem=222gb)+(GN-A40-055[1]:ncpus=32:mem=222gb)+(GN-A40-... and finished",
+      "resources_used": {
+        "cpupercent": 642,
+        "cput": "00:16:01",
+        "mem": "289292kb",
+        "ncpus": 256,
+        "ngpus": 0,
+        "vmem": "273780kb",
+        "walltime": "00:06:57"
+      },
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538493.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:26 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 150,
+        "cput": "00:00:25",
+        "mem": "120200kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "297000kb",
+        "walltime": "00:00:15"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538494.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:18 on (CN-137[1]:ncpus=32:mem=222gb)+(CN-139[1]:ncpus=32:mem=222gb)+(CN-140[1]:ncpus=32:mem=222gb)+(CN-146[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 545,
+        "cput": "00:08:36",
+        "mem": "243152kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "4052764kb",
+        "walltime": "00:00:55"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538495.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:19 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 175,
+        "cput": "00:00:27",
+        "mem": "121976kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "298792kb",
+        "walltime": "00:00:16"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538496.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:19 on (CN-135[0]:ncpus=32:mem=222gb)+(CN-136[0]:ncpus=32:mem=222gb)+(CN-137[0]:ncpus=32:mem=222gb)+(CN-138[0]:ncpus=32:mem=222gb)+(CN-139[0]:ncpus=32:mem=222gb)+(CN-140[0]:ncpus=32:mem=222gb)+(CN-141[1]:ncpus=32:mem=222gb)+(... and finished",
+      "resources_used": {
+        "cpupercent": 4054,
+        "cput": "00:24:08",
+        "mem": "392380kb",
+        "ncpus": 256,
+        "ngpus": 0,
+        "vmem": "2995284kb",
+        "walltime": "00:00:51"
+      },
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538497.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:20 on (CN-161[0]:mem=76241mb:ncpus=2+CN-161[1]:mem=54831mb:ncpus=2) and finished",
+      "resources_used": {
+        "cpupercent": 187,
+        "cput": "00:00:42",
+        "mem": "121952kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "298792kb",
+        "walltime": "00:00:24"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538498.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:18 on (CN-051[0]:ncpus=32:mem=222gb)+(CN-053[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 326,
+        "cput": "00:06:20",
+        "mem": "164820kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "4103932kb",
+        "walltime": "00:00:56"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-051+1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-053"
+      }
+    },
+    "1538499.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:19 on (CN-161[0]:mem=76241mb:ncpus=2+CN-161[1]:mem=54831mb:ncpus=2) and finished",
+      "resources_used": {
+        "cpupercent": 187,
+        "cput": "00:02:19",
+        "mem": "219672kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "396560kb",
+        "walltime": "00:01:12"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538500.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:19 on (CN-137[1]:ncpus=32:mem=222gb)+(CN-139[1]:ncpus=32:mem=222gb)+(CN-140[1]:ncpus=32:mem=222gb)+(CN-146[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 670,
+        "cput": "00:12:23",
+        "mem": "226608kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "2895220kb",
+        "walltime": "00:00:55"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538501.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:20 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 185,
+        "cput": "00:01:34",
+        "mem": "219672kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "396560kb",
+        "walltime": "00:00:49"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538507.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:20 on (CN-135[0]:ncpus=32:mem=222gb)+(CN-136[0]:ncpus=32:mem=222gb)+(CN-137[0]:ncpus=32:mem=222gb)+(CN-138[0]:ncpus=32:mem=222gb)+(CN-139[0]:ncpus=32:mem=222gb)+(CN-140[0]:ncpus=32:mem=222gb)+(CN-141[1]:ncpus=32:mem=222gb)+(... and finished",
+      "resources_used": {
+        "cpupercent": 2060,
+        "cput": "00:28:42",
+        "mem": "509412kb",
+        "ncpus": 256,
+        "ngpus": 0,
+        "vmem": "1974888kb",
+        "walltime": "00:00:58"
+      },
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538508.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:21 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 111,
+        "cput": "00:01:35",
+        "mem": "219688kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "396560kb",
+        "walltime": "00:00:49"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538509.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:20 on (CN-051[0]:ncpus=32:mem=222gb)+(CN-053[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 586,
+        "cput": "00:06:16",
+        "mem": "61176kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "2915004kb",
+        "walltime": "00:00:47"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-051+1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-053"
+      }
+    },
+    "1538510.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:21 on (CN-161[0]:mem=76241mb:ncpus=2+CN-161[1]:mem=54831mb:ncpus=2) and finished",
+      "resources_used": {
+        "cpupercent": 180,
+        "cput": "00:00:56",
+        "mem": "121424kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "297860kb",
+        "walltime": "00:00:32"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538511.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:20 on (CN-137[1]:ncpus=32:mem=222gb)+(CN-139[1]:ncpus=32:mem=222gb)+(CN-140[1]:ncpus=32:mem=222gb)+(CN-146[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 1285,
+        "cput": "00:11:08",
+        "mem": "274516kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "4097932kb",
+        "walltime": "00:00:49"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538512.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:21 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 180,
+        "cput": "00:00:39",
+        "mem": "162192kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "338960kb",
+        "walltime": "00:00:22"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538514.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:21 on (CN-135[0]:ncpus=32:mem=222gb)+(CN-136[0]:ncpus=32:mem=222gb)+(CN-137[0]:ncpus=32:mem=222gb)+(CN-138[0]:ncpus=32:mem=222gb)+(CN-139[0]:ncpus=32:mem=222gb)+(CN-140[0]:ncpus=32:mem=222gb)+(CN-141[1]:ncpus=32:mem=222gb)+(... and finished",
+      "resources_used": {
+        "cpupercent": 4952,
+        "cput": "00:35:48",
+        "mem": "401040kb",
+        "ncpus": 256,
+        "ngpus": 0,
+        "vmem": "3015796kb",
+        "walltime": "00:00:53"
+      },
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538515.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:22 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 175,
+        "cput": "00:00:42",
+        "mem": "211504kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "388112kb",
+        "walltime": "00:00:23"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538516.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:21 on (CN-051[0]:ncpus=32:mem=222gb)+(CN-053[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 174,
+        "cput": "00:06:01",
+        "mem": "122516kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "2022424kb",
+        "walltime": "00:00:49"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-051+1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-053"
+      }
+    },
+    "1538517.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:22 on (IN-001[0]:mem=100773mb:ncpus=4+IN-001[1]:mem=30299mb) and finished",
+      "resources_used": {
+        "cpupercent": 174,
+        "cput": "00:01:19",
+        "mem": "219508kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "396560kb",
+        "walltime": "00:00:42"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538518.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:21 on (CN-137[1]:ncpus=32:mem=222gb)+(CN-139[1]:ncpus=32:mem=222gb)+(CN-140[1]:ncpus=32:mem=222gb)+(CN-146[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 497,
+        "cput": "00:11:04",
+        "mem": "346172kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "4119200kb",
+        "walltime": "00:00:54"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538519.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:23 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 199,
+        "cput": "00:01:06",
+        "mem": "219516kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "396560kb",
+        "walltime": "00:00:36"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538520.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:22 on (CN-008[0]:ncpus=32:mem=222gb)+(CN-013[1]:ncpus=32:mem=222gb)+(CN-014[1]:ncpus=32:mem=222gb)+(CN-087[0]:ncpus=32:mem=222gb)+(CN-088[1]:ncpus=32:mem=222gb)+(CN-091[1]:ncpus=32:mem=222gb)+(CN-100[1]:ncpus=32:mem=222gb)+(... and finished",
+      "resources_used": {
+        "cpupercent": 2348,
+        "cput": "00:19:16",
+        "mem": "300732kb",
+        "ncpus": 256,
+        "ngpus": 0,
+        "vmem": "2978868kb",
+        "walltime": "00:00:51"
+      },
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538521.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:23 on (IN-001[0]:mem=108965mb:ncpus=4+IN-001[1]:mem=22107mb) and finished",
+      "resources_used": {
+        "cpupercent": 152,
+        "cput": "00:01:22",
+        "mem": "219496kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "396560kb",
+        "walltime": "00:00:44"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538532.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:22 on (CN-051[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 88,
+        "cput": "00:03:41",
+        "mem": "171944kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "4173556kb",
+        "walltime": "00:01:05"
+      },
+      "Resource_List": {
+        "ncpus": 32,
+        "nodect": 1,
+        "walltime": "00:20:00",
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-051"
+      }
+    },
+    "1538533.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:23 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 79,
+        "cput": "00:03:57",
+        "mem": "418112kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "594704kb",
+        "walltime": "00:02:06"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538534.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:22 on (CN-051[1]:ncpus=32:mem=222gb)+(CN-053[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 347,
+        "cput": "00:08:45",
+        "mem": "348236kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "4269148kb",
+        "walltime": "00:01:20"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-051+1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-053"
+      }
+    },
+    "1538535.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:24 on (IN-001[0]:mem=108965mb:ncpus=4+IN-001[1]:mem=22107mb) and finished",
+      "resources_used": {
+        "cpupercent": 185,
+        "cput": "00:04:37",
+        "mem": "418116kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "594704kb",
+        "walltime": "00:02:22"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538536.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:23 on (CN-135[0]:ncpus=32:mem=222gb)+(CN-136[0]:ncpus=32:mem=222gb)+(CN-137[0]:ncpus=32:mem=222gb)+(CN-138[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 967,
+        "cput": "00:18:39",
+        "mem": "421272kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "4173612kb",
+        "walltime": "00:01:05"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538537.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:26 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 157,
+        "cput": "00:03:46",
+        "mem": "418116kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "594704kb",
+        "walltime": "00:01:56"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538538.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:23 on (CN-008[0]:ncpus=32:mem=222gb)+(CN-013[1]:ncpus=32:mem=222gb)+(CN-014[1]:ncpus=32:mem=222gb)+(CN-087[0]:ncpus=32:mem=222gb)+(CN-088[1]:ncpus=32:mem=222gb)+(CN-091[1]:ncpus=32:mem=222gb)+(CN-100[1]:ncpus=32:mem=222gb)+(... and finished",
+      "resources_used": {
+        "cpupercent": 1685,
+        "cput": "00:32:58",
+        "mem": "661760kb",
+        "ncpus": 256,
+        "ngpus": 0,
+        "vmem": "4173872kb",
+        "walltime": "00:01:05"
+      },
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538539.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:26 on (IN-001[0]:mem=108965mb:ncpus=4+IN-001[1]:mem=22107mb) and finished",
+      "resources_used": {
+        "cpupercent": 190,
+        "cput": "00:04:37",
+        "mem": "418128kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "594704kb",
+        "walltime": "00:02:22"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538542.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:24 on (CN-051[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 87,
+        "cput": "00:02:34",
+        "mem": "20200kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "284536kb",
+        "walltime": "00:00:49"
+      },
+      "Resource_List": {
+        "ncpus": 32,
+        "nodect": 1,
+        "walltime": "00:20:00",
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-051"
+      }
+    },
+    "1538543.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:28 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 50,
+        "cput": "00:01:28",
+        "mem": "243200kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "420824kb",
+        "walltime": "00:00:50"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538549.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:25 on (CN-051[0]:ncpus=32:mem=222gb)+(CN-053[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 666,
+        "cput": "00:09:13",
+        "mem": "151144kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "2064944kb",
+        "walltime": "00:00:55"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-051+1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-053"
+      }
+    },
+    "1538550.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:29 on (IN-001[0]:mem=108965mb:ncpus=4+IN-001[1]:mem=22107mb) and finished",
+      "resources_used": {
+        "cpupercent": 145,
+        "cput": "00:01:49",
+        "mem": "417112kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "593936kb",
+        "walltime": "00:00:58"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538551.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:25 on (CN-135[0]:ncpus=32:mem=222gb)+(CN-136[0]:ncpus=32:mem=222gb)+(CN-137[0]:ncpus=32:mem=222gb)+(CN-138[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 1851,
+        "cput": "00:16:55",
+        "mem": "322192kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "3008008kb",
+        "walltime": "00:00:54"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538552.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:29 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 180,
+        "cput": "00:01:27",
+        "mem": "416932kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "593680kb",
+        "walltime": "00:00:47"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538553.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:25 on (CN-008[0]:ncpus=32:mem=222gb)+(CN-013[1]:ncpus=32:mem=222gb)+(CN-014[1]:ncpus=32:mem=222gb)+(CN-087[0]:ncpus=32:mem=222gb)+(CN-088[1]:ncpus=32:mem=222gb)+(CN-091[1]:ncpus=32:mem=222gb)+(CN-100[1]:ncpus=32:mem=222gb)+(... and finished",
+      "resources_used": {
+        "cpupercent": 3362,
+        "cput": "00:28:14",
+        "mem": "562448kb",
+        "ncpus": 256,
+        "ngpus": 0,
+        "vmem": "1182212kb",
+        "walltime": "00:00:54"
+      },
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538554.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:30 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 153,
+        "cput": "00:01:39",
+        "mem": "414400kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "591120kb",
+        "walltime": "00:00:55"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538555.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:26 on (CN-051[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 128,
+        "cput": "00:03:00",
+        "mem": "321416kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "4300184kb",
+        "walltime": "00:00:59"
+      },
+      "Resource_List": {
+        "ncpus": 32,
+        "nodect": 1,
+        "walltime": "00:20:00",
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-051"
+      }
+    },
+    "1538556.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:30 on (IN-008[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 147,
+        "cput": "00:02:30",
+        "mem": "417868kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "594704kb",
+        "walltime": "00:01:21"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538557.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:26 on (CN-051[1]:ncpus=32:mem=222gb)+(CN-053[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 469,
+        "cput": "00:08:01",
+        "mem": "366608kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "4217140kb",
+        "walltime": "00:00:59"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-051+1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-053"
+      }
+    },
+    "1538558.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:31 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 118,
+        "cput": "00:02:26",
+        "mem": "417960kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "594704kb",
+        "walltime": "00:01:20"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538559.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:26 on (CN-135[0]:ncpus=32:mem=222gb)+(CN-136[0]:ncpus=32:mem=222gb)+(CN-137[0]:ncpus=32:mem=222gb)+(CN-138[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 1006,
+        "cput": "00:16:42",
+        "mem": "363416kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "1669932kb",
+        "walltime": "00:01:01"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538560.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:32 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 177,
+        "cput": "00:02:29",
+        "mem": "418044kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "594704kb",
+        "walltime": "00:01:18"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538561.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:26 on (GN-A40-050[1]:ncpus=32:mem=222gb)+(GN-A40-051[1]:ncpus=32:mem=222gb)+(GN-A40-052[1]:ncpus=32:mem=222gb)+(GN-A40-053[1]:ncpus=32:mem=222gb)+(GN-A40-054[1]:ncpus=32:mem=222gb)+(GN-A40-055[1]:ncpus=32:mem=222gb)+(GN-A40-... and finished",
+      "resources_used": {
+        "cpupercent": 956,
+        "cput": "00:24:46",
+        "mem": "462860kb",
+        "ncpus": 256,
+        "ngpus": 0,
+        "vmem": "3008296kb",
+        "walltime": "00:07:28"
+      },
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538562.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:34 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 180,
+        "cput": "00:02:26",
+        "mem": "412912kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "589584kb",
+        "walltime": "00:01:18"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538563.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:27 on (CN-051[0]:ncpus=32:mem=222gb)+(CN-053[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 260,
+        "cput": "00:03:00",
+        "mem": "140636kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "2902720kb",
+        "walltime": "00:00:47"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-051+1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-053"
+      }
+    },
+    "1538564.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:32 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 159,
+        "cput": "00:00:28",
+        "mem": "49080kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "226936kb",
+        "walltime": "00:00:18"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538565.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:26 on (CN-137[1]:ncpus=32:mem=222gb)+(CN-139[0]:ncpus=32:mem=222gb)+(CN-140[0]:ncpus=32:mem=222gb)+(CN-141[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 760,
+        "cput": "00:08:28",
+        "mem": "185916kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "4047204kb",
+        "walltime": "00:00:51"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538566.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:33 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 187,
+        "cput": "00:00:28",
+        "mem": "43592kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "220868kb",
+        "walltime": "00:00:17"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538567.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:27 on (CN-135[0]:ncpus=32:mem=222gb)+(CN-136[0]:ncpus=32:mem=222gb)+(CN-137[0]:ncpus=32:mem=222gb)+(CN-138[0]:ncpus=32:mem=222gb)+(CN-139[0]:ncpus=32:mem=222gb)+(CN-140[0]:ncpus=32:mem=222gb)+(CN-141[1]:ncpus=32:mem=222gb)+(... and finished",
+      "resources_used": {
+        "cpupercent": 2324,
+        "cput": "00:18:40",
+        "mem": "120312kb",
+        "ncpus": 256,
+        "ngpus": 0,
+        "vmem": "4052004kb",
+        "walltime": "00:00:45"
+      },
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538568.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:33 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 171,
+        "cput": "00:00:26",
+        "mem": "49140kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "226936kb",
+        "walltime": "00:00:17"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538569.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:27 on (CN-051[1]:ncpus=32:mem=222gb)+(CN-053[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 354,
+        "cput": "00:03:29",
+        "mem": "65788kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "2905952kb",
+        "walltime": "00:00:49"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-051+1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-053"
+      }
+    },
+    "1538570.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:33 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 159,
+        "cput": "00:00:14",
+        "mem": "42088kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "218640kb",
+        "walltime": "00:00:11"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538571.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:28 on (CN-135[0]:ncpus=32:mem=222gb)+(CN-136[0]:ncpus=32:mem=222gb)+(CN-137[0]:ncpus=32:mem=222gb)+(CN-138[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 1285,
+        "cput": "00:08:32",
+        "mem": "139480kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "4056536kb",
+        "walltime": "00:00:42"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538572.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:33 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 180,
+        "cput": "00:00:11",
+        "mem": "72100kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "248824kb",
+        "walltime": "00:00:09"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538573.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:28 on (CN-008[0]:ncpus=32:mem=222gb)+(CN-013[1]:ncpus=32:mem=222gb)+(CN-014[1]:ncpus=32:mem=222gb)+(CN-087[0]:ncpus=32:mem=222gb)+(CN-088[1]:ncpus=32:mem=222gb)+(CN-091[1]:ncpus=32:mem=222gb)+(CN-100[1]:ncpus=32:mem=222gb)+(... and finished",
+      "resources_used": {
+        "cpupercent": 1909,
+        "cput": "00:14:42",
+        "mem": "371852kb",
+        "ncpus": 256,
+        "ngpus": 0,
+        "vmem": "4060780kb",
+        "walltime": "00:00:42"
+      },
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538574.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:33 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 174,
+        "cput": "00:00:14",
+        "mem": "25768kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "189176kb",
+        "walltime": "00:00:11"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538576.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:28 on (CN-051[0]:ncpus=32:mem=222gb)+(CN-053[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 280,
+        "cput": "00:03:32",
+        "mem": "72440kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "3008000kb",
+        "walltime": "00:00:55"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-051+1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-053"
+      }
+    },
+    "1538577.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:34 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 150,
+        "cput": "00:00:16",
+        "mem": "28708kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "343416kb",
+        "walltime": "00:00:13"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538578.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:29 on (CN-135[0]:ncpus=32:mem=222gb)+(CN-136[0]:ncpus=32:mem=222gb)+(CN-137[0]:ncpus=32:mem=222gb)+(CN-138[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 717,
+        "cput": "00:07:28",
+        "mem": "175324kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "3000860kb",
+        "walltime": "00:00:42"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538579.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:34 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 165,
+        "cput": "00:00:18",
+        "mem": "23848kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "201192kb",
+        "walltime": "00:00:13"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538580.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:29 on (CN-008[0]:ncpus=32:mem=222gb)+(CN-013[1]:ncpus=32:mem=222gb)+(CN-014[1]:ncpus=32:mem=222gb)+(CN-087[0]:ncpus=32:mem=222gb)+(CN-088[1]:ncpus=32:mem=222gb)+(CN-091[1]:ncpus=32:mem=222gb)+(CN-100[1]:ncpus=32:mem=222gb)+(... and finished",
+      "resources_used": {
+        "cpupercent": 2283,
+        "cput": "00:13:47",
+        "mem": "343612kb",
+        "ncpus": 256,
+        "ngpus": 0,
+        "vmem": "577832kb",
+        "walltime": "00:00:43"
+      },
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538581.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:34 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 171,
+        "cput": "00:00:16",
+        "mem": "70308kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "247408kb",
+        "walltime": "00:00:13"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538582.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:29 on (CN-051[0]:ncpus=32:mem=222gb)+(CN-053[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 445,
+        "cput": "00:06:14",
+        "mem": "109840kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "2006328kb",
+        "walltime": "00:00:49"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-051+1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-053"
+      }
+    },
+    "1538583.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:34 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 185,
+        "cput": "00:00:34",
+        "mem": "119656kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "296720kb",
+        "walltime": "00:00:21"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538584.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:30 on (CN-135[0]:ncpus=32:mem=222gb)+(CN-136[0]:ncpus=32:mem=222gb)+(CN-137[0]:ncpus=32:mem=222gb)+(CN-138[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 1289,
+        "cput": "00:11:29",
+        "mem": "160616kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "265536kb",
+        "walltime": "00:00:46"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538585.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:35 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 104,
+        "cput": "00:00:33",
+        "mem": "75752kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "252520kb",
+        "walltime": "00:00:20"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538586.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:30 on (CN-008[0]:ncpus=32:mem=222gb)+(CN-013[1]:ncpus=32:mem=222gb)+(CN-014[1]:ncpus=32:mem=222gb)+(CN-087[0]:ncpus=32:mem=222gb)+(CN-088[1]:ncpus=32:mem=222gb)+(CN-091[1]:ncpus=32:mem=222gb)+(CN-100[1]:ncpus=32:mem=222gb)+(... and finished",
+      "resources_used": {
+        "cpupercent": 1951,
+        "cput": "00:19:27",
+        "mem": "426428kb",
+        "ncpus": 256,
+        "ngpus": 0,
+        "vmem": "351164kb",
+        "walltime": "00:00:51"
+      },
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538587.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:35 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 165,
+        "cput": "00:00:33",
+        "mem": "119356kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "296208kb",
+        "walltime": "00:00:19"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538601.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:32 on (CN-051[0]:ncpus=32:mem=222gb)+(CN-053[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 434,
+        "cput": "00:05:26",
+        "mem": "176000kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "2010896kb",
+        "walltime": "00:00:48"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-051+1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:host=cn-053"
+      }
+    },
+    "1538602.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:35 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 78,
+        "cput": "00:00:32",
+        "mem": "77596kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "254228kb",
+        "walltime": "00:00:21"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538603.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:32 on (CN-135[0]:ncpus=32:mem=222gb)+(CN-136[0]:ncpus=32:mem=222gb)+(CN-137[0]:ncpus=32:mem=222gb)+(CN-138[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 1765,
+        "cput": "00:10:10",
+        "mem": "184968kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "3008012kb",
+        "walltime": "00:00:48"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538604.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:36 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 164,
+        "cput": "00:00:34",
+        "mem": "119876kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "296476kb",
+        "walltime": "00:00:32"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538605.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:32 on (CN-008[0]:ncpus=32:mem=222gb)+(CN-013[1]:ncpus=32:mem=222gb)+(CN-014[1]:ncpus=32:mem=222gb)+(CN-087[0]:ncpus=32:mem=222gb)+(CN-088[1]:ncpus=32:mem=222gb)+(CN-091[1]:ncpus=32:mem=222gb)+(CN-100[1]:ncpus=32:mem=222gb)+(... and finished",
+      "resources_used": {
+        "cpupercent": 3024,
+        "cput": "00:16:37",
+        "mem": "281384kb",
+        "ncpus": 256,
+        "ngpus": 0,
+        "vmem": "265540kb",
+        "walltime": "00:00:48"
+      },
+      "Resource_List": {
+        "ncpus": 256,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538606.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:36 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 165,
+        "cput": "00:00:32",
+        "mem": "75040kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "251672kb",
+        "walltime": "00:00:20"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538607.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:33 on (CN-135[0]:ncpus=32:mem=222gb)+(CN-136[0]:ncpus=32:mem=222gb)+(CN-137[0]:ncpus=32:mem=222gb)+(CN-138[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 12438,
+        "cput": "53:54:30",
+        "mem": "32332512kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "21482864kb",
+        "walltime": "01:01:16"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "04:00:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538608.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 06:34 on (IN-008[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 81,
+        "cput": "04:27:56",
+        "mem": "5261052kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "5394520kb",
+        "walltime": "04:28:49"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538609.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:33 on (CN-137[1]:ncpus=32:mem=222gb)+(CN-139[0]:ncpus=32:mem=222gb)+(CN-140[0]:ncpus=32:mem=222gb)+(CN-141[1]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 10792,
+        "cput": "26:12:19",
+        "mem": "32167584kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "19563132kb",
+        "walltime": "00:33:47"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 4,
+        "walltime": "04:00:00",
+        "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB"
+      }
+    },
+    "1538610.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 06:07 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 100,
+        "cput": "05:06:52",
+        "mem": "5019924kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "5157832kb",
+        "walltime": "05:08:26"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538611.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:33 on (CN-051[0]:ncpus=8:mem=55gb)+(CN-053[0]:ncpus=8:mem=55gb) and finished",
+      "resources_used": {
+        "cpupercent": 190,
+        "cput": "00:01:09",
+        "mem": "130516kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "1138000kb",
+        "walltime": "00:00:34"
+      },
+      "Resource_List": {
+        "ncpus": 16,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:host=cn-051+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:host=cn-053"
+      }
+    },
+    "1538612.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:36 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 177,
+        "cput": "00:00:28",
+        "mem": "119404kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "296208kb",
+        "walltime": "00:00:17"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538613.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:33 on (CN-051[0]:ncpus=16:mem=111gb)+(CN-053[0]:ncpus=16:mem=111gb) and finished",
+      "resources_used": {
+        "cpupercent": 709,
+        "cput": "00:02:49",
+        "mem": "164684kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "2004352kb",
+        "walltime": "00:00:44"
+      },
+      "Resource_List": {
+        "ncpus": 32,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:host=cn-051+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:host=cn-053"
+      }
+    },
+    "1538614.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:36 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 187,
+        "cput": "00:00:36",
+        "mem": "119100kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "295952kb",
+        "walltime": "00:00:21"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538615.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:33 on (CN-148[1]:ncpus=2:mem=13gb)+(CN-151[0]:ncpus=2:mem=13gb)+(CN-153[1]:ncpus=2:mem=13gb)+(CN-154[1]:ncpus=2:mem=13gb) and finished",
+      "resources_used": {
+        "cpupercent": 213,
+        "cput": "00:00:15",
+        "mem": "19388kb",
+        "ncpus": 8,
+        "ngpus": 0,
+        "vmem": "115300kb",
+        "walltime": "00:00:15"
+      },
+      "Resource_List": {
+        "ncpus": 8,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB"
+      }
+    },
+    "1538616.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:37 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 150,
+        "cput": "00:00:09",
+        "mem": "7392kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "158440kb",
+        "walltime": "00:00:06"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538617.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": "-29",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:34 on (CN-148[1]:ncpus=4:mem=27gb)+(CN-151[0]:ncpus=4:mem=27gb)+(CN-153[1]:ncpus=4:mem=27gb)+(CN-154[1]:ncpus=4:mem=27gb) and exceeded resource walltime",
+      "resources_used": {
+        "cpupercent": 0,
+        "cput": "00:00:00",
+        "mem": "20488kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "272444kb",
+        "walltime": "00:46:27"
+      },
+      "Resource_List": {
+        "ncpus": 16,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB"
+      }
+    },
+    "1538618.stdct-mgmt-02": {
+      "job_state": "F",
+      "queue": "cpu_parallel",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538619.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:34 on (CN-004[1]:ncpus=8:mem=55gb)+(CN-006[1]:ncpus=8:mem=55gb)+(CN-007[1]:ncpus=8:mem=55gb)+(CN-008[0]:ncpus=8:mem=55gb) and finished",
+      "resources_used": {
+        "cpupercent": 601,
+        "cput": "00:01:40",
+        "mem": "115960kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "573220kb",
+        "walltime": "00:00:31"
+      },
+      "Resource_List": {
+        "ncpus": 32,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB"
+      }
+    },
+    "1538620.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:37 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 102,
+        "cput": "00:00:25",
+        "mem": "118404kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "295440kb",
+        "walltime": "00:00:15"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538621.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:34 on (CN-008[0]:ncpus=16:mem=111gb)+(CN-009[0]:mem=100817mb:ncpus=14+CN-009[1]:mem=12847mb:ncpus=2)+(CN-013[1]:ncpus=16:mem=111gb)+(CN-014[1]:ncpus=16:mem=111gb) and finished",
+      "resources_used": {
+        "cpupercent": 724,
+        "cput": "00:04:04",
+        "mem": "149308kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1978092kb",
+        "walltime": "00:00:34"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB"
+      }
+    },
+    "1538622.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:37 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 167,
+        "cput": "00:00:38",
+        "mem": "116780kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "293648kb",
+        "walltime": "00:00:23"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538623.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:34 on (CN-004[1]:ncpus=2:mem=13gb)+(CN-006[1]:ncpus=2:mem=13gb)+(CN-007[1]:ncpus=2:mem=13gb)+(CN-008[0]:ncpus=2:mem=13gb)+(CN-009[1]:ncpus=2:mem=13gb)+(CN-011[0]:ncpus=2:mem=13gb)+(CN-013[1]:ncpus=2:mem=13gb)+(CN-014[1]:ncpu... and finished",
+      "resources_used": {
+        "cpupercent": 532,
+        "cput": "00:00:17",
+        "mem": "96804kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "543140kb",
+        "walltime": "00:00:13"
+      },
+      "Resource_List": {
+        "ncpus": 16,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB"
+      }
+    },
+    "1538624.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:37 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 165,
+        "cput": "00:00:09",
+        "mem": "77832kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "254744kb",
+        "walltime": "00:00:06"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538625.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:36 on (CN-004[1]:ncpus=4:mem=27gb)+(CN-006[1]:ncpus=4:mem=27gb)+(CN-007[1]:ncpus=4:mem=27gb)+(CN-008[0]:ncpus=4:mem=27gb)+(CN-009[0]:ncpus=4:mem=27gb)+(CN-011[0]:ncpus=4:mem=27gb)+(CN-013[1]:ncpus=4:mem=27gb)+(CN-014[1]:ncpu... and finished",
+      "resources_used": {
+        "cpupercent": 432,
+        "cput": "00:01:18",
+        "mem": "59232kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "264252kb",
+        "walltime": "00:00:24"
+      },
+      "Resource_List": {
+        "ncpus": 32,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB"
+      }
+    },
+    "1538626.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:37 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 101,
+        "cput": "00:00:17",
+        "mem": "71988kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "268100kb",
+        "walltime": "00:00:10"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538627.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:36 on (CN-135[0]:mem=29137mb:ncpus=4+CN-135[1]:mem=27183mb:ncpus=4)+(CN-136[1]:ncpus=8:mem=55gb)+(CN-137[0]:mem=29095mb:ncpus=4+CN-137[1]:mem=27225mb:ncpus=4)+(CN-139[1]:ncpus=8:mem=55gb)+(CN-140[1]:ncpus=8:mem=55gb)+(CN-142... and finished",
+      "resources_used": {
+        "cpupercent": 789,
+        "cput": "00:03:37",
+        "mem": "100280kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "726864kb",
+        "walltime": "00:00:33"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB"
+      }
+    },
+    "1538628.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:37 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 183,
+        "cput": "00:00:28",
+        "mem": "75688kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "252696kb",
+        "walltime": "00:00:17"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538629.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:36 on (GN-A40-050[1]:ncpus=16:mem=111gb)+(GN-A40-051[1]:ncpus=16:mem=111gb)+(GN-A40-052[1]:ncpus=16:mem=111gb)+(GN-A40-053[1]:ncpus=16:mem=111gb)+(GN-A40-054[1]:ncpus=16:mem=111gb)+(GN-A40-055[1]:ncpus=16:mem=111gb)+(GN-A40-... and finished",
+      "resources_used": {
+        "cpupercent": 347,
+        "cput": "00:06:58",
+        "mem": "112988kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "272996kb",
+        "walltime": "00:06:51"
+      },
+      "Resource_List": {
+        "ncpus": 128,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB"
+      }
+    },
+    "1538630.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:43 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 151,
+        "cput": "00:00:32",
+        "mem": "119760kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "296720kb",
+        "walltime": "00:00:19"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538631.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:37 on (CN-051[0]:ncpus=4:mem=27gb)+(CN-053[0]:ncpus=4:mem=27gb) and finished",
+      "resources_used": {
+        "cpupercent": 150,
+        "cput": "00:00:23",
+        "mem": "32616kb",
+        "ncpus": 8,
+        "ngpus": 0,
+        "vmem": "197724kb",
+        "walltime": "00:00:22"
+      },
+      "Resource_List": {
+        "ncpus": 8,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "1:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB:host=cn-051+1:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB:host=cn-053"
+      }
+    },
+    "1538632.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:38 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 180,
+        "cput": "00:00:10",
+        "mem": "78760kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "255504kb",
+        "walltime": "00:00:06"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538633.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:37 on (CN-051[0]:ncpus=8:mem=55gb)+(CN-053[0]:ncpus=8:mem=55gb) and finished",
+      "resources_used": {
+        "cpupercent": 155,
+        "cput": "00:01:07",
+        "mem": "56372kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "716272kb",
+        "walltime": "00:00:31"
+      },
+      "Resource_List": {
+        "ncpus": 16,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:host=cn-051+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:host=cn-053"
+      }
+    },
+    "1538634.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:38 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 175,
+        "cput": "00:00:13",
+        "mem": "114604kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "291600kb",
+        "walltime": "00:00:09"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538635.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:38 on (CN-051[0]:ncpus=16:mem=111gb)+(CN-053[0]:ncpus=16:mem=111gb) and finished",
+      "resources_used": {
+        "cpupercent": 342,
+        "cput": "00:02:58",
+        "mem": "30920kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "197940kb",
+        "walltime": "00:00:37"
+      },
+      "Resource_List": {
+        "ncpus": 32,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:host=cn-051+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:host=cn-053"
+      }
+    },
+    "1538636.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:39 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 175,
+        "cput": "00:00:17",
+        "mem": "79932kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "252684kb",
+        "walltime": "00:00:11"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538637.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:38 on (CN-004[1]:ncpus=2:mem=13gb)+(CN-006[1]:ncpus=2:mem=13gb)+(CN-007[1]:ncpus=2:mem=13gb)+(CN-008[0]:ncpus=2:mem=13gb) and finished",
+      "resources_used": {
+        "cpupercent": 149,
+        "cput": "00:00:09",
+        "mem": "32080kb",
+        "ncpus": 8,
+        "ngpus": 0,
+        "vmem": "272404kb",
+        "walltime": "00:00:11"
+      },
+      "Resource_List": {
+        "ncpus": 8,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB"
+      }
+    },
+    "1538638.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:38 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 165,
+        "cput": "00:00:05",
+        "mem": "90992kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "267576kb",
+        "walltime": "00:00:04"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538639.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:39 on (CN-004[1]:ncpus=4:mem=27gb)+(CN-006[1]:ncpus=4:mem=27gb)+(CN-007[1]:ncpus=4:mem=27gb)+(CN-008[0]:ncpus=4:mem=27gb) and finished",
+      "resources_used": {
+        "cpupercent": 283,
+        "cput": "00:00:27",
+        "mem": "49764kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "700512kb",
+        "walltime": "00:00:20"
+      },
+      "Resource_List": {
+        "ncpus": 16,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB"
+      }
+    },
+    "1538640.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:40 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 133,
+        "cput": "00:00:08",
+        "mem": "118600kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "295440kb",
+        "walltime": "00:00:08"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538641.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:39 on (CN-008[0]:ncpus=8:mem=55gb)+(CN-009[0]:ncpus=8:mem=55gb)+(CN-011[0]:ncpus=8:mem=55gb)+(CN-013[1]:ncpus=8:mem=55gb) and finished",
+      "resources_used": {
+        "cpupercent": 452,
+        "cput": "00:01:35",
+        "mem": "66740kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "1091028kb",
+        "walltime": "00:00:24"
+      },
+      "Resource_List": {
+        "ncpus": 32,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB"
+      }
+    },
+    "1538642.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:40 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 166,
+        "cput": "00:00:13",
+        "mem": "39644kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "217528kb",
+        "walltime": "00:00:09"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538643.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:40 on (CN-008[0]:ncpus=16:mem=111gb)+(CN-009[0]:mem=100817mb:ncpus=14+CN-009[1]:mem=12847mb:ncpus=2)+(CN-013[1]:ncpus=16:mem=111gb)+(CN-014[1]:ncpus=16:mem=111gb) and finished",
+      "resources_used": {
+        "cpupercent": 808,
+        "cput": "00:03:25",
+        "mem": "94296kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "732992kb",
+        "walltime": "00:00:33"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB"
+      }
+    },
+    "1538644.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:41 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 183,
+        "cput": "00:00:16",
+        "mem": "51940kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "232188kb",
+        "walltime": "00:00:11"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538645.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:40 on (CN-004[1]:ncpus=2:mem=13gb)+(CN-006[1]:ncpus=2:mem=13gb)+(CN-007[1]:ncpus=2:mem=13gb)+(CN-008[0]:ncpus=2:mem=13gb)+(CN-009[1]:ncpus=2:mem=13gb)+(CN-011[0]:ncpus=2:mem=13gb)+(CN-013[1]:ncpus=2:mem=13gb)+(CN-014[1]:ncpu... and finished",
+      "resources_used": {
+        "cpupercent": 500,
+        "cput": "00:00:17",
+        "mem": "41360kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "272408kb",
+        "walltime": "00:00:14"
+      },
+      "Resource_List": {
+        "ncpus": 16,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB"
+      }
+    },
+    "1538646.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:41 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 125,
+        "cput": "00:00:05",
+        "mem": "4kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "0kb",
+        "walltime": "00:00:04"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538647.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:42 on (CN-004[1]:ncpus=4:mem=27gb)+(CN-006[1]:ncpus=4:mem=27gb)+(CN-007[1]:ncpus=4:mem=27gb)+(CN-008[0]:ncpus=4:mem=27gb)+(CN-009[0]:ncpus=4:mem=27gb)+(CN-011[0]:ncpus=4:mem=27gb)+(CN-013[1]:ncpus=4:mem=27gb)+(CN-014[1]:ncpu... and finished",
+      "resources_used": {
+        "cpupercent": 696,
+        "cput": "00:01:04",
+        "mem": "73572kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "264080kb",
+        "walltime": "00:00:20"
+      },
+      "Resource_List": {
+        "ncpus": 32,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB"
+      }
+    },
+    "1538648.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:42 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 100,
+        "cput": "00:00:10",
+        "mem": "74232kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "252208kb",
+        "walltime": "00:00:09"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538649.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:42 on (CN-135[0]:mem=29137mb:ncpus=4+CN-135[1]:mem=27183mb:ncpus=4)+(CN-136[1]:ncpus=8:mem=55gb)+(CN-137[0]:mem=29095mb:ncpus=4+CN-137[1]:mem=27225mb:ncpus=4)+(CN-139[1]:ncpus=8:mem=55gb)+(CN-140[1]:ncpus=8:mem=55gb)+(CN-142... and finished",
+      "resources_used": {
+        "cpupercent": 2122,
+        "cput": "00:03:23",
+        "mem": "102856kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "714848kb",
+        "walltime": "00:00:31"
+      },
+      "Resource_List": {
+        "ncpus": 64,
+        "nodect": 8,
+        "walltime": "01:00:00",
+        "select": "8:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB"
+      }
+    },
+    "1538650.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:42 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 166,
+        "cput": "00:00:13",
+        "mem": "48372kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "225296kb",
+        "walltime": "00:00:11"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538651.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:43 on (CN-051[0]:ncpus=2:mem=13gb)+(CN-053[0]:ncpus=2:mem=13gb) and finished",
+      "resources_used": {
+        "cpupercent": 100,
+        "cput": "00:00:05",
+        "mem": "54004kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "530344kb",
+        "walltime": "00:00:15"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "1:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB:host=cn-051+1:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB:host=cn-053"
+      }
+    },
+    "1538652.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:43 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 150,
+        "cput": "00:00:06",
+        "mem": "4kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "0kb",
+        "walltime": "00:00:04"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538653.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:43 on (CN-051[0]:ncpus=4:mem=27gb)+(CN-053[0]:ncpus=4:mem=27gb) and finished",
+      "resources_used": {
+        "cpupercent": 300,
+        "cput": "00:00:22",
+        "mem": "63792kb",
+        "ncpus": 8,
+        "ngpus": 0,
+        "vmem": "541268kb",
+        "walltime": "00:00:21"
+      },
+      "Resource_List": {
+        "ncpus": 8,
+        "nodect": 2,
+        "walltime": "00:30:00",
+        "select": "1:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB:host=cn-051+1:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB:host=cn-053"
+      }
+    },
+    "1538654.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:43 on (IN-002[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 171,
+        "cput": "00:00:12",
+        "mem": "7404kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "157928kb",
+        "walltime": "00:00:08"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538655.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:44 on (CN-004[1]:ncpus=2:mem=13gb)+(CN-006[1]:ncpus=2:mem=13gb)+(CN-007[1]:ncpus=2:mem=13gb)+(CN-008[0]:ncpus=2:mem=13gb) and finished",
+      "resources_used": {
+        "cpupercent": 133,
+        "cput": "00:00:09",
+        "mem": "30536kb",
+        "ncpus": 8,
+        "ngpus": 0,
+        "vmem": "32112kb",
+        "walltime": "00:00:12"
+      },
+      "Resource_List": {
+        "ncpus": 8,
+        "nodect": 4,
+        "walltime": "00:45:00",
+        "select": "4:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB"
+      }
+    },
+    "1538656.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:44 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 140,
+        "cput": "00:00:07",
+        "mem": "4kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "0kb",
+        "walltime": "00:00:05"
+      },
+      "Resource_List": {
+        "ncpus": 4,
+        "nodect": 1,
+        "walltime": "24:00:00",
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb"
+      }
+    },
+    "1538657.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:44 on (CN-051[0]:ncpus=2:mem=13gb) and finished",
+      "resources_used": {
+        "cpupercent": 99,
+        "cput": "00:00:11",
+        "mem": "274560kb",
+        "ncpus": 2,
+        "ngpus": 0,
+        "vmem": "757532kb",
+        "walltime": "00:00:18"
+      },
+      "Resource_List": {
+        "ncpus": 2,
+        "nodect": 1,
+        "walltime": "00:20:00",
+        "select": "1:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB:host=cn-051"
+      }
+    },
+    "1538658.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_parallel",
+      "Hold_Types": "n",
+      "comment": "Job run at Wed Nov 11 at 05:44 on (IN-001[1]:ncpus=4:mem=128gb) and finished",
+      "resources_used": {
+        "cpupercent": 122,
+        "cput": "00:00:34",
+        "mem": "418100kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "594992kb",
+        "walltime": "00:00:22"
       },
       "Resource_List": {
         "ncpus": 4,
