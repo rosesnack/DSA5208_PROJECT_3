@@ -1,0 +1,9 @@
+{
+  "performance_job": "1542624.stdct-mgmt-02",
+  "validation_job": "1542625.stdct-mgmt-02",
+  "group": "cpu_core_groups/grid_uniform_n200000_d8/nodes1_cores16",
+  "cores": 16,
+  "nodes": 1,
+  "processes": 2,
+  "threads": 8
+}

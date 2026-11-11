@@ -1,0 +1,217 @@
+{
+  "observed_at": "2026-11-11T22:52:21.648396+08:00",
+  "account": "xtt_ella",
+  "registry": "graph\tnodes\tcores_per_node\tcores\tperformance_job\tvalidation_job\twalltime\tcells\tplan\tdependency\nstrong_controlled\t1\t32\t32\t1530742.stdct-mgmt-02\t1530743.stdct-mgmt-02\t08:00:00\t26\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n1_c32.json\t\nstrong_hub\t1\t32\t32\t1530744.stdct-mgmt-02\t1530745.stdct-mgmt-02\t08:00:00\t26\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_hub_n1_c32.json\t\nstrong_uniform\t1\t32\t32\t1530746.stdct-mgmt-02\t1530747.stdct-mgmt-02\t08:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_uniform_n1_c32.json\t\ngrid_controlled_n200000_d4\t2\t32\t64\t1530748.stdct-mgmt-02\t1530749.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d4_n2_c32.json\t\ngrid_controlled_n200000_d4\t4\t32\t128\t1530750.stdct-mgmt-02\t1530751.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d4_n4_c32.json\t\ngrid_controlled_n200000_d4\t8\t32\t256\t1530752.stdct-mgmt-02\t1530753.stdct-mgmt-02\t01:30:00\t26\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d4_n8_c32.json\t\ngrid_controlled_n100000_d16\t2\t32\t64\t1530754.stdct-mgmt-02\t1530755.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n2_c32.json\t\ngrid_controlled_n100000_d16\t4\t32\t128\t1530756.stdct-mgmt-02\t1530757.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n4_c32.json\t\ngrid_controlled_n100000_d4\t2\t32\t64\t1530758.stdct-mgmt-02\t1530759.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n2_c32.json\t\ngrid_controlled_n100000_d4\t4\t32\t128\t1530760.stdct-mgmt-02\t1530761.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n4_c32.json\t\ngrid_controlled_n100000_d8\t2\t32\t64\t1530762.stdct-mgmt-02\t1530763.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d8_n2_c32.json\t\ngrid_controlled_n200000_d16\t1\t32\t32\t1530764.stdct-mgmt-02\t1530765.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d16_n1_c32.json\t\ngrid_controlled_n200000_d8\t1\t32\t32\t1530766.stdct-mgmt-02\t1530767.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d8_n1_c32.json\t\ngrid_controlled_n50000_d4\t8\t64\t512\t1532794.stdct-mgmt-02\t1532795.stdct-mgmt-02\t01:00:00\t5\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n50000_d4_n8_c64.json\t1532725.stdct-mgmt-02\nstrong_controlled\t2\t32\t64\t1532796.stdct-mgmt-02\t1532797.stdct-mgmt-02\t03:00:00\t26\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n2_c32.json\t1530741.stdct-mgmt-02\nstrong_controlled\t4\t32\t128\t1532798.stdct-mgmt-02\t1532799.stdct-mgmt-02\t04:00:00\t26\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n4_c32.json\t1530741.stdct-mgmt-02\nstrong_controlled\t8\t32\t256\t1532800.stdct-mgmt-02\t1532801.stdct-mgmt-02\t06:00:00\t26\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n8_c32.json\t1530741.stdct-mgmt-02\nstrong_hub\t2\t32\t64\t1532802.stdct-mgmt-02\t1532803.stdct-mgmt-02\t03:30:00\t26\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_hub_n2_c32.json\t1530741.stdct-mgmt-02\nstrong_uniform\t2\t32\t64\t1532804.stdct-mgmt-02\t1532805.stdct-mgmt-02\t02:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_uniform_n2_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d8\t4\t32\t128\t1532806.stdct-mgmt-02\t1532807.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d8_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d8\t8\t32\t256\t1532808.stdct-mgmt-02\t1532809.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d8_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n400000_d16\t1\t32\t32\t1532810.stdct-mgmt-02\t1532811.stdct-mgmt-02\t00:20:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d16_n1_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n200000_d4\t1\t32\t32\t1533366.stdct-mgmt-02\t1533367.stdct-mgmt-02\t00:20:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n200000_d4_n1_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n200000_d8\t1\t32\t32\t1533368.stdct-mgmt-02\t1533369.stdct-mgmt-02\t00:20:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n200000_d8_n1_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n200000_d16\t1\t32\t32\t1533370.stdct-mgmt-02\t1533371.stdct-mgmt-02\t00:20:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n200000_d16_n1_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n400000_d4\t1\t32\t32\t1533372.stdct-mgmt-02\t1533373.stdct-mgmt-02\t00:20:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d4_n1_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n400000_d8\t1\t32\t32\t1533374.stdct-mgmt-02\t1533375.stdct-mgmt-02\t00:20:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d8_n1_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n400000_d16\t1\t32\t32\t1533376.stdct-mgmt-02\t1533377.stdct-mgmt-02\t00:20:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d16_n1_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d16\t2\t2\t4\t1533432.stdct-mgmt-02\t1533433.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n2_c2.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d16\t8\t32\t256\t1537463.stdct-mgmt-02\t1537464.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d4\t8\t32\t256\t1537465.stdct-mgmt-02\t1537466.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n200000_d16\t2\t32\t64\t1537467.stdct-mgmt-02\t1537468.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d16_n2_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n200000_d16\t4\t32\t128\t1537469.stdct-mgmt-02\t1537470.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d16_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n200000_d16\t8\t32\t256\t1537471.stdct-mgmt-02\t1537472.stdct-mgmt-02\t01:00:00\t26\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d16_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n200000_d8\t2\t32\t64\t1537473.stdct-mgmt-02\t1537474.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d8_n2_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n200000_d8\t4\t32\t128\t1537489.stdct-mgmt-02\t1537490.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d8_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n200000_d8\t8\t32\t256\t1537491.stdct-mgmt-02\t1537492.stdct-mgmt-02\t01:00:00\t26\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d8_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n400000_d16\t2\t32\t64\t1537493.stdct-mgmt-02\t1537494.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d16_n2_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n400000_d16\t4\t32\t128\t1537495.stdct-mgmt-02\t1537496.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d16_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n400000_d16\t8\t32\t256\t1537497.stdct-mgmt-02\t1537498.stdct-mgmt-02\t01:00:00\t26\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d16_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n400000_d4\t1\t32\t32\t1538193.stdct-mgmt-02\t1538194.stdct-mgmt-02\t00:20:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d4_n1_c32_retry_1537507.json\t1530741.stdct-mgmt-02\ngrid_controlled_n400000_d4\t2\t32\t64\t1538195.stdct-mgmt-02\t1538196.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d4_n2_c32_retry_1537509.json\t1530741.stdct-mgmt-02\ngrid_controlled_n400000_d4\t4\t32\t128\t1537511.stdct-mgmt-02\t1537512.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d4_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n400000_d4\t8\t32\t256\t1537513.stdct-mgmt-02\t1537514.stdct-mgmt-02\t01:00:00\t26\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d4_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n400000_d8\t1\t32\t32\t1537570.stdct-mgmt-02\t1537571.stdct-mgmt-02\t00:20:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d8_n1_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n400000_d8\t2\t32\t64\t1538197.stdct-mgmt-02\t1538198.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d8_n2_c32_retry_1537572.json\t1530741.stdct-mgmt-02\ngrid_controlled_n400000_d8\t4\t32\t128\t1537604.stdct-mgmt-02\t1537605.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d8_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n400000_d8\t8\t32\t256\t1537619.stdct-mgmt-02\t1537620.stdct-mgmt-02\t01:00:00\t26\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d8_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n50000_d16\t2\t32\t64\t1538265.stdct-mgmt-02\t1538266.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n50000_d16_n2_c32_retry_1537630.json\t1530741.stdct-mgmt-02\ngrid_controlled_n50000_d16\t4\t32\t128\t1537669.stdct-mgmt-02\t1537670.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n50000_d16_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n50000_d16\t8\t32\t256\t1537686.stdct-mgmt-02\t1537687.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n50000_d16_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n50000_d8\t2\t32\t64\t1537703.stdct-mgmt-02\t1537704.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n50000_d8_n2_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n50000_d8\t4\t32\t128\t1537738.stdct-mgmt-02\t1537739.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n50000_d8_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n50000_d8\t8\t32\t256\t1537740.stdct-mgmt-02\t1537741.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n50000_d8_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n100000_d16\t8\t32\t256\t1537790.stdct-mgmt-02\t1537791.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n100000_d16_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n100000_d4\t8\t32\t256\t1537792.stdct-mgmt-02\t1537793.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n100000_d4_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n100000_d8\t8\t32\t256\t1537794.stdct-mgmt-02\t1537795.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n100000_d8_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n200000_d16\t8\t32\t256\t1537826.stdct-mgmt-02\t1537827.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n200000_d16_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n200000_d4\t8\t32\t256\t1537828.stdct-mgmt-02\t1537829.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n200000_d4_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n200000_d8\t8\t32\t256\t1537830.stdct-mgmt-02\t1537831.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n200000_d8_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n400000_d16\t8\t32\t256\t1537881.stdct-mgmt-02\t1537882.stdct-mgmt-02\t01:00:00\t26\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d16_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n400000_d4\t4\t32\t128\t1537883.stdct-mgmt-02\t1537884.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d4_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n400000_d4\t8\t32\t256\t1537885.stdct-mgmt-02\t1537886.stdct-mgmt-02\t01:00:00\t26\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d4_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n400000_d8\t4\t32\t128\t1537929.stdct-mgmt-02\t1537930.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d8_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n400000_d8\t8\t32\t256\t1537931.stdct-mgmt-02\t1537932.stdct-mgmt-02\t01:00:00\t26\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d8_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n50000_d16\t4\t32\t128\t1537981.stdct-mgmt-02\t1537982.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n50000_d16_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n50000_d16\t8\t32\t256\t1537983.stdct-mgmt-02\t1537984.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n50000_d16_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n50000_d4\t4\t32\t128\t1537985.stdct-mgmt-02\t1537986.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n50000_d4_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n50000_d4\t8\t32\t256\t1538006.stdct-mgmt-02\t1538007.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n50000_d4_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n50000_d8\t4\t32\t128\t1538008.stdct-mgmt-02\t1538009.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n50000_d8_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_hub_n50000_d8\t8\t32\t256\t1538020.stdct-mgmt-02\t1538021.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n50000_d8_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n100000_d16\t2\t32\t64\t1538022.stdct-mgmt-02\t1538023.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n100000_d16_n2_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n100000_d16\t4\t32\t128\t1538024.stdct-mgmt-02\t1538025.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n100000_d16_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n100000_d4\t2\t32\t64\t1538049.stdct-mgmt-02\t1538050.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n100000_d4_n2_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n100000_d4\t4\t32\t128\t1538051.stdct-mgmt-02\t1538053.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n100000_d4_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n100000_d8\t2\t32\t64\t1538077.stdct-mgmt-02\t1538078.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n100000_d8_n2_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n200000_d16\t1\t32\t32\t1538079.stdct-mgmt-02\t1538080.stdct-mgmt-02\t00:20:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d16_n1_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n200000_d4\t1\t32\t32\t1538081.stdct-mgmt-02\t1538082.stdct-mgmt-02\t00:20:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d4_n1_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d4\t2\t2\t4\t1538095.stdct-mgmt-02\t1538096.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n2_c2.json\t1530741.stdct-mgmt-02\ngrid_uniform_n200000_d8\t1\t32\t32\t1538288.stdct-mgmt-02\t1538289.stdct-mgmt-02\t00:20:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d8_n1_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d16\t2\t4\t8\t1538290.stdct-mgmt-02\t1538291.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n2_c4.json\t1530741.stdct-mgmt-02\ngrid_controlled_n200000_d16\t1\t2\t2\t1538292.stdct-mgmt-02\t1538293.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d16_n1_c2.json\t1530741.stdct-mgmt-02\ngrid_controlled_n200000_d8\t1\t2\t2\t1538294.stdct-mgmt-02\t1538295.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n200000_d8_n1_c2.json\t1530741.stdct-mgmt-02\ngrid_uniform_n100000_d16\t8\t32\t256\t1538490.stdct-mgmt-02\t1538491.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n100000_d16_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n100000_d4\t8\t32\t256\t1538492.stdct-mgmt-02\t1538493.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n100000_d4_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n100000_d8\t4\t32\t128\t1538494.stdct-mgmt-02\t1538495.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n100000_d8_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n100000_d8\t8\t32\t256\t1538496.stdct-mgmt-02\t1538497.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n100000_d8_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n200000_d16\t2\t32\t64\t1538498.stdct-mgmt-02\t1538499.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d16_n2_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n200000_d16\t4\t32\t128\t1538500.stdct-mgmt-02\t1538501.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d16_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n200000_d16\t8\t32\t256\t1538507.stdct-mgmt-02\t1538508.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d16_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n200000_d4\t2\t32\t64\t1538509.stdct-mgmt-02\t1538510.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d4_n2_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n200000_d4\t4\t32\t128\t1538511.stdct-mgmt-02\t1538512.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d4_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n200000_d4\t8\t32\t256\t1538514.stdct-mgmt-02\t1538515.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d4_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n200000_d8\t2\t32\t64\t1538516.stdct-mgmt-02\t1538517.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d8_n2_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n200000_d8\t4\t32\t128\t1538518.stdct-mgmt-02\t1538519.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d8_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n200000_d8\t8\t32\t256\t1538520.stdct-mgmt-02\t1538521.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n200000_d8_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n400000_d16\t1\t32\t32\t1538532.stdct-mgmt-02\t1538533.stdct-mgmt-02\t00:20:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d16_n1_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n400000_d16\t2\t32\t64\t1538534.stdct-mgmt-02\t1538535.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d16_n2_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n400000_d16\t4\t32\t128\t1538536.stdct-mgmt-02\t1538537.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d16_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n400000_d16\t8\t32\t256\t1538538.stdct-mgmt-02\t1538539.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d16_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n400000_d4\t1\t32\t32\t1538542.stdct-mgmt-02\t1538543.stdct-mgmt-02\t00:20:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d4_n1_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n400000_d4\t2\t32\t64\t1538549.stdct-mgmt-02\t1538550.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d4_n2_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n400000_d4\t4\t32\t128\t1538551.stdct-mgmt-02\t1538552.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d4_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n400000_d4\t8\t32\t256\t1538553.stdct-mgmt-02\t1538554.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d4_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n400000_d8\t1\t32\t32\t1538555.stdct-mgmt-02\t1538556.stdct-mgmt-02\t00:20:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d8_n1_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n400000_d8\t2\t32\t64\t1538557.stdct-mgmt-02\t1538558.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d8_n2_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n400000_d8\t4\t32\t128\t1538559.stdct-mgmt-02\t1538560.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d8_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n400000_d8\t8\t32\t256\t1538561.stdct-mgmt-02\t1538562.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d8_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n50000_d16\t2\t32\t64\t1538563.stdct-mgmt-02\t1538564.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d16_n2_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n50000_d16\t4\t32\t128\t1538565.stdct-mgmt-02\t1538566.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d16_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n50000_d16\t8\t32\t256\t1538567.stdct-mgmt-02\t1538568.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d16_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n50000_d4\t2\t32\t64\t1538569.stdct-mgmt-02\t1538570.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d4_n2_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n50000_d4\t4\t32\t128\t1538571.stdct-mgmt-02\t1538572.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d4_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n50000_d4\t8\t32\t256\t1538573.stdct-mgmt-02\t1538574.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d4_n8_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n50000_d8\t2\t32\t64\t1538576.stdct-mgmt-02\t1538577.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d8_n2_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n50000_d8\t4\t32\t128\t1538578.stdct-mgmt-02\t1538579.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d8_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_uniform_n50000_d8\t8\t32\t256\t1538580.stdct-mgmt-02\t1538581.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d8_n8_c32.json\t1530741.stdct-mgmt-02\nsynthetic_controlled\t2\t32\t64\t1538582.stdct-mgmt-02\t1538583.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/synthetic_controlled_n2_c32.json\t1530741.stdct-mgmt-02\nsynthetic_controlled\t4\t32\t128\t1538584.stdct-mgmt-02\t1538585.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/synthetic_controlled_n4_c32.json\t1530741.stdct-mgmt-02\nsynthetic_controlled\t8\t32\t256\t1538586.stdct-mgmt-02\t1538587.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/synthetic_controlled_n8_c32.json\t1530741.stdct-mgmt-02\nsynthetic_hub\t2\t32\t64\t1538601.stdct-mgmt-02\t1538602.stdct-mgmt-02\t00:30:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/synthetic_hub_n2_c32.json\t1530741.stdct-mgmt-02\nsynthetic_hub\t4\t32\t128\t1538603.stdct-mgmt-02\t1538604.stdct-mgmt-02\t00:45:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/synthetic_hub_n4_c32.json\t1530741.stdct-mgmt-02\nsynthetic_hub\t8\t32\t256\t1538605.stdct-mgmt-02\t1538606.stdct-mgmt-02\t01:00:00\t10\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/synthetic_hub_n8_c32.json\t1530741.stdct-mgmt-02\nstrong_hub\t4\t32\t128\t1538607.stdct-mgmt-02\t1538608.stdct-mgmt-02\t04:00:00\t26\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_hub_n4_c32.json\t1530741.stdct-mgmt-02\nstrong_uniform\t4\t32\t128\t1538609.stdct-mgmt-02\t1538610.stdct-mgmt-02\t04:00:00\t26\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_uniform_n4_c32.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d16\t2\t8\t16\t1538611.stdct-mgmt-02\t1538612.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n2_c8.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d16\t2\t16\t32\t1538613.stdct-mgmt-02\t1538614.stdct-mgmt-02\t00:30:00\t8\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n2_c16.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d16\t4\t2\t8\t1538615.stdct-mgmt-02\t1538616.stdct-mgmt-02\t00:45:00\t2\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n4_c2.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d16\t4\t4\t16\t1538617.stdct-mgmt-02\t1538618.stdct-mgmt-02\t00:45:00\t4\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n4_c4.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d16\t4\t8\t32\t1538619.stdct-mgmt-02\t1538620.stdct-mgmt-02\t00:45:00\t6\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n4_c8.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d16\t4\t16\t64\t1538621.stdct-mgmt-02\t1538622.stdct-mgmt-02\t00:45:00\t8\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n4_c16.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d16\t8\t2\t16\t1538623.stdct-mgmt-02\t1538624.stdct-mgmt-02\t01:00:00\t2\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n8_c2.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d16\t8\t4\t32\t1538625.stdct-mgmt-02\t1538626.stdct-mgmt-02\t01:00:00\t4\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n8_c4.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d16\t8\t8\t64\t1538627.stdct-mgmt-02\t1538628.stdct-mgmt-02\t01:00:00\t6\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n8_c8.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d16\t8\t16\t128\t1538629.stdct-mgmt-02\t1538630.stdct-mgmt-02\t01:00:00\t8\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d16_n8_c16.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d4\t2\t4\t8\t1538631.stdct-mgmt-02\t1538632.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n2_c4.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d4\t2\t8\t16\t1538633.stdct-mgmt-02\t1538634.stdct-mgmt-02\t00:30:00\t6\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n2_c8.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d4\t2\t16\t32\t1538635.stdct-mgmt-02\t1538636.stdct-mgmt-02\t00:30:00\t8\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n2_c16.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d4\t4\t2\t8\t1538637.stdct-mgmt-02\t1538638.stdct-mgmt-02\t00:45:00\t2\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n4_c2.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d4\t4\t4\t16\t1538639.stdct-mgmt-02\t1538640.stdct-mgmt-02\t00:45:00\t4\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n4_c4.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d4\t4\t8\t32\t1538641.stdct-mgmt-02\t1538642.stdct-mgmt-02\t00:45:00\t6\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n4_c8.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d4\t4\t16\t64\t1538643.stdct-mgmt-02\t1538644.stdct-mgmt-02\t00:45:00\t8\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n4_c16.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d4\t8\t2\t16\t1538645.stdct-mgmt-02\t1538646.stdct-mgmt-02\t01:00:00\t2\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n8_c2.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d4\t8\t4\t32\t1538647.stdct-mgmt-02\t1538648.stdct-mgmt-02\t01:00:00\t4\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n8_c4.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d4\t8\t8\t64\t1538649.stdct-mgmt-02\t1538650.stdct-mgmt-02\t01:00:00\t6\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d4_n8_c8.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d8\t2\t2\t4\t1538651.stdct-mgmt-02\t1538652.stdct-mgmt-02\t00:30:00\t2\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d8_n2_c2.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d8\t2\t4\t8\t1538653.stdct-mgmt-02\t1538654.stdct-mgmt-02\t00:30:00\t4\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d8_n2_c4.json\t1530741.stdct-mgmt-02\ngrid_controlled_n100000_d8\t4\t2\t8\t1538655.stdct-mgmt-02\t1538656.stdct-mgmt-02\t00:45:00\t2\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n100000_d8_n4_c2.json\t1530741.stdct-mgmt-02\ngrid_controlled_n400000_d16\t1\t2\t2\t1538657.stdct-mgmt-02\t1538658.stdct-mgmt-02\t00:20:00\t2\tresults/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n400000_d16_n1_c2.json\t1530741.stdct-mgmt-02\n",
+  "new_plans": {},
+  "jobs": {
+    "1532794.stdct-mgmt-02": {
+      "job_state": "H",
+      "Exit_status": "-3",
+      "queue": "batch_cpu",
+      "Hold_Types": "su",
+      "comment": "Job held by xtt_ella on Wed Nov 11 00:34:58 2026",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 512.0, \"am_cloud_enabled\": false}",
+        "mem": "3552gb",
+        "mpiprocs": 512,
+        "ncpus": 512,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
+        "walltime": "01:00:00"
+      }
+    },
+    "1532795.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_parallel",
+      "Hold_Types": "d",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1537507.stdct-mgmt-02": {
+      "job_state": "H",
+      "Exit_status": "-3",
+      "queue": "batch_cpu",
+      "Hold_Types": "su",
+      "comment": "Job held by xtt_ella on Wed Nov 11 02:02:27 2026",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1200, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 32.0, \"am_cloud_enabled\": false}",
+        "mem": "222gb",
+        "mpiprocs": 32,
+        "ncpus": 32,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
+        "walltime": "00:20:00"
+      }
+    },
+    "1537508.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_parallel",
+      "Hold_Types": "d",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1537509.stdct-mgmt-02": {
+      "job_state": "H",
+      "Exit_status": "-3",
+      "queue": "batch_cpu",
+      "Hold_Types": "su",
+      "comment": "Job held by xtt_ella on Wed Nov 11 02:02:27 2026",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1800, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 64.0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "2:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
+        "walltime": "00:30:00"
+      }
+    },
+    "1537510.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_parallel",
+      "Hold_Types": "d",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1537572.stdct-mgmt-02": {
+      "job_state": "H",
+      "Exit_status": "-3",
+      "queue": "batch_cpu",
+      "Hold_Types": "su",
+      "comment": "Job held by xtt_ella on Wed Nov 11 02:02:27 2026",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 1800, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 64.0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "2:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
+        "walltime": "00:30:00"
+      }
+    },
+    "1537573.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_parallel",
+      "Hold_Types": "d",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "128gb",
+        "mpiprocs": 1,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=4:mpiprocs=1:ompthreads=1:mem=128gb",
+        "walltime": "24:00:00"
+      }
+    }
+  },
+  "monitor": {
+    "pending_performance_groups": 0,
+    "deferred_held_jobs": [
+      "1532794.stdct-mgmt-02",
+      "1537507.stdct-mgmt-02",
+      "1537509.stdct-mgmt-02",
+      "1537572.stdct-mgmt-02"
+    ],
+    "pending_validation_groups": 0,
+    "failed_jobs_not_retried": [
+      "1537511.stdct-mgmt-02",
+      "1537512.stdct-mgmt-02",
+      "1538617.stdct-mgmt-02",
+      "1538618.stdct-mgmt-02"
+    ],
+    "performance_states": {
+      "F": 148,
+      "H": 1
+    },
+    "validation_states": {
+      "F": 148,
+      "H": 1
+    },
+    "eligible_unregistered_groups": 319,
+    "eligible_unregistered_cells": 2588,
+    "endpoint_proof_state": {
+      "1532795.stdct-mgmt-02": "H"
+    },
+    "balance_cpu_hours": 16.096999999999753,
+    "submission_check": {
+      "observed_at": "2026-11-11T22:52:21.252387+08:00",
+      "submitted": true,
+      "balance": 16.096999999999753,
+      "balance_source": "hpc_project",
+      "prior_pending_reservations": 0,
+      "margin": 16.0,
+      "deferred_user_held_jobs": [
+        "1532794.stdct-mgmt-02",
+        "1537507.stdct-mgmt-02",
+        "1537509.stdct-mgmt-02",
+        "1537572.stdct-mgmt-02"
+      ],
+      "new_reservations": 0,
+      "uncommitted_after_margin": 0.09699999999975262,
+      "groups": []
+    },
+    "action": "waiting_real_credits",
+    "observed_at": "2026-11-11T22:52:15.019132+08:00",
+    "pid": 2632870,
+    "interval_seconds": 60,
+    "until": "2026-11-12T23:59:00+08:00",
+    "margin_cpu_hours": 16.0,
+    "state_directory": "results/updated_vanda_scaling/20261106T185006Z/monitor_recovery_20261110",
+    "max_total_cores": 256
+  },
+  "new_groups": 0,
+  "input_receipt": null
+}

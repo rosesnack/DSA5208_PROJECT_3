@@ -1,0 +1,102 @@
+{
+  "job": "1543003.stdct-mgmt-02",
+  "job_state": "F",
+  "Exit_status": 0,
+  "queue": "cpu_parallel",
+  "comment": "Job run at Wed Nov 11 at 22:44 on (CN-135[1]:ncpus=2:mem=4gb)+(CN-136[1]:ncpus=2:mem=4gb)+(CN-140[0]:ncpus=2:mem=4gb)+(CN-142[1]:ncpus=2:mem=4gb) and finished",
+  "resources_used": {
+    "cpupercent": 0,
+    "cput": "00:00:00",
+    "mem": "1884kb",
+    "ncpus": 8,
+    "ngpus": 0,
+    "vmem": "15280kb",
+    "walltime": "00:00:04"
+  },
+  "Resource_List": {
+    "am_job_cache": "{\"job.walltime\": 1200, \"job.ncpus\": 8.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+    "mem": "16gb",
+    "mpiprocs": 4,
+    "ncpus": 8,
+    "ngpus": 0,
+    "nodect": 4,
+    "place": "scatter",
+    "queue_charge_rate": 0,
+    "select": "4:ncpus=2:mpiprocs=1:ompthreads=2:mem=4gb:node_pool=cpu_node:switch=ccid-10",
+    "walltime": "00:20:00"
+  },
+  "hosts": [
+    {
+      "host": "CN-135",
+      "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+      "logical_cpus": 72,
+      "affinity_cpus": 2,
+      "tcp_ephemeral_port_range": "32768\t61439",
+      "tcp_tw_reuse": "2"
+    },
+    {
+      "host": "CN-136",
+      "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+      "logical_cpus": 72,
+      "affinity_cpus": 2,
+      "tcp_ephemeral_port_range": "32768\t61439",
+      "tcp_tw_reuse": "2"
+    },
+    {
+      "host": "CN-142",
+      "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+      "logical_cpus": 72,
+      "affinity_cpus": 2,
+      "tcp_ephemeral_port_range": "32768\t61439",
+      "tcp_tw_reuse": "2"
+    },
+    {
+      "host": "CN-140",
+      "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+      "logical_cpus": 72,
+      "affinity_cpus": 2,
+      "tcp_ephemeral_port_range": "32768\t61439",
+      "tcp_tw_reuse": "2"
+    }
+  ],
+  "input_receipt": {
+    "preparation_job": "1543003.stdct-mgmt-02",
+    "graphs": [
+      "grid_controlled_n200000_d16",
+      "grid_controlled_n200000_d4",
+      "grid_controlled_n200000_d8",
+      "grid_controlled_n400000_d16",
+      "grid_controlled_n400000_d4",
+      "grid_controlled_n400000_d8",
+      "grid_controlled_n50000_d16",
+      "grid_controlled_n50000_d8",
+      "grid_hub_n100000_d16",
+      "grid_hub_n100000_d4",
+      "grid_hub_n100000_d8",
+      "grid_hub_n200000_d16",
+      "grid_hub_n200000_d4",
+      "grid_hub_n200000_d8",
+      "grid_hub_n400000_d16",
+      "grid_hub_n400000_d4",
+      "grid_hub_n400000_d8",
+      "grid_hub_n50000_d16",
+      "grid_hub_n50000_d4",
+      "grid_hub_n50000_d8",
+      "grid_uniform_n100000_d16",
+      "grid_uniform_n100000_d4",
+      "grid_uniform_n100000_d8",
+      "grid_uniform_n200000_d16",
+      "grid_uniform_n200000_d4",
+      "grid_uniform_n200000_d8",
+      "grid_uniform_n400000_d16",
+      "grid_uniform_n400000_d4",
+      "grid_uniform_n400000_d8",
+      "grid_uniform_n50000_d16",
+      "synthetic_controlled",
+      "synthetic_hub"
+    ],
+    "reference_data_root": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z",
+    "serial_performance_rerun": false,
+    "new_build": false
+  }
+}

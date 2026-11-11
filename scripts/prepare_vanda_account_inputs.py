@@ -36,7 +36,8 @@ def main():
                'reference_data_root': str(args.reference_data_root),
                'serial_performance_rerun': False, 'new_build': False}
     destination = Path('results/updated_vanda_scaling') / os.environ['RUN_ID']
-    (destination / 'phase3_inputs_ready_20261111.json').write_text(json.dumps(receipt, indent=2) + '\n')
+    receipt_name = os.environ.get('PAGERANK_INPUT_RECEIPT', 'phase3_inputs_ready_20261111.json')
+    (destination / receipt_name).write_text(json.dumps(receipt, indent=2) + '\n')
     print(json.dumps(receipt))
 
 

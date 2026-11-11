@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-11T22:07:10.089963+08:00",
+  "observed_at": "2026-11-11T22:52:21.648396+08:00",
   "account": "xtt_ella",
   "source_project": "/scratch/xtt_ella/DSA5208_PROJECT_3_20261107",
   "run_id": "20261106T185006Z",
@@ -27,14 +27,14 @@
       "F": 148,
       "H": 1
     },
-    "eligible_unregistered_groups": 357,
-    "eligible_unregistered_cells": 2688,
+    "eligible_unregistered_groups": 319,
+    "eligible_unregistered_cells": 2588,
     "endpoint_proof_state": {
       "1532795.stdct-mgmt-02": "H"
     },
     "balance_cpu_hours": 16.096999999999753,
     "submission_check": {
-      "observed_at": "2026-11-11T22:06:37.563519+08:00",
+      "observed_at": "2026-11-11T22:52:21.252387+08:00",
       "submitted": true,
       "balance": 16.096999999999753,
       "balance_source": "hpc_project",
@@ -51,8 +51,8 @@
       "groups": []
     },
     "action": "waiting_real_credits",
-    "observed_at": "2026-11-11T22:06:30.741826+08:00",
-    "pid": 765730,
+    "observed_at": "2026-11-11T22:52:15.019132+08:00",
+    "pid": 2632870,
     "interval_seconds": 60,
     "until": "2026-11-12T23:59:00+08:00",
     "margin_cpu_hours": 16.0,
@@ -6913,7 +6913,7 @@
     }
   },
   "registered_groups": 149,
-  "queue_observed_at": "2026-11-11T22:07:10.089963+08:00",
+  "queue_observed_at": "2026-11-11T22:52:21.648396+08:00",
   "project_query_authenticated": true,
   "balance_cpu_hours": 16.096999999999753
 }

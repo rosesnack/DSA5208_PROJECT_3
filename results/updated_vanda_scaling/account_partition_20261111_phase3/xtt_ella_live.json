@@ -1,6 +1,6 @@
 {
   "account": "xtt_ella",
-  "observed_at": "2026-11-11T22:05:28.766000+08:00",
+  "observed_at": "2026-11-11T22:34:59.156651+08:00",
   "monitor": {
     "pending_performance_groups": 0,
     "deferred_held_jobs": [
@@ -31,7 +31,7 @@
     },
     "balance_cpu_hours": 16.096999999999753,
     "submission_check": {
-      "observed_at": "2026-11-11T22:04:24.220381+08:00",
+      "observed_at": "2026-11-11T22:33:37.194615+08:00",
       "submitted": true,
       "balance": 16.096999999999753,
       "balance_source": "hpc_project",
@@ -48,7 +48,7 @@
       "groups": []
     },
     "action": "waiting_real_credits",
-    "observed_at": "2026-11-11T22:04:19.073089+08:00",
+    "observed_at": "2026-11-11T22:33:31.463663+08:00",
     "pid": 765730,
     "interval_seconds": 60,
     "until": "2026-11-12T23:59:00+08:00",
