@@ -1,18 +1,18 @@
 {
-  "observed_at": "2026-11-12T13:04:12.359316+08:00",
+  "observed_at": "2026-11-12T16:06:50.346936+08:00",
   "account": "xtt_ella",
   "source_project": "/scratch/xtt_ella/DSA5208_PROJECT_3_20261107",
   "run_id": "20261106T185006Z",
   "monitor_alive": true,
   "monitor": {
-    "pending_performance_groups": 12,
+    "pending_performance_groups": 9,
     "deferred_held_jobs": [
       "1532794.stdct-mgmt-02",
       "1537507.stdct-mgmt-02",
       "1537509.stdct-mgmt-02",
       "1537572.stdct-mgmt-02"
     ],
-    "pending_validation_groups": 2,
+    "pending_validation_groups": 10,
     "failed_jobs_not_retried": [
       "1537511.stdct-mgmt-02",
       "1537512.stdct-mgmt-02",
@@ -38,24 +38,23 @@
       "1543593.stdct-mgmt-02"
     ],
     "performance_states": {
-      "F": 231,
+      "F": 270,
       "H": 1,
-      "R": 4,
-      "Q": 8
+      "R": 6,
+      "Q": 3
     },
     "validation_states": {
-      "F": 229,
-      "H": 13,
-      "R": 2
+      "F": 260,
+      "H": 10,
+      "R": 10
     },
-    "eligible_unregistered_groups": 108,
-    "eligible_unregistered_cells": 1060,
+    "eligible_unregistered_groups": 72,
+    "eligible_unregistered_cells": 620,
     "endpoint_proof_state": {
       "1532795.stdct-mgmt-02": "H"
     },
-    "balance_cpu_hours": 4552.617,
-    "action": "waiting_existing_jobs",
-    "observed_at": "2026-11-12T13:03:03.300662+08:00",
+    "action": "waiting_amgr_login",
+    "observed_at": "2026-11-12T16:06:13.275406+08:00",
     "pid": 1141196,
     "interval_seconds": 60,
     "until": "2026-11-12T23:59:00+08:00",
@@ -216,41 +215,14 @@
         "walltime": "24:00:00"
       }
     },
-    "1545925.stdct-mgmt-02": {
-      "job_state": "R",
-      "queue": "batch_cpu",
-      "Hold_Types": "n",
-      "comment": "Job run at Thu Nov 12 at 12:43 on (CN-088[1]:ncpus=8:mem=55gb)+(CN-119[1]:ncpus=8:mem=55gb)+(CN-120[1]:ncpus=8:mem=55gb)+(CN-083[1]:ncpus=8:mem=55gb)",
-      "project": "personal-xtt_ella",
-      "Resource_List": {
-        "am_job_cache": "{\"job.walltime\": 28800, \"job.ncpus\": 32.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
-        "mem": "220gb",
-        "mpiprocs": 32,
-        "ncpus": 32,
-        "ngpus": 0,
-        "nodect": 4,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-083",
-        "walltime": "08:00:00"
-      },
-      "resources_used": {
-        "cpupercent": 674,
-        "cput": "02:06:35",
-        "mem": "9571080kb",
-        "ncpus": 32,
-        "ngpus": 0,
-        "vmem": "7933304kb",
-        "walltime": "00:20:22"
-      }
-    },
     "1545926.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "R",
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:37 on (IN-006[1]:ncpus=1:mem=20gb)",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -260,59 +232,22 @@
         "queue_charge_rate": 0,
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
-      }
-    },
-    "1545927.stdct-mgmt-02": {
-      "job_state": "R",
-      "queue": "batch_cpu",
-      "Hold_Types": "n",
-      "comment": "Job run at Thu Nov 12 at 12:43 on (CN-088[1]:ncpus=8:mem=55gb)+(CN-119[1]:ncpus=8:mem=55gb)+(CN-120[1]:ncpus=8:mem=55gb)+(CN-141[0]:ncpus=8:mem=55gb)",
-      "project": "personal-xtt_ella",
-      "Resource_List": {
-        "am_job_cache": "{\"job.walltime\": 28800, \"job.ncpus\": 32.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
-        "mem": "220gb",
-        "mpiprocs": 32,
-        "ncpus": 32,
-        "ngpus": 0,
-        "nodect": 4,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-141",
-        "walltime": "08:00:00"
       },
       "resources_used": {
-        "cpupercent": 2087,
-        "cput": "04:34:11",
-        "mem": "14842836kb",
-        "ncpus": 32,
+        "cpupercent": 81,
+        "cput": "02:28:43",
+        "mem": "5260844kb",
+        "ncpus": 1,
         "ngpus": 0,
-        "vmem": "8533872kb",
-        "walltime": "00:20:22"
+        "vmem": "5326744kb",
+        "walltime": "02:29:11"
       }
     },
     "1545928.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "cpu_serial",
-      "Hold_Types": "d",
-      "project": "personal-xtt_ella",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "20gb",
-        "mpiprocs": 1,
-        "ncpus": 1,
-        "ngpus": 0,
-        "nodect": 1,
-        "place": "free",
-        "queue_charge_rate": 0,
-        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
-        "walltime": "24:00:00"
-      }
-    },
-    "1545930.stdct-mgmt-02": {
       "job_state": "R",
       "queue": "cpu_serial",
       "Hold_Types": "n",
-      "comment": "Job run at Thu Nov 12 at 12:19 on (IN-005[1]:ncpus=1:mem=20gb)",
+      "comment": "Job run at Thu Nov 12 at 13:07 on (IN-005[1]:ncpus=1:mem=20gb)",
       "project": "personal-xtt_ella",
       "Resource_List": {
         "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
@@ -327,41 +262,13 @@
         "walltime": "24:00:00"
       },
       "resources_used": {
-        "cpupercent": 76,
-        "cput": "00:44:59",
-        "mem": "5009540kb",
+        "cpupercent": 86,
+        "cput": "02:58:29",
+        "mem": "5255944kb",
         "ncpus": 1,
         "ngpus": 0,
-        "vmem": "5088880kb",
-        "walltime": "00:45:07"
-      }
-    },
-    "1545932.stdct-mgmt-02": {
-      "job_state": "R",
-      "queue": "cpu_serial",
-      "Hold_Types": "n",
-      "comment": "Job run at Thu Nov 12 at 12:27 on (IN-005[0]:ncpus=1:mem=20gb)",
-      "project": "personal-xtt_ella",
-      "Resource_List": {
-        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
-        "mem": "20gb",
-        "mpiprocs": 1,
-        "ncpus": 1,
-        "ngpus": 0,
-        "nodect": 1,
-        "place": "free",
-        "queue_charge_rate": 0,
-        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
-        "walltime": "24:00:00"
-      },
-      "resources_used": {
-        "cpupercent": 73,
-        "cput": "00:36:02",
-        "mem": "5014376kb",
-        "ncpus": 1,
-        "ngpus": 0,
-        "vmem": "5088880kb",
-        "walltime": "00:36:10"
+        "vmem": "5321804kb",
+        "walltime": "02:58:51"
       }
     },
     "1545936.stdct-mgmt-02": {
@@ -381,43 +288,25 @@
         "queue_charge_rate": 0,
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
-      }
-    },
-    "1545939.stdct-mgmt-02": {
-      "job_state": "R",
-      "queue": "batch_cpu",
-      "Hold_Types": "n",
-      "comment": "Job run at Thu Nov 12 at 12:31 on (CN-141[0]:ncpus=16:mem=111gb)",
-      "project": "personal-xtt_ella",
-      "Resource_List": {
-        "am_job_cache": "{\"job.walltime\": 28800, \"job.ncpus\": 16.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
-        "mem": "111gb",
-        "mpiprocs": 16,
-        "ncpus": 16,
-        "ngpus": 0,
-        "nodect": 1,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=ccid-10",
-        "walltime": "08:00:00"
       },
       "resources_used": {
-        "cpupercent": 621,
-        "cput": "01:56:56",
-        "mem": "9102460kb",
-        "ncpus": 16,
+        "cpupercent": 81,
+        "cput": "03:01:01",
+        "mem": "5302384kb",
+        "ncpus": 1,
         "ngpus": 0,
-        "vmem": "10221456kb",
-        "walltime": "00:30:24"
+        "vmem": "5587816kb",
+        "walltime": "03:01:43"
       }
     },
     "1545941.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "R",
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:25 on (IN-003[0]:ncpus=1:mem=20gb)",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -427,28 +316,186 @@
         "queue_charge_rate": 0,
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 85,
+        "cput": "02:39:47",
+        "mem": "5261276kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5326748kb",
+        "walltime": "02:40:25"
       }
     },
-    "1545951.stdct-mgmt-02": {
-      "job_state": "Q",
-      "queue": "batch_cpu",
+    "1546262.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "cpu_serial",
       "Hold_Types": "n",
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (ccid-10 != )",
+      "comment": "Job run at Thu Nov 12 at 14:13 on (IN-005[1]:ncpus=1:mem=20gb)",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "444gb",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 82,
+        "cput": "01:52:00",
+        "mem": "5011036kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5088168kb",
+        "walltime": "01:52:18"
+      }
+    },
+    "1546264.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 14:30 on (IN-005[1]:ncpus=1:mem=20gb)",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 89,
+        "cput": "01:35:07",
+        "mem": "5011740kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5091496kb",
+        "walltime": "01:35:20"
+      }
+    },
+    "1546271.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 15:21 on (CN-161[0]:ncpus=1:mem=20gb)",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 96,
+        "cput": "00:44:09",
+        "mem": "5263212kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5325660kb",
+        "walltime": "00:44:26"
+      }
+    },
+    "1546273.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 15:45 on (CN-161[1]:ncpus=1:mem=20gb)",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 74,
+        "cput": "00:20:16",
+        "mem": "5289284kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5588900kb",
+        "walltime": "00:20:31"
+      }
+    },
+    "1546285.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 14:41 on (CN-161[0]:mem=12753mb:ncpus=1+CN-161[1]:mem=7727mb)",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 81,
+        "cput": "01:24:11",
+        "mem": "5517536kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5583440kb",
+        "walltime": "01:24:38"
+      }
+    },
+    "1546317.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 16:05 on (CN-083[1]:ncpus=8:mem=55gb)+(CN-086[0]:ncpus=8:mem=55gb)+(CN-096[1]:ncpus=8:mem=55gb)+(CN-141[0]:ncpus=8:mem=55gb)+(CN-091[1]:ncpus=8:mem=55gb)+(CN-100[1]:ncpus=8:mem=55gb)+(CN-118[1]:ncpus=8:mem=55gb)+(CN-119[1]:ncpu...",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
         "ngpus": 0,
-        "nodect": 4,
+        "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "4:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=ccid-10",
-        "walltime": "00:45:00"
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-096+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-091+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-100+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-118+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-119",
+        "walltime": "01:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 2437,
+        "cput": "00:04:40",
+        "mem": "214796kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1118960kb",
+        "walltime": "00:00:48"
       }
     },
-    "1545952.stdct-mgmt-02": {
+    "1546318.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "cpu_serial",
       "Hold_Types": "d",
@@ -466,26 +513,35 @@
         "walltime": "24:00:00"
       }
     },
-    "1545953.stdct-mgmt-02": {
-      "job_state": "Q",
+    "1546356.stdct-mgmt-02": {
+      "job_state": "R",
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (ccid-10 != )",
+      "comment": "Job run at Thu Nov 12 at 16:05 on (CN-120[1]:ncpus=8:mem=55gb)+(CN-083[1]:ncpus=8:mem=55gb)+(CN-086[0]:ncpus=8:mem=55gb)+(CN-096[1]:ncpus=8:mem=55gb)+(CN-141[0]:ncpus=8:mem=55gb)+(CN-088[1]:ncpus=8:mem=55gb)+(CN-091[1]:ncpus=8:mem=55gb)+(CN-100[1]:ncpu...",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "444gb",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
         "ngpus": 0,
-        "nodect": 4,
+        "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "4:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=ccid-10",
-        "walltime": "00:45:00"
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-096+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-091+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-100",
+        "walltime": "01:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 1116,
+        "cput": "00:02:51",
+        "mem": "279864kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "792208kb",
+        "walltime": "00:00:38"
       }
     },
-    "1545954.stdct-mgmt-02": {
+    "1546357.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "cpu_serial",
       "Hold_Types": "d",
@@ -503,26 +559,35 @@
         "walltime": "24:00:00"
       }
     },
-    "1545958.stdct-mgmt-02": {
-      "job_state": "Q",
+    "1546491.stdct-mgmt-02": {
+      "job_state": "R",
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (ccid-10 != )",
+      "comment": "Job run at Thu Nov 12 at 16:05 on (CN-118[1]:ncpus=8:mem=55gb)+(CN-119[1]:ncpus=8:mem=55gb)+(CN-120[1]:ncpus=8:mem=55gb)+(CN-136[1]:ncpus=8:mem=55gb)+(CN-083[1]:ncpus=8:mem=55gb)+(CN-086[0]:ncpus=8:mem=55gb)+(CN-096[1]:ncpus=8:mem=55gb)+(CN-141[0]:ncpu...",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "444gb",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
         "ngpus": 0,
-        "nodect": 4,
+        "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "4:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=ccid-10",
-        "walltime": "00:45:00"
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-118+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-136+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-096+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-141",
+        "walltime": "01:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 600,
+        "cput": "00:03:30",
+        "mem": "403792kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "924048kb",
+        "walltime": "00:00:48"
       }
     },
-    "1545959.stdct-mgmt-02": {
+    "1546492.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "cpu_serial",
       "Hold_Types": "d",
@@ -540,26 +605,35 @@
         "walltime": "24:00:00"
       }
     },
-    "1545962.stdct-mgmt-02": {
-      "job_state": "Q",
+    "1546548.stdct-mgmt-02": {
+      "job_state": "R",
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (ccid-10 != )",
+      "comment": "Job run at Thu Nov 12 at 16:05 on (CN-152[1]:ncpus=8:mem=55gb)+(CN-088[1]:ncpus=8:mem=55gb)+(CN-091[1]:ncpus=8:mem=55gb)+(CN-100[1]:ncpus=8:mem=55gb)+(CN-118[1]:ncpus=8:mem=55gb)+(CN-119[1]:ncpus=8:mem=55gb)+(CN-120[1]:ncpus=8:mem=55gb)+(CN-136[1]:ncpu...",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "444gb",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
         "ngpus": 0,
-        "nodect": 4,
+        "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "4:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=ccid-10",
-        "walltime": "00:45:00"
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-152+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-091+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-100+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-118+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-136",
+        "walltime": "01:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 2406,
+        "cput": "00:02:30",
+        "mem": "210604kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "744064kb",
+        "walltime": "00:00:38"
       }
     },
-    "1545963.stdct-mgmt-02": {
+    "1546549.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "cpu_serial",
       "Hold_Types": "d",
@@ -577,26 +651,35 @@
         "walltime": "24:00:00"
       }
     },
-    "1545977.stdct-mgmt-02": {
-      "job_state": "Q",
+    "1546560.stdct-mgmt-02": {
+      "job_state": "R",
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (ccid-10 != )",
+      "comment": "Job run at Thu Nov 12 at 16:05 on (CN-083[1]:ncpus=8:mem=55gb)+(CN-086[0]:ncpus=8:mem=55gb)+(CN-096[1]:ncpus=8:mem=55gb)+(CN-141[0]:ncpus=8:mem=55gb)+(CN-152[1]:ncpus=8:mem=55gb)+(CN-007[1]:ncpus=8:mem=55gb)+(CN-088[1]:ncpus=8:mem=55gb)+(CN-091[1]:ncpu...",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "444gb",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
         "ngpus": 0,
-        "nodect": 4,
+        "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "4:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=ccid-10",
-        "walltime": "00:45:00"
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-096+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-152+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-091",
+        "walltime": "01:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 945,
+        "cput": "00:03:16",
+        "mem": "252396kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "823300kb",
+        "walltime": "00:00:42"
       }
     },
-    "1545978.stdct-mgmt-02": {
+    "1546561.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "cpu_serial",
       "Hold_Types": "d",
@@ -614,26 +697,26 @@
         "walltime": "24:00:00"
       }
     },
-    "1546030.stdct-mgmt-02": {
+    "1546564.stdct-mgmt-02": {
       "job_state": "Q",
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-141 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-005 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
       "project": "personal-xtt_ella",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
-        "mem": "444gb",
-        "mpiprocs": 64,
-        "ncpus": 64,
+        "mem": "888gb",
+        "mpiprocs": 128,
+        "ncpus": 128,
         "ngpus": 0,
-        "nodect": 4,
+        "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119",
-        "walltime": "00:45:00"
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-005+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-146+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-136+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-142",
+        "walltime": "01:00:00"
       }
     },
-    "1546031.stdct-mgmt-02": {
+    "1546565.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "cpu_serial",
       "Hold_Types": "d",
@@ -651,26 +734,26 @@
         "walltime": "24:00:00"
       }
     },
-    "1546051.stdct-mgmt-02": {
+    "1546566.stdct-mgmt-02": {
       "job_state": "Q",
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-120 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-005 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
       "project": "personal-xtt_ella",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
-        "mem": "444gb",
-        "mpiprocs": 64,
-        "ncpus": 64,
+        "mem": "888gb",
+        "mpiprocs": 128,
+        "ncpus": 128,
         "ngpus": 0,
-        "nodect": 4,
+        "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088",
-        "walltime": "00:45:00"
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-005+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-146+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-136+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-142",
+        "walltime": "01:00:00"
       }
     },
-    "1546052.stdct-mgmt-02": {
+    "1546567.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "cpu_serial",
       "Hold_Types": "d",
@@ -688,26 +771,26 @@
         "walltime": "24:00:00"
       }
     },
-    "1546055.stdct-mgmt-02": {
+    "1546568.stdct-mgmt-02": {
       "job_state": "Q",
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-119 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-005 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
       "project": "personal-xtt_ella",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
-        "mem": "444gb",
-        "mpiprocs": 64,
-        "ncpus": 64,
+        "mem": "888gb",
+        "mpiprocs": 128,
+        "ncpus": 128,
         "ngpus": 0,
-        "nodect": 4,
+        "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083",
-        "walltime": "00:45:00"
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-005+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-146+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-136+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-142",
+        "walltime": "01:00:00"
       }
     },
-    "1546056.stdct-mgmt-02": {
+    "1546569.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "cpu_serial",
       "Hold_Types": "d",
@@ -723,6 +806,34 @@
         "queue_charge_rate": 0,
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
+      }
+    },
+    "1546577.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 16:06 on (IN-006[1]:ncpus=1:mem=20gb)",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 0,
+        "cput": "00:00:00",
+        "mem": "0kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "0kb",
+        "walltime": "00:00:00"
       }
     }
   },
@@ -12468,10 +12579,11 @@
       }
     },
     "1545925.stdct-mgmt-02": {
-      "job_state": "R",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Job run at Thu Nov 12 at 12:43 on (CN-088[1]:ncpus=8:mem=55gb)+(CN-119[1]:ncpus=8:mem=55gb)+(CN-120[1]:ncpus=8:mem=55gb)+(CN-083[1]:ncpus=8:mem=55gb)",
+      "comment": "Job run at Thu Nov 12 at 12:43 on (CN-088[1]:ncpus=8:mem=55gb)+(CN-119[1]:ncpus=8:mem=55gb)+(CN-120[1]:ncpus=8:mem=55gb)+(CN-083[1]:ncpus=8:mem=55gb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
         "am_job_cache": "{\"job.walltime\": 28800, \"job.ncpus\": 32.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
@@ -12486,22 +12598,23 @@
         "walltime": "08:00:00"
       },
       "resources_used": {
-        "cpupercent": 674,
-        "cput": "02:06:35",
-        "mem": "9571080kb",
+        "cpupercent": 3090,
+        "cput": "15:41:20",
+        "mem": "13500352kb",
         "ncpus": 32,
         "ngpus": 0,
-        "vmem": "7933304kb",
-        "walltime": "00:20:22"
+        "vmem": "9776924kb",
+        "walltime": "00:53:35"
       }
     },
     "1545926.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "R",
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:37 on (IN-006[1]:ncpus=1:mem=20gb)",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -12511,13 +12624,23 @@
         "queue_charge_rate": 0,
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 81,
+        "cput": "02:28:43",
+        "mem": "5260844kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5326744kb",
+        "walltime": "02:29:11"
       }
     },
     "1545927.stdct-mgmt-02": {
-      "job_state": "R",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Job run at Thu Nov 12 at 12:43 on (CN-088[1]:ncpus=8:mem=55gb)+(CN-119[1]:ncpus=8:mem=55gb)+(CN-120[1]:ncpus=8:mem=55gb)+(CN-141[0]:ncpus=8:mem=55gb)",
+      "comment": "Job run at Thu Nov 12 at 12:43 on (CN-088[1]:ncpus=8:mem=55gb)+(CN-119[1]:ncpus=8:mem=55gb)+(CN-120[1]:ncpus=8:mem=55gb)+(CN-141[0]:ncpus=8:mem=55gb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
         "am_job_cache": "{\"job.walltime\": 28800, \"job.ncpus\": 32.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
@@ -12532,22 +12655,23 @@
         "walltime": "08:00:00"
       },
       "resources_used": {
-        "cpupercent": 2087,
-        "cput": "04:34:11",
-        "mem": "14842836kb",
+        "cpupercent": 2490,
+        "cput": "06:15:51",
+        "mem": "17188644kb",
         "ncpus": 32,
         "ngpus": 0,
-        "vmem": "8533872kb",
-        "walltime": "00:20:22"
+        "vmem": "8533876kb",
+        "walltime": "00:23:35"
       }
     },
     "1545928.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "R",
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:07 on (IN-005[1]:ncpus=1:mem=20gb)",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -12557,6 +12681,15 @@
         "queue_charge_rate": 0,
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 86,
+        "cput": "02:58:29",
+        "mem": "5255944kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5321804kb",
+        "walltime": "02:58:51"
       }
     },
     "1545929.stdct-mgmt-02": {
@@ -12589,10 +12722,11 @@
       }
     },
     "1545930.stdct-mgmt-02": {
-      "job_state": "R",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
       "Hold_Types": "n",
-      "comment": "Job run at Thu Nov 12 at 12:19 on (IN-005[1]:ncpus=1:mem=20gb)",
+      "comment": "Job run at Thu Nov 12 at 12:19 on (IN-005[1]:ncpus=1:mem=20gb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
         "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
@@ -12607,13 +12741,13 @@
         "walltime": "24:00:00"
       },
       "resources_used": {
-        "cpupercent": 76,
-        "cput": "00:44:59",
-        "mem": "5009540kb",
+        "cpupercent": 81,
+        "cput": "02:06:20",
+        "mem": "5010548kb",
         "ncpus": 1,
         "ngpus": 0,
         "vmem": "5088880kb",
-        "walltime": "00:45:07"
+        "walltime": "02:06:39"
       }
     },
     "1545931.stdct-mgmt-02": {
@@ -12646,10 +12780,11 @@
       }
     },
     "1545932.stdct-mgmt-02": {
-      "job_state": "R",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
       "Hold_Types": "n",
-      "comment": "Job run at Thu Nov 12 at 12:27 on (IN-005[0]:ncpus=1:mem=20gb)",
+      "comment": "Job run at Thu Nov 12 at 12:27 on (IN-005[0]:ncpus=1:mem=20gb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
         "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
@@ -12664,13 +12799,13 @@
         "walltime": "24:00:00"
       },
       "resources_used": {
-        "cpupercent": 73,
-        "cput": "00:36:02",
-        "mem": "5014376kb",
+        "cpupercent": 81,
+        "cput": "02:27:36",
+        "mem": "5017064kb",
         "ncpus": 1,
         "ngpus": 0,
         "vmem": "5088880kb",
-        "walltime": "00:36:10"
+        "walltime": "02:28:05"
       }
     },
     "1545935.stdct-mgmt-02": {
@@ -12719,13 +12854,23 @@
         "queue_charge_rate": 0,
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 81,
+        "cput": "03:01:01",
+        "mem": "5302384kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5587816kb",
+        "walltime": "03:01:43"
       }
     },
     "1545939.stdct-mgmt-02": {
-      "job_state": "R",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Job run at Thu Nov 12 at 12:31 on (CN-141[0]:ncpus=16:mem=111gb)",
+      "comment": "Job run at Thu Nov 12 at 12:31 on (CN-141[0]:ncpus=16:mem=111gb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
         "am_job_cache": "{\"job.walltime\": 28800, \"job.ncpus\": 16.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
@@ -12740,22 +12885,23 @@
         "walltime": "08:00:00"
       },
       "resources_used": {
-        "cpupercent": 621,
-        "cput": "01:56:56",
-        "mem": "9102460kb",
+        "cpupercent": 1559,
+        "cput": "07:11:14",
+        "mem": "10007716kb",
         "ncpus": 16,
         "ngpus": 0,
-        "vmem": "10221456kb",
-        "walltime": "00:30:24"
+        "vmem": "14145284kb",
+        "walltime": "00:53:42"
       }
     },
     "1545941.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "R",
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:25 on (IN-003[0]:ncpus=1:mem=20gb)",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -12765,6 +12911,15 @@
         "queue_charge_rate": 0,
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 85,
+        "cput": "02:39:47",
+        "mem": "5261276kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5326748kb",
+        "walltime": "02:40:25"
       }
     },
     "1545943.stdct-mgmt-02": {
@@ -12942,13 +13097,14 @@
       }
     },
     "1545951.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (ccid-10 != )",
+      "comment": "Job run at Thu Nov 12 at 14:36 on (CN-135[0]:ncpus=16:mem=111gb)+(CN-141[0]:ncpus=16:mem=111gb)+(CN-142[1]:ncpus=16:mem=111gb)+(CN-147[1]:ncpus=16:mem=111gb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "444gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -12958,15 +13114,26 @@
         "queue_charge_rate": 1,
         "select": "4:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=ccid-10",
         "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 661,
+        "cput": "00:03:11",
+        "mem": "66980kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1674828kb",
+        "walltime": "00:00:34"
       }
     },
     "1545952.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 14:37 on (CN-161[0]:mem=12753mb:ncpus=1+CN-161[1]:mem=7727mb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -12976,16 +13143,26 @@
         "queue_charge_rate": 0,
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 83,
+        "cput": "00:00:13",
+        "mem": "37840kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "66788kb",
+        "walltime": "00:00:15"
       }
     },
     "1545953.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (ccid-10 != )",
+      "comment": "Job run at Thu Nov 12 at 14:37 on (CN-135[0]:ncpus=16:mem=111gb)+(CN-140[0]:ncpus=16:mem=111gb)+(CN-141[0]:ncpus=16:mem=111gb)+(CN-142[1]:ncpus=16:mem=111gb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "444gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -12995,15 +13172,26 @@
         "queue_charge_rate": 1,
         "select": "4:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=ccid-10",
         "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 1152,
+        "cput": "00:03:53",
+        "mem": "100080kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1668428kb",
+        "walltime": "00:00:40"
       }
     },
     "1545954.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 14:38 on (CN-161[0]:mem=12753mb:ncpus=1+CN-161[1]:mem=7727mb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -13013,16 +13201,26 @@
         "queue_charge_rate": 0,
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 87,
+        "cput": "00:00:41",
+        "mem": "63080kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "91956kb",
+        "walltime": "00:00:44"
       }
     },
     "1545958.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (ccid-10 != )",
+      "comment": "Job run at Thu Nov 12 at 14:37 on (CN-135[0]:ncpus=16:mem=111gb)+(CN-140[0]:ncpus=16:mem=111gb)+(CN-142[1]:ncpus=16:mem=111gb)+(CN-147[1]:ncpus=16:mem=111gb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "444gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -13032,15 +13230,26 @@
         "queue_charge_rate": 1,
         "select": "4:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=ccid-10",
         "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 769,
+        "cput": "00:03:29",
+        "mem": "87572kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1668436kb",
+        "walltime": "00:00:38"
       }
     },
     "1545959.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 14:38 on (IN-005[0]:mem=14799mb:ncpus=1+IN-005[1]:mem=5681mb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -13050,16 +13259,26 @@
         "queue_charge_rate": 0,
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 51,
+        "cput": "00:00:22",
+        "mem": "60312kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "89140kb",
+        "walltime": "00:00:25"
       }
     },
     "1545962.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (ccid-10 != )",
+      "comment": "Job run at Thu Nov 12 at 14:38 on (CN-135[0]:ncpus=16:mem=111gb)+(CN-140[0]:ncpus=16:mem=111gb)+(CN-141[0]:ncpus=16:mem=111gb)+(CN-142[1]:ncpus=16:mem=111gb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "444gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -13069,15 +13288,26 @@
         "queue_charge_rate": 1,
         "select": "4:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=ccid-10",
         "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 1043,
+        "cput": "00:03:16",
+        "mem": "170596kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1954824kb",
+        "walltime": "00:00:38"
       }
     },
     "1545963.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 14:38 on (IN-005[0]:mem=14799mb:ncpus=1+IN-005[1]:mem=5681mb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -13087,16 +13317,26 @@
         "queue_charge_rate": 0,
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 100,
+        "cput": "00:00:32",
+        "mem": "41020kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "69856kb",
+        "walltime": "00:00:35"
       }
     },
     "1545977.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (ccid-10 != )",
+      "comment": "Job run at Thu Nov 12 at 14:38 on (CN-135[0]:ncpus=16:mem=111gb)+(CN-140[0]:ncpus=16:mem=111gb)+(CN-142[1]:ncpus=16:mem=111gb)+(CN-147[1]:ncpus=16:mem=111gb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "444gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -13106,15 +13346,26 @@
         "queue_charge_rate": 1,
         "select": "4:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=ccid-10",
         "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 1251,
+        "cput": "00:07:14",
+        "mem": "256296kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "2017016kb",
+        "walltime": "00:00:48"
       }
     },
     "1545978.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 14:39 on (CN-161[0]:mem=12753mb:ncpus=1+CN-161[1]:mem=7727mb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -13124,16 +13375,26 @@
         "queue_charge_rate": 0,
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 71,
+        "cput": "00:01:21",
+        "mem": "112472kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "141364kb",
+        "walltime": "00:01:25"
       }
     },
     "1546030.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-141 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "comment": "Job run at Thu Nov 12 at 13:12 on (CN-141[0]:ncpus=16:mem=111gb)+(CN-083[1]:ncpus=16:mem=111gb)+(CN-088[1]:ncpus=16:mem=111gb)+(CN-119[1]:ncpus=16:mem=111gb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "444gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -13143,15 +13404,26 @@
         "queue_charge_rate": 1,
         "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119",
         "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 734,
+        "cput": "00:03:58",
+        "mem": "20680kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "271148kb",
+        "walltime": "00:00:39"
       }
     },
     "1546031.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:13 on (IN-006[1]:ncpus=1:mem=20gb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -13161,16 +13433,26 @@
         "queue_charge_rate": 0,
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 52,
+        "cput": "00:00:27",
+        "mem": "51576kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "80436kb",
+        "walltime": "00:00:30"
       }
     },
     "1546051.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-120 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "comment": "Job run at Thu Nov 12 at 13:10 on (CN-120[1]:ncpus=16:mem=111gb)+(CN-141[0]:ncpus=16:mem=111gb)+(CN-083[1]:ncpus=16:mem=111gb)+(CN-088[1]:ncpus=16:mem=111gb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "444gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -13180,15 +13462,26 @@
         "queue_charge_rate": 1,
         "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088",
         "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 484,
+        "cput": "00:04:31",
+        "mem": "146588kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1990708kb",
+        "walltime": "00:00:43"
       }
     },
     "1546052.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:11 on (IN-006[1]:ncpus=1:mem=20gb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -13198,16 +13491,26 @@
         "queue_charge_rate": 0,
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 79,
+        "cput": "00:00:40",
+        "mem": "110164kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "139060kb",
+        "walltime": "00:00:43"
       }
     },
     "1546055.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-119 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "comment": "Job run at Thu Nov 12 at 13:13 on (CN-119[1]:ncpus=16:mem=111gb)+(CN-120[1]:ncpus=16:mem=111gb)+(CN-141[0]:ncpus=16:mem=111gb)+(CN-083[1]:ncpus=16:mem=111gb) and finished",
       "project": "personal-xtt_ella",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "444gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -13217,9 +13520,1578 @@
         "queue_charge_rate": 1,
         "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083",
         "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 861,
+        "cput": "00:11:10",
+        "mem": "410396kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1199052kb",
+        "walltime": "00:00:56"
       }
     },
     "1546056.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:14 on (IN-005[0]:mem=14799mb:ncpus=1+IN-005[1]:mem=5681mb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 100,
+        "cput": "00:03:54",
+        "mem": "211816kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "240692kb",
+        "walltime": "00:03:57"
+      }
+    },
+    "1546127.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:07 on (CN-088[1]:ncpus=16:mem=111gb)+(CN-119[1]:ncpus=16:mem=111gb)+(CN-120[1]:ncpus=16:mem=111gb)+(CN-141[0]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 1306,
+        "cput": "00:08:14",
+        "mem": "283000kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "2033760kb",
+        "walltime": "00:00:43"
+      }
+    },
+    "1546128.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:08 on (IN-001[0]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 79,
+        "cput": "00:01:12",
+        "mem": "209152kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "238020kb",
+        "walltime": "00:01:15"
+      }
+    },
+    "1546151.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:14 on (CN-083[1]:ncpus=16:mem=111gb)+(CN-088[1]:ncpus=16:mem=111gb)+(CN-119[1]:ncpus=16:mem=111gb)+(CN-120[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 1372,
+        "cput": "00:09:26",
+        "mem": "305944kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "2039492kb",
+        "walltime": "00:00:45"
+      }
+    },
+    "1546152.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:14 on (IN-006[1]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 55,
+        "cput": "00:01:21",
+        "mem": "123156kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "154820kb",
+        "walltime": "00:01:24"
+      }
+    },
+    "1546165.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:14 on (CN-141[0]:ncpus=16:mem=111gb)+(CN-083[1]:ncpus=16:mem=111gb)+(CN-088[1]:ncpus=16:mem=111gb)+(CN-119[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 255,
+        "cput": "00:02:06",
+        "mem": "87336kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1090840kb",
+        "walltime": "00:00:35"
+      }
+    },
+    "1546166.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:15 on (IN-006[1]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 82,
+        "cput": "00:00:16",
+        "mem": "27504kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "56920kb",
+        "walltime": "00:00:18"
+      }
+    },
+    "1546194.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:15 on (CN-120[1]:ncpus=16:mem=111gb)+(CN-141[0]:ncpus=16:mem=111gb)+(CN-083[1]:ncpus=16:mem=111gb)+(CN-088[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 453,
+        "cput": "00:01:54",
+        "mem": "34312kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "195032kb",
+        "walltime": "00:00:33"
+      }
+    },
+    "1546195.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:16 on (IN-006[1]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 80,
+        "cput": "00:00:08",
+        "mem": "6688kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "22576kb",
+        "walltime": "00:00:10"
+      }
+    },
+    "1546198.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:16 on (CN-119[1]:ncpus=16:mem=111gb)+(CN-120[1]:ncpus=16:mem=111gb)+(CN-141[0]:ncpus=16:mem=111gb)+(CN-083[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 255,
+        "cput": "00:01:49",
+        "mem": "49664kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "544988kb",
+        "walltime": "00:00:33"
+      }
+    },
+    "1546199.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:16 on (IN-003[0]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 83,
+        "cput": "00:00:13",
+        "mem": "25708kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "54068kb",
+        "walltime": "00:00:15"
+      }
+    },
+    "1546202.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:16 on (CN-088[1]:ncpus=16:mem=111gb)+(CN-119[1]:ncpus=16:mem=111gb)+(CN-120[1]:ncpus=16:mem=111gb)+(CN-141[0]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 319,
+        "cput": "00:02:30",
+        "mem": "49996kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "264064kb",
+        "walltime": "00:00:39"
+      }
+    },
+    "1546203.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:17 on (IN-003[0]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 79,
+        "cput": "00:00:49",
+        "mem": "63136kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "91956kb",
+        "walltime": "00:00:51"
+      }
+    },
+    "1546206.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:17 on (CN-083[1]:ncpus=16:mem=111gb)+(CN-088[1]:ncpus=16:mem=111gb)+(CN-119[1]:ncpus=16:mem=111gb)+(CN-120[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 601,
+        "cput": "00:01:59",
+        "mem": "74500kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1103684kb",
+        "walltime": "00:00:31"
+      }
+    },
+    "1546207.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:18 on (IN-006[1]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 67,
+        "cput": "00:00:16",
+        "mem": "63844kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "92736kb",
+        "walltime": "00:00:19"
+      }
+    },
+    "1546208.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:18 on (CN-141[0]:ncpus=16:mem=111gb)+(CN-083[1]:ncpus=16:mem=111gb)+(CN-088[1]:ncpus=16:mem=111gb)+(CN-119[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 422,
+        "cput": "00:02:07",
+        "mem": "61680kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1668444kb",
+        "walltime": "00:00:34"
+      }
+    },
+    "1546209.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:18 on (IN-003[0]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 88,
+        "cput": "00:00:30",
+        "mem": "63916kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "92736kb",
+        "walltime": "00:00:32"
+      }
+    },
+    "1546214.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:18 on (CN-120[1]:ncpus=16:mem=111gb)+(CN-141[0]:ncpus=16:mem=111gb)+(CN-083[1]:ncpus=16:mem=111gb)+(CN-088[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 503,
+        "cput": "00:03:50",
+        "mem": "163244kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "757924kb",
+        "walltime": "00:00:43"
+      }
+    },
+    "1546215.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:19 on (IN-003[0]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 80,
+        "cput": "00:01:42",
+        "mem": "112764kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "141620kb",
+        "walltime": "00:01:45"
+      }
+    },
+    "1546219.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:19 on (CN-119[1]:ncpus=16:mem=111gb)+(CN-120[1]:ncpus=16:mem=111gb)+(CN-141[0]:ncpus=16:mem=111gb)+(CN-083[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 532,
+        "cput": "00:03:10",
+        "mem": "115728kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1615768kb",
+        "walltime": "00:00:38"
+      }
+    },
+    "1546220.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:20 on (IN-003[1]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 85,
+        "cput": "00:00:41",
+        "mem": "58960kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "82396kb",
+        "walltime": "00:00:44"
+      }
+    },
+    "1546221.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:20 on (CN-088[1]:ncpus=16:mem=111gb)+(CN-119[1]:ncpus=16:mem=111gb)+(CN-120[1]:ncpus=16:mem=111gb)+(CN-141[0]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 320,
+        "cput": "00:03:14",
+        "mem": "64744kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1675916kb",
+        "walltime": "00:00:37"
+      }
+    },
+    "1546222.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:20 on (IN-005[0]:mem=14799mb:ncpus=1+IN-005[1]:mem=5681mb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 88,
+        "cput": "00:01:33",
+        "mem": "112716kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "141620kb",
+        "walltime": "00:01:36"
+      }
+    },
+    "1546229.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:20 on (CN-083[1]:ncpus=16:mem=111gb)+(CN-088[1]:ncpus=16:mem=111gb)+(CN-119[1]:ncpus=16:mem=111gb)+(CN-120[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 508,
+        "cput": "00:05:51",
+        "mem": "251824kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1212396kb",
+        "walltime": "00:00:47"
+      }
+    },
+    "1546230.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:21 on (IN-003[0]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 76,
+        "cput": "00:03:28",
+        "mem": "211992kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "240692kb",
+        "walltime": "00:03:32"
+      }
+    },
+    "1546231.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:21 on (CN-141[0]:ncpus=16:mem=111gb)+(CN-083[1]:ncpus=16:mem=111gb)+(CN-088[1]:ncpus=16:mem=111gb)+(CN-119[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 572,
+        "cput": "00:04:44",
+        "mem": "345852kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "2020828kb",
+        "walltime": "00:00:43"
+      }
+    },
+    "1546232.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:22 on (IN-003[1]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 86,
+        "cput": "00:01:28",
+        "mem": "204856kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "233524kb",
+        "walltime": "00:01:30"
+      }
+    },
+    "1546235.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:22 on (CN-120[1]:ncpus=16:mem=111gb)+(CN-141[0]:ncpus=16:mem=111gb)+(CN-083[1]:ncpus=16:mem=111gb)+(CN-088[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 709,
+        "cput": "00:05:26",
+        "mem": "195560kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "2035256kb",
+        "walltime": "00:00:44"
+      }
+    },
+    "1546236.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:23 on (IN-005[1]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 71,
+        "cput": "00:03:08",
+        "mem": "211988kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "240692kb",
+        "walltime": "00:03:11"
+      }
+    },
+    "1546237.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:23 on (CN-119[1]:ncpus=16:mem=111gb)+(CN-120[1]:ncpus=16:mem=111gb)+(CN-141[0]:ncpus=16:mem=111gb)+(CN-083[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 320,
+        "cput": "00:01:44",
+        "mem": "59472kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1675956kb",
+        "walltime": "00:00:35"
+      }
+    },
+    "1546238.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:23 on (IN-006[1]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 51,
+        "cput": "00:00:20",
+        "mem": "27492kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "56808kb",
+        "walltime": "00:00:22"
+      }
+    },
+    "1546248.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:23 on (CN-088[1]:ncpus=16:mem=111gb)+(CN-119[1]:ncpus=16:mem=111gb)+(CN-120[1]:ncpus=16:mem=111gb)+(CN-141[0]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 400,
+        "cput": "00:01:44",
+        "mem": "61884kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "717248kb",
+        "walltime": "00:00:34"
+      }
+    },
+    "1546249.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:24 on (IN-005[1]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 85,
+        "cput": "00:00:14",
+        "mem": "18988kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "47920kb",
+        "walltime": "00:00:16"
+      }
+    },
+    "1546250.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:24 on (CN-083[1]:ncpus=16:mem=111gb)+(CN-088[1]:ncpus=16:mem=111gb)+(CN-119[1]:ncpus=16:mem=111gb)+(CN-120[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 350,
+        "cput": "00:01:33",
+        "mem": "57080kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "264088kb",
+        "walltime": "00:00:31"
+      }
+    },
+    "1546251.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:25 on (IN-005[1]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 85,
+        "cput": "00:00:21",
+        "mem": "38076kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "67044kb",
+        "walltime": "00:00:23"
+      }
+    },
+    "1546252.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:25 on (CN-141[0]:ncpus=16:mem=111gb)+(CN-083[1]:ncpus=16:mem=111gb)+(CN-088[1]:ncpus=16:mem=111gb)+(CN-119[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 609,
+        "cput": "00:03:15",
+        "mem": "106920kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1111212kb",
+        "walltime": "00:00:36"
+      }
+    },
+    "1546253.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:25 on (IN-005[1]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 87,
+        "cput": "00:00:31",
+        "mem": "62660kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "91444kb",
+        "walltime": "00:00:34"
+      }
+    },
+    "1546255.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:25 on (CN-120[1]:ncpus=16:mem=111gb)+(CN-141[0]:ncpus=16:mem=111gb)+(CN-083[1]:ncpus=16:mem=111gb)+(CN-088[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 2700, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088",
+        "walltime": "00:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 531,
+        "cput": "00:03:23",
+        "mem": "100792kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1112032kb",
+        "walltime": "00:00:36"
+      }
+    },
+    "1546256.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:26 on (IN-006[1]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 51,
+        "cput": "00:00:24",
+        "mem": "62120kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "90932kb",
+        "walltime": "00:00:26"
+      }
+    },
+    "1546261.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:26 on (CN-083[1]:ncpus=16:mem=111gb)+(CN-088[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 28800, \"job.ncpus\": 32.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "222gb",
+        "mpiprocs": 32,
+        "ncpus": 32,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088",
+        "walltime": "08:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 3038,
+        "cput": "11:44:25",
+        "mem": "12827356kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "12695024kb",
+        "walltime": "00:47:16"
+      }
+    },
+    "1546262.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 14:13 on (IN-005[1]:ncpus=1:mem=20gb)",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 82,
+        "cput": "01:52:00",
+        "mem": "5011036kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5088168kb",
+        "walltime": "01:52:18"
+      }
+    },
+    "1546263.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:37 on (CN-119[1]:ncpus=16:mem=111gb)+(CN-120[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 28800, \"job.ncpus\": 32.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "222gb",
+        "mpiprocs": 32,
+        "ncpus": 32,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120",
+        "walltime": "08:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 3096,
+        "cput": "13:32:01",
+        "mem": "12797048kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "12651392kb",
+        "walltime": "00:53:14"
+      }
+    },
+    "1546264.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 14:30 on (IN-005[1]:ncpus=1:mem=20gb)",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 89,
+        "cput": "01:35:07",
+        "mem": "5011740kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5091496kb",
+        "walltime": "01:35:20"
+      }
+    },
+    "1546268.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:26 on (CN-119[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 28800, \"job.ncpus\": 16.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "111gb",
+        "mpiprocs": 16,
+        "ncpus": 16,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119",
+        "walltime": "08:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 553,
+        "cput": "00:51:50",
+        "mem": "12297424kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "14303348kb",
+        "walltime": "00:10:56"
+      }
+    },
+    "1546269.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:37 on (IN-006[1]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 85,
+        "cput": "01:49:57",
+        "mem": "5017068kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5088880kb",
+        "walltime": "01:50:19"
+      }
+    },
+    "1546270.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 14:36 on (CN-119[1]:ncpus=16:mem=111gb)+(CN-120[1]:ncpus=16:mem=111gb)+(CN-141[0]:ncpus=16:mem=111gb)+(CN-083[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 28800, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083",
+        "walltime": "08:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 6042,
+        "cput": "21:55:50",
+        "mem": "19291316kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "12296320kb",
+        "walltime": "00:44:59"
+      }
+    },
+    "1546271.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 15:21 on (CN-161[0]:ncpus=1:mem=20gb)",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 96,
+        "cput": "00:44:09",
+        "mem": "5263212kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5325660kb",
+        "walltime": "00:44:26"
+      }
+    },
+    "1546272.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 14:41 on (CN-088[1]:ncpus=16:mem=111gb)+(CN-119[1]:ncpus=16:mem=111gb)+(CN-120[1]:ncpus=16:mem=111gb)+(CN-141[0]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 28800, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-141",
+        "walltime": "08:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 6283,
+        "cput": "32:58:34",
+        "mem": "19339804kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "12248392kb",
+        "walltime": "01:04:03"
+      }
+    },
+    "1546273.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 15:45 on (CN-161[1]:ncpus=1:mem=20gb)",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 74,
+        "cput": "00:20:16",
+        "mem": "5289284kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5588900kb",
+        "walltime": "00:20:31"
+      }
+    },
+    "1546284.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 14:13 on (CN-083[1]:ncpus=16:mem=111gb)+(CN-088[1]:ncpus=16:mem=111gb)+(CN-119[1]:ncpus=16:mem=111gb)+(CN-120[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 28800, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "444gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120",
+        "walltime": "08:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 5061,
+        "cput": "11:34:35",
+        "mem": "18866380kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "10627828kb",
+        "walltime": "00:27:28"
+      }
+    },
+    "1546285.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 14:41 on (CN-161[0]:mem=12753mb:ncpus=1+CN-161[1]:mem=7727mb)",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 81,
+        "cput": "01:24:11",
+        "mem": "5517536kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5583440kb",
+        "walltime": "01:24:38"
+      }
+    },
+    "1546315.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:38 on (CN-119[1]:ncpus=16:mem=111gb)+(CN-120[1]:ncpus=16:mem=111gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 28800, \"job.ncpus\": 32.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "222gb",
+        "mpiprocs": 32,
+        "ncpus": 32,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-120",
+        "walltime": "08:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 949,
+        "cput": "01:23:58",
+        "mem": "14301864kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "10299196kb",
+        "walltime": "00:10:11"
+      }
+    },
+    "1546316.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 13:48 on (IN-006[1]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 100,
+        "cput": "01:48:43",
+        "mem": "5017080kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5088880kb",
+        "walltime": "01:49:05"
+      }
+    },
+    "1546317.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 16:05 on (CN-083[1]:ncpus=8:mem=55gb)+(CN-086[0]:ncpus=8:mem=55gb)+(CN-096[1]:ncpus=8:mem=55gb)+(CN-141[0]:ncpus=8:mem=55gb)+(CN-091[1]:ncpus=8:mem=55gb)+(CN-100[1]:ncpus=8:mem=55gb)+(CN-118[1]:ncpus=8:mem=55gb)+(CN-119[1]:ncpu...",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "440gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-096+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-091+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-100+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-118+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-119",
+        "walltime": "01:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 2437,
+        "cput": "00:04:40",
+        "mem": "214796kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1118960kb",
+        "walltime": "00:00:48"
+      }
+    },
+    "1546318.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "cpu_serial",
       "Hold_Types": "d",
@@ -13236,10 +15108,420 @@
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
       }
+    },
+    "1546356.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 16:05 on (CN-120[1]:ncpus=8:mem=55gb)+(CN-083[1]:ncpus=8:mem=55gb)+(CN-086[0]:ncpus=8:mem=55gb)+(CN-096[1]:ncpus=8:mem=55gb)+(CN-141[0]:ncpus=8:mem=55gb)+(CN-088[1]:ncpus=8:mem=55gb)+(CN-091[1]:ncpus=8:mem=55gb)+(CN-100[1]:ncpu...",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "440gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-096+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-091+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-100",
+        "walltime": "01:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 1116,
+        "cput": "00:02:51",
+        "mem": "279864kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "792208kb",
+        "walltime": "00:00:38"
+      }
+    },
+    "1546357.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1546491.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 16:05 on (CN-118[1]:ncpus=8:mem=55gb)+(CN-119[1]:ncpus=8:mem=55gb)+(CN-120[1]:ncpus=8:mem=55gb)+(CN-136[1]:ncpus=8:mem=55gb)+(CN-083[1]:ncpus=8:mem=55gb)+(CN-086[0]:ncpus=8:mem=55gb)+(CN-096[1]:ncpus=8:mem=55gb)+(CN-141[0]:ncpu...",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "440gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-118+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-136+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-096+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-141",
+        "walltime": "01:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 600,
+        "cput": "00:03:30",
+        "mem": "403792kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "924048kb",
+        "walltime": "00:00:48"
+      }
+    },
+    "1546492.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1546548.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 16:05 on (CN-152[1]:ncpus=8:mem=55gb)+(CN-088[1]:ncpus=8:mem=55gb)+(CN-091[1]:ncpus=8:mem=55gb)+(CN-100[1]:ncpus=8:mem=55gb)+(CN-118[1]:ncpus=8:mem=55gb)+(CN-119[1]:ncpus=8:mem=55gb)+(CN-120[1]:ncpus=8:mem=55gb)+(CN-136[1]:ncpu...",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "440gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-152+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-091+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-100+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-118+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-136",
+        "walltime": "01:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 2406,
+        "cput": "00:02:30",
+        "mem": "210604kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "744064kb",
+        "walltime": "00:00:38"
+      }
+    },
+    "1546549.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1546560.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 16:05 on (CN-083[1]:ncpus=8:mem=55gb)+(CN-086[0]:ncpus=8:mem=55gb)+(CN-096[1]:ncpus=8:mem=55gb)+(CN-141[0]:ncpus=8:mem=55gb)+(CN-152[1]:ncpus=8:mem=55gb)+(CN-007[1]:ncpus=8:mem=55gb)+(CN-088[1]:ncpus=8:mem=55gb)+(CN-091[1]:ncpu...",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "440gb",
+        "mpiprocs": 64,
+        "ncpus": 64,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-083+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-096+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-141+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-152+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-088+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-091",
+        "walltime": "01:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 945,
+        "cput": "00:03:16",
+        "mem": "252396kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "823300kb",
+        "walltime": "00:00:42"
+      }
+    },
+    "1546561.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1546564.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-005 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "888gb",
+        "mpiprocs": 128,
+        "ncpus": 128,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-005+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-146+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-136+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-142",
+        "walltime": "01:00:00"
+      }
+    },
+    "1546565.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1546566.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-005 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "888gb",
+        "mpiprocs": 128,
+        "ncpus": 128,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-005+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-146+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-136+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-142",
+        "walltime": "01:00:00"
+      }
+    },
+    "1546567.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1546568.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-005 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "888gb",
+        "mpiprocs": 128,
+        "ncpus": 128,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-005+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-146+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-136+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-142",
+        "walltime": "01:00:00"
+      }
+    },
+    "1546569.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1546573.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 16:05 on (CN-097[1]:ncpus=2:mem=13gb)+(CN-100[1]:ncpus=2:mem=13gb)+(CN-118[1]:ncpus=2:mem=13gb)+(CN-119[1]:ncpus=2:mem=13gb)+(CN-120[1]:ncpus=2:mem=13gb)+(CN-121[1]:ncpus=2:mem=13gb)+(CN-122[1]:ncpus=2:mem=13gb)+(CN-136[1]:ncpu... and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 16.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "104gb",
+        "mpiprocs": 16,
+        "ncpus": 16,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB:node_pool=cpu_node:switch=cpu_all:host=cn-100+1:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB:node_pool=cpu_node:switch=cpu_all:host=cn-118+1:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=2:mpiprocs=2:ompthreads=1:mem=13GB:node_pool=cpu_node:switch=cpu_all:host=cn-136",
+        "walltime": "01:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 675,
+        "cput": "00:00:17",
+        "mem": "48300kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "194740kb",
+        "walltime": "00:00:13"
+      }
+    },
+    "1546574.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 16:06 on (IN-006[1]:ncpus=1:mem=20gb) and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 75,
+        "cput": "00:00:06",
+        "mem": "4kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "0kb",
+        "walltime": "00:00:08"
+      }
+    },
+    "1546576.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 16:06 on (CN-097[1]:ncpus=4:mem=27gb)+(CN-100[1]:ncpus=4:mem=27gb)+(CN-118[1]:ncpus=4:mem=27gb)+(CN-119[1]:ncpus=4:mem=27gb)+(CN-120[1]:ncpus=4:mem=27gb)+(CN-121[1]:ncpus=4:mem=27gb)+(CN-122[1]:ncpus=4:mem=27gb)+(CN-136[1]:ncpu... and finished",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 32.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "216gb",
+        "mpiprocs": 32,
+        "ncpus": 32,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB:node_pool=cpu_node:switch=cpu_all:host=cn-100+1:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB:node_pool=cpu_node:switch=cpu_all:host=cn-118+1:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=4:mpiprocs=4:ompthreads=1:mem=27GB:node_pool=cpu_node:switch=cpu_all:host=cn-136",
+        "walltime": "01:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 544,
+        "cput": "00:02:48",
+        "mem": "228388kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "823708kb",
+        "walltime": "00:00:29"
+      }
+    },
+    "1546577.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "comment": "Job run at Thu Nov 12 at 16:06 on (IN-006[1]:ncpus=1:mem=20gb)",
+      "project": "personal-xtt_ella",
+      "Resource_List": {
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 0,
+        "cput": "00:00:00",
+        "mem": "0kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "0kb",
+        "walltime": "00:00:00"
+      }
     }
   },
-  "registered_groups": 244,
-  "queue_observed_at": "2026-11-12T13:04:12.359316+08:00",
+  "registered_groups": 280,
+  "queue_observed_at": "2026-11-12T16:06:50.346936+08:00",
   "project_query_authenticated": true,
-  "balance_cpu_hours": 4552.617
+  "balance_cpu_hours": null
 }

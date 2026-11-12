@@ -1,6 +1,6 @@
 # 其他核心数是否需要追加拆分，以及本次 Git 同步范围
 
-当前执行与队友接手统一见 [handover](HANDOFF_VANDA_EXPERIMENTS_20261106.md)。逐配置清单已补 `future_owner`、`future_plan` 和 `handoff_action`：前批 730 项及随后 100 项已通过，此前 306 项已完成，今天再转交 46 组/186 项 hongxinran 缺项并从主账号移除；其余缺项按 future_owner 各自续跑，队友不能直接套缺项清单提交。
+当前执行与队友接手统一见 [handover](HANDOFF_VANDA_EXPERIMENTS_20261106.md)。逐配置清单已补 `future_owner`、`future_plan` 和 `handoff_action`：前批 730 项及随后 100 项已通过，此前 306 项已完成，今天再转交的 46 组/186 项也已全部完成；当前剩余项归主账号；其余缺项按 future_owner 各自续跑，队友不能直接套缺项清单提交。
 
 ## 核对结论
 
@@ -26,20 +26,20 @@ T=64 或把常规其他布局也扩到每节点 64 核，会增加此前未确�
 
 - 原矩阵：19,980，包含 450 个 512 核配置。
 - 后续确认的 512 核拆分：720，属于待完成任务。
-- **完整固定图目标：20,700；当前严格通过 18,103，尚缺 2,597。**
+- **完整固定图目标：20,700；当前严格通过 18,449，尚缺 2,251。**
 
 弱扩展独立统计。4/8 GPU 按已确认决定不在目标中。
 
 ## 当前安排与结果
 
-截至 2026-11-12 13:04 SGT，固定图严格完成 **18,103/20,700**，尚缺 2,597。逐状态：`{"validated": 18103, "deferred_512": 1160, "unsubmitted": 1142, "queued": 76, "awaiting_validation": 54, "held": 5, "performance_failed": 102, "running": 58}`。未完成归属：`{'xtt_ella': 2493, 'hongxinran': 104}`，两个账号的已登记和未来计划仍互斥。
+截至 2026-11-12 16:06 SGT，严格完成 **18,449/20,700**，尚缺 2,251。逐状态：`{'validated': 18449, 'deferred_512': 1160, 'unsubmitted': 632, 'awaiting_validation': 196, 'running': 90, 'queued': 66, 'held': 5, 'performance_failed': 102}`。当前剩余项全部归主账号；hongxinran 的 1,810 项已完成，两边计划及已登记配置互斥。
 
-512 仍延期；已保存的低内存失败组部分测量先查验，不盲目重投。没有新增矩阵维度，p×T=请求核数、五次计时和指标保持。资源、墙钟和交接见 [当前状态](updated_vanda_two_accounts_20261111.md)。
+核心数、线程拆分和矩阵未变。原低核数大图失败组先查内存及可复用部分，512 仍延期。实时作业与恢复说明见 [当前状态](updated_vanda_two_accounts_20261111.md)。
 
 ## 审阅入口
 
 - [完整 20,700 项状态与任务 ID](results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv)
-- [592 个当前资源组及性能/免费校验作业 ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv)
+- [646 个当前资源组及性能/免费校验作业 ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv)
 - [各核心数主线的逐配置覆盖](results/updated_vanda_scaling/git_sync_20261111/cpu_core_layouts.csv)
 - [覆盖汇总及快照时间](results/updated_vanda_scaling/git_sync_20261111/handoff_summary.json)
 - [主账号 PBS 快照](results/updated_vanda_scaling/git_sync_20261111/queue_xtt_ella.json)

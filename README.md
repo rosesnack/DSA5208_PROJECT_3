@@ -218,7 +218,7 @@ Each configuration saves the following files. Set `PAGERANK_RESULTS_ROOT` to a r
 | `ranks.csv` | Final ranks and node degrees from the last run |
 | `history.csv` | Per-iteration L1 differences from the last run |
 
-**Current Vanda continuation (2026-11-12 13:04 SGT):** 18,103/20,700 fixed cells are independently validated and synced. Refunded credits restarted both paid performance controllers; 186 ordinary missing cells were transferred exclusively to hongxinran, with 82 already validated. Preparation and independent validation use free queues. Existing results and timing definitions are reused; CPU512 remains deferred. See the [handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md) and [refund recovery](updated_vanda_refund_recovery_20261112.md) for exact jobs, ownership, pending work and placement metadata.
+**Current Vanda continuation (2026-11-12 16:06 SGT):** 18,449/20,700 fixed cells are independently validated and synced. All 1,810 assigned hongxinran cells are complete; remaining cells belong to xtt_ella. Seven queued eight-node requests were relocated to verified same-model CPU hosts without changing resource totals or experiment settings. Existing jobs continue; new submissions are waiting for accounting authentication. Performance remains paid, preparation and independent validation free; CPU512 remains deferred. See the [handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md) for timestamped jobs, results and ownership.
 
 **Complete local backup:** source, scripts and result tables are tracked here. The [full backup guide](FULL_PROJECT_BACKUP_20261109.md) links the same repository's Release containing all local graph inputs, raw rank vectors, pinned Kokkos source, checksums and restore instructions.
 
