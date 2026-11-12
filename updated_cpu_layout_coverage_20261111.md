@@ -26,20 +26,20 @@ T=64 或把常规其他布局也扩到每节点 64 核，会增加此前未确�
 
 - 原矩阵：19,980，包含 450 个 512 核配置。
 - 后续确认的 512 核拆分：720，属于待完成任务。
-- **完整固定图目标：20,700；当前严格通过 18,805，尚缺 1,895。**
+- **完整固定图目标：20,700；当前严格通过 18,829，尚缺 1,871。**
 
 弱扩展独立统计。4/8 GPU 按已确认决定不在目标中。
 
 ## 当前安排与结果
 
-截至 2026-11-13 01:18 SGT，严格完成 **18,805/20,700**，未完成 1,895。状态为 `{'validated': 18805, 'deferred_512': 1160, 'queued': 130, 'unsubmitted': 498, 'held': 5, 'performance_failed': 102}`，归属为 `{'xtt_ella': 1765, 'hongxinran': 130}`。新分担130项来自现有缺项，当前有效首批两边合计18组/130项排队，未计为完成；两账号范围仍互斥。
+截至2026-11-13 02:21 SGT，严格完成 **18,829/20,700**，尚缺1,871。状态：`{'validated': 18829, 'deferred_512': 1160, 'queued': 134, 'unsubmitted': 464, 'held': 5, 'performance_failed': 102, 'running': 6}`；归属：`{'xtt_ella': 1761, 'hongxinran': 110}`。主机绑定修复后，主账号新增通过4项、分担账号新增通过20项；当前主账号1个8核大图运行，两边共17个性能作业排队。
 
-核心数、线程拆分和完整矩阵未改变，512 继续延期。预算、墙钟、失效依赖修复及当前实际job ID见 [本次记录](updated_vanda_resumption_20261113.md) 和 [handover](HANDOFF_VANDA_EXPERIMENTS_20261106.md)。
+核心配置、线程拆分和完整矩阵未改变。实际来源及交接见 [当前状态](updated_vanda_two_accounts_20261111.md)。
 
 ## 审阅入口
 
 - [完整 20,700 项状态与任务 ID](results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv)
-- [665 个当前资源组及性能/免费校验作业 ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv)
+- [671 个当前资源组及性能/免费校验作业 ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv)
 - [各核心数主线的逐配置覆盖](results/updated_vanda_scaling/git_sync_20261111/cpu_core_layouts.csv)
 - [覆盖汇总及快照时间](results/updated_vanda_scaling/git_sync_20261111/handoff_summary.json)
 - [主账号 PBS 快照](results/updated_vanda_scaling/git_sync_20261111/queue_xtt_ella.json)

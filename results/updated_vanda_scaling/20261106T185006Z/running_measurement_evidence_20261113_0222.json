@@ -1,0 +1,25 @@
+{
+  "observed_at": "2026-11-13T02:22:00+08:00",
+  "scope": "Running measurements are not independent completion.",
+  "jobs": [
+    {
+      "job": "1550031.stdct-mgmt-02",
+      "graph": "strong_uniform",
+      "nodes": 8,
+      "cores": 8,
+      "job_state": "R",
+      "resources_used": {
+        "cpupercent": 532,
+        "cput": "00:26:32",
+        "mem": "8190296kb",
+        "ncpus": 8,
+        "ngpus": 0,
+        "vmem": "7128348kb",
+        "walltime": "00:04:57"
+      },
+      "recorded_hosts": 8,
+      "saved_measurements": 2
+    }
+  ],
+  "timestamp_precision": "Approximate minute, captured after the 02:21 queue snapshot"
+}

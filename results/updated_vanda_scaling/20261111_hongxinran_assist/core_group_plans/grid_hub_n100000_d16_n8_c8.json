@@ -1,0 +1,69 @@
+{
+  "graph": "grid_hub_n100000_d16",
+  "nodes": 8,
+  "cores_per_node": 8,
+  "cores": 64,
+  "priority": 1,
+  "walltime": "01:00:00",
+  "prerequisite": "",
+  "required_job": "1549865.stdct-mgmt-02",
+  "dense_launch_pause_s": 0,
+  "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
+  "cells": [
+    {
+      "implementation": "mpi_kokkos",
+      "processes": 8,
+      "threads": 8,
+      "communication": "allgather",
+      "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d16/nodes8/mpi_kokkos/OpenMP/grid_hub_n100000_d16/p8_t8/summary.json"
+    },
+    {
+      "implementation": "mpi_kokkos",
+      "processes": 8,
+      "threads": 8,
+      "communication": "halo",
+      "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n100000_d16/p8_t8/summary.json"
+    },
+    {
+      "implementation": "mpi_kokkos",
+      "processes": 16,
+      "threads": 4,
+      "communication": "allgather",
+      "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d16/nodes8/mpi_kokkos/OpenMP/grid_hub_n100000_d16/p16_t4/summary.json"
+    },
+    {
+      "implementation": "mpi_kokkos",
+      "processes": 16,
+      "threads": 4,
+      "communication": "halo",
+      "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n100000_d16/p16_t4/summary.json"
+    },
+    {
+      "implementation": "mpi_kokkos",
+      "processes": 32,
+      "threads": 2,
+      "communication": "allgather",
+      "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d16/nodes8/mpi_kokkos/OpenMP/grid_hub_n100000_d16/p32_t2/summary.json"
+    },
+    {
+      "implementation": "mpi_kokkos",
+      "processes": 32,
+      "threads": 2,
+      "communication": "halo",
+      "canonical_summary": "kokkos_cpu_grid/grid_hub_n100000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_hub_n100000_d16/p32_t2/summary.json"
+    }
+  ],
+  "scheduler_cpu_pool": "cpu_all",
+  "requested_hosts": [
+    "cn-105",
+    "cn-116",
+    "cn-122",
+    "cn-135",
+    "cn-140",
+    "cn-097",
+    "cn-121",
+    "cn-086"
+  ],
+  "transport_proof_job": "1543968.stdct-mgmt-02",
+  "dependency": "1549865.stdct-mgmt-02"
+}

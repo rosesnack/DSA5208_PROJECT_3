@@ -1,0 +1,58 @@
+{
+  "observed_at": "2026-11-13T01:41:22.650598+08:00",
+  "reason": "Use already validated Platinum 8452Y CPU resources with actual free slots; GN hostnames use CPU only, ngpus remains zero. Preserve parameters and requests.",
+  "quarantined_startup_hosts": [
+    "cn-004",
+    "cn-123",
+    "cn-129",
+    "cn-148",
+    "cn-151",
+    "cn-153",
+    "cn-154"
+  ],
+  "queued_adjustments": [],
+  "future_adjusted_groups": 0,
+  "capacity": {
+    "cpu_all": {
+      "cn-086": {
+        "cpu": 1,
+        "memory": 10107224064.0
+      },
+      "cn-097": {
+        "cpu": 4,
+        "memory": 32639025152.0
+      },
+      "cn-105": {
+        "cpu": 4,
+        "memory": 31077695488.0
+      },
+      "cn-140": {
+        "cpu": 4,
+        "memory": 30508318720.0
+      },
+      "cn-135": {
+        "cpu": 4,
+        "memory": 31077695488.0
+      },
+      "cn-145": {
+        "cpu": 2,
+        "memory": 17119051776.0
+      }
+    },
+    "gpu_all": {
+      "gn-a40-074": {
+        "cpu": 1,
+        "memory": 12237930496.0
+      },
+      "gn-a40-075": {
+        "cpu": 6,
+        "memory": 50892636160.0
+      },
+      "gn-a40-076": {
+        "cpu": 2,
+        "memory": 18680381440.0
+      }
+    }
+  },
+  "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261113_refund.json"
+}

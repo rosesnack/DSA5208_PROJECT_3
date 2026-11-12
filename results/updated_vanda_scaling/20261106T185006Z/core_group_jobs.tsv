@@ -292,3 +292,4 @@ grid_uniform_n400000_d16	8	8	64	1550045.stdct-mgmt-02	1550046.stdct-mgmt-02	01:0
 grid_uniform_n400000_d4	8	8	64	1550047.stdct-mgmt-02	1550048.stdct-mgmt-02	01:00:00	6	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d4_n8_c8.json	1550012.stdct-mgmt-02
 grid_uniform_n400000_d8	8	8	64	1550049.stdct-mgmt-02	1550050.stdct-mgmt-02	01:00:00	6	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d8_n8_c8.json	1550012.stdct-mgmt-02
 grid_uniform_n50000_d16	8	8	64	1550051.stdct-mgmt-02	1550052.stdct-mgmt-02	01:00:00	6	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d16_n8_c8.json	1550012.stdct-mgmt-02
+grid_uniform_n50000_d4	8	8	64	1550236.stdct-mgmt-02	1550239.stdct-mgmt-02	01:00:00	6	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d4_n8_c8.json	1550012.stdct-mgmt-02
