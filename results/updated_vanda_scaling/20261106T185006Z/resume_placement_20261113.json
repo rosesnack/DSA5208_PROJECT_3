@@ -1,0 +1,32 @@
+{
+  "observed_at": "2026-11-13T01:16:01.117125+08:00",
+  "reason": "Use already validated Platinum 8452Y CPU resources with actual free slots; GN hostnames use CPU only, ngpus remains zero. Preserve parameters and requests.",
+  "quarantined_startup_hosts": [
+    "cn-004",
+    "cn-123",
+    "cn-129",
+    "cn-148",
+    "cn-151",
+    "cn-153",
+    "cn-154"
+  ],
+  "queued_adjustments": [],
+  "future_adjusted_groups": 9,
+  "capacity": {
+    "cpu_all": {
+      "cn-011": {
+        "cpu": 4,
+        "memory": 31077695488.0
+      },
+      "cn-007": {
+        "cpu": 4,
+        "memory": 30552358912.0
+      },
+      "cn-086": {
+        "cpu": 5,
+        "memory": 39098253312.0
+      }
+    }
+  },
+  "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261113_refund.json"
+}

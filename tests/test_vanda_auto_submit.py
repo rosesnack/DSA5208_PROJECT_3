@@ -4,6 +4,7 @@ import errno
 import io
 import json
 import os
+import subprocess
 from pathlib import Path
 import sys
 import tempfile
@@ -18,6 +19,41 @@ from watch_vanda_core_groups import unregistered_groups
 
 
 class AutoSubmitTests(unittest.TestCase):
+    def test_expired_dependency_stops_before_qsub_and_registration(self):
+        prior = Path.cwd()
+        with tempfile.TemporaryDirectory() as folder:
+            try:
+                os.chdir(folder)
+                root = Path('results/updated_vanda_scaling/test')
+                root.mkdir(parents=True)
+                Path('plan.json').write_text(json.dumps([{
+                    'graph': 'grid_hub_a', 'nodes': 1, 'cores_per_node': 32, 'cores': 32,
+                    'prerequisite': '', 'walltime': '01:00:00',
+                    'cells': [{'canonical_summary': 'new/summary.json'}]}]))
+
+                def fake_run(*parts):
+                    if parts[0] == 'hpc':
+                        return 'personal-test | 10000 | 1000 | 1000 | 1000'
+                    raise subprocess.CalledProcessError(153, parts, output='Unknown Job Id expired')
+
+                argv = ['submit', 'test', 'personal-test', 'plan.json', '--dependency', 'expired', '--submit']
+                with patch.object(sys, 'argv', argv), patch.object(submit, 'run', side_effect=fake_run), \
+                     patch.object(submit.subprocess, 'run', return_value=SimpleNamespace(stdout='')), \
+                     patch.object(submit.subprocess, 'check_output') as qsub:
+                    with self.assertRaises(subprocess.CalledProcessError):
+                        submit.main()
+                qsub.assert_not_called()
+                self.assertFalse((root / 'core_group_jobs.tsv').exists())
+                self.assertFalse((root / 'core_group_plans').exists())
+            finally:
+                os.chdir(prior)
+
+    def test_dependency_aborted_before_start_is_not_a_successful_proof(self):
+        reply = json.dumps({'Jobs': {'proof': {'job_state': 'F', 'Hold_Types': 'd'}}})
+        with patch.object(submit, 'run', return_value=reply):
+            with self.assertRaisesRegex(RuntimeError, 'did not complete successfully'):
+                submit.check_dependency('proof')
+
     def test_requested_hosts_keep_actual_small_core_budget_and_node_count(self):
         group = {'graph': 'grid_hub_a', 'nodes': 2, 'cores_per_node': 2,
                  'requested_hosts': ['cn-051', 'cn-053']}

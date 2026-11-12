@@ -5,13 +5,14 @@
   "status_counts": {
     "validated": 18805,
     "deferred_512": 1160,
-    "unsubmitted": 628,
+    "queued": 130,
+    "unsubmitted": 498,
     "held": 5,
     "performance_failed": 102
   },
   "submitted_group_counts": {
-    "xtt_ella": 281,
-    "hongxinran": 366
+    "xtt_ella": 293,
+    "hongxinran": 372
   },
   "mainline_coverage": [
     {
@@ -98,11 +99,12 @@
   "registered_cross_account_overlap": 0,
   "future_plan_cross_account_overlap": 0,
   "unfinished_owner_counts": {
-    "xtt_ella": 1895
+    "xtt_ella": 1765,
+    "hongxinran": 130
   },
   "future_plans": {
-    "xtt_ella": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261112_refund.json",
-    "hongxinran": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261112_refund.json"
+    "xtt_ella": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261113_refund.json",
+    "hongxinran": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261113_refund.json"
   },
   "handoff_rule": "Frozen snapshot: no row grants submission permission. Unsubmitted cells remain owned; transfer ownership out of the live source plan and check both live queues before a teammate submits. Local RUN_ID deduplication is not cross-account locking.",
   "weak_scaling_separate": {
@@ -122,14 +124,14 @@
   },
   "snapshots": {
     "xtt_ella": {
-      "observed_at": "2026-11-12T22:10:18.234922+08:00",
-      "monitor_action": "waiting_real_credits",
-      "active_job_count": 8
+      "observed_at": "2026-11-13T01:18:01.257549+08:00",
+      "monitor_action": "submitted",
+      "active_job_count": 32
     },
     "hongxinran": {
-      "observed_at": "2026-11-12T22:10:22.850676+08:00",
-      "monitor_action": "no_eligible_unregistered_cells",
-      "active_job_count": 70
+      "observed_at": "2026-11-13T01:18:05.867555+08:00",
+      "monitor_action": "waiting_existing_jobs",
+      "active_job_count": 82
     }
   },
   "scope_note": "Thread range is 1/2/4/8/16/32. Regular per-node CPU budget is at most 32; the 512 endpoint uses 8 nodes x 64. Weak scaling is separate."

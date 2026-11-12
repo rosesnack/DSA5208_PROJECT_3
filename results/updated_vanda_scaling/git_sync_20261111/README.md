@@ -30,8 +30,8 @@ python3 scripts/export_vanda_handoff.py \
   --audit results/updated_vanda_scaling/git_sync_20261111/fixed_matrix_audit_20700.csv \
   --main-root results/updated_vanda_scaling/20261106T185006Z \
   --assist-root results/updated_vanda_scaling/20261111_hongxinran_assist \
-  --main-plan results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261112_refund.json \
-  --assist-plan results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261112_refund.json \
+  --main-plan results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261113_refund.json \
+  --assist-plan results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261113_refund.json \
   --snapshots results/updated_vanda_scaling/git_sync_20261111 \
   --output results/updated_vanda_scaling/git_sync_20261111
 ```
@@ -39,3 +39,5 @@ python3 scripts/export_vanda_handoff.py \
 Both commands are local audits; neither submits, releases or cancels jobs. Add new transferred-account roots and ownership records before using this inventory for later handovers. A successful export checks unique future ownership and consistency with current registered assignments; it does not certify that an old local snapshot equals the live remote queues.
 
 The 2026-11-12 validation reroute preserves performance job IDs and records replaced free validation jobs in `../20261106T185006Z/free_validation_reroute_20261112.json`. Follow the registry's current validation ID; cancelled old validation IDs do not grant permission to remeasure a performance cell.
+
+Nov 13 current source plans are disjoint. The primary archived 53 scheduler requests cancelled before start because their dependency was purged; those archives are not active assignments. Only never-computed cells were registered again against the fresh successful input check. Current assignments remain unique. See dependency_repair_20261113.json for exact PBS evidence.

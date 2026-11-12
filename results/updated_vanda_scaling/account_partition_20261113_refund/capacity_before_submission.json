@@ -1,0 +1,581 @@
+{
+  "observed_at": "2026-11-13T00:54:49.565936+08:00",
+  "verified_cpu_hosts": [
+    {
+      "host": "cn-005",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n400000_d4/nodes8_cores1/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-006",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d8/nodes8_cores2/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-007",
+      "total_cores_one_vnode": 36,
+      "free_cores_one_vnode": 4,
+      "total_memory_bytes": 268923043840.0,
+      "free_memory_bytes": 30552358912.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores4/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-008",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-009",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d16/nodes8_cores2/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-010",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/strong_controlled/nodes2_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-011",
+      "total_cores_one_vnode": 36,
+      "free_cores_one_vnode": 4,
+      "total_memory_bytes": 269448380416.0,
+      "free_memory_bytes": 31077695488.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n200000_d16/nodes1_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-012",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n200000_d8/nodes1_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-013",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-014",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-017",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n200000_d16/nodes1_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-036",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261111_hongxinran_assist/cpu_core_groups/grid_hub_n100000_d8/nodes4_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-039",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d16/nodes4_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-041",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261111_hongxinran_assist/cpu_core_groups/grid_hub_n100000_d8/nodes4_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-045",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261111_hongxinran_assist/cpu_core_groups/grid_hub_n100000_d8/nodes4_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-051",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes1_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-053",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes2_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-054",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n200000_d16/nodes4_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-059",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-063",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-065",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n200000_d16/nodes4_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-066",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-068",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n200000_d16/nodes4_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-069",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-073",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n200000_d16/nodes4_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-075",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/kokkos_cpu_grid/synthetic_hub/nodes1/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-083",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores4/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-084",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/strong_controlled/nodes1_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-085",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d8/nodes8_cores2/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-086",
+      "total_cores_one_vnode": 36,
+      "free_cores_one_vnode": 5,
+      "total_memory_bytes": 268879003648.0,
+      "free_memory_bytes": 39098253312.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores4/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-087",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-088",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-089",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/kokkos_cpu_grid/grid_controlled_n50000_d4/nodes8/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-090",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/weak_512/uniform/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-091",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-092",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n200000_d8/nodes8_cores8/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-096",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n400000_d4/nodes8_cores16/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-097",
+      "total_cores_one_vnode": 36,
+      "free_cores_one_vnode": 8,
+      "total_memory_bytes": 269448380416.0,
+      "free_memory_bytes": 61630054400.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n50000_d8/nodes4_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-099",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n200000_d8/nodes8_cores8/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-100",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-101",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d4/nodes4_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-102",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261111_hongxinran_assist/cpu_core_groups/grid_hub_n100000_d8/nodes2_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-103",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/strong_controlled/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-104",
+      "total_cores_one_vnode": 36,
+      "free_cores_one_vnode": 4,
+      "total_memory_bytes": 269492420608.0,
+      "free_memory_bytes": 31121735680.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-105",
+      "total_cores_one_vnode": 36,
+      "free_cores_one_vnode": 4,
+      "total_memory_bytes": 268923043840.0,
+      "free_memory_bytes": 30552358912.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d8/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-109",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/kokkos_cpu_grid/grid_controlled_n50000_d4/nodes8/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-110",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/kokkos_cpu_grid/grid_uniform_n100000_d8/nodes1/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-112",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n400000_d16/nodes1_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-116",
+      "total_cores_one_vnode": 36,
+      "free_cores_one_vnode": 4,
+      "total_memory_bytes": 268923043840.0,
+      "free_memory_bytes": 30552358912.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d8/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-118",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n400000_d4/nodes8_cores8/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-119",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes4_cores16/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-120",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n200000_d16/nodes4_cores16/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-121",
+      "total_cores_one_vnode": 36,
+      "free_cores_one_vnode": 8,
+      "total_memory_bytes": 269492420608.0,
+      "free_memory_bytes": 61630054400.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d8/nodes8_cores4/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-122",
+      "total_cores_one_vnode": 36,
+      "free_cores_one_vnode": 4,
+      "total_memory_bytes": 268923043840.0,
+      "free_memory_bytes": 30552358912.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/strong_uniform/nodes2_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-124",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/strong_controlled/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-125",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n200000_d8/nodes1_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-126",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/strong_controlled/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-132",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/weak_512/uniform/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-135",
+      "total_cores_one_vnode": 36,
+      "free_cores_one_vnode": 4,
+      "total_memory_bytes": 269448380416.0,
+      "free_memory_bytes": 31077695488.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d16/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-136",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d16/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-137",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes4_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-138",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d16/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-139",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n200000_d16/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-140",
+      "total_cores_one_vnode": 36,
+      "free_cores_one_vnode": 4,
+      "total_memory_bytes": 268879003648.0,
+      "free_memory_bytes": 30508318720.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d16/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-141",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d16/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-142",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d16/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-143",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/strong_controlled/nodes4_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-145",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n400000_d8/nodes1_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-146",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d16/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-147",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d16/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-150",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d8/nodes8_cores32/cpu_hosts.jsonl"
+    },
+    {
+      "host": "cn-152",
+      "total_cores_one_vnode": 0,
+      "free_cores_one_vnode": 0,
+      "total_memory_bytes": 0.0,
+      "free_memory_bytes": 0.0,
+      "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores4/cpu_hosts.jsonl"
+    }
+  ]
+}

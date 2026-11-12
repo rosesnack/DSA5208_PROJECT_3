@@ -1,0 +1,26 @@
+{
+  "observed_at": "2026-11-13T00:54:49.565936+08:00",
+  "balances": {
+    "xtt_ella": 5330.406,
+    "hongxinran": 1212.8179999999993
+  },
+  "new_assist_groups": 18,
+  "new_assist_cells": 130,
+  "assist_request_cpu_hours": 1120,
+  "assist_margin": 64,
+  "main_margin": 16,
+  "source_removed_cells": 130,
+  "registered_overlap": 0,
+  "completed_overlap": 0,
+  "future_plan_overlap": 0,
+  "paid_only_performance": true,
+  "validation_and_preparation_free": true,
+  "primary_plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261113_refund.json",
+  "assist_plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261113_refund.json",
+  "cutoff": "2026-11-13T23:59:00+08:00",
+  "max_main_cores": 256,
+  "max_assist_cores": 128,
+  "walltime_policy": "Ordinary groups retain 1h. Previously unregistered large graph groups use 3x slowest same-graph observed successful batch +30min rounded up 15min; no already registered job changed.",
+  "preparation_job": "1549865.stdct-mgmt-02",
+  "actual_post_refund_batch": true
+}

@@ -1,21 +1,19 @@
-# Vanda 实验交接（2026-11-12 22:10 SGT）
+# Vanda 实验交接（2026-11-13 01:18 SGT）
 
 这是当前唯一执行交接入口。
 
-**严格完成 18,805/20,700（90.8%），剩余 1,895；比上次 Git 同步增加 260 项。** 新结果同步时间为 2026-11-12 22:10 SGT，只有摘要与独立校验标记齐全才算完成。两账号队列快照分别为 22:10:18 和 22:10:22 SGT。
+**已恢复 Nov 13 续投；严格完成仍为 18,805/20,700（90.8%），剩余 1,895。** 已完成结果沿用 Nov 12 22:10 SGT 同步证据，不因提交新请求增加完成数。当前队列快照是 Nov 13 01:18:01/01:18:05 SGT。
 
-| 账号 | 已登记资源组 | 当前付费性能 | 免费校验 R | 监控最近 CPUh 余额 | 固定图未完成归属 |
+| 账号 | 当前登记资源组 | 付费性能 | 免费校验 R | 最近 CPUh 余额 | 固定图未完成归属 |
 |---|---:|---|---:|---:|---:|
-| xtt_ella | 281 | R=0、Q=0 | 0 | 40.617 | 1,895 |
-| hongxinran | 366 | R=0、Q=0 | 0 | 70.632 | 0 |
+| xtt_ella | 293 | R=0，Q=12 | 0 | 5330.406 | 1,765 |
+| hongxinran | 372 | R=0，Q=6 | 0 | 1212.818 | 130 |
 
-本轮此前运行的三个 128 核请求及其余性能/校验批次均已结束并同步；当前没有 R/Q 或待独立校验的固定图配置。**旧 H 仍保留，不能称为全部作业均完成。** 其中延期 512 组对应五个 held 配置；其他旧 H 可能已由新作业补齐，不得批量释放。
+额度已返还并可查询。两个原监控按 Nov 12 截止正常退出，现已恢复至 **Nov 13 23:59 SGT**，每 60 秒检查。主账号最多 12 个在途性能组、留 16 CPUh、先跑 ≤256 核；分担账号最多六组、留 64 CPUh、最大 128 核。付费只测核心性能，输入检查、构建处理和独立校验免费。
 
-hongxinran 的 **366 组、1,810 项分担任务全部通过并同步**，当前没有分配给它的缺项。剩余全部归 xtt_ella：628 项未提交、102 项历史性能失败、5 项暂挂和 1,160 项延期 512。即非 512 核尚缺 730 项，512 核尚缺 1,165 项。失败含可复用的部分测量，先查验，不直接全组重跑。
+今天从主账号真实源计划互斥转交 **18 组/130 项**给 hongxinran，预留上限 **1,120 CPUh**；首批已提交六组/60项，其余 70 项仍由该账号自动续投。原分担的 1,810 项全部有效完成；不是把已完成范围拿来重跑。主账号首批有效提交 **12 组/70 项**。合计 **18 个有效性能作业、130 项配置排队，当前 R=0**；PBS 提示指定节点资源不足，不能把排队描述为已运行。免费校验依赖 H 在性能成功后自动解除。
 
-主账号监控显示 `waiting_real_credits`，分担账号显示 `no_eligible_unregistered_cells`；本次未因同步结果新提交性能任务。两边监控每 60 秒检查，主账号留 16 CPUh、分担账号留 64 CPUh；按真实余额和有效范围续投，不能提前使用预计返还。余额是快照值，之后仍可能受结算影响。Nov 12 23:59 SGT 停止新增提交。
-
-完整目标、已登记和未来计划范围均未改变；两个账号跨账号已登记配置交集及未来计划交集均为零。当前真实源计划仍为 `core_group_watch_plan_<账号>_20261112_refund.json`。付费只测核心性能，处理与独立校验免费；完整结果复用，不重复测量。
+当前未完成状态：`{'validated': 18805, 'deferred_512': 1160, 'queued': 130, 'unsubmitted': 498, 'held': 5, 'performance_failed': 102}`。未完成归属为 `xtt_ella=1,765`、`hongxinran=130`；两账号当前登记配置交集及未来计划交集均为零。新真实源计划为 `core_group_watch_plan_<账号>_20261113_refund.json`。普通缺项优先，512 核继续延期；旧 H 不批量释放，失败先查可复用部分。
 
 ## 1. 先分清状态与下一步
 
@@ -25,12 +23,12 @@ hongxinran 的 **366 组、1,810 项分担任务全部通过并同步**，当前
 |---|---:|---|
 | `validated` | **18,805** | 复用，不重跑 |
 | `running` | **0** | 跟踪原作业 |
-| `queued` | **0** | 等待原作业，不复制提交 |
+| `queued` | **130** | 等原作业，不复制提交 |
 | `awaiting_validation` | **0** | 等校验/同步，不重测 |
-| `performance_failed` | **102** | 原账号先查失败和部分输出 |
+| `performance_failed` | **102** | 先查失败及可复用部分 |
 | `held` | **5** | 原 512 组延期 |
-| `unsubmitted` | **628** | 按 future_owner 续投，接手先转交 |
-| `deferred_512` | **1,160** | 延期，先补其他核数 |
+| `unsubmitted` | **498** | 按 future_owner 续投，接手先转交 |
+| `deferred_512` | **1,160** | 延期，先补普通核数 |
 | **合计** | **20,700** | 已验证 18,805，剩余 1,895 |
 
 [全部 20,700 行状态及来源](results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv) 是固定图逐配置依据。另有按状态拆出的 [完成](results/updated_vanda_scaling/git_sync_20261111/cells_validated.csv)、[未提交](results/updated_vanda_scaling/git_sync_20261111/cells_unsubmitted.csv)、[失败](results/updated_vanda_scaling/git_sync_20261111/cells_performance_failed.csv)、[暂挂](results/updated_vanda_scaling/git_sync_20261111/cells_held.csv)、[延期 512](results/updated_vanda_scaling/git_sync_20261111/cells_deferred_512.csv) 清单；均不能直接当提交计划。
@@ -84,18 +82,22 @@ CSV 中 `canonical_summary` 是跨账号匹配同一配置的唯一键。`assign
 
 ## 4. 当前资源、失败和分工
 
-| 账号 | 已登记资源组 | 当前付费性能 | 免费校验 R | 监控最近 CPUh 余额 | 固定图未完成归属 |
+| 账号 | 当前登记资源组 | 付费性能 | 免费校验 R | 最近 CPUh 余额 | 固定图未完成归属 |
 |---|---:|---|---:|---:|---:|
-| xtt_ella | 281 | R=0、Q=0 | 0 | 40.617 | 1,895 |
-| hongxinran | 366 | R=0、Q=0 | 0 | 70.632 | 0 |
+| xtt_ella | 293 | R=0，Q=12 | 0 | 5330.406 | 1,765 |
+| hongxinran | 372 | R=0，Q=6 | 0 | 1212.818 | 130 |
 
-此前三个 128 核请求、其余性能及独立校验批次均已结束，结果已同步。普通缺项优先、512 延期；主账号等待实际额度，分担账号当前范围已完成。旧暂挂保留；快照无 R/Q 不代表可以重新提交旧宽计划。
+主账号续投时引用了已被 PBS 清理的历史依赖 1530741，53 组/486 项请求在启动前被取消：无 stime、CPU 资源用量或 Exit_status，余额保持不变。已把这批请求及原计划单独归档，从有效注册表移出；只重新提交其从未计算的配置，不删除历史证据。新的免费输入检查 **1550012** 已通过，未重跑 Serial 性能或重新构建；提交器增加当前 PBS 依赖检查，防止再次仅凭历史缓存成功状态续投。
 
-最近请求放置调整记录：[七组八节点](results/updated_vanda_scaling/20261106T185006Z/eight_node_relocation_20261112_1606.json)、[两个 128 核](results/updated_vanda_scaling/20261106T185006Z/eight_node_relocation_20261112_1615.json)、[最后一个 128 核](results/updated_vanda_scaling/20261106T185006Z/last_128_placement_20261112_1617.json)。只调整尚未启动请求的物理主机，使用已有正式完成证明的 Platinum 8452Y 节点；节点数、总核数、进程/线程、内存和墙钟保持。实际分配以每组 cpu_hosts.jsonl 和 PBS 记录为准。
+大图新请求墙钟按“同图成功批次最慢用时 ×3 +30 分钟，向上取整 15 分钟”：uniform **2:30**、controlled **3:45**、hub **4:30**；普通八节点组保留一小时。依据来自 49 个历史成功批次（以证据文件为准），最慢约 79 分钟。只改尚未登记的新请求，核数、节点、线程、五次重复和计时指标不变；低内存已知失败前置条件保留。
 
-少数 GN-A40 命名节点上的 CPU 组保持 ngpus=0，不是 GPU 扩展；同 CPU 型号不能证明内存和网络完全相同，报告保留实际节点与放置元数据。每个资源组的实现和两通信共享同次分配。
+- [唯一执行 handover 与完整矩阵](HANDOFF_VANDA_EXPERIMENTS_20261106.md)
+- [130 项互斥分担及预算](results/updated_vanda_scaling/account_partition_20261113_refund/account_partition.json)
+- [墙钟依据与每个修改前后的上限](results/updated_vanda_scaling/account_partition_20261113_refund/walltime_evidence.json)
+- [启动前取消请求的诊断、归档和恢复](results/updated_vanda_scaling/20261106T185006Z/dependency_repair_20261113.json)
+- [逐配置状态、来源和归属](results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv)
 
-免费校验采用一核/20GB/24小时的 cpu_serial，顺序运行原校验和容差。此前 33 个替换校验 job 的新旧 ID 保留在 [对照表](results/updated_vanda_scaling/20261106T185006Z/free_validation_reroute_20261112.json)，跟踪实际注册表的当前 ID。付费只测性能，构建、图处理和校验免费。
+新有效请求使用当前检查依赖，不能释放或重用已归档的旧依赖取消请求。取消前未进入计算节点的 53 组不计入下文历史 102 个性能失败配置。旧 H 保持原延期和防重复规则。输入/校验全部免费，正式性能全部付费。
 
 原失败的 1537511（10项）、1538617（4项）以及零产出启动 1543209/1543315/1543317（共52项）没有盲目重投。新增六个大图组详见 [失败记录](results/updated_vanda_scaling/20261106T185006Z/large_graph_failures_20261112.json)：一核/节点、每节点 6GB 时 Kokkos 被 signal 9 杀死，36 个目标中有 18 项完整测量保留，尚未独立校验。内存上限为主要嫌疑，不宣称已确诊。另两个未提交的 strong_controlled/hub n8/C8 组共 12 项有明确内存验证前置条件，不能强行提交。失败和资源阻塞没有从分母剔除。
 
@@ -103,8 +105,8 @@ CSV 中 `canonical_summary` 是跨账号匹配同一配置的唯一键。`assign
 
 | 账号 | 目录 | 当前源计划 |
 |---|---|---|
-| xtt_ella | `/scratch/xtt_ella/DSA5208_PROJECT_3_20261107` | `results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261112_refund.json` |
-| hongxinran | `/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111` | `results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261112_refund.json` |
+| xtt_ella | `/scratch/xtt_ella/DSA5208_PROJECT_3_20261107` | `results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261113_refund.json` |
+| hongxinran | `/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111` | `results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261113_refund.json` |
 
 [实际资源组及 job ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv)、[主账号快照](results/updated_vanda_scaling/git_sync_20261111/queue_xtt_ella.json)、[分担快照](results/updated_vanda_scaling/git_sync_20261111/queue_hongxinran.json) 有准确时间；未提交按 future_owner 分属两账号，队友须先按下文转交。
 

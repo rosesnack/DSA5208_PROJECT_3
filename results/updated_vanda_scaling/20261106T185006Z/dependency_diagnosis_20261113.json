@@ -1,0 +1,20 @@
+{
+  "returncode": 153,
+  "stderr": "qstat: Unknown Job Id 1530741.stdct-mgmt-02\n",
+  "jobs": {
+    "1549866.stdct-mgmt-02": {
+      "job_state": "F",
+      "Hold_Types": "d",
+      "depend": "afterok:1530741.stdct-mgmt-02@stdct-mgmt-02,beforeok:1549867.stdct-mgmt-02@stdct-mgmt-02",
+      "qtime": "Fri Nov 13 00:59:53 2026",
+      "mtime": "Fri Nov 13 00:59:53 2026"
+    },
+    "1549996.stdct-mgmt-02": {
+      "job_state": "F",
+      "Hold_Types": "d",
+      "depend": "afterok:1530741.stdct-mgmt-02@stdct-mgmt-02,beforeok:1549997.stdct-mgmt-02@stdct-mgmt-02",
+      "qtime": "Fri Nov 13 01:04:41 2026",
+      "mtime": "Fri Nov 13 01:04:41 2026"
+    }
+  }
+}

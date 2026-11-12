@@ -32,6 +32,12 @@ def allocation_request(group):
     return f'{group["nodes"]}:{chunk}'
 
 
+def check_dependency(job_id):
+    job = json.loads(run('qstat', '-x', '-f', '-F', 'json', job_id))['Jobs'][job_id]
+    if job['job_state'] == 'F' and job.get('Exit_status') != 0:
+        raise RuntimeError(f'PBS dependency {job_id} did not complete successfully')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("run_id")
@@ -74,6 +80,7 @@ def main():
         known = {(r["graph"], int(r["nodes"]), int(r["cores_per_node"]),
                   json.loads(Path(r["plan"]).read_text()).get("extension", "")) for r in existing}
         accepted = []
+        checked_dependencies = set()
         env = os.environ.copy()
         env.update(RUN_ID=args.run_id, DATA_ROOT=f'/scratch/{os.environ["USER"]}/dsa5208_scaling/{args.run_id}',
                    OMPI_MCA_btl="self,vader,tcp", OMPI_MCA_pml="ob1", UCX_NET_DEVICES="",
@@ -96,10 +103,13 @@ def main():
             suffix = "_" + group["extension"] if group.get("extension") else ""
             plan = root / "core_group_plans" / f'{group["graph"]}_n{group["nodes"]}_c{group["cores_per_node"]}{suffix}.json'
             if args.submit:
+                dependency = group.get("dependency", args.dependency)
+                if dependency not in checked_dependencies:
+                    check_dependency(dependency)
+                    checked_dependencies.add(dependency)
                 plan.parent.mkdir(exist_ok=True)
                 plan.write_text(json.dumps(group, indent=2) + "\n")
                 env["CORE_GROUP_PLAN"] = str(plan.resolve())
-                dependency = group.get("dependency", args.dependency)
                 resources = 'select=' + allocation_request(group)
                 perf = subprocess.check_output(["qsub", "-h", "-P", args.project, "-q", "auto", "-l", resources,
                     "-l", "walltime=" + group["walltime"], "-W", "depend=afterok:" + dependency,

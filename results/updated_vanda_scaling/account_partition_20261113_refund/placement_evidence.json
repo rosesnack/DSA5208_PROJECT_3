@@ -1,0 +1,1220 @@
+{
+  "updates": [
+    {
+      "plan": "primary_plan.json",
+      "graph": "synthetic_hub",
+      "nodes": 8,
+      "cores": 32,
+      "hosts": [
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116"
+      ],
+      "all_free_at_snapshot": true
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "strong_uniform",
+      "nodes": 8,
+      "cores": 8,
+      "hosts": [
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n100000_d16",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n100000_d4",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n100000_d8",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n200000_d16",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n200000_d4",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n200000_d8",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n400000_d16",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n400000_d4",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n400000_d8",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n50000_d16",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n50000_d4",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n50000_d8",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "synthetic_controlled",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "synthetic_hub",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "strong_controlled",
+      "nodes": 8,
+      "cores": 16,
+      "hosts": [
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "strong_hub",
+      "nodes": 8,
+      "cores": 16,
+      "hosts": [
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "strong_uniform",
+      "nodes": 8,
+      "cores": 16,
+      "hosts": [
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_controlled_n50000_d16",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_controlled_n50000_d8",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_hub_n100000_d16",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_hub_n100000_d4",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_hub_n100000_d8",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_hub_n200000_d16",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_hub_n200000_d4",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_hub_n200000_d8",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_hub_n50000_d16",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_hub_n50000_d4",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_hub_n50000_d8",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n100000_d16",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n100000_d4",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n100000_d8",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n200000_d16",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n200000_d4",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n200000_d8",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n400000_d16",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n400000_d4",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n400000_d8",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n50000_d16",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n50000_d4",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "grid_uniform_n50000_d8",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "synthetic_controlled",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "synthetic_hub",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "strong_controlled",
+      "nodes": 8,
+      "cores": 32,
+      "hosts": [
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "strong_hub",
+      "nodes": 8,
+      "cores": 32,
+      "hosts": [
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "strong_uniform",
+      "nodes": 8,
+      "cores": 32,
+      "hosts": [
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "strong_controlled",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "strong_hub",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "strong_uniform",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "strong_controlled",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "strong_hub",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "primary_plan.json",
+      "graph": "strong_uniform",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "new_hongxinran_plan.json",
+      "graph": "grid_hub_n400000_d4",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "new_hongxinran_plan.json",
+      "graph": "grid_hub_n400000_d8",
+      "nodes": 8,
+      "cores": 128,
+      "hosts": [
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "new_hongxinran_plan.json",
+      "graph": "grid_uniform_n400000_d8",
+      "nodes": 8,
+      "cores": 32,
+      "hosts": [
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121"
+      ],
+      "all_free_at_snapshot": true
+    },
+    {
+      "plan": "new_hongxinran_plan.json",
+      "graph": "grid_uniform_n50000_d16",
+      "nodes": 8,
+      "cores": 32,
+      "hosts": [
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135"
+      ],
+      "all_free_at_snapshot": true
+    },
+    {
+      "plan": "new_hongxinran_plan.json",
+      "graph": "grid_uniform_n50000_d4",
+      "nodes": 8,
+      "cores": 32,
+      "hosts": [
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105"
+      ],
+      "all_free_at_snapshot": true
+    },
+    {
+      "plan": "new_hongxinran_plan.json",
+      "graph": "grid_uniform_n50000_d8",
+      "nodes": 8,
+      "cores": 32,
+      "hosts": [
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007"
+      ],
+      "all_free_at_snapshot": true
+    },
+    {
+      "plan": "new_hongxinran_plan.json",
+      "graph": "synthetic_controlled",
+      "nodes": 8,
+      "cores": 32,
+      "hosts": [
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097"
+      ],
+      "all_free_at_snapshot": true
+    },
+    {
+      "plan": "new_hongxinran_plan.json",
+      "graph": "grid_controlled_n50000_d16",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "new_hongxinran_plan.json",
+      "graph": "grid_controlled_n50000_d8",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "new_hongxinran_plan.json",
+      "graph": "grid_hub_n100000_d16",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "new_hongxinran_plan.json",
+      "graph": "grid_hub_n100000_d4",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "new_hongxinran_plan.json",
+      "graph": "grid_hub_n100000_d8",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "new_hongxinran_plan.json",
+      "graph": "grid_hub_n200000_d16",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "new_hongxinran_plan.json",
+      "graph": "grid_hub_n200000_d4",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "new_hongxinran_plan.json",
+      "graph": "grid_hub_n200000_d8",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "new_hongxinran_plan.json",
+      "graph": "grid_hub_n50000_d16",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "new_hongxinran_plan.json",
+      "graph": "grid_hub_n50000_d4",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097",
+        "cn-121",
+        "cn-086",
+        "cn-007"
+      ],
+      "all_free_at_snapshot": false
+    },
+    {
+      "plan": "new_hongxinran_plan.json",
+      "graph": "grid_hub_n50000_d8",
+      "nodes": 8,
+      "cores": 64,
+      "hosts": [
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097"
+      ],
+      "all_free_at_snapshot": false
+    }
+  ],
+  "quarantined_hosts": [
+    "cn-004",
+    "cn-123",
+    "cn-129",
+    "cn-148",
+    "cn-151",
+    "cn-153",
+    "cn-154"
+  ]
+}
