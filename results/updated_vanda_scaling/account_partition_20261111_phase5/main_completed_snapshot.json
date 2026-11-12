@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-12T16:04:26.718769+08:00",
+  "observed_at": "2026-11-12T16:14:40.592607+08:00",
   "completed": [
     {
       "performance_job": "1530742.stdct-mgmt-02",
@@ -1494,7 +1494,49 @@
       "validation_job": "1546316.stdct-mgmt-02",
       "cells": 8,
       "validated": 8
+    },
+    {
+      "performance_job": "1546317.stdct-mgmt-02",
+      "validation_job": "1546318.stdct-mgmt-02",
+      "cells": 18,
+      "validated": 18
+    },
+    {
+      "performance_job": "1546356.stdct-mgmt-02",
+      "validation_job": "1546357.stdct-mgmt-02",
+      "cells": 18,
+      "validated": 18
+    },
+    {
+      "performance_job": "1546491.stdct-mgmt-02",
+      "validation_job": "1546492.stdct-mgmt-02",
+      "cells": 18,
+      "validated": 18
+    },
+    {
+      "performance_job": "1546548.stdct-mgmt-02",
+      "validation_job": "1546549.stdct-mgmt-02",
+      "cells": 18,
+      "validated": 18
+    },
+    {
+      "performance_job": "1546560.stdct-mgmt-02",
+      "validation_job": "1546561.stdct-mgmt-02",
+      "cells": 18,
+      "validated": 18
+    },
+    {
+      "performance_job": "1546573.stdct-mgmt-02",
+      "validation_job": "1546574.stdct-mgmt-02",
+      "cells": 2,
+      "validated": 2
+    },
+    {
+      "performance_job": "1546576.stdct-mgmt-02",
+      "validation_job": "1546577.stdct-mgmt-02",
+      "cells": 4,
+      "validated": 4
     }
   ],
-  "files": 2697
+  "files": 1856
 }

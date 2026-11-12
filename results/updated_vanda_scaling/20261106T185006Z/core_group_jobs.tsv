@@ -279,3 +279,4 @@ grid_controlled_n400000_d8	8	16	128	1546566.stdct-mgmt-02	1546567.stdct-mgmt-02	
 grid_hub_n400000_d16	8	16	128	1546568.stdct-mgmt-02	1546569.stdct-mgmt-02	01:00:00	22	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n400000_d16_n8_c16.json	1530741.stdct-mgmt-02
 synthetic_hub	8	2	16	1546573.stdct-mgmt-02	1546574.stdct-mgmt-02	01:00:00	2	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/synthetic_hub_n8_c2.json	1530741.stdct-mgmt-02
 grid_uniform_n400000_d16	8	4	32	1546576.stdct-mgmt-02	1546577.stdct-mgmt-02	01:00:00	4	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d16_n8_c4.json	1530741.stdct-mgmt-02
+grid_uniform_n400000_d4	8	4	32	1546959.stdct-mgmt-02	1546960.stdct-mgmt-02	01:00:00	4	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n400000_d4_n8_c4.json	1530741.stdct-mgmt-02
