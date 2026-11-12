@@ -1,7 +1,7 @@
 {
+  "observed_at": "2026-11-13T02:46:36.057665+08:00",
   "account": "xtt_ella",
-  "observed_at": "2026-11-13T01:16:51.780398+08:00",
-  "pid": 3853438,
+  "pid": 1631520,
   "args": [
     "python3",
     "-u",
@@ -30,10 +30,26 @@
     "--defer-held-job",
     "1537572.stdct-mgmt-02",
     "--max-pending",
-    "12",
+    "64",
     "--max-unvalidated",
     "32"
   ],
   "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261113_refund.json",
-  "fresh_dependency": "1550012.stdct-mgmt-02"
+  "budget_plan": {
+    "observed_at": "2026-11-13T02:44:45.197532+08:00",
+    "account": "xtt_ella",
+    "balance_cpu_hours": 5278.406,
+    "existing_pending_cpu_hours": 768.0,
+    "margin_cpu_hours": 16.0,
+    "available_before_new": 4494.406,
+    "selected_new_groups": 34,
+    "selected_new_cells": 336,
+    "selected_new_cpu_hours": 4468.0,
+    "remaining_after_margin": 26.40599999999995,
+    "max_pending": 64,
+    "source": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261113_refund.json",
+    "source_sha256_before": "386311c564f76d537e3f109149805c05c962f9792f3325239af89d464a52a9ec",
+    "registry_sha256_before": "fefb236a1be3b4c6c925adb643a46cbad2a782835b2c1de17c7208f959c76c8f",
+    "algorithm": "Exact 0/1 CPU-hour packing maximizing missing configuration count; tie favors lower reserved CPU-hours. Reorder only; no scope/resource/timing changes."
+  }
 }

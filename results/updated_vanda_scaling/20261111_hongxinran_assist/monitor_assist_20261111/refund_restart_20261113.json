@@ -1,7 +1,7 @@
 {
-  "observed_at": "2026-11-13T00:59:46.154675+08:00",
+  "observed_at": "2026-11-13T02:46:36.005640+08:00",
   "account": "hongxinran",
-  "pid": 3598315,
+  "pid": 1631516,
   "args": [
     "python3",
     "-u",
@@ -12,7 +12,7 @@
     "--state-dir",
     "results/updated_vanda_scaling/20261111_hongxinran_assist/monitor_assist_20261111",
     "--dependency",
-    "1537725.stdct-mgmt-02",
+    "1549865.stdct-mgmt-02",
     "--until",
     "2026-11-13T23:59:00+08:00",
     "--interval",
@@ -160,33 +160,26 @@
     "--defer-held-job",
     "1513561.stdct-mgmt-02",
     "--defer-held-job",
-    "1519863.stdct-mgmt-02"
+    "1519863.stdct-mgmt-02",
+    "--max-pending",
+    "32"
   ],
   "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261113_refund.json",
-  "transfer": {
-    "observed_at": "2026-11-13T00:54:49.565936+08:00",
-    "balances": {
-      "xtt_ella": 5330.406,
-      "hongxinran": 1212.8179999999993
-    },
-    "new_assist_groups": 18,
-    "new_assist_cells": 130,
-    "assist_request_cpu_hours": 1120,
-    "assist_margin": 64,
-    "main_margin": 16,
-    "source_removed_cells": 130,
-    "registered_overlap": 0,
-    "completed_overlap": 0,
-    "future_plan_overlap": 0,
-    "paid_only_performance": true,
-    "validation_and_preparation_free": true,
-    "primary_plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261113_refund.json",
-    "assist_plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261113_refund.json",
-    "cutoff": "2026-11-13T23:59:00+08:00",
-    "max_main_cores": 256,
-    "max_assist_cores": 128,
-    "walltime_policy": "Ordinary groups retain 1h. Previously unregistered large graph groups use 3x slowest same-graph observed successful batch +30min rounded up 15min; no already registered job changed.",
-    "preparation_job": "1549865.stdct-mgmt-02",
-    "actual_post_refund_batch": true
+  "budget_plan": {
+    "observed_at": "2026-11-13T02:44:47.051242+08:00",
+    "account": "hongxinran",
+    "balance_cpu_hours": 1052.8179999999993,
+    "existing_pending_cpu_hours": 512.0,
+    "margin_cpu_hours": 64,
+    "available_before_new": 476.8179999999993,
+    "selected_new_groups": 7,
+    "selected_new_cells": 42,
+    "selected_new_cpu_hours": 448.0,
+    "remaining_after_margin": 28.8179999999993,
+    "max_pending": 32,
+    "source": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261113_refund.json",
+    "source_sha256_before": "4d8a31e745f52c5f129f51af39a657527204728fd134c25d3dccdda376c53e8d",
+    "registry_sha256_before": "4f9fff4ea2cfedb7e733c2cf702b999b7c71cb00864af2242ab2897c7129d8da",
+    "algorithm": "Exact 0/1 CPU-hour packing maximizing missing configuration count; tie favors lower reserved CPU-hours. Reorder only; no scope/resource/timing changes."
   }
 }

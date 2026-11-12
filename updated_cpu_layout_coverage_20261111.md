@@ -32,14 +32,14 @@ T=64 或把常规其他布局也扩到每节点 64 核，会增加此前未确�
 
 ## 当前安排与结果
 
-截至2026-11-13 02:21 SGT，严格完成 **18,829/20,700**，尚缺1,871。状态：`{'validated': 18829, 'deferred_512': 1160, 'queued': 134, 'unsubmitted': 464, 'held': 5, 'performance_failed': 102, 'running': 6}`；归属：`{'xtt_ella': 1761, 'hongxinran': 110}`。主机绑定修复后，主账号新增通过4项、分担账号新增通过20项；当前主账号1个8核大图运行，两边共17个性能作业排队。
+截至2026-11-13 02:47 SGT，严格完成**18,829/20,700**。状态为`{'validated': 18829, 'deferred_512': 1160, 'queued': 498, 'unsubmitted': 80, 'held': 5, 'performance_failed': 102, 'awaiting_validation': 6, 'running': 20}`，当前在途59个性能组覆盖518项；另有六项已测完等待免费校验。按CPUh追加41组后，剩余未提交80项由五个额度不足组68项和两个内存阻塞组12项构成；历史异常批次102项、512核1,165项仍另列。核心布局和完整矩阵没有扩大。
 
-核心配置、线程拆分和完整矩阵未改变。实际来源及交接见 [当前状态](updated_vanda_two_accounts_20261111.md)。
+新的64/32上限是监控允许在途作业数，不是核数或实际同时运行数；每个性能配置仍p×T=请求CPU核数。详见[预算记录](updated_vanda_budget_queue_20261113.md)和[当前状态](updated_vanda_two_accounts_20261111.md)。
 
 ## 审阅入口
 
 - [完整 20,700 项状态与任务 ID](results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv)
-- [671 个当前资源组及性能/免费校验作业 ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv)
+- [713 个当前资源组及性能/免费校验作业 ID](results/updated_vanda_scaling/git_sync_20261111/submitted_core_groups.csv)
 - [各核心数主线的逐配置覆盖](results/updated_vanda_scaling/git_sync_20261111/cpu_core_layouts.csv)
 - [覆盖汇总及快照时间](results/updated_vanda_scaling/git_sync_20261111/handoff_summary.json)
 - [主账号 PBS 快照](results/updated_vanda_scaling/git_sync_20261111/queue_xtt_ella.json)
