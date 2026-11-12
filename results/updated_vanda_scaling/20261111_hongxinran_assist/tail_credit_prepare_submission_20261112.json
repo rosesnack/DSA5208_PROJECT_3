@@ -1,0 +1,16 @@
+{
+  "job": "1545917.stdct-mgmt-02",
+  "purpose": "Free input/Serial-reference and existing Release-build checks only; no performance rerun",
+  "resources": {
+    "am_job_cache": "\"{}\"",
+    "mem": "20gb",
+    "mpiprocs": 1,
+    "ncpus": 1,
+    "ngpus": 0,
+    "nodect": 1,
+    "place": "free",
+    "queue_charge_rate": 0,
+    "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+    "walltime": "00:10:00"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "source_observed_at": "2026-11-12T12:31:27.111864+08:00",
+  "new_assist_groups": 46,
+  "new_assist_cells": 186,
+  "assist_request_cpu_hours": 1088,
+  "budget_request_ceiling": 1088,
+  "assist_balance_at_detection": 1158.632,
+  "assist_margin": 64,
+  "cores": [
+    16,
+    32
+  ],
+  "nodes": 8,
+  "original_walltime": "01:00:00",
+  "source_removed_cells": 186,
+  "registered_overlap": 0,
+  "completed_overlap": 0,
+  "future_plan_overlap": 0,
+  "paid_only_performance": true,
+  "validation_and_preparation_free": true,
+  "hosts": [
+    "cn-119",
+    "cn-120",
+    "cn-136",
+    "cn-007",
+    "cn-013",
+    "cn-083",
+    "cn-088",
+    "cn-122"
+  ],
+  "inflight_jobs_preserved": true,
+  "primary_plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261112_refund.json",
+  "assist_plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261112_refund.json",
+  "preparation_job": "1545991.stdct-mgmt-02",
+  "actual_post_refund_batch": true
+}

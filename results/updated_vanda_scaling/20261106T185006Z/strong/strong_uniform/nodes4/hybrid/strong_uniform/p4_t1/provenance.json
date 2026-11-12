@@ -1,0 +1,9 @@
+{
+  "performance_job": "1543640.stdct-mgmt-02",
+  "validation_job": "1543984.stdct-mgmt-02",
+  "group": "cpu_core_groups/strong_uniform/nodes4_cores1",
+  "cores": 4,
+  "nodes": 4,
+  "processes": 4,
+  "threads": 1
+}

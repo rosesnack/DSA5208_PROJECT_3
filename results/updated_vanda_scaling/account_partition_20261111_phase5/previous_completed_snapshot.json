@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-12T00:03:44.894755+08:00",
+  "observed_at": "2026-11-12T13:04:24.108691+08:00",
   "completed": [
     {
       "performance_job": "1542438.stdct-mgmt-02",
@@ -1428,7 +1428,133 @@
       "validation_job": "1543482.stdct-mgmt-02",
       "cells": 6,
       "validated": 6
+    },
+    {
+      "performance_job": "1545933.stdct-mgmt-02",
+      "validation_job": "1545934.stdct-mgmt-02",
+      "cells": 10,
+      "validated": 10
+    },
+    {
+      "performance_job": "1545937.stdct-mgmt-02",
+      "validation_job": "1545938.stdct-mgmt-02",
+      "cells": 10,
+      "validated": 10
+    },
+    {
+      "performance_job": "1545940.stdct-mgmt-02",
+      "validation_job": "1545942.stdct-mgmt-02",
+      "cells": 10,
+      "validated": 10
+    },
+    {
+      "performance_job": "1545944.stdct-mgmt-02",
+      "validation_job": "1545946.stdct-mgmt-02",
+      "cells": 10,
+      "validated": 10
+    },
+    {
+      "performance_job": "1546010.stdct-mgmt-02",
+      "validation_job": "1546011.stdct-mgmt-02",
+      "cells": 14,
+      "validated": 14
+    },
+    {
+      "performance_job": "1546012.stdct-mgmt-02",
+      "validation_job": "1546013.stdct-mgmt-02",
+      "cells": 14,
+      "validated": 14
+    },
+    {
+      "performance_job": "1546016.stdct-mgmt-02",
+      "validation_job": "1546017.stdct-mgmt-02",
+      "cells": 14,
+      "validated": 14
+    },
+    {
+      "performance_job": "1546018.stdct-mgmt-02",
+      "validation_job": "1546019.stdct-mgmt-02",
+      "cells": 14,
+      "validated": 14
+    },
+    {
+      "performance_job": "1546020.stdct-mgmt-02",
+      "validation_job": "1546021.stdct-mgmt-02",
+      "cells": 2,
+      "validated": 2
+    },
+    {
+      "performance_job": "1546067.stdct-mgmt-02",
+      "validation_job": "1546068.stdct-mgmt-02",
+      "cells": 2,
+      "validated": 2
+    },
+    {
+      "performance_job": "1546069.stdct-mgmt-02",
+      "validation_job": "1546070.stdct-mgmt-02",
+      "cells": 2,
+      "validated": 2
+    },
+    {
+      "performance_job": "1546071.stdct-mgmt-02",
+      "validation_job": "1546072.stdct-mgmt-02",
+      "cells": 2,
+      "validated": 2
+    },
+    {
+      "performance_job": "1546079.stdct-mgmt-02",
+      "validation_job": "1546080.stdct-mgmt-02",
+      "cells": 2,
+      "validated": 2
+    },
+    {
+      "performance_job": "1546081.stdct-mgmt-02",
+      "validation_job": "1546082.stdct-mgmt-02",
+      "cells": 2,
+      "validated": 2
+    },
+    {
+      "performance_job": "1546083.stdct-mgmt-02",
+      "validation_job": "1546084.stdct-mgmt-02",
+      "cells": 2,
+      "validated": 2
+    },
+    {
+      "performance_job": "1546090.stdct-mgmt-02",
+      "validation_job": "1546091.stdct-mgmt-02",
+      "cells": 2,
+      "validated": 2
+    },
+    {
+      "performance_job": "1546092.stdct-mgmt-02",
+      "validation_job": "1546093.stdct-mgmt-02",
+      "cells": 2,
+      "validated": 2
+    },
+    {
+      "performance_job": "1546094.stdct-mgmt-02",
+      "validation_job": "1546095.stdct-mgmt-02",
+      "cells": 2,
+      "validated": 2
+    },
+    {
+      "performance_job": "1546096.stdct-mgmt-02",
+      "validation_job": "1546097.stdct-mgmt-02",
+      "cells": 2,
+      "validated": 2
+    },
+    {
+      "performance_job": "1546101.stdct-mgmt-02",
+      "validation_job": "1546102.stdct-mgmt-02",
+      "cells": 2,
+      "validated": 2
+    },
+    {
+      "performance_job": "1546103.stdct-mgmt-02",
+      "validation_job": "1546104.stdct-mgmt-02",
+      "cells": 2,
+      "validated": 2
     }
   ],
-  "files": 2198
+  "files": 1787
 }

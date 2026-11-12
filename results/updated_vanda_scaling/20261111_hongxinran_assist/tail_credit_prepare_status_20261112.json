@@ -1,0 +1,39 @@
+{
+  "job_state": "F",
+  "Exit_status": 0,
+  "resources_used": {
+    "cpupercent": 0,
+    "cput": "00:00:00",
+    "mem": "4kb",
+    "ncpus": 1,
+    "ngpus": 0,
+    "vmem": "0kb",
+    "walltime": "00:00:01"
+  },
+  "Resource_List": {
+    "am_job_cache": "{\"job.walltime\": 600, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+    "mem": "20gb",
+    "mpiprocs": 1,
+    "ncpus": 1,
+    "ngpus": 0,
+    "nodect": 1,
+    "place": "free",
+    "queue_charge_rate": 0,
+    "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+    "walltime": "00:10:00"
+  },
+  "comment": "Job run at Thu Nov 12 at 12:08 on (IN-005[1]:ncpus=1:mem=20gb) and finished",
+  "job": "1545917.stdct-mgmt-02",
+  "input_receipt": {
+    "preparation_job": "1545917.stdct-mgmt-02",
+    "graphs": [
+      "grid_controlled_n400000_d4",
+      "grid_controlled_n400000_d8",
+      "grid_hub_n400000_d16",
+      "grid_hub_n400000_d4"
+    ],
+    "reference_data_root": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z",
+    "serial_performance_rerun": false,
+    "new_build": false
+  }
+}

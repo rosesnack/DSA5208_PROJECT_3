@@ -1,0 +1,74 @@
+{
+  "observed_at": "2026-11-12T12:59:00+08:00",
+  "scope": "Read-only running-job progress; saved measurements are not independent validation.",
+  "jobs": [
+    {
+      "job": "1545925.stdct-mgmt-02",
+      "graph": "strong_hub",
+      "nodes": 4,
+      "cores": 32,
+      "resources_used": {
+        "cpupercent": 616,
+        "cput": "01:28:16",
+        "mem": "9152680kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "7320692kb",
+        "walltime": "00:15:33"
+      },
+      "recorded_hosts": 4,
+      "saved_cell_measurements": 5
+    },
+    {
+      "job": "1545927.stdct-mgmt-02",
+      "graph": "strong_uniform",
+      "nodes": 4,
+      "cores": 32,
+      "resources_used": {
+        "cpupercent": 1193,
+        "cput": "02:27:38",
+        "mem": "13351964kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "7692264kb",
+        "walltime": "00:15:33"
+      },
+      "recorded_hosts": 4,
+      "saved_cell_measurements": 12
+    },
+    {
+      "job": "1545935.stdct-mgmt-02",
+      "graph": "strong_controlled",
+      "nodes": 1,
+      "cores": 16,
+      "resources_used": {
+        "cpupercent": 1456,
+        "cput": "05:03:07",
+        "mem": "9620904kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "13476356kb",
+        "walltime": "00:44:48"
+      },
+      "recorded_hosts": 1,
+      "saved_cell_measurements": 20
+    },
+    {
+      "job": "1545939.stdct-mgmt-02",
+      "graph": "strong_hub",
+      "nodes": 1,
+      "cores": 16,
+      "resources_used": {
+        "cpupercent": 458,
+        "cput": "01:24:00",
+        "mem": "9102460kb",
+        "ncpus": 16,
+        "ngpus": 0,
+        "vmem": "10221456kb",
+        "walltime": "00:26:23"
+      },
+      "recorded_hosts": 1,
+      "saved_cell_measurements": 13
+    }
+  ]
+}
