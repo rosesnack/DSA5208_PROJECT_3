@@ -1,3 +1,5 @@
+> 本文是较早时刻的操作记录；当前15:32状态与新增结果见[两账号状态](updated_vanda_two_accounts_20261111.md)，物理节点放置修复见[修复记录](updated_vanda_numa_placement_20261113.md)。
+
 # Vanda Nov 13 续跑记录（01:18 SGT）
 
 > 本文件保留01:18恢复过程；最新队列及完成数见 [最新状态](updated_vanda_two_accounts_20261111.md) 和 [唯一handover](HANDOFF_VANDA_EXPERIMENTS_20261106.md)。

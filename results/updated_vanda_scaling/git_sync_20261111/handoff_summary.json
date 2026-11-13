@@ -3,17 +3,16 @@
   "original_target": 19980,
   "later_512_splits": 720,
   "status_counts": {
-    "validated": 18829,
+    "validated": 18997,
     "deferred_512": 1160,
-    "queued": 498,
-    "unsubmitted": 80,
+    "queued": 368,
+    "awaiting_validation": 12,
     "held": 5,
     "performance_failed": 102,
-    "awaiting_validation": 6,
-    "running": 20
+    "unsubmitted": 56
   },
   "submitted_group_counts": {
-    "xtt_ella": 329,
+    "xtt_ella": 332,
     "hongxinran": 384
   },
   "mainline_coverage": [
@@ -101,8 +100,8 @@
   "registered_cross_account_overlap": 0,
   "future_plan_cross_account_overlap": 0,
   "unfinished_owner_counts": {
-    "xtt_ella": 1761,
-    "hongxinran": 110
+    "xtt_ella": 1647,
+    "hongxinran": 56
   },
   "future_plans": {
     "xtt_ella": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261113_refund.json",
@@ -126,14 +125,14 @@
   },
   "snapshots": {
     "xtt_ella": {
-      "observed_at": "2026-11-13T02:47:49.279362+08:00",
-      "monitor_action": "submitted",
-      "active_job_count": 101
+      "observed_at": "2026-11-13T15:32:05.514759+08:00",
+      "monitor_action": "waiting_real_credits",
+      "active_job_count": 80
     },
     "hongxinran": {
-      "observed_at": "2026-11-13T02:47:49.031567+08:00",
-      "monitor_action": "submitted",
-      "active_job_count": 96
+      "observed_at": "2026-11-13T15:32:04.737496+08:00",
+      "monitor_action": "no_eligible_unregistered_cells",
+      "active_job_count": 78
     }
   },
   "scope_note": "Thread range is 1/2/4/8/16/32. Regular per-node CPU budget is at most 32; the 512 endpoint uses 8 nodes x 64. Weak scaling is separate."

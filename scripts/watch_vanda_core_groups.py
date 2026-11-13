@@ -16,6 +16,8 @@ import subprocess
 import time
 from zoneinfo import ZoneInfo
 
+from refresh_vanda_cpu_placement import refresh_queued
+
 
 def command(parts, timeout=60):
     return subprocess.run(parts, text=True, capture_output=True, check=True, timeout=timeout).stdout
@@ -81,6 +83,14 @@ def cycle(args, root, jobs):
         jobs = job_snapshot(set(deferred), jobs)
         deferred = [i for i in deferred if jobs[i].get('job_state') == 'H'
                     and 'u' in jobs[i].get('Hold_Types', '')]
+    placements = []
+    if args.placement_hosts:
+        placements = refresh_queued(rows, jobs, args.placement_hosts, args.max_total_cores)
+        if placements:
+            jobs = job_snapshot({entry['job'] for entry in placements}, jobs)
+            with (root / 'placement_refresh_events.jsonl').open('a') as output:
+                output.write(json.dumps({'observed_at': datetime.now(ZoneInfo('Asia/Singapore')).isoformat(),
+                                         'updates': placements}) + '\n')
     failed = [i for i in ids if jobs.get(i, {}).get('job_state') == 'F'
               and jobs[i].get('Exit_status') != 0]
     pending_performance = sum(jobs.get(r['performance_job'], {}).get('job_state') != 'F'
@@ -88,6 +98,7 @@ def cycle(args, root, jobs):
     pending_validation = sum(jobs.get(r['performance_job'], {}).get('Exit_status') == 0
                              and jobs.get(r['validation_job'], {}).get('job_state') != 'F' for r in rows)
     state = {'pending_performance_groups': pending_performance, 'deferred_held_jobs': deferred,
+             'placement_updates': len(placements),
              'pending_validation_groups': pending_validation, 'failed_jobs_not_retried': sorted(failed),
              'performance_states': dict(Counter(jobs.get(r['performance_job'], {}).get('job_state', 'unknown') for r in rows)),
              'validation_states': dict(Counter(jobs.get(r['validation_job'], {}).get('job_state', 'unknown') for r in rows))}
@@ -149,6 +160,8 @@ def main():
     parser.add_argument('--defer-held-job', action='append', default=[],
                         help='Keep a named legacy job user-held and exclude its confirmed hold from new reservations')
     parser.add_argument('--submit-script', type=Path, default=Path('scripts/submit_vanda_core_groups.py'))
+    parser.add_argument('--placement-hosts', type=Path,
+                        help='Validated physical CPU host proofs; refresh queued bindings before checking credits')
     args = parser.parse_args()
     root = Path('results/updated_vanda_scaling') / args.run_id
     deadline = datetime.fromisoformat(args.until)

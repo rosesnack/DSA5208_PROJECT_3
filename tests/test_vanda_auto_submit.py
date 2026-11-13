@@ -19,6 +19,38 @@ from watch_vanda_core_groups import unregistered_groups
 
 
 class AutoSubmitTests(unittest.TestCase):
+    def test_queued_placement_refresh_continues_when_accounting_login_expires(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            registered = root / 'registered.json'
+            registered.write_text('{"cells": [{"canonical_summary": "pending/summary.json"}]}')
+            (root / 'core_group_jobs.tsv').write_text(
+                'performance_job\tvalidation_job\tplan\tcores\n'
+                f'pending\tcheck\t{registered}\t32\n')
+            plan = root / 'plan.json'
+            plan.write_text('[]')
+            args = SimpleNamespace(plan=plan, dependency='proof', defer_held_job=[],
+                                   max_total_cores=128, project='personal-test',
+                                   placement_hosts=root / 'hosts.json')
+            jobs = {'pending': {'job_state': 'Q'}, 'check': {'job_state': 'H'},
+                    'proof': {'job_state': 'F', 'Exit_status': 0}}
+            events = []
+
+            def refresh(*parts):
+                events.append('refresh_existing_queue')
+                return []
+
+            def credits(*parts, **kwargs):
+                events.append('query_credits')
+                return 'Please run amgr login'
+
+            with patch.object(watch, 'job_snapshot', return_value=jobs), \
+                 patch.object(watch, 'refresh_queued', side_effect=refresh), \
+                 patch.object(watch, 'command', side_effect=credits):
+                state, _ = watch.cycle(args, root, jobs)
+            self.assertEqual(events, ['refresh_existing_queue', 'query_credits'])
+            self.assertEqual(state['action'], 'waiting_amgr_login')
+
     def test_expired_dependency_stops_before_qsub_and_registration(self):
         prior = Path.cwd()
         with tempfile.TemporaryDirectory() as folder:
@@ -81,7 +113,7 @@ class AutoSubmitTests(unittest.TestCase):
             args = SimpleNamespace(plan=plan, dependency='proof', defer_held_job=['legacy'],
                                    max_total_cores=128, project='personal-test', max_pending=6,
                                    max_unvalidated=24, run_id='test', margin=64,
-                                   submit_script=Path('submit.py'))
+                                   submit_script=Path('submit.py'), placement_hosts=None)
             jobs = {'proof': {'job_state': 'F', 'Exit_status': 0},
                     'legacy': {'job_state': 'H', 'Hold_Types': 'su'}}
             commands = []

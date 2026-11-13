@@ -1,0 +1,100 @@
+{
+  "observed_at": "2026-11-13T15:31:53.980782+08:00",
+  "account": "hongxinran",
+  "runtime": {
+    "job_state": "F",
+    "Exit_status": 0,
+    "Resource_List": {
+      "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
+      "mem": "440gb",
+      "mpiprocs": 64,
+      "ncpus": 64,
+      "ngpus": 0,
+      "nodect": 8,
+      "place": "scatter",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-100+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-142+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-145",
+      "walltime": "01:00:00"
+    },
+    "resources_used": {
+      "cpupercent": 750,
+      "cput": "00:02:42",
+      "mem": "69996kb",
+      "ncpus": 64,
+      "ngpus": 0,
+      "vmem": "263776kb",
+      "walltime": "00:00:29"
+    },
+    "exec_vnode": "(CN-100[0]:mem=29095mb:ncpus=4+CN-100[1]:mem=27225mb:ncpus=4)+(CN-105[0]:mem=29137mb:ncpus=4+CN-105[1]:mem=27183mb:ncpus=4)+(CN-120[0]:mem=29095mb:ncpus=4+CN-120[1]:mem=27225mb:ncpus=4)+(CN-121[0]:mem=29095mb:ncpus=4+CN-121[1]:mem=27225mb:ncpus=4)+(CN-122[0]:mem=29137mb:ncpus=4+CN-122[1]:mem=27183mb:ncpus=4)+(CN-135[0]:mem=29137mb:ncpus=4+CN-135[1]:mem=27183mb:ncpus=4)+(CN-142[0]:mem=29095mb:ncpus=4+CN-142[1]:mem=27225mb:ncpus=4)+(CN-145[0]:mem=29137mb:ncpus=4+CN-145[1]:mem=27183mb:ncpus=4)",
+    "exec_host": "CN-100/2*0+CN-105/2*0+CN-120/2*0+CN-121/2*0+CN-122/2*0+CN-135/3*0+CN-142/2*0+CN-145/2*0",
+    "stime": "Fri Nov 13 15:07:30 2026",
+    "job": "1550244.stdct-mgmt-02",
+    "validated_cells": 6,
+    "cpu_hosts": [
+      {
+        "host": "CN-100",
+        "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+        "logical_cpus": 72,
+        "affinity_cpus": 8,
+        "tcp_ephemeral_port_range": "32768\t61439",
+        "tcp_tw_reuse": "2"
+      },
+      {
+        "host": "CN-105",
+        "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+        "logical_cpus": 72,
+        "affinity_cpus": 8,
+        "tcp_ephemeral_port_range": "32768\t61439",
+        "tcp_tw_reuse": "2"
+      },
+      {
+        "host": "CN-120",
+        "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+        "logical_cpus": 72,
+        "affinity_cpus": 8,
+        "tcp_ephemeral_port_range": "32768\t61439",
+        "tcp_tw_reuse": "2"
+      },
+      {
+        "host": "CN-122",
+        "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+        "logical_cpus": 72,
+        "affinity_cpus": 8,
+        "tcp_ephemeral_port_range": "32768\t61439",
+        "tcp_tw_reuse": "2"
+      },
+      {
+        "host": "CN-145",
+        "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+        "logical_cpus": 72,
+        "affinity_cpus": 8,
+        "tcp_ephemeral_port_range": "32768\t61439",
+        "tcp_tw_reuse": "2"
+      },
+      {
+        "host": "CN-142",
+        "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+        "logical_cpus": 72,
+        "affinity_cpus": 8,
+        "tcp_ephemeral_port_range": "32768\t61439",
+        "tcp_tw_reuse": "2"
+      },
+      {
+        "host": "CN-135",
+        "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+        "logical_cpus": 72,
+        "affinity_cpus": 8,
+        "tcp_ephemeral_port_range": "32768\t61439",
+        "tcp_tw_reuse": "2"
+      },
+      {
+        "host": "CN-121",
+        "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+        "logical_cpus": 72,
+        "affinity_cpus": 8,
+        "tcp_ephemeral_port_range": "32768\t61439",
+        "tcp_tw_reuse": "2"
+      }
+    ]
+  }
+}

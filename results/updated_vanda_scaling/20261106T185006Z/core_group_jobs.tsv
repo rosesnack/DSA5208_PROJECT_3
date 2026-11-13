@@ -328,3 +328,6 @@ strong_controlled	8	8	64	1550411.stdct-mgmt-02	1550412.stdct-mgmt-02	03:45:00	18
 strong_hub	8	8	64	1550413.stdct-mgmt-02	1550414.stdct-mgmt-02	04:30:00	18	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_hub_n8_c8.json	1550012.stdct-mgmt-02
 strong_uniform	8	8	64	1550415.stdct-mgmt-02	1550416.stdct-mgmt-02	02:30:00	18	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_uniform_n8_c8.json	1550012.stdct-mgmt-02
 strong_uniform	8	16	128	1550417.stdct-mgmt-02	1550418.stdct-mgmt-02	02:30:00	22	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_uniform_n8_c16.json	1550012.stdct-mgmt-02
+grid_uniform_n50000_d8	8	16	128	1551771.stdct-mgmt-02	1551772.stdct-mgmt-02	01:00:00	8	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d8_n8_c16.json	1550012.stdct-mgmt-02
+synthetic_controlled	8	16	128	1551773.stdct-mgmt-02	1551774.stdct-mgmt-02	01:00:00	8	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/synthetic_controlled_n8_c16.json	1550012.stdct-mgmt-02
+synthetic_hub	8	16	128	1551775.stdct-mgmt-02	1551776.stdct-mgmt-02	01:00:00	8	results/updated_vanda_scaling/20261106T185006Z/core_group_plans/synthetic_hub_n8_c16.json	1550012.stdct-mgmt-02

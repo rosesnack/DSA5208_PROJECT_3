@@ -1,0 +1,382 @@
+{
+  "cn-147": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d16/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-142": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d16/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-146": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d16/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-140": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d16/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-135": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d16/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-141": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d16/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-136": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d16/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-138": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d16/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-087": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-014": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-104": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-091": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-088": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-100": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-013": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-008": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-051": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes1_cores32/cpu_hosts.jsonl"
+  },
+  "cn-053": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes2_cores32/cpu_hosts.jsonl"
+  },
+  "cn-086": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores4/cpu_hosts.jsonl"
+  },
+  "cn-083": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores4/cpu_hosts.jsonl"
+  },
+  "cn-007": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores4/cpu_hosts.jsonl"
+  },
+  "cn-152": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes8_cores4/cpu_hosts.jsonl"
+  },
+  "cn-119": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes4_cores16/cpu_hosts.jsonl"
+  },
+  "cn-137": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n400000_d4/nodes4_cores32/cpu_hosts.jsonl"
+  },
+  "cn-139": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n200000_d16/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-011": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n200000_d16/nodes1_cores32/cpu_hosts.jsonl"
+  },
+  "cn-120": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_uniform_n200000_d16/nodes4_cores16/cpu_hosts.jsonl"
+  },
+  "cn-097": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n50000_d8/nodes4_cores32/cpu_hosts.jsonl"
+  },
+  "cn-116": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d8/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-105": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n100000_d8/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "gn-a40-082": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d8/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "gn-a40-084": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d8/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-150": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d8/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-015": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d8/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "gn-a40-080": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d8/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "gn-a40-085": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d8/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "gn-a40-086": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d8/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "gn-a40-079": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d8/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-085": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d8/nodes8_cores2/cpu_hosts.jsonl"
+  },
+  "cn-006": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d8/nodes8_cores2/cpu_hosts.jsonl"
+  },
+  "cn-121": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d8/nodes8_cores4/cpu_hosts.jsonl"
+  },
+  "gn-a40-066": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-069": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-063": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-059": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-066": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-160": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n400000_d4/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-005": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n400000_d4/nodes8_cores1/cpu_hosts.jsonl"
+  },
+  "cn-118": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n400000_d4/nodes8_cores8/cpu_hosts.jsonl"
+  },
+  "gn-a40-054": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/strong_uniform/nodes1_cores32/cpu_hosts.jsonl"
+  },
+  "cn-122": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/strong_uniform/nodes8_cores2/cpu_hosts.jsonl"
+  },
+  "cn-096": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n400000_d4/nodes8_cores16/cpu_hosts.jsonl"
+  },
+  "gn-a40-057": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n50000_d4/nodes4_cores32/cpu_hosts.jsonl"
+  },
+  "gn-a40-055": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n50000_d4/nodes4_cores32/cpu_hosts.jsonl"
+  },
+  "gn-a40-056": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n50000_d4/nodes4_cores32/cpu_hosts.jsonl"
+  },
+  "cn-125": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n200000_d8/nodes1_cores32/cpu_hosts.jsonl"
+  },
+  "cn-092": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n200000_d8/nodes8_cores8/cpu_hosts.jsonl"
+  },
+  "cn-099": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n200000_d8/nodes8_cores8/cpu_hosts.jsonl"
+  },
+  "cn-145": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/synthetic_hub/nodes8_cores4/cpu_hosts.jsonl"
+  },
+  "gn-a40-074": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d16/nodes2_cores2/cpu_hosts.jsonl"
+  },
+  "gn-a40-076": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d16/nodes2_cores2/cpu_hosts.jsonl"
+  },
+  "cn-009": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d16/nodes8_cores2/cpu_hosts.jsonl"
+  },
+  "gn-a40-051": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d16/nodes8_cores16/cpu_hosts.jsonl"
+  },
+  "gn-a40-050": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d16/nodes8_cores16/cpu_hosts.jsonl"
+  },
+  "gn-a40-052": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d16/nodes8_cores16/cpu_hosts.jsonl"
+  },
+  "gn-a40-053": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d16/nodes8_cores16/cpu_hosts.jsonl"
+  },
+  "cn-003": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d16/nodes4_cores32/cpu_hosts.jsonl"
+  },
+  "cn-039": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d16/nodes4_cores32/cpu_hosts.jsonl"
+  },
+  "cn-012": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n200000_d8/nodes1_cores32/cpu_hosts.jsonl"
+  },
+  "cn-112": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n400000_d16/nodes1_cores32/cpu_hosts.jsonl"
+  },
+  "gn-a40-075": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d4/nodes2_cores2/cpu_hosts.jsonl"
+  },
+  "cn-101": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n100000_d4/nodes4_cores32/cpu_hosts.jsonl"
+  },
+  "cn-017": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_hub_n200000_d16/nodes1_cores32/cpu_hosts.jsonl"
+  },
+  "cn-103": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/strong_controlled/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-124": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/strong_controlled/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-126": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/strong_controlled/nodes8_cores32/cpu_hosts.jsonl"
+  },
+  "cn-084": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/strong_controlled/nodes1_cores32/cpu_hosts.jsonl"
+  },
+  "cn-010": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/strong_controlled/nodes2_cores32/cpu_hosts.jsonl"
+  },
+  "cn-143": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/strong_controlled/nodes4_cores32/cpu_hosts.jsonl"
+  },
+  "cn-054": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n200000_d16/nodes4_cores32/cpu_hosts.jsonl"
+  },
+  "cn-068": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n200000_d16/nodes4_cores32/cpu_hosts.jsonl"
+  },
+  "cn-065": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n200000_d16/nodes4_cores32/cpu_hosts.jsonl"
+  },
+  "cn-073": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/grid_controlled_n200000_d16/nodes4_cores32/cpu_hosts.jsonl"
+  },
+  "gn-a40-047": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/cpu_core_groups/strong_hub/nodes1_cores32/cpu_hosts.jsonl"
+  },
+  "cn-110": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/kokkos_cpu_grid/grid_uniform_n100000_d8/nodes1/cpu_hosts.jsonl"
+  },
+  "cn-075": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/kokkos_cpu_grid/synthetic_hub/nodes1/cpu_hosts.jsonl"
+  },
+  "gn-a40-067": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/kokkos_cpu_grid/grid_controlled_n50000_d4/nodes2/cpu_hosts.jsonl"
+  },
+  "cn-109": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/kokkos_cpu_grid/grid_controlled_n50000_d4/nodes8/cpu_hosts.jsonl"
+  },
+  "cn-089": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/kokkos_cpu_grid/grid_controlled_n50000_d4/nodes8/cpu_hosts.jsonl"
+  },
+  "cn-090": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/weak_512/uniform/cpu_hosts.jsonl"
+  },
+  "cn-132": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261106T185006Z/weak_512/uniform/cpu_hosts.jsonl"
+  },
+  "cn-102": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261111_hongxinran_assist/cpu_core_groups/grid_hub_n100000_d8/nodes2_cores32/cpu_hosts.jsonl"
+  },
+  "cn-041": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261111_hongxinran_assist/cpu_core_groups/grid_hub_n100000_d8/nodes4_cores32/cpu_hosts.jsonl"
+  },
+  "cn-036": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261111_hongxinran_assist/cpu_core_groups/grid_hub_n100000_d8/nodes4_cores32/cpu_hosts.jsonl"
+  },
+  "cn-045": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y",
+    "proof": "results/updated_vanda_scaling/20261111_hongxinran_assist/cpu_core_groups/grid_hub_n100000_d8/nodes4_cores32/cpu_hosts.jsonl"
+  }
+}

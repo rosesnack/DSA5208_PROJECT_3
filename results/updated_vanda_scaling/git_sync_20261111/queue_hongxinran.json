@@ -1,11 +1,11 @@
 {
-  "observed_at": "2026-11-13T02:47:49.031567+08:00",
+  "observed_at": "2026-11-13T15:32:04.737496+08:00",
   "account": "hongxinran",
   "source_project": "/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111",
   "run_id": "20261111_hongxinran_assist",
   "monitor_alive": true,
   "monitor": {
-    "pending_performance_groups": 6,
+    "pending_performance_groups": 5,
     "deferred_held_jobs": [
       "1510708.stdct-mgmt-02",
       "1510713.stdct-mgmt-02",
@@ -78,18 +78,20 @@
       "1513561.stdct-mgmt-02",
       "1519863.stdct-mgmt-02"
     ],
-    "pending_validation_groups": 0,
+    "placement_updates": 1,
+    "pending_validation_groups": 1,
     "failed_jobs_not_retried": [],
     "performance_states": {
-      "F": 371,
-      "Q": 6
+      "F": 379,
+      "Q": 5
     },
     "validation_states": {
-      "F": 371,
-      "H": 6
+      "F": 378,
+      "H": 5,
+      "R": 1
     },
-    "eligible_unregistered_groups": 7,
-    "eligible_unregistered_cells": 42,
+    "eligible_unregistered_groups": 0,
+    "eligible_unregistered_cells": 0,
     "endpoint_proof_state": {
       "1549865.stdct-mgmt-02": "F",
       "1537725.stdct-mgmt-02": "F",
@@ -99,171 +101,10 @@
       "1545917.stdct-mgmt-02": "F",
       "1545991.stdct-mgmt-02": "F"
     },
-    "balance_cpu_hours": 1052.8179999999993,
-    "submission_check": {
-      "observed_at": "2026-11-13T02:46:58.529297+08:00",
-      "submitted": true,
-      "balance": 1052.8179999999993,
-      "balance_source": "hpc_project",
-      "prior_pending_reservations": 512.0,
-      "margin": 64.0,
-      "deferred_user_held_jobs": [
-        "1510708.stdct-mgmt-02",
-        "1510713.stdct-mgmt-02",
-        "1510718.stdct-mgmt-02",
-        "1510743.stdct-mgmt-02",
-        "1510748.stdct-mgmt-02",
-        "1513353.stdct-mgmt-02",
-        "1513358.stdct-mgmt-02",
-        "1513363.stdct-mgmt-02",
-        "1513370.stdct-mgmt-02",
-        "1513375.stdct-mgmt-02",
-        "1513380.stdct-mgmt-02",
-        "1513385.stdct-mgmt-02",
-        "1513390.stdct-mgmt-02",
-        "1513395.stdct-mgmt-02",
-        "1513400.stdct-mgmt-02",
-        "1513405.stdct-mgmt-02",
-        "1513410.stdct-mgmt-02",
-        "1513415.stdct-mgmt-02",
-        "1513420.stdct-mgmt-02",
-        "1513425.stdct-mgmt-02",
-        "1513430.stdct-mgmt-02",
-        "1513435.stdct-mgmt-02",
-        "1513439.stdct-mgmt-02",
-        "1513440.stdct-mgmt-02",
-        "1513444.stdct-mgmt-02",
-        "1513445.stdct-mgmt-02",
-        "1513449.stdct-mgmt-02",
-        "1513450.stdct-mgmt-02",
-        "1513454.stdct-mgmt-02",
-        "1513455.stdct-mgmt-02",
-        "1513459.stdct-mgmt-02",
-        "1513460.stdct-mgmt-02",
-        "1513464.stdct-mgmt-02",
-        "1513465.stdct-mgmt-02",
-        "1513469.stdct-mgmt-02",
-        "1513470.stdct-mgmt-02",
-        "1513474.stdct-mgmt-02",
-        "1513475.stdct-mgmt-02",
-        "1513479.stdct-mgmt-02",
-        "1513480.stdct-mgmt-02",
-        "1513484.stdct-mgmt-02",
-        "1513485.stdct-mgmt-02",
-        "1513489.stdct-mgmt-02",
-        "1513490.stdct-mgmt-02",
-        "1513494.stdct-mgmt-02",
-        "1513495.stdct-mgmt-02",
-        "1513499.stdct-mgmt-02",
-        "1513500.stdct-mgmt-02",
-        "1513504.stdct-mgmt-02",
-        "1513505.stdct-mgmt-02",
-        "1513509.stdct-mgmt-02",
-        "1513510.stdct-mgmt-02",
-        "1513514.stdct-mgmt-02",
-        "1513515.stdct-mgmt-02",
-        "1513519.stdct-mgmt-02",
-        "1513520.stdct-mgmt-02",
-        "1513524.stdct-mgmt-02",
-        "1513525.stdct-mgmt-02",
-        "1513529.stdct-mgmt-02",
-        "1513530.stdct-mgmt-02",
-        "1513534.stdct-mgmt-02",
-        "1513535.stdct-mgmt-02",
-        "1513539.stdct-mgmt-02",
-        "1513540.stdct-mgmt-02",
-        "1513544.stdct-mgmt-02",
-        "1513545.stdct-mgmt-02",
-        "1513551.stdct-mgmt-02",
-        "1513556.stdct-mgmt-02",
-        "1513561.stdct-mgmt-02",
-        "1519863.stdct-mgmt-02"
-      ],
-      "new_reservations": 448.0,
-      "uncommitted_after_margin": 28.8179999999993,
-      "groups": [
-        {
-          "graph": "grid_hub_n100000_d8",
-          "nodes": 8,
-          "cores": 64,
-          "cells": 6,
-          "walltime": "01:00:00",
-          "reservation": 64.0,
-          "performance_job": "1550363.stdct-mgmt-02",
-          "validation_job": "1550364.stdct-mgmt-02",
-          "dependency": "1549865.stdct-mgmt-02"
-        },
-        {
-          "graph": "grid_hub_n200000_d16",
-          "nodes": 8,
-          "cores": 64,
-          "cells": 6,
-          "walltime": "01:00:00",
-          "reservation": 64.0,
-          "performance_job": "1550367.stdct-mgmt-02",
-          "validation_job": "1550368.stdct-mgmt-02",
-          "dependency": "1549865.stdct-mgmt-02"
-        },
-        {
-          "graph": "grid_hub_n200000_d4",
-          "nodes": 8,
-          "cores": 64,
-          "cells": 6,
-          "walltime": "01:00:00",
-          "reservation": 64.0,
-          "performance_job": "1550371.stdct-mgmt-02",
-          "validation_job": "1550372.stdct-mgmt-02",
-          "dependency": "1549865.stdct-mgmt-02"
-        },
-        {
-          "graph": "grid_hub_n200000_d8",
-          "nodes": 8,
-          "cores": 64,
-          "cells": 6,
-          "walltime": "01:00:00",
-          "reservation": 64.0,
-          "performance_job": "1550375.stdct-mgmt-02",
-          "validation_job": "1550376.stdct-mgmt-02",
-          "dependency": "1549865.stdct-mgmt-02"
-        },
-        {
-          "graph": "grid_hub_n50000_d16",
-          "nodes": 8,
-          "cores": 64,
-          "cells": 6,
-          "walltime": "01:00:00",
-          "reservation": 64.0,
-          "performance_job": "1550379.stdct-mgmt-02",
-          "validation_job": "1550380.stdct-mgmt-02",
-          "dependency": "1549865.stdct-mgmt-02"
-        },
-        {
-          "graph": "grid_hub_n50000_d4",
-          "nodes": 8,
-          "cores": 64,
-          "cells": 6,
-          "walltime": "01:00:00",
-          "reservation": 64.0,
-          "performance_job": "1550381.stdct-mgmt-02",
-          "validation_job": "1550383.stdct-mgmt-02",
-          "dependency": "1549865.stdct-mgmt-02"
-        },
-        {
-          "graph": "grid_hub_n50000_d8",
-          "nodes": 8,
-          "cores": 64,
-          "cells": 6,
-          "walltime": "01:00:00",
-          "reservation": 64.0,
-          "performance_job": "1550385.stdct-mgmt-02",
-          "validation_job": "1550387.stdct-mgmt-02",
-          "dependency": "1549865.stdct-mgmt-02"
-        }
-      ]
-    },
-    "action": "submitted",
-    "observed_at": "2026-11-13T02:46:36.109388+08:00",
-    "pid": 1631516,
+    "balance_cpu_hours": 699.875,
+    "action": "no_eligible_unregistered_cells",
+    "observed_at": "2026-11-13T15:30:43.570747+08:00",
+    "pid": 1996638,
     "interval_seconds": 60,
     "until": "2026-11-13T23:59:00+08:00",
     "margin_cpu_hours": 64,
@@ -1638,345 +1479,12 @@
       },
       "depend": "afterok:1549888.stdct-mgmt-02@stdct-mgmt-02"
     },
-    "1550244.stdct-mgmt-02": {
-      "job_state": "Q",
-      "queue": "batch_cpu",
-      "Hold_Types": "n",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "440gb",
-        "mpiprocs": 64,
-        "ncpus": 64,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-116+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122",
-        "walltime": "01:00:00"
-      },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-121 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550245.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550245.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "cpu_serial",
-      "Hold_Types": "d",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "20gb",
-        "mpiprocs": 1,
-        "ncpus": 1,
-        "ngpus": 0,
-        "nodect": 1,
-        "place": "free",
-        "queue_charge_rate": 0,
-        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
-        "walltime": "24:00:00"
-      },
-      "depend": "afterok:1550244.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550246.stdct-mgmt-02": {
-      "job_state": "Q",
-      "queue": "batch_cpu",
-      "Hold_Types": "n",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "440gb",
-        "mpiprocs": 64,
-        "ncpus": 64,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-104",
-        "walltime": "01:00:00"
-      },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-135 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550247.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550247.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "cpu_serial",
-      "Hold_Types": "d",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "20gb",
-        "mpiprocs": 1,
-        "ncpus": 1,
-        "ngpus": 0,
-        "nodect": 1,
-        "place": "free",
-        "queue_charge_rate": 0,
-        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
-        "walltime": "24:00:00"
-      },
-      "depend": "afterok:1550246.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550248.stdct-mgmt-02": {
-      "job_state": "Q",
-      "queue": "batch_cpu",
-      "Hold_Types": "n",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "440gb",
-        "mpiprocs": 64,
-        "ncpus": 64,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-116+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086",
-        "walltime": "01:00:00"
-      },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-105 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550249.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550249.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "cpu_serial",
-      "Hold_Types": "d",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "20gb",
-        "mpiprocs": 1,
-        "ncpus": 1,
-        "ngpus": 0,
-        "nodect": 1,
-        "place": "free",
-        "queue_charge_rate": 0,
-        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
-        "walltime": "24:00:00"
-      },
-      "depend": "afterok:1550248.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550250.stdct-mgmt-02": {
-      "job_state": "Q",
-      "queue": "batch_cpu",
-      "Hold_Types": "n",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "440gb",
-        "mpiprocs": 64,
-        "ncpus": 64,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-116+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-140",
-        "walltime": "01:00:00"
-      },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-007 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550251.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550251.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "cpu_serial",
-      "Hold_Types": "d",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "20gb",
-        "mpiprocs": 1,
-        "ncpus": 1,
-        "ngpus": 0,
-        "nodect": 1,
-        "place": "free",
-        "queue_charge_rate": 0,
-        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
-        "walltime": "24:00:00"
-      },
-      "depend": "afterok:1550250.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550363.stdct-mgmt-02": {
-      "job_state": "Q",
-      "queue": "batch_cpu",
-      "Hold_Types": "n",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "440gb",
-        "mpiprocs": 64,
-        "ncpus": 64,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-116",
-        "walltime": "01:00:00"
-      },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-097 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550364.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550364.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "cpu_serial",
-      "Hold_Types": "d",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "20gb",
-        "mpiprocs": 1,
-        "ncpus": 1,
-        "ngpus": 0,
-        "nodect": 1,
-        "place": "free",
-        "queue_charge_rate": 0,
-        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
-        "walltime": "24:00:00"
-      },
-      "depend": "afterok:1550363.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550367.stdct-mgmt-02": {
-      "job_state": "Q",
-      "queue": "batch_cpu",
-      "Hold_Types": "n",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "440gb",
-        "mpiprocs": 64,
-        "ncpus": 64,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011",
-        "walltime": "01:00:00"
-      },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-122 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550368.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550368.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "cpu_serial",
-      "Hold_Types": "d",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "20gb",
-        "mpiprocs": 1,
-        "ncpus": 1,
-        "ngpus": 0,
-        "nodect": 1,
-        "place": "free",
-        "queue_charge_rate": 0,
-        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
-        "walltime": "24:00:00"
-      },
-      "depend": "afterok:1550367.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550371.stdct-mgmt-02": {
-      "job_state": "Q",
-      "queue": "batch_cpu",
-      "Hold_Types": "n",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "440gb",
-        "mpiprocs": 64,
-        "ncpus": 64,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-116+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121",
-        "walltime": "01:00:00"
-      },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-104 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550372.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550372.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "cpu_serial",
-      "Hold_Types": "d",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "20gb",
-        "mpiprocs": 1,
-        "ncpus": 1,
-        "ngpus": 0,
-        "nodect": 1,
-        "place": "free",
-        "queue_charge_rate": 0,
-        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
-        "walltime": "24:00:00"
-      },
-      "depend": "afterok:1550371.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550375.stdct-mgmt-02": {
-      "job_state": "Q",
-      "queue": "batch_cpu",
-      "Hold_Types": "n",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "440gb",
-        "mpiprocs": 64,
-        "ncpus": 64,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-116+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135",
-        "walltime": "01:00:00"
-      },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-086 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550376.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550376.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "cpu_serial",
-      "Hold_Types": "d",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "20gb",
-        "mpiprocs": 1,
-        "ncpus": 1,
-        "ngpus": 0,
-        "nodect": 1,
-        "place": "free",
-        "queue_charge_rate": 0,
-        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
-        "walltime": "24:00:00"
-      },
-      "depend": "afterok:1550375.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550379.stdct-mgmt-02": {
-      "job_state": "Q",
-      "queue": "batch_cpu",
-      "Hold_Types": "n",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "440gb",
-        "mpiprocs": 64,
-        "ncpus": 64,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105",
-        "walltime": "01:00:00"
-      },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-140 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550380.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550380.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "cpu_serial",
-      "Hold_Types": "d",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "20gb",
-        "mpiprocs": 1,
-        "ncpus": 1,
-        "ngpus": 0,
-        "nodect": 1,
-        "place": "free",
-        "queue_charge_rate": 0,
-        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
-        "walltime": "24:00:00"
-      },
-      "depend": "afterok:1550379.stdct-mgmt-02@stdct-mgmt-02"
-    },
     "1550381.stdct-mgmt-02": {
       "job_state": "Q",
       "queue": "batch_cpu",
       "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0}",
         "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -1984,7 +1492,7 @@
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-116+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007",
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-087+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-099+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-152+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-009+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-012+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-013",
         "walltime": "01:00:00"
       },
       "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-116 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
@@ -2013,7 +1521,7 @@
       "queue": "batch_cpu",
       "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0}",
         "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -2021,7 +1529,7 @@
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-116+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-097",
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-087+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-099+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-091+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135",
         "walltime": "01:00:00"
       },
       "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-011 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
@@ -18919,11 +18427,12 @@
       "comment": "Job run at Fri Nov 13 at 01:45 on (CN-161[0]:ncpus=1:mem=20gb) and finished"
     },
     "1550244.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -18931,18 +18440,28 @@
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-116+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122",
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-100+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-142+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-145",
         "walltime": "01:00:00"
       },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-121 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "resources_used": {
+        "cpupercent": 750,
+        "cput": "00:02:42",
+        "mem": "69996kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "263776kb",
+        "walltime": "00:00:29"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:07 on (CN-100[0]:mem=29095mb:ncpus=4+CN-100[1]:mem=27225mb:ncpus=4)+(CN-105[0]:mem=29137mb:ncpus=4+CN-105[1]:mem=27183mb:ncpus=4)+(CN-120[0]:mem=29095mb:ncpus=4+CN-120[1]:mem=27225mb:ncpus=4)+(CN-121[0]:mem=29095mb:ncpus=4+C... and finished",
       "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550245.stdct-mgmt-02@stdct-mgmt-02"
     },
     "1550245.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -18953,14 +18472,24 @@
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
       },
-      "depend": "afterok:1550244.stdct-mgmt-02@stdct-mgmt-02"
+      "resources_used": {
+        "cpupercent": 50,
+        "cput": "00:00:14",
+        "mem": "37772kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "66788kb",
+        "walltime": "00:00:17"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:09 on (CN-161[0]:ncpus=1:mem=20gb) and finished"
     },
     "1550246.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -18968,18 +18497,28 @@
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-104",
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-087+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-099+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-152+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-009+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-012+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-013",
         "walltime": "01:00:00"
       },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-135 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "resources_used": {
+        "cpupercent": 1000,
+        "cput": "00:01:50",
+        "mem": "118660kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1080772kb",
+        "walltime": "00:00:30"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:25 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-152[1]:ncpus=8:mem=55gb)+(CN-007[1]:ncpus=8:mem=55gb)+(CN-009[1]:ncpus=8:mem=55gb)+(CN-011[0]:mem=29137mb:ncpus=4+CN-011[1]:mem=27183mb:ncpus=4)+(CN-012[0]:... and finished",
       "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550247.stdct-mgmt-02@stdct-mgmt-02"
     },
     "1550247.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -18990,14 +18529,24 @@
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
       },
-      "depend": "afterok:1550246.stdct-mgmt-02@stdct-mgmt-02"
+      "resources_used": {
+        "cpupercent": 100,
+        "cput": "00:00:08",
+        "mem": "26884kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "56208kb",
+        "walltime": "00:00:11"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:26 on (IN-002[1]:ncpus=1:mem=20gb) and finished"
     },
     "1550248.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -19005,18 +18554,28 @@
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-116+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086",
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-087+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-099+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-152+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-091+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122",
         "walltime": "01:00:00"
       },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-105 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "resources_used": {
+        "cpupercent": 1450,
+        "cput": "00:02:48",
+        "mem": "116852kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1116552kb",
+        "walltime": "00:00:34"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:25 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-152[1]:ncpus=8:mem=55gb)+(CN-091[0]:mem=29095mb:ncpus=4+CN-091[1]:mem=27225mb:ncpus=4)+(CN-105[0]:mem=29137mb:ncpus=4+CN-105[1]:mem=27183mb:ncpus=4)+(CN-120... and finished",
       "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550249.stdct-mgmt-02@stdct-mgmt-02"
     },
     "1550249.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -19027,14 +18586,24 @@
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
       },
-      "depend": "afterok:1550248.stdct-mgmt-02@stdct-mgmt-02"
+      "resources_used": {
+        "cpupercent": 100,
+        "cput": "00:00:28",
+        "mem": "63612kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "92484kb",
+        "walltime": "00:00:30"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:26 on (IN-002[1]:ncpus=1:mem=20gb) and finished"
     },
     "1550250.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -19042,18 +18611,28 @@
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-116+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-140",
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-087+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-099+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-142+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-145+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-146+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-147+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-152",
         "walltime": "01:00:00"
       },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-007 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "resources_used": {
+        "cpupercent": 950,
+        "cput": "00:02:34",
+        "mem": "149336kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "999504kb",
+        "walltime": "00:00:29"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:25 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-135[0]:mem=29137mb:ncpus=4+CN-135[1]:mem=27183mb:ncpus=4)+(CN-142[0]:mem=29095mb:ncpus=4+CN-142[1]:mem=27225mb:ncpus=4)+(CN-145[0]:mem=29137mb:ncpus=4+CN-14... and finished",
       "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550251.stdct-mgmt-02@stdct-mgmt-02"
     },
     "1550251.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -19064,14 +18643,24 @@
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
       },
-      "depend": "afterok:1550250.stdct-mgmt-02@stdct-mgmt-02"
+      "resources_used": {
+        "cpupercent": 85,
+        "cput": "00:00:12",
+        "mem": "39584kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "68360kb",
+        "walltime": "00:00:14"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:26 on (IN-002[1]:ncpus=1:mem=20gb) and finished"
     },
     "1550363.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -19079,18 +18668,28 @@
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-116",
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-087+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-099+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-152+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-009+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-012+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-013",
         "walltime": "01:00:00"
       },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-097 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "resources_used": {
+        "cpupercent": 668,
+        "cput": "00:02:26",
+        "mem": "95852kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1083144kb",
+        "walltime": "00:00:30"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:28 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-152[1]:ncpus=8:mem=55gb)+(CN-007[1]:ncpus=8:mem=55gb)+(CN-009[1]:ncpus=8:mem=55gb)+(CN-011[0]:mem=29137mb:ncpus=4+CN-011[1]:mem=27183mb:ncpus=4)+(CN-012[0]:... and finished",
       "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550364.stdct-mgmt-02@stdct-mgmt-02"
     },
     "1550364.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -19101,14 +18700,24 @@
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
       },
-      "depend": "afterok:1550363.stdct-mgmt-02@stdct-mgmt-02"
+      "resources_used": {
+        "cpupercent": 67,
+        "cput": "00:00:18",
+        "mem": "62696kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "91444kb",
+        "walltime": "00:00:19"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:28 on (IN-002[1]:ncpus=1:mem=20gb) and finished"
     },
     "1550367.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -19116,18 +18725,28 @@
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011",
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-087+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-099+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-152+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-091+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122",
         "walltime": "01:00:00"
       },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-122 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "resources_used": {
+        "cpupercent": 1160,
+        "cput": "00:05:04",
+        "mem": "288004kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1152696kb",
+        "walltime": "00:00:36"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:28 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-152[1]:ncpus=8:mem=55gb)+(CN-091[0]:mem=29095mb:ncpus=4+CN-091[1]:mem=27225mb:ncpus=4)+(CN-105[0]:mem=29137mb:ncpus=4+CN-105[1]:mem=27183mb:ncpus=4)+(CN-120... and finished",
       "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550368.stdct-mgmt-02@stdct-mgmt-02"
     },
     "1550368.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -19138,14 +18757,24 @@
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
       },
-      "depend": "afterok:1550367.stdct-mgmt-02@stdct-mgmt-02"
+      "resources_used": {
+        "cpupercent": 67,
+        "cput": "00:00:58",
+        "mem": "107348kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "136244kb",
+        "walltime": "00:01:00"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:28 on (IN-002[1]:ncpus=1:mem=20gb) and finished"
     },
     "1550371.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -19153,18 +18782,28 @@
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-116+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121",
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-087+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-099+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-142+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-145+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-146+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-147+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-152",
         "walltime": "01:00:00"
       },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-104 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "resources_used": {
+        "cpupercent": 1004,
+        "cput": "00:03:40",
+        "mem": "141776kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1110716kb",
+        "walltime": "00:00:33"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:28 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-135[0]:mem=29137mb:ncpus=4+CN-135[1]:mem=27183mb:ncpus=4)+(CN-142[0]:mem=29095mb:ncpus=4+CN-142[1]:mem=27225mb:ncpus=4)+(CN-145[0]:mem=29137mb:ncpus=4+CN-14... and finished",
       "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550372.stdct-mgmt-02@stdct-mgmt-02"
     },
     "1550372.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -19175,14 +18814,24 @@
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
       },
-      "depend": "afterok:1550371.stdct-mgmt-02@stdct-mgmt-02"
+      "resources_used": {
+        "cpupercent": 82,
+        "cput": "00:00:25",
+        "mem": "109396kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "138344kb",
+        "walltime": "00:00:27"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:29 on (IN-002[1]:ncpus=1:mem=20gb) and finished"
     },
     "1550375.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -19190,18 +18839,28 @@
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-116+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135",
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-087+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-099+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-009+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-012+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-013+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135",
         "walltime": "01:00:00"
       },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-086 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "resources_used": {
+        "cpupercent": 867,
+        "cput": "00:04:00",
+        "mem": "72424kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "263784kb",
+        "walltime": "00:00:30"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:29 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-007[1]:ncpus=8:mem=55gb)+(CN-009[1]:ncpus=8:mem=55gb)+(CN-011[0]:mem=29137mb:ncpus=4+CN-011[1]:mem=27183mb:ncpus=4)+(CN-012[0]:mem=29137mb:ncpus=4+CN-012[1]... and finished",
       "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550376.stdct-mgmt-02@stdct-mgmt-02"
     },
     "1550376.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -19212,14 +18871,24 @@
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
       },
-      "depend": "afterok:1550375.stdct-mgmt-02@stdct-mgmt-02"
+      "resources_used": {
+        "cpupercent": 88,
+        "cput": "00:00:35",
+        "mem": "112096kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "140904kb",
+        "walltime": "00:00:38"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:30 on (IN-001[0]:ncpus=1:mem=20gb) and finished"
     },
     "1550379.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -19227,18 +18896,28 @@
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105",
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-087+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-099+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-009+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-012+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-013+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-091",
         "walltime": "01:00:00"
       },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-140 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "resources_used": {
+        "cpupercent": 750,
+        "cput": "00:01:50",
+        "mem": "160372kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1104288kb",
+        "walltime": "00:00:27"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:30 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-007[1]:ncpus=8:mem=55gb)+(CN-009[1]:ncpus=8:mem=55gb)+(CN-011[0]:mem=29137mb:ncpus=4+CN-011[1]:mem=27183mb:ncpus=4)+(CN-012[0]:mem=29137mb:ncpus=4+CN-012[1]... and finished",
       "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550380.stdct-mgmt-02@stdct-mgmt-02"
     },
     "1550380.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -19249,14 +18928,23 @@
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
       },
-      "depend": "afterok:1550379.stdct-mgmt-02@stdct-mgmt-02"
+      "resources_used": {
+        "cpupercent": 67,
+        "cput": "00:00:15",
+        "mem": "37820kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "66792kb",
+        "walltime": "00:00:17"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:31 on (IN-001[0]:ncpus=1:mem=20gb) and finished"
     },
     "1550381.stdct-mgmt-02": {
       "job_state": "Q",
       "queue": "batch_cpu",
       "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0}",
         "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -19264,7 +18952,7 @@
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-116+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007",
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-087+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-099+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-152+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-009+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-012+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-013",
         "walltime": "01:00:00"
       },
       "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-116 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
@@ -19293,7 +18981,7 @@
       "queue": "batch_cpu",
       "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0}",
         "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -19301,7 +18989,7 @@
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-116+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-097",
+        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-087+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-099+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-091+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135",
         "walltime": "01:00:00"
       },
       "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-011 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
@@ -19327,9 +19015,9 @@
     }
   },
   "registered_groups": 384,
-  "queue_observed_at": "2026-11-13T02:47:49.031567+08:00",
+  "queue_observed_at": "2026-11-13T15:32:04.737496+08:00",
   "project_query_authenticated": true,
-  "balance_cpu_hours": 1052.8179999999993,
+  "balance_cpu_hours": 635.875,
   "queue_counts_observed_at": "2026-11-11T20:37:10+08:00",
   "queue_snapshot_note": "Detailed held-job attributes retain their earlier observation time. Plain qstat at 20:37 reconfirmed 70 H and no R/Q; the later full JSON refresh timed out."
 }
