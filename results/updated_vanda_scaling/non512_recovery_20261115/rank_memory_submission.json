@@ -1,0 +1,8 @@
+{
+  "observed_at": "2026-11-15T00:36:55.876201+08:00",
+  "phase": "rank_memory",
+  "returncode": 0,
+  "stdout": "1555753.stdct-mgmt-02",
+  "stderr": "",
+  "job": "1555753.stdct-mgmt-02"
+}

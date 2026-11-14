@@ -1,8 +1,8 @@
 {
   "ready": true,
-  "observed_at": "2026-11-13T15:24:56.365529+08:00",
+  "observed_at": "2026-11-15T00:45:03.888536+08:00",
   "account": "xtt_ella",
-  "pid": 1996636,
+  "pid": 2522626,
   "args": [
     "python3",
     "-u",
@@ -15,7 +15,7 @@
     "--dependency",
     "1550012.stdct-mgmt-02",
     "--until",
-    "2026-11-13T23:59:00+08:00",
+    "2026-11-15T23:59:00+08:00",
     "--interval",
     "60",
     "--margin",
@@ -40,5 +40,6 @@
   "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261113_refund.json",
   "allowed_hosts": "results/updated_vanda_scaling/20261106T185006Z/validated_8452y_hosts_20261113.json",
   "validated_host_count": 95,
-  "policy": "Aggregate NUMA vnodes by physical host; only rebind queued CPU requests, preserve resources, refresh before credit-query authentication."
+  "policy": "Aggregate NUMA vnodes by physical host; only rebind queued CPU requests, preserve resources, refresh before credit-query authentication.",
+  "reason": "All114 reviewed non512 cells assigned:18 free reuse,96 paid missing; no512; do not request accounting login when no candidates remain"
 }

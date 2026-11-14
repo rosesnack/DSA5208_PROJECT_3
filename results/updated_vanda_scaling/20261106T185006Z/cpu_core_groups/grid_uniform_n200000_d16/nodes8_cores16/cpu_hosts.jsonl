@@ -1,0 +1,8 @@
+{"host": "CN-141", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 16, "tcp_ephemeral_port_range": "32768\t61439", "tcp_tw_reuse": "2"}
+{"host": "CN-104", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 16, "tcp_ephemeral_port_range": "32768\t61439", "tcp_tw_reuse": "2"}
+{"host": "CN-143", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 16, "tcp_ephemeral_port_range": "32768\t61439", "tcp_tw_reuse": "2"}
+{"host": "CN-146", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 16, "tcp_ephemeral_port_range": "32768\t61439", "tcp_tw_reuse": "2"}
+{"host": "CN-099", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 16, "tcp_ephemeral_port_range": "32768\t61439", "tcp_tw_reuse": "2"}
+{"host": "CN-116", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 16, "tcp_ephemeral_port_range": "32768\t61439", "tcp_tw_reuse": "2"}
+{"host": "CN-122", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 16, "tcp_ephemeral_port_range": "32768\t61439", "tcp_tw_reuse": "2"}
+{"host": "CN-135", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 16, "tcp_ephemeral_port_range": "32768\t61439", "tcp_tw_reuse": "2"}

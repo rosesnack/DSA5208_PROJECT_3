@@ -1,0 +1,26 @@
+{
+  "observed_at": "2026-11-15T00:24:57.525273+08:00",
+  "job": "1555731.stdct-mgmt-02",
+  "queue": "cpu_serial",
+  "resources": {
+    "am_job_cache": "\"{}\"",
+    "mem": "20gb",
+    "mpiprocs": 1,
+    "ncpus": 1,
+    "ngpus": 0,
+    "nodect": 1,
+    "place": "free",
+    "queue_charge_rate": 0,
+    "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+    "walltime": "04:00:00"
+  },
+  "purpose": "free compact-setup build, original/new correctness and actual large-graph memory validation; never performance data",
+  "source_sha256": {
+    "CMakeLists.txt": "71e917e5a0925bc90f786009209a652118e3f4a4a55545d86d6483494274118e",
+    "src/mpi_device_driver.hpp": "83f9fea4ab8dc69ce67aeb1f63598fd3bfaaafe839199d5ba2a72338cd9c4be8",
+    "scripts/run_vanda_core_group.py": "12fe71a8e015e4fda66d91524baaa5761beb48e9c82a6a0ccde23e39dbae26ec",
+    "scripts/record_vanda_allocation.sh": "28afcddc7cb6eba15fed67d91df5936bcfa5b84fa8bbfb220e2288c00e8f9d72",
+    "scripts/check_vanda_compact_setup.py": "72218860c14c2f366b0faea5d867d84faef4563b9838df2850341b813bfef392",
+    "scripts/vanda_non512_memory_preflight.pbs": "15c6f0db44cf0cd7006281ce981509ff8b28281ba4e4ab60c32baabb2a487096"
+  }
+}

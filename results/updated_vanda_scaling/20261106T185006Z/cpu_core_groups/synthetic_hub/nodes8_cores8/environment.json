@@ -1,0 +1,78 @@
+{
+  "performance_job": "1550339.stdct-mgmt-02",
+  "group": {
+    "graph": "synthetic_hub",
+    "nodes": 8,
+    "cores_per_node": 8,
+    "cores": 64,
+    "priority": 1,
+    "walltime": "01:00:00",
+    "prerequisite": "",
+    "required_job": "1550012.stdct-mgmt-02",
+    "dense_launch_pause_s": 0,
+    "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
+    "cells": [
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 8,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/synthetic_hub/nodes8/mpi_kokkos/OpenMP/synthetic_hub/p8_t8/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 8,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/synthetic_hub/nodes8/mpi_kokkos_halo/OpenMP/synthetic_hub/p8_t8/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 16,
+        "threads": 4,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/synthetic_hub/nodes8/mpi_kokkos/OpenMP/synthetic_hub/p16_t4/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 16,
+        "threads": 4,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/synthetic_hub/nodes8/mpi_kokkos_halo/OpenMP/synthetic_hub/p16_t4/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 32,
+        "threads": 2,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/synthetic_hub/nodes8/mpi_kokkos/OpenMP/synthetic_hub/p32_t2/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 32,
+        "threads": 2,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/synthetic_hub/nodes8/mpi_kokkos_halo/OpenMP/synthetic_hub/p32_t2/summary.json"
+      }
+    ],
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-140",
+      "cn-097",
+      "cn-121",
+      "cn-086",
+      "cn-007",
+      "cn-011",
+      "cn-104",
+      "cn-105"
+    ],
+    "transport_proof_job": "1543968.stdct-mgmt-02",
+    "dependency": "1550012.stdct-mgmt-02"
+  },
+  "mpi": "mpicxx: Open MPI 4.1.8 (Language: C++)",
+  "compiler": "g++ (GCC) 13.3.0",
+  "cmake": [
+    "CMAKE_BUILD_TYPE:STRING=Release",
+    "CMAKE_CXX_COMPILER:STRING=/cm/shared/apps/openmpi4/gcc/4.1.8/bin/mpicxx"
+  ]
+}

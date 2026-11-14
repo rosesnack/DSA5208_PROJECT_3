@@ -107,6 +107,10 @@ def cycle(args, root, jobs):
     state['eligible_unregistered_cells'] = sum(len(g['cells']) for g in candidates)
     state['endpoint_proof_state'] = {g['required_job']: jobs.get(g['required_job'], {}).get('job_state', 'unknown')
                                      for g in plan if g.get('required_job')}
+    if not candidates:
+        state['action'] = ('waiting_existing_jobs' if pending_performance or pending_validation
+                           else 'no_eligible_unregistered_cells')
+        return state, jobs
     project_output = command(['hpc', 'project'])
     balance_rows = [line for line in project_output.splitlines() if line.strip().startswith(args.project + ' ')]
     if not balance_rows:

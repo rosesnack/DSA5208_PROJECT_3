@@ -1,0 +1,506 @@
+{
+  "observed_at": "2026-11-15T00:04:17.562660+08:00",
+  "account": "xtt_ella",
+  "submission": {
+    "observed_at": "2026-11-15T00:03:22.173482+08:00",
+    "submitted": true,
+    "balance": 4955.473,
+    "balance_source": "hpc_project",
+    "prior_pending_reservations": 0,
+    "margin": 16.0,
+    "deferred_user_held_jobs": [
+      "1532794.stdct-mgmt-02",
+      "1537507.stdct-mgmt-02",
+      "1537509.stdct-mgmt-02",
+      "1537572.stdct-mgmt-02"
+    ],
+    "new_reservations": 1056.0,
+    "uncommitted_after_margin": 3883.473,
+    "groups": [
+      {
+        "graph": "strong_controlled",
+        "nodes": 8,
+        "cores": 128,
+        "cells": 22,
+        "walltime": "03:45:00",
+        "reservation": 480.0,
+        "performance_job": "1555661.stdct-mgmt-02",
+        "validation_job": "1555662.stdct-mgmt-02",
+        "dependency": "1550012.stdct-mgmt-02"
+      },
+      {
+        "graph": "strong_hub",
+        "nodes": 8,
+        "cores": 128,
+        "cells": 22,
+        "walltime": "04:30:00",
+        "reservation": 576.0,
+        "performance_job": "1555663.stdct-mgmt-02",
+        "validation_job": "1555664.stdct-mgmt-02",
+        "dependency": "1550012.stdct-mgmt-02"
+      }
+    ]
+  },
+  "groups": [
+    {
+      "graph": "strong_controlled",
+      "nodes": "8",
+      "cores_per_node": "16",
+      "cores": "128",
+      "performance_job": "1555661.stdct-mgmt-02",
+      "validation_job": "1555662.stdct-mgmt-02",
+      "walltime": "03:45:00",
+      "cells": "22",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n8_c16.json",
+      "dependency": "1550012.stdct-mgmt-02"
+    },
+    {
+      "graph": "strong_hub",
+      "nodes": "8",
+      "cores_per_node": "16",
+      "cores": "128",
+      "performance_job": "1555663.stdct-mgmt-02",
+      "validation_job": "1555664.stdct-mgmt-02",
+      "walltime": "04:30:00",
+      "cells": "22",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_hub_n8_c16.json",
+      "dependency": "1550012.stdct-mgmt-02"
+    }
+  ],
+  "plans": {
+    "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_controlled_n8_c16.json": {
+      "graph": "strong_controlled",
+      "nodes": 8,
+      "cores_per_node": 16,
+      "cores": 128,
+      "priority": 1,
+      "walltime": "03:45:00",
+      "prerequisite": "cpu_core_groups/strong_controlled/nodes1_cores32/complete.txt",
+      "required_job": "1550012.stdct-mgmt-02",
+      "dense_launch_pause_s": 0,
+      "walltime_basis": "Three times the slowest successfully completed batch on this same graph, plus 30 minutes, rounded up to 15 minutes; all observed nodes/layouts included. Ordinary group limits unchanged.",
+      "cells": [
+        {
+          "implementation": "hybrid",
+          "processes": 8,
+          "threads": 16,
+          "communication": "allgather",
+          "canonical_summary": "strong/strong_controlled/nodes8/hybrid/strong_controlled/p8_t16/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 8,
+          "threads": 16,
+          "communication": "allgather",
+          "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes8/mpi_kokkos/OpenMP/strong_controlled/p8_t16/summary.json"
+        },
+        {
+          "implementation": "hybrid",
+          "processes": 8,
+          "threads": 16,
+          "communication": "halo",
+          "canonical_summary": "strong/strong_controlled/nodes8/hybrid_halo/strong_controlled/p8_t16/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 8,
+          "threads": 16,
+          "communication": "halo",
+          "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes8/mpi_kokkos_halo/OpenMP/strong_controlled/p8_t16/summary.json"
+        },
+        {
+          "implementation": "hybrid",
+          "processes": 16,
+          "threads": 8,
+          "communication": "allgather",
+          "canonical_summary": "strong/strong_controlled/nodes8/hybrid/strong_controlled/p16_t8/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 16,
+          "threads": 8,
+          "communication": "allgather",
+          "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes8/mpi_kokkos/OpenMP/strong_controlled/p16_t8/summary.json"
+        },
+        {
+          "implementation": "hybrid",
+          "processes": 16,
+          "threads": 8,
+          "communication": "halo",
+          "canonical_summary": "strong/strong_controlled/nodes8/hybrid_halo/strong_controlled/p16_t8/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 16,
+          "threads": 8,
+          "communication": "halo",
+          "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes8/mpi_kokkos_halo/OpenMP/strong_controlled/p16_t8/summary.json"
+        },
+        {
+          "implementation": "hybrid",
+          "processes": 32,
+          "threads": 4,
+          "communication": "allgather",
+          "canonical_summary": "strong/strong_controlled/nodes8/hybrid/strong_controlled/p32_t4/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 32,
+          "threads": 4,
+          "communication": "allgather",
+          "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes8/mpi_kokkos/OpenMP/strong_controlled/p32_t4/summary.json"
+        },
+        {
+          "implementation": "hybrid",
+          "processes": 32,
+          "threads": 4,
+          "communication": "halo",
+          "canonical_summary": "strong/strong_controlled/nodes8/hybrid_halo/strong_controlled/p32_t4/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 32,
+          "threads": 4,
+          "communication": "halo",
+          "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes8/mpi_kokkos_halo/OpenMP/strong_controlled/p32_t4/summary.json"
+        },
+        {
+          "implementation": "hybrid",
+          "processes": 64,
+          "threads": 2,
+          "communication": "allgather",
+          "canonical_summary": "strong/strong_controlled/nodes8/hybrid/strong_controlled/p64_t2/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 64,
+          "threads": 2,
+          "communication": "allgather",
+          "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes8/mpi_kokkos/OpenMP/strong_controlled/p64_t2/summary.json"
+        },
+        {
+          "implementation": "hybrid",
+          "processes": 64,
+          "threads": 2,
+          "communication": "halo",
+          "canonical_summary": "strong/strong_controlled/nodes8/hybrid_halo/strong_controlled/p64_t2/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 64,
+          "threads": 2,
+          "communication": "halo",
+          "canonical_summary": "kokkos_cpu_grid/strong_controlled/nodes8/mpi_kokkos_halo/OpenMP/strong_controlled/p64_t2/summary.json"
+        },
+        {
+          "implementation": "mpi",
+          "processes": 128,
+          "threads": 1,
+          "communication": "allgather",
+          "canonical_summary": "strong/strong_controlled/nodes8/mpi/strong_controlled/p128/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 128,
+          "threads": 1,
+          "communication": "allgather",
+          "canonical_summary": "strong/strong_controlled/nodes8/mpi_kokkos/OpenMP/strong_controlled/p128/summary.json"
+        },
+        {
+          "implementation": "hybrid",
+          "processes": 128,
+          "threads": 1,
+          "communication": "allgather",
+          "canonical_summary": "strong/strong_controlled/nodes8/hybrid/strong_controlled/p128_t1/summary.json"
+        },
+        {
+          "implementation": "mpi",
+          "processes": 128,
+          "threads": 1,
+          "communication": "halo",
+          "canonical_summary": "strong/strong_controlled/nodes8/mpi_halo/strong_controlled/p128/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 128,
+          "threads": 1,
+          "communication": "halo",
+          "canonical_summary": "strong/strong_controlled/nodes8/mpi_kokkos_halo/OpenMP/strong_controlled/p128/summary.json"
+        },
+        {
+          "implementation": "hybrid",
+          "processes": 128,
+          "threads": 1,
+          "communication": "halo",
+          "canonical_summary": "strong/strong_controlled/nodes8/hybrid_halo/strong_controlled/p128_t1/summary.json"
+        }
+      ],
+      "scheduler_cpu_pool": "cpu_all",
+      "requested_hosts": [
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122",
+        "cn-135",
+        "cn-140",
+        "cn-097"
+      ],
+      "transport_proof_job": "1543968.stdct-mgmt-02",
+      "dependency": "1550012.stdct-mgmt-02"
+    },
+    "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/strong_hub_n8_c16.json": {
+      "graph": "strong_hub",
+      "nodes": 8,
+      "cores_per_node": 16,
+      "cores": 128,
+      "priority": 1,
+      "walltime": "04:30:00",
+      "prerequisite": "cpu_core_groups/strong_hub/nodes1_cores32/complete.txt",
+      "required_job": "1550012.stdct-mgmt-02",
+      "dense_launch_pause_s": 0,
+      "walltime_basis": "Three times the slowest successfully completed batch on this same graph, plus 30 minutes, rounded up to 15 minutes; all observed nodes/layouts included. Ordinary group limits unchanged.",
+      "cells": [
+        {
+          "implementation": "hybrid",
+          "processes": 8,
+          "threads": 16,
+          "communication": "allgather",
+          "canonical_summary": "strong/strong_hub/nodes8/hybrid/strong_hub/p8_t16/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 8,
+          "threads": 16,
+          "communication": "allgather",
+          "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes8/mpi_kokkos/OpenMP/strong_hub/p8_t16/summary.json"
+        },
+        {
+          "implementation": "hybrid",
+          "processes": 8,
+          "threads": 16,
+          "communication": "halo",
+          "canonical_summary": "strong/strong_hub/nodes8/hybrid_halo/strong_hub/p8_t16/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 8,
+          "threads": 16,
+          "communication": "halo",
+          "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes8/mpi_kokkos_halo/OpenMP/strong_hub/p8_t16/summary.json"
+        },
+        {
+          "implementation": "hybrid",
+          "processes": 16,
+          "threads": 8,
+          "communication": "allgather",
+          "canonical_summary": "strong/strong_hub/nodes8/hybrid/strong_hub/p16_t8/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 16,
+          "threads": 8,
+          "communication": "allgather",
+          "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes8/mpi_kokkos/OpenMP/strong_hub/p16_t8/summary.json"
+        },
+        {
+          "implementation": "hybrid",
+          "processes": 16,
+          "threads": 8,
+          "communication": "halo",
+          "canonical_summary": "strong/strong_hub/nodes8/hybrid_halo/strong_hub/p16_t8/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 16,
+          "threads": 8,
+          "communication": "halo",
+          "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes8/mpi_kokkos_halo/OpenMP/strong_hub/p16_t8/summary.json"
+        },
+        {
+          "implementation": "hybrid",
+          "processes": 32,
+          "threads": 4,
+          "communication": "allgather",
+          "canonical_summary": "strong/strong_hub/nodes8/hybrid/strong_hub/p32_t4/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 32,
+          "threads": 4,
+          "communication": "allgather",
+          "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes8/mpi_kokkos/OpenMP/strong_hub/p32_t4/summary.json"
+        },
+        {
+          "implementation": "hybrid",
+          "processes": 32,
+          "threads": 4,
+          "communication": "halo",
+          "canonical_summary": "strong/strong_hub/nodes8/hybrid_halo/strong_hub/p32_t4/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 32,
+          "threads": 4,
+          "communication": "halo",
+          "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes8/mpi_kokkos_halo/OpenMP/strong_hub/p32_t4/summary.json"
+        },
+        {
+          "implementation": "hybrid",
+          "processes": 64,
+          "threads": 2,
+          "communication": "allgather",
+          "canonical_summary": "strong/strong_hub/nodes8/hybrid/strong_hub/p64_t2/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 64,
+          "threads": 2,
+          "communication": "allgather",
+          "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes8/mpi_kokkos/OpenMP/strong_hub/p64_t2/summary.json"
+        },
+        {
+          "implementation": "hybrid",
+          "processes": 64,
+          "threads": 2,
+          "communication": "halo",
+          "canonical_summary": "strong/strong_hub/nodes8/hybrid_halo/strong_hub/p64_t2/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 64,
+          "threads": 2,
+          "communication": "halo",
+          "canonical_summary": "kokkos_cpu_grid/strong_hub/nodes8/mpi_kokkos_halo/OpenMP/strong_hub/p64_t2/summary.json"
+        },
+        {
+          "implementation": "mpi",
+          "processes": 128,
+          "threads": 1,
+          "communication": "allgather",
+          "canonical_summary": "strong/strong_hub/nodes8/mpi/strong_hub/p128/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 128,
+          "threads": 1,
+          "communication": "allgather",
+          "canonical_summary": "strong/strong_hub/nodes8/mpi_kokkos/OpenMP/strong_hub/p128/summary.json"
+        },
+        {
+          "implementation": "hybrid",
+          "processes": 128,
+          "threads": 1,
+          "communication": "allgather",
+          "canonical_summary": "strong/strong_hub/nodes8/hybrid/strong_hub/p128_t1/summary.json"
+        },
+        {
+          "implementation": "mpi",
+          "processes": 128,
+          "threads": 1,
+          "communication": "halo",
+          "canonical_summary": "strong/strong_hub/nodes8/mpi_halo/strong_hub/p128/summary.json"
+        },
+        {
+          "implementation": "mpi_kokkos",
+          "processes": 128,
+          "threads": 1,
+          "communication": "halo",
+          "canonical_summary": "strong/strong_hub/nodes8/mpi_kokkos_halo/OpenMP/strong_hub/p128/summary.json"
+        },
+        {
+          "implementation": "hybrid",
+          "processes": 128,
+          "threads": 1,
+          "communication": "halo",
+          "canonical_summary": "strong/strong_hub/nodes8/hybrid_halo/strong_hub/p128_t1/summary.json"
+        }
+      ],
+      "scheduler_cpu_pool": "cpu_all",
+      "requested_hosts": [
+        "cn-121",
+        "cn-086",
+        "cn-007",
+        "cn-011",
+        "cn-104",
+        "cn-105",
+        "cn-116",
+        "cn-122"
+      ],
+      "transport_proof_job": "1543968.stdct-mgmt-02",
+      "dependency": "1550012.stdct-mgmt-02"
+    }
+  },
+  "jobs": {
+    "1555661.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "batch_cpu",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "888gb",
+        "mpiprocs": 128,
+        "ncpus": 128,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-116+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-097",
+        "walltime": "03:45:00"
+      },
+      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-011 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "Hold_Types": "n"
+    },
+    "1555662.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Hold_Types": "d"
+    },
+    "1555663.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "batch_cpu",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "888gb",
+        "mpiprocs": 128,
+        "ncpus": 128,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-116+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-122",
+        "walltime": "04:30:00"
+      },
+      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-121 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "Hold_Types": "n"
+    },
+    "1555664.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Hold_Types": "d"
+    }
+  }
+}

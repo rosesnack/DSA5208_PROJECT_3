@@ -1,0 +1,990 @@
+[
+  {
+    "graph": "strong_controlled",
+    "nodes": 1,
+    "cores_per_node": 1,
+    "cores": 1,
+    "priority": 1,
+    "walltime": "03:45:00",
+    "prerequisite": "",
+    "required_job": "",
+    "dense_launch_pause_s": 0,
+    "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
+    "cells": [
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 1,
+        "threads": 1,
+        "communication": "allgather",
+        "canonical_summary": "strong/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p1/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 1,
+        "threads": 1,
+        "communication": "allgather",
+        "canonical_summary": "strong/strong_controlled/nodes1/hybrid/strong_controlled/p1_t1/summary.json"
+      },
+      {
+        "implementation": "mpi",
+        "processes": 1,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_controlled/nodes1/mpi_halo/strong_controlled/p1/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 1,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p1/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 1,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_controlled/nodes1/hybrid_halo/strong_controlled/p1_t1/summary.json"
+      }
+    ],
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-120"
+    ],
+    "extension": "repair_20261115",
+    "raw_stage": "cpu_recovery_20261115",
+    "executables": {
+      "mpi_kokkos": "./build-vanda-memory-repair/pagerank_mpi_kokkos"
+    },
+    "memory_setup": "Root edge copy released after distribution, outside solver timing"
+  },
+  {
+    "graph": "strong_hub",
+    "nodes": 1,
+    "cores_per_node": 1,
+    "cores": 1,
+    "priority": 1,
+    "walltime": "04:30:00",
+    "prerequisite": "",
+    "required_job": "",
+    "dense_launch_pause_s": 0,
+    "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
+    "cells": [
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 1,
+        "threads": 1,
+        "communication": "allgather",
+        "canonical_summary": "strong/strong_hub/nodes1/mpi_kokkos/OpenMP/strong_hub/p1/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 1,
+        "threads": 1,
+        "communication": "allgather",
+        "canonical_summary": "strong/strong_hub/nodes1/hybrid/strong_hub/p1_t1/summary.json"
+      },
+      {
+        "implementation": "mpi",
+        "processes": 1,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_hub/nodes1/mpi_halo/strong_hub/p1/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 1,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_hub/nodes1/mpi_kokkos_halo/OpenMP/strong_hub/p1/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 1,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_hub/nodes1/hybrid_halo/strong_hub/p1_t1/summary.json"
+      }
+    ],
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-141"
+    ],
+    "extension": "repair_20261115",
+    "raw_stage": "cpu_recovery_20261115",
+    "executables": {
+      "mpi_kokkos": "./build-vanda-memory-repair/pagerank_mpi_kokkos"
+    },
+    "memory_setup": "Root edge copy released after distribution, outside solver timing"
+  },
+  {
+    "graph": "strong_controlled",
+    "nodes": 2,
+    "cores_per_node": 1,
+    "cores": 2,
+    "priority": 1,
+    "walltime": "03:45:00",
+    "prerequisite": "",
+    "required_job": "",
+    "dense_launch_pause_s": 0,
+    "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
+    "cells": [
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 2,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_controlled/nodes2/mpi_kokkos_halo/OpenMP/strong_controlled/p2/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 2,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_controlled/nodes2/hybrid_halo/strong_controlled/p2_t1/summary.json"
+      }
+    ],
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-120",
+      "cn-141"
+    ],
+    "extension": "repair_20261115",
+    "raw_stage": "cpu_recovery_20261115",
+    "executables": {
+      "mpi_kokkos": "./build-vanda-memory-repair/pagerank_mpi_kokkos"
+    },
+    "memory_setup": "Root edge copy released after distribution, outside solver timing"
+  },
+  {
+    "graph": "strong_hub",
+    "nodes": 2,
+    "cores_per_node": 1,
+    "cores": 2,
+    "priority": 1,
+    "walltime": "04:30:00",
+    "prerequisite": "",
+    "required_job": "",
+    "dense_launch_pause_s": 0,
+    "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
+    "cells": [
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 2,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_hub/nodes2/mpi_kokkos_halo/OpenMP/strong_hub/p2/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 2,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_hub/nodes2/hybrid_halo/strong_hub/p2_t1/summary.json"
+      }
+    ],
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-083",
+      "cn-088"
+    ],
+    "extension": "repair_20261115",
+    "raw_stage": "cpu_recovery_20261115",
+    "executables": {
+      "mpi_kokkos": "./build-vanda-memory-repair/pagerank_mpi_kokkos"
+    },
+    "memory_setup": "Root edge copy released after distribution, outside solver timing"
+  },
+  {
+    "graph": "strong_controlled",
+    "nodes": 4,
+    "cores_per_node": 1,
+    "cores": 4,
+    "priority": 1,
+    "walltime": "03:45:00",
+    "prerequisite": "",
+    "required_job": "",
+    "dense_launch_pause_s": 0,
+    "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
+    "cells": [
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 4,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_controlled/nodes4/mpi_kokkos_halo/OpenMP/strong_controlled/p4/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 4,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_controlled/nodes4/hybrid_halo/strong_controlled/p4_t1/summary.json"
+      }
+    ],
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-120",
+      "cn-141",
+      "cn-083",
+      "cn-088"
+    ],
+    "extension": "repair_20261115",
+    "raw_stage": "cpu_recovery_20261115",
+    "executables": {
+      "mpi_kokkos": "./build-vanda-memory-repair/pagerank_mpi_kokkos"
+    },
+    "memory_setup": "Root edge copy released after distribution, outside solver timing"
+  },
+  {
+    "graph": "strong_hub",
+    "nodes": 4,
+    "cores_per_node": 1,
+    "cores": 4,
+    "priority": 1,
+    "walltime": "04:30:00",
+    "prerequisite": "",
+    "required_job": "",
+    "dense_launch_pause_s": 0,
+    "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
+    "cells": [
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 4,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_hub/nodes4/mpi_kokkos_halo/OpenMP/strong_hub/p4/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 4,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_hub/nodes4/hybrid_halo/strong_hub/p4_t1/summary.json"
+      }
+    ],
+    "scheduler_cpu_pool": "cpu_all",
+    "requested_hosts": [
+      "cn-119",
+      "cn-120",
+      "cn-141",
+      "cn-083"
+    ],
+    "extension": "repair_20261115",
+    "raw_stage": "cpu_recovery_20261115",
+    "executables": {
+      "mpi_kokkos": "./build-vanda-memory-repair/pagerank_mpi_kokkos"
+    },
+    "memory_setup": "Root edge copy released after distribution, outside solver timing"
+  },
+  {
+    "graph": "strong_controlled",
+    "nodes": 8,
+    "cores_per_node": 1,
+    "cores": 8,
+    "priority": 1,
+    "walltime": "03:45:00",
+    "prerequisite": "",
+    "required_job": "1550012.stdct-mgmt-02",
+    "dense_launch_pause_s": 0,
+    "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
+    "cells": [
+      {
+        "implementation": "mpi",
+        "processes": 8,
+        "threads": 1,
+        "communication": "allgather",
+        "canonical_summary": "strong/strong_controlled/nodes8/mpi/strong_controlled/p8/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 1,
+        "communication": "allgather",
+        "canonical_summary": "strong/strong_controlled/nodes8/mpi_kokkos/OpenMP/strong_controlled/p8/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 8,
+        "threads": 1,
+        "communication": "allgather",
+        "canonical_summary": "strong/strong_controlled/nodes8/hybrid/strong_controlled/p8_t1/summary.json"
+      },
+      {
+        "implementation": "mpi",
+        "processes": 8,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_controlled/nodes8/mpi_halo/strong_controlled/p8/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_controlled/nodes8/mpi_kokkos_halo/OpenMP/strong_controlled/p8/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 8,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_controlled/nodes8/hybrid_halo/strong_controlled/p8_t1/summary.json"
+      }
+    ],
+    "scheduler_cpu_pool": "ccid-10",
+    "original_prerequisite": "cpu_core_groups/strong_controlled/nodes1_cores32/complete.txt",
+    "blocked_reason": "Per-node allocation was reduced to 6GB; Kokkos rank zero was killed at this resource setting. Verify sufficient memory before submitting remaining same-setting cases.",
+    "dependency": "1550012.stdct-mgmt-02",
+    "extension": "repair_20261115",
+    "raw_stage": "cpu_recovery_20261115",
+    "executables": {
+      "mpi_kokkos": "./build-vanda-memory-repair/pagerank_mpi_kokkos"
+    },
+    "memory_setup": "Root edge copy released after distribution, outside solver timing"
+  },
+  {
+    "graph": "strong_hub",
+    "nodes": 8,
+    "cores_per_node": 1,
+    "cores": 8,
+    "priority": 1,
+    "walltime": "04:30:00",
+    "prerequisite": "",
+    "required_job": "1550012.stdct-mgmt-02",
+    "dense_launch_pause_s": 0,
+    "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
+    "cells": [
+      {
+        "implementation": "mpi",
+        "processes": 8,
+        "threads": 1,
+        "communication": "allgather",
+        "canonical_summary": "strong/strong_hub/nodes8/mpi/strong_hub/p8/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 1,
+        "communication": "allgather",
+        "canonical_summary": "strong/strong_hub/nodes8/mpi_kokkos/OpenMP/strong_hub/p8/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 8,
+        "threads": 1,
+        "communication": "allgather",
+        "canonical_summary": "strong/strong_hub/nodes8/hybrid/strong_hub/p8_t1/summary.json"
+      },
+      {
+        "implementation": "mpi",
+        "processes": 8,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_hub/nodes8/mpi_halo/strong_hub/p8/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_hub/nodes8/mpi_kokkos_halo/OpenMP/strong_hub/p8/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 8,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/strong_hub/nodes8/hybrid_halo/strong_hub/p8_t1/summary.json"
+      }
+    ],
+    "scheduler_cpu_pool": "ccid-10",
+    "original_prerequisite": "cpu_core_groups/strong_hub/nodes1_cores32/complete.txt",
+    "blocked_reason": "Per-node allocation was reduced to 6GB; Kokkos rank zero was killed at this resource setting. Verify sufficient memory before submitting remaining same-setting cases.",
+    "dependency": "1550012.stdct-mgmt-02",
+    "extension": "repair_20261115",
+    "raw_stage": "cpu_recovery_20261115",
+    "executables": {
+      "mpi_kokkos": "./build-vanda-memory-repair/pagerank_mpi_kokkos"
+    },
+    "memory_setup": "Root edge copy released after distribution, outside solver timing"
+  },
+  {
+    "graph": "grid_controlled_n100000_d16",
+    "nodes": 4,
+    "cores_per_node": 4,
+    "cores": 16,
+    "priority": 1,
+    "walltime": "01:00:00",
+    "prerequisite": "",
+    "required_job": "",
+    "dense_launch_pause_s": 0,
+    "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
+    "cells": [
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 4,
+        "threads": 4,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n100000_d16/nodes4/mpi_kokkos/OpenMP/grid_controlled_n100000_d16/p4_t4/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 4,
+        "threads": 4,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n100000_d16/nodes4/mpi_kokkos_halo/OpenMP/grid_controlled_n100000_d16/p4_t4/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 2,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n100000_d16/nodes4/mpi_kokkos/OpenMP/grid_controlled_n100000_d16/p8_t2/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 2,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n100000_d16/nodes4/mpi_kokkos_halo/OpenMP/grid_controlled_n100000_d16/p8_t2/summary.json"
+      }
+    ],
+    "requested_hosts": [
+      "cn-005",
+      "cn-011",
+      "cn-013",
+      "cn-083"
+    ],
+    "scheduler_cpu_pool": "cpu_all",
+    "extension": "repair_20261115",
+    "raw_stage": "cpu_recovery_20261115"
+  },
+  {
+    "graph": "grid_controlled_n400000_d16",
+    "nodes": 4,
+    "cores_per_node": 16,
+    "cores": 64,
+    "priority": 1,
+    "walltime": "01:00:00",
+    "prerequisite": "",
+    "required_job": "",
+    "dense_launch_pause_s": 0,
+    "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
+    "cells": [
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 4,
+        "threads": 16,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d16/nodes4/mpi_kokkos/OpenMP/grid_controlled_n400000_d16/p4_t16/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 4,
+        "threads": 16,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d16/nodes4/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d16/p4_t16/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 8,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d16/nodes4/mpi_kokkos/OpenMP/grid_controlled_n400000_d16/p8_t8/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 8,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d16/nodes4/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d16/p8_t8/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 16,
+        "threads": 4,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d16/nodes4/mpi_kokkos/OpenMP/grid_controlled_n400000_d16/p16_t4/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 16,
+        "threads": 4,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d16/nodes4/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d16/p16_t4/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 32,
+        "threads": 2,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d16/nodes4/mpi_kokkos/OpenMP/grid_controlled_n400000_d16/p32_t2/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 32,
+        "threads": 2,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d16/nodes4/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d16/p32_t2/summary.json"
+      }
+    ],
+    "requested_hosts": [
+      "cn-120",
+      "cn-141",
+      "cn-083",
+      "cn-088"
+    ],
+    "scheduler_cpu_pool": "cpu_all",
+    "extension": "repair_20261115",
+    "raw_stage": "cpu_recovery_20261115"
+  },
+  {
+    "graph": "grid_controlled_n200000_d16",
+    "nodes": 8,
+    "cores_per_node": 16,
+    "cores": 128,
+    "priority": 1,
+    "walltime": "01:00:00",
+    "prerequisite": "",
+    "required_job": "",
+    "dense_launch_pause_s": 0,
+    "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
+    "cells": [
+      {
+        "implementation": "hybrid",
+        "processes": 8,
+        "threads": 16,
+        "communication": "allgather",
+        "canonical_summary": "strong/grid_controlled_n200000_d16/nodes8/hybrid/grid_controlled_n200000_d16/p8_t16/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 16,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d16/nodes8/mpi_kokkos/OpenMP/grid_controlled_n200000_d16/p8_t16/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 8,
+        "threads": 16,
+        "communication": "halo",
+        "canonical_summary": "strong/grid_controlled_n200000_d16/nodes8/hybrid_halo/grid_controlled_n200000_d16/p8_t16/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 16,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p8_t16/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 16,
+        "threads": 8,
+        "communication": "allgather",
+        "canonical_summary": "strong/grid_controlled_n200000_d16/nodes8/hybrid/grid_controlled_n200000_d16/p16_t8/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 16,
+        "threads": 8,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d16/nodes8/mpi_kokkos/OpenMP/grid_controlled_n200000_d16/p16_t8/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 16,
+        "threads": 8,
+        "communication": "halo",
+        "canonical_summary": "strong/grid_controlled_n200000_d16/nodes8/hybrid_halo/grid_controlled_n200000_d16/p16_t8/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 16,
+        "threads": 8,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p16_t8/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 32,
+        "threads": 4,
+        "communication": "allgather",
+        "canonical_summary": "strong/grid_controlled_n200000_d16/nodes8/hybrid/grid_controlled_n200000_d16/p32_t4/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 32,
+        "threads": 4,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d16/nodes8/mpi_kokkos/OpenMP/grid_controlled_n200000_d16/p32_t4/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 32,
+        "threads": 4,
+        "communication": "halo",
+        "canonical_summary": "strong/grid_controlled_n200000_d16/nodes8/hybrid_halo/grid_controlled_n200000_d16/p32_t4/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 32,
+        "threads": 4,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p32_t4/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 64,
+        "threads": 2,
+        "communication": "allgather",
+        "canonical_summary": "strong/grid_controlled_n200000_d16/nodes8/hybrid/grid_controlled_n200000_d16/p64_t2/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 64,
+        "threads": 2,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d16/nodes8/mpi_kokkos/OpenMP/grid_controlled_n200000_d16/p64_t2/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 64,
+        "threads": 2,
+        "communication": "halo",
+        "canonical_summary": "strong/grid_controlled_n200000_d16/nodes8/hybrid_halo/grid_controlled_n200000_d16/p64_t2/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 64,
+        "threads": 2,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p64_t2/summary.json"
+      },
+      {
+        "implementation": "mpi",
+        "processes": 128,
+        "threads": 1,
+        "communication": "allgather",
+        "canonical_summary": "strong/grid_controlled_n200000_d16/nodes8/mpi/grid_controlled_n200000_d16/p128/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 128,
+        "threads": 1,
+        "communication": "allgather",
+        "canonical_summary": "strong/grid_controlled_n200000_d16/nodes8/mpi_kokkos/OpenMP/grid_controlled_n200000_d16/p128/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 128,
+        "threads": 1,
+        "communication": "allgather",
+        "canonical_summary": "strong/grid_controlled_n200000_d16/nodes8/hybrid/grid_controlled_n200000_d16/p128_t1/summary.json"
+      },
+      {
+        "implementation": "mpi",
+        "processes": 128,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/grid_controlled_n200000_d16/nodes8/mpi_halo/grid_controlled_n200000_d16/p128/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 128,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/grid_controlled_n200000_d16/nodes8/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d16/p128/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 128,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/grid_controlled_n200000_d16/nodes8/hybrid_halo/grid_controlled_n200000_d16/p128_t1/summary.json"
+      }
+    ],
+    "requested_hosts": [
+      "cn-088",
+      "cn-091",
+      "cn-096",
+      "cn-100",
+      "cn-118",
+      "cn-119",
+      "cn-120",
+      "cn-136"
+    ],
+    "scheduler_cpu_pool": "cpu_all",
+    "extension": "repair_20261115",
+    "raw_stage": "cpu_recovery_20261115"
+  },
+  {
+    "graph": "grid_controlled_n200000_d8",
+    "nodes": 8,
+    "cores_per_node": 16,
+    "cores": 128,
+    "priority": 1,
+    "walltime": "01:00:00",
+    "prerequisite": "",
+    "required_job": "",
+    "dense_launch_pause_s": 0,
+    "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
+    "cells": [
+      {
+        "implementation": "hybrid",
+        "processes": 8,
+        "threads": 16,
+        "communication": "allgather",
+        "canonical_summary": "strong/grid_controlled_n200000_d8/nodes8/hybrid/grid_controlled_n200000_d8/p8_t16/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 16,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d8/nodes8/mpi_kokkos/OpenMP/grid_controlled_n200000_d8/p8_t16/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 8,
+        "threads": 16,
+        "communication": "halo",
+        "canonical_summary": "strong/grid_controlled_n200000_d8/nodes8/hybrid_halo/grid_controlled_n200000_d8/p8_t16/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 16,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p8_t16/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 16,
+        "threads": 8,
+        "communication": "allgather",
+        "canonical_summary": "strong/grid_controlled_n200000_d8/nodes8/hybrid/grid_controlled_n200000_d8/p16_t8/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 16,
+        "threads": 8,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d8/nodes8/mpi_kokkos/OpenMP/grid_controlled_n200000_d8/p16_t8/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 16,
+        "threads": 8,
+        "communication": "halo",
+        "canonical_summary": "strong/grid_controlled_n200000_d8/nodes8/hybrid_halo/grid_controlled_n200000_d8/p16_t8/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 16,
+        "threads": 8,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p16_t8/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 32,
+        "threads": 4,
+        "communication": "allgather",
+        "canonical_summary": "strong/grid_controlled_n200000_d8/nodes8/hybrid/grid_controlled_n200000_d8/p32_t4/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 32,
+        "threads": 4,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d8/nodes8/mpi_kokkos/OpenMP/grid_controlled_n200000_d8/p32_t4/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 32,
+        "threads": 4,
+        "communication": "halo",
+        "canonical_summary": "strong/grid_controlled_n200000_d8/nodes8/hybrid_halo/grid_controlled_n200000_d8/p32_t4/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 32,
+        "threads": 4,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p32_t4/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 64,
+        "threads": 2,
+        "communication": "allgather",
+        "canonical_summary": "strong/grid_controlled_n200000_d8/nodes8/hybrid/grid_controlled_n200000_d8/p64_t2/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 64,
+        "threads": 2,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d8/nodes8/mpi_kokkos/OpenMP/grid_controlled_n200000_d8/p64_t2/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 64,
+        "threads": 2,
+        "communication": "halo",
+        "canonical_summary": "strong/grid_controlled_n200000_d8/nodes8/hybrid_halo/grid_controlled_n200000_d8/p64_t2/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 64,
+        "threads": 2,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n200000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p64_t2/summary.json"
+      },
+      {
+        "implementation": "mpi",
+        "processes": 128,
+        "threads": 1,
+        "communication": "allgather",
+        "canonical_summary": "strong/grid_controlled_n200000_d8/nodes8/mpi/grid_controlled_n200000_d8/p128/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 128,
+        "threads": 1,
+        "communication": "allgather",
+        "canonical_summary": "strong/grid_controlled_n200000_d8/nodes8/mpi_kokkos/OpenMP/grid_controlled_n200000_d8/p128/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 128,
+        "threads": 1,
+        "communication": "allgather",
+        "canonical_summary": "strong/grid_controlled_n200000_d8/nodes8/hybrid/grid_controlled_n200000_d8/p128_t1/summary.json"
+      },
+      {
+        "implementation": "mpi",
+        "processes": 128,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/grid_controlled_n200000_d8/nodes8/mpi_halo/grid_controlled_n200000_d8/p128/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 128,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/grid_controlled_n200000_d8/nodes8/mpi_kokkos_halo/OpenMP/grid_controlled_n200000_d8/p128/summary.json"
+      },
+      {
+        "implementation": "hybrid",
+        "processes": 128,
+        "threads": 1,
+        "communication": "halo",
+        "canonical_summary": "strong/grid_controlled_n200000_d8/nodes8/hybrid_halo/grid_controlled_n200000_d8/p128_t1/summary.json"
+      }
+    ],
+    "requested_hosts": [
+      "cn-136",
+      "cn-141",
+      "cn-088",
+      "cn-091",
+      "cn-096",
+      "cn-100",
+      "cn-118",
+      "cn-119"
+    ],
+    "scheduler_cpu_pool": "cpu_all",
+    "extension": "repair_20261115",
+    "raw_stage": "cpu_recovery_20261115"
+  },
+  {
+    "graph": "grid_controlled_n400000_d4",
+    "nodes": 4,
+    "cores_per_node": 32,
+    "cores": 128,
+    "priority": 0,
+    "walltime": "01:00:00",
+    "prerequisite": "",
+    "required_job": "",
+    "dense_launch_pause_s": 0,
+    "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
+    "cells": [
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 4,
+        "threads": 32,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d4/nodes4/mpi_kokkos/OpenMP/grid_controlled_n400000_d4/p4_t32/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 4,
+        "threads": 32,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d4/nodes4/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p4_t32/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 16,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d4/nodes4/mpi_kokkos/OpenMP/grid_controlled_n400000_d4/p8_t16/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 16,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d4/nodes4/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p8_t16/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 16,
+        "threads": 8,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d4/nodes4/mpi_kokkos/OpenMP/grid_controlled_n400000_d4/p16_t8/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 16,
+        "threads": 8,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d4/nodes4/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p16_t8/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 32,
+        "threads": 4,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d4/nodes4/mpi_kokkos/OpenMP/grid_controlled_n400000_d4/p32_t4/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 32,
+        "threads": 4,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d4/nodes4/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p32_t4/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 64,
+        "threads": 2,
+        "communication": "allgather",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d4/nodes4/mpi_kokkos/OpenMP/grid_controlled_n400000_d4/p64_t2/summary.json"
+      },
+      {
+        "implementation": "mpi_kokkos",
+        "processes": 64,
+        "threads": 2,
+        "communication": "halo",
+        "canonical_summary": "kokkos_cpu_grid/grid_controlled_n400000_d4/nodes4/mpi_kokkos_halo/OpenMP/grid_controlled_n400000_d4/p64_t2/summary.json"
+      }
+    ],
+    "extension": "repair_20261115",
+    "raw_stage": "cpu_recovery_20261115"
+  }
+]

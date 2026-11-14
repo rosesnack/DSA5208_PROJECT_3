@@ -153,7 +153,8 @@ def main():
                 for c in plan['cells']:
                     key = c['canonical_summary']
                     assert key not in registered, key
-                    registered[key] = {'account': account, **row}
+                    registered[key] = {'account': account, **row,
+                                       'saved_measurement_check': plan.get('reuse_saved_measurements', False)}
     manifest, coverage = [], {}
     for row in audit:
         key = str(Path(row['summary']).relative_to(Path(row['source_root'])))
@@ -168,7 +169,11 @@ def main():
             perf, val, completion, candidates = source_jobs(row, perf, val)
         elif assignment:
             state = job.get('job_state', '')
-            if state == 'F':
+            if assignment['saved_measurement_check']:
+                check = snapshots[account]['known_jobs'].get(val, {})
+                status = ('performance_failed' if check.get('job_state') == 'F'
+                          and str(check.get('Exit_status')) != '0' else 'awaiting_validation')
+            elif state == 'F':
                 status = 'awaiting_validation' if str(job.get('Exit_status')) == '0' else 'performance_failed'
             else:
                 status = {'H': 'held', 'Q': 'queued', 'R': 'running', 'E': 'exiting'}.get(state, 'registered_unconfirmed')
@@ -225,7 +230,8 @@ def main():
     weak = export_weak_inventory(args.output, list(dict.fromkeys([args.main_root, args.assist_root,
                                 *(Path(r['source_root']) for r in audit)])))
     summary = {'target': 20700, 'original_target': 19980, 'later_512_splits': 720,
-               'status_counts': dict(Counter(x['status'] for x in manifest)),
+               'status_counts': {status: sum(x['status'] == status for x in manifest)
+                                 for status in statuses},
                'submitted_group_counts': dict(Counter(x['account'] for x in submitted)),
                'mainline_coverage': totals, 'registered_cross_account_overlap': 0,
                'future_plan_cross_account_overlap': 0,

@@ -1,112 +1,16 @@
 {
-  "observed_at": "2026-11-13T15:32:04.737496+08:00",
+  "observed_at": "2026-11-15T00:04:19.648422+08:00",
   "account": "hongxinran",
   "source_project": "/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111",
   "run_id": "20261111_hongxinran_assist",
-  "monitor_alive": true,
+  "monitor_alive": false,
   "monitor": {
-    "pending_performance_groups": 5,
-    "deferred_held_jobs": [
-      "1510708.stdct-mgmt-02",
-      "1510713.stdct-mgmt-02",
-      "1510718.stdct-mgmt-02",
-      "1510743.stdct-mgmt-02",
-      "1510748.stdct-mgmt-02",
-      "1513353.stdct-mgmt-02",
-      "1513358.stdct-mgmt-02",
-      "1513363.stdct-mgmt-02",
-      "1513370.stdct-mgmt-02",
-      "1513375.stdct-mgmt-02",
-      "1513380.stdct-mgmt-02",
-      "1513385.stdct-mgmt-02",
-      "1513390.stdct-mgmt-02",
-      "1513395.stdct-mgmt-02",
-      "1513400.stdct-mgmt-02",
-      "1513405.stdct-mgmt-02",
-      "1513410.stdct-mgmt-02",
-      "1513415.stdct-mgmt-02",
-      "1513420.stdct-mgmt-02",
-      "1513425.stdct-mgmt-02",
-      "1513430.stdct-mgmt-02",
-      "1513435.stdct-mgmt-02",
-      "1513439.stdct-mgmt-02",
-      "1513440.stdct-mgmt-02",
-      "1513444.stdct-mgmt-02",
-      "1513445.stdct-mgmt-02",
-      "1513449.stdct-mgmt-02",
-      "1513450.stdct-mgmt-02",
-      "1513454.stdct-mgmt-02",
-      "1513455.stdct-mgmt-02",
-      "1513459.stdct-mgmt-02",
-      "1513460.stdct-mgmt-02",
-      "1513464.stdct-mgmt-02",
-      "1513465.stdct-mgmt-02",
-      "1513469.stdct-mgmt-02",
-      "1513470.stdct-mgmt-02",
-      "1513474.stdct-mgmt-02",
-      "1513475.stdct-mgmt-02",
-      "1513479.stdct-mgmt-02",
-      "1513480.stdct-mgmt-02",
-      "1513484.stdct-mgmt-02",
-      "1513485.stdct-mgmt-02",
-      "1513489.stdct-mgmt-02",
-      "1513490.stdct-mgmt-02",
-      "1513494.stdct-mgmt-02",
-      "1513495.stdct-mgmt-02",
-      "1513499.stdct-mgmt-02",
-      "1513500.stdct-mgmt-02",
-      "1513504.stdct-mgmt-02",
-      "1513505.stdct-mgmt-02",
-      "1513509.stdct-mgmt-02",
-      "1513510.stdct-mgmt-02",
-      "1513514.stdct-mgmt-02",
-      "1513515.stdct-mgmt-02",
-      "1513519.stdct-mgmt-02",
-      "1513520.stdct-mgmt-02",
-      "1513524.stdct-mgmt-02",
-      "1513525.stdct-mgmt-02",
-      "1513529.stdct-mgmt-02",
-      "1513530.stdct-mgmt-02",
-      "1513534.stdct-mgmt-02",
-      "1513535.stdct-mgmt-02",
-      "1513539.stdct-mgmt-02",
-      "1513540.stdct-mgmt-02",
-      "1513544.stdct-mgmt-02",
-      "1513545.stdct-mgmt-02",
-      "1513551.stdct-mgmt-02",
-      "1513556.stdct-mgmt-02",
-      "1513561.stdct-mgmt-02",
-      "1519863.stdct-mgmt-02"
-    ],
-    "placement_updates": 1,
-    "pending_validation_groups": 1,
-    "failed_jobs_not_retried": [],
-    "performance_states": {
-      "F": 379,
-      "Q": 5
-    },
-    "validation_states": {
-      "F": 378,
-      "H": 5,
-      "R": 1
-    },
-    "eligible_unregistered_groups": 0,
-    "eligible_unregistered_cells": 0,
-    "endpoint_proof_state": {
-      "1549865.stdct-mgmt-02": "F",
-      "1537725.stdct-mgmt-02": "F",
-      "1542730.stdct-mgmt-02": "F",
-      "1543003.stdct-mgmt-02": "F",
-      "1543299.stdct-mgmt-02": "F",
-      "1545917.stdct-mgmt-02": "F",
-      "1545991.stdct-mgmt-02": "F"
-    },
-    "balance_cpu_hours": 699.875,
-    "action": "no_eligible_unregistered_cells",
-    "observed_at": "2026-11-13T15:30:43.570747+08:00",
-    "pid": 1996638,
+    "action": "stopped",
+    "reason": "stop_file_or_submission_deadline",
+    "observed_at": "2026-11-14T23:59:13.431791+08:00",
+    "pid": 1780936,
     "interval_seconds": 60,
-    "until": "2026-11-13T23:59:00+08:00",
+    "until": "2026-11-14T23:59:00+08:00",
     "margin_cpu_hours": 64,
     "state_directory": "results/updated_vanda_scaling/20261111_hongxinran_assist/monitor_assist_20261111",
     "max_total_cores": 128
@@ -115,7 +19,6 @@
     "1510708.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 3,
@@ -129,12 +32,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1510713.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 3,
@@ -148,12 +51,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1510718.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 3,
@@ -167,12 +70,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1510743.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -185,13 +88,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
-      "depend": "afterok:1510613.stdct-mgmt-02@stdct-mgmt-02"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1510748.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -204,13 +106,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
-      "depend": "afterok:1510626.stdct-mgmt-02@stdct-mgmt-02"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1513353.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -223,12 +124,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1513358.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -241,12 +142,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1513363.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -259,12 +160,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1513370.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -277,12 +178,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1513375.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -295,12 +196,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1513380.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -313,12 +214,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1513385.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -331,12 +232,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1513390.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -349,12 +250,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1513395.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -367,12 +268,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513400.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -385,12 +286,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513405.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -403,12 +304,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513410.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -421,12 +322,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513415.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -439,12 +340,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513420.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -457,12 +358,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513425.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -475,12 +376,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513430.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -493,12 +394,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513435.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -511,12 +412,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513439.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -530,12 +431,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
+      "Hold_Types": "u"
     },
     "1513440.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -548,12 +449,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513444.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -567,12 +468,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
+      "Hold_Types": "u"
     },
     "1513445.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -585,12 +486,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513449.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -604,12 +505,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
+      "Hold_Types": "u"
     },
     "1513450.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -622,12 +523,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513454.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -641,12 +542,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
+      "Hold_Types": "u"
     },
     "1513455.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -659,12 +560,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513459.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -678,12 +579,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
+      "Hold_Types": "u"
     },
     "1513460.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -696,12 +597,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513464.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -715,12 +616,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
+      "Hold_Types": "u"
     },
     "1513465.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -733,12 +634,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513469.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -752,12 +653,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
+      "Hold_Types": "u"
     },
     "1513470.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -770,12 +671,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513474.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -789,12 +690,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
+      "Hold_Types": "u"
     },
     "1513475.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -807,12 +708,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513479.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -826,12 +727,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
+      "Hold_Types": "u"
     },
     "1513480.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -844,12 +745,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513484.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -863,12 +764,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
+      "Hold_Types": "u"
     },
     "1513485.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -881,12 +782,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513489.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -900,12 +801,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
+      "Hold_Types": "u"
     },
     "1513490.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -918,12 +819,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513494.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -937,12 +838,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
+      "Hold_Types": "u"
     },
     "1513495.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -955,12 +856,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513499.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -974,12 +875,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
+      "Hold_Types": "u"
     },
     "1513500.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -992,12 +893,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513504.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -1011,12 +912,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
+      "Hold_Types": "u"
     },
     "1513505.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1029,12 +930,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513509.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -1048,12 +949,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
+      "Hold_Types": "u"
     },
     "1513510.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1066,12 +967,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513514.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -1085,12 +986,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
+      "Hold_Types": "u"
     },
     "1513515.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1103,12 +1004,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513519.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -1122,12 +1023,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
+      "Hold_Types": "u"
     },
     "1513520.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1140,12 +1041,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513524.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -1159,12 +1060,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
+      "Hold_Types": "u"
     },
     "1513525.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1177,12 +1078,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513529.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -1196,12 +1097,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
+      "Hold_Types": "u"
     },
     "1513530.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1214,12 +1115,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513534.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 256.0, \"job.ngpus\": 0}",
         "am_run_count": 2,
@@ -1233,13 +1134,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
-      "depend": "afterok:1513573.stdct-mgmt-02@stdct-mgmt-02"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 21:18:42 2026 ",
+      "Hold_Types": "u"
     },
     "1513535.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 512.0, \"job.ngpus\": 0}",
         "mem": "3552gb",
@@ -1252,13 +1152,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
-      "depend": "afterok:1513573.stdct-mgmt-02@stdct-mgmt-02"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513539.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 256.0, \"job.ngpus\": 0}",
         "am_run_count": 2,
@@ -1272,13 +1171,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
-      "depend": "afterok:1513578.stdct-mgmt-02@stdct-mgmt-02"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 21:31:25 2026 ",
+      "Hold_Types": "u"
     },
     "1513540.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 512.0, \"job.ngpus\": 0}",
         "mem": "3552gb",
@@ -1291,13 +1189,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
-      "depend": "afterok:1513578.stdct-mgmt-02@stdct-mgmt-02"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513544.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 256.0, \"job.ngpus\": 0}",
         "am_run_count": 2,
@@ -1311,13 +1208,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
-      "depend": "afterok:1513579.stdct-mgmt-02@stdct-mgmt-02"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 21:27:05 2026 ",
+      "Hold_Types": "u"
     },
     "1513545.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 512.0, \"job.ngpus\": 0}",
         "mem": "3552gb",
@@ -1330,13 +1226,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
-      "depend": "afterok:1513579.stdct-mgmt-02@stdct-mgmt-02"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513551.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1349,12 +1244,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "02:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513556.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1367,12 +1262,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "02:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513561.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1385,12 +1280,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "02:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1519863.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1403,162 +1298,14 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "02:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026"
-    },
-    "1549883.stdct-mgmt-02": {
-      "job_state": "Q",
-      "queue": "batch_cpu",
-      "Hold_Types": "n",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "888gb",
-        "mpiprocs": 128,
-        "ncpus": 128,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-116",
-        "walltime": "01:00:00"
-      },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-097 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1549885.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1549885.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "cpu_serial",
-      "Hold_Types": "d",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "20gb",
-        "mpiprocs": 1,
-        "ncpus": 1,
-        "ngpus": 0,
-        "nodect": 1,
-        "place": "free",
-        "queue_charge_rate": 0,
-        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
-        "walltime": "24:00:00"
-      },
-      "depend": "afterok:1549883.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1549888.stdct-mgmt-02": {
-      "job_state": "Q",
-      "queue": "batch_cpu",
-      "Hold_Types": "n",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "888gb",
-        "mpiprocs": 128,
-        "ncpus": 128,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-011",
-        "walltime": "01:00:00"
-      },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-122 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1549889.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1549889.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "cpu_serial",
-      "Hold_Types": "d",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "20gb",
-        "mpiprocs": 1,
-        "ncpus": 1,
-        "ngpus": 0,
-        "nodect": 1,
-        "place": "free",
-        "queue_charge_rate": 0,
-        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
-        "walltime": "24:00:00"
-      },
-      "depend": "afterok:1549888.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550381.stdct-mgmt-02": {
-      "job_state": "Q",
-      "queue": "batch_cpu",
-      "Hold_Types": "n",
-      "Resource_List": {
-        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0}",
-        "mem": "440gb",
-        "mpiprocs": 64,
-        "ncpus": 64,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-087+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-099+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-152+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-009+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-012+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-013",
-        "walltime": "01:00:00"
-      },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-116 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550383.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550383.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "cpu_serial",
-      "Hold_Types": "d",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "20gb",
-        "mpiprocs": 1,
-        "ncpus": 1,
-        "ngpus": 0,
-        "nodect": 1,
-        "place": "free",
-        "queue_charge_rate": 0,
-        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
-        "walltime": "24:00:00"
-      },
-      "depend": "afterok:1550381.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550385.stdct-mgmt-02": {
-      "job_state": "Q",
-      "queue": "batch_cpu",
-      "Hold_Types": "n",
-      "Resource_List": {
-        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0}",
-        "mem": "440gb",
-        "mpiprocs": 64,
-        "ncpus": 64,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-087+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-099+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-091+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135",
-        "walltime": "01:00:00"
-      },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-011 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550387.stdct-mgmt-02@stdct-mgmt-02"
-    },
-    "1550387.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "cpu_serial",
-      "Hold_Types": "d",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "20gb",
-        "mpiprocs": 1,
-        "ncpus": 1,
-        "ngpus": 0,
-        "nodect": 1,
-        "place": "free",
-        "queue_charge_rate": 0,
-        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
-        "walltime": "24:00:00"
-      },
-      "depend": "afterok:1550385.stdct-mgmt-02@stdct-mgmt-02"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     }
   },
   "known_jobs": {
     "1510708.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 3,
@@ -1572,12 +1319,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1510713.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 3,
@@ -1591,12 +1338,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1510718.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 3,
@@ -1610,12 +1357,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1510743.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1628,13 +1375,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
-      "depend": "afterok:1510613.stdct-mgmt-02@stdct-mgmt-02"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1510748.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1647,13 +1393,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026",
-      "depend": "afterok:1510626.stdct-mgmt-02@stdct-mgmt-02"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1513353.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1666,12 +1411,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1513358.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1684,12 +1429,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1513363.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1702,12 +1447,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1513370.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1720,12 +1465,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1513375.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1738,12 +1483,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1513380.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1756,12 +1501,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1513385.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1774,12 +1519,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1513390.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1792,12 +1537,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
+      "Hold_Types": "u"
     },
     "1513395.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1810,12 +1555,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513400.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1828,12 +1573,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513405.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1846,12 +1591,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513410.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1864,12 +1609,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513415.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1882,12 +1627,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513420.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1900,12 +1645,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513425.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1918,12 +1663,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:13 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513430.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1936,12 +1681,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513435.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1954,12 +1699,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513439.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -1973,12 +1718,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
+      "Hold_Types": "u"
     },
     "1513440.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1991,12 +1736,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513444.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2010,12 +1755,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
+      "Hold_Types": "u"
     },
     "1513445.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2028,12 +1773,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
+      "Hold_Types": "u"
     },
     "1513449.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2047,12 +1792,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
+      "Hold_Types": "u"
     },
     "1513450.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2065,12 +1810,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513454.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2084,12 +1829,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:14 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
+      "Hold_Types": "u"
     },
     "1513455.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2102,12 +1847,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513459.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2121,12 +1866,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
+      "Hold_Types": "u"
     },
     "1513460.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2139,12 +1884,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513464.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2158,12 +1903,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
+      "Hold_Types": "u"
     },
     "1513465.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2176,12 +1921,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513469.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2195,12 +1940,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
+      "Hold_Types": "u"
     },
     "1513470.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2213,12 +1958,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513474.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2232,12 +1977,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
+      "Hold_Types": "u"
     },
     "1513475.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2250,12 +1995,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513479.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2269,12 +2014,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
+      "Hold_Types": "u"
     },
     "1513480.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2287,12 +2032,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:15 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513484.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2306,12 +2051,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
+      "Hold_Types": "u"
     },
     "1513485.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2324,12 +2069,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513489.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2343,12 +2088,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
+      "Hold_Types": "u"
     },
     "1513490.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2361,12 +2106,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513494.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2380,12 +2125,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
+      "Hold_Types": "u"
     },
     "1513495.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2398,12 +2143,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513499.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2417,12 +2162,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
+      "Hold_Types": "u"
     },
     "1513500.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2435,12 +2180,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
+      "Hold_Types": "u"
     },
     "1513504.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2454,12 +2199,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
+      "Hold_Types": "u"
     },
     "1513505.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2472,12 +2217,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513509.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2491,12 +2236,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
+      "Hold_Types": "u"
     },
     "1513510.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2509,12 +2254,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513514.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2528,12 +2273,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
+      "Hold_Types": "u"
     },
     "1513515.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2546,12 +2291,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513519.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2565,12 +2310,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
+      "Hold_Types": "u"
     },
     "1513520.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2583,12 +2328,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513524.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2602,12 +2347,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
+      "Hold_Types": "u"
     },
     "1513525.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2620,12 +2365,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513529.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2639,12 +2384,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
+      "Hold_Types": "u"
     },
     "1513530.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2657,12 +2402,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:16 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513534.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 256.0, \"job.ngpus\": 0}",
         "am_run_count": 2,
@@ -2676,13 +2421,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
-      "depend": "afterok:1513573.stdct-mgmt-02@stdct-mgmt-02"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 21:18:42 2026 ",
+      "Hold_Types": "u"
     },
     "1513535.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 512.0, \"job.ngpus\": 0}",
         "mem": "3552gb",
@@ -2695,13 +2439,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
-      "depend": "afterok:1513573.stdct-mgmt-02@stdct-mgmt-02"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513539.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 256.0, \"job.ngpus\": 0}",
         "am_run_count": 2,
@@ -2715,13 +2458,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
-      "depend": "afterok:1513578.stdct-mgmt-02@stdct-mgmt-02"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 21:31:25 2026 ",
+      "Hold_Types": "u"
     },
     "1513540.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 512.0, \"job.ngpus\": 0}",
         "mem": "3552gb",
@@ -2734,13 +2476,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
-      "depend": "afterok:1513578.stdct-mgmt-02@stdct-mgmt-02"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513544.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 256.0, \"job.ngpus\": 0}",
         "am_run_count": 2,
@@ -2754,13 +2495,12 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
-      "depend": "afterok:1513579.stdct-mgmt-02@stdct-mgmt-02"
+      "comment": "Job held by 'am_hook' hook on Tue Nov  3 21:27:05 2026 ",
+      "Hold_Types": "u"
     },
     "1513545.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 512.0, \"job.ngpus\": 0}",
         "mem": "3552gb",
@@ -2773,13 +2513,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "01:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026",
-      "depend": "afterok:1513579.stdct-mgmt-02@stdct-mgmt-02"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513551.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2792,12 +2531,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "02:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513556.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2810,12 +2549,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "02:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1513561.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2828,12 +2567,12 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "02:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1519863.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
-      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2846,7 +2585,8 @@
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
         "walltime": "02:00:00"
       },
-      "comment": "Job held by hongxinran on Wed Nov 11 00:52:17 2026"
+      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
+      "Hold_Types": "u"
     },
     "1537725.stdct-mgmt-02": {
       "job_state": "F",
@@ -18940,11 +18680,12 @@
       "comment": "Job run at Fri Nov 13 at 15:31 on (IN-001[0]:ncpus=1:mem=20gb) and finished"
     },
     "1550381.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0}",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -18955,15 +18696,25 @@
         "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-087+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-099+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-152+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-009+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-012+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-013",
         "walltime": "01:00:00"
       },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-116 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "resources_used": {
+        "cpupercent": 597,
+        "cput": "00:01:51",
+        "mem": "83472kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "1074924kb",
+        "walltime": "00:00:27"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:32 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-152[1]:ncpus=8:mem=55gb)+(CN-007[1]:ncpus=8:mem=55gb)+(CN-009[1]:ncpus=8:mem=55gb)+(CN-011[0]:mem=29137mb:ncpus=4+CN-011[1]:mem=27183mb:ncpus=4)+(CN-012[0]:... and finished",
       "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550383.stdct-mgmt-02@stdct-mgmt-02"
     },
     "1550383.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -18974,14 +18725,24 @@
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
       },
-      "depend": "afterok:1550381.stdct-mgmt-02@stdct-mgmt-02"
+      "resources_used": {
+        "cpupercent": 83,
+        "cput": "00:00:07",
+        "mem": "37408kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "66272kb",
+        "walltime": "00:00:09"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:33 on (IN-001[0]:ncpus=1:mem=20gb) and finished"
     },
     "1550385.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0}",
+        "am_job_cache": "{\"job.walltime\": 3600, \"job.ncpus\": 64.0, \"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "440gb",
         "mpiprocs": 64,
         "ncpus": 64,
@@ -18992,15 +18753,25 @@
         "select": "1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-087+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-099+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-091+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-120+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=8:mpiprocs=8:ompthreads=1:mem=55GB:node_pool=cpu_node:switch=cpu_all:host=cn-135",
         "walltime": "01:00:00"
       },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-011 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
+      "resources_used": {
+        "cpupercent": 964,
+        "cput": "00:01:58",
+        "mem": "85040kb",
+        "ncpus": 64,
+        "ngpus": 0,
+        "vmem": "712528kb",
+        "walltime": "00:00:26"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:32 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-091[0]:mem=29095mb:ncpus=4+CN-091[1]:mem=27225mb:ncpus=4)+(CN-105[0]:mem=29137mb:ncpus=4+CN-105[1]:mem=27183mb:ncpus=4)+(CN-120[0]:mem=29095mb:ncpus=4+CN-12... and finished",
       "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550387.stdct-mgmt-02@stdct-mgmt-02"
     },
     "1550387.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.walltime\": 86400, \"job.ncpus\": 1.0, \"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -19011,13 +18782,26 @@
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
       },
-      "depend": "afterok:1550385.stdct-mgmt-02@stdct-mgmt-02"
+      "resources_used": {
+        "cpupercent": 82,
+        "cput": "00:00:10",
+        "mem": "37828kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "66784kb",
+        "walltime": "00:00:12"
+      },
+      "comment": "Job run at Fri Nov 13 at 15:33 on (IN-001[0]:ncpus=1:mem=20gb) and finished"
     }
   },
   "registered_groups": 384,
-  "queue_observed_at": "2026-11-13T15:32:04.737496+08:00",
+  "queue_observed_at": "2026-11-15T00:04:19.648422+08:00",
   "project_query_authenticated": true,
-  "balance_cpu_hours": 635.875,
+  "balance_cpu_hours": 1198.2039999999997,
   "queue_counts_observed_at": "2026-11-11T20:37:10+08:00",
-  "queue_snapshot_note": "Detailed held-job attributes retain their earlier observation time. Plain qstat at 20:37 reconfirmed 70 H and no R/Q; the later full JSON refresh timed out."
+  "queue_snapshot_note": "Detailed held-job attributes retain their earlier observation time. Plain qstat at 20:37 reconfirmed 70 H and no R/Q; the later full JSON refresh timed out.",
+  "queue_query_available": true,
+  "latest_service_check_at": "2026-11-15T00:04:19.648422+08:00",
+  "latest_service_error": null,
+  "known_jobs_note": "Some known_jobs retain historical metadata; latest explicit PBS query confirmed no performance R/Q at observation. Completed statuses come from independent markers."
 }

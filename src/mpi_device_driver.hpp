@@ -138,6 +138,12 @@ int run_mpi_device_suite(const std::string& implementation, const std::string& b
             graph = load_graph(dataset.edges, dataset.nodes);
         }
         const Partition local = distribute_graph(graph);
+        const auto total_edges = graph.in_sources.size();
+#ifdef PAGERANK_COMPACT_MPI_SETUP
+        // Distribution owns its edge copy; output only needs IDs, offsets and degrees.
+        // Release this redundant root allocation before backend setup and solver timing.
+        std::vector<Index>().swap(graph.in_sources);
+#endif
         HaloPlan halo_plan;
         const HaloPlan* halo = nullptr;
         if (communication_mode == "halo") {
@@ -207,7 +213,10 @@ int run_mpi_device_suite(const std::string& implementation, const std::string& b
                 << ",\n  \"min_local_edges\": " << local.min_edges
                 << ",\n  \"max_local_edges\": " << local.max_edges
                 << ",\n  \"nodes\": " << graph.size()
-                << ",\n  \"edges\": " << graph.in_sources.size()
+                << ",\n  \"edges\": " << total_edges
+#ifdef PAGERANK_COMPACT_MPI_SETUP
+                << ",\n  \"compact_setup\": true"
+#endif
                 << ",\n  \"alpha\": " << alpha
                 << ",\n  \"tolerance_l1\": " << tolerance
                 << ",\n  \"max_iterations\": " << max_iterations

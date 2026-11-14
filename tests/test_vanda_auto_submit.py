@@ -19,6 +19,20 @@ from watch_vanda_core_groups import unregistered_groups
 
 
 class AutoSubmitTests(unittest.TestCase):
+    def test_no_new_candidates_does_not_request_accounting_login(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'core_group_jobs.tsv').write_text('performance_job\tvalidation_job\tplan\tcores\n')
+            plan = root / 'plan.json'
+            plan.write_text('[]')
+            args = SimpleNamespace(plan=plan, dependency='proof', defer_held_job=[],
+                                   max_total_cores=256, placement_hosts=None)
+            jobs = {'proof': {'job_state': 'F', 'Exit_status': 0}}
+            with patch.object(watch, 'job_snapshot', return_value=jobs), \
+                 patch.object(watch, 'command', side_effect=AssertionError('Unneeded credit query')):
+                state, _ = watch.cycle(args, root, jobs)
+            self.assertEqual(state['action'], 'no_eligible_unregistered_cells')
+
     def test_queued_placement_refresh_continues_when_accounting_login_expires(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
@@ -28,7 +42,8 @@ class AutoSubmitTests(unittest.TestCase):
                 'performance_job\tvalidation_job\tplan\tcores\n'
                 f'pending\tcheck\t{registered}\t32\n')
             plan = root / 'plan.json'
-            plan.write_text('[]')
+            plan.write_text(json.dumps([{'cores': 32, 'prerequisite': '',
+                                         'cells': [{'canonical_summary': 'next/summary.json'}]}]))
             args = SimpleNamespace(plan=plan, dependency='proof', defer_held_job=[],
                                    max_total_cores=128, project='personal-test',
                                    placement_hosts=root / 'hosts.json')

@@ -50,6 +50,8 @@ def main():
                         help="Only submit the explicitly enabled and validated allocation sizes")
     parser.add_argument("--confirmed-balance", type=float,
                         help="Balance just supplied by the user; conservatively reserve running jobs too")
+    parser.add_argument("--balance-evidence", type=Path,
+                        help="Recorded lower-bound calculation for a previously verified balance")
     parser.add_argument("--dependency", required=True, help="Free smoke-test job which must pass")
     parser.add_argument("--defer-held-job", action="append", default=[],
                         help="Do not reserve a named postponed job only while PBS confirms its user hold")
@@ -67,6 +69,9 @@ def main():
                                  if line.strip().startswith(args.project + " ")).split("|")[2])
         else:
             balance = args.confirmed_balance
+        if args.balance_evidence:
+            evidence = json.loads(args.balance_evidence.read_text())
+            assert balance == evidence['conservative_balance_floor']
         reserved_states = ("Q", "H", "R", "E") if args.confirmed_balance is not None else ("Q", "H")
         deferred = {i for i in args.defer_held_job if i in jobs and jobs[i]['job_state'] == 'H'
                     and 'u' in jobs[i].get('Hold_Types', '')}
@@ -146,7 +151,9 @@ def main():
         now = datetime.now(ZoneInfo("Asia/Singapore"))
         date_tag = now.strftime("%Y%m%d")
         summary = {"observed_at": now.isoformat(), "submitted": args.submit,
-                   "balance": balance, "balance_source": "user_confirmed" if args.confirmed_balance is not None else "hpc_project",
+                   "balance": balance, "balance_source": ("verified_lower_bound" if args.balance_evidence else
+                       "user_confirmed") if args.confirmed_balance is not None else "hpc_project",
+                   "balance_evidence": str(args.balance_evidence) if args.balance_evidence else None,
                    "prior_pending_reservations": pending, "margin": args.margin,
                    "deferred_user_held_jobs": sorted(deferred),
                    "new_reservations": sum(g["reservation"] for g in accepted),

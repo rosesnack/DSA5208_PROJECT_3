@@ -52,6 +52,7 @@ def check_affinity(records, group, processes, threads):
 
 def compute(group, raw, env):
     metadata = {"performance_job": env["PBS_JOBID"], "group": group,
+                "executable_overrides": group.get("executables", {}),
                 "mpi": subprocess.check_output(["mpicxx", "--showme:version"], text=True).strip(),
                 "compiler": subprocess.check_output(["g++", "--version"], text=True).splitlines()[0],
                 "cmake": [line for line in Path("build-vanda-matrix-cpu/CMakeCache.txt").read_text().splitlines()
@@ -82,7 +83,7 @@ def compute(group, raw, env):
         env.update(OMP_NUM_THREADS=str(t), PAGERANK_KOKKOS_THREADS=str(t), PAGERANK_HYBRID_THREADS=str(t))
         if (p, t) not in measured_layouts:
             probe = layout_command(group, p, t, ["python3", "scripts/report_core_group_affinity.py"])
-            output = subprocess.check_output(probe, env=env, text=True)
+            output = subprocess.check_output(probe, env=env, text=True, timeout=120)
             records = [json.loads(line) for line in output.splitlines()]
             check_affinity(records, group, p, t)
             (mapping / f"p{p}_t{t}.jsonl").write_text(output)
@@ -95,14 +96,15 @@ def compute(group, raw, env):
             assert saved["repeat_runs"] == 5 and saved["warmup_runs"] == 1
             print(f"Reusing saved cell: {folder}", flush=True)
             continue
-        program = "pagerank_" + cell["implementation"]
+        program = group.get("executables", {}).get(
+            cell["implementation"], "./build-vanda-matrix-cpu/pagerank_" + cell["implementation"])
         if previous_dense_halo and group.get("dense_launch_pause_s", 0):
             seconds = group["dense_launch_pause_s"]
             print(f"Outside solver timing: waiting {seconds}s after dense TCP Halo launch", flush=True)
             time.sleep(seconds)
             pauses.append({"before": str(folder_for(cell, group["graph"])), "seconds": seconds})
             (raw / "launcher_pauses.json").write_text(json.dumps(pauses, indent=2) + "\n")
-        command(layout_command(group, p, t, [f"./build-vanda-matrix-cpu/{program}",
+        command(layout_command(group, p, t, [program,
                 f'--communication={cell["communication"]}']), env)
         (folder / "performance_job.txt").write_text(env["PBS_JOBID"] + "\n")
         previous_dense_halo = p >= 256 and cell["communication"] == "halo"

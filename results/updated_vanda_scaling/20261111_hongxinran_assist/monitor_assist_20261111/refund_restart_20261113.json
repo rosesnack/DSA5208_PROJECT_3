@@ -1,8 +1,8 @@
 {
   "ready": true,
-  "observed_at": "2026-11-13T15:24:56.370701+08:00",
+  "observed_at": "2026-11-14T01:46:24.527282+08:00",
   "account": "hongxinran",
-  "pid": 1996638,
+  "pid": 1780936,
   "args": [
     "python3",
     "-u",
@@ -15,7 +15,7 @@
     "--dependency",
     "1549865.stdct-mgmt-02",
     "--until",
-    "2026-11-13T23:59:00+08:00",
+    "2026-11-14T23:59:00+08:00",
     "--interval",
     "60",
     "--max-total-cores",
@@ -170,5 +170,6 @@
   "plan": "results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_watch_plan_hongxinran_20261113_refund.json",
   "allowed_hosts": "results/updated_vanda_scaling/20261111_hongxinran_assist/validated_8452y_hosts_20261113.json",
   "validated_host_count": 95,
-  "policy": "Aggregate NUMA vnodes by physical host; only rebind queued CPU requests, preserve resources, refresh before credit-query authentication."
+  "policy": "Aggregate NUMA vnodes by physical host; only rebind queued CPU requests, preserve resources, refresh before credit-query authentication.",
+  "reason": "Resume autonomous checks after agent-configured Nov13 deadline; retain source plan, ownership, resource and budget limits."
 }
