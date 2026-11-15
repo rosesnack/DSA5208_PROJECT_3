@@ -2,6 +2,32 @@
 
 这是当前唯一执行交接入口。
 
+## Nov16 02:05：恢复少量512核补跑
+
+用户已授权继续512核实验。非512的74项均已有任务承接；02:00快照为39项新测量成功、16项性能运行、19项旧测量复用校验。全部需独立校验通过才计入严格完成数，仍为19,461。
+
+xtt_ella真实余额4,861.854 CPUh；本轮最多预留1,536 CPUh，额外保留256CPUh及其他未取消请求预算。只补以下48项，不改变矩阵、不重跑已通过的5项512核结果：
+
+| 图（50k顶点、平均出度4） | 配置数 | 性能作业 | 免费校验 | 当前安排 |
+|---|---:|---|---|---|
+| controlled | 16 | 1560661 | 1560662 | Q，等待8节点资源 |
+| uniform | 16 | 1560663 | 1560664 | H，afterok1560662 |
+| hub | 16 | 1560665 | 1560666 | H，afterok1560662 |
+
+每组8节点×64核=512核，1小时墙钟；MPI+OpenMP与MPI+Kokkos OpenMP各跑p/T=256/2、64/8、32/16、16/32及Allgatherv/Halo。仍为GCC13.3、OpenMPI4.1.8、Release、1预热+5次计时，原solve_median_s口径。真实亲和性要求每个配置p×T=512且八节点各64核；性能只用付费batch_cpu，独立校验免费cpu_serial。
+
+历史已通过的512核五项及其原节点/映射证据保留。旧校验1532725已从PBS历史清除，使用归档校验报告和原五项有效标记证明512布局，同时以本轮成功免费环境检查1560492为首组前置条件；不再等待旧暂挂1532795。后两组以首组新免费校验1560662为前置，第一组失败时不会盲目续跑。
+
+当前主请求的PBS注释为资源/placement set不足，尚未R；不是已成功启动。后台只监控这三组至Nov16 23:59，每60秒检查，按已验证Platinum8452Y物理节点空闲容量更新放置，保持核数/节点数/内存/墙钟不变。原512核1532794仍保持su，未释放或重复补跑其五个未完成配置；其他旧H也不释放。候选计划只含已登记的这三组，不自动扩张到其余512图。
+
+48项已在当前注册表、真实未来计划与逐配置manifest登记，唯一归属xtt_ella，队友不得重复提交。512核尚缺1,165，其中本轮48已安排、旧H5仍延期，其余1,112尚未安排。
+
+- [正式提交与预算记录](results/updated_vanda_scaling/20261106T185006Z/endpoint512_submission_20261116.json)
+- [48项冻结计划](results/updated_vanda_scaling/20261106T185006Z/endpoint512_plan_20261116.json)
+- [后台监控记录](results/updated_vanda_scaling/20261106T185006Z/monitor_endpoint512_20261116/restart.json)
+
+
+
 **严格完成19,461/20,700（94.0%），比上一版增加84项。** 66项网格补跑与18项旧测量复用已通过独立校验并下载审计。当前非512还剩74项，已全部重新安排，未重跑有效完整结果。
 
 | 账号 | 当前工作（Nov16 01:30快照） | 实际任务 |
@@ -25,13 +51,13 @@
 | 固定图状态 | 配置数 | 下一步 |
 |---|---:|---|
 | validated | 19,461 | 复用，不重跑 |
-| awaiting_validation | 19 | 原账号免费校验 |
-| running | 18 | 6个付费性能组正在运行 |
-| queued | 37 | 4个付费性能组排队 |
-| held | 5 | 旧512核延期 |
-| deferred_512 | 1,160 | 延期 |
-| unsubmitted / performance_failed | 0 | 已全部分配；历史失败不计为完成 |
-| **合计** | **20,700** | 已完成19,461，尚缺1,239 |
+| awaiting_validation | 58 | 19项旧测量+39项新性能，免费校验 |
+| running | 16 | 非512最后一个性能组（02:00快照） |
+| queued | 16 | 新512首组 |
+| held | 37 | 新512依赖32项+旧512延期5项 |
+| deferred_512 | 1,112 | 仍未安排 |
+| unsubmitted / performance_failed | 0 | 无未归属目标 |
+| **合计** | **20,700** | 未通过校验不算完成 |
 
 [全部 20,700 行状态及来源](results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv) 是固定图逐配置依据。另有按状态拆出的 [完成](results/updated_vanda_scaling/git_sync_20261111/cells_validated.csv)、[未提交](results/updated_vanda_scaling/git_sync_20261111/cells_unsubmitted.csv)、[失败](results/updated_vanda_scaling/git_sync_20261111/cells_performance_failed.csv)、[暂挂](results/updated_vanda_scaling/git_sync_20261111/cells_held.csv)、[延期 512](results/updated_vanda_scaling/git_sync_20261111/cells_deferred_512.csv) 清单；均不能直接当提交计划。
 

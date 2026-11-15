@@ -1,0 +1,155 @@
+{
+  "observed_at": "2026-11-16T02:04:46.888218+08:00",
+  "account": "xtt_ella",
+  "groups": [
+    {
+      "graph": "grid_controlled_n50000_d4",
+      "nodes": "8",
+      "cores_per_node": "64",
+      "cores": "512",
+      "performance_job": "1560661.stdct-mgmt-02",
+      "validation_job": "1560662.stdct-mgmt-02",
+      "walltime": "01:00:00",
+      "cells": "16",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_controlled_n50000_d4_n8_c64_additional_512_splits.json",
+      "dependency": "1560492.stdct-mgmt-02"
+    },
+    {
+      "graph": "grid_uniform_n50000_d4",
+      "nodes": "8",
+      "cores_per_node": "64",
+      "cores": "512",
+      "performance_job": "1560663.stdct-mgmt-02",
+      "validation_job": "1560664.stdct-mgmt-02",
+      "walltime": "01:00:00",
+      "cells": "16",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_uniform_n50000_d4_n8_c64_additional_512_splits.json",
+      "dependency": "1560662.stdct-mgmt-02"
+    },
+    {
+      "graph": "grid_hub_n50000_d4",
+      "nodes": "8",
+      "cores_per_node": "64",
+      "cores": "512",
+      "performance_job": "1560665.stdct-mgmt-02",
+      "validation_job": "1560666.stdct-mgmt-02",
+      "walltime": "01:00:00",
+      "cells": "16",
+      "plan": "results/updated_vanda_scaling/20261106T185006Z/core_group_plans/grid_hub_n50000_d4_n8_c64_additional_512_splits.json",
+      "dependency": "1560662.stdct-mgmt-02"
+    }
+  ],
+  "jobs": {
+    "1560661.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "3552gb",
+        "mpiprocs": 512,
+        "ncpus": 512,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB:node_pool=cpu_node:switch=cpu_all",
+        "walltime": "01:00:00"
+      },
+      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (cpu_all != )"
+    },
+    "1560662.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1560663.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "3552gb",
+        "mpiprocs": 512,
+        "ncpus": 512,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB:node_pool=cpu_node:switch=cpu_all",
+        "walltime": "01:00:00"
+      }
+    },
+    "1560664.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1560665.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "batch_cpu",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "3552gb",
+        "mpiprocs": 512,
+        "ncpus": 512,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB:node_pool=cpu_node:switch=cpu_all",
+        "walltime": "01:00:00"
+      }
+    },
+    "1560666.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    }
+  },
+  "stdout": [
+    "{\"graph\": \"grid_controlled_n50000_d4\", \"nodes\": 8, \"cores\": 512, \"cells\": 16, \"walltime\": \"01:00:00\", \"reservation\": 512.0, \"performance_job\": \"1560661.stdct-mgmt-02\", \"validation_job\": \"1560662.stdct-mgmt-02\", \"dependency\": \"1560492.stdct-mgmt-02\"}\nGroups: 1, cells: 16, uncommitted after margin: 4019.187\n",
+    "{\"graph\": \"grid_uniform_n50000_d4\", \"nodes\": 8, \"cores\": 512, \"cells\": 16, \"walltime\": \"01:00:00\", \"reservation\": 512.0, \"performance_job\": \"1560663.stdct-mgmt-02\", \"validation_job\": \"1560664.stdct-mgmt-02\", \"dependency\": \"1560662.stdct-mgmt-02\"}\n{\"graph\": \"grid_hub_n50000_d4\", \"nodes\": 8, \"cores\": 512, \"cells\": 16, \"walltime\": \"01:00:00\", \"reservation\": 512.0, \"performance_job\": \"1560665.stdct-mgmt-02\", \"validation_job\": \"1560666.stdct-mgmt-02\", \"dependency\": \"1560662.stdct-mgmt-02\"}\nGroups: 2, cells: 32, uncommitted after margin: 2995.187\n"
+  ],
+  "canary_validation_dependency": "1560662.stdct-mgmt-02",
+  "maximum_new_cpu_hours": 1536,
+  "original_512_proof": "salvaged_512/grid_controlled_n50000_d4/source_1527841",
+  "recent_environment_check": "1560492.stdct-mgmt-02"
+}
