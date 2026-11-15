@@ -3,7 +3,7 @@
   "original_target": 19980,
   "later_512_splits": 720,
   "status_counts": {
-    "validated": 19461,
+    "validated": 19469,
     "unsubmitted": 0,
     "deferred_512": 1112,
     "performance_failed": 0,
@@ -11,7 +11,7 @@
     "queued": 16,
     "running": 16,
     "exiting": 0,
-    "awaiting_validation": 58,
+    "awaiting_validation": 50,
     "registered_unconfirmed": 0
   },
   "submitted_group_counts": {
@@ -104,7 +104,7 @@
   "future_plan_cross_account_overlap": 0,
   "unfinished_owner_counts": {
     "xtt_ella": 1184,
-    "hongxinran": 55
+    "hongxinran": 47
   },
   "future_plans": {
     "xtt_ella": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261113_refund.json",
@@ -128,14 +128,14 @@
   },
   "snapshots": {
     "xtt_ella": {
-      "observed_at": "2026-11-16T02:04:46.888218+08:00",
+      "observed_at": "2026-11-16T02:18:34.286271+08:00",
       "monitor_action": "waiting_existing_jobs",
       "active_job_count": 8
     },
     "hongxinran": {
-      "observed_at": "2026-11-16T02:00:07.016521+08:00",
+      "observed_at": "2026-11-16T02:18:32.445562+08:00",
       "monitor_action": "waiting_existing_jobs",
-      "active_job_count": 11
+      "active_job_count": 7
     }
   },
   "scope_note": "Thread range is 1/2/4/8/16/32. Regular per-node CPU budget is at most 32; the 512 endpoint uses 8 nodes x 64. Weak scaling is separate."

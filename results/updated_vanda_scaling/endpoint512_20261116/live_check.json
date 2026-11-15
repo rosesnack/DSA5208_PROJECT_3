@@ -1,0 +1,149 @@
+{
+  "observed_at": "2026-11-16T02:18:34.286271+08:00",
+  "jobs": {
+    "1560661.stdct-mgmt-02": {
+      "job_state": "Q",
+      "Hold_Types": "n",
+      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (cpu_all != )",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "3552gb",
+        "mpiprocs": 512,
+        "ncpus": 512,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB:node_pool=cpu_node:switch=cpu_all",
+        "walltime": "01:00:00"
+      }
+    },
+    "1560662.stdct-mgmt-02": {
+      "job_state": "H",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1560663.stdct-mgmt-02": {
+      "job_state": "H",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "3552gb",
+        "mpiprocs": 512,
+        "ncpus": 512,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB:node_pool=cpu_node:switch=cpu_all",
+        "walltime": "01:00:00"
+      }
+    },
+    "1560664.stdct-mgmt-02": {
+      "job_state": "H",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    },
+    "1560665.stdct-mgmt-02": {
+      "job_state": "H",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "3552gb",
+        "mpiprocs": 512,
+        "ncpus": 512,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB:node_pool=cpu_node:switch=cpu_all",
+        "walltime": "01:00:00"
+      }
+    },
+    "1560666.stdct-mgmt-02": {
+      "job_state": "H",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      }
+    }
+  },
+  "monitor": {
+    "pending_performance_groups": 3,
+    "deferred_held_jobs": [
+      "1532794.stdct-mgmt-02",
+      "1537507.stdct-mgmt-02",
+      "1537509.stdct-mgmt-02",
+      "1537572.stdct-mgmt-02"
+    ],
+    "placement_updates": 0,
+    "pending_validation_groups": 0,
+    "failed_jobs_not_retried": [
+      "1543491.stdct-mgmt-02",
+      "1543493.stdct-mgmt-02",
+      "1543508.stdct-mgmt-02",
+      "1543511.stdct-mgmt-02",
+      "1543579.stdct-mgmt-02",
+      "1543592.stdct-mgmt-02",
+      "1555661.stdct-mgmt-02",
+      "1555663.stdct-mgmt-02"
+    ],
+    "performance_states": {
+      "F": 333,
+      "H": 3,
+      "Q": 1
+    },
+    "validation_states": {
+      "F": 331,
+      "H": 4,
+      "R": 2
+    },
+    "eligible_unregistered_groups": 0,
+    "eligible_unregistered_cells": 0,
+    "endpoint_proof_state": {
+      "1560492.stdct-mgmt-02": "F",
+      "1560662.stdct-mgmt-02": "H"
+    },
+    "action": "waiting_existing_jobs",
+    "observed_at": "2026-11-16T02:18:07.376995+08:00",
+    "pid": 1301843,
+    "interval_seconds": 60,
+    "until": "2026-11-16T23:59:00+08:00",
+    "margin_cpu_hours": 256.0,
+    "state_directory": "results/updated_vanda_scaling/20261106T185006Z/monitor_endpoint512_20261116",
+    "max_total_cores": 512
+  },
+  "monitor_alive": true,
+  "error": ""
+}

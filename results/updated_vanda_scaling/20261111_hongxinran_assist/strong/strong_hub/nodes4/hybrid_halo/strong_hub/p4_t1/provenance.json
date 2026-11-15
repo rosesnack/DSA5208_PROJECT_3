@@ -1,0 +1,9 @@
+{
+  "performance_job": "1560531.stdct-mgmt-02",
+  "validation_job": "1560532.stdct-mgmt-02",
+  "group": "cpu_recovery_20261116/strong_hub/nodes4_cores1",
+  "cores": 4,
+  "nodes": 4,
+  "processes": 4,
+  "threads": 1
+}

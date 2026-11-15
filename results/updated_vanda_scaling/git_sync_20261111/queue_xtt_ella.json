@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-16T02:04:46.888218+08:00",
+  "observed_at": "2026-11-16T02:18:34.286271+08:00",
   "account": "xtt_ella",
   "source_project": "/scratch/xtt_ella/DSA5208_PROJECT_3_20261107",
   "run_id": "20261106T185006Z",
@@ -41,7 +41,7 @@
       "1560662.stdct-mgmt-02": "H"
     },
     "action": "waiting_existing_jobs",
-    "observed_at": "2026-11-16T02:08:26.302544+08:00",
+    "observed_at": "2026-11-16T02:18:07.376995+08:00",
     "pid": 1301843,
     "interval_seconds": 60,
     "until": "2026-11-16T23:59:00+08:00",
@@ -68,12 +68,12 @@
       },
       "resources_used": {
         "cpupercent": 77,
-        "cput": "00:57:02",
+        "cput": "01:14:03",
         "mem": "5016096kb",
         "ncpus": 1,
         "ngpus": 0,
         "vmem": "5087656kb",
-        "walltime": "00:57:24"
+        "walltime": "01:14:28"
       },
       "comment": "Job run at Mon Nov 16 at 01:02 on (IN-002[1]:ncpus=1:mem=20gb)",
       "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-reuse-check.o1560513"
@@ -96,20 +96,20 @@
       },
       "resources_used": {
         "cpupercent": 86,
-        "cput": "00:54:23",
+        "cput": "01:11:24",
         "mem": "5015132kb",
         "ncpus": 1,
         "ngpus": 0,
         "vmem": "5090732kb",
-        "walltime": "00:57:25"
+        "walltime": "01:14:29"
       },
       "comment": "Job run at Mon Nov 16 at 01:02 on (IN-002[1]:ncpus=1:mem=20gb)",
       "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-reuse-check.o1560514"
     },
     "1560661.stdct-mgmt-02": {
       "job_state": "Q",
-      "queue": "batch_cpu",
       "Hold_Types": "n",
+      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (cpu_all != )",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -121,12 +121,10 @@
         "queue_charge_rate": 1,
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB:node_pool=cpu_node:switch=cpu_all",
         "walltime": "01:00:00"
-      },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (cpu_all != )"
+      }
     },
     "1560662.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "cpu_serial",
       "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
@@ -143,7 +141,6 @@
     },
     "1560663.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "batch_cpu",
       "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
@@ -160,7 +157,6 @@
     },
     "1560664.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "cpu_serial",
       "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
@@ -177,7 +173,6 @@
     },
     "1560665.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "batch_cpu",
       "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
@@ -194,7 +189,6 @@
     },
     "1560666.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "cpu_serial",
       "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
@@ -18975,12 +18969,12 @@
       },
       "resources_used": {
         "cpupercent": 77,
-        "cput": "00:57:02",
+        "cput": "01:14:03",
         "mem": "5016096kb",
         "ncpus": 1,
         "ngpus": 0,
         "vmem": "5087656kb",
-        "walltime": "00:57:24"
+        "walltime": "01:14:28"
       },
       "comment": "Job run at Mon Nov 16 at 01:02 on (IN-002[1]:ncpus=1:mem=20gb)",
       "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-reuse-check.o1560513"
@@ -19003,20 +18997,20 @@
       },
       "resources_used": {
         "cpupercent": 86,
-        "cput": "00:54:23",
+        "cput": "01:11:24",
         "mem": "5015132kb",
         "ncpus": 1,
         "ngpus": 0,
         "vmem": "5090732kb",
-        "walltime": "00:57:25"
+        "walltime": "01:14:29"
       },
       "comment": "Job run at Mon Nov 16 at 01:02 on (IN-002[1]:ncpus=1:mem=20gb)",
       "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-reuse-check.o1560514"
     },
     "1560661.stdct-mgmt-02": {
       "job_state": "Q",
-      "queue": "batch_cpu",
       "Hold_Types": "n",
+      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (cpu_all != )",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -19028,12 +19022,10 @@
         "queue_charge_rate": 1,
         "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB:node_pool=cpu_node:switch=cpu_all",
         "walltime": "01:00:00"
-      },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (cpu_all != )"
+      }
     },
     "1560662.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "cpu_serial",
       "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
@@ -19050,7 +19042,6 @@
     },
     "1560663.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "batch_cpu",
       "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
@@ -19067,7 +19058,6 @@
     },
     "1560664.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "cpu_serial",
       "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
@@ -19084,7 +19074,6 @@
     },
     "1560665.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "batch_cpu",
       "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
@@ -19101,7 +19090,6 @@
     },
     "1560666.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "cpu_serial",
       "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
@@ -19118,7 +19106,7 @@
     }
   },
   "registered_groups": 337,
-  "queue_observed_at": "2026-11-16T02:04:46.888218+08:00",
+  "queue_observed_at": "2026-11-16T02:18:30.842950+08:00",
   "project_query_authenticated": true,
   "balance_cpu_hours": 4955.473,
   "queue_query_available": true,
