@@ -137,7 +137,7 @@ int run_mpi_device_suite(const std::string& implementation, const std::string& b
                       << implementation << '/' << backend_name << ' ' << communication_mode << "..." << std::endl;
             graph = load_graph(dataset.edges, dataset.nodes);
         }
-        const Partition local = distribute_graph(graph);
+        Partition local = distribute_graph(graph);
         const auto total_edges = graph.in_sources.size();
 #ifdef PAGERANK_COMPACT_MPI_SETUP
         // Distribution owns its edge copy; output only needs IDs, offsets and degrees.
@@ -151,6 +151,11 @@ int run_mpi_device_suite(const std::string& implementation, const std::string& b
             halo = &halo_plan;
         }
         const std::vector<Index>& source_slots = halo ? halo->edge_source_slots : local.in_sources;
+#ifdef PAGERANK_COMPACT_MPI_SETUP
+        // Halo validation and backend setup use edge_source_slots, not these edge IDs.
+        // Release the local copy before allocating the backend's edge storage.
+        if (halo) std::vector<Index>().swap(local.in_sources);
+#endif
         Backend backend(local, source_slots, halo ? local.counts[rank] + halo->local_halo_size : local.total_nodes);
         for (int run = 0; run < warmup_runs(); ++run)
             (void)pagerank_mpi_device(local, halo, backend);

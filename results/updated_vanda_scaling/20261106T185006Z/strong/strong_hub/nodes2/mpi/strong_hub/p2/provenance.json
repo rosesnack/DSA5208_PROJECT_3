@@ -1,0 +1,9 @@
+{
+  "performance_job": "1543511.stdct-mgmt-02",
+  "validation_job": "1555764.stdct-mgmt-02",
+  "group": "cpu_reuse_20261115/strong_hub/nodes2_cores1",
+  "cores": 2,
+  "nodes": 2,
+  "processes": 2,
+  "threads": 1
+}

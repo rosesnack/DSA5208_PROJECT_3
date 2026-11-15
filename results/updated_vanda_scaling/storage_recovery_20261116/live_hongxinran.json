@@ -1,0 +1,632 @@
+{
+  "observed_at": "2026-11-16T01:29:58.738984+08:00",
+  "account": "hongxinran",
+  "jobs": {
+    "1560516.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"job.ncpus\": 1.0, \"job.walltime\": 14400, \"am_cloud_enabled\": false}",
+        "mem": "6gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6gb",
+        "walltime": "04:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 72,
+        "cput": "00:19:37",
+        "mem": "5334212kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "7129640kb",
+        "walltime": "00:21:06"
+      },
+      "comment": "Job run at Mon Nov 16 at 01:05 on (CN-161[0]:ncpus=1:mem=6gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-memory-check.o1560516"
+    },
+    "1560521.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 1.0, \"job.walltime\": 13500, \"am_cloud_enabled\": false}",
+        "mem": "6gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-014",
+        "walltime": "03:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 48,
+        "cput": "00:02:23",
+        "mem": "5436584kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "7128196kb",
+        "walltime": "00:02:57"
+      },
+      "comment": "Job run at Mon Nov 16 at 01:26 on (CN-014[0]:ncpus=1:mem=6gb)",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560521"
+    },
+    "1560522.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560522"
+    },
+    "1560523.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 1.0, \"job.walltime\": 16200, \"am_cloud_enabled\": false}",
+        "mem": "6gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-096",
+        "walltime": "04:30:00"
+      },
+      "resources_used": {
+        "cpupercent": 71,
+        "cput": "00:02:18",
+        "mem": "4765584kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "7128192kb",
+        "walltime": "00:02:32"
+      },
+      "comment": "Job run at Mon Nov 16 at 01:26 on (CN-096[0]:ncpus=1:mem=6gb)",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560523"
+    },
+    "1560524.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560524"
+    },
+    "1560525.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 2.0, \"job.walltime\": 13500, \"am_cloud_enabled\": false}",
+        "mem": "12gb",
+        "mpiprocs": 2,
+        "ncpus": 2,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-132+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-136",
+        "walltime": "03:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 152,
+        "cput": "00:03:25",
+        "mem": "6457184kb",
+        "ncpus": 2,
+        "ngpus": 0,
+        "vmem": "7128216kb",
+        "walltime": "00:02:20"
+      },
+      "comment": "Job run at Mon Nov 16 at 01:26 on (CN-132[1]:ncpus=1:mem=6gb)+(CN-136[0]:ncpus=1:mem=6gb)",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560525"
+    },
+    "1560526.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560526"
+    },
+    "1560527.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 2.0, \"job.walltime\": 16200, \"am_cloud_enabled\": false}",
+        "mem": "12gb",
+        "mpiprocs": 2,
+        "ncpus": 2,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-089+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-090",
+        "walltime": "04:30:00"
+      },
+      "resources_used": {
+        "cpupercent": 154,
+        "cput": "00:02:24",
+        "mem": "5295576kb",
+        "ncpus": 2,
+        "ngpus": 0,
+        "vmem": "7128340kb",
+        "walltime": "00:01:41"
+      },
+      "comment": "Job run at Mon Nov 16 at 01:27 on (CN-089[0]:ncpus=1:mem=6gb)+(CN-090[0]:ncpus=1:mem=6gb)",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560527"
+    },
+    "1560528.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560528"
+    },
+    "1560529.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 4.0, \"job.walltime\": 13500, \"am_cloud_enabled\": false}",
+        "mem": "24gb",
+        "mpiprocs": 4,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-014+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-089+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-090+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-119",
+        "walltime": "03:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 277,
+        "cput": "00:04:57",
+        "mem": "6912664kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "7128352kb",
+        "walltime": "00:01:53"
+      },
+      "comment": "Job run at Mon Nov 16 at 01:27 on (CN-014[0]:ncpus=1:mem=6gb)+(CN-089[0]:ncpus=1:mem=6gb)+(CN-090[0]:ncpus=1:mem=6gb)+(CN-119[0]:ncpus=1:mem=6gb)",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560529"
+    },
+    "1560530.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560530"
+    },
+    "1560531.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 4.0, \"job.walltime\": 16200, \"am_cloud_enabled\": false}",
+        "mem": "24gb",
+        "mpiprocs": 4,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-014+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-089+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-090+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-119",
+        "walltime": "04:30:00"
+      },
+      "resources_used": {
+        "cpupercent": 198,
+        "cput": "00:04:51",
+        "mem": "6352112kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "7128352kb",
+        "walltime": "00:01:53"
+      },
+      "comment": "Job run at Mon Nov 16 at 01:27 on (CN-014[0]:ncpus=1:mem=6gb)+(CN-089[0]:ncpus=1:mem=6gb)+(CN-090[0]:ncpus=1:mem=6gb)+(CN-119[0]:ncpus=1:mem=6gb)",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560531"
+    },
+    "1560532.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560532"
+    },
+    "1560533.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 8.0, \"job.walltime\": 13500}",
+        "mem": "48gb",
+        "mpiprocs": 8,
+        "ncpus": 8,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-014+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-089+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-090+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-006+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-085+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-005+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-096",
+        "walltime": "03:45:00"
+      },
+      "comment": "Not Running: User has reached queue batch_cpu running job limit.",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560533"
+    },
+    "1560534.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560534"
+    },
+    "1560535.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 8.0, \"job.walltime\": 16200}",
+        "mem": "48gb",
+        "mpiprocs": 8,
+        "ncpus": 8,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-014+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-089+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-090+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-006+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-085+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-005+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-096",
+        "walltime": "04:30:00"
+      },
+      "comment": "Not Running: User has reached queue batch_cpu running job limit.",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560535"
+    },
+    "1560536.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560536"
+    },
+    "1560537.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "888gb",
+        "mpiprocs": 128,
+        "ncpus": 128,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-142+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-143+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-145+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-146+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-150+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-014+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-089",
+        "walltime": "03:45:00"
+      },
+      "comment": "Not Running: User has reached queue batch_cpu running job limit.",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560537"
+    },
+    "1560538.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560538"
+    },
+    "1560539.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "888gb",
+        "mpiprocs": 128,
+        "ncpus": 128,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-152+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-006+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-085+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-005+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-096+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-008",
+        "walltime": "04:30:00"
+      },
+      "comment": "Not Running: User has reached queue batch_cpu running job limit.",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560539"
+    },
+    "1560540.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560540"
+    }
+  },
+  "memory": {
+    "job": "1560516.stdct-mgmt-02",
+    "purpose": "validation only; never performance data",
+    "original_small_graph_ranks_and_history_identical": true,
+    "rss_scope": "GNU time runs inside the MPI rank, measures the actual solver process",
+    "timed_solver_unchanged": true,
+    "tests": [
+      {
+        "graph": "grid_controlled_n100000_d16",
+        "communication": "allgather",
+        "binary": "./build-vanda-matrix-cpu/pagerank_mpi_kokkos",
+        "max_rss_kb": 62800,
+        "summary": "results/updated_vanda_scaling/20261111_hongxinran_assist/non512_memory_preflight_20261116_final/grid_controlled_n100000_d16/allgather/original/mpi_kokkos/OpenMP/grid_controlled_n100000_d16/p1/summary.json"
+      },
+      {
+        "graph": "grid_controlled_n100000_d16",
+        "communication": "allgather",
+        "binary": "./build-vanda-memory-repair-20261116/pagerank_mpi_kokkos",
+        "max_rss_kb": 58532,
+        "summary": "results/updated_vanda_scaling/20261111_hongxinran_assist/non512_memory_preflight_20261116_final/grid_controlled_n100000_d16/allgather/compact/mpi_kokkos/OpenMP/grid_controlled_n100000_d16/p1/summary.json"
+      },
+      {
+        "graph": "grid_controlled_n100000_d16",
+        "communication": "halo",
+        "binary": "./build-vanda-matrix-cpu/pagerank_mpi_kokkos",
+        "max_rss_kb": 75652,
+        "summary": "results/updated_vanda_scaling/20261111_hongxinran_assist/non512_memory_preflight_20261116_final/grid_controlled_n100000_d16/halo/original/mpi_kokkos_halo/OpenMP/grid_controlled_n100000_d16/p1/summary.json"
+      },
+      {
+        "graph": "grid_controlled_n100000_d16",
+        "communication": "halo",
+        "binary": "./build-vanda-memory-repair-20261116/pagerank_mpi_kokkos",
+        "max_rss_kb": 58524,
+        "summary": "results/updated_vanda_scaling/20261111_hongxinran_assist/non512_memory_preflight_20261116_final/grid_controlled_n100000_d16/halo/compact/mpi_kokkos_halo/OpenMP/grid_controlled_n100000_d16/p1/summary.json"
+      },
+      {
+        "graph": "strong_controlled",
+        "communication": "allgather",
+        "binary": "./build-vanda-memory-repair-20261116/pagerank_mpi_kokkos",
+        "max_rss_kb": 5616920,
+        "summary": "results/updated_vanda_scaling/20261111_hongxinran_assist/non512_memory_preflight_20261116_final/strong_controlled/allgather/compact/mpi_kokkos/OpenMP/strong_controlled/p1/summary.json"
+      },
+      {
+        "graph": "strong_controlled",
+        "communication": "halo",
+        "binary": "./build-vanda-memory-repair-20261116/pagerank_mpi_kokkos",
+        "max_rss_kb": 5616728,
+        "summary": "results/updated_vanda_scaling/20261111_hongxinran_assist/non512_memory_preflight_20261116_final/strong_controlled/halo/compact/mpi_kokkos_halo/OpenMP/strong_controlled/p1/summary.json"
+      },
+      {
+        "graph": "strong_hub",
+        "communication": "allgather",
+        "binary": "./build-vanda-memory-repair-20261116/pagerank_mpi_kokkos",
+        "max_rss_kb": 5614972,
+        "summary": "results/updated_vanda_scaling/20261111_hongxinran_assist/non512_memory_preflight_20261116_final/strong_hub/allgather/compact/mpi_kokkos/OpenMP/strong_hub/p1/summary.json"
+      },
+      {
+        "graph": "strong_hub",
+        "communication": "halo",
+        "binary": "./build-vanda-memory-repair-20261116/pagerank_mpi_kokkos",
+        "max_rss_kb": 5616436,
+        "summary": "results/updated_vanda_scaling/20261111_hongxinran_assist/non512_memory_preflight_20261116_final/strong_hub/halo/compact/mpi_kokkos_halo/OpenMP/strong_hub/p1/summary.json"
+      }
+    ]
+  },
+  "errors": [],
+  "monitor": {
+    "pending_performance_groups": 10,
+    "deferred_held_jobs": [
+      "1510708.stdct-mgmt-02",
+      "1510713.stdct-mgmt-02",
+      "1510718.stdct-mgmt-02",
+      "1510743.stdct-mgmt-02",
+      "1510748.stdct-mgmt-02",
+      "1513353.stdct-mgmt-02",
+      "1513358.stdct-mgmt-02",
+      "1513363.stdct-mgmt-02",
+      "1513370.stdct-mgmt-02",
+      "1513375.stdct-mgmt-02",
+      "1513380.stdct-mgmt-02",
+      "1513385.stdct-mgmt-02",
+      "1513390.stdct-mgmt-02",
+      "1513395.stdct-mgmt-02",
+      "1513400.stdct-mgmt-02",
+      "1513405.stdct-mgmt-02",
+      "1513410.stdct-mgmt-02",
+      "1513415.stdct-mgmt-02",
+      "1513420.stdct-mgmt-02",
+      "1513425.stdct-mgmt-02",
+      "1513430.stdct-mgmt-02",
+      "1513435.stdct-mgmt-02",
+      "1513439.stdct-mgmt-02",
+      "1513440.stdct-mgmt-02",
+      "1513444.stdct-mgmt-02",
+      "1513445.stdct-mgmt-02",
+      "1513449.stdct-mgmt-02",
+      "1513450.stdct-mgmt-02",
+      "1513454.stdct-mgmt-02",
+      "1513455.stdct-mgmt-02",
+      "1513459.stdct-mgmt-02",
+      "1513460.stdct-mgmt-02",
+      "1513464.stdct-mgmt-02",
+      "1513465.stdct-mgmt-02",
+      "1513469.stdct-mgmt-02",
+      "1513470.stdct-mgmt-02",
+      "1513474.stdct-mgmt-02",
+      "1513475.stdct-mgmt-02",
+      "1513479.stdct-mgmt-02",
+      "1513480.stdct-mgmt-02",
+      "1513484.stdct-mgmt-02",
+      "1513485.stdct-mgmt-02",
+      "1513489.stdct-mgmt-02",
+      "1513490.stdct-mgmt-02",
+      "1513494.stdct-mgmt-02",
+      "1513495.stdct-mgmt-02",
+      "1513499.stdct-mgmt-02",
+      "1513500.stdct-mgmt-02",
+      "1513504.stdct-mgmt-02",
+      "1513505.stdct-mgmt-02",
+      "1513509.stdct-mgmt-02",
+      "1513510.stdct-mgmt-02",
+      "1513514.stdct-mgmt-02",
+      "1513515.stdct-mgmt-02",
+      "1513519.stdct-mgmt-02",
+      "1513520.stdct-mgmt-02",
+      "1513524.stdct-mgmt-02",
+      "1513525.stdct-mgmt-02",
+      "1513529.stdct-mgmt-02",
+      "1513530.stdct-mgmt-02",
+      "1513534.stdct-mgmt-02",
+      "1513535.stdct-mgmt-02",
+      "1513539.stdct-mgmt-02",
+      "1513540.stdct-mgmt-02",
+      "1513544.stdct-mgmt-02",
+      "1513545.stdct-mgmt-02",
+      "1513551.stdct-mgmt-02",
+      "1513556.stdct-mgmt-02",
+      "1513561.stdct-mgmt-02",
+      "1519863.stdct-mgmt-02"
+    ],
+    "placement_updates": 0,
+    "pending_validation_groups": 0,
+    "failed_jobs_not_retried": [],
+    "performance_states": {
+      "F": 384,
+      "R": 6,
+      "Q": 4
+    },
+    "validation_states": {
+      "F": 384,
+      "H": 10
+    },
+    "eligible_unregistered_groups": 0,
+    "eligible_unregistered_cells": 0,
+    "endpoint_proof_state": {
+      "1549865.stdct-mgmt-02": "F",
+      "1537725.stdct-mgmt-02": "F",
+      "1542730.stdct-mgmt-02": "F",
+      "1543003.stdct-mgmt-02": "F",
+      "1543299.stdct-mgmt-02": "F",
+      "1545917.stdct-mgmt-02": "F",
+      "1545991.stdct-mgmt-02": "F",
+      "1560516.stdct-mgmt-02": "F"
+    },
+    "action": "waiting_existing_jobs",
+    "observed_at": "2026-11-16T01:29:31.889686+08:00",
+    "pid": 392636,
+    "interval_seconds": 60,
+    "until": "2026-11-16T23:59:00+08:00",
+    "margin_cpu_hours": 64,
+    "state_directory": "results/updated_vanda_scaling/20261111_hongxinran_assist/monitor_assist_20261111",
+    "max_total_cores": 128
+  }
+}

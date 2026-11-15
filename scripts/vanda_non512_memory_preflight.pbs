@@ -9,8 +9,10 @@ set -euo pipefail
 cd "${PBS_O_WORKDIR:?}"
 module load openmpi/gcc/64/4.1.8 CMake/3.29.3-GCCcore-13.3.0
 export LD_LIBRARY_PATH="/opt/pbs/lib:${LD_LIBRARY_PATH:-}"
-cmake -S . -B build-vanda-memory-repair -DCMAKE_BUILD_TYPE=Release \
+memory_build="${PAGERANK_MEMORY_BUILD_DIR:-build-vanda-memory-repair}"
+kokkos_prefix="${PAGERANK_KOKKOS_INSTALL:-$PWD/kokkos-install-vanda-matrix-openmp}"
+cmake -S . -B "$memory_build" -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_CXX_COMPILER=mpicxx -DBUILD_MPI_KOKKOS=ON -DMPI_DEVICE_COMPACT_SETUP=ON \
-    -DCMAKE_PREFIX_PATH="$PWD/kokkos-install-vanda-matrix-openmp"
-cmake --build build-vanda-memory-repair --target pagerank_mpi_kokkos --parallel 1
+    -DCMAKE_PREFIX_PATH="$kokkos_prefix"
+cmake --build "$memory_build" --target pagerank_mpi_kokkos --parallel 1
 python3 scripts/check_vanda_compact_setup.py

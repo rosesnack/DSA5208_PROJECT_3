@@ -1,0 +1,19 @@
+{
+  "observed_at": "2026-11-16T00:47:51.395940+08:00",
+  "job": "1560492.stdct-mgmt-02",
+  "scope": "Free build, correctness and actual6GiB limit check only; no compression or deletion of formal results; no paid submission",
+  "queue": "cpu_serial",
+  "state": "Q",
+  "resources": {
+    "am_job_cache": "\"{}\"",
+    "mem": "6gb",
+    "mpiprocs": 1,
+    "ncpus": 1,
+    "ngpus": 0,
+    "nodect": 1,
+    "place": "free",
+    "queue_charge_rate": 0,
+    "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6gb",
+    "walltime": "04:00:00"
+  }
+}

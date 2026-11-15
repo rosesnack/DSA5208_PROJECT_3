@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 
-def prepare(inspection):
+def prepare(inspection, tag='20261115', memory_build='build-vanda-memory-repair'):
     performance, reuse = [], []
     for item in inspection['groups']:
         group = item['group']
@@ -19,16 +19,16 @@ def prepare(inspection):
                 assert summary['warmup_runs'] == 1 and summary['repeat_runs'] == 5
                 assert summary['build_type'] == 'Release'
             reuse.append({**group, 'cells': [c for c in group['cells'] if c['canonical_summary'] in saved],
-                          'extension': 'reuse_20261115', 'raw_stage': 'cpu_reuse_20261115',
+                          'extension': 'reuse_' + tag, 'raw_stage': 'cpu_reuse_' + tag,
                           'reuse_source': item['raw'], 'reuse_saved_measurements': True})
         missing = [c for c in group['cells'] if c['canonical_summary'] not in saved]
         if missing:
-            repaired = {**group, 'cells': missing, 'extension': 'repair_20261115',
-                        'raw_stage': 'cpu_recovery_20261115', 'prerequisite': '',
+            repaired = {**group, 'cells': missing, 'extension': 'repair_' + tag,
+                        'raw_stage': 'cpu_recovery_' + tag, 'prerequisite': '',
                         'walltime': ('04:30:00' if group['graph'] == 'strong_hub' else '03:45:00')
                                     if group['graph'].startswith('strong_') else '01:00:00'}
-            if group['graph'].startswith('strong_'):
-                repaired['executables'] = {'mpi_kokkos': './build-vanda-memory-repair/pagerank_mpi_kokkos'}
+            if group['graph'].startswith('strong_') and group['cores_per_node'] == 1:
+                repaired['executables'] = {'mpi_kokkos': './' + memory_build + '/pagerank_mpi_kokkos'}
                 repaired['memory_setup'] = 'Root edge copy released after distribution, outside solver timing'
             performance.append(repaired)
     original = {c['canonical_summary'] for item in inspection['groups'] for c in item['group']['cells']}

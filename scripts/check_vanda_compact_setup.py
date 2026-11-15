@@ -11,15 +11,16 @@ run = os.environ['RUN_ID']
 root = Path('results/updated_vanda_scaling') / run
 data = Path(os.environ['DATA_ROOT'])
 rank_memory_only = os.environ.get('PAGERANK_PREFLIGHT_RANK_MEMORY_ONLY') == '1'
-output = root / ('non512_rank_memory_preflight_20261115' if rank_memory_only
-                 else 'non512_memory_preflight_20261115')
+output = root / os.environ.get('PAGERANK_PREFLIGHT_STAGE',
+    'non512_rank_memory_preflight_20261115' if rank_memory_only else 'non512_memory_preflight_20261115')
 output.mkdir(exist_ok=True)
 env = os.environ.copy()
 env.update(PAGERANK_REPEATS='1', PAGERANK_WARMUPS='0', OMP_NUM_THREADS='1',
            PAGERANK_KOKKOS_THREADS='1', OMP_DYNAMIC='FALSE', LC_ALL='C',
-           OMPI_MCA_btl='self,vader,tcp', OMPI_MCA_pml='ob1')
+           OMPI_MCA_btl='self,vader,tcp', OMPI_MCA_pml='ob1',
+           PAGERANK_ENVIRONMENT='vanda-free-validation-only')
 original = './build-vanda-matrix-cpu/pagerank_mpi_kokkos'
-compact = './build-vanda-memory-repair/pagerank_mpi_kokkos'
+compact = './' + os.environ.get('PAGERANK_MEMORY_BUILD_DIR', 'build-vanda-memory-repair') + '/pagerank_mpi_kokkos'
 checks = []
 
 
@@ -31,6 +32,8 @@ def measure(graph, mode, binary, label):
                     str(data / 'manifests/strong_scaling.tsv'), graph, str(manifest)], check=True)
     settings = {**env, 'PAGERANK_RESULTS_ROOT': str(destination.resolve()),
                 'PAGERANK_DATASET_MANIFEST': str(manifest.resolve())}
+    if graph.startswith('strong_'):
+        settings.update(PAGERANK_REPEATS='5', PAGERANK_WARMUPS='1')
     memory = destination / 'time.txt'
     command = ['mpiexec', '--bind-to', 'none', '-n', '1', '/usr/bin/time', '-v',
                '-o', str(memory.resolve()), binary, '--communication=' + mode]
@@ -42,7 +45,8 @@ def measure(graph, mode, binary, label):
     folder = destination / method / 'OpenMP' / graph / 'p1'
     summary = json.loads((folder / 'summary.json').read_text())
     assert summary['converged'] and summary['processes'] == summary['actual_threads'] == 1
-    assert summary['repeat_runs'] == 1 and summary['warmup_runs'] == 0
+    assert summary['repeat_runs'] == int(settings['PAGERANK_REPEATS'])
+    assert summary['warmup_runs'] == int(settings['PAGERANK_WARMUPS'])
     checks.append({'graph': graph, 'communication': mode, 'binary': binary,
                    'max_rss_kb': maximum_kb, 'summary': str(folder / 'summary.json')})
     return folder, maximum_kb

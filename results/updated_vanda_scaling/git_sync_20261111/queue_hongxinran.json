@@ -1,1311 +1,547 @@
 {
-  "observed_at": "2026-11-15T00:04:19.648422+08:00",
+  "observed_at": "2026-11-16T01:29:58.738984+08:00",
   "account": "hongxinran",
   "source_project": "/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111",
   "run_id": "20261111_hongxinran_assist",
-  "monitor_alive": false,
+  "monitor_alive": true,
   "monitor": {
-    "action": "stopped",
-    "reason": "stop_file_or_submission_deadline",
-    "observed_at": "2026-11-14T23:59:13.431791+08:00",
-    "pid": 1780936,
+    "pending_performance_groups": 10,
+    "deferred_held_jobs": [
+      "1510708.stdct-mgmt-02",
+      "1510713.stdct-mgmt-02",
+      "1510718.stdct-mgmt-02",
+      "1510743.stdct-mgmt-02",
+      "1510748.stdct-mgmt-02",
+      "1513353.stdct-mgmt-02",
+      "1513358.stdct-mgmt-02",
+      "1513363.stdct-mgmt-02",
+      "1513370.stdct-mgmt-02",
+      "1513375.stdct-mgmt-02",
+      "1513380.stdct-mgmt-02",
+      "1513385.stdct-mgmt-02",
+      "1513390.stdct-mgmt-02",
+      "1513395.stdct-mgmt-02",
+      "1513400.stdct-mgmt-02",
+      "1513405.stdct-mgmt-02",
+      "1513410.stdct-mgmt-02",
+      "1513415.stdct-mgmt-02",
+      "1513420.stdct-mgmt-02",
+      "1513425.stdct-mgmt-02",
+      "1513430.stdct-mgmt-02",
+      "1513435.stdct-mgmt-02",
+      "1513439.stdct-mgmt-02",
+      "1513440.stdct-mgmt-02",
+      "1513444.stdct-mgmt-02",
+      "1513445.stdct-mgmt-02",
+      "1513449.stdct-mgmt-02",
+      "1513450.stdct-mgmt-02",
+      "1513454.stdct-mgmt-02",
+      "1513455.stdct-mgmt-02",
+      "1513459.stdct-mgmt-02",
+      "1513460.stdct-mgmt-02",
+      "1513464.stdct-mgmt-02",
+      "1513465.stdct-mgmt-02",
+      "1513469.stdct-mgmt-02",
+      "1513470.stdct-mgmt-02",
+      "1513474.stdct-mgmt-02",
+      "1513475.stdct-mgmt-02",
+      "1513479.stdct-mgmt-02",
+      "1513480.stdct-mgmt-02",
+      "1513484.stdct-mgmt-02",
+      "1513485.stdct-mgmt-02",
+      "1513489.stdct-mgmt-02",
+      "1513490.stdct-mgmt-02",
+      "1513494.stdct-mgmt-02",
+      "1513495.stdct-mgmt-02",
+      "1513499.stdct-mgmt-02",
+      "1513500.stdct-mgmt-02",
+      "1513504.stdct-mgmt-02",
+      "1513505.stdct-mgmt-02",
+      "1513509.stdct-mgmt-02",
+      "1513510.stdct-mgmt-02",
+      "1513514.stdct-mgmt-02",
+      "1513515.stdct-mgmt-02",
+      "1513519.stdct-mgmt-02",
+      "1513520.stdct-mgmt-02",
+      "1513524.stdct-mgmt-02",
+      "1513525.stdct-mgmt-02",
+      "1513529.stdct-mgmt-02",
+      "1513530.stdct-mgmt-02",
+      "1513534.stdct-mgmt-02",
+      "1513535.stdct-mgmt-02",
+      "1513539.stdct-mgmt-02",
+      "1513540.stdct-mgmt-02",
+      "1513544.stdct-mgmt-02",
+      "1513545.stdct-mgmt-02",
+      "1513551.stdct-mgmt-02",
+      "1513556.stdct-mgmt-02",
+      "1513561.stdct-mgmt-02",
+      "1519863.stdct-mgmt-02"
+    ],
+    "placement_updates": 0,
+    "pending_validation_groups": 0,
+    "failed_jobs_not_retried": [],
+    "performance_states": {
+      "F": 384,
+      "R": 6,
+      "Q": 4
+    },
+    "validation_states": {
+      "F": 384,
+      "H": 10
+    },
+    "eligible_unregistered_groups": 0,
+    "eligible_unregistered_cells": 0,
+    "endpoint_proof_state": {
+      "1549865.stdct-mgmt-02": "F",
+      "1537725.stdct-mgmt-02": "F",
+      "1542730.stdct-mgmt-02": "F",
+      "1543003.stdct-mgmt-02": "F",
+      "1543299.stdct-mgmt-02": "F",
+      "1545917.stdct-mgmt-02": "F",
+      "1545991.stdct-mgmt-02": "F",
+      "1560516.stdct-mgmt-02": "F"
+    },
+    "action": "waiting_existing_jobs",
+    "observed_at": "2026-11-16T01:29:31.889686+08:00",
+    "pid": 392636,
     "interval_seconds": 60,
-    "until": "2026-11-14T23:59:00+08:00",
+    "until": "2026-11-16T23:59:00+08:00",
     "margin_cpu_hours": 64,
     "state_directory": "results/updated_vanda_scaling/20261111_hongxinran_assist/monitor_assist_20261111",
     "max_total_cores": 128
   },
   "active_jobs": {
-    "1510708.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 3,
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
-    },
-    "1510713.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 3,
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
-    },
-    "1510718.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 3,
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
-    },
-    "1510743.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
-    },
-    "1510748.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
-    },
-    "1513353.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
-    },
-    "1513358.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
-    },
-    "1513363.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
-    },
-    "1513370.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
-    },
-    "1513375.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
-    },
-    "1513380.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
-    },
-    "1513385.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
-    },
-    "1513390.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
-    },
-    "1513395.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
-    },
-    "1513400.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
-    },
-    "1513405.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
-    },
-    "1513410.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
-    },
-    "1513415.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
-    },
-    "1513420.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
-    },
-    "1513425.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
-    },
-    "1513430.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
-    },
-    "1513435.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
-    },
-    "1513439.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
-      "Hold_Types": "u"
-    },
-    "1513440.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
-    },
-    "1513444.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
-      "Hold_Types": "u"
-    },
-    "1513445.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
-    },
-    "1513449.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
-      "Hold_Types": "u"
-    },
-    "1513450.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
-    },
-    "1513454.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
-      "Hold_Types": "u"
-    },
-    "1513455.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
-    },
-    "1513459.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
-      "Hold_Types": "u"
-    },
-    "1513460.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
-    },
-    "1513464.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
-      "Hold_Types": "u"
-    },
-    "1513465.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
-    },
-    "1513469.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
-      "Hold_Types": "u"
-    },
-    "1513470.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
-    },
-    "1513474.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
-      "Hold_Types": "u"
-    },
-    "1513475.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
-    },
-    "1513479.stdct-mgmt-02": {
-      "job_state": "H",
+    "1560521.stdct-mgmt-02": {
+      "job_state": "R",
       "queue": "batch_cpu",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 1.0, \"job.walltime\": 13500, \"am_cloud_enabled\": false}",
+        "mem": "6gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
         "ngpus": 0,
-        "nodect": 8,
+        "nodect": 1,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-014",
+        "walltime": "03:45:00"
       },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
-      "Hold_Types": "u"
-    },
-    "1513480.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
+      "resources_used": {
+        "cpupercent": 48,
+        "cput": "00:02:23",
+        "mem": "5436584kb",
+        "ncpus": 1,
         "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
+        "vmem": "7128196kb",
+        "walltime": "00:02:57"
       },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
+      "comment": "Job run at Mon Nov 16 at 01:26 on (CN-014[0]:ncpus=1:mem=6gb)",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560521"
     },
-    "1513484.stdct-mgmt-02": {
+    "1560522.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "batch_cpu",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
         "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
       },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560522"
     },
-    "1513485.stdct-mgmt-02": {
-      "job_state": "H",
+    "1560523.stdct-mgmt-02": {
+      "job_state": "R",
       "queue": "batch_cpu",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 1.0, \"job.walltime\": 16200, \"am_cloud_enabled\": false}",
+        "mem": "6gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
         "ngpus": 0,
-        "nodect": 8,
+        "nodect": 1,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-096",
+        "walltime": "04:30:00"
       },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
-    },
-    "1513489.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
+      "resources_used": {
+        "cpupercent": 71,
+        "cput": "00:02:18",
+        "mem": "4765584kb",
+        "ncpus": 1,
         "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
+        "vmem": "7128192kb",
+        "walltime": "00:02:32"
       },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
-      "Hold_Types": "u"
+      "comment": "Job run at Mon Nov 16 at 01:26 on (CN-096[0]:ncpus=1:mem=6gb)",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560523"
     },
-    "1513490.stdct-mgmt-02": {
+    "1560524.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "batch_cpu",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
         "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
       },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560524"
     },
-    "1513494.stdct-mgmt-02": {
-      "job_state": "H",
+    "1560525.stdct-mgmt-02": {
+      "job_state": "R",
       "queue": "batch_cpu",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 2.0, \"job.walltime\": 13500, \"am_cloud_enabled\": false}",
+        "mem": "12gb",
+        "mpiprocs": 2,
+        "ncpus": 2,
         "ngpus": 0,
-        "nodect": 8,
+        "nodect": 2,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-132+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-136",
+        "walltime": "03:45:00"
       },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
-      "Hold_Types": "u"
-    },
-    "1513495.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
+      "resources_used": {
+        "cpupercent": 152,
+        "cput": "00:03:25",
+        "mem": "6457184kb",
+        "ncpus": 2,
         "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
+        "vmem": "7128216kb",
+        "walltime": "00:02:20"
       },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
+      "comment": "Job run at Mon Nov 16 at 01:26 on (CN-132[1]:ncpus=1:mem=6gb)+(CN-136[0]:ncpus=1:mem=6gb)",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560525"
     },
-    "1513499.stdct-mgmt-02": {
+    "1560526.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "batch_cpu",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
         "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
       },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560526"
     },
-    "1513500.stdct-mgmt-02": {
-      "job_state": "H",
+    "1560527.stdct-mgmt-02": {
+      "job_state": "R",
       "queue": "batch_cpu",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 2.0, \"job.walltime\": 16200, \"am_cloud_enabled\": false}",
+        "mem": "12gb",
+        "mpiprocs": 2,
+        "ncpus": 2,
         "ngpus": 0,
-        "nodect": 8,
+        "nodect": 2,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-089+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-090",
+        "walltime": "04:30:00"
       },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
-    },
-    "1513504.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
+      "resources_used": {
+        "cpupercent": 154,
+        "cput": "00:02:24",
+        "mem": "5295576kb",
+        "ncpus": 2,
         "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
+        "vmem": "7128340kb",
+        "walltime": "00:01:41"
       },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
-      "Hold_Types": "u"
+      "comment": "Job run at Mon Nov 16 at 01:27 on (CN-089[0]:ncpus=1:mem=6gb)+(CN-090[0]:ncpus=1:mem=6gb)",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560527"
     },
-    "1513505.stdct-mgmt-02": {
+    "1560528.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "batch_cpu",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
         "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
       },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560528"
     },
-    "1513509.stdct-mgmt-02": {
-      "job_state": "H",
+    "1560529.stdct-mgmt-02": {
+      "job_state": "R",
       "queue": "batch_cpu",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 4.0, \"job.walltime\": 13500, \"am_cloud_enabled\": false}",
+        "mem": "24gb",
+        "mpiprocs": 4,
+        "ncpus": 4,
         "ngpus": 0,
-        "nodect": 8,
+        "nodect": 4,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-014+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-089+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-090+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-119",
+        "walltime": "03:45:00"
       },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
-      "Hold_Types": "u"
-    },
-    "1513510.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
+      "resources_used": {
+        "cpupercent": 277,
+        "cput": "00:04:57",
+        "mem": "6912664kb",
+        "ncpus": 4,
         "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
+        "vmem": "7128352kb",
+        "walltime": "00:01:53"
       },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "comment": "Job run at Mon Nov 16 at 01:27 on (CN-014[0]:ncpus=1:mem=6gb)+(CN-089[0]:ncpus=1:mem=6gb)+(CN-090[0]:ncpus=1:mem=6gb)+(CN-119[0]:ncpus=1:mem=6gb)",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560529"
     },
-    "1513514.stdct-mgmt-02": {
+    "1560530.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "batch_cpu",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
         "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
       },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560530"
     },
-    "1513515.stdct-mgmt-02": {
-      "job_state": "H",
+    "1560531.stdct-mgmt-02": {
+      "job_state": "R",
       "queue": "batch_cpu",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 4.0, \"job.walltime\": 16200, \"am_cloud_enabled\": false}",
+        "mem": "24gb",
+        "mpiprocs": 4,
+        "ncpus": 4,
         "ngpus": 0,
-        "nodect": 8,
+        "nodect": 4,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-014+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-089+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-090+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-119",
+        "walltime": "04:30:00"
       },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
-    },
-    "1513519.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
+      "resources_used": {
+        "cpupercent": 198,
+        "cput": "00:04:51",
+        "mem": "6352112kb",
+        "ncpus": 4,
         "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
+        "vmem": "7128352kb",
+        "walltime": "00:01:53"
       },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
-      "Hold_Types": "u"
+      "comment": "Job run at Mon Nov 16 at 01:27 on (CN-014[0]:ncpus=1:mem=6gb)+(CN-089[0]:ncpus=1:mem=6gb)+(CN-090[0]:ncpus=1:mem=6gb)+(CN-119[0]:ncpus=1:mem=6gb)",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560531"
     },
-    "1513520.stdct-mgmt-02": {
+    "1560532.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "batch_cpu",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
         "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
       },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560532"
     },
-    "1513524.stdct-mgmt-02": {
-      "job_state": "H",
+    "1560533.stdct-mgmt-02": {
+      "job_state": "Q",
       "queue": "batch_cpu",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 8.0, \"job.walltime\": 13500}",
+        "mem": "48gb",
+        "mpiprocs": 8,
+        "ncpus": 8,
         "ngpus": 0,
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-014+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-089+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-090+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-006+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-085+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-005+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-096",
+        "walltime": "03:45:00"
       },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
-      "Hold_Types": "u"
+      "comment": "Not Running: User has reached queue batch_cpu running job limit.",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560533"
     },
-    "1513525.stdct-mgmt-02": {
+    "1560534.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "batch_cpu",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
         "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
       },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560534"
     },
-    "1513529.stdct-mgmt-02": {
-      "job_state": "H",
+    "1560535.stdct-mgmt-02": {
+      "job_state": "Q",
       "queue": "batch_cpu",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 8.0, \"job.walltime\": 16200}",
+        "mem": "48gb",
+        "mpiprocs": 8,
+        "ncpus": 8,
         "ngpus": 0,
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-014+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-089+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-090+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-006+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-085+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-005+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-096",
+        "walltime": "04:30:00"
       },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
-      "Hold_Types": "u"
+      "comment": "Not Running: User has reached queue batch_cpu running job limit.",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560535"
     },
-    "1513530.stdct-mgmt-02": {
+    "1560536.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "batch_cpu",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
-    },
-    "1513534.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 256.0, \"job.ngpus\": 0}",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 21:18:42 2026 ",
-      "Hold_Types": "u"
-    },
-    "1513535.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 512.0, \"job.ngpus\": 0}",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
-    },
-    "1513539.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 256.0, \"job.ngpus\": 0}",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 21:31:25 2026 ",
-      "Hold_Types": "u"
-    },
-    "1513540.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 512.0, \"job.ngpus\": 0}",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
-    },
-    "1513544.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 256.0, \"job.ngpus\": 0}",
-        "am_run_count": 2,
-        "mem": "1776gb",
-        "mpiprocs": 256,
-        "ncpus": 256,
-        "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB",
-        "walltime": "01:00:00"
-      },
-      "comment": "Job held by 'am_hook' hook on Tue Nov  3 21:27:05 2026 ",
-      "Hold_Types": "u"
-    },
-    "1513545.stdct-mgmt-02": {
-      "job_state": "H",
-      "queue": "batch_cpu",
-      "Resource_List": {
-        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 512.0, \"job.ngpus\": 0}",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
         "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "01:00:00"
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
       },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560536"
     },
-    "1513551.stdct-mgmt-02": {
-      "job_state": "H",
+    "1560537.stdct-mgmt-02": {
+      "job_state": "Q",
       "queue": "batch_cpu",
+      "Hold_Types": "n",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
+        "mem": "888gb",
+        "mpiprocs": 128,
+        "ncpus": 128,
         "ngpus": 0,
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "02:00:00"
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-142+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-143+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-145+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-146+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-150+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-014+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-089",
+        "walltime": "03:45:00"
       },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "comment": "Not Running: User has reached queue batch_cpu running job limit.",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560537"
     },
-    "1513556.stdct-mgmt-02": {
+    "1560538.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "batch_cpu",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
         "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "02:00:00"
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
       },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560538"
     },
-    "1513561.stdct-mgmt-02": {
-      "job_state": "H",
+    "1560539.stdct-mgmt-02": {
+      "job_state": "Q",
       "queue": "batch_cpu",
+      "Hold_Types": "n",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
+        "mem": "888gb",
+        "mpiprocs": 128,
+        "ncpus": 128,
         "ngpus": 0,
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "02:00:00"
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-152+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-006+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-085+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-005+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-096+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-008",
+        "walltime": "04:30:00"
       },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "comment": "Not Running: User has reached queue batch_cpu running job limit.",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560539"
     },
-    "1519863.stdct-mgmt-02": {
+    "1560540.stdct-mgmt-02": {
       "job_state": "H",
-      "queue": "batch_cpu",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
-        "mem": "3552gb",
-        "mpiprocs": 512,
-        "ncpus": 512,
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
         "ngpus": 0,
-        "nodect": 8,
-        "place": "scatter",
-        "queue_charge_rate": 1,
-        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB",
-        "walltime": "02:00:00"
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
       },
-      "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560540"
     }
   },
   "known_jobs": {
     "1510708.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 3,
@@ -1320,11 +556,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1510708"
     },
     "1510713.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 3,
@@ -1339,11 +576,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1510713"
     },
     "1510718.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 3,
@@ -1358,11 +596,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1510718"
     },
     "1510743.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1376,11 +615,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1510743"
     },
     "1510748.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1394,11 +634,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1510748"
     },
     "1513353.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1412,11 +653,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513353"
     },
     "1513358.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1430,11 +672,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513358"
     },
     "1513363.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1448,11 +691,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513363"
     },
     "1513370.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1466,11 +710,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513370"
     },
     "1513375.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1484,11 +729,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513375"
     },
     "1513380.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1502,11 +748,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513380"
     },
     "1513385.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1520,11 +767,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513385"
     },
     "1513390.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1538,11 +786,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:52 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513390"
     },
     "1513395.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1556,11 +805,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513395"
     },
     "1513400.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1574,11 +824,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513400"
     },
     "1513405.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1592,11 +843,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513405"
     },
     "1513410.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1610,11 +862,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513410"
     },
     "1513415.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1628,11 +881,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513415"
     },
     "1513420.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1646,11 +900,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513420"
     },
     "1513425.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1664,11 +919,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513425"
     },
     "1513430.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1682,11 +938,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513430"
     },
     "1513435.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1700,11 +957,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513435"
     },
     "1513439.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -1719,11 +977,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513439"
     },
     "1513440.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1737,11 +996,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513440"
     },
     "1513444.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -1756,11 +1016,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513444"
     },
     "1513445.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1774,11 +1035,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:53 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513445"
     },
     "1513449.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -1793,11 +1055,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513449"
     },
     "1513450.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1811,11 +1074,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513450"
     },
     "1513454.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -1830,11 +1094,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513454"
     },
     "1513455.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1848,11 +1113,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513455"
     },
     "1513459.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -1867,11 +1133,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513459"
     },
     "1513460.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1885,11 +1152,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513460"
     },
     "1513464.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -1904,11 +1172,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513464"
     },
     "1513465.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1922,11 +1191,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513465"
     },
     "1513469.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -1941,11 +1211,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513469"
     },
     "1513470.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1959,11 +1230,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513470"
     },
     "1513474.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -1978,11 +1250,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513474"
     },
     "1513475.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -1996,11 +1269,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513475"
     },
     "1513479.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2015,11 +1289,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:17 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513479"
     },
     "1513480.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2033,11 +1308,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513480"
     },
     "1513484.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2052,11 +1328,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513484"
     },
     "1513485.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2070,11 +1347,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513485"
     },
     "1513489.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2089,11 +1367,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513489"
     },
     "1513490.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2107,11 +1386,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513490"
     },
     "1513494.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2126,11 +1406,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513494"
     },
     "1513495.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2144,11 +1425,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513495"
     },
     "1513499.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2163,11 +1445,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513499"
     },
     "1513500.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2181,11 +1464,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:54 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513500"
     },
     "1513504.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2200,11 +1484,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:18 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513504"
     },
     "1513505.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2218,11 +1503,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513505"
     },
     "1513509.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2237,11 +1523,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513509"
     },
     "1513510.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2255,11 +1542,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513510"
     },
     "1513514.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2274,11 +1562,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513514"
     },
     "1513515.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2292,11 +1581,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513515"
     },
     "1513519.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2311,11 +1601,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513519"
     },
     "1513520.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2329,11 +1620,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513520"
     },
     "1513524.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2348,11 +1640,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513524"
     },
     "1513525.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2366,11 +1659,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513525"
     },
     "1513529.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "am_run_count": 2,
@@ -2385,11 +1679,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 20:48:24 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513529"
     },
     "1513530.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2403,11 +1698,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513530"
     },
     "1513534.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 256.0, \"job.ngpus\": 0}",
         "am_run_count": 2,
@@ -2422,11 +1718,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 21:18:42 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513534"
     },
     "1513535.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 512.0, \"job.ngpus\": 0}",
         "mem": "3552gb",
@@ -2440,11 +1737,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513535"
     },
     "1513539.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 256.0, \"job.ngpus\": 0}",
         "am_run_count": 2,
@@ -2459,11 +1757,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 21:31:25 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513539"
     },
     "1513540.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 512.0, \"job.ngpus\": 0}",
         "mem": "3552gb",
@@ -2477,11 +1776,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513540"
     },
     "1513544.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 256.0, \"job.ngpus\": 0}",
         "am_run_count": 2,
@@ -2496,11 +1796,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by 'am_hook' hook on Tue Nov  3 21:27:05 2026 ",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-scaling.o1513544"
     },
     "1513545.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"job.ncpus\": 512.0, \"job.ngpus\": 0}",
         "mem": "3552gb",
@@ -2514,11 +1815,12 @@
         "walltime": "01:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-mpi-512.o1513545"
     },
     "1513551.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2532,11 +1834,12 @@
         "walltime": "02:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-kokkos-512.o1513551"
     },
     "1513556.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2550,11 +1853,12 @@
         "walltime": "02:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-kokkos-512.o1513556"
     },
     "1513561.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2568,11 +1872,12 @@
         "walltime": "02:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-kokkos-512.o1513561"
     },
     "1519863.stdct-mgmt-02": {
       "job_state": "H",
       "queue": "batch_cpu",
+      "Hold_Types": "u",
       "Resource_List": {
         "am_job_cache": "\"{}\"",
         "mem": "3552gb",
@@ -2586,7 +1891,7 @@
         "walltime": "02:00:00"
       },
       "comment": "Job held by hongxinran on Thu Nov  5 01:42:55 2026",
-      "Hold_Types": "u"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3/dsa5208-kokkos-512.o1519863"
     },
     "1537725.stdct-mgmt-02": {
       "job_state": "F",
@@ -17808,11 +17113,12 @@
       }
     },
     "1549883.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.ncpus\": 128.0, \"job.ngpus\": 0, \"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"am_cloud_enabled\": false}",
         "mem": "888gb",
         "mpiprocs": 128,
         "ncpus": 128,
@@ -17820,18 +17126,28 @@
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-011+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-105+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-116",
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-014+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-143+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-116+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-152+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-099",
         "walltime": "01:00:00"
       },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-097 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1549885.stdct-mgmt-02@stdct-mgmt-02"
+      "resources_used": {
+        "cpupercent": 2319,
+        "cput": "00:57:56",
+        "mem": "902520kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "2998452kb",
+        "walltime": "00:01:46"
+      },
+      "comment": "Job run at Sat Nov 14 at 14:13 on (CN-014[1]:ncpus=16:mem=111gb)+(CN-104[1]:ncpus=16:mem=111gb)+(CN-122[1]:ncpus=16:mem=111gb)+(CN-143[1]:ncpus=16:mem=111gb)+(CN-116[0]:ncpus=16:mem=111gb)+(CN-086[0]:ncpus=16:mem=111gb)+(CN-152[0]:mem=59857mb:ncpus=8+C... and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1549883"
     },
     "1549885.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.ncpus\": 1.0, \"job.ngpus\": 0, \"job.queue_charge_rate\": 0, \"job.walltime\": 86400, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -17842,14 +17158,25 @@
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
       },
-      "depend": "afterok:1549883.stdct-mgmt-02@stdct-mgmt-02"
+      "resources_used": {
+        "cpupercent": 78,
+        "cput": "00:02:39",
+        "mem": "211564kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "238620kb",
+        "walltime": "00:02:45"
+      },
+      "comment": "Job run at Sat Nov 14 at 14:15 on (CN-161[0]:ncpus=1:mem=20gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1549885"
     },
     "1549888.stdct-mgmt-02": {
-      "job_state": "Q",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.ncpus\": 128.0, \"job.ngpus\": 0, \"job.queue_charge_rate\": 1.0, \"job.walltime\": 3600, \"am_cloud_enabled\": false}",
         "mem": "888gb",
         "mpiprocs": 128,
         "ncpus": 128,
@@ -17857,18 +17184,28 @@
         "nodect": 8,
         "place": "scatter",
         "queue_charge_rate": 1,
-        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-097+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-121+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-007+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-011",
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-014+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-104+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-122+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-143+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-146+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-116+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-086+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-099",
         "walltime": "01:00:00"
       },
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: host (cn-122 != cn-001,cn-002,cn-003,cn-015,cn-150,cn-155,cn-156,cn-157,cn-161,cn-162,gn-a40-001,gn-a40-002,gn-a40-003,gn-a40-004,gn-a40-005,gn-a40-043,gn-a40-028,gn-a40-091,gn-a40-093,gn-a40-092,in-001,in-002,in-003,in-004,in-005,in-006,in-007,in-008,in-009,in-010,in-011,in-012,in-013,in-014,in-015,in-016,in-017,in-018,in-019,in-020,gn-a40-084,gn-a40-082,gn-a40-090,gn-a40-086,gn-a40-087,gn-a40-083,gn-a40-079,gn-a40-085,gn-a40-080,gn-a40-088,gn-a40-089,gn-a40-081,cn-068,cn-060,cn-064,cn-065,cn-061,cn-047,cn-062,cn-067,cn-070,cn-073,gn-a40-095,gn-a40-101,gn-a40-099,gn-a40-096,gn-a40-102,gn-a40-097,gn-a40-098,gn-a40-094,cn-054,cn-057,cn-048,cn-051,cn-059,cn-158,cn-159,cn-160,gn-a40-006,cn-066,cn-063,cn-046,gn-a40-078,cn-053,gn-a40-066,gn-a40-036,cn-069,rn-001,rn-002,cn-031,cn-032,cn-033,rn-003,cn-058,cn-056,cn-163,gn-a40-100,cn-055,cn-044,cn-040,cn-041,cn-036,cn-039,cn-045,cn-037,cn-043,cn-038,cn-042,cn-035)",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1549889.stdct-mgmt-02@stdct-mgmt-02"
+      "resources_used": {
+        "cpupercent": 2035,
+        "cput": "01:00:40",
+        "mem": "926816kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "4302132kb",
+        "walltime": "00:01:53"
+      },
+      "comment": "Job run at Sat Nov 14 at 14:16 on (CN-014[0]:mem=29137mb:ncpus=4+CN-014[1]:mem=84527mb:ncpus=12)+(CN-104[1]:ncpus=16:mem=111gb)+(CN-122[1]:ncpus=16:mem=111gb)+(CN-143[1]:ncpus=16:mem=111gb)+(CN-146[1]:ncpus=16:mem=111gb)+(CN-116[0]:ncpus=16:mem=111gb)+... and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1549888"
     },
     "1549889.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.ncpus\": 1.0, \"job.ngpus\": 0, \"job.queue_charge_rate\": 0, \"job.walltime\": 86400, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -17879,7 +17216,17 @@
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
       },
-      "depend": "afterok:1549888.stdct-mgmt-02@stdct-mgmt-02"
+      "resources_used": {
+        "cpupercent": 90,
+        "cput": "00:03:36",
+        "mem": "216700kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "242860kb",
+        "walltime": "00:03:41"
+      },
+      "comment": "Job run at Sat Nov 14 at 14:18 on (CN-161[1]:ncpus=1:mem=20gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1549889"
     },
     "1549892.stdct-mgmt-02": {
       "job_state": "F",
@@ -17908,7 +17255,7 @@
         "walltime": "00:00:28"
       },
       "comment": "Job run at Fri Nov 13 at 01:42 on (CN-145[0]:ncpus=4:mem=27gb)+(CN-097[1]:ncpus=4:mem=27gb)+(CN-086[0]:ncpus=4:mem=27gb)+(CN-007[0]:ncpus=4:mem=27gb)+(CN-011[1]:ncpus=4:mem=27gb)+(CN-104[1]:ncpus=4:mem=27gb)+(CN-105[0]:ncpus=4:mem=27gb)+(CN-116[0]:ncpu... and finished",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1549893.stdct-mgmt-02@stdct-mgmt-02"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1549892"
     },
     "1549893.stdct-mgmt-02": {
       "job_state": "F",
@@ -17936,7 +17283,8 @@
         "vmem": "240832kb",
         "walltime": "00:01:06"
       },
-      "comment": "Job run at Fri Nov 13 at 01:43 on (CN-161[0]:ncpus=1:mem=20gb) and finished"
+      "comment": "Job run at Fri Nov 13 at 01:43 on (CN-161[0]:ncpus=1:mem=20gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1549893"
     },
     "1549896.stdct-mgmt-02": {
       "job_state": "F",
@@ -17965,7 +17313,7 @@
         "walltime": "00:00:19"
       },
       "comment": "Job run at Fri Nov 13 at 01:43 on (CN-145[0]:ncpus=4:mem=27gb)+(CN-097[1]:ncpus=4:mem=27gb)+(CN-086[0]:ncpus=4:mem=27gb)+(CN-007[0]:ncpus=4:mem=27gb)+(CN-011[1]:ncpus=4:mem=27gb)+(CN-104[1]:ncpus=4:mem=27gb)+(CN-105[0]:ncpus=4:mem=27gb)+(CN-116[0]:ncpu... and finished",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1549897.stdct-mgmt-02@stdct-mgmt-02"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1549896"
     },
     "1549897.stdct-mgmt-02": {
       "job_state": "F",
@@ -17993,7 +17341,8 @@
         "vmem": "67620kb",
         "walltime": "00:00:14"
       },
-      "comment": "Job run at Fri Nov 13 at 01:43 on (CN-161[0]:ncpus=1:mem=20gb) and finished"
+      "comment": "Job run at Fri Nov 13 at 01:43 on (CN-161[0]:ncpus=1:mem=20gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1549897"
     },
     "1549898.stdct-mgmt-02": {
       "job_state": "F",
@@ -18022,7 +17371,7 @@
         "walltime": "00:00:18"
       },
       "comment": "Job run at Fri Nov 13 at 01:43 on (CN-145[0]:ncpus=4:mem=27gb)+(CN-097[1]:ncpus=4:mem=27gb)+(CN-086[0]:ncpus=4:mem=27gb)+(CN-007[0]:ncpus=4:mem=27gb)+(CN-011[1]:ncpus=4:mem=27gb)+(CN-104[1]:ncpus=4:mem=27gb)+(CN-105[0]:ncpus=4:mem=27gb)+(CN-116[0]:ncpu... and finished",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1549899.stdct-mgmt-02@stdct-mgmt-02"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1549898"
     },
     "1549899.stdct-mgmt-02": {
       "job_state": "F",
@@ -18050,7 +17399,8 @@
         "vmem": "60584kb",
         "walltime": "00:00:07"
       },
-      "comment": "Job run at Fri Nov 13 at 01:44 on (CN-161[0]:ncpus=1:mem=20gb) and finished"
+      "comment": "Job run at Fri Nov 13 at 01:44 on (CN-161[0]:ncpus=1:mem=20gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1549899"
     },
     "1549900.stdct-mgmt-02": {
       "job_state": "F",
@@ -18079,7 +17429,7 @@
         "walltime": "00:00:19"
       },
       "comment": "Job run at Fri Nov 13 at 01:44 on (CN-145[0]:ncpus=4:mem=27gb)+(CN-097[1]:ncpus=4:mem=27gb)+(CN-086[0]:ncpus=4:mem=27gb)+(CN-007[0]:ncpus=4:mem=27gb)+(CN-011[1]:ncpus=4:mem=27gb)+(CN-104[1]:ncpus=4:mem=27gb)+(CN-105[0]:ncpus=4:mem=27gb)+(CN-116[0]:ncpu... and finished",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1549901.stdct-mgmt-02@stdct-mgmt-02"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1549900"
     },
     "1549901.stdct-mgmt-02": {
       "job_state": "F",
@@ -18107,7 +17457,8 @@
         "vmem": "66792kb",
         "walltime": "00:00:08"
       },
-      "comment": "Job run at Fri Nov 13 at 01:44 on (CN-161[0]:ncpus=1:mem=20gb) and finished"
+      "comment": "Job run at Fri Nov 13 at 01:44 on (CN-161[0]:ncpus=1:mem=20gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1549901"
     },
     "1550242.stdct-mgmt-02": {
       "job_state": "F",
@@ -18136,7 +17487,7 @@
         "walltime": "00:00:22"
       },
       "comment": "Job run at Fri Nov 13 at 01:44 on (CN-145[0]:ncpus=4:mem=27gb)+(CN-097[1]:ncpus=4:mem=27gb)+(CN-086[0]:ncpus=4:mem=27gb)+(CN-007[0]:ncpus=4:mem=27gb)+(CN-011[1]:ncpus=4:mem=27gb)+(CN-104[1]:ncpus=4:mem=27gb)+(CN-105[0]:ncpus=4:mem=27gb)+(CN-116[0]:ncpu... and finished",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550243.stdct-mgmt-02@stdct-mgmt-02"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1550242"
     },
     "1550243.stdct-mgmt-02": {
       "job_state": "F",
@@ -18164,7 +17515,8 @@
         "vmem": "69348kb",
         "walltime": "00:00:16"
       },
-      "comment": "Job run at Fri Nov 13 at 01:45 on (CN-161[0]:ncpus=1:mem=20gb) and finished"
+      "comment": "Job run at Fri Nov 13 at 01:45 on (CN-161[0]:ncpus=1:mem=20gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1550243"
     },
     "1550244.stdct-mgmt-02": {
       "job_state": "F",
@@ -18193,7 +17545,7 @@
         "walltime": "00:00:29"
       },
       "comment": "Job run at Fri Nov 13 at 15:07 on (CN-100[0]:mem=29095mb:ncpus=4+CN-100[1]:mem=27225mb:ncpus=4)+(CN-105[0]:mem=29137mb:ncpus=4+CN-105[1]:mem=27183mb:ncpus=4)+(CN-120[0]:mem=29095mb:ncpus=4+CN-120[1]:mem=27225mb:ncpus=4)+(CN-121[0]:mem=29095mb:ncpus=4+C... and finished",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550245.stdct-mgmt-02@stdct-mgmt-02"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1550244"
     },
     "1550245.stdct-mgmt-02": {
       "job_state": "F",
@@ -18221,7 +17573,8 @@
         "vmem": "66788kb",
         "walltime": "00:00:17"
       },
-      "comment": "Job run at Fri Nov 13 at 15:09 on (CN-161[0]:ncpus=1:mem=20gb) and finished"
+      "comment": "Job run at Fri Nov 13 at 15:09 on (CN-161[0]:ncpus=1:mem=20gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1550245"
     },
     "1550246.stdct-mgmt-02": {
       "job_state": "F",
@@ -18250,7 +17603,7 @@
         "walltime": "00:00:30"
       },
       "comment": "Job run at Fri Nov 13 at 15:25 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-152[1]:ncpus=8:mem=55gb)+(CN-007[1]:ncpus=8:mem=55gb)+(CN-009[1]:ncpus=8:mem=55gb)+(CN-011[0]:mem=29137mb:ncpus=4+CN-011[1]:mem=27183mb:ncpus=4)+(CN-012[0]:... and finished",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550247.stdct-mgmt-02@stdct-mgmt-02"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1550246"
     },
     "1550247.stdct-mgmt-02": {
       "job_state": "F",
@@ -18278,7 +17631,8 @@
         "vmem": "56208kb",
         "walltime": "00:00:11"
       },
-      "comment": "Job run at Fri Nov 13 at 15:26 on (IN-002[1]:ncpus=1:mem=20gb) and finished"
+      "comment": "Job run at Fri Nov 13 at 15:26 on (IN-002[1]:ncpus=1:mem=20gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1550247"
     },
     "1550248.stdct-mgmt-02": {
       "job_state": "F",
@@ -18307,7 +17661,7 @@
         "walltime": "00:00:34"
       },
       "comment": "Job run at Fri Nov 13 at 15:25 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-152[1]:ncpus=8:mem=55gb)+(CN-091[0]:mem=29095mb:ncpus=4+CN-091[1]:mem=27225mb:ncpus=4)+(CN-105[0]:mem=29137mb:ncpus=4+CN-105[1]:mem=27183mb:ncpus=4)+(CN-120... and finished",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550249.stdct-mgmt-02@stdct-mgmt-02"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1550248"
     },
     "1550249.stdct-mgmt-02": {
       "job_state": "F",
@@ -18335,7 +17689,8 @@
         "vmem": "92484kb",
         "walltime": "00:00:30"
       },
-      "comment": "Job run at Fri Nov 13 at 15:26 on (IN-002[1]:ncpus=1:mem=20gb) and finished"
+      "comment": "Job run at Fri Nov 13 at 15:26 on (IN-002[1]:ncpus=1:mem=20gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1550249"
     },
     "1550250.stdct-mgmt-02": {
       "job_state": "F",
@@ -18364,7 +17719,7 @@
         "walltime": "00:00:29"
       },
       "comment": "Job run at Fri Nov 13 at 15:25 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-135[0]:mem=29137mb:ncpus=4+CN-135[1]:mem=27183mb:ncpus=4)+(CN-142[0]:mem=29095mb:ncpus=4+CN-142[1]:mem=27225mb:ncpus=4)+(CN-145[0]:mem=29137mb:ncpus=4+CN-14... and finished",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550251.stdct-mgmt-02@stdct-mgmt-02"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1550250"
     },
     "1550251.stdct-mgmt-02": {
       "job_state": "F",
@@ -18392,7 +17747,8 @@
         "vmem": "68360kb",
         "walltime": "00:00:14"
       },
-      "comment": "Job run at Fri Nov 13 at 15:26 on (IN-002[1]:ncpus=1:mem=20gb) and finished"
+      "comment": "Job run at Fri Nov 13 at 15:26 on (IN-002[1]:ncpus=1:mem=20gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1550251"
     },
     "1550363.stdct-mgmt-02": {
       "job_state": "F",
@@ -18421,7 +17777,7 @@
         "walltime": "00:00:30"
       },
       "comment": "Job run at Fri Nov 13 at 15:28 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-152[1]:ncpus=8:mem=55gb)+(CN-007[1]:ncpus=8:mem=55gb)+(CN-009[1]:ncpus=8:mem=55gb)+(CN-011[0]:mem=29137mb:ncpus=4+CN-011[1]:mem=27183mb:ncpus=4)+(CN-012[0]:... and finished",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550364.stdct-mgmt-02@stdct-mgmt-02"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1550363"
     },
     "1550364.stdct-mgmt-02": {
       "job_state": "F",
@@ -18449,7 +17805,8 @@
         "vmem": "91444kb",
         "walltime": "00:00:19"
       },
-      "comment": "Job run at Fri Nov 13 at 15:28 on (IN-002[1]:ncpus=1:mem=20gb) and finished"
+      "comment": "Job run at Fri Nov 13 at 15:28 on (IN-002[1]:ncpus=1:mem=20gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1550364"
     },
     "1550367.stdct-mgmt-02": {
       "job_state": "F",
@@ -18478,7 +17835,7 @@
         "walltime": "00:00:36"
       },
       "comment": "Job run at Fri Nov 13 at 15:28 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-152[1]:ncpus=8:mem=55gb)+(CN-091[0]:mem=29095mb:ncpus=4+CN-091[1]:mem=27225mb:ncpus=4)+(CN-105[0]:mem=29137mb:ncpus=4+CN-105[1]:mem=27183mb:ncpus=4)+(CN-120... and finished",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550368.stdct-mgmt-02@stdct-mgmt-02"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1550367"
     },
     "1550368.stdct-mgmt-02": {
       "job_state": "F",
@@ -18506,7 +17863,8 @@
         "vmem": "136244kb",
         "walltime": "00:01:00"
       },
-      "comment": "Job run at Fri Nov 13 at 15:28 on (IN-002[1]:ncpus=1:mem=20gb) and finished"
+      "comment": "Job run at Fri Nov 13 at 15:28 on (IN-002[1]:ncpus=1:mem=20gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1550368"
     },
     "1550371.stdct-mgmt-02": {
       "job_state": "F",
@@ -18535,7 +17893,7 @@
         "walltime": "00:00:33"
       },
       "comment": "Job run at Fri Nov 13 at 15:28 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-135[0]:mem=29137mb:ncpus=4+CN-135[1]:mem=27183mb:ncpus=4)+(CN-142[0]:mem=29095mb:ncpus=4+CN-142[1]:mem=27225mb:ncpus=4)+(CN-145[0]:mem=29137mb:ncpus=4+CN-14... and finished",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550372.stdct-mgmt-02@stdct-mgmt-02"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1550371"
     },
     "1550372.stdct-mgmt-02": {
       "job_state": "F",
@@ -18563,7 +17921,8 @@
         "vmem": "138344kb",
         "walltime": "00:00:27"
       },
-      "comment": "Job run at Fri Nov 13 at 15:29 on (IN-002[1]:ncpus=1:mem=20gb) and finished"
+      "comment": "Job run at Fri Nov 13 at 15:29 on (IN-002[1]:ncpus=1:mem=20gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1550372"
     },
     "1550375.stdct-mgmt-02": {
       "job_state": "F",
@@ -18592,7 +17951,7 @@
         "walltime": "00:00:30"
       },
       "comment": "Job run at Fri Nov 13 at 15:29 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-007[1]:ncpus=8:mem=55gb)+(CN-009[1]:ncpus=8:mem=55gb)+(CN-011[0]:mem=29137mb:ncpus=4+CN-011[1]:mem=27183mb:ncpus=4)+(CN-012[0]:mem=29137mb:ncpus=4+CN-012[1]... and finished",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550376.stdct-mgmt-02@stdct-mgmt-02"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1550375"
     },
     "1550376.stdct-mgmt-02": {
       "job_state": "F",
@@ -18620,7 +17979,8 @@
         "vmem": "140904kb",
         "walltime": "00:00:38"
       },
-      "comment": "Job run at Fri Nov 13 at 15:30 on (IN-001[0]:ncpus=1:mem=20gb) and finished"
+      "comment": "Job run at Fri Nov 13 at 15:30 on (IN-001[0]:ncpus=1:mem=20gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1550376"
     },
     "1550379.stdct-mgmt-02": {
       "job_state": "F",
@@ -18649,7 +18009,7 @@
         "walltime": "00:00:27"
       },
       "comment": "Job run at Fri Nov 13 at 15:30 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-007[1]:ncpus=8:mem=55gb)+(CN-009[1]:ncpus=8:mem=55gb)+(CN-011[0]:mem=29137mb:ncpus=4+CN-011[1]:mem=27183mb:ncpus=4)+(CN-012[0]:mem=29137mb:ncpus=4+CN-012[1]... and finished",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550380.stdct-mgmt-02@stdct-mgmt-02"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1550379"
     },
     "1550380.stdct-mgmt-02": {
       "job_state": "F",
@@ -18677,7 +18037,8 @@
         "vmem": "66792kb",
         "walltime": "00:00:17"
       },
-      "comment": "Job run at Fri Nov 13 at 15:31 on (IN-001[0]:ncpus=1:mem=20gb) and finished"
+      "comment": "Job run at Fri Nov 13 at 15:31 on (IN-001[0]:ncpus=1:mem=20gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1550380"
     },
     "1550381.stdct-mgmt-02": {
       "job_state": "F",
@@ -18706,7 +18067,7 @@
         "walltime": "00:00:27"
       },
       "comment": "Job run at Fri Nov 13 at 15:32 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-152[1]:ncpus=8:mem=55gb)+(CN-007[1]:ncpus=8:mem=55gb)+(CN-009[1]:ncpus=8:mem=55gb)+(CN-011[0]:mem=29137mb:ncpus=4+CN-011[1]:mem=27183mb:ncpus=4)+(CN-012[0]:... and finished",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550383.stdct-mgmt-02@stdct-mgmt-02"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1550381"
     },
     "1550383.stdct-mgmt-02": {
       "job_state": "F",
@@ -18734,7 +18095,8 @@
         "vmem": "66272kb",
         "walltime": "00:00:09"
       },
-      "comment": "Job run at Fri Nov 13 at 15:33 on (IN-001[0]:ncpus=1:mem=20gb) and finished"
+      "comment": "Job run at Fri Nov 13 at 15:33 on (IN-001[0]:ncpus=1:mem=20gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1550383"
     },
     "1550385.stdct-mgmt-02": {
       "job_state": "F",
@@ -18763,7 +18125,7 @@
         "walltime": "00:00:26"
       },
       "comment": "Job run at Fri Nov 13 at 15:32 on (CN-087[1]:ncpus=8:mem=55gb)+(CN-099[1]:ncpus=8:mem=55gb)+(CN-091[0]:mem=29095mb:ncpus=4+CN-091[1]:mem=27225mb:ncpus=4)+(CN-105[0]:mem=29137mb:ncpus=4+CN-105[1]:mem=27183mb:ncpus=4)+(CN-120[0]:mem=29095mb:ncpus=4+CN-12... and finished",
-      "depend": "afterok:1549865.stdct-mgmt-02@stdct-mgmt-02,beforeok:1550387.stdct-mgmt-02@stdct-mgmt-02"
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1550385"
     },
     "1550387.stdct-mgmt-02": {
       "job_state": "F",
@@ -18791,17 +18153,471 @@
         "vmem": "66784kb",
         "walltime": "00:00:12"
       },
-      "comment": "Job run at Fri Nov 13 at 15:33 on (IN-001[0]:ncpus=1:mem=20gb) and finished"
+      "comment": "Job run at Fri Nov 13 at 15:33 on (IN-001[0]:ncpus=1:mem=20gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1550387"
+    },
+    "1560516.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "queue": "cpu_serial",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"job.ncpus\": 1.0, \"job.walltime\": 14400, \"am_cloud_enabled\": false}",
+        "mem": "6gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6gb",
+        "walltime": "04:00:00"
+      },
+      "resources_used": {
+        "cpupercent": 72,
+        "cput": "00:19:37",
+        "mem": "5334212kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "7129640kb",
+        "walltime": "00:21:06"
+      },
+      "comment": "Job run at Mon Nov 16 at 01:05 on (CN-161[0]:ncpus=1:mem=6gb) and finished",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-memory-check.o1560516"
+    },
+    "1560521.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 1.0, \"job.walltime\": 13500, \"am_cloud_enabled\": false}",
+        "mem": "6gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-014",
+        "walltime": "03:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 48,
+        "cput": "00:02:23",
+        "mem": "5436584kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "7128196kb",
+        "walltime": "00:02:57"
+      },
+      "comment": "Job run at Mon Nov 16 at 01:26 on (CN-014[0]:ncpus=1:mem=6gb)",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560521"
+    },
+    "1560522.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560522"
+    },
+    "1560523.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 1.0, \"job.walltime\": 16200, \"am_cloud_enabled\": false}",
+        "mem": "6gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-096",
+        "walltime": "04:30:00"
+      },
+      "resources_used": {
+        "cpupercent": 71,
+        "cput": "00:02:18",
+        "mem": "4765584kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "7128192kb",
+        "walltime": "00:02:32"
+      },
+      "comment": "Job run at Mon Nov 16 at 01:26 on (CN-096[0]:ncpus=1:mem=6gb)",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560523"
+    },
+    "1560524.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560524"
+    },
+    "1560525.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 2.0, \"job.walltime\": 13500, \"am_cloud_enabled\": false}",
+        "mem": "12gb",
+        "mpiprocs": 2,
+        "ncpus": 2,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-132+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-136",
+        "walltime": "03:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 152,
+        "cput": "00:03:25",
+        "mem": "6457184kb",
+        "ncpus": 2,
+        "ngpus": 0,
+        "vmem": "7128216kb",
+        "walltime": "00:02:20"
+      },
+      "comment": "Job run at Mon Nov 16 at 01:26 on (CN-132[1]:ncpus=1:mem=6gb)+(CN-136[0]:ncpus=1:mem=6gb)",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560525"
+    },
+    "1560526.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560526"
+    },
+    "1560527.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 2.0, \"job.walltime\": 16200, \"am_cloud_enabled\": false}",
+        "mem": "12gb",
+        "mpiprocs": 2,
+        "ncpus": 2,
+        "ngpus": 0,
+        "nodect": 2,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-089+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-090",
+        "walltime": "04:30:00"
+      },
+      "resources_used": {
+        "cpupercent": 154,
+        "cput": "00:02:24",
+        "mem": "5295576kb",
+        "ncpus": 2,
+        "ngpus": 0,
+        "vmem": "7128340kb",
+        "walltime": "00:01:41"
+      },
+      "comment": "Job run at Mon Nov 16 at 01:27 on (CN-089[0]:ncpus=1:mem=6gb)+(CN-090[0]:ncpus=1:mem=6gb)",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560527"
+    },
+    "1560528.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560528"
+    },
+    "1560529.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 4.0, \"job.walltime\": 13500, \"am_cloud_enabled\": false}",
+        "mem": "24gb",
+        "mpiprocs": 4,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-014+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-089+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-090+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-119",
+        "walltime": "03:45:00"
+      },
+      "resources_used": {
+        "cpupercent": 277,
+        "cput": "00:04:57",
+        "mem": "6912664kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "7128352kb",
+        "walltime": "00:01:53"
+      },
+      "comment": "Job run at Mon Nov 16 at 01:27 on (CN-014[0]:ncpus=1:mem=6gb)+(CN-089[0]:ncpus=1:mem=6gb)+(CN-090[0]:ncpus=1:mem=6gb)+(CN-119[0]:ncpus=1:mem=6gb)",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560529"
+    },
+    "1560530.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560530"
+    },
+    "1560531.stdct-mgmt-02": {
+      "job_state": "R",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 4.0, \"job.walltime\": 16200, \"am_cloud_enabled\": false}",
+        "mem": "24gb",
+        "mpiprocs": 4,
+        "ncpus": 4,
+        "ngpus": 0,
+        "nodect": 4,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-014+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-089+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-090+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-119",
+        "walltime": "04:30:00"
+      },
+      "resources_used": {
+        "cpupercent": 198,
+        "cput": "00:04:51",
+        "mem": "6352112kb",
+        "ncpus": 4,
+        "ngpus": 0,
+        "vmem": "7128352kb",
+        "walltime": "00:01:53"
+      },
+      "comment": "Job run at Mon Nov 16 at 01:27 on (CN-014[0]:ncpus=1:mem=6gb)+(CN-089[0]:ncpus=1:mem=6gb)+(CN-090[0]:ncpus=1:mem=6gb)+(CN-119[0]:ncpus=1:mem=6gb)",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560531"
+    },
+    "1560532.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560532"
+    },
+    "1560533.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 8.0, \"job.walltime\": 13500}",
+        "mem": "48gb",
+        "mpiprocs": 8,
+        "ncpus": 8,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-014+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-089+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-090+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-006+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-085+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-005+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-096",
+        "walltime": "03:45:00"
+      },
+      "comment": "Not Running: User has reached queue batch_cpu running job limit.",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560533"
+    },
+    "1560534.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560534"
+    },
+    "1560535.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 8.0, \"job.walltime\": 16200}",
+        "mem": "48gb",
+        "mpiprocs": 8,
+        "ncpus": 8,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-014+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-089+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-090+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-006+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-085+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-005+1:ncpus=1:mpiprocs=1:ompthreads=1:mem=6GB:node_pool=cpu_node:switch=cpu_all:host=cn-096",
+        "walltime": "04:30:00"
+      },
+      "comment": "Not Running: User has reached queue batch_cpu running job limit.",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560535"
+    },
+    "1560536.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560536"
+    },
+    "1560537.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "888gb",
+        "mpiprocs": 128,
+        "ncpus": 128,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-140+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-142+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-143+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-145+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-146+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-150+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-014+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-089",
+        "walltime": "03:45:00"
+      },
+      "comment": "Not Running: User has reached queue batch_cpu running job limit.",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560537"
+    },
+    "1560538.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560538"
+    },
+    "1560539.stdct-mgmt-02": {
+      "job_state": "Q",
+      "queue": "batch_cpu",
+      "Hold_Types": "n",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "888gb",
+        "mpiprocs": 128,
+        "ncpus": 128,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-135+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-119+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-152+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-006+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-085+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-005+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-096+1:ncpus=16:mpiprocs=16:ompthreads=1:mem=111GB:node_pool=cpu_node:switch=cpu_all:host=cn-008",
+        "walltime": "04:30:00"
+      },
+      "comment": "Not Running: User has reached queue batch_cpu running job limit.",
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560539"
+    },
+    "1560540.stdct-mgmt-02": {
+      "job_state": "H",
+      "queue": "cpu_serial",
+      "Hold_Types": "d",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560540"
     }
   },
-  "registered_groups": 384,
-  "queue_observed_at": "2026-11-15T00:04:19.648422+08:00",
+  "registered_groups": 394,
+  "queue_observed_at": "2026-11-16T01:29:58.738984+08:00",
   "project_query_authenticated": true,
   "balance_cpu_hours": 1198.2039999999997,
   "queue_counts_observed_at": "2026-11-11T20:37:10+08:00",
   "queue_snapshot_note": "Detailed held-job attributes retain their earlier observation time. Plain qstat at 20:37 reconfirmed 70 H and no R/Q; the later full JSON refresh timed out.",
   "queue_query_available": true,
-  "latest_service_check_at": "2026-11-15T00:04:19.648422+08:00",
-  "latest_service_error": null,
+  "latest_service_check_at": "2026-11-16T01:29:58.738984+08:00",
+  "latest_service_error": "",
   "known_jobs_note": "Some known_jobs retain historical metadata; latest explicit PBS query confirmed no performance R/Q at observation. Completed statuses come from independent markers."
 }
