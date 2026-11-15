@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-16T02:18:30.842950+08:00",
+  "observed_at": "2026-11-16T02:35:03.337861+08:00",
   "account": "xtt_ella",
   "jobs": {
     "1555661.stdct-mgmt-02": {
@@ -106,19 +106,20 @@
         "walltime": "24:00:00"
       },
       "resources_used": {
-        "cpupercent": 77,
-        "cput": "01:14:03",
+        "cpupercent": 78,
+        "cput": "01:30:55",
         "mem": "5016096kb",
         "ncpus": 1,
         "ngpus": 0,
         "vmem": "5087656kb",
-        "walltime": "01:14:28"
+        "walltime": "01:31:23"
       },
       "comment": "Job run at Mon Nov 16 at 01:02 on (IN-002[1]:ncpus=1:mem=20gb)",
       "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-reuse-check.o1560513"
     },
     "1560514.stdct-mgmt-02": {
-      "job_state": "R",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
       "Hold_Types": "n",
       "Resource_List": {
@@ -135,14 +136,14 @@
       },
       "resources_used": {
         "cpupercent": 86,
-        "cput": "01:11:24",
-        "mem": "5015132kb",
+        "cput": "01:29:03",
+        "mem": "5015564kb",
         "ncpus": 1,
         "ngpus": 0,
         "vmem": "5090732kb",
-        "walltime": "01:14:29"
+        "walltime": "01:32:12"
       },
-      "comment": "Job run at Mon Nov 16 at 01:02 on (IN-002[1]:ncpus=1:mem=20gb)",
+      "comment": "Job run at Mon Nov 16 at 01:02 on (IN-002[1]:ncpus=1:mem=20gb) and finished",
       "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-reuse-check.o1560514"
     }
   },

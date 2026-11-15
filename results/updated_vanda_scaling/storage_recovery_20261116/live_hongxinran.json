@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-16T02:18:32.445562+08:00",
+  "observed_at": "2026-11-16T02:35:04.075252+08:00",
   "account": "hongxinran",
   "jobs": {
     "1560516.stdct-mgmt-02": {
@@ -78,12 +78,12 @@
       },
       "resources_used": {
         "cpupercent": 81,
-        "cput": "00:34:56",
+        "cput": "00:51:48",
         "mem": "5259044kb",
         "ncpus": 1,
         "ngpus": 0,
         "vmem": "5325160kb",
-        "walltime": "00:35:03"
+        "walltime": "00:51:58"
       },
       "comment": "Job run at Mon Nov 16 at 01:42 on (IN-002[1]:ncpus=1:mem=20gb)",
       "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560522"
@@ -135,12 +135,12 @@
       },
       "resources_used": {
         "cpupercent": 82,
-        "cput": "00:33:45",
+        "cput": "00:50:37",
         "mem": "5016432kb",
         "ncpus": 1,
         "ngpus": 0,
         "vmem": "5089992kb",
-        "walltime": "00:33:54"
+        "walltime": "00:50:49"
       },
       "comment": "Job run at Mon Nov 16 at 01:43 on (IN-002[1]:ncpus=1:mem=20gb)",
       "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560524"
@@ -423,13 +423,13 @@
         "walltime": "24:00:00"
       },
       "resources_used": {
-        "cpupercent": 74,
-        "cput": "00:27:57",
+        "cpupercent": 75,
+        "cput": "00:43:49",
         "mem": "5012324kb",
         "ncpus": 1,
         "ngpus": 0,
         "vmem": "5086336kb",
-        "walltime": "00:28:08"
+        "walltime": "00:44:03"
       },
       "comment": "Job run at Mon Nov 16 at 01:50 on (IN-005[1]:ncpus=1:mem=20gb)",
       "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560534"
@@ -480,13 +480,13 @@
         "walltime": "24:00:00"
       },
       "resources_used": {
-        "cpupercent": 77,
-        "cput": "00:21:58",
+        "cpupercent": 79,
+        "cput": "00:39:14",
         "mem": "5258520kb",
         "ncpus": 1,
         "ngpus": 0,
         "vmem": "5325168kb",
-        "walltime": "00:22:37"
+        "walltime": "00:39:56"
       },
       "comment": "Job run at Mon Nov 16 at 01:54 on (IN-001[1]:ncpus=1:mem=20gb)",
       "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560536"
@@ -538,18 +538,19 @@
       },
       "resources_used": {
         "cpupercent": 81,
-        "cput": "00:18:08",
+        "cput": "00:34:59",
         "mem": "5011480kb",
         "ncpus": 1,
         "ngpus": 0,
         "vmem": "5086840kb",
-        "walltime": "00:18:12"
+        "walltime": "00:35:07"
       },
       "comment": "Job run at Mon Nov 16 at 01:58 on (IN-002[1]:ncpus=1:mem=20gb)",
       "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560538"
     },
     "1560539.stdct-mgmt-02": {
-      "job_state": "R",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Hold_Types": "n",
       "Resource_List": {
@@ -565,23 +566,23 @@
         "walltime": "04:30:00"
       },
       "resources_used": {
-        "cpupercent": 10153,
-        "cput": "26:41:55",
+        "cpupercent": 12377,
+        "cput": "50:32:02",
         "mem": "32338368kb",
         "ncpus": 128,
         "ngpus": 0,
         "vmem": "12032564kb",
-        "walltime": "00:30:11"
+        "walltime": "00:40:01"
       },
-      "comment": "Job run at Mon Nov 16 at 01:47 on (CN-121[1]:ncpus=16:mem=111gb)+(CN-085[0]:ncpus=16:mem=111gb)+(CN-092[1]:ncpus=16:mem=111gb)+(CN-136[0]:ncpus=16:mem=111gb)+(CN-014[1]:ncpus=16:mem=111gb)+(CN-089[1]:ncpus=16:mem=111gb)+(CN-090[0]:ncpus=16:mem=111gb)+(...",
+      "comment": "Job run at Mon Nov 16 at 01:47 on (CN-121[1]:ncpus=16:mem=111gb)+(CN-085[0]:ncpus=16:mem=111gb)+(CN-092[1]:ncpus=16:mem=111gb)+(CN-136[0]:ncpus=16:mem=111gb)+(CN-014[1]:ncpus=16:mem=111gb)+(CN-089[1]:ncpus=16:mem=111gb)+(CN-090[0]:ncpus=16:mem=111gb)+(... and finished",
       "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-group.o1560539"
     },
     "1560540.stdct-mgmt-02": {
-      "job_state": "H",
+      "job_state": "R",
       "queue": "cpu_serial",
-      "Hold_Types": "d",
+      "Hold_Types": "n",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"job.ncpus\": 1.0, \"job.walltime\": 86400, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -592,6 +593,16 @@
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "24:00:00"
       },
+      "resources_used": {
+        "cpupercent": 77,
+        "cput": "00:06:38",
+        "mem": "3783916kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "3848284kb",
+        "walltime": "00:06:41"
+      },
+      "comment": "Job run at Mon Nov 16 at 02:28 on (IN-004[1]:ncpus=1:mem=20gb)",
       "Output_Path": "vanda.nus.edu.sg:/scratch/hongxinran/DSA5208_PROJECT_3_assist_20261111/dsa5208-core-check.o1560540"
     }
   },
@@ -662,7 +673,7 @@
   },
   "errors": [],
   "monitor": {
-    "pending_performance_groups": 1,
+    "pending_performance_groups": 0,
     "deferred_held_jobs": [
       "1510708.stdct-mgmt-02",
       "1510713.stdct-mgmt-02",
@@ -736,16 +747,14 @@
       "1519863.stdct-mgmt-02"
     ],
     "placement_updates": 0,
-    "pending_validation_groups": 5,
+    "pending_validation_groups": 6,
     "failed_jobs_not_retried": [],
     "performance_states": {
-      "F": 393,
-      "R": 1
+      "F": 394
     },
     "validation_states": {
       "F": 388,
-      "R": 5,
-      "H": 1
+      "R": 6
     },
     "eligible_unregistered_groups": 0,
     "eligible_unregistered_cells": 0,
@@ -760,7 +769,7 @@
       "1560516.stdct-mgmt-02": "F"
     },
     "action": "waiting_existing_jobs",
-    "observed_at": "2026-11-16T02:17:44.601975+08:00",
+    "observed_at": "2026-11-16T02:34:41.616903+08:00",
     "pid": 392636,
     "interval_seconds": 60,
     "until": "2026-11-16T23:59:00+08:00",
