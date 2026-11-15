@@ -24,3 +24,4 @@ xtt_ella真实余额4,861.854 CPUh；本轮最多预留1,536 CPUh，额外保留
 - [48项冻结计划](results/updated_vanda_scaling/20261106T185006Z/endpoint512_plan_20261116.json)
 - [后台监控记录](results/updated_vanda_scaling/20261106T185006Z/monitor_endpoint512_20261116/restart.json)
 
+02:08后台已完成一轮正常检查：PID1301843，waiting_existing_jobs，新增候选0。启动时旧PBS历史已过期，已从先前保存的真实最终状态恢复缓存；没有改写性能成功状态或重跑旧任务。

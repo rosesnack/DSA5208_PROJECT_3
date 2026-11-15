@@ -1,6 +1,6 @@
 {
-  "observed_at": "2026-11-16T02:06:03.145806+08:00",
-  "pid": 1274706,
+  "observed_at": "2026-11-16T02:08:26.221138+08:00",
+  "pid": 1301843,
   "command": [
     "python3",
     "scripts/watch_vanda_core_groups.py",
@@ -34,5 +34,6 @@
     "--defer-held-job",
     "1537572.stdct-mgmt-02"
   ],
-  "scope": "Only the three registered48-cell endpoint512 groups; existing unrelated user-held jobs stay deferred. Placement refresh preserves all CPU/node/memory/walltime parameters. No additional graphs are candidates."
+  "scope": "Only the three registered48-cell endpoint512 groups; existing unrelated user-held jobs stay deferred. Placement refresh preserves all CPU/node/memory/walltime parameters. No additional graphs are candidates.",
+  "history_cache_basis": "Restored previously recorded final PBS statuses from the unique handoff snapshot; no successful state invented and no solver retried. PBS has purged some old completed IDs."
 }
