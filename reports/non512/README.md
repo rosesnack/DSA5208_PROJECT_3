@@ -1,72 +1,69 @@
-# Non-512 report and evidence
+# Vanda report and evidence
 
-This is the report entry point for the completed Vanda experiments. The report has
-exactly four main sections: algorithm and data, methodology, results, and
-conclusions and insights.
-
-The [performance investigation](../../docs/PERFORMANCE_INVESTIGATION.md) records
-open attribution questions for the Google 32-thread and Uniform MPI p128 points.
-Saved numerical validation has passed. The Google reproduction and independent
-validation have finished without reproducing the old 32-thread cliff; MPI p128
-and additional 256-core reproductions are pending. Interpret those points as observed measurements, not established
-causal scaling behavior.
+The report has four main sections: algorithm and data; methodology; results;
+conclusions and insights. It covers the complete 19,530-configuration main matrix
+on 45 fixed graphs, 372 separate weak-suite entries/controls, and a clearly labeled
+five-configuration 512-core supplement. The existing directory and PDF filename
+are retained for stable repository links.
 
 - [PDF report](../../output/pdf/pagerank_non512_report.pdf)
 - [Editable report](report.md)
 - [45-graph runtime matrix](data/runtime_matrix_45.csv)
-- [All 19,530 fixed-graph records](data/fixed_results_19530.csv)
-- [372 separate weak-suite records and controls](data/weak_results_372.csv)
+- [Complete main records](data/fixed_results_19530.csv)
+- [Partial 512-core records](data/supplement_512.csv)
+- [Separate weak-suite records](data/weak_results_372.csv)
 - [Numerical and timing audit](data/audit.json)
+- [Measurement selection and provenance](measurement_selection.json)
 - [Nine vector figures and PNG exports](figures/)
 
-All 512-core results are excluded from every report comparison. The five valid
-legacy 512-core records and their provenance remain in the underlying results
-archive. The unfinished 512 work is described only in the operational handoff.
-The original Git result folders are preserved; none is silently pooled with the
-refreshed Vanda measurements.
+The 45 fixed graphs contain three original graphs and 42 extensions. Weak-suite
+standalone GPU runs on growing inputs are fixed-resource controls, not weak
+resource-efficiency curves. CPU and GPU-node speedups use their own Serial
+references. Best-observed matrix cells may use different resource budgets;
+fixed-core and matched-layout comparisons are presented separately.
 
-The 45 fixed graphs consist of three original graphs and 42 extensions. The weak
-suite is separate from the fixed-graph denominator. GPU weak-suite standalone
-runs on successively larger graphs are fixed-resource controls, not weak-scaling
-efficiency measurements. CPU and GPU-node speedups use their own Serial controls.
-The best-observed runtime matrix permits different configurations per cell;
-fixed-core comparisons are presented separately in the report.
+Each configuration uses one warm-up and five timed runs. Primary solve-time
+tables and figures report the median of the five timed runs.
 
-## Rebuild without running benchmarks
+The 512 supplement has only five validated cases, on one 50k-vertex graph. It is
+not a complete method comparison or a complete scaling curve. A hyphen (`-`) marks missing matrix cells. Its records are excluded from main-matrix aggregates.
 
-Use Python 3.9+ and install `requirements-report.txt`. Neither command below
-submits a cluster job or reruns a solver:
+## Build the report without running a benchmark
+
+Use Python 3.9+ and install `requirements-report.txt`:
 
 ```bash
+python3 scripts/select_report_measurements.py
 python3 scripts/analyze_report_results.py
 python3 scripts/build_non512_report.py --pdftoppm /path/to/pdftoppm
 ```
 
-Omit `--pdftoppm` to build only the PDF and vector figures. Poppler generates the
-PNG figure exports used by the editable report. ReportLab Graphics is used for
-the scientific plots; the source CSVs retain unrounded values and provenance.
+Only complete, independently validated measurements can enter the selection.
+Selection is deterministic and uses predefined runtime settings, never the
+fastest repeat or fastest observed runtime policy. Every selected cell retains
+its source summary, original five timings and independent validator evidence.
+All tables, geometric aggregates, speedups and efficiencies are recalculated.
+Input-inventory and selection hashes are recorded in `data/audit.json`.
 
-Google data insights were computed locally from the refreshed, independently
-validated Serial vector fetched from Vanda. The vector hash, aggregate statistics
-and top ten vertices are saved in `data/google_insights.json` and
-`data/google_top10.csv`. The large temporary vector is not an extra Git upload.
-To recompute these insights, put that validated vector at
-`/tmp/dsa5208_google_refreshed_ranks.csv` before running the analysis. Existing
-insight files are reused by the report builder when no vector is available.
+None of these commands submits a cluster job. Omit `--pdftoppm` to build only the PDF and
+vector figures. PNG exports support the editable Markdown report. ReportLab
+Graphics produces the scientific plots; data tables retain unrounded values.
 
-## Before submission
+Google graph insights use the validated Serial rank vector. Aggregate statistics,
+its hash and the top ten vertices are retained in `data/google_insights.json`
+and `data/google_top10.csv`. To recompute, place that vector at
+`/tmp/dsa5208_google_refreshed_ranks.csv` before analysis. The full temporary vector
+is not an extra Git upload. Existing insight files are used when it is absent.
 
-The PDF is an initial draft, not a claim that the whole coursework submission is
-finished. Add actual group names and student IDs, review the AI disclosure and
-interpretations, and check the submission deadline with the instructor. To add
-the author block, create `reports/non512/authors.json` containing objects with
-`name` and `student_id`, then rebuild. Do not use invented identity information.
+## Submission preparation
 
-Raw full-vector checks were performed by the independent Vanda validators. The
-local report audit verifies saved completion evidence, solver settings, five
-timings, summary medians, numerical bounds and recorded process/thread layouts;
-it does not rerun all original edge-list/rank comparisons.
+Add actual group names and student IDs, review the AI disclosure and scientific
+interpretations, and confirm the current submission deadline. An optional
+`authors.json` list of objects with `name` and `student_id` adds an author block.
+Prepare the Canvas source package without operational logs or terminal output.
 
-The source-manifest hash in `data/audit.json` identifies the input snapshot. The
-raw experiment summaries, timings, mappings and validation markers remain the
-authoritative measurements. Tables and figures are derived artifacts.
+The local report audit checks saved independent validation evidence, settings,
+five timings, medians, numerical bounds and recorded layouts. It does not execute
+new graph solvers or recompute all full-vector residuals locally. Original raw
+records are preserved for provenance. Current execution details and incomplete
+work are in the [operational handoff](../../HANDOFF_VANDA_EXPERIMENTS_20261106.md).

@@ -1,0 +1,164 @@
+{
+  "serial_grid/google/openmp/google/t1/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/google/unbound_default_openmp/openmp/google/t1/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/google/unbound_default_openmp/openmp/validation.json",
+    "performance_job": "1567277.stdct-mgmt-02",
+    "validation_job": "1567278.stdct-mgmt-02"
+  },
+  "serial_grid/google/openmp/google/t2/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/google/unbound_default_openmp/openmp/google/t2/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/google/unbound_default_openmp/openmp/validation.json",
+    "performance_job": "1567277.stdct-mgmt-02",
+    "validation_job": "1567278.stdct-mgmt-02"
+  },
+  "serial_grid/google/openmp/google/t4/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/google/unbound_default_openmp/openmp/google/t4/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/google/unbound_default_openmp/openmp/validation.json",
+    "performance_job": "1567277.stdct-mgmt-02",
+    "validation_job": "1567278.stdct-mgmt-02"
+  },
+  "serial_grid/google/openmp/google/t8/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/google/unbound_default_openmp/openmp/google/t8/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/google/unbound_default_openmp/openmp/validation.json",
+    "performance_job": "1567277.stdct-mgmt-02",
+    "validation_job": "1567278.stdct-mgmt-02"
+  },
+  "serial_grid/google/openmp/google/t16/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/google/unbound_default_openmp/openmp/google/t16/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/google/unbound_default_openmp/openmp/validation.json",
+    "performance_job": "1567277.stdct-mgmt-02",
+    "validation_job": "1567278.stdct-mgmt-02"
+  },
+  "serial_grid/google/openmp/google/t32/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/google/unbound_default_openmp/openmp/google/t32/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/google/unbound_default_openmp/openmp/validation.json",
+    "performance_job": "1567277.stdct-mgmt-02",
+    "validation_job": "1567278.stdct-mgmt-02"
+  },
+  "serial_grid/google/kokkos_threads_16/kokkos/OpenMP/google/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/google/unbound_default_kokkos16/kokkos/OpenMP/google/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/google/unbound_default_kokkos16/kokkos/OpenMP/validation.json",
+    "performance_job": "1567277.stdct-mgmt-02",
+    "validation_job": "1567278.stdct-mgmt-02"
+  },
+  "serial_grid/google/kokkos_threads_32/kokkos/OpenMP/google/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/google/unbound_default_kokkos32/kokkos/OpenMP/google/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/google/unbound_default_kokkos32/kokkos/OpenMP/validation.json",
+    "performance_job": "1567277.stdct-mgmt-02",
+    "validation_job": "1567278.stdct-mgmt-02"
+  },
+  "strong/strong_uniform/nodes8/hybrid/strong_uniform/p256_t1/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/hybrid_p256_t1_allgather/hybrid/strong_uniform/p256_t1/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/hybrid_p256_t1_allgather/hybrid/validation.json",
+    "performance_job": "1567383.stdct-mgmt-02",
+    "validation_job": "1567384.stdct-mgmt-02"
+  },
+  "strong/strong_uniform/nodes8/mpi_kokkos/OpenMP/strong_uniform/p256/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/mpi_kokkos_p256_t1_allgather/mpi_kokkos/OpenMP/strong_uniform/p256/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/mpi_kokkos_p256_t1_allgather/mpi_kokkos/OpenMP/validation.json",
+    "performance_job": "1567383.stdct-mgmt-02",
+    "validation_job": "1569277.stdct-mgmt-02"
+  },
+  "strong/strong_uniform/nodes8/mpi_kokkos_halo/OpenMP/strong_uniform/p256/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/mpi_kokkos_p256_t1_halo/mpi_kokkos_halo/OpenMP/strong_uniform/p256/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/mpi_kokkos_p256_t1_halo/mpi_kokkos_halo/OpenMP/validation.json",
+    "performance_job": "1567383.stdct-mgmt-02",
+    "validation_job": "1569278.stdct-mgmt-02"
+  },
+  "strong/strong_uniform/nodes8/hybrid_halo/strong_uniform/p256_t1/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/hybrid_p256_t1_halo/hybrid_halo/strong_uniform/p256_t1/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/hybrid_p256_t1_halo/hybrid_halo/validation.json",
+    "performance_job": "1567383.stdct-mgmt-02",
+    "validation_job": "1567384.stdct-mgmt-02"
+  },
+  "strong/strong_uniform/nodes8/hybrid/strong_uniform/p8_t32/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/hybrid_p8_t32_allgather/hybrid/strong_uniform/p8_t32/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/hybrid_p8_t32_allgather/hybrid/validation.json",
+    "performance_job": "1567383.stdct-mgmt-02",
+    "validation_job": "1569273.stdct-mgmt-02"
+  },
+  "strong/strong_uniform/nodes8/mpi_halo/strong_uniform/p256/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/mpi_p256_t1_halo/mpi_halo/strong_uniform/p256/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/mpi_p256_t1_halo/mpi_halo/validation.json",
+    "performance_job": "1567383.stdct-mgmt-02",
+    "validation_job": "1567384.stdct-mgmt-02"
+  },
+  "kokkos_cpu_grid/strong_uniform/nodes8/mpi_kokkos_halo/OpenMP/strong_uniform/p8_t32/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/mpi_kokkos_p8_t32_halo/mpi_kokkos_halo/OpenMP/strong_uniform/p8_t32/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/mpi_kokkos_p8_t32_halo/mpi_kokkos_halo/OpenMP/threads_32/validation.json",
+    "performance_job": "1567383.stdct-mgmt-02",
+    "validation_job": "1569280.stdct-mgmt-02"
+  },
+  "kokkos_cpu_grid/strong_uniform/nodes8/mpi_kokkos/OpenMP/strong_uniform/p8_t32/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/mpi_kokkos_p8_t32_allgather/mpi_kokkos/OpenMP/strong_uniform/p8_t32/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/mpi_kokkos_p8_t32_allgather/mpi_kokkos/OpenMP/threads_32/validation.json",
+    "performance_job": "1567383.stdct-mgmt-02",
+    "validation_job": "1569279.stdct-mgmt-02"
+  },
+  "strong/strong_uniform/nodes8/hybrid/strong_uniform/p16_t16/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/hybrid_p16_t16_allgather/hybrid/strong_uniform/p16_t16/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/hybrid_p16_t16_allgather/hybrid/validation.json",
+    "performance_job": "1567383.stdct-mgmt-02",
+    "validation_job": "1567384.stdct-mgmt-02"
+  },
+  "kokkos_cpu_grid/strong_uniform/nodes8/mpi_kokkos/OpenMP/strong_uniform/p16_t16/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/mpi_kokkos_p16_t16_allgather/mpi_kokkos/OpenMP/strong_uniform/p16_t16/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/mpi_kokkos_p16_t16_allgather/mpi_kokkos/OpenMP/threads_16/validation.json",
+    "performance_job": "1567383.stdct-mgmt-02",
+    "validation_job": "1569275.stdct-mgmt-02"
+  },
+  "strong/strong_uniform/nodes8/mpi/strong_uniform/p256/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/mpi_p256_t1_allgather/mpi/strong_uniform/p256/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/mpi_p256_t1_allgather/mpi/validation.json",
+    "performance_job": "1567383.stdct-mgmt-02",
+    "validation_job": "1567384.stdct-mgmt-02"
+  },
+  "strong/strong_uniform/nodes8/hybrid_halo/strong_uniform/p8_t32/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/hybrid_p8_t32_halo/hybrid_halo/strong_uniform/p8_t32/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/hybrid_p8_t32_halo/hybrid_halo/validation.json",
+    "performance_job": "1567383.stdct-mgmt-02",
+    "validation_job": "1569274.stdct-mgmt-02"
+  },
+  "strong/strong_uniform/nodes8/hybrid_halo/strong_uniform/p16_t16/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/hybrid_p16_t16_halo/hybrid_halo/strong_uniform/p16_t16/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/hybrid_p16_t16_halo/hybrid_halo/validation.json",
+    "performance_job": "1567383.stdct-mgmt-02",
+    "validation_job": "1569272.stdct-mgmt-02"
+  },
+  "kokkos_cpu_grid/strong_uniform/nodes8/mpi_kokkos_halo/OpenMP/strong_uniform/p16_t16/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/mpi_kokkos_p16_t16_halo/mpi_kokkos_halo/OpenMP/strong_uniform/p16_t16/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_uniform/mpi_kokkos_p16_t16_halo/mpi_kokkos_halo/OpenMP/threads_16/validation.json",
+    "performance_job": "1567383.stdct-mgmt-02",
+    "validation_job": "1569276.stdct-mgmt-02"
+  },
+  "strong/strong_hub/nodes8/mpi_halo/strong_hub/p256/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_hub/mpi_p256_t1_halo/mpi_halo/strong_hub/p256/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_hub/mpi_p256_t1_halo/mpi_halo/validation.json",
+    "performance_job": "1567385.stdct-mgmt-02",
+    "validation_job": "1567386.stdct-mgmt-02"
+  },
+  "strong/strong_hub/nodes8/mpi/strong_hub/p256/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_hub/mpi_p256_t1_allgather/mpi/strong_hub/p256/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_hub/mpi_p256_t1_allgather/mpi/validation.json",
+    "performance_job": "1567385.stdct-mgmt-02",
+    "validation_job": "1567386.stdct-mgmt-02"
+  },
+  "strong/strong_controlled/nodes8/mpi_halo/strong_controlled/p256/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_controlled/mpi_p256_t1_halo/mpi_halo/strong_controlled/p256/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_controlled/mpi_p256_t1_halo/mpi_halo/validation.json",
+    "performance_job": "1567387.stdct-mgmt-02",
+    "validation_job": "1567388.stdct-mgmt-02"
+  },
+  "strong/strong_controlled/nodes8/mpi/strong_controlled/p256/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_controlled/mpi_p256_t1_allgather/mpi/strong_controlled/p256/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/strong_controlled/mpi_p256_t1_allgather/mpi/validation.json",
+    "performance_job": "1567387.stdct-mgmt-02",
+    "validation_job": "1567388.stdct-mgmt-02"
+  },
+  "strong/strong_uniform/nodes4/mpi_halo/strong_uniform/p128/summary.json": {
+    "summary": "results/updated_vanda_scaling/performance_investigation_20261116/final128/results/p128_mpi128/mpi_halo/strong_uniform/p128/summary.json",
+    "marker": "results/updated_vanda_scaling/performance_investigation_20261116/final128/results/validate_complete.txt",
+    "performance_job": "1569195.stdct-mgmt-02",
+    "validation_job": "1569196.stdct-mgmt-02"
+  }
+}

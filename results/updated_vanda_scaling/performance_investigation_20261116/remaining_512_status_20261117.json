@@ -1,0 +1,29 @@
+{
+  "time": "2026-11-17T02:01:41.421757+08:00",
+  "jobs": {
+    "1560661.stdct-mgmt-02": {
+      "job_state": "H",
+      "Hold_Types": "u",
+      "Exit_status": null,
+      "comment": "Job held by xtt_ella on Tue Nov 17 00:58:10 2026"
+    },
+    "1560663.stdct-mgmt-02": {
+      "job_state": "H",
+      "Hold_Types": "d",
+      "Exit_status": null,
+      "comment": null
+    },
+    "1560665.stdct-mgmt-02": {
+      "job_state": "H",
+      "Hold_Types": "d",
+      "Exit_status": null,
+      "comment": null
+    },
+    "1532794.stdct-mgmt-02": {
+      "job_state": "H",
+      "Hold_Types": "su",
+      "Exit_status": "-3",
+      "comment": "Job held by xtt_ella on Sun Nov 15 00:45:04 2026"
+    }
+  }
+}

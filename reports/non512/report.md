@@ -1,8 +1,8 @@
 # Parallel PageRank on Vanda
 
-Initial report - non-512 experiments - 16 November 2026
+Parallel PageRank experiments - 17 November 2026
 
-We evaluate synchronous PageRank on 45 directed graphs using Serial, OpenMP, MPI, MPI+OpenMP, native CUDA and Kokkos with OpenMP and CUDA backends. The audited dataset contains 19,530 fixed-graph configurations and 372 separate non-512 weak-suite configurations or controls. All fixed-graph targets in this scope are complete and independently validated. The report excludes every 512-core measurement and all queued work.
+We evaluate synchronous PageRank on 45 directed graphs using Serial, OpenMP, MPI, MPI+OpenMP, native CUDA and Kokkos with OpenMP and CUDA backends. The audited dataset contains 19,530 fixed-graph configurations and 372 separate non-512 weak-suite configurations or controls. All fixed-graph targets in this scope are complete and independently validated. Five available 512-core configurations are presented as a separate, explicitly incomplete supplement. Pending measurements are excluded.
 
 ## 1 Introduction to the algorithm and data
 
@@ -60,7 +60,9 @@ The distributed device implementations stage contributions through host memory; 
 
 All reported measurements are from NUS Vanda. CPU comparisons use Intel Xeon Platinum 8452Y hosts, GCC 13.3.0, Open MPI 4.1.8 and Release builds. GPU comparisons use NVIDIA A40 nodes with Platinum 8452Y CPUs; archived build metadata identifies CUDA toolkit 12.4.1. Driver-reported CUDA compatibility is not treated as the compiler toolkit version. Original laptop and mixed-hardware exploratory measurements are excluded.
 
-Every configuration has one warm-up and five measured runs. The primary statistic is solve_median_s, recomputed here from the five solve_s observations. MPI solve time is the maximum elapsed solver time across ranks. Graph input, partition distribution, backend construction and Halo setup are outside solve time; per-iteration MPI and host/device staging are inside the distributed solve. Standalone GPU setup and final rank copies are outside solve time. These are solver-time comparisons, not end-to-end application runtimes.
+Every configuration has one warm-up followed by five timed runs. All primary solve-time tables and figures report the median of those five timed runs. The exported statistic solve_median_s is recomputed here from the five original solve_s observations. MPI solve time is the maximum elapsed solver time across ranks. Graph input, partition distribution, backend construction and Halo setup are outside solve time; per-iteration MPI and host/device staging are inside the distributed solve. Standalone GPU setup and final rank copies are outside solve time. These are solver-time comparisons, not end-to-end application runtimes.
+
+OpenMP creates its persistent thread team inside the timed solver, while Kokkos runtime initialization precedes solver timing. These boundaries follow the recorded solve_s metric and should be considered when interpreting very small graph runtimes.
 
 Twelve low-core MPI+Kokkos configurations use the recorded compact_setup initialization: redundant root edge storage is released after distribution, and replaced Halo edge IDs are released before backend allocation. The measured update/communication loop is unchanged; these configurations are flagged in the exported table. No recompiled variant is substituted silently into an existing measurement.
 
@@ -76,11 +78,12 @@ Twelve low-core MPI+Kokkos configurations use the recorded compact_setup initial
 | Standalone CUDA; Kokkos CUDA | n=1, one GPU | 45 each |
 | MPI+CUDA; MPI+Kokkos CUDA | n=p=1,2; one rank/GPU/node; two modes | 180 each |
 | GPU-node CPU controls | Serial45; OpenMP270; MPI180; hybrid720 | 1,215 |
-| Total in this report |  | 19,530 |
+| Complete main matrix |  | 19,530 |
+| Partial CPU 512 supplement | n=8, 64 cores/node; available p/T and modes only | 5 / 1,170 |
 
 For CPU configurations the active core budget is C=pT=n(rT). The matrix contains 24 pure-MPI layouts and 84 layouts for each CPU hybrid method; every MPI layout is paired across communication modes. The main full-per-node strong-scaling line uses C=32/64/128/256 on n=1/2/4/8 nodes. Lower-core points use one node. At a fixed C, hybrid methods test every legal T from the six-value set with p=C/T; a larger allocation is not counted as higher parallelism unless pT increases. The full table also contains other node layouts at equal C.
 
-On GPU nodes the CPU-only MPI and OpenMP variants are controls on the same node layout, not GPU implementations. Distributed GPU comparisons use p=1 or 2 with one GPU per rank. The user removed 4/8-GPU runs from the scope. All 512-core fixed and weak results, including five previously valid fixed cells, are excluded from this report rather than mixed into an incomplete curve.
+On GPU nodes the CPU-only MPI and OpenMP variants are controls on the same node layout, not GPU implementations. Distributed GPU comparisons use p=1 or 2 with one GPU per rank. The GPU scope is one or two A40 devices. The 512-core fixed-graph supplement contains five validated configurations on one graph; its missing combinations are not used to construct a complete scaling curve. Weak-scaling comparisons here stop at 256 CPU cores.
 
 ### 2.4 Strong scaling, weak scaling and aggregation
 
@@ -96,13 +99,13 @@ Communication ratios always pair the same graph, method, backend, nodes, ranks a
 
 ### 2.5 Correctness and reproducibility
 
-The independent Python validators rebuild one PageRank update by streaming the original edge list, rather than sharing the C++ CSR traversal. Checks include vertex IDs/degrees, nonnegative finite ranks, total score within 10^-10 of one, residual within the stopping tolerance, full-vector L1 difference from Serial within 10^-8, history and repeated-run metadata. Allocation records and rank affinity maps verify the distributed layout. Raw rank vectors remain on Vanda; the repository holds summaries, timings, validation markers and provenance. This report checks those saved proofs and does not claim to rerun all full-vector validations locally.
+The independent Python validators rebuild one PageRank update by streaming the original edge list, rather than sharing the C++ CSR traversal. Checks include vertex IDs/degrees, nonnegative finite ranks, total score within 10^-10 of one, residual within the stopping tolerance, full-vector L1 difference from Serial within 10^-8, history and repeated-run metadata. Allocation records and rank affinity maps verify the distributed layout. Raw rank vectors remain on Vanda; the repository holds summaries, timings, validation markers and provenance. The local analysis checks these saved proofs.
 
-The source manifest, each summary path, independent completion marker, graph dimensions, node/rank/thread split, original job identifiers and timing-range diagnostics are retained in the report data. Rebuilding the report reads these records; it submits no jobs and reruns no performance measurements.
+The source manifest, each summary path, independent completion marker, graph dimensions, node/rank/thread split, original job identifiers and timing-range diagnostics are retained in the report data. Report generation reads these records without executing performance measurements.
 
 ### 2.6 AI usage
 
-AI assistance was used for code adaptation within the existing project, experiment-matrix organization, job scripts, troubleshooting, result audits, visualization and this report draft. Runtime values come from compiled programs executed on Vanda. Report tables are derived from stored validated measurements, with 512-core and unvalidated work excluded. The group remains responsible for reviewing the code, analysis, final wording and attribution before submission.
+AI assistance was used for code adaptation within the existing project, experiment-matrix organization, job scripts, troubleshooting, result audits, visualization and this report draft. Runtime values come from compiled programs executed on Vanda. Report tables are derived from stored validated measurements; incomplete 512-core coverage is labeled separately and unvalidated work is excluded. The group remains responsible for reviewing the code, analysis, final wording and attribution before submission.
 
 ## 3 Results
 
@@ -124,6 +127,14 @@ The median relative five-run range (max-min)/median is 5.0%; its 95th percentile
 
 ![Figure 1. Serial solve time on all 36 grid graphs. Each family crosses vertex count with average out-degree d=4,8,16. Five-run medians; both axes are logarithmic.](figures/01_serial_grid.png)
 
+| Fixed N=100,000 | Edges | Iterations | Serial s | Milliseconds / iteration |
+| --- | --- | --- | --- | --- |
+| Controlled | 400000 | 35 | 0.0647 | 1.85 |
+| Controlled | 800000 | 22 | 0.0314 | 1.43 |
+| Controlled | 1600000 | 17 | 0.0532 | 3.13 |
+
+Sparsity affects edge traversal and remote-source dependencies. At fixed vertex count, changing E/N changes the work per iteration, while E/(N*N) describes directed graph density. Total solve time also includes the number of convergence iterations, which changes with graph structure. Consequently, more edges need not produce a monotonic increase in total solve time; per-iteration time and iteration count must be inspected together. Hub concentration further changes load balance even at identical N and E.
+
 | Graph | Vertices | Iterations | Serial s | Max/min rank edges at p=256 |
 | --- | --- | --- | --- | --- |
 | Google | 875,713 | 90 | 1.9 | 2.84 |
@@ -141,9 +152,26 @@ At identical 12.8M vertices and 204.8M edges, Uniform is almost edge-balanced ac
 
 ![Figure 3. The same predefined strong-scaling lines on the three large graphs. Logarithmic axes preserve slowdowns as well as speedups. The same graph and convergence criterion are used at every point.](figures/03_strong_large.png)
 
-More cores do not guarantee lower time. On Google, the best pure-MPI configuration is one node with p=32 and Halo: 0.149 s versus 1.896 s Serial (12.7x). At p=256 on eight nodes, pure MPI takes 0.799 s with Allgatherv and 1.462 s with Halo. The small original uniform and hub graphs show particularly poor 256-core efficiency: synchronization and distribution costs overwhelm the available work.
+More cores do not guarantee lower time. On Google, the best pure-MPI configuration is one node with p=32 and Halo: 0.149 s versus 1.896 s Serial (12.7x). At p=256 on eight nodes, pure MPI takes 0.799 s with Allgatherv and 1.462 s with Halo. The small original uniform and hub graphs show particularly poor 256-core efficiency: synchronization and contribution exchange outweigh the available per-rank work.
 
-The large Uniform graph benefits from distributed resources: at 256 cores pure MPI+Halo reaches 24.9x Serial speedup, while MPI+OpenMP with p=64,T=4 and Allgatherv reaches 28.3x (11.0% CPU efficiency). The equal-size large Hub and Controlled graphs scale much less well under pure MPI. Within-node dynamic OpenMP is competitive: the best hybrid results for these graphs use a single 32-thread rank, at 28.7x and 24.9x Serial speedup respectively. These are different resource optima, not evidence that all methods should always use 256 cores.
+The large Uniform graph benefits from distributed resources: at 256 cores pure MPI with Halo reaches 28.6x Serial speedup (11.2% CPU efficiency). MPI+OpenMP with p=64,T=4 and Allgatherv reaches 28.3x (11.0% efficiency). The equal-size large Hub and Controlled graphs scale less well under pure MPI. Within-node dynamic OpenMP is competitive: the best hybrid results for these graphs use a single 32-thread rank, at 28.7x and 24.9x Serial speedup. These are different resource optima.
+
+| Nodes | CPU cores | MPI H speedup | MPI H efficiency | M+OMP A speedup | M+OMP A efficiency |
+| --- | --- | --- | --- | --- | --- |
+| 1 | 32 | 9.72 | 30.4% | 11.7 | 36.4% |
+| 2 | 64 | 14 | 21.9% | 16.2 | 25.4% |
+| 4 | 128 | 3.69 | 2.9% | 22.2 | 17.3% |
+| 8 | 256 | 28.6 | 11.2% | 28.3 | 11.0% |
+
+The preceding table holds the large Uniform graph fixed. MPI uses p=C,T=1; MPI+OpenMP uses p=C/4,T=4. Efficiency is speedup divided by active CPU cores. Non-monotonic points are retained. MPI phase timing includes synchronization and waiting, so a high communication fraction cannot alone identify network congestion.
+
+| Large Uniform cores | Solve s | Communication s | Median comm / solve | Max / mean edges |
+| --- | --- | --- | --- | --- |
+| 64 | 1.13 | 0.676 | 59.8% | 1 |
+| 128 | 4.3 | 4.12 | 96.1% | 1 |
+| 256 | 0.554 | 0.511 | 92.2% | 1 |
+
+Solve and communication seconds are separate five-run medians; the percentage is the median of the five communication/solve ratios. The 128-core point is communication-dominated despite near-uniform edge work. The recorded communication scope includes packing, exchange, reductions and waiting; the solve and phase timers also take separate rank maxima. Thus the measurements locate a bottleneck in the communication/synchronization path without proving a single network cause. Collective message-size regimes, placement and contention are plausible mechanisms; distinguishing them requires controlled transport or collective-algorithm experiments.
 
 | Graph | Communication | MPI p256 T1 (s) | M+OMP p64 T4 (s) | M+KK p64 T4 (s) |
 | --- | --- | --- | --- | --- |
@@ -153,18 +181,18 @@ The large Uniform graph benefits from distributed resources: at 256 cores pure M
 | Original uniform | Halo | 0.235 | 0.0559 | 0.0469 |
 | Original hub | Allgatherv | 0.076 | 0.028 | 0.0379 |
 | Original hub | Halo | 0.277 | 0.0519 | 0.054 |
-| Large uniform | Allgatherv | 0.962 | 0.561 | 0.718 |
-| Large uniform | Halo | 0.637 | 0.703 | 0.793 |
-| Large hub | Allgatherv | 10.6 | 5.04 | 8.59 |
-| Large hub | Halo | 11 | 4.56 | 8.89 |
-| Large controlled | Allgatherv | 14.7 | 3.78 | 6.24 |
-| Large controlled | Halo | 14.2 | 3.4 | 6.37 |
+| Large uniform | Allgatherv | 1.05 | 0.561 | 0.718 |
+| Large uniform | Halo | 0.554 | 0.703 | 0.793 |
+| Large hub | Allgatherv | 8.93 | 5.04 | 8.59 |
+| Large hub | Halo | 9.47 | 4.56 | 8.89 |
+| Large controlled | Allgatherv | 6.6 | 3.78 | 6.24 |
+| Large controlled | Halo | 6.88 | 3.4 | 6.37 |
 
 ### 3.4 Equal-core rank and thread decomposition
 
 ![Figure 4. All configurations use exactly 256 CPU threads on eight nodes. Paired speedup relative to the same method/graph/communication at p256,T1 is aggregated geometrically over 45 graphs. It is not speedup against Serial.](figures/04_fixed_256_splits.png)
 
-Changing p/T at fixed C has a large effect. With Allgatherv, T=32,p=8 improves the geometric-mean time by 3.41x for MPI+OpenMP and 3.23x for MPI+Kokkos relative to T=1,p=256. With Halo, the largest aggregate gains occur at T=16,p=16: 13.15x and 11.44x respectively. This is consistent with reducing many-rank exchange and synchronization overhead while retaining local parallelism. The best split remains graph-dependent; the figure is a complete paired aggregate, not a promise for every graph.
+Changing p/T at fixed C has a large effect. With Allgatherv, T=32,p=8 improves geometric-mean time by 3.40x for MPI+OpenMP and 3.20x for MPI+Kokkos relative to T=1,p=256. The best aggregate Halo splits use T=16 and T=16, with improvements of 13.12x and 11.35x. Reducing rank count changes both collective participation and local work; these measurements do not isolate one mechanism. The best split remains graph-dependent.
 
 ### 3.5 Allgatherv versus exact Halo exchange
 
@@ -187,7 +215,7 @@ On CPU, Google has the strongest aggregate Halo gain: 1.89x geometric-mean speed
 
 | Graph | CPU Serial s | OMP T32 s | KK OMP T32 s | GPU-node Serial s | CUDA 1GPU s | KK CUDA 1GPU s |
 | --- | --- | --- | --- | --- | --- | --- |
-| Google | 1.9 | 1.89 | 1.87 | 1.86 | 0.115 | 0.0936 |
+| Google | 1.9 | 0.125 | 0.104 | 1.86 | 0.115 | 0.0936 |
 | Original uniform | 0.0373 | 0.00267 | 0.00225 | 0.0288 | 0.00136 | 0.000999 |
 | Original hub | 0.0255 | 0.00239 | 0.0101 | 0.0285 | 0.00616 | 0.00851 |
 | Large uniform | 15.9 | 0.54 | 0.542 | 15.9 | 0.531 | 0.478 |
@@ -200,11 +228,19 @@ Standalone CUDA/Kokkos CUDA can outperform their distributed p=1 versions becaus
 
 Two GPUs do not consistently beat one. For large Uniform, MPI+CUDA Allgatherv improves from 0.788 s to 0.705 s (1.12x), whereas Halo becomes slower. Kokkos CUDA's distributed Allgatherv variant improves from 1.368 s to 1.126 s (1.22x). On large Hub and Controlled, distributed Kokkos improves from one to two GPUs but remains slower than native CUDA at the same layouts. Backend implementation and graph structure both matter; Kokkos portability does not imply identical performance.
 
-![Figure 7. Large Controlled phase diagnostics, in seconds. CU=native CUDA, KK=Kokkos CUDA; digit=rank/GPU count; A/H=communication. All bars are medians of the original solve_s, backend_compute_s, transfer_s or communication_s measurements. Phase medians are not additive components of one median run.](figures/08_gpu_phases.png)
+![Figure 7. Large Controlled phase diagnostics on a logarithmic time axis, in seconds. CU=native CUDA, KK=Kokkos CUDA; digit=rank/GPU count; A/H=communication. Markers are medians of the original solve_s, backend_compute_s, transfer_s or communication_s measurements. Phase medians are not additive components of one median run.](figures/08_gpu_phases.png)
 
 ### 3.7 Weak scaling
 
-![Figure 8. Core-normalized weak scaling with T=4, p=C/4 and graph work proportional to C. Efficiency is the baseline per-iteration time at C=4 divided by the measured per-iteration time. Ideal weak efficiency is 100%; no 512-core endpoints are shown.](figures/07_core_weak.png)
+![Figure 8. Top: pure MPI weak scaling, with N and E proportional to ranks and the one-rank point as baseline. Bottom: core-normalized hybrid weak scaling with T=4, p=C/4 and the four-core point as baseline. Both show baseline per-iteration time divided by measured per-iteration time; ideal efficiency is 100%. No 512-core endpoints are shown.](figures/07_core_weak.png)
+
+| Pure MPI family | C256 Allgatherv efficiency | C256 Halo efficiency |
+| --- | --- | --- |
+| uniform | 1.46% | 3.12% |
+| hub | 0.23% | 0.22% |
+| controlled | 0.27% | 0.25% |
+
+Rank-normalized weak scaling keeps nominal local vertices and edges constant, but not the communication problem: the global contribution vector and collective participant count grow with resources. On the concentrated families, equal vertex partitions also produce severe incoming-edge imbalance. Communication timers include waiting for slow ranks and cannot be interpreted solely as network transmission time.
 
 | Family | Method | C256 Allgatherv efficiency | C256 Halo efficiency |
 | --- | --- | --- | --- |
@@ -221,57 +257,71 @@ Weak scaling is poor despite constant nominal work per core. At C=256, the core-
 
 The next table reports best observed solve medians within each method, over the complete non-512 sweep. Different cells can select different nodes, p/T and communication. The corresponding selected configurations are exported in runtime_matrix_45.csv; fixed-budget comparisons are given separately above. The associated heatmap uses matched Serial controls within each hardware context.
 
-| Graph | Serial | OMP | KK-O | MPI | M-O | M-KO | CUDA | KK-C | M-C | M-KC |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Google | 1.9 | 0.146 | 0.136 | 0.149 | 0.146 | 0.146 | 0.115 | 0.0936 | 0.243 | 0.381 |
-| o. hub | 0.0255 | 0.00239 | 0.00935 | 0.0173 | 0.00418 | 0.015 | 0.00616 | 0.00851 | 0.0101 | 0.0148 |
-| o. uniform | 0.0373 | 0.00267 | 0.00225 | 0.00426 | 0.00416 | 0.00453 | 0.00136 | 0.000999 | 0.00514 | 0.00753 |
-| s. controlled | 0.0497 | 0.00373 | 0.0119 | 0.0186 | 0.0054 | 0.0196 | 0.00689 | 0.00931 | 0.0123 | 0.0182 |
-| s. hub | 0.0396 | 0.00301 | 0.00937 | 0.0172 | 0.0044 | 0.0162 | 0.00608 | 0.00844 | 0.0109 | 0.0171 |
-| s. uniform | 0.0349 | 0.00244 | 0.0018 | 0.00422 | 0.00362 | 0.00433 | 0.00133 | 0.00102 | 0.00875 | 0.0121 |
-| C 100k/16 | 0.0532 | 0.00302 | 0.0155 | 0.0266 | 0.00473 | 0.0205 | 0.00807 | 0.0114 | 0.0128 | 0.0175 |
-| C 100k/4 | 0.0647 | 0.00555 | 0.00919 | 0.0184 | 0.00906 | 0.0194 | 0.00554 | 0.00667 | 0.0156 | 0.0252 |
-| C 100k/8 | 0.0314 | 0.00321 | 0.0103 | 0.0137 | 0.00504 | 0.0147 | 0.00622 | 0.00834 | 0.0127 | 0.0192 |
-| C 200k/16 | 0.146 | 0.00837 | 0.0428 | 0.0611 | 0.0108 | 0.0433 | 0.0101 | 0.0269 | 0.0256 | 0.0487 |
-| C 200k/4 | 0.129 | 0.0119 | 0.0209 | 0.0396 | 0.0174 | 0.0333 | 0.00736 | 0.0136 | 0.0241 | 0.047 |
-| C 200k/8 | 0.0712 | 0.00742 | 0.0265 | 0.0439 | 0.0122 | 0.0406 | 0.00816 | 0.0189 | 0.0189 | 0.0373 |
-| C 400k/16 | 0.206 | 0.0174 | 0.124 | 0.159 | 0.0234 | 0.099 | 0.0135 | 0.0601 | 0.0264 | 0.0659 |
-| C 400k/4 | 0.274 | 0.0219 | 0.0539 | 0.0768 | 0.0271 | 0.0861 | 0.0114 | 0.0276 | 0.0359 | 0.0802 |
-| C 400k/8 | 0.242 | 0.0188 | 0.0797 | 0.107 | 0.0248 | 0.0845 | 0.0111 | 0.0397 | 0.0315 | 0.0761 |
-| C 50k/16 | 0.0242 | 0.00212 | 0.00718 | 0.013 | 0.00286 | 0.0108 | 0.00626 | 0.00626 | 0.00839 | 0.0098 |
-| C 50k/4 | 0.0297 | 0.0033 | 0.00415 | 0.00855 | 0.00457 | 0.0093 | 0.00412 | 0.00401 | 0.00964 | 0.0123 |
-| C 50k/8 | 0.0151 | 0.00175 | 0.00489 | 0.0101 | 0.00518 | 0.0106 | 0.00475 | 0.00458 | 0.00824 | 0.00982 |
-| H 100k/16 | 0.044 | 0.00254 | 0.0128 | 0.0215 | 0.00399 | 0.0187 | 0.00723 | 0.0104 | 0.0108 | 0.0171 |
-| H 100k/4 | 0.0396 | 0.00376 | 0.0067 | 0.00908 | 0.0052 | 0.0101 | 0.0044 | 0.00556 | 0.011 | 0.0176 |
-| H 100k/8 | 0.0387 | 0.00279 | 0.0111 | 0.0103 | 0.00398 | 0.0112 | 0.00514 | 0.00706 | 0.00929 | 0.0144 |
-| H 200k/16 | 0.0942 | 0.00673 | 0.0296 | 0.0525 | 0.00888 | 0.0339 | 0.00885 | 0.0239 | 0.0149 | 0.0314 |
-| H 200k/4 | 0.0843 | 0.00843 | 0.0163 | 0.0297 | 0.0122 | 0.0284 | 0.00573 | 0.0111 | 0.0169 | 0.0347 |
-| H 200k/8 | 0.0844 | 0.00804 | 0.0198 | 0.0306 | 0.00979 | 0.0294 | 0.00655 | 0.0152 | 0.0136 | 0.0302 |
-| H 400k/16 | 0.242 | 0.0173 | 0.15 | 0.157 | 0.0208 | 0.0897 | 0.0116 | 0.0505 | 0.0226 | 0.0578 |
-| H 400k/4 | 0.198 | 0.018 | 0.0577 | 0.0893 | 0.023 | 0.0685 | 0.00829 | 0.0215 | 0.0254 | 0.058 |
-| H 400k/8 | 0.214 | 0.0134 | 0.085 | 0.0993 | 0.0201 | 0.0703 | 0.00877 | 0.03 | 0.0242 | 0.0556 |
-| H 50k/16 | 0.0206 | 0.00292 | 0.00566 | 0.00987 | 0.0023 | 0.00971 | 0.00527 | 0.00512 | 0.00703 | 0.00772 |
-| H 50k/4 | 0.019 | 0.0021 | 0.00328 | 0.00621 | 0.00311 | 0.00658 | 0.00327 | 0.00316 | 0.00686 | 0.00862 |
-| H 50k/8 | 0.0189 | 0.00155 | 0.00415 | 0.0075 | 0.00253 | 0.00765 | 0.00382 | 0.00371 | 0.00617 | 0.00712 |
-| U 100k/16 | 0.0385 | 0.00222 | 0.00181 | 0.00434 | 0.00345 | 0.0047 | 0.00134 | 0.00106 | 0.00482 | 0.00717 |
-| U 100k/4 | 0.042 | 0.00372 | 0.00245 | 0.0024 | 0.00253 | 0.00258 | 0.0016 | 0.0011 | 0.00693 | 0.0103 |
-| U 100k/8 | 0.0369 | 0.00307 | 0.00222 | 0.0044 | 0.00439 | 0.00461 | 0.00133 | 0.000972 | 0.00537 | 0.0076 |
-| U 200k/16 | 0.0782 | 0.00449 | 0.00444 | 0.00868 | 0.00663 | 0.0118 | 0.00251 | 0.00184 | 0.00754 | 0.0121 |
-| U 200k/4 | 0.0868 | 0.00763 | 0.00494 | 0.00692 | 0.00704 | 0.00744 | 0.00286 | 0.00156 | 0.0121 | 0.0201 |
-| U 200k/8 | 0.0754 | 0.00505 | 0.00362 | 0.00698 | 0.00705 | 0.00783 | 0.00248 | 0.00146 | 0.0104 | 0.0188 |
-| U 400k/16 | 0.208 | 0.0135 | 0.0116 | 0.0236 | 0.0158 | 0.0216 | 0.00586 | 0.00436 | 0.0149 | 0.023 |
-| U 400k/4 | 0.118 | 0.0123 | 0.00679 | 0.0115 | 0.0117 | 0.0133 | 0.00582 | 0.00269 | 0.026 | 0.0463 |
-| U 400k/8 | 0.121 | 0.00992 | 0.00643 | 0.0141 | 0.0142 | 0.0185 | 0.00518 | 0.00301 | 0.0173 | 0.0277 |
-| U 50k/16 | 0.0178 | 0.00122 | 0.00104 | 0.00137 | 0.00152 | 0.00153 | 0.000753 | 0.000704 | 0.00428 | 0.00535 |
-| U 50k/4 | 0.0206 | 0.00221 | 0.00135 | 0.0014 | 0.00159 | 0.00159 | 0.00104 | 0.000852 | 0.00389 | 0.00506 |
-| U 50k/8 | 0.0181 | 0.00171 | 0.00112 | 0.00137 | 0.00156 | 0.00155 | 0.000776 | 0.000674 | 0.00287 | 0.00368 |
-| 12.8M controlled | 15.9 | 0.537 | 10.7 | 9.73 | 0.642 | 5.36 | 0.594 | 1.77 | 0.851 | 1.85 |
-| 12.8M hub | 23.2 | 0.704 | 16 | 10.6 | 0.808 | 8.2 | 0.755 | 2.03 | 1.03 | 2.13 |
-| 12.8M uniform | 15.9 | 0.54 | 0.542 | 0.637 | 0.515 | 0.635 | 0.531 | 0.478 | 0.705 | 1.13 |
+| Graph | Serial | OMP | KK-O | MPI | M-O | M-KO | CUDA | KK-C | M-C | M-KC | 512* |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google | 1.9 | 0.125 | 0.104 | 0.149 | 0.146 | 0.146 | 0.115 | 0.0936 | 0.243 | 0.381 | - |
+| o. hub | 0.0255 | 0.00239 | 0.00935 | 0.0173 | 0.00418 | 0.015 | 0.00616 | 0.00851 | 0.0101 | 0.0148 | - |
+| o. uniform | 0.0373 | 0.00267 | 0.00225 | 0.00426 | 0.00416 | 0.00453 | 0.00136 | 0.000999 | 0.00514 | 0.00753 | - |
+| s. controlled | 0.0497 | 0.00373 | 0.0119 | 0.0186 | 0.0054 | 0.0196 | 0.00689 | 0.00931 | 0.0123 | 0.0182 | - |
+| s. hub | 0.0396 | 0.00301 | 0.00937 | 0.0172 | 0.0044 | 0.0162 | 0.00608 | 0.00844 | 0.0109 | 0.0171 | - |
+| s. uniform | 0.0349 | 0.00244 | 0.0018 | 0.00422 | 0.00362 | 0.00433 | 0.00133 | 0.00102 | 0.00875 | 0.0121 | - |
+| C 100k/16 | 0.0532 | 0.00302 | 0.0155 | 0.0266 | 0.00473 | 0.0205 | 0.00807 | 0.0114 | 0.0128 | 0.0175 | - |
+| C 100k/4 | 0.0647 | 0.00555 | 0.00919 | 0.0184 | 0.00906 | 0.0194 | 0.00554 | 0.00667 | 0.0156 | 0.0252 | - |
+| C 100k/8 | 0.0314 | 0.00321 | 0.0103 | 0.0137 | 0.00504 | 0.0147 | 0.00622 | 0.00834 | 0.0127 | 0.0192 | - |
+| C 200k/16 | 0.146 | 0.00837 | 0.0428 | 0.0611 | 0.0108 | 0.0433 | 0.0101 | 0.0269 | 0.0256 | 0.0487 | - |
+| C 200k/4 | 0.129 | 0.0119 | 0.0209 | 0.0396 | 0.0174 | 0.0333 | 0.00736 | 0.0136 | 0.0241 | 0.047 | - |
+| C 200k/8 | 0.0712 | 0.00742 | 0.0265 | 0.0439 | 0.0122 | 0.0406 | 0.00816 | 0.0189 | 0.0189 | 0.0373 | - |
+| C 400k/16 | 0.206 | 0.0174 | 0.124 | 0.159 | 0.0234 | 0.099 | 0.0135 | 0.0601 | 0.0264 | 0.0659 | - |
+| C 400k/4 | 0.274 | 0.0219 | 0.0539 | 0.0768 | 0.0271 | 0.0861 | 0.0114 | 0.0276 | 0.0359 | 0.0802 | - |
+| C 400k/8 | 0.242 | 0.0188 | 0.0797 | 0.107 | 0.0248 | 0.0845 | 0.0111 | 0.0397 | 0.0315 | 0.0761 | - |
+| C 50k/16 | 0.0242 | 0.00212 | 0.00718 | 0.013 | 0.00286 | 0.0108 | 0.00626 | 0.00626 | 0.00839 | 0.0098 | - |
+| C 50k/4 | 0.0297 | 0.0033 | 0.00415 | 0.00855 | 0.00457 | 0.0093 | 0.00412 | 0.00401 | 0.00964 | 0.0123 | 0.12 |
+| C 50k/8 | 0.0151 | 0.00175 | 0.00489 | 0.0101 | 0.00518 | 0.0106 | 0.00475 | 0.00458 | 0.00824 | 0.00982 | - |
+| H 100k/16 | 0.044 | 0.00254 | 0.0128 | 0.0215 | 0.00399 | 0.0187 | 0.00723 | 0.0104 | 0.0108 | 0.0171 | - |
+| H 100k/4 | 0.0396 | 0.00376 | 0.0067 | 0.00908 | 0.0052 | 0.0101 | 0.0044 | 0.00556 | 0.011 | 0.0176 | - |
+| H 100k/8 | 0.0387 | 0.00279 | 0.0111 | 0.0103 | 0.00398 | 0.0112 | 0.00514 | 0.00706 | 0.00929 | 0.0144 | - |
+| H 200k/16 | 0.0942 | 0.00673 | 0.0296 | 0.0525 | 0.00888 | 0.0339 | 0.00885 | 0.0239 | 0.0149 | 0.0314 | - |
+| H 200k/4 | 0.0843 | 0.00843 | 0.0163 | 0.0297 | 0.0122 | 0.0284 | 0.00573 | 0.0111 | 0.0169 | 0.0347 | - |
+| H 200k/8 | 0.0844 | 0.00804 | 0.0198 | 0.0306 | 0.00979 | 0.0294 | 0.00655 | 0.0152 | 0.0136 | 0.0302 | - |
+| H 400k/16 | 0.242 | 0.0173 | 0.15 | 0.157 | 0.0208 | 0.0897 | 0.0116 | 0.0505 | 0.0226 | 0.0578 | - |
+| H 400k/4 | 0.198 | 0.018 | 0.0577 | 0.0893 | 0.023 | 0.0685 | 0.00829 | 0.0215 | 0.0254 | 0.058 | - |
+| H 400k/8 | 0.214 | 0.0134 | 0.085 | 0.0993 | 0.0201 | 0.0703 | 0.00877 | 0.03 | 0.0242 | 0.0556 | - |
+| H 50k/16 | 0.0206 | 0.00292 | 0.00566 | 0.00987 | 0.0023 | 0.00971 | 0.00527 | 0.00512 | 0.00703 | 0.00772 | - |
+| H 50k/4 | 0.019 | 0.0021 | 0.00328 | 0.00621 | 0.00311 | 0.00658 | 0.00327 | 0.00316 | 0.00686 | 0.00862 | - |
+| H 50k/8 | 0.0189 | 0.00155 | 0.00415 | 0.0075 | 0.00253 | 0.00765 | 0.00382 | 0.00371 | 0.00617 | 0.00712 | - |
+| U 100k/16 | 0.0385 | 0.00222 | 0.00181 | 0.00434 | 0.00345 | 0.0047 | 0.00134 | 0.00106 | 0.00482 | 0.00717 | - |
+| U 100k/4 | 0.042 | 0.00372 | 0.00245 | 0.0024 | 0.00253 | 0.00258 | 0.0016 | 0.0011 | 0.00693 | 0.0103 | - |
+| U 100k/8 | 0.0369 | 0.00307 | 0.00222 | 0.0044 | 0.00439 | 0.00461 | 0.00133 | 0.000972 | 0.00537 | 0.0076 | - |
+| U 200k/16 | 0.0782 | 0.00449 | 0.00444 | 0.00868 | 0.00663 | 0.0118 | 0.00251 | 0.00184 | 0.00754 | 0.0121 | - |
+| U 200k/4 | 0.0868 | 0.00763 | 0.00494 | 0.00692 | 0.00704 | 0.00744 | 0.00286 | 0.00156 | 0.0121 | 0.0201 | - |
+| U 200k/8 | 0.0754 | 0.00505 | 0.00362 | 0.00698 | 0.00705 | 0.00783 | 0.00248 | 0.00146 | 0.0104 | 0.0188 | - |
+| U 400k/16 | 0.208 | 0.0135 | 0.0116 | 0.0236 | 0.0158 | 0.0216 | 0.00586 | 0.00436 | 0.0149 | 0.023 | - |
+| U 400k/4 | 0.118 | 0.0123 | 0.00679 | 0.0115 | 0.0117 | 0.0133 | 0.00582 | 0.00269 | 0.026 | 0.0463 | - |
+| U 400k/8 | 0.121 | 0.00992 | 0.00643 | 0.0141 | 0.0142 | 0.0185 | 0.00518 | 0.00301 | 0.0173 | 0.0277 | - |
+| U 50k/16 | 0.0178 | 0.00122 | 0.00104 | 0.00137 | 0.00152 | 0.00153 | 0.000753 | 0.000704 | 0.00428 | 0.00535 | - |
+| U 50k/4 | 0.0206 | 0.00221 | 0.00135 | 0.0014 | 0.00159 | 0.00159 | 0.00104 | 0.000852 | 0.00389 | 0.00506 | - |
+| U 50k/8 | 0.0181 | 0.00171 | 0.00112 | 0.00137 | 0.00156 | 0.00155 | 0.000776 | 0.000674 | 0.00287 | 0.00368 | - |
+| 12.8M controlled | 15.9 | 0.537 | 10.7 | 6.6 | 0.642 | 5.36 | 0.594 | 1.77 | 0.851 | 1.85 | - |
+| 12.8M hub | 23.2 | 0.704 | 16 | 8.93 | 0.808 | 8.2 | 0.755 | 2.03 | 1.03 | 2.13 | - |
+| 12.8M uniform | 15.9 | 0.54 | 0.542 | 0.554 | 0.519 | 0.574 | 0.531 | 0.478 | 0.705 | 1.13 | - |
 
-All numeric cells are seconds. KK=Kokkos, M=MPI, O=OpenMP, C=CUDA. For grid names U/H/C is the family, followed by vertices and average out-degree. o.=original synthetic, s.=canonical synthetic. The table is descriptive best-observed performance, not an equal-core/GPU ranking.
+Values are five-run median solve times (s). KK=Kokkos; M=MPI; O=OpenMP; C=CUDA. U/H/C label graph families, followed by vertices and mean out-degree; o./s. denote original/canonical graphs. Cells can use different resource budgets. 512* is the best of five available cases on C 50k/4; a hyphen marks an unmeasured cell. This column is a partial supplement.
 
 ![Figure 9. Full 45-graph best-observed speedup matrix. CPU and GPU columns use their own matched Serial references. Color is log-scaled and clipped at 1/16x and 64x; exact timings and selected layouts are in the CSV. The resource budget can differ between cells.](figures/09_runtime_matrix.png)
+
+### 3.9 Partial 512-core supplement
+
+The complete main matrix stops at 256 CPU cores. The supplement below contains five validated 512-core configurations out of 1,170 planned combinations, all on Controlled N=50,000 and E=200,000. Each uses eight nodes with 64 active cores per node. Missing methods, layouts and graphs are unmeasured, not zero-time results.
+
+| Method | p / T | Communication | Solve s | Speedup | Efficiency |
+| --- | --- | --- | --- | --- | --- |
+| MPI | 512 / 1 | Allgatherv | 0.131 | 0.227 | 0.044% |
+| MPI+Kokkos OpenMP | 512 / 1 | Allgatherv | 0.13 | 0.229 | 0.045% |
+| MPI+OpenMP | 512 / 1 | Allgatherv | 0.142 | 0.21 | 0.041% |
+| MPI+OpenMP | 128 / 4 | Allgatherv | 0.12 | 0.247 | 0.048% |
+| MPI | 512 / 1 | Halo | 1.6 | 0.0185 | 0.004% |
+
+Every row reports the median of five timed runs after one warm-up and uses the matching CPU Serial baseline. All five cases are slower than Serial on this small graph, and Halo is particularly costly at p=512. This illustrates the cost of distributing a small workload; five cases on one graph do not support a general conclusion about 512-core scaling. This supplement is excluded from the main matrix best-time selection, geometric communication aggregates and weak-scaling curves.
 
 ## 4 Conclusions and insights
 
@@ -287,7 +337,7 @@ Fourth, equal-vertex partitioning is a clear structural limitation: extreme inco
 
 ### 4.2 Conclusions about the real Google graph
 
-The refreshed validated Google Serial vector has 136,259 dangling vertices (15.6%), so dangling-mass redistribution is essential. The highest-scoring 1% of vertices carry 27.1% of the total probability mass. Pearson correlation between PageRank and in-degree is 0.901: incoming links are strongly associated with rank, but raw in-degree is not the complete weighting rule.
+The validated Google Serial vector has 136,259 dangling vertices (15.6%), so dangling-mass redistribution is essential. The highest-scoring 1% of vertices carry 27.1% of the total probability mass. Pearson correlation between PageRank and in-degree is 0.901: incoming links are strongly associated with rank, but raw in-degree is not the complete weighting rule.
 
 | Node ID | PageRank | In-degree | Out-degree |
 | --- | --- | --- | --- |
@@ -301,9 +351,9 @@ These anonymized vertex IDs cannot be mapped to named websites from this edge-li
 
 ### 4.3 Limits, reproducibility and references
 
-This is an initial report of measured non-512 results. The sweep is complete in that scope, but there are only five repeats per configuration within an allocation; graph placement and execution dates vary, and the best-observed matrix introduces selection effects. The report does not measure full application startup, device energy, communication overlap, source-specific PPR, or 4/8-GPU scaling. All 512-core results remain outside the reported comparisons. Names and student IDs must be added before Canvas submission.
+This report presents measured Vanda results with a complete main matrix and a partial 512-core supplement. There are five repeats per configuration within an allocation; placement and execution dates vary, and the best-observed matrix introduces selection effects. Shared-node allocations can span NUMA regions; NUMA locality is not fixed across every allocation. These are observed shared-cluster measurements. Full application startup, energy, communication overlap, source-specific PPR and 4/8-GPU scaling are outside scope. The partial 512-core table does not establish a complete high-core scaling curve.
 
-Reproduction: analyze_report_results.py reads the validated inventory and all referenced summaries/timings; build_non512_report.py produces this PDF, the editable report text and nine vector figures. The data directory provides the full fixed and weak tables, paired communication ratios, equal-core decompositions, graph catalog and audit checks. Original raw results remain unchanged; the source-manifest SHA-256 is recorded in audit.json.
+Reproduction: analyze_report_results.py reads the validated inventory and all referenced summaries/timings; build_non512_report.py produces this PDF, the editable report text and nine vector figures. The data directory provides the full fixed and weak tables, paired communication ratios, equal-core decompositions, graph catalog and audit checks. The data-selection manifest maps every chosen measurement to its timing and validation evidence. Raw records are preserved; input and selection SHA-256 values are recorded in audit.json.
 
 [1] Page, L., Brin, S., Motwani, R. and Winograd, T. The PageRank Citation Ranking: Bringing Order to the Web. Stanford, 1999. http://ilpubs.stanford.edu:8090/422/
 
@@ -313,4 +363,4 @@ Reproduction: analyze_report_results.py reads the validated inventory and all re
 
 [4] Kokkos documentation. Execution spaces, Views and parallel dispatch. https://kokkos.org/kokkos-core-wiki/
 
-[5] Project source and Vanda result records, non-512 validated snapshot of 16 November 2026. https://github.com/rosesnack/DSA5208_PROJECT_3
+[5] Project source and Vanda result records, validated measurement collection of 17 November 2026. https://github.com/rosesnack/DSA5208_PROJECT_3

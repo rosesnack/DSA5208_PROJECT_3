@@ -23,6 +23,6 @@ controls. A repeated timing observation is not a new configuration. PBS jobs can
 contain several configurations and should not be counted as configurations.
 
 The full fixed target is still 20,700, including the 1,170 CPU 512-core targets.
-Five 512-core cells were validated previously; these remain archived but are
-excluded from the report. Missing 512-core work must not be inferred from a
+Five validated 512-core cells are now presented as a separate partial
+supplement; they remain outside main-matrix and weak-scaling aggregates. Missing 512-core work must not be inferred from a
 non-512-only table.

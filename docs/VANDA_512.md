@@ -1,7 +1,6 @@
 # Remaining 512-core work
 
-Latest operational update: 17 November 2026, 01:00 SGT. Job 1560661 is now user-held to prevent output failure while xtt_ella scratch is not writable (errno 28). Do not release it before storage recovery; see [incident details](PERFORMANCE_INVESTIGATION.md). The older scheduling snapshot below is from 16 November 14:21 SGT. No 512-core result is included
-in the non-512 report, tables or figures.
+Latest operational update: 17 November 2026, 01:00 SGT. Job 1560661 is now user-held to prevent output failure while xtt_ella scratch is not writable (errno 28). Do not release it before storage recovery; see [incident details](PERFORMANCE_INVESTIGATION.md). The older scheduling snapshot below is from 16 November 14:21 SGT. The report includes five validated 512-core cells in a separate partial table and matrix column; they do not form a complete curve.
 
 The full 512 fixed target is 1,170 cells. Five previously valid cells are retained
 in the result archive. The other 1,165 consist of 48 newly registered cells, five
@@ -25,7 +24,9 @@ consumption. Submission used the verified balance of 4,861.854 CPUh, reserved al
 other live requests and a further 256 CPUh margin. This does not authorize
 additional submissions without a fresh balance and cross-account overlap check.
 
-The first group is Q; the others are dependency-held. The snapshot has no
+At the 16 November scheduling snapshot the first group was Q. At the latest
+17 November 02:01 snapshot it is user-held for output-storage safety; the other
+two groups remain dependency-held. The snapshot has no
 available physical host meeting the 64-core/memory chunk requirement. The
 controller preserves node/core/memory/walltime parameters when refreshing host
 bindings. It must not substitute 16x32 or oversubscription for the required 8x64.

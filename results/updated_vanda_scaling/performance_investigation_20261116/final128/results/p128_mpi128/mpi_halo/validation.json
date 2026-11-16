@@ -1,0 +1,31 @@
+{
+  "passed": 1,
+  "failed": 0,
+  "process_counts": [
+    128
+  ],
+  "method": "Independent residual checks and full rank comparison with validated serial output",
+  "rank_l1_tolerance": 1e-08,
+  "checks": [
+    {
+      "dataset": "strong_uniform",
+      "passed": true,
+      "nodes": 12800000,
+      "edges": 204800000,
+      "iterations": 12,
+      "independent_residual_l1": 1.4262839174185098e-09,
+      "rank_sum_error": 2.220446049250313e-16,
+      "processes": 128,
+      "communication": "halo",
+      "serial_s": 15.867036746,
+      "mpi_s": 4.296756030000001,
+      "speedup": 3.692794432640849,
+      "efficiency": 0.028849956505006633,
+      "communication_s": 4.160842671000005,
+      "communication_bytes_per_iteration": 1625573480,
+      "communication_setup_bytes": 1625573480,
+      "rank_l1_error": 0.0,
+      "rank_max_error": 0.0
+    }
+  ]
+}

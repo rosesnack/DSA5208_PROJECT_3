@@ -50,7 +50,17 @@ def main():
             else:
                 if method=='mpi':cmd=['python3','scripts/validate_mpi.py',mode,'--processes',str(p)]
                 elif method=='hybrid':cmd=['python3','scripts/validate_hybrid.py',mode,'--processes',str(p)]
-                else:cmd=['python3','scripts/validate_mpi_device.py','mpi_kokkos','OpenMP',mode,'--processes',str(p)]
+                else:cmd=['python3','scripts/validate_mpi_device.py','mpi_kokkos','OpenMP',mode,'--processes',str(p),'--threads',str(t)]
+                prefix=method+('_halo' if mode=='halo' else '')
+                if method=='mpi_kokkos':
+                    report=folder/prefix/'OpenMP'
+                    if t>1:report=report/f'threads_{t}'
+                else:report=folder/prefix
+                report=report/'validation.json'
+                if report.exists():
+                    saved=json.loads(report.read_text())
+                    if saved['failed']==0 and saved['passed']==1:
+                        continue
                 run(cmd,current,log)
     (dest/(args.mode+'_complete.txt')).write_text(env['PBS_JOBID']+'\n')
 

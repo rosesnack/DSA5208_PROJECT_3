@@ -79,10 +79,18 @@ def load_fixed():
     assert len({r['canonical_summary'] for r in selected}) == len(selected)
     records, variants = [], Counter()
     max_median_error = 0
+    selection_file = OUT.parent / 'measurement_selection.json'
+    selection = json.loads(selection_file.read_text()) if selection_file.exists() else {}
     for row in selected:
+        row = dict(row)
+        row.update(selection.get(row['canonical_summary'], {}))
         path = ROOT / row['summary']
         assert row['status'] == 'validated' and (ROOT / row['marker']).is_file()
         s = json.loads(path.read_text())
+        assert s['dataset']==row['graph']
+        if row['canonical_summary'] in selection and (ROOT/row['marker']).suffix=='.json':
+            proof=json.loads((ROOT/row['marker']).read_text())
+            assert proof['failed']==0 and proof['passed']>=1
         timings = read_csv(path.with_name('timings.csv'))
         assert (s['build_type'], s['repeat_runs'], s['warmup_runs']) == ('Release', 5, 1)
         assert (s['alpha'], s['tolerance_l1'], s['fixed_iterations']) == (.85, 1e-8, 0)
@@ -220,7 +228,41 @@ def main():
             r[method+'_best_s']=selected['solve_median_s']
             r[method+'_configuration']=f"n{selected['host_nodes']}:p{selected['processes']}:T{selected['threads']}:{selected['communication']}"
         matrix.append(r)
-    write_csv('runtime_matrix_45.csv', matrix)
+    supplement=[]
+    for row in read_csv(INVENTORY/'experiment_manifest_20700.csv'):
+        if '512' not in row['stage'] or row['status']!='validated':continue
+        assert (ROOT/row['marker']).is_file()
+        path=ROOT/row['summary'];s=json.loads(path.read_text());timings=read_csv(path.with_name('timings.csv'))
+        assert (s['repeat_runs'],s['warmup_runs'],s['build_type'])==(5,1,'Release')
+        assert len(timings)==5 and stats.median(float(x['solve_s']) for x in timings)==s['solve_median_s']
+        assert s['converged'] and s['max_residual_l1']<=1e-8 and s['max_rank_sum_error']<=1e-10
+        p=s['processes'];t=s.get('requested_threads',s.get('actual_threads',1));assert p*t==512
+        provenance=json.loads(path.with_name('provenance.json').read_text())
+        evidence=ROOT/provenance['evidence']
+        hosts=[json.loads(x) for x in (evidence/'cpu_hosts.jsonl').read_text().splitlines()]
+        assert len({x['host'] for x in hosts})==8
+        assert all('Platinum 8452Y' in x['cpu_model'] and x['affinity_cpus']==64 for x in hosts)
+        mapping_name=('hybrid_allgather_p'+str(p)+'_t'+str(t)+'.csv' if s['implementation']=='hybrid' else
+                      ('halo' if s['communication']=='halo' else 'allgather')+'_p512.csv')
+        with (evidence/'mapping'/mapping_name).open() as stream:mapping=list(csv.reader(stream))
+        assert len(mapping)==p and len({x[1] for x in mapping})==8
+        assert set(Counter(x[1] for x in mapping).values())=={p//8}
+        method={'mpi':'MPI','hybrid':'MPI+OpenMP','mpi_kokkos':'MPI+Kokkos OpenMP'}[s['implementation']]
+        supplement.append(dict(graph=row['graph'],method=method,host_nodes=8,processes=p,threads=t,
+              communication='Halo' if s['communication']=='halo' else 'Allgatherv',solve_median_s=s['solve_median_s'],
+              speedup=baselines['cpu_node',row['graph']]/s['solve_median_s'],
+              efficiency=baselines['cpu_node',row['graph']]/s['solve_median_s']/512,
+              source_summary=row['summary'],validation_marker=row['marker']))
+    assert len(supplement)==5
+    write_csv('supplement_512.csv',supplement)
+    for row in matrix:
+        available=[x for x in supplement if x['graph']==row['graph']]
+        best=min(available,key=lambda x:x['solve_median_s']) if available else None
+        row['512_partial_best_s']=best['solve_median_s'] if best else '-'
+        row['512_partial_configuration']=(f"{best['method']}:n8:p{best['processes']}:T{best['threads']}:{best['communication']}"
+                                          if best else '-')
+        row['512_validated_cases']=len(available)
+    write_csv('runtime_matrix_45.csv',matrix)
     strong=[r for r in records if r['context']=='cpu_node' and r['method'] in PARALLEL
             and r['host_nodes']==max(1,r['active_cpu_threads']//32)]
     write_csv('cpu_strong_mainline.csv',strong)
@@ -273,6 +315,9 @@ def main():
                 stage_counts=dict(Counter(r['stage'] for r in records)),
                 source_manifest=str(INVENTORY.relative_to(ROOT)/'experiment_manifest_20700.csv'),
                 source_manifest_sha256=hashlib.sha256((INVENTORY/'experiment_manifest_20700.csv').read_bytes()).hexdigest())
+    selection_path=OUT.parent/'measurement_selection.json'
+    checks['measurement_selection_sha256']=hashlib.sha256(selection_path.read_bytes()).hexdigest() if selection_path.exists() else None
+    checks['supplement_512_configurations']=len(supplement)
     (OUT/'audit.json').write_text(json.dumps(checks,indent=2)+'\n')
     insights=google_insights()
     if insights:

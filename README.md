@@ -1,6 +1,6 @@
 # PageRank: Serial, OpenMP, MPI, MPI+OpenMP, MPI+CUDA, and MPI+Kokkos
 
-Completed non-512 experiments: [PDF report](output/pdf/pagerank_non512_report.pdf), [editable report and evidence](reports/non512/README.md). Current queue snapshot: [Vanda status](docs/VANDA_STATUS.md).
+Vanda experiments: [PDF report](output/pdf/pagerank_non512_report.pdf), [editable report and evidence](reports/non512/README.md). The complete main matrix and partial 512-core supplement are presented separately. Current execution details: [handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md).
 
 Targeted checks of the Google 32-thread cliff, Uniform MPI p128 spike and weak-scaling mechanisms: [performance investigation](docs/PERFORMANCE_INVESTIGATION.md). Reproduction jobs are additional diagnostics, with separate outputs; their results are not yet included in report comparisons.
 

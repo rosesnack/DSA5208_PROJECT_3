@@ -219,3 +219,49 @@ recomputation was submitted for the p128 failure.
 - [hongxinran completion snapshot](../results/updated_vanda_scaling/performance_investigation_20261116/completion_hongxinran_latest.json)
 - [Storage incident, retained alternate path and checksum](../results/updated_vanda_scaling/performance_investigation_20261116/space_incident_20261117.json)
 - [Free recovery submission](../results/updated_vanda_scaling/performance_investigation_20261116/recovery_submission_20261117.json)
+
+
+## Final independent test and report snapshot, 17 November 02:01 SGT
+
+The storage-affected xtt_ella p128 recovery validator 1569085 exited 0 and found
+zero L1 rank error, but the original summary/history remain missing. Its receipt
+explicitly marks canonical_validation_complete false. This incomplete observation
+is preserved as evidence and is not selected into the scientific report.
+
+At the user's request, the final p128 test used hongxinran home output after a
+free 1 GiB write/fsync preflight (1569194, Exit 0). Paid batch_cpu performance
+1569195 used four Platinum 8452Y nodes with 32 cores each, p128,T1,Halo, and
+finished in 2m07s. Free independent validator 1569196 finished in 20m06s, Exit 0.
+Original summary, history, all five timings and validation proof are complete.
+Median solve is 4.296756030 s, communication median 4.122365467 s, independent
+residual 1.4262839174e-9, rank-sum error 2.22e-16 and full-vector Serial L1 error
+zero. The summary communication_max_s stores the last measured run (4.160842671 s),
+not its five-run median; report phase statistics are recomputed from timings.csv.
+The slower point remains a valid final observation; timing localizes a
+communication/synchronization bottleneck without uniquely proving network
+congestion, affinity or an implementation defect. No further paid test was added.
+
+The Uniform 256-core validation driver needed an explicit --threads argument
+for threaded MPI+Kokkos cases. This only changes validation dispatch, not solver
+or performance measurements. Five completed independent reports were reused.
+Sequential validators were retired and nine remaining cases were validated in
+parallel on auto_free (1569272 through 1569280), all Exit 0; free aggregator
+1569281 checked all 14 reports and wrote the complete marker. Hub and Controlled
+remain independently complete. No additional paid computation was needed.
+
+The selected report sources are deterministic: Google uses unbound_default
+OpenMP T1..32 and Kokkos T16/32; the 18 complete hongxinran diagnostic cases and
+this final p128 observation replace matching main-table sources. The 27 selected
+cells retain source and validation job identifiers. Selection does not choose
+between runtime policies by speed. All tables, ratios and figures are regenerated
+from the selected five-run medians. The paper presents the final measurements
+without a troubleshooting chronology; source records and this operational log
+retain provenance. Five historical valid 512-core cells are a separate incomplete
+supplement, excluded from main-matrix aggregates. At 02:01 the remaining new
+512 jobs were H(u)/H(d)/H(d); storage recovery is still required.
+
+- [Final p128 submission](../results/updated_vanda_scaling/performance_investigation_20261116/final128_submission_20261117.json)
+- [Final p128 measurements and validation](../results/updated_vanda_scaling/performance_investigation_20261116/final128/results/)
+- [Parallel free validation receipt](../results/updated_vanda_scaling/performance_investigation_20261116/validation_parallel_20261117.json)
+- [Final completion snapshot](../results/updated_vanda_scaling/performance_investigation_20261116/report_validation_status_latest.json)
+- [Remaining 512 holds](../results/updated_vanda_scaling/performance_investigation_20261116/remaining_512_status_20261117.json)
