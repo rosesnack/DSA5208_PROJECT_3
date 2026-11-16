@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-16T02:35:03.337861+08:00",
+  "observed_at": "2026-11-16T14:19:46.116037+08:00",
   "account": "xtt_ella",
   "jobs": {
     "1555661.stdct-mgmt-02": {
@@ -90,7 +90,8 @@
       "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-memory-check.o1560492"
     },
     "1560513.stdct-mgmt-02": {
-      "job_state": "R",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
       "Hold_Types": "n",
       "Resource_List": {
@@ -106,15 +107,15 @@
         "walltime": "24:00:00"
       },
       "resources_used": {
-        "cpupercent": 78,
-        "cput": "01:30:55",
-        "mem": "5016096kb",
+        "cpupercent": 81,
+        "cput": "02:48:51",
+        "mem": "5017096kb",
         "ncpus": 1,
         "ngpus": 0,
-        "vmem": "5087656kb",
-        "walltime": "01:31:23"
+        "vmem": "5088440kb",
+        "walltime": "02:49:34"
       },
-      "comment": "Job run at Mon Nov 16 at 01:02 on (IN-002[1]:ncpus=1:mem=20gb)",
+      "comment": "Job run at Mon Nov 16 at 01:02 on (IN-002[1]:ncpus=1:mem=20gb) and finished",
       "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-reuse-check.o1560513"
     },
     "1560514.stdct-mgmt-02": {

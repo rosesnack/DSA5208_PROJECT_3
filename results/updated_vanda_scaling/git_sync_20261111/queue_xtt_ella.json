@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-16T02:35:06.504748+08:00",
+  "observed_at": "2026-11-16T14:19:48.920051+08:00",
   "account": "xtt_ella",
   "source_project": "/scratch/xtt_ella/DSA5208_PROJECT_3_20261107",
   "run_id": "20261106T185006Z",
@@ -30,9 +30,8 @@
       "Q": 1
     },
     "validation_states": {
-      "F": 331,
-      "H": 4,
-      "R": 2
+      "F": 333,
+      "H": 4
     },
     "eligible_unregistered_groups": 0,
     "eligible_unregistered_cells": 0,
@@ -41,7 +40,7 @@
       "1560662.stdct-mgmt-02": "H"
     },
     "action": "waiting_existing_jobs",
-    "observed_at": "2026-11-16T02:34:35.571730+08:00",
+    "observed_at": "2026-11-16T14:19:38.001243+08:00",
     "pid": 1301843,
     "interval_seconds": 60,
     "until": "2026-11-16T23:59:00+08:00",
@@ -50,34 +49,6 @@
     "max_total_cores": 512
   },
   "active_jobs": {
-    "1560513.stdct-mgmt-02": {
-      "job_state": "R",
-      "queue": "cpu_serial",
-      "Hold_Types": "n",
-      "Resource_List": {
-        "am_job_cache": "{\"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"job.ncpus\": 1.0, \"job.walltime\": 86400, \"am_cloud_enabled\": false}",
-        "mem": "20gb",
-        "mpiprocs": 1,
-        "ncpus": 1,
-        "ngpus": 0,
-        "nodect": 1,
-        "place": "free",
-        "queue_charge_rate": 0,
-        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
-        "walltime": "24:00:00"
-      },
-      "resources_used": {
-        "cpupercent": 78,
-        "cput": "01:30:55",
-        "mem": "5016096kb",
-        "ncpus": 1,
-        "ngpus": 0,
-        "vmem": "5087656kb",
-        "walltime": "01:31:23"
-      },
-      "comment": "Job run at Mon Nov 16 at 01:02 on (IN-002[1]:ncpus=1:mem=20gb)",
-      "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-reuse-check.o1560513"
-    },
     "1560661.stdct-mgmt-02": {
       "job_state": "Q",
       "Hold_Types": "n",
@@ -18924,7 +18895,8 @@
       "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-memory-check.o1560492"
     },
     "1560513.stdct-mgmt-02": {
-      "job_state": "R",
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
       "Hold_Types": "n",
       "Resource_List": {
@@ -18940,15 +18912,15 @@
         "walltime": "24:00:00"
       },
       "resources_used": {
-        "cpupercent": 78,
-        "cput": "01:30:55",
-        "mem": "5016096kb",
+        "cpupercent": 81,
+        "cput": "02:48:51",
+        "mem": "5017096kb",
         "ncpus": 1,
         "ngpus": 0,
-        "vmem": "5087656kb",
-        "walltime": "01:31:23"
+        "vmem": "5088440kb",
+        "walltime": "02:49:34"
       },
-      "comment": "Job run at Mon Nov 16 at 01:02 on (IN-002[1]:ncpus=1:mem=20gb)",
+      "comment": "Job run at Mon Nov 16 at 01:02 on (IN-002[1]:ncpus=1:mem=20gb) and finished",
       "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-reuse-check.o1560513"
     },
     "1560514.stdct-mgmt-02": {
@@ -19079,7 +19051,7 @@
     }
   },
   "registered_groups": 337,
-  "queue_observed_at": "2026-11-16T02:35:03.337861+08:00",
+  "queue_observed_at": "2026-11-16T14:19:46.116037+08:00",
   "project_query_authenticated": true,
   "balance_cpu_hours": 4955.473,
   "queue_query_available": true,

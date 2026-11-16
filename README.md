@@ -218,7 +218,7 @@ Each configuration saves the following files. Set `PAGERANK_RESULTS_ROOT` to a r
 | `ranks.csv` | Final ranks and node degrees from the last run |
 | `history.csv` | Per-iteration L1 differences from the last run |
 
-**Current Vanda continuation (2026-11-16 02:35 SGT):** 19,475/20,700 cells independently validated and locally audited. All non512 performance runs have exited successfully;60 cells await their existing free validation jobs. The new512-core48-cell batch remains first group queued, two groups gated on its free validation. See the [handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md) for unique assignments.
+**Current Vanda continuation (2026-11-16 14:21 SGT):** All19,530 non512 fixed-graph cells are independently validated and downloaded. Full audit:19,535/20,700, including five prior512-core cells. Remaining1,165 cells are all512-core:48 registered in new jobs, five legacy user-held, and1,112 deferred. First new512 group remains queued; no physical CPU host currently has64 free cores and444GiB free memory. See the [handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md) for current assignments and the separate weak-scaling inventory.
 
 **Complete local backup:** source, scripts and result tables are tracked here. The [full backup guide](FULL_PROJECT_BACKUP_20261109.md) links the same repository's Release containing all local graph inputs, raw rank vectors, pinned Kokkos source, checksums and restore instructions.
 

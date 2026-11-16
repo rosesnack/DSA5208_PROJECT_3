@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-16T02:35:06.504748+08:00",
+  "observed_at": "2026-11-16T14:19:48.920051+08:00",
   "jobs": {
     "1560661.stdct-mgmt-02": {
       "job_state": "Q",
@@ -125,9 +125,8 @@
       "Q": 1
     },
     "validation_states": {
-      "F": 331,
-      "H": 4,
-      "R": 2
+      "F": 333,
+      "H": 4
     },
     "eligible_unregistered_groups": 0,
     "eligible_unregistered_cells": 0,
@@ -136,7 +135,7 @@
       "1560662.stdct-mgmt-02": "H"
     },
     "action": "waiting_existing_jobs",
-    "observed_at": "2026-11-16T02:34:35.571730+08:00",
+    "observed_at": "2026-11-16T14:19:38.001243+08:00",
     "pid": 1301843,
     "interval_seconds": 60,
     "until": "2026-11-16T23:59:00+08:00",

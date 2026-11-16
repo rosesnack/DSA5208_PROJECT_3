@@ -1,0 +1,60 @@
+{
+  "graph": "strong_controlled",
+  "nodes": 1,
+  "cores_per_node": 1,
+  "cores": 1,
+  "priority": 1,
+  "walltime": "03:45:00",
+  "prerequisite": "",
+  "required_job": "1560516.stdct-mgmt-02",
+  "dense_launch_pause_s": 0,
+  "walltime_basis": "Ordinary batches: observed 37s-5m11s, reserve 20/30/45/60m by nodes. Large 32-core batches: 16m-79m observed; reserve 3.5/4/6h. Lower-parallelism large graphs reserve 8h. 512-core ordinary batches reserve 1h and require successful endpoint validation.",
+  "cells": [
+    {
+      "implementation": "mpi_kokkos",
+      "processes": 1,
+      "threads": 1,
+      "communication": "allgather",
+      "canonical_summary": "strong/strong_controlled/nodes1/mpi_kokkos/OpenMP/strong_controlled/p1/summary.json"
+    },
+    {
+      "implementation": "hybrid",
+      "processes": 1,
+      "threads": 1,
+      "communication": "allgather",
+      "canonical_summary": "strong/strong_controlled/nodes1/hybrid/strong_controlled/p1_t1/summary.json"
+    },
+    {
+      "implementation": "mpi",
+      "processes": 1,
+      "threads": 1,
+      "communication": "halo",
+      "canonical_summary": "strong/strong_controlled/nodes1/mpi_halo/strong_controlled/p1/summary.json"
+    },
+    {
+      "implementation": "mpi_kokkos",
+      "processes": 1,
+      "threads": 1,
+      "communication": "halo",
+      "canonical_summary": "strong/strong_controlled/nodes1/mpi_kokkos_halo/OpenMP/strong_controlled/p1/summary.json"
+    },
+    {
+      "implementation": "hybrid",
+      "processes": 1,
+      "threads": 1,
+      "communication": "halo",
+      "canonical_summary": "strong/strong_controlled/nodes1/hybrid_halo/strong_controlled/p1_t1/summary.json"
+    }
+  ],
+  "scheduler_cpu_pool": "cpu_all",
+  "requested_hosts": [
+    "cn-014"
+  ],
+  "extension": "repair_20261116",
+  "raw_stage": "cpu_recovery_20261116",
+  "executables": {
+    "mpi_kokkos": "./build-vanda-memory-repair-20261116/pagerank_mpi_kokkos"
+  },
+  "memory_setup": "Root edge copy released after distribution, outside solver timing",
+  "dependency": "1560516.stdct-mgmt-02"
+}
