@@ -1,0 +1,89 @@
+{
+  "time": "2026-11-17T00:53:29.500403+08:00",
+  "jobs": {
+    "1567383.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "resources_used": {
+        "cpupercent": 18783,
+        "cput": "32:00:31",
+        "mem": "58186060kb",
+        "ncpus": 256,
+        "ngpus": 0,
+        "vmem": "19066044kb",
+        "walltime": "00:17:54"
+      },
+      "comment": "Job run at Mon Nov 16 at 23:47 on (CN-007[0]:ncpus=32:mem=222gb)+(CN-074[0]:ncpus=32:mem=222gb)+(CN-081[0]:ncpus=32:mem=222gb)+(CN-093[0]:mem=86439mb:ncpus=12+CN-093[1]:mem=140889mb:ncpus=20)+(CN-115[0]:mem=166gb:ncpus=24+CN-115[1]:mem=56gb:ncpus=8)+(C... and finished"
+    },
+    "1567384.stdct-mgmt-02": {
+      "job_state": "R",
+      "Exit_status": null,
+      "resources_used": {
+        "cpupercent": 77,
+        "cput": "00:46:54",
+        "mem": "5255396kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5587344kb",
+        "walltime": "00:47:20"
+      },
+      "comment": "Job run at Tue Nov 17 at 00:06 on (IN-002[0]:ncpus=1:mem=20gb)"
+    },
+    "1567385.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "resources_used": {
+        "cpupercent": 16709,
+        "cput": "22:46:08",
+        "mem": "30937896kb",
+        "ncpus": 256,
+        "ngpus": 0,
+        "vmem": "17208376kb",
+        "walltime": "00:05:47"
+      },
+      "comment": "Job run at Tue Nov 17 at 00:05 on (CN-007[0]:ncpus=32:mem=222gb)+(CN-074[0]:ncpus=32:mem=222gb)+(CN-081[0]:ncpus=32:mem=222gb)+(CN-093[0]:mem=86439mb:ncpus=12+CN-093[1]:mem=140889mb:ncpus=20)+(CN-115[0]:mem=166gb:ncpus=24+CN-115[1]:mem=56gb:ncpus=8)+(C... and finished"
+    },
+    "1567386.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "resources_used": {
+        "cpupercent": 81,
+        "cput": "00:29:13",
+        "mem": "5014748kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5094244kb",
+        "walltime": "00:29:23"
+      },
+      "comment": "Job run at Tue Nov 17 at 00:11 on (IN-001[1]:ncpus=1:mem=20gb) and finished"
+    },
+    "1567387.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "resources_used": {
+        "cpupercent": 14846,
+        "cput": "18:09:46",
+        "mem": "31441752kb",
+        "ncpus": 256,
+        "ngpus": 0,
+        "vmem": "17577648kb",
+        "walltime": "00:04:43"
+      },
+      "comment": "Job run at Tue Nov 17 at 00:11 on (CN-007[0]:ncpus=32:mem=222gb)+(CN-074[0]:ncpus=32:mem=222gb)+(CN-081[0]:ncpus=32:mem=222gb)+(CN-093[0]:mem=86439mb:ncpus=12+CN-093[1]:mem=140889mb:ncpus=20)+(CN-115[0]:mem=166gb:ncpus=24+CN-115[1]:mem=56gb:ncpus=8)+(C... and finished"
+    },
+    "1567388.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "resources_used": {
+        "cpupercent": 87,
+        "cput": "00:28:04",
+        "mem": "5010660kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "5090916kb",
+        "walltime": "00:28:14"
+      },
+      "comment": "Job run at Tue Nov 17 at 00:16 on (IN-002[0]:ncpus=1:mem=20gb) and finished"
+    }
+  }
+}

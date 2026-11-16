@@ -1,0 +1,49 @@
+{
+  "time": "2026-11-17T01:02:05.343455+08:00",
+  "jobs": {
+    "1567279.stdct-mgmt-02": {
+      "job_state": "F",
+      "Hold_Types": "n",
+      "Exit_status": 1,
+      "comment": "Job run at Mon Nov 16 at 23:42 on (CN-093[0]:mem=86439mb:ncpus=12+CN-093[1]:mem=140889mb:ncpus=20)+(CN-115[0]:mem=166gb:ncpus=24+CN-115[1]:mem=56gb:ncpus=8)+(CN-118[0]:mem=86481mb:ncpus=12+CN-118[1]:mem=140847mb:ncpus=20)+(CN-146[1]:ncpus=32:mem=222gb) and failed",
+      "resources_used": {
+        "cpupercent": 3587,
+        "cput": "03:20:45",
+        "mem": "17647960kb",
+        "ncpus": 128,
+        "ngpus": 0,
+        "vmem": "16631804kb",
+        "walltime": "00:01:54"
+      }
+    },
+    "1567280.stdct-mgmt-02": {
+      "job_state": "F",
+      "Hold_Types": "d",
+      "Exit_status": null,
+      "comment": null,
+      "resources_used": null
+    },
+    "1560661.stdct-mgmt-02": {
+      "job_state": "H",
+      "Hold_Types": "u",
+      "Exit_status": null,
+      "comment": "Job held by xtt_ella on Tue Nov 17 00:58:10 2026",
+      "resources_used": null
+    },
+    "1569085.stdct-mgmt-02": {
+      "job_state": "R",
+      "Hold_Types": "n",
+      "Exit_status": null,
+      "comment": "Job run at Tue Nov 17 at 01:00 on (CN-161[0]:ncpus=1:mem=20gb)",
+      "resources_used": {
+        "cpupercent": 87,
+        "cput": "00:01:16",
+        "mem": "509460kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "531564kb",
+        "walltime": "00:01:19"
+      }
+    }
+  }
+}

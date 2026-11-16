@@ -170,3 +170,52 @@ The paid queue permits at most 720 running CPUs per user. Thus the three new
 hongxinran groups, 256 CPUs each, cannot all run simultaneously under that limit;
 at most two can run together. At the current zero-running snapshot, that limit
 is not the immediate reason they are queued.
+
+## Overnight measurements and storage incident, 17 November 01:00 SGT
+
+All three hongxinran performance jobs completed with Exit 0. Uniform 1567383
+used 17m54s; Hub 1567385 used 5m47s; Controlled 1567387 used 4m43s. Hub validation
+1567386 and Controlled validation 1567388 also completed with Exit 0. Uniform
+validation 1567384 is still running. Eighteen measurement sets, their five-run
+timings, mappings and existing validator outputs have been downloaded. Local
+median and numerical-summary checks pass; the 14 Uniform sets are not yet counted
+as independently complete. The node-placement controller exited after all its
+registered performance jobs ended. These jobs stayed in batch_cpu; some physical
+hosts were allocated using portions of both NUMA vnodes.
+
+Pure MPI p256 reproductions: Uniform Allgatherv/Halo 1.053/0.554 s (validation
+pending), Hub 8.932/9.469 s, Controlled 6.598/6.879 s. These are independent
+observations; no historical report table has been silently replaced.
+
+xtt_ella's p128 job 1567279 started at 23:42 and exited 1 after 1m54s. All five
+solve observations were saved (median 3.165987798 s), and the rank vector ends at
+vertex 12,799,999. History and the original summary were not saved. Single-byte
+write probes in both scratch project/result directories returned errno 28,
+`No space left on device`. This is an output/storage failure, not a walltime
+termination. Its dependent validation did not run. The measurement is retained
+as incomplete evidence and is excluded from full-completion counts.
+
+Free recovery validator 1569085 reads the existing vector and timings, independently
+checks degrees/residual/Serial agreement from the edge list, and writes to the
+writable home filesystem. It never invents the missing convergence history.
+Even a passing numerical recovery report will explicitly retain the missing
+history flag; it is not the ordinary complete validation marker.
+
+A bounded relocation attempt copied one already validated new Google vector
+(29,913,145 bytes) to home and verified its SHA-256 before removing the scratch
+copy. Scratch then refused the replacement symlink with errno 28. The bytes are
+retained in home; the original path has not yet been restored. No additional
+vector was moved and historical result/reference vectors were untouched. The
+alternate path and digest are in the incident receipt. This attempt did not
+restore scratch writability. Do not repeat broad cleanup or delete old vectors.
+
+To prevent another output failure, pending 512 job 1560661 was explicitly
+user-held; its two follow-on jobs remain dependency-held. Restore writable output
+storage and inspect the original assignment before releasing that user hold.
+No running performance job was killed, no queue was changed, and no paid
+recomputation was submitted for the p128 failure.
+
+- [hongxinran measurements and proofs](../results/updated_vanda_scaling/performance_investigation_20261116/hongxinran/)
+- [hongxinran completion snapshot](../results/updated_vanda_scaling/performance_investigation_20261116/completion_hongxinran_latest.json)
+- [Storage incident, retained alternate path and checksum](../results/updated_vanda_scaling/performance_investigation_20261116/space_incident_20261117.json)
+- [Free recovery submission](../results/updated_vanda_scaling/performance_investigation_20261116/recovery_submission_20261117.json)

@@ -1,6 +1,6 @@
 # Remaining 512-core work
 
-Operational snapshot: 16 November 2026, 14:21 SGT. No 512-core result is included
+Latest operational update: 17 November 2026, 01:00 SGT. Job 1560661 is now user-held to prevent output failure while xtt_ella scratch is not writable (errno 28). Do not release it before storage recovery; see [incident details](PERFORMANCE_INVESTIGATION.md). The older scheduling snapshot below is from 16 November 14:21 SGT. No 512-core result is included
 in the non-512 report, tables or figures.
 
 The full 512 fixed target is 1,170 cells. Five previously valid cells are retained
