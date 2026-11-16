@@ -1,8 +1,8 @@
 # PageRank: Serial, OpenMP, MPI, MPI+OpenMP, MPI+CUDA, and MPI+Kokkos
 
-Latest Vanda progress and newly assigned work: [two-account status](updated_vanda_two_accounts_20261111.md).
+Completed non-512 experiments: [PDF report](output/pdf/pagerank_non512_report.pdf), [editable report and evidence](reports/non512/README.md). Current queue snapshot: [Vanda status](docs/VANDA_STATUS.md).
 
-Full fixed-graph target: **20,700 configurations** (original 19,980 plus 720 later requested 512-core splits). **Current execution and teammate handover: [Vanda handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md).** It distinguishes completed, submitted, held, failed, deferred and owner-assigned missing cells; do not submit from an old plan or a fresh RUN_ID without ownership transfer. See also [CPU split coverage](updated_cpu_layout_coverage_20261111.md).
+Full fixed-graph target: **20,700 configurations** (original 19,980 plus 720 later requested 512-core splits). **Current execution and teammate handover: [Vanda handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md).** It distinguishes completed, submitted, held, failed, deferred and owner-assigned missing cells; do not submit from an old plan or a fresh RUN_ID without ownership transfer. See also [CPU split coverage](HANDOFF_VANDA_EXPERIMENTS_20261106.md).
 
 A C++17 implementation of synchronous pull-based PageRank for DSA5208 Project 3. The fixed-graph matrix compares Serial, OpenMP, CUDA, Kokkos OpenMP/CUDA, pure MPI, MPI+OpenMP, MPI+CUDA, and MPI+Kokkos. Every MPI method implements both Allgatherv and Halo; the standalone methods have no MPI communication mode.
 
@@ -38,7 +38,7 @@ DSA5208_PROJECT_3/
     └── hybrid/{google,uniform,hub}/p<P>_t<T>/
 ```
 
-Refreshed experiment runs are stored separately under `results/updated_local_macos/`, `results/updated_vanda/`, `results/updated_vanda_gpu/`, and `results/updated_vanda_scaling/`; they do not overwrite the original result set. The completed 31 October local run is summarized in [`updated_experimental_conclusions_20261031.md`](updated_experimental_conclusions_20261031.md).
+Refreshed experiment runs are stored separately under `results/updated_local_macos/`, `results/updated_vanda/`, `results/updated_vanda_gpu/`, and `results/updated_vanda_scaling/`; they do not overwrite the original result set. Legacy laptop results remain in their original directories; they are excluded from the non-512 Vanda report.
 
 `P` is the number of MPI processes; `T` is the requested number of OpenMP threads per process.
 
@@ -236,9 +236,9 @@ The GPU job stores results separately under `results/vanda-a40-gpu/<PBS_JOBID>/`
 
 ## Updated experiment matrix and coverage
 
-The full current target matrix and statuses are specified in the [handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md); [`updated_experiment_matrix_20261103.md`](updated_experiment_matrix_20261103.md) preserves the earlier design. It covers the three original graphs and all 42 reproducible fixed graphs, plus three separate weak-scaling graph families. The generated grid crosses 50k/100k/200k/400k vertices with average out-degree 4/8/16 for each family. The 45 fixed graphs are used for standalone comparisons and strong scaling; the weak-scaling graphs are generated separately as resource counts grow. The target matrix is larger than the currently validated result set.
+The full current target matrix and statuses are specified in the [handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md). It covers the three original graphs and all 42 reproducible fixed extensions, plus three separate weak-scaling graph families. The generated grid crosses 50k/100k/200k/400k vertices with average out-degree 4/8/16 for each family. The 45 fixed graphs are used for standalone comparisons and strong scaling; the weak-scaling graphs are generated separately as resource counts grow. All non-512 fixed-graph configurations are validated; 512-core work is tracked separately.
 
-The current completed/missing matrix, live-state snapshot times, ownership and teammate prompt are in the [handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md). Older dated status/conclusion/budget documents are historical observations, not current submission instructions.
+The current completed/missing matrix, live-state snapshot times, ownership and teammate prompt are in the [handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md). Older daily notes have been consolidated; use Git history for those snapshots. The [repository guide](docs/REPOSITORY_GUIDE.md) lists the current entry points.
 
 - **Standalone ablations:** Serial; OpenMP with 1/2/4/8/16/32 threads; Kokkos OpenMP with the same thread counts; native CUDA and Kokkos CUDA with one A40. These methods have no MPI communication choice.
 - **CPU distributed methods:** Pure MPI and MPI+Kokkos OpenMP at T=1 use 1/2/4/8 nodes crossed with 1/2/4/8/16/32 ranks per node, plus a separate 8-node × 64-rank 512-core point. MPI+OpenMP adds every T=1/2/4/8/16/32 that fits 32 CPU cores per node, plus 512×1 and 128×4 on 8 nodes with 64 cores per node. The matching MPI+Kokkos OpenMP T>1 grid is implemented as a separate extension pipeline. The later requested 512-core T=2/8/16/32 splits add 720 cells for the two hybrid methods; these remain in the full target. Each graph, rank, thread, and node layout runs **both** `--communication=allgather` and `--communication=halo`.
@@ -306,7 +306,7 @@ bash scripts/submit_vanda_mpi_strong_retry.sh <run-id> <project-name> \
 
 This continuation reuses only measurements with all five timed repeats, the summary, history, and rank output present in the same scratch run. It reuses complete validation reports, computes missing configurations, and writes a batch completion marker only after all validators pass. The original failed job and each replacement are retained in `retry_jobs.tsv`.
 
-After jobs pass their independent residual, mass, history, rank comparison, and repeated timing checks, their JSON/CSV outputs are copied to `results/updated_vanda_scaling/<run-id>/`. The large per-vertex `ranks.csv` files remain in scratch only until validation finishes. `scripts/plot_scaling.py` plots the completed matrix; its plots must not be treated as evidence until all plotted rows are validated. The Vanda CUDA and Kokkos CUDA Release builds and two-node correctness tests passed on 2 November 2026. The latest dated batch snapshot is in [`updated_vanda_run_status_20261105.md`](updated_vanda_run_status_20261105.md); the validated results and current limits are indexed in [`updated_results_snapshot_20261104.md`](updated_results_snapshot_20261104.md).
+After jobs pass their independent residual, mass, history, rank comparison, and repeated timing checks, their JSON/CSV outputs are copied to `results/updated_vanda_scaling/<run-id>/`. The large per-vertex `ranks.csv` files remain in scratch only until validation finishes. `scripts/plot_scaling.py` plots the completed matrix; its plots must not be treated as evidence until all plotted rows are validated. The Vanda CUDA and Kokkos CUDA Release builds and two-node correctness tests passed on 2 November 2026. Current validated coverage and remaining work are summarized in [Vanda status](docs/VANDA_STATUS.md); the non-512 scientific analysis is in the [report](reports/non512/README.md).
 
 Keep the existing Git-tracked `results/` runs unchanged. Synchronize the current matrix with:
 
@@ -339,7 +339,7 @@ LOCAL_BUILD_DIR=/path/to/release-build LOCAL_MPIEXEC=/path/to/mpiexec \
 
 The local scripts write to `results/updated_local_macos/20261031_full_cpu_kokkos45/` and `results/updated_local_macos/20261031_weak_cpu_kokkos45/`. The first covers Serial, OpenMP, standalone Kokkos OpenMP, pure MPI, MPI+OpenMP, and MPI+Kokkos OpenMP; the latter repeats the available methods on the weak-scaling graphs. Both MPI communication modes are paired at every local MPI configuration.
 
-See [`updated_experimental_conclusions_20261101.md`](updated_experimental_conclusions_20261101.md) for the completed 42-graph fixed and 12-graph local weak matrices, validation scope, halo communication comparison, and remaining cluster/GPU runs. The earlier [`updated_experimental_conclusions_20261031.md`](updated_experimental_conclusions_20261031.md) and [`updated_experimental_conclusions_20261030.md`](updated_experimental_conclusions_20261030.md) snapshots are retained.
+The [non-512 Vanda report](reports/non512/README.md) provides the current measured conclusions, full result matrix, validation audit and figures. Older laptop and exploratory data are retained as separate historical result folders.
 
 ### Optional compact setup for low-core MPI+Kokkos large graphs
 

@@ -1,0 +1,41 @@
+{
+  "fixed_configurations": 19530,
+  "timed_runs": 97650,
+  "weak_configurations": 372,
+  "weak_suite_counts": {
+    "rank_cpu_regular": 150,
+    "core_cpu": 84,
+    "gpu_node": 138
+  },
+  "graph_count": 45,
+  "all_512_excluded": true,
+  "non512_targets_complete": true,
+  "max_residual_l1": 7.519725947321343e-09,
+  "max_rank_sum_error": 9.725886762623759e-12,
+  "max_summary_median_difference_s": 0,
+  "median_repeat_relative_range": 0.04993016324835258,
+  "p95_repeat_relative_range": 0.3539765353214173,
+  "iteration_distinct_counts_per_graph_context": {
+    "1": 90
+  },
+  "compact_setup_configurations": 12,
+  "stage_counts": {
+    "serial": 45,
+    "openmp": 270,
+    "kokkos_openmp": 270,
+    "mpi_cpu": 2160,
+    "mpi_kokkos_cpu_t1": 2160,
+    "mpi_openmp": 7560,
+    "mpi_kokkos_cpu_threads": 5400,
+    "gpu_node_serial": 45,
+    "gpu_node_openmp": 270,
+    "cuda": 45,
+    "kokkos_cuda": 45,
+    "gpu_node_mpi_cpu": 180,
+    "gpu_node_mpi_openmp": 720,
+    "mpi_cuda": 180,
+    "mpi_kokkos_cuda": 180
+  },
+  "source_manifest": "results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv",
+  "source_manifest_sha256": "214b3c76b46e6dbf4d8ff27df17fa5f8a61febb9bc9c67fa95ebeff94f9aa62c"
+}
