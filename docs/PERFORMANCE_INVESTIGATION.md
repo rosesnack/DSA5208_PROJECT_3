@@ -139,3 +139,34 @@ completed main-matrix configuration was scheduled as a missing cell.
 - [hongxinran queue snapshot](../results/updated_vanda_scaling/performance_investigation_20261116/queue_hongxinran_latest.json)
 - [xtt_ella queue snapshot](../results/updated_vanda_scaling/performance_investigation_20261116/queue_xtt_ella_latest.json)
 - [256-core diagnostic driver](../scripts/investigate_256.py)
+
+## Same-queue placement control, 22:38 SGT
+
+The user explicitly requested resource/host adjustments without changing queues.
+Both accounts now run a bounded host-placement controller every 60 seconds until
+17 November 06:00 SGT. It handles only the four unfinished diagnostic performance
+groups, keeps batch_cpu, all rank/thread/core/node counts, memory, walltime and
+communication cases, and selects only previously verified Platinum 8452Y hosts.
+The completed Google job and dependent validators are not resubmitted. Existing
+512-core work remains under its separate controller and was not changed here.
+
+The 22:37 physical-host check summed NUMA vnodes rather than treating every vnode
+as a separate machine. In cpu_all no physical host had 32 free CPUs; the maximum
+was 20. In gpu_all no host had 32 free CPUs either. Hence no immediate compatible
+host rebinding was possible, and no resource mutation was made. Lowering memory
+alone would not solve this CPU shortage. A PBS `free` state denotes a schedulable
+vnode, not an entirely idle physical host.
+
+Both controller startup checks succeeded. Their status and bounded scope are in
+[xtt_ella](../results/updated_vanda_scaling/performance_investigation_20261116/placement_watch_xtt_ella.json)
+and [hongxinran](../results/updated_vanda_scaling/performance_investigation_20261116/placement_watch_hongxinran.json).
+These are login-node controllers only: they query PBS and update queued host
+bindings, never execute PageRank kernels or consume a performance allocation.
+For an early stop, create `STOP` in the account's
+`results/updated_vanda_scaling/performance_investigation_20261116/placement_watch/`.
+The controller will also exit when all its registered performance jobs finish.
+
+The paid queue permits at most 720 running CPUs per user. Thus the three new
+hongxinran groups, 256 CPUs each, cannot all run simultaneously under that limit;
+at most two can run together. At the current zero-running snapshot, that limit
+is not the immediate reason they are queued.

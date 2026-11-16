@@ -1,0 +1,682 @@
+{
+  "time": "2026-11-16T22:37:00.543175+08:00",
+  "capacity": {
+    "cpu_all": {
+      "hosts": 126,
+      "free32": 0,
+      "free64": 0,
+      "top": [
+        [
+          "cn-134",
+          {
+            "cpu": 20,
+            "memory": 150750625792.0
+          }
+        ],
+        [
+          "cn-104",
+          {
+            "cpu": 16,
+            "memory": 121759596544.0
+          }
+        ],
+        [
+          "cn-011",
+          {
+            "cpu": 14,
+            "memory": 107800952832.0
+          }
+        ],
+        [
+          "cn-009",
+          {
+            "cpu": 12,
+            "memory": 92768567296.0
+          }
+        ],
+        [
+          "cn-013",
+          {
+            "cpu": 12,
+            "memory": 91694825472.0
+          }
+        ],
+        [
+          "cn-087",
+          {
+            "cpu": 12,
+            "memory": 91694825472.0
+          }
+        ],
+        [
+          "cn-121",
+          {
+            "cpu": 12,
+            "memory": 91694825472.0
+          }
+        ],
+        [
+          "cn-128",
+          {
+            "cpu": 12,
+            "memory": 91694825472.0
+          }
+        ],
+        [
+          "cn-004",
+          {
+            "cpu": 8,
+            "memory": 64851279872.0
+          }
+        ],
+        [
+          "cn-016",
+          {
+            "cpu": 8,
+            "memory": 62703796224.0
+          }
+        ],
+        [
+          "cn-075",
+          {
+            "cpu": 8,
+            "memory": 62703796224.0
+          }
+        ],
+        [
+          "cn-100",
+          {
+            "cpu": 8,
+            "memory": 61630054400.0
+          }
+        ],
+        [
+          "cn-111",
+          {
+            "cpu": 8,
+            "memory": 62703796224.0
+          }
+        ],
+        [
+          "cn-113",
+          {
+            "cpu": 8,
+            "memory": 62703796224.0
+          }
+        ],
+        [
+          "cn-115",
+          {
+            "cpu": 8,
+            "memory": 62703796224.0
+          }
+        ],
+        [
+          "cn-120",
+          {
+            "cpu": 8,
+            "memory": 62703796224.0
+          }
+        ]
+      ]
+    },
+    "gpu_all": {
+      "hosts": 35,
+      "free32": 0,
+      "free64": 0,
+      "top": [
+        [
+          "gn-a40-048",
+          {
+            "cpu": 8,
+            "memory": 61630054400.0
+          }
+        ],
+        [
+          "gn-a40-049",
+          {
+            "cpu": 8,
+            "memory": 61630054400.0
+          }
+        ],
+        [
+          "gn-a40-051",
+          {
+            "cpu": 8,
+            "memory": 61630054400.0
+          }
+        ],
+        [
+          "gn-a40-058",
+          {
+            "cpu": 8,
+            "memory": 61630054400.0
+          }
+        ],
+        [
+          "gn-a40-061",
+          {
+            "cpu": 8,
+            "memory": 62703796224.0
+          }
+        ],
+        [
+          "gn-a40-046",
+          {
+            "cpu": 6,
+            "memory": 46597668864.0
+          }
+        ],
+        [
+          "gn-a40-053",
+          {
+            "cpu": 2,
+            "memory": 17606639616.0
+          }
+        ],
+        [
+          "gn-a40-007",
+          {
+            "cpu": 0,
+            "memory": 1500512256.0
+          }
+        ],
+        [
+          "gn-a40-047",
+          {
+            "cpu": 0,
+            "memory": 1500512256.0
+          }
+        ],
+        [
+          "gn-a40-050",
+          {
+            "cpu": 0,
+            "memory": 1500512256.0
+          }
+        ],
+        [
+          "gn-a40-052",
+          {
+            "cpu": 0,
+            "memory": 1500512256.0
+          }
+        ],
+        [
+          "gn-a40-054",
+          {
+            "cpu": 0,
+            "memory": 1500512256.0
+          }
+        ],
+        [
+          "gn-a40-055",
+          {
+            "cpu": 0,
+            "memory": 22975348736.0
+          }
+        ],
+        [
+          "gn-a40-056",
+          {
+            "cpu": 0,
+            "memory": 1500512256.0
+          }
+        ],
+        [
+          "gn-a40-057",
+          {
+            "cpu": 0,
+            "memory": 1500512256.0
+          }
+        ],
+        [
+          "gn-a40-059",
+          {
+            "cpu": 0,
+            "memory": 1500512256.0
+          }
+        ]
+      ]
+    }
+  },
+  "node_examples": [
+    {
+      "name": "CN-011",
+      "state": "free",
+      "available": {
+        "arch": "linux",
+        "host": "cn-011",
+        "hpmem": "0b",
+        "mem": "0b",
+        "ncpus": 0,
+        "ngpus": 0,
+        "node_pool": "cpu_node",
+        "swap": "0b",
+        "switch": "ccid-01,cpu_all",
+        "vmem": "525755280kb",
+        "vnode": "CN-011"
+      },
+      "assigned": {}
+    },
+    {
+      "name": "CN-011[0]",
+      "state": "free",
+      "available": {
+        "arch": "linux",
+        "host": "cn-011",
+        "hpmem": "0mb",
+        "mem": "256465mb",
+        "ncpus": 36,
+        "node_pool": "cpu_node",
+        "numaset": "CN-011[0]",
+        "swap": "0mb",
+        "switch": "ccid-01,cpu_all",
+        "vnode": "CN-011[0]"
+      },
+      "assigned": {
+        "mem": "227793mb",
+        "ncpus": 32
+      }
+    },
+    {
+      "name": "CN-011[1]",
+      "state": "free",
+      "available": {
+        "arch": "linux",
+        "host": "cn-011",
+        "hpmem": "0mb",
+        "mem": "256966mb",
+        "ncpus": 36,
+        "node_pool": "cpu_node",
+        "numaset": "CN-011[1]",
+        "swap": "0mb",
+        "switch": "ccid-01,cpu_all",
+        "vnode": "CN-011[1]"
+      },
+      "assigned": {
+        "mem": "182831mb",
+        "ncpus": 26
+      }
+    },
+    {
+      "name": "CN-104",
+      "state": "free",
+      "available": {
+        "arch": "linux",
+        "host": "cn-104",
+        "hpmem": "0b",
+        "mem": "0b",
+        "ncpus": 0,
+        "ngpus": 0,
+        "node_pool": "cpu_node",
+        "swap": "0b",
+        "switch": "ccid-08,cpu_all",
+        "vmem": "525755304kb",
+        "vnode": "CN-104"
+      },
+      "assigned": {}
+    },
+    {
+      "name": "CN-104[0]",
+      "state": "job-busy",
+      "available": {
+        "arch": "linux",
+        "host": "cn-104",
+        "hpmem": "0mb",
+        "mem": "256423mb",
+        "ncpus": 36,
+        "node_pool": "cpu_node",
+        "numaset": "CN-104[0]",
+        "swap": "0mb",
+        "switch": "ccid-08,cpu_all",
+        "vnode": "CN-104[0]"
+      },
+      "assigned": {
+        "mem": "256423mb",
+        "ncpus": 36
+      }
+    },
+    {
+      "name": "CN-104[1]",
+      "state": "free",
+      "available": {
+        "arch": "linux",
+        "host": "cn-104",
+        "hpmem": "0mb",
+        "mem": "257008mb",
+        "ncpus": 36,
+        "node_pool": "cpu_node",
+        "numaset": "CN-104[1]",
+        "swap": "0mb",
+        "switch": "ccid-08,cpu_all",
+        "vnode": "CN-104[1]"
+      },
+      "assigned": {
+        "mem": "140889mb",
+        "ncpus": 20
+      }
+    },
+    {
+      "name": "CN-134",
+      "state": "free",
+      "available": {
+        "arch": "linux",
+        "host": "cn-134",
+        "hpmem": "0b",
+        "mem": "0b",
+        "ncpus": 0,
+        "ngpus": 0,
+        "node_pool": "cpu_node",
+        "swap": "0b",
+        "switch": "ccid-10,cpu_all",
+        "vmem": "525755268kb",
+        "vnode": "CN-134"
+      },
+      "assigned": {}
+    },
+    {
+      "name": "CN-134[0]",
+      "state": "free",
+      "available": {
+        "arch": "linux",
+        "host": "cn-134",
+        "hpmem": "0mb",
+        "mem": "256465mb",
+        "ncpus": 36,
+        "node_pool": "cpu_node",
+        "numaset": "CN-134[0]",
+        "swap": "0mb",
+        "switch": "ccid-10,cpu_all",
+        "vnode": "CN-134[0]"
+      },
+      "assigned": {
+        "mem": "113664mb",
+        "ncpus": 16
+      }
+    },
+    {
+      "name": "CN-134[1]",
+      "state": "job-busy",
+      "available": {
+        "arch": "linux",
+        "host": "cn-134",
+        "hpmem": "0mb",
+        "mem": "256966mb",
+        "ncpus": 36,
+        "node_pool": "cpu_node",
+        "numaset": "CN-134[1]",
+        "swap": "0mb",
+        "switch": "ccid-10,cpu_all",
+        "vnode": "CN-134[1]"
+      },
+      "assigned": {
+        "mem": "250gb",
+        "ncpus": 36
+      }
+    },
+    {
+      "name": "GN-A40-048",
+      "state": "free",
+      "available": {
+        "arch": "linux",
+        "gpu-type": "nvidia",
+        "host": "gn-a40-048",
+        "hpmem": "0b",
+        "mem": "0b",
+        "ncpus": 0,
+        "ngpus": 0,
+        "node_pool": "cpu_node",
+        "swap": "0b",
+        "switch": "gcid-03,gpu_all",
+        "vmem": "525755308kb",
+        "vnode": "GN-A40-048"
+      },
+      "assigned": {}
+    },
+    {
+      "name": "GN-A40-048[0]",
+      "state": "job-busy",
+      "available": {
+        "arch": "linux",
+        "gpu-type": "nvidia",
+        "gpu_compute_capability": 8.6,
+        "gpu_mem": "48305799kb",
+        "gpu_model": "A40",
+        "gpu_sliced": "False",
+        "gpu_vendor": "NVIDIA",
+        "host": "gn-a40-048",
+        "hpmem": "0mb",
+        "mem": "256423mb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "node_pool": "cpu_node",
+        "numaset": "GN-A40-048[0]",
+        "swap": "0mb",
+        "switch": "gcid-03,gpu_all",
+        "vnode": "GN-A40-048[0]"
+      },
+      "assigned": {
+        "mem": "256423mb",
+        "ncpus": 36
+      }
+    },
+    {
+      "name": "GN-A40-048[1]",
+      "state": "free",
+      "available": {
+        "arch": "linux",
+        "gpu-type": "nvidia",
+        "gpu_compute_capability": 8.6,
+        "gpu_mem": "48305799kb",
+        "gpu_model": "A40",
+        "gpu_sliced": "False",
+        "gpu_vendor": "NVIDIA",
+        "host": "gn-a40-048",
+        "hpmem": "0mb",
+        "mem": "257008mb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "node_pool": "cpu_node",
+        "numaset": "GN-A40-048[1]",
+        "swap": "0mb",
+        "switch": "gcid-03,gpu_all",
+        "vnode": "GN-A40-048[1]"
+      },
+      "assigned": {
+        "mem": "198233mb",
+        "ncpus": 28
+      }
+    },
+    {
+      "name": "GN-A40-049",
+      "state": "free",
+      "available": {
+        "arch": "linux",
+        "gpu-type": "nvidia",
+        "host": "gn-a40-049",
+        "hpmem": "0b",
+        "mem": "0b",
+        "ncpus": 0,
+        "ngpus": 0,
+        "node_pool": "cpu_node",
+        "swap": "0b",
+        "switch": "gcid-03,gpu_all",
+        "vmem": "525755296kb",
+        "vnode": "GN-A40-049"
+      },
+      "assigned": {}
+    },
+    {
+      "name": "GN-A40-049[0]",
+      "state": "job-busy",
+      "available": {
+        "arch": "linux",
+        "gpu-type": "nvidia",
+        "gpu_compute_capability": 8.6,
+        "gpu_mem": "48305799kb",
+        "gpu_model": "A40",
+        "gpu_sliced": "False",
+        "gpu_vendor": "NVIDIA",
+        "host": "gn-a40-049",
+        "hpmem": "0mb",
+        "mem": "256465mb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "node_pool": "cpu_node",
+        "numaset": "GN-A40-049[0]",
+        "swap": "0mb",
+        "switch": "gcid-03,gpu_all",
+        "vnode": "GN-A40-049[0]"
+      },
+      "assigned": {
+        "mem": "256465mb",
+        "ncpus": 36
+      }
+    },
+    {
+      "name": "GN-A40-049[1]",
+      "state": "free",
+      "available": {
+        "arch": "linux",
+        "gpu-type": "nvidia",
+        "gpu_compute_capability": 8.6,
+        "gpu_mem": "48305799kb",
+        "gpu_model": "A40",
+        "gpu_sliced": "False",
+        "gpu_vendor": "NVIDIA",
+        "host": "gn-a40-049",
+        "hpmem": "0mb",
+        "mem": "256966mb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "node_pool": "cpu_node",
+        "numaset": "GN-A40-049[1]",
+        "swap": "0mb",
+        "switch": "gcid-03,gpu_all",
+        "vnode": "GN-A40-049[1]"
+      },
+      "assigned": {
+        "mem": "198191mb",
+        "ncpus": 28
+      }
+    },
+    {
+      "name": "GN-A40-051",
+      "state": "free",
+      "available": {
+        "arch": "linux",
+        "gpu-type": "nvidia",
+        "host": "gn-a40-051",
+        "hpmem": "0b",
+        "mem": "0b",
+        "ncpus": 0,
+        "ngpus": 0,
+        "node_pool": "cpu_node",
+        "swap": "0b",
+        "switch": "gcid-03,gpu_all",
+        "vmem": "525755504kb",
+        "vnode": "GN-A40-051"
+      },
+      "assigned": {}
+    },
+    {
+      "name": "GN-A40-051[0]",
+      "state": "job-busy",
+      "available": {
+        "arch": "linux",
+        "gpu-type": "nvidia",
+        "gpu_compute_capability": 8.6,
+        "gpu_mem": "48305799kb",
+        "gpu_model": "A40",
+        "gpu_sliced": "False",
+        "gpu_vendor": "NVIDIA",
+        "host": "gn-a40-051",
+        "hpmem": "0mb",
+        "mem": "256423mb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "node_pool": "cpu_node",
+        "numaset": "GN-A40-051[0]",
+        "swap": "0mb",
+        "switch": "gcid-03,gpu_all",
+        "vnode": "GN-A40-051[0]"
+      },
+      "assigned": {
+        "mem": "256423mb",
+        "ncpus": 36
+      }
+    },
+    {
+      "name": "GN-A40-051[1]",
+      "state": "free",
+      "available": {
+        "arch": "linux",
+        "gpu-type": "nvidia",
+        "gpu_compute_capability": 8.6,
+        "gpu_mem": "48305799kb",
+        "gpu_model": "A40",
+        "gpu_sliced": "False",
+        "gpu_vendor": "NVIDIA",
+        "host": "gn-a40-051",
+        "hpmem": "0mb",
+        "mem": "257008mb",
+        "ncpus": 36,
+        "ngpus": 1,
+        "node_pool": "cpu_node",
+        "numaset": "GN-A40-051[1]",
+        "swap": "0mb",
+        "switch": "gcid-03,gpu_all",
+        "vnode": "GN-A40-051[1]"
+      },
+      "assigned": {
+        "mem": "198233mb",
+        "ncpus": 28
+      }
+    }
+  ],
+  "queue": {
+    "timestamp": 1794839820,
+    "pbs_version": "2026.0.0.20250926080934",
+    "pbs_server": "stdct-mgmt-02",
+    "Queue": {
+      "batch_cpu": {
+        "queue_type": "Execution",
+        "Priority": 100,
+        "total_jobs": 729,
+        "state_count": "Transit:0 Queued:328 Held:182 Waiting:2 Running:209 Exiting:0 Begun:8 ",
+        "from_route_only": "True",
+        "resources_max": {
+          "ncpus": 720,
+          "ngpus": 0,
+          "nodect": 10,
+          "walltime": "240:00:00"
+        },
+        "resources_min": {
+          "ncpus": 1,
+          "nodect": 1
+        },
+        "resources_default": {
+          "queue_charge_rate": 1,
+          "walltime": "24:00:00"
+        },
+        "default_chunk": {
+          "node_pool": "cpu_node"
+        },
+        "resources_assigned": {
+          "mem": "78186gb",
+          "mpiprocs": 8480,
+          "ncpus": 11274,
+          "nodect": 258
+        },
+        "max_run": "[u:PBS_GENERIC=6]",
+        "max_run_res": {
+          "ncpus": "[u:PBS_GENERIC=720]"
+        },
+        "enabled": "True",
+        "started": "True"
+      }
+    }
+  },
+  "queue_error": ""
+}

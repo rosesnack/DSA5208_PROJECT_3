@@ -1,0 +1,226 @@
+{
+  "observed_at": "2026-11-16T21:44:55.720051+08:00",
+  "error": "",
+  "jobs": {
+    "1567277.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "comment": "Job run at Mon Nov 16 at 21:17 on (CN-133[0]:ncpus=32:mem=222gb) and finished",
+      "resources_used": {
+        "cpupercent": 230,
+        "cput": "00:08:03",
+        "mem": "272480kb",
+        "ncpus": 32,
+        "ngpus": 0,
+        "vmem": "419004kb",
+        "walltime": "00:01:07"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-investigate.o1567277"
+    },
+    "1567278.stdct-mgmt-02": {
+      "job_state": "F",
+      "Exit_status": 0,
+      "comment": "Job run at Mon Nov 16 at 21:19 on (IN-001[1]:ncpus=1:mem=20gb) and finished",
+      "resources_used": {
+        "cpupercent": 99,
+        "cput": "00:04:56",
+        "mem": "352996kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "386644kb",
+        "walltime": "00:04:59"
+      },
+      "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-invest-check.o1567278"
+    },
+    "1567279.stdct-mgmt-02": {
+      "job_state": "Q",
+      "Exit_status": null,
+      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (cpu_all != )",
+      "resources_used": null,
+      "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-investigate.o1567279"
+    },
+    "1567280.stdct-mgmt-02": {
+      "job_state": "H",
+      "Exit_status": null,
+      "comment": null,
+      "resources_used": null,
+      "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-invest-check.o1567280"
+    },
+    "1560661.stdct-mgmt-02": {
+      "job_state": "Q",
+      "Exit_status": null,
+      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (cpu_all != )",
+      "resources_used": null,
+      "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-core-group.o1560661"
+    },
+    "1560662.stdct-mgmt-02": {
+      "job_state": "H",
+      "Exit_status": null,
+      "comment": null,
+      "resources_used": null,
+      "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-core-check.o1560662"
+    },
+    "1560663.stdct-mgmt-02": {
+      "job_state": "H",
+      "Exit_status": null,
+      "comment": null,
+      "resources_used": null,
+      "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-core-group.o1560663"
+    },
+    "1560664.stdct-mgmt-02": {
+      "job_state": "H",
+      "Exit_status": null,
+      "comment": null,
+      "resources_used": null,
+      "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-core-check.o1560664"
+    },
+    "1560665.stdct-mgmt-02": {
+      "job_state": "H",
+      "Exit_status": null,
+      "comment": null,
+      "resources_used": null,
+      "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-core-group.o1560665"
+    },
+    "1560666.stdct-mgmt-02": {
+      "job_state": "H",
+      "Exit_status": null,
+      "comment": null,
+      "resources_used": null,
+      "Output_Path": "vanda.nus.edu.sg:/scratch/xtt_ella/DSA5208_PROJECT_3_20261107/dsa5208-core-check.o1560666"
+    }
+  },
+  "measurements": [
+    {
+      "path": "google/spread_passive_kokkos32/kokkos/OpenMP/google/summary.json",
+      "median_s": 0.115531161,
+      "threads": null,
+      "processes": null,
+      "iterations": 90,
+      "converged": true
+    },
+    {
+      "path": "google/unbound_default_openmp/openmp/google/t2/summary.json",
+      "median_s": 1.022234621,
+      "threads": 2,
+      "processes": null,
+      "iterations": 90,
+      "converged": true
+    },
+    {
+      "path": "google/unbound_default_openmp/openmp/google/t8/summary.json",
+      "median_s": 0.307546799,
+      "threads": 8,
+      "processes": null,
+      "iterations": 90,
+      "converged": true
+    },
+    {
+      "path": "google/unbound_default_openmp/openmp/google/t32/summary.json",
+      "median_s": 0.124646077,
+      "threads": 32,
+      "processes": null,
+      "iterations": 90,
+      "converged": true
+    },
+    {
+      "path": "google/unbound_default_openmp/openmp/google/t1/summary.json",
+      "median_s": 1.825019604,
+      "threads": 1,
+      "processes": null,
+      "iterations": 90,
+      "converged": true
+    },
+    {
+      "path": "google/unbound_default_openmp/openmp/google/t4/summary.json",
+      "median_s": 0.522260422,
+      "threads": 4,
+      "processes": null,
+      "iterations": 90,
+      "converged": true
+    },
+    {
+      "path": "google/unbound_default_openmp/openmp/google/t16/summary.json",
+      "median_s": 0.188906203,
+      "threads": 16,
+      "processes": null,
+      "iterations": 90,
+      "converged": true
+    },
+    {
+      "path": "google/spread_active_openmp/openmp/google/t32/summary.json",
+      "median_s": 0.120280056,
+      "threads": 32,
+      "processes": null,
+      "iterations": 90,
+      "converged": true
+    },
+    {
+      "path": "google/spread_active_openmp/openmp/google/t16/summary.json",
+      "median_s": 0.176530159,
+      "threads": 16,
+      "processes": null,
+      "iterations": 90,
+      "converged": true
+    },
+    {
+      "path": "google/unbound_default_kokkos32/kokkos/OpenMP/google/summary.json",
+      "median_s": 0.103958258,
+      "threads": null,
+      "processes": null,
+      "iterations": 90,
+      "converged": true
+    },
+    {
+      "path": "google/spread_passive_openmp/openmp/google/t32/summary.json",
+      "median_s": 0.1427523,
+      "threads": 32,
+      "processes": null,
+      "iterations": 90,
+      "converged": true
+    },
+    {
+      "path": "google/spread_passive_openmp/openmp/google/t16/summary.json",
+      "median_s": 0.17704081,
+      "threads": 16,
+      "processes": null,
+      "iterations": 90,
+      "converged": true
+    },
+    {
+      "path": "google/spread_passive_kokkos16/kokkos/OpenMP/google/summary.json",
+      "median_s": 0.166062878,
+      "threads": null,
+      "processes": null,
+      "iterations": 90,
+      "converged": true
+    },
+    {
+      "path": "google/spread_active_kokkos16/kokkos/OpenMP/google/summary.json",
+      "median_s": 0.153479847,
+      "threads": null,
+      "processes": null,
+      "iterations": 90,
+      "converged": true
+    },
+    {
+      "path": "google/spread_active_kokkos32/kokkos/OpenMP/google/summary.json",
+      "median_s": 0.086686005,
+      "threads": null,
+      "processes": null,
+      "iterations": 90,
+      "converged": true
+    },
+    {
+      "path": "google/unbound_default_kokkos16/kokkos/OpenMP/google/summary.json",
+      "median_s": 0.180557021,
+      "threads": null,
+      "processes": null,
+      "iterations": 90,
+      "converged": true
+    }
+  ],
+  "markers": [
+    "google/validate_complete.txt",
+    "google/compute_complete.txt"
+  ]
+}
