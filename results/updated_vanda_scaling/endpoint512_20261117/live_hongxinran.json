@@ -1,0 +1,57 @@
+{
+  "time": "2026-11-17T02:32:07.992405+08:00",
+  "jobs": {
+    "1569700.stdct-mgmt-02": {
+      "job_state": "Q",
+      "Hold_Types": "n",
+      "Exit_status": null,
+      "queue": "batch_cpu",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "3552gb",
+        "mpiprocs": 512,
+        "ncpus": 512,
+        "ngpus": 0,
+        "nodect": 8,
+        "place": "scatter",
+        "queue_charge_rate": 1,
+        "select": "8:ncpus=64:mpiprocs=64:ompthreads=1:mem=444GB:node_pool=cpu_node:switch=cpu_all",
+        "walltime": "00:30:00"
+      },
+      "resources_used": null,
+      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (cpu_all != )"
+    },
+    "1569701.stdct-mgmt-02": {
+      "job_state": "H",
+      "Hold_Types": "d",
+      "Exit_status": null,
+      "queue": "cpu_serial",
+      "project": "personal-hongxinran",
+      "Resource_List": {
+        "am_job_cache": "\"{}\"",
+        "mem": "20gb",
+        "mpiprocs": 1,
+        "ncpus": 1,
+        "ngpus": 0,
+        "nodect": 1,
+        "place": "free",
+        "queue_charge_rate": 0,
+        "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
+        "walltime": "24:00:00"
+      },
+      "resources_used": null,
+      "comment": null
+    }
+  },
+  "capacity": {
+    "cpu_all": {
+      "eligible_64cores_444GiB": 0,
+      "max_free_cores": 32
+    },
+    "gpu_all": {
+      "eligible_64cores_444GiB": 0,
+      "max_free_cores": 26
+    }
+  }
+}

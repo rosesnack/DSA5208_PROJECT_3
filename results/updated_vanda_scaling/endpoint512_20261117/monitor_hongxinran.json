@@ -1,0 +1,60 @@
+{
+  "restart": {
+    "time": "2026-11-17T02:30:35.485839+08:00",
+    "account": "hongxinran",
+    "pid": 3892352,
+    "command": [
+      "python3",
+      "scripts/watch_vanda_core_groups.py",
+      "20261111_hongxinran_assist",
+      "personal-hongxinran",
+      "/home/svu/hongxinran/dsa5208_endpoint512_20261117/monitor_project/results/updated_vanda_scaling/20261111_hongxinran_assist/watch_registered_only_20261117.json",
+      "--dependency",
+      "1569699.stdct-mgmt-02",
+      "--interval",
+      "60",
+      "--until",
+      "2026-11-18T23:59:00+08:00",
+      "--max-total-cores",
+      "512",
+      "--max-pending",
+      "1",
+      "--max-unvalidated",
+      "24",
+      "--margin",
+      "64",
+      "--placement-hosts",
+      "/home/svu/hongxinran/dsa5208_endpoint512_20261117/monitor_project/results/updated_vanda_scaling/20261111_hongxinran_assist/monitor_endpoint512_20261117/validated_hosts.json",
+      "--state-dir",
+      "/home/svu/hongxinran/dsa5208_endpoint512_20261117/monitor_project/results/updated_vanda_scaling/20261111_hongxinran_assist/monitor_endpoint512_20261117"
+    ],
+    "scope": "Only registered endpoint512 cells; host rebinding preserves queue, node/core/memory/walltime and no failed job is retried. PBS dependencies release follow-on groups after first complete validation."
+  },
+  "status": {
+    "pending_performance_groups": 1,
+    "deferred_held_jobs": [],
+    "placement_updates": 0,
+    "pending_validation_groups": 0,
+    "failed_jobs_not_retried": [],
+    "performance_states": {
+      "Q": 1
+    },
+    "validation_states": {
+      "H": 1
+    },
+    "eligible_unregistered_groups": 0,
+    "eligible_unregistered_cells": 0,
+    "endpoint_proof_state": {
+      "1569699.stdct-mgmt-02": "F"
+    },
+    "action": "waiting_existing_jobs",
+    "observed_at": "2026-11-17T02:30:32.600499+08:00",
+    "pid": 3892352,
+    "interval_seconds": 60,
+    "until": "2026-11-18T23:59:00+08:00",
+    "margin_cpu_hours": 64.0,
+    "state_directory": "/home/svu/hongxinran/dsa5208_endpoint512_20261117/monitor_project/results/updated_vanda_scaling/20261111_hongxinran_assist/monitor_endpoint512_20261117",
+    "max_total_cores": 512
+  },
+  "stderr": "{\"pending_performance_groups\": 1, \"deferred_held_jobs\": [], \"placement_updates\": 0, \"pending_validation_groups\": 0, \"failed_jobs_not_retried\": [], \"performance_states\": {\"Q\": 1}, \"validation_states\": {\"H\": 1}, \"eligible_unregistered_groups\": 0, \"eligible_unregistered_cells\": 0, \"endpoint_proof_state\": {\"1569699.stdct-mgmt-02\": \"F\"}, \"action\": \"waiting_existing_jobs\", \"observed_at\": \"2026-11-17T02:30:32.600499+08:00\", \"pid\": 3892352, \"interval_seconds\": 60, \"until\": \"2026-11-18T23:59:00+08:00\", \"margin_cpu_hours\": 64.0, \"state_directory\": \"/home/svu/hongxinran/dsa5208_endpoint512_20261117/monitor_project/results/updated_vanda_scaling/20261111_hongxinran_assist/monitor_endpoint512_20261117\", \"max_total_cores\": 512}\n"
+}

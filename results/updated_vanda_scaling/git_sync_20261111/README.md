@@ -1,4 +1,6 @@
-# Frozen experiment handover inventory (2026-11-11)
+# Experiment handover inventory (latest update 2026-11-17)
+
+Nov17 02:32 SGT: 19,535 validated; 114 registered 512-core cells across eight current performance jobs, five legacy held cells and 1,046 deferred cells. Two jobs Q, six dependency H, none R. Current future plans are the scoped/ownership-adjusted files under `../endpoint512_20261117/`; the old three primary 512 job IDs were cancelled. See the operating handoff before using older commands below.
 
 The current operating instructions are [HANDOFF_VANDA_EXPERIMENTS_20261106.md](../../../HANDOFF_VANDA_EXPERIMENTS_20261106.md). This directory is a frozen audit, not a submission plan or a cross-account reservation service.
 

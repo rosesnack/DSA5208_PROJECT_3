@@ -37,7 +37,7 @@
     "mpi_kokkos_cuda": 180
   },
   "source_manifest": "results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv",
-  "source_manifest_sha256": "214b3c76b46e6dbf4d8ff27df17fa5f8a61febb9bc9c67fa95ebeff94f9aa62c",
+  "source_manifest_sha256": "1306550b3b2b5bce7aba8620b6f8e45800e67cffe4f3a2eb600053e744a737ec",
   "measurement_selection_sha256": "ff379a0964a6b2971adbbeb20554aad2ee05e76298a9e5611a5ba7077a6976c1",
   "supplement_512_configurations": 5
 }

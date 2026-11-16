@@ -8,7 +8,7 @@
   "priority": 3,
   "walltime": "01:00:00",
   "prerequisite": "",
-  "required_job": "1560492.stdct-mgmt-02",
+  "required_job": "1569596.stdct-mgmt-02",
   "dense_launch_pause_s": 65,
   "cells": [
     {
@@ -124,7 +124,7 @@
       "canonical_summary": "kokkos_cpu_512/grid_controlled_n50000_d4/mpi_kokkos_halo/OpenMP/grid_controlled_n50000_d4/p16_t32/summary.json"
     }
   ],
-  "dependency": "1560492.stdct-mgmt-02",
+  "dependency": "1569596.stdct-mgmt-02",
   "scheduler_cpu_pool": "cpu_all",
-  "walltime_basis": "512 cores x1h; 50k vertices/200k edges. Existing 512-rank saved solvers took seconds; retained full 1h for sixteen launch/affinity checks, 1 warmup+5 repeats, and 65s TCP cooldowns. Walltime is a limit, not an expected runtime."
+  "walltime_basis": "16 small-graph cases; one hour allows MPI launch/affinity probes and dense TCP cooldowns; 1 warmup +5 timed repeats."
 }

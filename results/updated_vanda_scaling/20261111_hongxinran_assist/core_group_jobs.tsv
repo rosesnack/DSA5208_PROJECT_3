@@ -393,3 +393,4 @@
 "strong_hub"	"8"	"1"	"8"	"1560535.stdct-mgmt-02"	"1560536.stdct-mgmt-02"	"04:30:00"	"6"	"results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/strong_hub_n8_c1_repair_20261116.json"	"1560516.stdct-mgmt-02"
 "strong_controlled"	"8"	"16"	"128"	"1560537.stdct-mgmt-02"	"1560538.stdct-mgmt-02"	"03:45:00"	"9"	"results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/strong_controlled_n8_c16_repair_20261116.json"	"1560516.stdct-mgmt-02"
 "strong_hub"	"8"	"16"	"128"	"1560539.stdct-mgmt-02"	"1560540.stdct-mgmt-02"	"04:30:00"	"16"	"results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/strong_hub_n8_c16_repair_20261116.json"	"1560516.stdct-mgmt-02"
+"grid_uniform_n50000_d16"	"8"	"64"	"512"	"1569700.stdct-mgmt-02"	"1569701.stdct-mgmt-02"	"00:30:00"	"2"	"results/updated_vanda_scaling/20261111_hongxinran_assist/core_group_plans/grid_uniform_n50000_d16_n8_c64_pair512_20261117.json"	"1569699.stdct-mgmt-02"

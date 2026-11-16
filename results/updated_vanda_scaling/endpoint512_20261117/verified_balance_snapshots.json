@@ -1,0 +1,12 @@
+{
+  "xtt_ella": {
+    "time": "2026-11-17T02:25:02.794047+08:00",
+    "project": "\n  =======================================================================================\n       Vanda CPU and GPU-Hours Credits for:  xtt_ella \n  =======================================================================================\n    Project-Name  | Total CPU Hours | CPU Net Balance | Total GPU Hours | GPU Net Balance\n  ---------------------------------------------------------------------------------------\npersonal-xtt_ella  |          10000  | 4749.853999999999  |           1000  |           1000\n           Users  :                       xtt_ella \n  ---------------------------------------------------------------------------------------\n\n  ##############################################################################\n  ##  Please quote the right Project-Name in below line in PBS job script,    ##\n  ##  in order to use the GPU-Hours allocated in the Project.                 ##\n  ##############################################################################\n\u001b[1;32m  #PBS -P Project-Name \u001b[0m\n\n\n",
+    "error": ""
+  },
+  "hongxinran": {
+    "time": "2026-11-17T02:25:02.860416+08:00",
+    "project": "\n  =======================================================================================\n       Vanda CPU and GPU-Hours Credits for:  hongxinran \n  =======================================================================================\n    Project-Name  | Total CPU Hours | CPU Net Balance | Total GPU Hours | GPU Net Balance\n  ---------------------------------------------------------------------------------------\npersonal-hongxinran  |          10000  | 325.4439999999995  |           1000  |        978.587\n           Users  :                     hongxinran \n  ---------------------------------------------------------------------------------------\n\n  ##############################################################################\n  ##  Please quote the right Project-Name in below line in PBS job script,    ##\n  ##  in order to use the GPU-Hours allocated in the Project.                 ##\n  ##############################################################################\n\u001b[1;32m  #PBS -P Project-Name \u001b[0m\n\n\n",
+    "error": ""
+  }
+}

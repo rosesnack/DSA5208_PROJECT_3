@@ -1,0 +1,12 @@
+{
+  "canonical_keys": [
+    "strong/grid_uniform_n50000_d16/nodes8_p512/hybrid/grid_uniform_n50000_d16/p256_t2/summary.json",
+    "strong/grid_uniform_n50000_d16/nodes8_p512/hybrid_halo/grid_uniform_n50000_d16/p256_t2/summary.json"
+  ],
+  "previous_future_owner": "xtt_ella",
+  "current_owner": "hongxinran",
+  "performance_job": "1569700.stdct-mgmt-02",
+  "source_full_plan_excludes_transferred_keys": "results/updated_vanda_scaling/endpoint512_20261117/future_xtt_ella_plan.json",
+  "live_xtt_monitor_scope_excludes_keys": true,
+  "old_full_scratch_source_is_archival_not_live": true
+}

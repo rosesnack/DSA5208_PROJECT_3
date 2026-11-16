@@ -1,51 +1,90 @@
 # Remaining 512-core work
 
-Latest operational update: 17 November 2026, 01:00 SGT. Job 1560661 is now user-held to prevent output failure while xtt_ella scratch is not writable (errno 28). Do not release it before storage recovery; see [incident details](PERFORMANCE_INVESTIGATION.md). The older scheduling snapshot below is from 16 November 14:21 SGT. The report includes five validated 512-core cells in a separate partial table and matrix column; they do not form a complete curve.
+Latest live snapshot: **17 November 2026, 02:32 SGT**. Eight performance jobs cover
+**114 distinct configurations**; two are Q, six are dependency-held, none is R.
+All performance jobs use the paid batch_cpu execution queue, eight physical nodes
+and 64 active cores per node. Every configuration satisfies p*T=512. Independent
+validation and storage checks use auto_free; no main performance is moved there.
 
-The full 512 fixed target is 1,170 cells. Five previously valid cells are retained
-in the result archive. The other 1,165 consist of 48 newly registered cells, five
-legacy held cells and 1,112 not currently scheduled.
+Five validated 512-core cells remain the only completed fixed-graph supplement.
+There are 1,165 missing cells: **114 registered**, **five legacy held**, and
+**1,046 deferred/unregistered**. Do not duplicate a registered cell. The main
+non-512 matrix is complete and unchanged.
 
-## Newly registered batch
+## xtt_ella: seven groups, 112 cells
 
-| Graph | Cells | Paid performance | Free validation | Dependency |
+| Graph | Cells | Paid performance | Free validation | State |
 |---|---:|---|---|---|
-| grid_controlled_n50000_d4 | 16 | 1560661 | 1560662 | Successful environment check 1560492 |
-| grid_uniform_n50000_d4 | 16 | 1560663 | 1560664 | afterok1560662 |
-| grid_hub_n50000_d4 | 16 | 1560665 | 1560666 | afterok1560662 |
+| grid_controlled_n50000_d4 | 16 | 1569659 | 1569660 | Q |
+| grid_uniform_n50000_d4 | 16 | 1569685 | 1569686 | H: after first validation |
+| grid_hub_n50000_d4 | 16 | 1569687 | 1569688 | H: after first validation |
+| grid_controlled_n50000_d8 | 16 | 1569690 | 1569691 | H: after first validation |
+| grid_uniform_n50000_d8 | 16 | 1569692 | 1569693 | H: after first validation |
+| grid_hub_n50000_d8 | 16 | 1569694 | 1569695 | H: after first validation |
+| grid_controlled_n50000_d16 | 16 | 1569696 | 1569697 | H: after first validation |
 
-Owner: xtt_ella, project personal-xtt_ella. Each group requests eight CPU nodes,
-64 cores per node, 512 total, and one hour walltime. For both MPI+OpenMP and
-MPI+Kokkos OpenMP it runs p/T=256/2, 64/8, 32/16 and 16/32, each with Allgatherv
-and Halo. Every layout uses p*T=512. One warm-up and five timed runs are preserved.
+Each group has one hour walltime. It tests both MPI+OpenMP and MPI+Kokkos OpenMP,
+p/T=256/2, 64/8, 32/16 and 16/32, each with Allgatherv and Halo. Each measurement
+retains one warm-up and five timed repeats; reports use the five-run median.
+One hour covers sixteen small-graph cases, affinity probes, MPI startup and the
+existing 65-second pauses after dense TCP Halo launches. It is a limit, not an
+expected runtime or actual charge.
 
-The maximum new walltime reservation is 1,536 CPUh, not an estimate of actual
-consumption. Submission used the verified balance of 4,861.854 CPUh, reserved all
-other live requests and a further 256 CPUh margin. This does not authorize
-additional submissions without a fresh balance and cross-account overlap check.
+The original never-started 1560661/63/65 and their free dependents were cancelled
+after replacement registrations were recorded. Their scratch output was not
+writable. The new jobs run from
+`/home/svu/xtt_ella/dsa5208_endpoint512_20261117/project`, with data/output under
+its sibling `data` directory. Original binaries, graph inputs and historical
+results stay on scratch; seven Serial references were copied and SHA-256 checked.
+Free 1569596 passed the home write/fsync preflight. No source or timing kernel was
+changed. The new first validator 1569660 gates the six follow-on performance jobs.
+After it passes, PBS automatically releases those dependencies without a new
+accounting login or another submission.
 
-At the 16 November scheduling snapshot the first group was Q. At the latest
-17 November 02:01 snapshot it is user-held for output-storage safety; the other
-two groups remain dependency-held. The snapshot has no
-available physical host meeting the 64-core/memory chunk requirement. The
-controller preserves node/core/memory/walltime parameters when refreshing host
-bindings. It must not substitute 16x32 or oversubscription for the required 8x64.
+Verified fresh CPU balance: 4,749.854 CPUh. Seven one-hour jobs reserve at most
+3,584 CPUh. Conservatively counting another 586.667 CPUh for untouched old held
+requests and a 256 CPUh margin leaves 323.187 CPUh uncommitted. The prior verified
+balance minus all subsequent maximum paid requests independently gives the same
+4,749.854 lower bound. These reservations are not actual runtime charges.
 
-The scoped monitor's last recorded PID is 1301843; its deadline is 16 November
-23:59 SGT. After the deadline, inspect live jobs and existing registry before
-starting a controller again. Archived final PBS states were restored from saved
-observations because the server purged some older completed job IDs.
+## hongxinran: one group, two cells
 
-## Evidence and restrictions
+Paid **1569700**, free validator **1569701**, free storage check **1569699**.
+The storage check passed; performance is Q. Graph `grid_uniform_n50000_d16`,
+MPI+OpenMP p256,T2, Allgatherv and Halo. It uses eight nodes x64 cores with a
+30-minute walltime. Only two small-graph cases and one shared affinity layout
+are measured, so the limit retains substantial allowance for MPI startup.
 
-- [48-cell source plan](../results/updated_vanda_scaling/20261106T185006Z/endpoint512_plan_20261116.json)
-- [Submission receipt and resource checks](../results/updated_vanda_scaling/20261106T185006Z/endpoint512_submission_20261116.json)
-- [Monitor restart record](../results/updated_vanda_scaling/20261106T185006Z/monitor_endpoint512_20261116/restart.json)
-- [Physical capacity observation](../results/updated_vanda_scaling/endpoint512_20261116/capacity_1419.json)
-- [Unique full-target ownership](../results/updated_vanda_scaling/git_sync_20261111/experiment_manifest_20700.csv)
+Verified balance is 325.444 CPUh; the maximum new reservation is 256 CPUh,
+leaving 69.444 CPUh. Old user-held requests remain deferred and are not released.
+These two canonical keys were removed from xtt_ella's revised future plan and
+explicitly transferred; they do not overlap its seven registered groups.
 
-Do not release legacy job 1532794 or the old hongxinran held requests as a batch.
-Their source plans predate the present ownership/deduplication records. Controlled
-rank-based 512 weak results also need their existing remote evidence checked
-before being classified as missing. Already validated or in-flight cells cannot
-be assigned to a teammate without an explicit, recorded owner transfer.
+## Monitoring and handover
+
+Two detached controllers query PBS every 60 seconds until **18 November 23:59
+SGT**. They cover only the registered jobs, adjust queued host bindings only when
+previously verified Platinum 8452Y hosts satisfy the full request, and preserve
+queue, nodes, cores, memory and walltime. They do not retry failed jobs. At 02:32,
+no physical host had 64 free CPUs plus 444 GiB; cpu_all's largest free CPU count
+was 32. The two Q jobs are waiting for sufficient resources, not running yet.
+PBS rewrites each requested 64 GiB chunk to 444 GiB; capacity checks use the
+actual PBS request. Do not promise an immediate start.
+
+The original broad scratch plans and expired controllers are archival. Use the
+current scoped plans and explicit ownership records before any further submission.
+To stop a controller, create `STOP_AUTO_SUBMIT` in its recorded state directory.
+A terminal/SSH disconnect does not cancel PBS jobs or these detached processes.
+
+- [Submission, budgets, current job IDs and cancelled predecessors](../results/updated_vanda_scaling/endpoint512_20261117/resubmission_receipt.json)
+- [hongxinran small batch](../results/updated_vanda_scaling/endpoint512_20261117/hongxinran_submission.json)
+- [Updated xtt_ella future plan](../results/updated_vanda_scaling/endpoint512_20261117/future_xtt_ella_plan.json)
+- [Updated hongxinran future plan](../results/updated_vanda_scaling/endpoint512_20261117/future_hongxinran_plan.json)
+- [Explicit two-key transfer](../results/updated_vanda_scaling/endpoint512_20261117/ownership_transfer.json)
+- [xtt_ella live snapshot](../results/updated_vanda_scaling/endpoint512_20261117/live_xtt_ella.json)
+- [hongxinran live snapshot](../results/updated_vanda_scaling/endpoint512_20261117/live_hongxinran.json)
+- [xtt_ella controller](../results/updated_vanda_scaling/endpoint512_20261117/monitor_xtt_ella.json)
+- [hongxinran controller](../results/updated_vanda_scaling/endpoint512_20261117/monitor_hongxinran.json)
+
+Legacy 1532794 stays system/user-held; its five cells require separate inspection.
+Controlled rank-based 512 weak evidence is also separate from this fixed matrix.
