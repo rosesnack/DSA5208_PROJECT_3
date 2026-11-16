@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#PBS -N dsa5208-investigate
+#PBS -q auto
+#PBS -j oe
+set -euo pipefail
+cd "${PBS_O_WORKDIR:?}"
+module load openmpi/gcc/64/4.1.8 CMake/3.29.3-GCCcore-13.3.0
+export LD_LIBRARY_PATH="/opt/pbs/lib:${LD_LIBRARY_PATH:-}"
+python3 scripts/investigate_performance.py compute "$INVESTIGATION_KIND" "$INVESTIGATION_DEST"

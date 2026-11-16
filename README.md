@@ -2,6 +2,8 @@
 
 Completed non-512 experiments: [PDF report](output/pdf/pagerank_non512_report.pdf), [editable report and evidence](reports/non512/README.md). Current queue snapshot: [Vanda status](docs/VANDA_STATUS.md).
 
+Targeted checks of the Google 32-thread cliff, Uniform MPI p128 spike and weak-scaling mechanisms: [performance investigation](docs/PERFORMANCE_INVESTIGATION.md). Reproduction jobs are additional diagnostics, with separate outputs; their results are not yet included in report comparisons.
+
 Full fixed-graph target: **20,700 configurations** (original 19,980 plus 720 later requested 512-core splits). **Current execution and teammate handover: [Vanda handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md).** It distinguishes completed, submitted, held, failed, deferred and owner-assigned missing cells; do not submit from an old plan or a fresh RUN_ID without ownership transfer. See also [CPU split coverage](HANDOFF_VANDA_EXPERIMENTS_20261106.md).
 
 A C++17 implementation of synchronous pull-based PageRank for DSA5208 Project 3. The fixed-graph matrix compares Serial, OpenMP, CUDA, Kokkos OpenMP/CUDA, pure MPI, MPI+OpenMP, MPI+CUDA, and MPI+Kokkos. Every MPI method implements both Allgatherv and Halo; the standalone methods have no MPI communication mode.
