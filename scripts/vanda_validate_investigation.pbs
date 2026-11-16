@@ -6,4 +6,4 @@
 #PBS -j oe
 set -euo pipefail
 cd "${PBS_O_WORKDIR:?}"
-python3 scripts/investigate_performance.py validate "$INVESTIGATION_KIND" "$INVESTIGATION_DEST"
+python3 "${INVESTIGATION_DRIVER:-scripts/investigate_performance.py}" validate "$INVESTIGATION_KIND" "$INVESTIGATION_DEST"

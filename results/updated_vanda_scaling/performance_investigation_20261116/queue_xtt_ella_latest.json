@@ -1,0 +1,88 @@
+{
+  "1567277.stdct-mgmt-02": {
+    "job_state": "F",
+    "Exit_status": 0,
+    "comment": "Job run at Mon Nov 16 at 21:17 on (CN-133[0]:ncpus=32:mem=222gb) and finished",
+    "resources_used": {
+      "cpupercent": 230,
+      "cput": "00:08:03",
+      "mem": "272480kb",
+      "ncpus": 32,
+      "ngpus": 0,
+      "vmem": "419004kb",
+      "walltime": "00:01:07"
+    },
+    "Resource_List": {
+      "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 32.0, \"job.walltime\": 1800, \"am_cloud_enabled\": false}",
+      "mem": "222gb",
+      "mpiprocs": 32,
+      "ncpus": 32,
+      "ngpus": 0,
+      "nodect": 1,
+      "place": "scatter",
+      "queue_charge_rate": 1,
+      "select": "1:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:node_pool=cpu_node:switch=cpu_all",
+      "walltime": "00:30:00"
+    }
+  },
+  "1567278.stdct-mgmt-02": {
+    "job_state": "F",
+    "Exit_status": 0,
+    "comment": "Job run at Mon Nov 16 at 21:19 on (IN-001[1]:ncpus=1:mem=20gb) and finished",
+    "resources_used": {
+      "cpupercent": 99,
+      "cput": "00:04:56",
+      "mem": "352996kb",
+      "ncpus": 1,
+      "ngpus": 0,
+      "vmem": "386644kb",
+      "walltime": "00:04:59"
+    },
+    "Resource_List": {
+      "am_job_cache": "{\"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"job.ncpus\": 1.0, \"job.walltime\": 86400, \"am_cloud_enabled\": false}",
+      "mem": "20gb",
+      "ncpus": 1,
+      "ngpus": 0,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 0,
+      "select": "1:ncpus=1:mem=20gb",
+      "walltime": "24:00:00"
+    }
+  },
+  "1567279.stdct-mgmt-02": {
+    "job_state": "Q",
+    "Exit_status": null,
+    "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (cpu_all != )",
+    "resources_used": null,
+    "Resource_List": {
+      "am_job_cache": "\"{}\"",
+      "mem": "888gb",
+      "mpiprocs": 128,
+      "ncpus": 128,
+      "ngpus": 0,
+      "nodect": 4,
+      "place": "scatter",
+      "queue_charge_rate": 1,
+      "select": "4:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:node_pool=cpu_node:switch=cpu_all",
+      "walltime": "00:45:00"
+    }
+  },
+  "1567280.stdct-mgmt-02": {
+    "job_state": "H",
+    "Exit_status": null,
+    "comment": null,
+    "resources_used": null,
+    "Resource_List": {
+      "am_job_cache": "\"{}\"",
+      "mem": "20gb",
+      "ncpus": 1,
+      "ngpus": 0,
+      "nodect": 1,
+      "place": "free",
+      "queue_charge_rate": 0,
+      "select": "1:ncpus=1:mem=20gb",
+      "walltime": "24:00:00"
+    }
+  }
+}

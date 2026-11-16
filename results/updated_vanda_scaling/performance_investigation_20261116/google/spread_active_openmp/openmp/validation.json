@@ -1,0 +1,42 @@
+{
+  "passed": 2,
+  "failed": 0,
+  "method": "Independent residual checks and full rank comparison with validated serial output",
+  "rank_l1_tolerance": 1e-08,
+  "checks": [
+    {
+      "dataset": "google",
+      "passed": true,
+      "nodes": 875713,
+      "edges": 5105039,
+      "iterations": 90,
+      "independent_residual_l1": 7.519725357816216e-09,
+      "rank_sum_error": 4.440892098500626e-16,
+      "requested_threads": 16,
+      "threads": 16,
+      "serial_s": 1.895993348,
+      "openmp_s": 0.176530159,
+      "speedup": 10.74033671492926,
+      "efficiency": 0.6712710446830787,
+      "rank_l1_error": 4.871852827063839e-15,
+      "rank_max_error": 5.7462715141731735e-18
+    },
+    {
+      "dataset": "google",
+      "passed": true,
+      "nodes": 875713,
+      "edges": 5105039,
+      "iterations": 90,
+      "independent_residual_l1": 7.5197253552703e-09,
+      "rank_sum_error": 2.220446049250313e-16,
+      "requested_threads": 32,
+      "threads": 32,
+      "serial_s": 1.895993348,
+      "openmp_s": 0.120280056,
+      "speedup": 15.763156511998965,
+      "efficiency": 0.49259864099996764,
+      "rank_l1_error": 4.8960127478183736e-15,
+      "rank_max_error": 6.071532165918825e-18
+    }
+  ]
+}

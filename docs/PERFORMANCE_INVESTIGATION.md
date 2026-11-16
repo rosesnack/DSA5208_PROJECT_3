@@ -88,3 +88,54 @@ the receipt's destination paths. `compute_complete.txt` is only a measurement
 completion marker; `validate_complete.txt` is written only after the independent
 validators pass. A reproduction's interpretation must also review its hardware,
 thread/rank affinity and five timing observations before using it in conclusions.
+
+## Two-account update, 21:34 SGT
+
+Google performance 1567277 and independent free validation 1567278 both finished
+with Exit 0. Performance walltime was 67 seconds, allocated 32 CPUs (about
+0.596 allocated CPUh). All 16 result configurations were downloaded with timings,
+histories, numerical reports, environment, binary hashes and affinity output.
+Local recomputation confirms every five-run median and numerical bound.
+
+| Thread policy | OpenMP T16 / T32 seconds | Kokkos T16 / T32 seconds |
+|---|---|---|
+| Unbound, default waiting | 0.188906 / 0.124646 | 0.180557 / 0.103958 |
+| Spread, active waiting | 0.176530 / 0.120280 | 0.153480 / 0.086686 |
+| Spread, passive waiting | 0.177041 / 0.142752 | 0.166063 / 0.115531 |
+
+The old 32-thread cliff did not reproduce, even in the unbound case. This
+weakens an explanation based on an inevitable graph/algorithm scaling limit.
+It does not establish binding as the sole cause: host, allocation and execution
+time also changed. Preserve the old records as environment-sensitive observations;
+do not silently replace the full matrix with the fastest reproduction.
+
+- [Downloaded Google evidence](../results/updated_vanda_scaling/performance_investigation_20261116/google/)
+- [Reproduction medians](../results/updated_vanda_scaling/performance_investigation_20261116/google/reproduction_summary.json)
+
+The four-node p128 Uniform reproduction remains Q on xtt_ella. On hongxinran,
+three additional eight-node, 256-core diagnostic groups are now registered:
+
+| Graph | Paid performance | Free validation | Cases | Walltime |
+|---|---|---|---:|---|
+| Large Uniform | 1567383 | 1567384 | 14 | 1 hour |
+| Large Hub | 1567385 | 1567386 | 2 | 45 minutes |
+| Large Controlled | 1567387 | 1567388 | 2 | 45 minutes |
+
+Every group includes pure MPI p256,T1 with both communication modes. Uniform
+also tests MPI+OpenMP and MPI+Kokkos OpenMP with p/T=256/1,16/16,8/32, each with
+both modes. All cases use exactly 256 active CPU cores on eight nodes, keeping
+32 cores/node. This independently checks the large-input endpoint mechanisms and
+selected fixed-core decomposition gains. Historical weak baselines are reused;
+these strong-graph labels are not added as new points in the weak suite.
+
+The added reservation is at most 640 CPUh against the verified hongxinran balance
+of 1,061.444 CPUh. The existing xtt_ella diagnostic reservation was at most 112
+CPUh. Neither number is actual consumption. All new validators use auto_free.
+At 21:34 all three hongxinran performance jobs were Q, validators dependency-held;
+node-placement checks made no changes. No old held batch was released and no
+completed main-matrix configuration was scheduled as a missing cell.
+
+- [hongxinran submission and owners](../results/updated_vanda_scaling/performance_investigation_20261116/submission_hongxinran.json)
+- [hongxinran queue snapshot](../results/updated_vanda_scaling/performance_investigation_20261116/queue_hongxinran_latest.json)
+- [xtt_ella queue snapshot](../results/updated_vanda_scaling/performance_investigation_20261116/queue_xtt_ella_latest.json)
+- [256-core diagnostic driver](../scripts/investigate_256.py)

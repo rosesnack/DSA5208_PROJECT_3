@@ -1,0 +1,45 @@
+{
+  "job": "1567277.stdct-mgmt-02",
+  "allowed_cpus": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32,
+    34,
+    36,
+    38,
+    40,
+    42,
+    44,
+    46,
+    48,
+    50,
+    52,
+    54,
+    56,
+    58,
+    60,
+    62
+  ],
+  "original_omp_environment": {
+    "OMP_NUM_THREADS": "1"
+  },
+  "binaries": {
+    "pagerank_openmp": "9a94596f619a21d136b326e651895185d99d2d809cd02936e46d175c19b7f6ed",
+    "pagerank_kokkos": "d05b0f680c0e292bcc55ac3b869ad410b26d2e4920bf0ae8ccaaef54f7f9fd94",
+    "pagerank_mpi": "a8c9ccacf2b008080f42d11f0666cd5a22c7d5e9681a0f6abfe32c12dea27df6"
+  }
+}

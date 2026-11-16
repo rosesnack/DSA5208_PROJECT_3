@@ -6,8 +6,9 @@ conclusions and insights.
 
 The [performance investigation](../../docs/PERFORMANCE_INVESTIGATION.md) records
 open attribution questions for the Google 32-thread and Uniform MPI p128 points.
-Saved numerical validation has passed; independent performance reproduction is
-still pending. Interpret those points as observed measurements, not established
+Saved numerical validation has passed. The Google reproduction and independent
+validation have finished without reproducing the old 32-thread cliff; MPI p128
+and additional 256-core reproductions are pending. Interpret those points as observed measurements, not established
 causal scaling behavior.
 
 - [PDF report](../../output/pdf/pagerank_non512_report.pdf)
