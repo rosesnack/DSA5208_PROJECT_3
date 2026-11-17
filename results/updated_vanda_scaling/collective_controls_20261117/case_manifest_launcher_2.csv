@@ -1,3 +1,0 @@
-id,graph,implementation,processes,threads,communication,policy,launcher,cores,nodes,account,state,performance_job,validation_job
-strong_uniform_mpi_p256_t1_halo_ompi_core,strong_uniform,mpi,256,1,halo,a2av_pairwise,ompi_core,256,8,hongxinran,validated,1577398.stdct-mgmt-02,1577399.stdct-mgmt-02
-strong_uniform_mpi_p256_t1_halo_pin_wrapper,strong_uniform,mpi,256,1,halo,a2av_pairwise,pin_wrapper,256,8,hongxinran,validated,1577398.stdct-mgmt-02,1577399.stdct-mgmt-02

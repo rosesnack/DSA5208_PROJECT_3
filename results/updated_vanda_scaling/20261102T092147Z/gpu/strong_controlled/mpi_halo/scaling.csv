@@ -1,3 +1,0 @@
-dataset,communication,processes,serial_s,mpi_s,speedup,efficiency,communication_s,communication_bytes_per_iteration,communication_setup_bytes,rank_l1_error,rank_max_error
-strong_controlled,halo,1,12.942606851,13.549999336000006,0.9551739841502229,0.9551739841502229,0.1027130279999966,0,0,0.0,0.0
-strong_controlled,halo,2,12.942606851,11.944121332000009,1.0835963978635168,0.5417981989317584,9.793498824999986,102379192,102379192,0.0,0.0

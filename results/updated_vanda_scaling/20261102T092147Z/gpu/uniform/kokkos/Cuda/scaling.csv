@@ -1,2 +1,0 @@
-dataset,implementation,backend,serial_s,parallel_s,speedup,rank_l1_error,rank_max_error
-uniform,kokkos,Cuda,0.028816815,0.000998551,28.858631156545833,9.096159765621843e-17,1.0164395367051604e-20

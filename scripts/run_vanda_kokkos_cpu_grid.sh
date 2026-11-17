@@ -16,7 +16,7 @@ RUN_ID="${RUN_ID:?Set RUN_ID}"
 GRAPH_NAME="${GRAPH_NAME:?Set GRAPH_NAME}"
 NODES="${PAGERANK_NODE_COUNTS:?Set one node count}"
 RESULT_ROOT="$DATA_ROOT/results/kokkos_cpu_grid/$GRAPH_NAME/nodes$NODES"
-DESTINATION="$ROOT/results/updated_vanda_scaling/$RUN_ID/kokkos_cpu_grid/$GRAPH_NAME/nodes$NODES"
+DESTINATION="$ROOT/results/runs/$RUN_ID/kokkos_cpu_grid/$GRAPH_NAME/nodes$NODES"
 MANIFEST="$DATA_ROOT/manifests/kokkos_${GRAPH_NAME}_${PBS_JOBID}.tsv"
 
 export PAGERANK_ENVIRONMENT=vanda-gcc13-release PAGERANK_RUN_ID="$RUN_ID"

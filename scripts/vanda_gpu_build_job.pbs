@@ -30,4 +30,3 @@ cmake -S . -B build-vanda-matrix-kokkos-cuda -DCMAKE_BUILD_TYPE=Release \
     -DBUILD_KOKKOS=ON -DBUILD_MPI_KOKKOS=ON \
     -DCMAKE_PREFIX_PATH="$PWD/kokkos-install-vanda-matrix-cuda"
 cmake --build build-vanda-matrix-kokkos-cuda --parallel 8
-printf '%s\n' "$PBS_JOBID" > "results/updated_vanda_scaling/${RUN_ID:?}/gpu_build.complete"

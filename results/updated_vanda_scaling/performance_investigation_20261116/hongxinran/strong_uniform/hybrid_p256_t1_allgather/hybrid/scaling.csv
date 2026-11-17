@@ -1,2 +1,0 @@
-dataset,processes,requested_threads,communication,threads_min,threads_max,total_threads,serial_s,hybrid_s,speedup,efficiency,communication_s,communication_bytes_per_iteration,communication_setup_s,communication_setup_bytes,rank_l1_error,rank_max_error
-strong_uniform,256,1,allgather,1,1,256,15.867036746,1.0667800510000003,14.873765900596126,0.05810064804920362,0.964944512999999,26112000000,0,0,0.0,0.0

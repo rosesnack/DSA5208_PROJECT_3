@@ -1,3 +1,0 @@
-dataset,implementation,backend,communication,processes,serial_s,parallel_s,speedup,communication_s,communication_bytes_per_iteration,communication_setup_s,communication_setup_bytes,backend_compute_s,transfer_s,rank_l1_error
-grid_controlled_n200000_d8,mpi_cuda,Cuda,halo,1,0.108714936,0.018882153,5.757549787887006,0.0041681470000000526,0,0.010585558,0,0.007144580000000002,0.007508358999999999,9.528803019255658e-18
-grid_controlled_n200000_d8,mpi_cuda,Cuda,halo,2,0.108714936,0.02663904099999999,4.081037902227789,0.020372765,1362856,0.05624889,1362856,0.006883729,0.006057822000000002,9.528803019255658e-18

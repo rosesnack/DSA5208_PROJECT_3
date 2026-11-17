@@ -1,3 +1,0 @@
-family,implementation,backend,communication,processes,threads_per_rank,cpu_cores,graph_scale,vertices,edges,iterations,median_s,seconds_per_iteration,iteration_efficiency,solve_time_efficiency,communication_s,communication_bytes_per_iteration,communication_setup_s
-hub,mpi,,allgather,512,1,512,1,25600000,409600000,14,11.017453585000002,0.786960970357143,0.001870372593066766,0.001736774550704854,11.039930057,104652800000,0
-hub,mpi,,halo,512,1,512,1,25600000,409600000,14,13.842504150000003,0.9887502964285717,0.0014828287687105653,0.0013769124280883821,13.770909825000047,1866412120,10.872646018

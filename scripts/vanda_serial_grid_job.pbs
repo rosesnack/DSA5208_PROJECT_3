@@ -40,10 +40,12 @@ mkdir -p "$RESULTS_ROOT"
     sort -u "$PBS_NODEFILE"
 } > "$RESULTS_ROOT/environment.txt"
 
+export PAGERANK_DEFER_VALIDATION="${PAGERANK_DEFER_VALIDATION:-1}"
+validate_result() { if [[ "$PAGERANK_DEFER_VALIDATION" != 1 ]]; then python3 "$@"; fi; }
 ./build-vanda-matrix-cpu/pagerank_serial
 ./build-vanda-matrix-cpu/pagerank_openmp
-python3 scripts/validate_serial.py
-python3 scripts/validate_openmp.py
+validate_result scripts/validate_serial.py
+validate_result scripts/validate_openmp.py
 for threads in 1 2 4 8 16 32; do
     KOKKOS_RESULTS_ROOT="$RESULTS_ROOT/kokkos_threads_${threads}"
     mkdir -p "$KOKKOS_RESULTS_ROOT"
@@ -52,12 +54,12 @@ for threads in 1 2 4 8 16 32; do
     export OMP_NUM_THREADS="$threads"
     printf 'Kokkos OpenMP requested threads: %s\n' "$threads" > "$KOKKOS_RESULTS_ROOT/thread_config.txt"
     ./build-vanda-matrix-cpu/pagerank_kokkos
-    python3 scripts/validate_gpu.py kokkos OpenMP
+    validate_result scripts/validate_gpu.py kokkos OpenMP
 done
 export PAGERANK_RESULTS_ROOT="$RESULTS_ROOT"
-python3 scripts/summarize_serial_grid.py
-DESTINATION="$PBS_O_WORKDIR/results/updated_vanda_scaling/$RUN_ID/serial_grid/$GRAPH_NAME"
+
+DESTINATION="$PBS_O_WORKDIR/results/runs/$RUN_ID/serial_grid/$GRAPH_NAME"
 mkdir -p "$DESTINATION"
 cp -a "$RESULTS_ROOT/." "$DESTINATION/"
 find "$DESTINATION" -name ranks.csv -delete
-printf '%s\n' "$PBS_JOBID" > "$DESTINATION/complete.txt"
+printf '%s\n' "$PBS_JOBID" > "$DESTINATION/measurement_complete.txt"

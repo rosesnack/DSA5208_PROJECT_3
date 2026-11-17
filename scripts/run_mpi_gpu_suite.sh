@@ -5,7 +5,7 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 CUDA_BUILD_DIR="${CUDA_BUILD_DIR:-build-vanda-matrix-cuda}"
 KOKKOS_BUILD_DIR="${KOKKOS_BUILD_DIR:-build-vanda-matrix-kokkos-cuda}"
-read -r -a process_counts <<< "${PAGERANK_GPU_PROCESS_COUNTS:-1 2 4 8}"
+read -r -a process_counts <<< "${PAGERANK_GPU_PROCESS_COUNTS:-1 2}"
 read -r -a hybrid_threads <<< "${PAGERANK_GPU_HYBRID_THREADS:-1 2 4 8}"
 export PAGERANK_HYBRID_MAX_TOTAL_THREADS=64
 export PAGERANK_PROCESS_COUNTS="${process_counts[*]}"

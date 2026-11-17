@@ -1,6 +1,0 @@
-{
-  "observed_at": "2026-11-11T23:52:13.078482+08:00",
-  "script": "scripts/submit_vanda_core_groups.py",
-  "sha256": "ef66635925e3130ef7a063f798500fc5a88137440f1a788d812d8c2851e791dc",
-  "change": "Budget query includes PBS history (-x), so a job finishing after qselect remains queryable and is not reserved as pending. No solver or timing changes."
-}

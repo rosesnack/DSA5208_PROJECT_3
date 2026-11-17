@@ -1,2 +1,0 @@
-Requested OMP_NUM_THREADS=1
-Kokkos tag=4.5.01

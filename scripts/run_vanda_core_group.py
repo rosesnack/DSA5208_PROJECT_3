@@ -151,7 +151,7 @@ def finalize(group, raw, env):
                               settings, logs / f'{method}_{mode}_t{cell["threads"]}.log'))
     for task in tasks:
         command(*task)
-    root = Path.cwd() / "results/updated_vanda_scaling" / env["RUN_ID"]
+    root = Path.cwd() / "results/runs" / env["RUN_ID"]
     group_relative = raw.relative_to(Path(env["DATA_ROOT"]) / "results")
     archived = root / group_relative
     shutil.copytree(raw, archived, dirs_exist_ok=True, ignore=shutil.ignore_patterns("ranks.csv"))

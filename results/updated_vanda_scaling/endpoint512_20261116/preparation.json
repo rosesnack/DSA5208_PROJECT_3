@@ -1,6 +1,0 @@
-{
-  "observed_at": "2026-11-16T02:03:39.968533+08:00",
-  "plan": "results/updated_vanda_scaling/20261106T185006Z/endpoint512_plan_20261116.json",
-  "source": "results/updated_vanda_scaling/20261106T185006Z/core_group_watch_plan_xtt_ella_20261113_refund.json",
-  "dry_run": "{\"graph\": \"grid_controlled_n50000_d4\", \"nodes\": 8, \"cores\": 512, \"cells\": 16, \"walltime\": \"01:00:00\", \"reservation\": 512.0, \"performance_job\": \"dry-run\", \"validation_job\": \"dry-run\", \"dependency\": \"1560492.stdct-mgmt-02\"}\n{\"graph\": \"grid_uniform_n50000_d4\", \"nodes\": 8, \"cores\": 512, \"cells\": 16, \"walltime\": \"01:00:00\", \"reservation\": 512.0, \"performance_job\": \"dry-run\", \"validation_job\": \"dry-run\", \"dependency\": \"1560492.stdct-mgmt-02\"}\n{\"graph\": \"grid_hub_n50000_d4\", \"nodes\": 8, \"cores\": 512, \"cells\": 16, \"walltime\": \"01:00:00\", \"reservation\": 512.0, \"performance_job\": \"dry-run\", \"validation_job\": \"dry-run\", \"dependency\": \"1560492.stdct-mgmt-02\"}\nGroups: 3, cells: 48, uncommitted after margin: 2995.187\n"
-}

@@ -1,3 +1,0 @@
-family,implementation,backend,communication,processes,threads_per_rank,cpu_cores,graph_scale,vertices,edges,iterations,median_s,seconds_per_iteration,iteration_efficiency,solve_time_efficiency,communication_s,communication_bytes_per_iteration,communication_setup_s
-controlled,mpi_kokkos,OpenMP,allgather,128,4,512,4,25600000,409600000,12,8.972225766999998,0.7476854805833332,0.005908225800522918,0.008369986550740803,8.506495042999966,26009600000,0
-controlled,mpi_kokkos,OpenMP,halo,128,4,512,4,25600000,409600000,12,12.042883880999995,1.0035736567499995,0.004361679911964799,0.006179046541950132,11.951984342999964,1121320768,29.049044789

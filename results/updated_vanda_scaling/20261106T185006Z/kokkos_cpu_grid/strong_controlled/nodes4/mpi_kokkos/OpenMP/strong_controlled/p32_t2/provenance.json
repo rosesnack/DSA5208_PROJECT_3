@@ -1,9 +1,0 @@
-{
-  "performance_job": "1546270.stdct-mgmt-02",
-  "validation_job": "1546271.stdct-mgmt-02",
-  "group": "cpu_core_groups/strong_controlled/nodes4_cores16",
-  "cores": 64,
-  "nodes": 4,
-  "processes": 32,
-  "threads": 2
-}

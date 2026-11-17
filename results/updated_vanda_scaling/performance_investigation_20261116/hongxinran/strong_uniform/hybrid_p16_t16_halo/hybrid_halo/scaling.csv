@@ -1,2 +1,0 @@
-dataset,processes,requested_threads,communication,threads_min,threads_max,total_threads,serial_s,hybrid_s,speedup,efficiency,communication_s,communication_bytes_per_iteration,communication_setup_s,communication_setup_bytes,rank_l1_error,rank_max_error
-strong_uniform,16,16,halo,16,16,256,15.867036746,0.8625329209999997,18.39586218645909,0.07185883666585582,0.7188110999999999,1042525368,2.141062248,1042525368,0.0,0.0

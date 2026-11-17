@@ -1,5 +1,0 @@
-{
-  "job": "1542730.stdct-mgmt-02",
-  "purpose": "Free two-node CPU-pool and MPI placement check, no timed solver",
-  "queue": "auto_free"
-}

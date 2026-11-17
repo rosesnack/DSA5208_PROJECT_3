@@ -1,9 +1,0 @@
-{
-  "performance_job": "1560533.stdct-mgmt-02",
-  "validation_job": "1560534.stdct-mgmt-02",
-  "group": "cpu_recovery_20261116/strong_controlled/nodes8_cores1",
-  "cores": 8,
-  "nodes": 8,
-  "processes": 8,
-  "threads": 1
-}

@@ -1,0 +1,44 @@
+[
+  {
+    "archive": "results/raw/controls.zip",
+    "sha256": "b47b78f8c55873beedd70b1ccde4185f206139236b9822ff491e436d8f325c22",
+    "members": 295,
+    "bytes": 170426
+  },
+  {
+    "archive": "results/raw/fixed_cpu.zip",
+    "sha256": "e5350d27b75fd9aaa21546cc55c2f6cc47048e98f5f799f69e43095e0ce54cb6",
+    "members": 53595,
+    "bytes": 30979223
+  },
+  {
+    "archive": "results/raw/fixed_gpu.zip",
+    "sha256": "c40b311a37ff9b134d2c36fc1d1821e845d08f4dbb57636c93ffaea4543a2dd1",
+    "members": 4995,
+    "bytes": 2712538
+  },
+  {
+    "archive": "results/raw/growing.zip",
+    "sha256": "6048ef019bfaa3099525fd30cd4671e87f1e5fcec74f4faf13bfee6b3747454f",
+    "members": 1116,
+    "bytes": 591317
+  },
+  {
+    "archive": "results/raw/high_core.zip",
+    "sha256": "3b6a918faf502e7074d79284a5ba1f5fa20ae9061865ac342e8f958ba83ada71",
+    "members": 15,
+    "bytes": 9312
+  },
+  {
+    "archive": "results/provenance.zip",
+    "sha256": "f5ae3b415d76c8a4cd58d2d1a61f76e82b616f23d11077548e1010e1aedbeacd",
+    "members": 16983,
+    "bytes": 8367953
+  },
+  {
+    "archive": "results/raw/google_ranks.csv.gz",
+    "sha256": "883bed7f5ed6b3a6bfafd3313b4776130c13a968c7091f9850127f82442fc8e1",
+    "members": 1,
+    "bytes": 10637158
+  }
+]

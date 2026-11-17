@@ -1,0 +1,43 @@
+{
+  "fixed_configurations": 19530,
+  "timed_runs": 97650,
+  "weak_configurations": 372,
+  "weak_suite_counts": {
+    "rank_cpu_regular": 150,
+    "core_cpu": 84,
+    "gpu_node": 138
+  },
+  "graph_count": 45,
+  "max_main_cpu_cores": 256,
+  "fixed_matrix_complete": true,
+  "max_residual_l1": 7.519725947321343e-09,
+  "max_rank_sum_error": 9.725886762623759e-12,
+  "max_summary_median_difference_s": 0,
+  "median_repeat_relative_range": 0.04993016324835258,
+  "p95_repeat_relative_range": 0.3537185070691903,
+  "iteration_distinct_counts_per_graph_context": {
+    "1": 90
+  },
+  "compact_setup_configurations": 12,
+  "stage_counts": {
+    "serial": 45,
+    "openmp": 270,
+    "kokkos_openmp": 270,
+    "mpi_cpu": 2160,
+    "mpi_kokkos_cpu_t1": 2160,
+    "mpi_openmp": 7560,
+    "mpi_kokkos_cpu_threads": 5400,
+    "gpu_node_serial": 45,
+    "gpu_node_openmp": 270,
+    "cuda": 45,
+    "kokkos_cuda": 45,
+    "gpu_node_mpi_cpu": 180,
+    "gpu_node_mpi_openmp": 720,
+    "mpi_cuda": 180,
+    "mpi_kokkos_cuda": 180
+  },
+  "source_manifest": "results/manifests/fixed.csv",
+  "source_manifest_sha256": "1e27cf1b9ecd3a04c999482c208c1519dab7381a0481fb8ea62a6fbd83f2a717",
+  "source_archives_sha256": "79a485299f50ccb21d9bd48a540f0ec16d7a2c73a10f3358141b65c79c33845a",
+  "supplement_512_configurations": 5
+}

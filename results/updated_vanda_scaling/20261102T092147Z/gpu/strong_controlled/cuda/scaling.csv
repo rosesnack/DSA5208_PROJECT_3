@@ -1,2 +1,0 @@
-dataset,implementation,backend,serial_s,parallel_s,speedup,rank_l1_error,rank_max_error
-strong_controlled,cuda,CUDA,12.942606851,0.594431452,21.77308553821274,8.816064995118935e-17,5.082197683525802e-21

@@ -1,2 +1,0 @@
-dataset,family,vertices,edges,average_degree,median_s,min_s,max_s
-grid_hub_n50000_d4,hub,50000,200000,4.0,0.019025771,0.018942684,0.019248851

@@ -1,3 +1,0 @@
-stage	graph	nodes	job_id
-gpu_smoke	uniform	2	1508890.stdct-mgmt-02
-layout_probe	-	2	1510485.stdct-mgmt-02	previous validation superseded by PE=1 diagnostic

@@ -1,3 +1,0 @@
-dataset,implementation,backend,communication,processes,serial_s,parallel_s,speedup,communication_s,communication_bytes_per_iteration,communication_setup_s,communication_setup_bytes,backend_compute_s,transfer_s,rank_l1_error
-synthetic_controlled,mpi_cuda,Cuda,allgather,1,0.035837148,0.012398141000000001,2.8905259264271956,0.0012361490000000405,0,0,0,0.006866082,0.004260766,2.4894446550569656e-16
-synthetic_controlled,mpi_cuda,Cuda,allgather,2,0.035837148,0.020918084999999996,1.7132136139613166,0.016540524999999966,800000,0,0,0.00668745,0.0030801749999999997,2.4894446550569656e-16

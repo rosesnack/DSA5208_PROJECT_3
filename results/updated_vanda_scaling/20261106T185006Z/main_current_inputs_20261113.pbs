@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-#PBS -N dsa5208-current-input-check
-#PBS -q auto_free
-#PBS -l select=1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb
-#PBS -l walltime=00:10:00
-#PBS -j oe
-set -euo pipefail
-cd "${PBS_O_WORKDIR:?}"
-python3 scripts/prepare_vanda_account_inputs.py "$TAIL_PLAN" "$REFERENCE_DATA_ROOT"

@@ -1,2 +1,0 @@
-dataset,implementation,backend,serial_s,parallel_s,speedup,rank_l1_error,rank_max_error
-grid_controlled_n50000_d16,kokkos,Cuda,0.024471547,0.006258688,3.910012290115756,1.47182986013749e-16,1.0842021724855044e-18

@@ -1,2 +1,0 @@
-dataset,family,vertices,edges,average_degree,median_s,min_s,max_s
-grid_controlled_n200000_d4,controlled,200000,800000,4.0,0.129095653,0.128996329,0.129121339

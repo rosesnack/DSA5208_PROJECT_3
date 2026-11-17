@@ -1,3 +1,0 @@
-dataset,communication,processes,serial_s,mpi_s,speedup,efficiency,communication_s,communication_bytes_per_iteration,communication_setup_bytes,rank_l1_error,rank_max_error
-grid_controlled_n400000_d4,halo,1,0.179363729,0.18352354300000004,0.9773336219865806,0.9773336219865806,0.00750191300000036,0,0,0.0,0.0
-grid_controlled_n400000_d4,halo,2,0.179363729,0.152225249,1.1782784405233588,0.5891392202616794,0.046739015999999634,2645376,2645376,0.0,0.0

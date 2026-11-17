@@ -1,2 +1,0 @@
-dataset,implementation,backend,serial_s,parallel_s,speedup,rank_l1_error,rank_max_error
-smoke,kokkos,OpenMP,8.520000000000001e-07,0.00012997300000000002,0.006555207620044162,0.0,0.0

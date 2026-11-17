@@ -1,2 +1,0 @@
-dataset,implementation,backend,serial_s,parallel_s,speedup,rank_l1_error,rank_max_error
-grid_controlled_n50000_d8,cuda,CUDA,0.024567068,0.004748209,5.173965172973642,1.1533200609814553e-17,4.336808689942018e-19

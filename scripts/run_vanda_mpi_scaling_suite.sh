@@ -238,7 +238,7 @@ if [[ "${PAGERANK_DEFER_VALIDATION:-0}" == 1 ]]; then
 fi
 
 if [[ "$RUN_STRONG" == 1 ]]; then
-    DEST_STRONG="$ROOT/results/updated_vanda_scaling/$RUN_ID/strong"
+    DEST_STRONG="$ROOT/results/runs/$RUN_ID/strong"
     if [[ -n "$GRAPH_NAME" ]]; then DEST_STRONG="$DEST_STRONG/$GRAPH_NAME"; fi
     mkdir -p "$DEST_STRONG"
     for nodes in "${NODE_COUNTS[@]}"; do
@@ -250,8 +250,8 @@ if [[ "$RUN_STRONG" == 1 ]]; then
 fi
 if [[ "$RUN_WEAK" == 1 ]]; then
     find "$WEAK_ROOT" -name ranks.csv -delete
-    mkdir -p "$ROOT/results/updated_vanda_scaling/$RUN_ID/weak"
-    cp -a "$WEAK_ROOT/." "$ROOT/results/updated_vanda_scaling/$RUN_ID/weak/"
-    printf '%s\n' "$PBS_JOBID" > "$ROOT/results/updated_vanda_scaling/$RUN_ID/weak/complete.txt"
+    mkdir -p "$ROOT/results/runs/$RUN_ID/weak"
+    cp -a "$WEAK_ROOT/." "$ROOT/results/runs/$RUN_ID/weak/"
+    printf '%s\n' "$PBS_JOBID" > "$ROOT/results/runs/$RUN_ID/weak/complete.txt"
 fi
 printf 'Strong/weak MPI scaling finished and validated: %s\n' "$RUN_ID"

@@ -1,6 +1,0 @@
-Resume PBS job: 1513573.stdct-mgmt-02
-Graph: strong_uniform
-Model name:                           Intel(R) Xeon(R) Platinum 8452Y
-CMAKE_BUILD_TYPE:STRING=Release
-CMAKE_CXX_COMPILER:STRING=/cm/shared/apps/openmpi4/gcc/4.1.8/bin/mpicxx
-gn-a40-074.stdct.loc

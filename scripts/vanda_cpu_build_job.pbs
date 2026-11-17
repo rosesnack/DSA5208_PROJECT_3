@@ -20,4 +20,3 @@ cmake -S . -B build-vanda-matrix-cpu -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_PREFIX_PATH="$PWD/kokkos-install-vanda-matrix-openmp"
 cmake --build build-vanda-matrix-cpu --parallel 16
 mpicxx -O3 -DNDEBUG scripts/mpi_rank_hosts.cpp -o build-vanda-matrix-cpu/mpi_rank_hosts
-printf '%s\n' "$PBS_JOBID" > "results/updated_vanda_scaling/${RUN_ID:?}/cpu_build.complete"

@@ -1,7 +1,0 @@
-{
-  "observed_at": "2026-11-15T00:04:17.562660+08:00",
-  "verified_hpc_project_balance": 4955.473,
-  "maximum_charge_for_all_paid_work_submitted_since": 1056.0,
-  "conservative_balance_floor": 3899.473,
-  "note": "Subtract the full walltime reservation of both existing128 groups even if they spend it all. Submission also reserves every live Q/H/R/E and the normal margin, deliberately counting existing work twice. Project-side accounting still enforces actual credit."
-}

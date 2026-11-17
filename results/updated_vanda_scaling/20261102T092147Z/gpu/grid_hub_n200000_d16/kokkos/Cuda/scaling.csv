@@ -1,2 +1,0 @@
-dataset,implementation,backend,serial_s,parallel_s,speedup,rank_l1_error,rank_max_error
-grid_hub_n200000_d16,kokkos,Cuda,0.074131388,0.023930808,3.0977386137567944,9.537114530050591e-17,2.168404344971009e-19

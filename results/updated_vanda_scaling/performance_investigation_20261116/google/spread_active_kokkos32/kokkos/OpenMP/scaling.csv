@@ -1,2 +1,0 @@
-dataset,implementation,backend,serial_s,parallel_s,speedup,rank_l1_error,rank_max_error
-google,kokkos,OpenMP,1.895993348,0.086686005,21.871965930371346,4.873165886950761e-15,6.071532165918825e-18

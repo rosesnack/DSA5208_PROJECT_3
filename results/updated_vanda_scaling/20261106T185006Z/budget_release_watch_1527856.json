@@ -1,9 +1,0 @@
-{
-  "observed_at": "2026-11-07T03:41:20.124100+00:00",
-  "job": "1527856.stdct-mgmt-02",
-  "balance": 8990.948,
-  "other_queued_cpu_hours": 5120.0,
-  "needed_cpu_hours": 2048.0,
-  "margin": 128,
-  "released": true
-}

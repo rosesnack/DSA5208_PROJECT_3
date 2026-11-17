@@ -1,9 +1,0 @@
-{
-  "performance_job": "1550407.stdct-mgmt-02",
-  "validation_job": "1550408.stdct-mgmt-02",
-  "group": "cpu_core_groups/strong_hub/nodes8_cores4",
-  "cores": 32,
-  "nodes": 8,
-  "processes": 32,
-  "threads": 1
-}

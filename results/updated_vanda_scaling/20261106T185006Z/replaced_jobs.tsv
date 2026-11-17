@@ -1,4 +1,0 @@
-stage	graph	nodes	job_id
-kokkos_cpu_grid	grid_controlled_n50000_d4	4	1527563.stdct-mgmt-02
-kokkos_cpu_grid	grid_controlled_n50000_d4	8	1527564.stdct-mgmt-02
-mpi_strong	grid_controlled_n50000_d4	8	1527565.stdct-mgmt-02

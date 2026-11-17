@@ -1,2 +1,0 @@
-{"host": "CN-051", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 2, "tcp_ephemeral_port_range": "32768\t61439", "tcp_tw_reuse": "2"}
-{"host": "CN-053", "cpu_model": "Intel(R) Xeon(R) Platinum 8452Y", "logical_cpus": 72, "affinity_cpus": 2, "tcp_ephemeral_port_range": "32768\t61439", "tcp_tw_reuse": "2"}

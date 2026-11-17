@@ -1,0 +1,71 @@
+{
+  "vertices": 875713,
+  "rank_sum": 1.0000000000000027,
+  "dangling_vertices": 136259,
+  "top_1_percent_rank_mass": 0.2709136249650801,
+  "pagerank_indegree_pearson": 0.901087638279525,
+  "source": "results/raw/google_ranks.csv.gz",
+  "vector_sha256": "f4059df29329cac7ecb0d693727c23c5d5b0ca0b084e8efeb05c4cf0ac4818ea",
+  "top10": [
+    {
+      "node_id": 597621,
+      "rank": 0.0009237249482320867,
+      "in_degree": 5354,
+      "out_degree": 22
+    },
+    {
+      "node_id": 41909,
+      "rank": 0.0009211312457368225,
+      "in_degree": 4219,
+      "out_degree": 10
+    },
+    {
+      "node_id": 163075,
+      "rank": 0.0009040044264418055,
+      "in_degree": 4731,
+      "out_degree": 36
+    },
+    {
+      "node_id": 537039,
+      "rank": 0.0008988318055839182,
+      "in_degree": 6326,
+      "out_degree": 27
+    },
+    {
+      "node_id": 384666,
+      "rank": 0.0007868924446165229,
+      "in_degree": 4010,
+      "out_degree": 20
+    },
+    {
+      "node_id": 504140,
+      "rank": 0.0007651160535789949,
+      "in_degree": 5271,
+      "out_degree": 19
+    },
+    {
+      "node_id": 486980,
+      "rank": 0.0007249403036320426,
+      "in_degree": 3908,
+      "out_degree": 6
+    },
+    {
+      "node_id": 605856,
+      "rank": 0.0007179552628372921,
+      "in_degree": 4550,
+      "out_degree": 22
+    },
+    {
+      "node_id": 32163,
+      "rank": 0.0007125718495521364,
+      "in_degree": 5097,
+      "out_degree": 32
+    },
+    {
+      "node_id": 558791,
+      "rank": 0.000709185934026443,
+      "in_degree": 4206,
+      "out_degree": 22
+    }
+  ]
+}

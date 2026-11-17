@@ -1,3 +1,0 @@
-dataset,communication,processes,serial_s,mpi_s,speedup,efficiency,communication_s,communication_bytes_per_iteration,communication_setup_bytes,rank_l1_error,rank_max_error
-synthetic_hub,allgather,1,0.039831984,0.045680390000000015,0.8719711893878311,0.8719711893878311,0.0011316730000001662,0,0,0.0,0.0
-synthetic_hub,allgather,2,0.039831984,0.038304058999999994,1.0398893756925345,0.5199446878462672,0.02623218500000002,800000,0,0.0,0.0

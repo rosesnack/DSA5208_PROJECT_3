@@ -17,7 +17,7 @@ WEAK_FAMILY="${WEAK_FAMILY:?Set WEAK_FAMILY}"
 read -r -a core_counts <<< "${CORE_WEAK_SIZES:-4 8 16 32 64 128 256}"
 max_cores="${core_counts[$((${#core_counts[@]} - 1))]}"
 RESULT_ROOT="$DATA_ROOT/results/weak_core/$WEAK_FAMILY"
-DESTINATION="$ROOT/results/updated_vanda_scaling/$RUN_ID/weak_core/$WEAK_FAMILY"
+DESTINATION="$ROOT/results/runs/$RUN_ID/weak_core/$WEAK_FAMILY"
 export PAGERANK_RESULTS_ROOT="$RESULT_ROOT"
 export PAGERANK_ENVIRONMENT=vanda-gcc13-release PAGERANK_RUN_ID="$RUN_ID"
 export PAGERANK_REPEATS=5 PAGERANK_WARMUPS=1
