@@ -64,7 +64,9 @@ def cycle(rebuild, poppler):
     old = ROOT / 'reports/non512/data/collective_controls.csv'
     subprocess.run([sys.executable, 'scripts/analyze_collective_controls.py'], cwd=ROOT, check=True)
     extra=ROOT/'reports/non512/data/launcher_controls.csv'
-    signature=hashlib.sha256(old.read_bytes()+extra.read_bytes()+(ROOT/'scripts/build_non512_report.py').read_bytes()).hexdigest()
+    signature=hashlib.sha256(old.read_bytes()+extra.read_bytes()+b''.join(
+        (ROOT/'scripts'/name).read_bytes() for name in
+        ('build_non512_report.py','report_result_views.py','report_latex_equations.py'))).hexdigest()
     check_file=DEST/'auto_report_check.json'
     previous=json.loads(check_file.read_text()).get('source_signature') if check_file.exists() else None
     if rebuild and signature != previous:

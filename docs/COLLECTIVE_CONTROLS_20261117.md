@@ -1,6 +1,6 @@
 # 集体通信策略与64核节点边界：独立配对实验
 
-本轮主性能矩阵仍为 **19,530个非512固定图配置**，另有372项弱套件和5项有效512固定图补充。本轮补充 **57个独立诊断配置，均已完成并通过校验**，另追加2项256核启动绑定配对；不加入这些分母，不覆盖原始记录。每项1次预热、5次计时，报告中位数及五次范围。
+本轮主性能矩阵仍为 **19,530个非512固定图配置**，另有372项弱套件和5项有效512固定图补充。本轮补充 **57个独立诊断配置，均已完成并通过校验**，追加的2项256核启动绑定配对也均已通过校验（合计59/59）；不加入这些分母，不覆盖原始记录。每项1次预热、5次计时，报告中位数及五次范围。
 
 ## 回答的问题与组合
 
@@ -33,7 +33,7 @@
 - [xtt_ella最新PBS快照](../results/updated_vanda_scaling/collective_controls_20261117/live_xtt_ella.json)
 - [hongxinran最新PBS快照](../results/updated_vanda_scaling/collective_controls_20261117/live_hongxinran.json)
 
-**这57项均已注册，请勿按清单重新提交。** 清单中的 `scheduled` 只表示该项尚未留下完成标记，其资源组已经有PBS作业。
+**这57项均已完成校验，请勿按清单重新提交。** 清单中的 `scheduled` 只表示该项尚未留下完成标记，其资源组已经有PBS作业。
 
 本轮输出在各账号的 `~/dsa5208_collective_controls_20261117/results/c{32,64,128,256}/`。输入和构建只读复用scratch；输出写HOME，避开xtt_ella此前的scratch写入配额问题。未动既有512排队作业或队列。
 
@@ -52,21 +52,23 @@
 
 57项最大完整向量L1差为8.82e-17，最大独立残差证书上界1.68e-9，均通过原有1e-8准则。没有改写PPR内核或把未校验结果并入报告。
 
-## 256核启动绑定补充：2项已注册，不重复提交
+## 256核启动绑定补充：2项已完成校验，不重复提交
 
 本轮256核pairwise中位数为3.563秒，而主矩阵选用的另一分配测量为0.554秒。二进制SHA-256、图、进程数、节点数及付费队列一致；物理节点、NUMA分布及启动绑定方法不同。因此保留两批原始观测，不用旧快值替换新控制实验。报告按本次分配内的配对效应解释策略收益，并分析节点/NUMA局部性、共享网络与MPI进展可能带来的分配差异。
 
 追加同一分配内的两个配置：大Uniform，纯MPI Halo，强制pairwise，8节点×32核，p256,T1；只改变启动绑定：Open MPI原生`--bind-to core`，或Python显式CPU掩码。计时外记录MPI_Init之后的每个rank CPU掩码，免费校验确认256个互不重叠的活跃核及数值结果。
 
-| 账号 | 性能任务 | 免费校验 | 免费预检 | 配置数 | 墙钟 | 17:46快照 |
+| 账号 | 性能任务 | 免费校验 | 免费预检 | 配置数 | 墙钟 | 18:07完成快照 |
 |---|---|---|---|---:|---|---|
-| hongxinran | 1577398 | 1577399 | 1577397，Exit 0 | 2 | 30分 | 性能Q；校验依赖H |
+| hongxinran | 1577398 | 1577399 | 1577397，Exit 0 | 2 | 30分 | 性能及校验均Exit 0 |
+
+原生core绑定与显式CPU掩码的五次中位数分别为2.974793788秒、3.110986186秒；两者五次范围重叠，且MPI初始化后的256个CPU绑定均通过独立校验。性能作业实际墙钟3分35秒，约15.29 CPU小时；连同原57项，五个付费性能作业按申请核数×实际墙钟合计约202.24 CPU小时。实际扣款以HPC对账为准。59项均已完成，本机同步进程已按完成条件结束，无须重新提交或恢复本轮监控。
 
 追加最大预留128 CPU小时，连同原57项总上限 **512 CPU小时**（这是预算单位，不是512核实验）。提交时余额647.755 CPU小时；保留旧512作业256 CPU小时和128 CPU小时余量后，仍剩135.755 CPU小时。只有这2项获准新增，没有重跑其他有效结果。
 
 - [追加2项清单及状态](../results/updated_vanda_scaling/collective_controls_20261117/case_manifest_launcher_2.csv)
 - [提交、依赖和预算回执](../results/updated_vanda_scaling/collective_controls_20261117/launcher_submission.json)
-- [已校验的绑定结果表](../reports/non512/data/launcher_controls.csv)；尚未完成时仅有表头，报告不会引用排队结果。
+- [已校验的绑定结果表](../reports/non512/data/launcher_controls.csv)；两项均已独立校验并进入报告。
 
 ## tuned规则与控制变量
 
@@ -128,4 +130,4 @@ python3 scripts/build_non512_report.py --pdftoppm /path/to/pdftoppm
 
 报告只保留 `output/pdf/pagerank_non512_report.pdf` 这一整合版本，根目录的队友旧PDF按要求删除。正文保持四大部分；原先的待验证清单已改为证据与可能机制的论述。
 
-独立复现的PBS入口为 `scripts/vanda_collective_control_job.pbs` 和 `scripts/vanda_collective_control_validation.pbs`，设置 `CONTROL_PLAN`，按组覆盖select/墙钟，并给免费校验添加 `afterok` 依赖。现有57项已经完成，追加2项也已提交，不要重复执行这些提交操作。校验器测试：`python3 scripts/check_collective_certificate.py`。
+独立复现的PBS入口为 `scripts/vanda_collective_control_job.pbs` 和 `scripts/vanda_collective_control_validation.pbs`，设置 `CONTROL_PLAN`，按组覆盖select/墙钟，并给免费校验添加 `afterok` 依赖。现有57项和追加2项均已完成校验，不要重复执行这些提交操作。校验器测试：`python3 scripts/check_collective_certificate.py`。

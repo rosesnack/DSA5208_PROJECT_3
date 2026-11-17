@@ -1,0 +1,11 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+\pagestyle{empty}
+\begin{document}
+\setbox0=\hbox{$\displaystyle r_v^{(k+1)}=\frac{1-\alpha}{N}+\frac{\alpha D^{(k)}}{N}+\alpha\sum_{u:(u,v)\in\mathcal{E}}\frac{r_u^{(k)}}{d_{\mathrm{out}}(u)}.$}
+\pdfpagewidth=\dimexpr\wd0+4pt\relax
+\pdfpageheight=\dimexpr\ht0+\dp0+4pt\relax
+\hoffset=-1in
+\voffset=-1in
+\shipout\vbox{\kern2pt\hbox{\kern2pt\box0\kern2pt}\kern2pt}
+\end{document}

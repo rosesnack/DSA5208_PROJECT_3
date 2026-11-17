@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-17T17:51:16.515546+08:00",
+  "time": "2026-11-17T18:07:55.190236+08:00",
   "jobs": {
     "1576289.stdct-mgmt-02": {
       "job_state": "F",
@@ -114,11 +114,11 @@
       "comment": "Job run at Tue Nov 17 at 16:46 on (IN-012[1]:ncpus=1:mem=20gb) and finished"
     },
     "1577398.stdct-mgmt-02": {
-      "job_state": "Q",
-      "Exit_status": null,
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "batch_cpu",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.queue_charge_rate\": 1.0, \"job.ngpus\": 0, \"job.ncpus\": 256.0, \"job.walltime\": 1800, \"am_cloud_enabled\": false}",
         "mem": "1776gb",
         "mpiprocs": 256,
         "ncpus": 256,
@@ -129,16 +129,24 @@
         "select": "8:ncpus=32:mpiprocs=32:ompthreads=1:mem=222GB:node_pool=cpu_node:switch=cpu_all",
         "walltime": "00:30:00"
       },
-      "resources_used": null,
-      "exec_vnode": null,
-      "comment": "Not Running: Placement set is too small: Insufficient amount of resource: switch (cpu_all != )"
+      "resources_used": {
+        "cpupercent": 11270,
+        "cput": "12:33:26",
+        "mem": "20451936kb",
+        "ncpus": 256,
+        "ngpus": 0,
+        "vmem": "16626972kb",
+        "walltime": "00:03:35"
+      },
+      "exec_vnode": "(CN-007[0]:ncpus=32:mem=222gb)+(CN-095[1]:ncpus=32:mem=222gb)+(CN-101[1]:ncpus=32:mem=222gb)+(CN-118[0]:ncpus=32:mem=222gb)+(CN-121[0]:ncpus=32:mem=222gb)+(CN-122[1]:ncpus=32:mem=222gb)+(CN-123[1]:ncpus=32:mem=222gb)+(CN-127[0]:ncpus=32:mem=222gb)",
+      "comment": "Job run at Tue Nov 17 at 18:00 on (CN-007[0]:ncpus=32:mem=222gb)+(CN-095[1]:ncpus=32:mem=222gb)+(CN-101[1]:ncpus=32:mem=222gb)+(CN-118[0]:ncpus=32:mem=222gb)+(CN-121[0]:ncpus=32:mem=222gb)+(CN-122[1]:ncpus=32:mem=222gb)+(CN-123[1]:ncpus=32:mem=222gb)+(... and finished"
     },
     "1577399.stdct-mgmt-02": {
-      "job_state": "H",
-      "Exit_status": null,
+      "job_state": "F",
+      "Exit_status": 0,
       "queue": "cpu_serial",
       "Resource_List": {
-        "am_job_cache": "\"{}\"",
+        "am_job_cache": "{\"job.queue_charge_rate\": 0, \"job.ngpus\": 0, \"job.ncpus\": 1.0, \"job.walltime\": 14400, \"am_cloud_enabled\": false}",
         "mem": "20gb",
         "mpiprocs": 1,
         "ncpus": 1,
@@ -149,9 +157,17 @@
         "select": "1:ncpus=1:mpiprocs=1:ompthreads=1:mem=20gb",
         "walltime": "04:00:00"
       },
-      "resources_used": null,
-      "exec_vnode": null,
-      "comment": null
+      "resources_used": {
+        "cpupercent": 90,
+        "cput": "00:01:51",
+        "mem": "405900kb",
+        "ncpus": 1,
+        "ngpus": 0,
+        "vmem": "437552kb",
+        "walltime": "00:01:53"
+      },
+      "exec_vnode": "(IN-002[0]:ncpus=1:mem=20gb)",
+      "comment": "Job run at Tue Nov 17 at 18:04 on (IN-002[0]:ncpus=1:mem=20gb) and finished"
     },
     "1576456.stdct-mgmt-02": {
       "job_state": "F",
