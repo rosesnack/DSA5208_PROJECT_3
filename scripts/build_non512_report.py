@@ -46,6 +46,12 @@ HALO = list(csv.DictReader((DATA / 'halo_summary.csv').open()))
 SPLITS = list(csv.DictReader((DATA / 'split_summary.csv').open()))
 AUDIT = json.loads((DATA / 'audit.json').read_text())
 GOOGLE = json.loads((DATA / 'google_insights.json').read_text())
+WORK = list(csv.DictReader((DATA/'rank_work_diagnostics.csv').open()))
+POLICY = list(csv.DictReader((DATA/'thread_policy_diagnostics.csv').open()))
+TRAFFIC = list(csv.DictReader((DATA/'weak_traffic_diagnostics.csv').open()))
+SELECTOR = list(csv.DictReader((DATA/'mpi_selector_consistency.csv').open()))
+GPU_WORK = list(csv.DictReader((DATA/'gpu_work_diagnostics.csv').open()))
+OPTIMA = json.loads((DATA/'method_optima.json').read_text())
 REPRESENTATIVE = ('google', 'uniform', 'hub', 'strong_uniform', 'strong_hub', 'strong_controlled')
 DISPLAY = {'google':'Google','uniform':'Original uniform','hub':'Original hub',
            'strong_uniform':'Large uniform','strong_hub':'Large hub',
@@ -227,8 +233,8 @@ def figures():
     methods=['OpenMP','Kokkos OpenMP','MPI','MPI+OpenMP','MPI+Kokkos OpenMP','CUDA','Kokkos CUDA','MPI+CUDA','MPI+Kokkos CUDA']
     cellw=44;cellh=12.1;x0=91;y0=591
     for j,label in enumerate(headers):d.add(String(x0+(j+.5)*cellw,611,label,fontName='Helvetica-Bold',fontSize=7,textAnchor='middle',fillColor=INK))
-    d.add(String(210,635,'CPU node controls',fontName='Helvetica',fontSize=8,textAnchor='middle',fillColor=GRAY))
-    d.add(String(400,635,'GPU node controls',fontName='Helvetica',fontSize=8,textAnchor='middle',fillColor=GRAY))
+    d.add(String(210,635,'CPU-node methods',fontName='Helvetica',fontSize=8,textAnchor='middle',fillColor=GRAY))
+    d.add(String(400,635,'GPU-node methods',fontName='Helvetica',fontSize=8,textAnchor='middle',fillColor=GRAY))
     for i,row in enumerate(MATRIX):
         y=y0-i*cellh;d.add(String(x0-6,y+3,abbreviated(row['graph']),fontName='Helvetica',fontSize=7,textAnchor='end',fillColor=INK))
         for j,method in enumerate(methods):
@@ -244,6 +250,28 @@ def figures():
     for j,(label,c) in enumerate([('<=1/16x',colors.Color(.93,.50,.26)),('1x',colors.white),('>=64x',colors.Color(.1,.45,.62))]):
         d.add(Rect(105+j*130,20,17,9,fillColor=c,strokeColor=GRAY,strokeWidth=.3));d.add(String(127+j*130,20,label,fontSize=7,fillColor=INK))
     result['09_runtime_matrix']=d
+    imbalance=[]
+    for family,color in [('uniform',BLUE),('hub',ORANGE),('controlled',TEAL)]:
+        rows=sorted((r for r in WORK if r['graph']=='strong_'+family),key=lambda r:int(r['processes']))
+        imbalance.append((family.title(),[(int(r['processes']),number(r['max_mean_edges'])) for r in rows],color,False))
+    top=line_panels(['Fixed 12.8M-vertex graphs: incoming-edge imbalance'],[imbalance],
+        'MPI ranks p','Max / mean rank edges',[1,4,16,64,256],height=235,y_format=lambda x:f'{x:g}')
+    panels=[]
+    for key,scale in [('counted_payload_bytes_per_rank',1e-6),('communication_ms_per_iteration',1)]:
+        curves=[]
+        for mode,color in [('Allgatherv',BLUE),('Halo',ORANGE)]:
+            rows=sorted((r for r in TRAFFIC if r['family']=='uniform' and r['communication']==mode
+                         and (key!='counted_payload_bytes_per_rank' or int(r['processes'])>1)),key=lambda r:int(r['processes']))
+            curves.append((mode,[(int(r['processes']),number(r[key])*scale) for r in rows],color,mode=='Halo'))
+        panels.append(curves)
+    bottom=line_panels(['Uniform weak scaling: payload','Uniform weak scaling: communication'],panels,
+        'MPI ranks p','MB / rank (left); ms / iteration (right)',[1,4,16,64,256],height=245,y_format=lambda x:f'{x:g}')
+    # Distinct y labels keep a byte count separate from a phase duration.
+    for obj in bottom.contents:
+        if isinstance(obj,String) and obj.text=='MB / rank (left); ms / iteration (right)':
+            obj.text='Counted payload / rank (MB)' if obj.x<250 else 'Communication / iteration (ms)'
+    mechanism=Drawing(500,500);group=Group();group.translate(0,265);group.add(top)
+    mechanism.add(group);mechanism.add(bottom);result['10_scaling_mechanisms']=mechanism
     return result
 
 
@@ -283,7 +311,10 @@ def report(items):
             ('LINEBELOW',(0,0),(-1,0),.65,BLUE),('ROWBACKGROUNDS',(0,1),(-1,-1),[colors.white,colors.HexColor('#f5f7f9')]),
             ('LEFTPADDING',(0,0),(-1,-1),4),('RIGHTPADDING',(0,0),(-1,-1),4),
             ('TOPPADDING',(0,0),(-1,-1),3 if not small else 2),('BOTTOMPADDING',(0,0),(-1,-1),3 if not small else 2)]))
-        story.extend([KeepTogether([t,Spacer(1,8)])] if len(rows)<=12 else [t,Spacer(1,8)])
+        prefix=[]
+        if len(rows)<=12 and story and isinstance(story[-1],Paragraph) and story[-1].style.name=='SubReport':
+            prefix.append(story.pop())
+        story.extend([KeepTogether(prefix+[t,Spacer(1,8)])] if len(rows)<=12 else [t,Spacer(1,8)])
     def figure(name,caption):
         md.append(f'![{caption}](figures/{name}.png)\n')
         prefix=[]
@@ -300,14 +331,15 @@ def report(items):
     author_file=REPORT/'authors.json'
     if author_file.exists():
         authors=json.loads(author_file.read_text())
-        for author in authors:para(author['name']+' - '+author['student_id'])
+        author_line='; '.join(author['name']+' ('+author['student_id']+')' for author in authors)
+        md.append(author_line+'\n');story.append(Paragraph(html.escape(author_line),styles['CaptionReport']))
     para('We evaluate synchronous PageRank on 45 directed graphs using Serial, OpenMP, MPI, MPI+OpenMP, native CUDA and Kokkos with OpenMP and CUDA backends. The audited dataset contains 19,530 fixed-graph configurations and 372 separate non-512 weak-suite configurations or controls. All fixed-graph targets in this scope are complete and independently validated. Five available 512-core configurations are presented as a separate, explicitly incomplete supplement. Pending measurements are excluded.')
     heading('1 Introduction to the algorithm and data')
     heading('1.1 PageRank and its relation to PPR',2)
     para('PageRank assigns a probability score to each vertex of a directed graph. A random surfer follows an outgoing edge with probability alpha and otherwise jumps according to a preference vector. Personalized PageRank (PPR) uses a query-specific preference vector. Our implementation uses the uniform preference vector and uniform redistribution of dangling-vertex mass: it is standard PageRank, equivalently the uniform-preference special case of PPR. We do not implement source-specific personalized queries.')
     equation('r<sub>k+1</sub>(v) = (1 - alpha)/N + alpha D<sub>k</sub>/N + alpha sum<sub>u -&gt; v</sub> r<sub>k</sub>(u)/d<sub>out</sub>(u)',
              '$$r_v^{(k+1)}=(1-\\alpha)/N+\\alpha D_k/N+\\alpha\\sum_{u\\to v}r_u^{(k)}/d_{out}(u).$$')
-    para('Here D_k is the total score of vertices with zero out-degree. Scores start at 1/N; alpha=0.85; iteration stops when the global L1 change is at most 10^-8, with a cap of 1,000 iterations. All kernels use double precision and synchronous old/new score buffers. The pull formulation traverses incoming-edge CSR rows, avoiding simultaneous writes to a destination. An iteration costs O(N+E) work and O(N+E) storage in serial.')
+    para('Here D_k is the total score of vertices with zero out-degree. Scores start at 1/N; alpha=0.85; iteration stops when the global L1 change is at most 10^-8, with a cap of 1,000 iterations. All kernels use double precision and synchronous old/new score buffers. The pull formulation traverses incoming-edge compressed sparse row (CSR) storage, avoiding simultaneous writes to a destination. An iteration costs O(N+E) work and O(N+E) storage in serial.')
     para('This is not embarrassingly parallel: each iteration needs remote source contributions, a global dangling-mass reduction, and a global convergence reduction. Unequal incoming-edge counts make equal vertex counts an imperfect proxy for equal work.')
     heading('1.2 Three original graphs and 42 fixed extensions',2)
     table(['Source','Graphs','Vertices N','Directed edges E','Purpose'],[
@@ -318,6 +350,8 @@ def report(items):
         ['Large extensions','3','12,800,000','204,800,000','One per generated family'],
         ['Total fixed graphs','45','','','3 original + 42 extensions']], [95,35,107,107,156])
     para('The generated families use seed 5208 and deterministic integer mixing. Uniform spreads destinations across all vertices with fixed source degree. Hub directs approximately 80% of each source\'s edges to the first 1% of vertices. Controlled combines the hub destination pattern with two source-degree classes: 80% lower-degree sources and 20% higher-degree sources. Integer rounding and unique arithmetic progressions determine exact counts. The original uniform/hub files are retained unchanged; they are not interchangeable with the new canonical graphs of the same size.')
+    para('For the three large graphs, E/N=16. The integer rule floor(4*d_out/5) sends exactly 75.0% of Hub edges and 77.5% of Controlled edges into the first 1% of destination IDs. These exact fractions, rather than an assumed 80%, are used in the workload model below. The concentration is deliberately aligned with contiguous vertex partitions; results therefore characterize this partitioner and vertex ordering as well as graph structure.')
+    para('Integer rounding also qualifies the density-grid interpretation: Controlled sends 65.0% of its edges to the hot block at mean degree 4, and 77.5% at degrees 8 and 16. Changing density therefore changes this exact structural concentration as well as E. The grid is a reproducible generator-family study, not an intervention that isolates edge count from every other graph property.')
     para('Vertex count and average out-degree are crossed systematically, not changed together in a single size parameter. The three large graphs have identical N and E but different structural concentration, making them useful for separating graph size from load imbalance. All 45 fixed graphs are reused unchanged across the full fixed-graph configuration matrix.')
     heading('1.3 Separate weak-scaling inputs',2)
     para('Weak scaling uses the same three generator families with 50,000 vertices and 800,000 edges per scaling unit. Rank-based series grow the graph with p; core-normalized series grow it with C=pT. Across the non-512 weak suites there are 27 distinct graph names. The GPU weak suite also runs standalone methods on both input sizes; these are fixed-resource size controls and are not labeled as resource-scaled weak-efficiency curves.')
@@ -327,7 +361,7 @@ def report(items):
     table(['Implementation','Compute and work distribution','MPI communication'],[
         ['Serial','One CPU thread; incoming CSR pull','None'],
         ['OpenMP','CPU threads; dynamic vertex schedule, chunk 64','None'],
-        ['Kokkos OpenMP','CPU execution space; RangePolicy and parallel reductions','None'],
+        ['Kokkos OpenMP','CPU execution space; default static RangePolicy and reductions','None'],
         ['CUDA / Kokkos CUDA','One GPU; incoming-row vertex kernels','None'],
         ['MPI','Contiguous destination partitions; one CPU thread/rank','Both modes'],
         ['MPI+OpenMP','Same MPI partitions; threaded pull within each rank','Both modes; MPI_THREAD_FUNNELED'],
@@ -335,11 +369,12 @@ def report(items):
         ['MPI+Kokkos','Shared distributed driver; OpenMP or CUDA execution space','Both modes']], [105,280,115])
     para('MPI partitions consecutive dense vertex IDs approximately equally. Each rank owns incoming rows and out-degrees for its vertices. Allgatherv replicates the complete vector of source contributions at every rank each iteration. Halo precomputes distinct remote source IDs, exchanges request metadata once, and then sends only requested values with Alltoallv. Both modes retain dangling-mass and convergence Allreduce calls. Halo is an exact dependency exchange, not approximate communication or dropped edges.')
     para('The counted per-iteration payload is the algorithm-level contribution-vector traffic, excluding collective implementation details, reduction traffic, and protocol overhead. Allgatherv counts 8N(p-1) aggregate bytes; Halo counts eight bytes per requested remote contribution. Metadata setup is recorded separately and lies outside solve time. Fewer counted bytes therefore need not imply lower measured latency.')
+    para('Two costs must be distinguished: local work is approximately a*N_i+b*E_i, while global progress waits for the slowest rank and collective completion. Incoming-edge imbalance changes E_i even when every N_i is equal. The MPI timer includes packing/copies, collectives and waiting at reductions; it is not a network-only timer. Solve and phase timings take separate maxima across ranks, then separate medians across five runs. They cannot be subtracted or added to reconstruct one critical-path trace.')
     para('The distributed device implementations stage contributions through host memory; they do not use CUDA-aware MPI or overlap communication with computation. The CUDA version uses 256-thread blocks and explicit kernels. Kokkos expresses comparable operations through Views, parallel_for/parallel_reduce and execution-space fences. Kokkos OpenMP and CUDA are two backends, not interchangeable hardware measurements.')
     heading('2.2 Hardware, software and timing protocol',2)
     para('All reported measurements are from NUS Vanda. CPU comparisons use Intel Xeon Platinum 8452Y hosts, GCC 13.3.0, Open MPI 4.1.8 and Release builds. GPU comparisons use NVIDIA A40 nodes with Platinum 8452Y CPUs; archived build metadata identifies CUDA toolkit 12.4.1. Driver-reported CUDA compatibility is not treated as the compiler toolkit version. Original laptop and mixed-hardware exploratory measurements are excluded.')
     para('Every configuration has one warm-up followed by five timed runs. All primary solve-time tables and figures report the median of those five timed runs. The exported statistic solve_median_s is recomputed here from the five original solve_s observations. MPI solve time is the maximum elapsed solver time across ranks. Graph input, partition distribution, backend construction and Halo setup are outside solve time; per-iteration MPI and host/device staging are inside the distributed solve. Standalone GPU setup and final rank copies are outside solve time. These are solver-time comparisons, not end-to-end application runtimes.')
-    para('OpenMP creates its persistent thread team inside the timed solver, while Kokkos runtime initialization precedes solver timing. These boundaries follow the recorded solve_s metric and should be considered when interpreting very small graph runtimes.')
+    para('OpenMP creates its persistent thread team inside the timed solver, while Kokkos runtime initialization precedes solver timing. Backend-compute phases use fenced host-clock intervals, including dispatch and reduction implementation costs; they are not CUDA-event measurements of pure kernel execution. Transfer phases measure explicit staging and need not capture every internal scalar-result copy. These boundaries should be considered when comparing backends or very small graph runtimes.')
     para('Twelve low-core MPI+Kokkos configurations use the recorded compact_setup initialization: redundant root edge storage is released after distribution, and replaced Halo edge IDs are released before backend allocation. The measured update/communication loop is unchanged; these configurations are flagged in the exported table. No recompiled variant is substituted silently into an existing measurement.')
     heading('2.3 Fixed-graph configuration matrix',2)
     table(['Experiment','Node / rank / thread layout','45-graph targets'],[
@@ -362,7 +397,7 @@ def report(items):
     equation('E<sub>weak,iter</sub>(C) = [T(C<sub>0</sub>)/I(C<sub>0</sub>)] / [T(C)/I(C)]',
              '$$E_{weak,iter}(C)=\\frac{T(C_0)/I(C_0)}{T(C)/I(C)}.$$')
     para('Weak scaling grows work with resources. The core-normalized curves use T=4, p=C/4 and C=4..256, with the 4-core point as baseline. We show per-iteration efficiency because convergence counts can change with graph size; total-solve efficiency is also exported. The separate completed inventory contains 150 rank-based CPU cells, 84 core-normalized CPU cells and 138 GPU-node weak-suite cells/controls. These 372 entries are not part of the 19,530 denominator.')
-    para('Communication ratios always pair the same graph, method, backend, nodes, ranks and threads. Ratios across graphs are aggregated geometrically; raw seconds from different graph sizes are never averaged into a speedup. The 45-row runtime matrix reports the best observed configuration within each method and explicitly allows different resources per cell; it is an achievable-runtime envelope, not a fixed-budget comparison.')
+    para('Communication ratios always pair the same graph, method, backend, nodes, ranks and threads. The geometric mean treats reciprocal proportional changes symmetrically: a 2x improvement and a 2x slowdown average to 1x. It also gives each graph equal multiplicative weight. Raw seconds from different graph sizes are never averaged into a speedup. The 45-row runtime matrix selects the best observed configuration within each method and permits different resource budgets. It is a runtime envelope; strong-scaling lines and equal-core comparisons carry the scaling argument.')
     heading('2.5 Correctness and reproducibility',2)
     para('The independent Python validators rebuild one PageRank update by streaming the original edge list, rather than sharing the C++ CSR traversal. Checks include vertex IDs/degrees, nonnegative finite ranks, total score within 10^-10 of one, residual within the stopping tolerance, full-vector L1 difference from Serial within 10^-8, history and repeated-run metadata. Allocation records and rank affinity maps verify the distributed layout. Raw rank vectors remain on Vanda; the repository holds summaries, timings, validation markers and provenance. The local analysis checks these saved proofs.')
     para('The source manifest, each summary path, independent completion marker, graph dimensions, node/rank/thread split, original job identifiers and timing-range diagnostics are retained in the report data. Report generation reads these records without executing performance measurements.')
@@ -393,6 +428,18 @@ def report(items):
         rows.append([DISPLAY[g],f"{int(serial['vertices']):,}",str(serial['iterations']),fmt(serial['solve_median_s']),fmt(mpi['edge_imbalance'])])
     table(['Graph','Vertices','Iterations','Serial s','Max/min rank edges at p=256'],rows,[115,92,60,80,153])
     para('At identical 12.8M vertices and 204.8M edges, Uniform is almost edge-balanced across 256 ranks, while Hub and Controlled concentrate roughly 299x and 343x more incoming edges in the busiest rank than the least busy rank. This directly measures a limitation of contiguous equal-vertex partitioning. It provides a stronger explanation for structural scaling differences than graph size alone; it does not isolate every cache or runtime effect.')
+    equation('B<sub>E</sub> = max<sub>i</sub>(E<sub>i</sub>)/(E/p), &nbsp;&nbsp; p<sub>edge</sub> = E/max<sub>i</sub>(E<sub>i</sub>) = p/B<sub>E</sub>',
+             '$$B_E=\\frac{\\max_i E_i}{E/p},\\qquad p_{edge}=\\frac{E}{\\max_i E_i}=\\frac{p}{B_E}.$$')
+    table(['Large graph, p=256','Max / mean edges','Busiest rank edge share','Equivalent balanced ranks'],[
+        [DISPLAY[r['graph']],f"{number(r['max_mean_edges']):.3f}",f"{number(r['max_rank_edge_share']):.2%}",fmt(r['equivalent_balanced_ranks'])]
+        for r in WORK if r['processes']=='256'],[135,110,125,130])
+    para('The edge-work equivalent is an equal-rate model, not a measured speedup ceiling across different cache layouts or backends. At p=256, Hub and Controlled provide only about 3.4 and 3.3 balanced-rank equivalents for edge traversal. A single rank owns roughly 29%-30% of all edges; hundreds of lightly loaded ranks cannot shorten that rank\'s row scans. Halo changes which values move, while destination ownership stays fixed, so it cannot remove this imbalance.')
+    para('The generator explains the shape quantitatively. A partition of width 1/p contains all hot destination IDs while p<=100; beyond that, several ranks share the hot block. If q is its edge fraction and h=0.01 its vertex fraction, the maximum edge share is approximately q+(1-q)*(1/p-h)/(1-h) for 1/p>=h, and q/(p*h) otherwise. The model predicts B_E near 75 and 77.5 at p=256, matching the observed 75.002 and 77.508. This links the slowdown to a concrete graph-ordering/partition interaction.')
+    table(['Large graph; T=32','OpenMP s','Kokkos OpenMP s','Kokkos / OpenMP','32-block max edge share'],[
+        [DISPLAY[r['graph']],fmt(r['openmp_s']),fmt(r['kokkos_openmp_s']),fmt(r['kokkos_over_openmp']),f"{number(r['contiguous_32way_edge_share_proxy']):.1%}"] for r in POLICY],
+        [120,75,100,100,105])
+    para('Scheduling also matters within a node. OpenMP uses schedule(dynamic,64) for destination updates. The compiled Kokkos 4.5.01 sources default RangePolicy to Schedule<Static>; its OpenMP reduction assigns a vertex interval to each worker and enables stealing only for Dynamic [6]. Each vertex still scans its incoming row sequentially. The 32-block proxy above comes from saved equal-vertex rank partitions, not a per-thread trace. It places 75.5%-78.0% of the skewed graphs\' edges in one block, while Uniform is balanced. Kokkos and OpenMP take similar time on Uniform but differ by about 22x on the skewed graphs. Static row assignment is therefore a strong mechanism-level explanation; a dynamic-policy ablation would quantify its share separately from reduction and locality costs.')
+    para('This comparison evaluates the implemented scheduling policies together with their runtimes. It cannot be read as a controlled measurement of intrinsic Kokkos framework overhead.')
     heading('3.3 CPU strong scaling',2)
     figure('02_strong_original','Figure 2. Strong scaling on the three original graphs. MPI uses T=1; the two hybrid curves use T=4. A=Allgatherv, H=Halo. Above 32 cores, nodes increase as C/32. Speedup uses each graph\'s CPU Serial reference.')
     figure('03_strong_large','Figure 3. The same predefined strong-scaling lines on the three large graphs. Logarithmic axes preserve slowdowns as well as speedups. The same graph and convergence criterion are used at every point.')
@@ -410,9 +457,16 @@ def report(items):
     for c in [64,128,256]:
         r=get('strong_uniform','MPI',host_nodes=c//32,processes=c,threads=1,communication='Halo')
         raw=json.loads((ROOT/r['source_summary']).read_text())
-        diagnostic.append([c,fmt(r['solve_median_s']),fmt(r['communication_median_s']),f"{number(r['communication_fraction']):.1%}",fmt(raw['max_local_edges']/(int(raw['edges'])/c))])
-    table(['Large Uniform cores','Solve s','Communication s','Median comm / solve','Max / mean edges'],diagnostic,[115,85,100,100,100])
+        diagnostic.append([c,f"{number(r['solve_median_s']):.3f}",f"{number(r['communication_median_s']):.3f}",f"{number(r['communication_fraction']):.1%}",f"{number(r['communication_bytes_per_iteration'])/c/1e6:.2f}",f"{raw['max_local_edges']/(int(raw['edges'])/c):.4f}"])
+    table(['Large Uniform cores','Solve s','Communication s','Median comm / solve','Payload MB / rank','Max / mean edges'],diagnostic,[90,65,90,90,85,80])
     para('Solve and communication seconds are separate five-run medians; the percentage is the median of the five communication/solve ratios. The 128-core point is communication-dominated despite near-uniform edge work. The recorded communication scope includes packing, exchange, reductions and waiting; the solve and phase timers also take separate rank maxima. Thus the measurements locate a bottleneck in the communication/synchronization path without proving a single network cause. Collective message-size regimes, placement and contention are plausible mechanisms; distinguishing them requires controlled transport or collective-algorithm experiments.')
+    p128=get('strong_uniform','MPI',host_nodes=4,processes=128,threads=1,communication='Halo')
+    para(f"At 128 cores all five solve times lie between {number(p128['solve_min_s']):.3f} and {number(p128['solve_max_s']):.3f} s. The graph, 12-iteration convergence count and full rank vector agree with Serial, and the affinity map contains 128 distinct CPU assignments over four hosts. Its payload per rank is smaller than at 64 cores, and B_E remains near one. Extra edge work, extra iterations and a single slow repeat do not explain the peak. The unresolved factor is the communication/runtime environment: existing timers combine packing, Alltoallv, reductions and rank waiting. A defensible next control would replay the same counts and buffers within one allocation, separate those timers, and compare fixed NUMA (non-uniform memory access) and host placement and MPI collective settings. No such counterfactual is claimed as measured.")
+    table(['MPI ranks','Strong comm ms / iter','Weak comm ms / iter','Weak payload MB / rank','Upstream tuned candidate'],[
+        [r['processes'],f"{number(r['strong_communication_ms_per_iteration']):.2f}",f"{number(r['weak_communication_ms_per_iteration']):.2f}",f"{number(r['weak_payload_MB_per_rank']):.2f}",r['default_tuned_source_candidate']] for r in SELECTOR],
+        [60,105,105,105,125])
+    para('A version-specific mechanism makes this more precise. The upstream Open MPI 4.1.8 fixed tuned selector uses pairwise Alltoallv for 64<=p<128, basic_linear for 128<=p<256, and pairwise for 256<=p<1024 [7]. Pairwise schedules rank-step exchanges; basic_linear starts peer requests together and waits for completion [8]. These are different progress/concurrency regimes even at similar byte counts. The Uniform weak series, with half the strong graph size at p=128, also shows a large 128-rank communication peak while its payload stays close to 6.35 MB/rank. The two series therefore support a collective-selection hypothesis more specifically than a byte-volume explanation.')
+    para('The table lists a candidate from upstream default rules, not a recorded runtime algorithm. The saved runs do not identify the selected collective component, vendor patches or dynamic-rule overrides, and the two graph-size series use different allocations. The leading hypothesis is therefore an Alltoallv selection/progress effect interacting with placement or contention; it is not a demonstrated unique cause. The most discriminating control would first log the selected component, then force basic_linear and pairwise at p=128 in the same allocation with identical counts and CPU placement, while timing packing, Alltoallv and reductions separately.')
     rows=[]
     for g in REPRESENTATIVE:
         for mode in ('Allgatherv','Halo'):
@@ -425,13 +479,15 @@ def report(items):
     k=next(x for x in SPLITS if x['method']=='MPI+Kokkos OpenMP' and x['communication']=='Allgatherv' and x['threads']=='32')
     best={m:max((x for x in SPLITS if x['method']==m and x['communication']=='Halo'),key=lambda x:number(x['geomean_speedup_vs_T1'])) for m in ['MPI+OpenMP','MPI+Kokkos OpenMP']}
     para(f"Changing p/T at fixed C has a large effect. With Allgatherv, T=32,p=8 improves geometric-mean time by {number(a['geomean_speedup_vs_T1']):.2f}x for MPI+OpenMP and {number(k['geomean_speedup_vs_T1']):.2f}x for MPI+Kokkos relative to T=1,p=256. The best aggregate Halo splits use T={best['MPI+OpenMP']['threads']} and T={best['MPI+Kokkos OpenMP']['threads']}, with improvements of {number(best['MPI+OpenMP']['geomean_speedup_vs_T1']):.2f}x and {number(best['MPI+Kokkos OpenMP']['geomean_speedup_vs_T1']):.2f}x. Reducing rank count changes both collective participation and local work; these measurements do not isolate one mechanism. The best split remains graph-dependent.")
+    para('The split has a workload effect as well as a message effect. With ideal sharing of each rank\'s edge work over T threads, the edge-only equivalent core count is T*E/max(E_i)=C/B_E(p). For large Hub at C=256 this proxy rises from 3.4 with p256,T1 to about 41 with p8,T32: dynamic threads can share the hot rows owned by one rank. Static contiguous thread subdivision can preserve the original edge skew even as ranks decrease. This explains why fewer ranks plus more threads is a substantive design choice. C verifies assigned parallelism; it does not imply C equally productive workers, and the proxy does not predict a measured runtime by itself.')
 
     heading('3.5 Allgatherv versus exact Halo exchange',2)
     figure('05_halo_pairs','Figure 5. Within-layout paired ratios, excluding p=1. Left: geometric-mean Allgatherv/Halo solve-time ratio (>1 favors Halo). Right: median reduction in counted contribution payload. CPU and GPU-node aggregates have different method/configuration populations and are not direct hardware comparisons.')
     rows=[]
     for x in HALO:rows.append([x['context'].replace('_',' '),x['family'],x['paired_configurations'],fmt(x['geomean_halo_speedup']),f"{number(x['median_payload_reduction']):.1%}",f"{number(x['halo_faster_fraction']):.1%}"])
     table(['Context','Family','Pairs','Halo speedup','Payload reduction','Halo faster'],rows,[90,76,45,89,105,95])
-    para('On CPU, Google has the strongest aggregate Halo gain: 1.89x geometric-mean speedup over 179 paired configurations and 58.6% median payload reduction. Uniform, Hub and Controlled show 1.19-1.23x aggregate gains, but many individual configurations still favor Allgatherv. On GPU nodes, the two-rank Halo ensembles have ratios below one. Small p, host staging, synchronization and exchange setup constrain gains; lower logical payload is insufficient to predict solver time.')
+    para('On CPU, Google has the strongest aggregate Halo gain: 1.89x geometric-mean speedup over 179 paired configurations and 58.6% median payload reduction. Uniform, Hub and Controlled show 1.19-1.23x aggregate gains, but many individual configurations still favor Allgatherv. On GPU nodes, the two-rank Halo ensembles have ratios below one. Small p, host staging, packing and synchronization constrain gains; one-time Halo setup is excluded from solve time. Thus its setup cost cannot explain a measured solve-time slowdown.')
+    para('Halo exploits repeated use of the same remote source by local destination rows: each distinct remote contribution is sent once. It does not communicate a fixed spatial boundary on these non-geometric graphs. Uniform edges spread dependencies widely; skewed destination rows can reuse more source IDs and reduce payload substantially, yet also concentrate computation. Payload savings and workload balance are different properties. The paired ratios hold graph and p/T fixed, but separate allocations can still differ in placement and contention; the comparison does not isolate a pure network-bandwidth effect.')
     heading('3.6 Standalone ablations and GPU-node comparisons',2)
     rows=[]
     for g in REPRESENTATIVE:
@@ -443,13 +499,22 @@ def report(items):
     para('Standalone CUDA/Kokkos CUDA can outperform their distributed p=1 versions because the distributed driver stages source contributions through host memory on every iteration. Google takes 0.115 s with standalone CUDA and 0.094 s with standalone Kokkos CUDA, compared with about 0.243 s and 0.383 s for their MPI Allgatherv p=1 variants. The standalone timings exclude setup transfers, so these ratios describe solver execution rather than full startup cost.')
     para('Two GPUs do not consistently beat one. For large Uniform, MPI+CUDA Allgatherv improves from 0.788 s to 0.705 s (1.12x), whereas Halo becomes slower. Kokkos CUDA\'s distributed Allgatherv variant improves from 1.368 s to 1.126 s (1.22x). On large Hub and Controlled, distributed Kokkos improves from one to two GPUs but remains slower than native CUDA at the same layouts. Backend implementation and graph structure both matter; Kokkos portability does not imply identical performance.')
     figure('08_gpu_phases','Figure 7. Large Controlled phase diagnostics on a logarithmic time axis, in seconds. CU=native CUDA, KK=Kokkos CUDA; digit=rank/GPU count; A/H=communication. Markers are medians of the original solve_s, backend_compute_s, transfer_s or communication_s measurements. Phase medians are not additive components of one median run.')
+    table(['Large graph','Backend','p2 max edge share','Compute speedup 1 to 2','Solve p1 s','Solve p2 s'],[
+        [DISPLAY[r['graph']].replace('Large ',''),'CUDA' if r['method']=='MPI+CUDA' else 'Kokkos CUDA',f"{number(r['p2_max_edge_share']):.1%}",fmt(r['compute_speedup']),fmt(r['p1_solve_s']),fmt(r['p2_solve_s'])] for r in GPU_WORK],
+        [90,90,90,100,65,65])
+    cu=next(r for r in GPU_WORK if r['graph']=='strong_controlled' and r['method']=='MPI+CUDA')
+    kk=next(r for r in GPU_WORK if r['graph']=='strong_controlled' and r['method']=='MPI+Kokkos CUDA')
+    para(f"The two-rank partition leaves {number(cu['p2_max_edge_share']):.1%} of Controlled edges on one GPU. Under equal edge-processing rates, the edge-only speedup proxy is just {number(cu['equal_edge_rate_speedup_proxy']):.2f}x; native CUDA's measured compute speedup is {number(cu['compute_speedup']):.2f}x. Its compute median falls from {fmt(cu['p1_compute_s'])} to {fmt(cu['p2_compute_s'])} s, while Allgatherv communication rises from {fmt(cu['p1_communication_s'])} to {fmt(cu['p2_communication_s'])} s and solve time increases. Uniform instead divides edges nearly in half and both backends achieve about 2x compute acceleration. The structure of the partition therefore explains a concrete part of native CUDA's scaling limit.")
+    para(f"Kokkos CUDA on Controlled reduces compute from {fmt(kk['p1_compute_s'])} to {fmt(kk['p2_compute_s'])} s and staging from {fmt(kk['p1_transfer_s'])} to {fmt(kk['p2_transfer_s'])} s; its solve improves despite rising communication. Its {number(kk['compute_speedup']):.2f}x compute change exceeds the equal-edge-rate proxy. That proxy is not a universal runtime bound: vertex reductions, kernel mapping and memory locality also change with partition size. The records cannot separate those contributions. Both device implementations traverse each incoming row within one GPU work item; a team/warp-per-row variant would test the remaining long-row bottleneck, but is not measured here.")
     heading('3.7 Weak scaling',2)
     figure('07_core_weak','Figure 8. Top: pure MPI weak scaling, with N and E proportional to ranks and the one-rank point as baseline. Bottom: core-normalized hybrid weak scaling with T=4, p=C/4 and the four-core point as baseline. Both show baseline per-iteration time divided by measured per-iteration time; ideal efficiency is 100%. No 512-core endpoints are shown.')
     pure=[]
     for family in ['uniform','hub','controlled']:
         r=[x for x in WEAK if x['suite']=='rank_cpu_regular' and x['method']=='MPI' and x['family']==family and x['processes']=='256']
-        pure.append([family,*[f"{number(next(x for x in r if x['communication']==mode)['weak_efficiency_per_iteration']):.2%}" for mode in ['Allgatherv','Halo']]])
-    table(['Pure MPI family','C256 Allgatherv efficiency','C256 Halo efficiency'],pure,[160,170,170])
+        pure.append([family,*[f"{number(next(x for x in r if x['communication']==mode)['weak_efficiency_per_iteration']):.2%}" for mode in ['Allgatherv','Halo']],
+            *[f"{number(next(x for x in TRAFFIC if x['family']==family and x['processes']=='256' and x['communication']==mode)['weak_efficiency_vs_p32_per_iteration']):.2%}" for mode in ['Allgatherv','Halo']]])
+    table(['MPI at p=256','Allgatherv: p1 ref','Halo: p1 ref','Allgatherv: p32 ref','Halo: p32 ref'],pure,[100]*5)
+    para('The primary weak-efficiency reference is p=1, where contribution exchange has no remote payload. The p=32 columns are a baseline-sensitivity analysis of the same saved series, with inter-rank communication already present. They quantify further degradation from 32 to 256 ranks without replacing the primary definition. Baseline choice changes the percentage; neither comparison supports near-ideal scaling.')
     para('Rank-normalized weak scaling keeps nominal local vertices and edges constant, but not the communication problem: the global contribution vector and collective participant count grow with resources. On the concentrated families, equal vertex partitions also produce severe incoming-edge imbalance. Communication timers include waiting for slow ranks and cannot be interpreted solely as network transmission time.')
     rows=[]
     for f in ('uniform','hub','controlled'):
@@ -458,15 +523,28 @@ def report(items):
             rows.append([f,m,*[f"{number(next(r for r in a if r['communication']==mode)['weak_efficiency_per_iteration']):.2%}" for mode in ('Allgatherv','Halo')]])
     table(['Family','Method','C256 Allgatherv efficiency','C256 Halo efficiency'],rows,[90,160,125,125])
     para('Weak scaling is poor despite constant nominal work per core. At C=256, the core-normalized uniform curves retain roughly 3.6-4.2% per-iteration efficiency; the skewed families are around 0.7-1.4%. Replicated vectors and global synchronization grow with resource count, while equal-vertex partitioning does not preserve equal incoming-edge work on the concentrated families. These measurements reject a claim of near-ideal weak scaling. They motivate a future edge-aware partitioner and communication/staging redesign; they do not establish which unimplemented change would be fastest.')
+    para('The weak-scaling problem is structural for Allgatherv. With N=n0*p and E=e0*p, nominal local graph work is fixed, but each rank receives 8*n0*(p-1) contribution bytes and stores an O(p*n0) source vector. Aggregate counted traffic is O(p^2); dividing time by the iteration count cannot remove this communication growth. At p=256 the Uniform contribution vector costs 102.0 MB per rank per iteration, despite only 50,000 owned vertices.')
+    para('Halo improves the byte scaling: a rank needs no more distinct remote sources than its incoming edges, so for balanced Uniform its counted payload is bounded by roughly 8*800,000=6.4 MB per rank. Observed Halo payload grows only from 6.30 to 6.37 MB between p=64 and 256, yet communication/waiting rises from 17.28 to 38.07 ms per iteration. Growing peer participation, collective/reduction latency, packing and resource contention remain plausible; a byte-only model is insufficient. On Hub and Controlled, nominal work per rank also hides a 75x-78x busiest-rank excess at p=256, so their near-zero efficiency has an additional load-balance mechanism. A high MPI timer on these graphs includes fast ranks waiting for the loaded ranks.')
+    figure('10_scaling_mechanisms','Figure 9. Mechanism diagnostics derived from saved measurements. Top: large-graph maximum/mean incoming edges per rank. Bottom left: Uniform weak-suite counted contribution payload per rank, excluding p=1 where it is zero. Bottom right: five-run median communication/waiting time per iteration. All axes are logarithmic. Byte counts exclude reductions and transport overhead; they are not measured link throughput.')
+    uniform_traffic=[r for r in TRAFFIC if r['family']=='uniform' and int(r['processes']) in [16,64,256]]
+    table(['Uniform ranks','Communication','Payload MB / rank','Comm + waiting ms / iter'],[
+        [r['processes'],r['communication'],f"{number(r['counted_payload_bytes_per_rank'])/1e6:.2f}",f"{number(r['communication_ms_per_iteration']):.2f}"] for r in uniform_traffic],
+        [85,125,135,155])
     story.append(PageBreak())
     heading('3.8 Full fixed-graph result matrix',2)
-    para('The next table reports best observed solve medians within each method, over the complete non-512 sweep. Different cells can select different nodes, p/T and communication. The corresponding selected configurations are exported in runtime_matrix_45.csv; fixed-budget comparisons are given separately above. The associated heatmap uses matched Serial controls within each hardware context.')
-    table(['Graph','Serial','OMP','KK-O','MPI','M-O','M-KO','CUDA','KK-C','M-C','M-KC','512*'],[
-        [abbreviated(r['graph']),*[fmt(r[m+'_best_s']) for m in ('Serial','OpenMP','Kokkos OpenMP','MPI','MPI+OpenMP','MPI+Kokkos OpenMP','CUDA','Kokkos CUDA','MPI+CUDA','MPI+Kokkos CUDA')],fmt(r['512_partial_best_s']) if r['512_partial_best_s']!='-' else '-'] for r in MATRIX],
-        [70]+[39]*10+[40],small=True)
-    para('Values are five-run median solve times (s). KK=Kokkos; M=MPI; O=OpenMP; C=CUDA. U/H/C label graph families, followed by vertices and mean out-degree; o./s. denote original/canonical graphs. Cells can use different resource budgets. 512* is the best of five available cases on C 50k/4; a hyphen marks an unmeasured cell. This column is a partial supplement.')
+    para('The two tables contain all 45 graphs and each method\'s best observed five-run solve median (s). Cells may select different node counts, p/T and communication. Selected configurations are in runtime_matrix_45.csv; these envelopes complement the matched-layout and equal-core comparisons above. CPU-S and GPU-S are different matched Serial controls.')
+    table(['Graph','CPU-S','OMP','KK-O','MPI','M-O','M-KO','512*'],[
+        [abbreviated(r['graph']),*[fmt(r[m+'_best_s']) for m in ('Serial','OpenMP','Kokkos OpenMP','MPI','MPI+OpenMP','MPI+Kokkos OpenMP')],fmt(r['512_partial_best_s']) if r['512_partial_best_s']!='-' else '-'] for r in MATRIX],
+        [94]+[58]*7,small=True)
+    para('CPU-node methods. KK=Kokkos; M=MPI; O=OpenMP. U/H/C identify graph families, then vertices and mean out-degree; o./s. mean original/canonical. 512* is the best of five available cases on C 50k/4, not a complete comparison. A hyphen marks unmeasured cells.')
     story.append(PageBreak())
-    figure('09_runtime_matrix','Figure 9. Full 45-graph best-observed speedup matrix. CPU and GPU columns use their own matched Serial references. Color is log-scaled and clipped at 1/16x and 64x; exact timings and selected layouts are in the CSV. The resource budget can differ between cells.')
+    table(['Graph','GPU-S','CUDA','KK-CUDA','MPI+CUDA','MPI+KK CUDA'],[
+        [abbreviated(r['graph']),fmt(r['GPU-node Serial_s']),*[fmt(r[m+'_best_s']) for m in ('CUDA','Kokkos CUDA','MPI+CUDA','MPI+Kokkos CUDA')]] for r in MATRIX],
+        [110]+[78]*5,small=True)
+    para('GPU-node device methods and their own Serial control. Five-run median solve times (s); the distributed variants select over one/two GPUs and both communication modes. CPU controls on GPU nodes remain in the full record export and the optimum-count analysis below.')
+    story.append(PageBreak())
+    figure('09_runtime_matrix','Figure 10. Full 45-graph best-observed speedup matrix. CPU-node and GPU-node methods use their own matched Serial references. Color is log-scaled and clipped at 1/16x and 64x; exact timings and selected layouts are in the CSV. The resource budget can differ between cells.')
+    cpu=OPTIMA['cpu_all'];device=OPTIMA['gpu_device_only'];controls=OPTIMA['gpu_with_cpu_controls']
 
     story.append(PageBreak())
     heading('3.9 Partial 512-core supplement',2)
@@ -477,23 +555,38 @@ def report(items):
 
     heading('4 Conclusions and insights')
     heading('4.1 What the experiments establish',2)
+    para(f"On CPU nodes, standalone OpenMP or Kokkos OpenMP is fastest on {cpu['method_counts'].get('OpenMP',0)+cpu['method_counts'].get('Kokkos OpenMP',0)}/45 graphs; only {cpu['multirank_winners']} winning configurations use multiple MPI ranks. Among the four actual GPU implementations, standalone CUDA/Kokkos CUDA wins all 45 graphs. With the GPU-node CPU controls included, however, OpenMP wins {controls['method_counts'].get('OpenMP',0)}/45 graphs, native CUDA {controls['method_counts'].get('CUDA',0)}, and Kokkos CUDA {controls['method_counts'].get('Kokkos CUDA',0)}. These are observed optima over different budgets, not hardware cost rankings. The result supports graph-dependent selection and does not justify a general claim that GPU-node workloads always favor GPU computation.")
     para('First, parallel degree is a choice, not a target to maximize unconditionally. Large balanced graphs exploit multiple nodes; small graphs and concentrated destination rows often favor fewer MPI ranks and more threads within a rank. At fixed 256 cores, rank/thread decomposition can change aggregate runtime by more than an order of magnitude.')
     para('Second, an exact Halo reduces contribution payload without guaranteeing faster execution. CPU and GPU-node observations differ, and even within the CPU matrix the large-graph best communication mode changes with structure and p/T. Communication must be evaluated with matched layouts and actual time, not bytes alone.')
     para('Third, Kokkos provides the same algorithm on CPU and GPU backends, while backend policy, staging and vertex work imbalance determine performance. The distributed device path has a substantial cost even at p=1. Multi-GPU performance cannot be inferred from a fast standalone kernel.')
     para('Fourth, equal-vertex partitioning is a clear structural limitation: extreme incoming-edge imbalance and weak-scaling degradation remain after all numerical checks pass. Edge-aware or reordered partitions, selective device/host staging, CUDA-aware MPI and overlap are reasonable future experiments. None is claimed as implemented or measured here.')
-    heading('4.2 Conclusions about the real Google graph',2)
+    heading('4.2 Attribution: established mechanisms and remaining uncertainty',2)
+    table(['Observation','Supported explanation','Unmeasured discriminating control'],[
+        ['Skewed graphs scale poorly','Direct: equal-vertex ownership places 29%-30% of all edges on one of 256 ranks. Static Kokkos worker ranges also align with the hot destination block.','Reorder vertices or balance incoming-edge counts while keeping the edge set and solver fixed; measure per-rank and per-thread work/time.'],
+        ['MPI timer approaches total solve on skewed graphs','Direct timer scope: collectives include waiting for late ranks. Work imbalance makes this mechanism credible; a large MPI timer does not identify transmitted-byte cost.','Record each rank\'s packing, exchange, row scan and reductions separately; compare arrival-time spread.'],
+        ['Uniform Halo is slow at 128 cores','Version-specific candidate: upstream tuned rules switch from pairwise to basic_linear at p128, then back at p256. Both input-size series peak at p128. Actual selected component and causality remain unrecorded.','Log the collective component; force each Alltoallv algorithm at p128 in the same allocation with fixed counts/CPU placement and separate phase timers.'],
+        ['Poor weak efficiency','Direct design cost: Allgatherv per-rank vector traffic grows O(p). Halo limits bytes but keeps collective participation and synchronization; skew adds unequal actual work.','Hold payload and graph work separately fixed in a collective microbenchmark; compare peer counts and measured rank arrival times.'],
+        ['Two GPUs do not always improve solve time','Measured: native CUDA gets little compute relief when one rank still owns 87%-89% of edges; added exchange offsets it. Kokkos shows additional backend-dependent effects.','Compare an edge-balanced partition, row/team scheduling and staged versus device-aware exchange on the same nodes.']],
+        [100,235,165])
+    para('These proposed controls have not been performed. Numerical agreement establishes correctness of the saved outputs; it does not prove the absence of every performance defect. The strongest supported causes are explicit ownership, scheduling and communication-volume choices. Network congestion, NUMA penalties, cache behavior and a particular MPI algorithm are not asserted as individually demonstrated causes.')
+    para('Optimization priority follows the evidence. For Hub/Controlled, first redistribute incoming-edge work and test dynamic or team-based row scheduling; reducing bytes alone leaves the straggler in place. For balanced Uniform, first separate collective latency, packing and staging, then test overlap or transport settings. An edge-balanced partition must also be checked for increased remote-source dependencies: balancing computation can worsen communication. Finally, an MPI speedup on one large graph should not replace a simple one-node method on the many smaller graphs where it loses.')
+    heading('4.3 Conclusions about the real Google graph',2)
     para(f"The validated Google Serial vector has {GOOGLE['dangling_vertices']:,} dangling vertices ({GOOGLE['dangling_vertices']/GOOGLE['vertices']:.1%}), so dangling-mass redistribution is essential. The highest-scoring 1% of vertices carry {GOOGLE['top_1_percent_rank_mass']:.1%} of the total probability mass. Pearson correlation between PageRank and in-degree is {GOOGLE['pagerank_indegree_pearson']:.3f}: incoming links are strongly associated with rank, but raw in-degree is not the complete weighting rule.")
     table(['Node ID','PageRank','In-degree','Out-degree'],[[r['node_id'],f"{r['rank']:.7f}",r['in_degree'],r['out_degree']] for r in GOOGLE['top10'][:5]], [120,140,120,120])
     para('These anonymized vertex IDs cannot be mapped to named websites from this edge-list dataset alone. The observed rank concentration supports a structural statement about this graph; it does not identify trustworthy content or establish a causal relationship between links and importance.')
-    heading('4.3 Limits, reproducibility and references',2)
+    heading('4.4 Limits and reproducibility',2)
     para('This report presents measured Vanda results with a complete main matrix and a partial 512-core supplement. There are five repeats per configuration within an allocation; placement and execution dates vary, and the best-observed matrix introduces selection effects. Shared-node allocations can span NUMA regions; NUMA locality is not fixed across every allocation. These are observed shared-cluster measurements. Full application startup, energy, communication overlap, source-specific PPR and 4/8-GPU scaling are outside scope. The partial 512-core table does not establish a complete high-core scaling curve.')
-    para('Reproduction: analyze_report_results.py reads the validated inventory and all referenced summaries/timings; build_non512_report.py produces this PDF, the editable report text and nine vector figures. The data directory provides the full fixed and weak tables, paired communication ratios, equal-core decompositions, graph catalog and audit checks. The data-selection manifest maps every chosen measurement to its timing and validation evidence. Raw records are preserved; input and selection SHA-256 values are recorded in audit.json.')
+    para('Reproduction: analyze_report_results.py reads the validated inventory and referenced summaries/timings; build_non512_report.py produces this PDF, editable report text and ten vector figures. The exported fixed, weak and partial-512 tables map measurements to source summaries and validation markers. Additional diagnostic tables retain rank-edge shares, static-block proxies, weak payload/phase medians, GPU work changes and the three explicitly defined optimum populations. The selection file records 27 selected sources. Raw records are preserved; audit.json records manifest and selection SHA-256 values. No new performance run is required to reproduce these derivations.')
+    heading('4.5 References',2)
     for reference in [
         '[1] Page, L., Brin, S., Motwani, R. and Winograd, T. The PageRank Citation Ranking: Bringing Order to the Web. Stanford, 1999. http://ilpubs.stanford.edu:8090/422/',
         '[2] Stanford SNAP. Google web graph dataset. https://snap.stanford.edu/data/web-Google.html',
         '[3] MPI Forum. MPI standard and collective communication. https://www.mpi-forum.org/docs/',
-        '[4] Kokkos documentation. Execution spaces, Views and parallel dispatch. https://kokkos.org/kokkos-core-wiki/',
-        '[5] Project source and Vanda result records, validated measurement collection of 17 November 2026. https://github.com/rosesnack/DSA5208_PROJECT_3']:
+        '[4] Kokkos documentation. RangePolicy and execution policies. https://kokkos.org/kokkos-core-wiki/API/core/policies/RangePolicy.html',
+        '[5] Project source and Vanda result records, validated measurement collection of 17 November 2026. https://github.com/rosesnack/DSA5208_PROJECT_3',
+        '[6] Kokkos 4.5.01 source, commit 175257a51ff29a0059ec48bcd233ee096b2c0438: traits/Kokkos_ScheduleTrait.hpp and OpenMP/Kokkos_OpenMP_Parallel_Reduce.hpp. https://github.com/kokkos/kokkos/tree/4.5.01/core/src',
+        '[7] Open MPI v4.1.8. Fixed Alltoallv algorithm selection, coll_tuned_decision_fixed.c. https://github.com/open-mpi/ompi/blob/v4.1.8/ompi/mca/coll/tuned/coll_tuned_decision_fixed.c',
+        '[8] Open MPI v4.1.8. Pairwise and basic-linear implementations, coll_base_alltoallv.c. https://github.com/open-mpi/ompi/blob/v4.1.8/ompi/mca/coll/base/coll_base_alltoallv.c']:
         story.append(Paragraph(html.escape(reference),styles['ReferenceReport']));md.append(reference+'\n')
     (REPORT/'report.md').write_text('\n'.join(md).rstrip()+'\n')
     PDF.parent.mkdir(parents=True,exist_ok=True)
@@ -513,7 +606,7 @@ def main():
     assert AUDIT['fixed_configurations']==19530 and AUDIT['all_512_excluded']
     items=figures();write_figures(items,args.pdftoppm);report(items)
     print(PDF)
-    print('Nine figures; 45-graph runtime matrix; four report sections; separate partial 512 supplement.')
+    print('Ten figures; CPU/GPU matched 45-graph matrices; four report sections; partial 512 supplement and derived mechanism diagnostics.')
 
 
 if __name__=='__main__':

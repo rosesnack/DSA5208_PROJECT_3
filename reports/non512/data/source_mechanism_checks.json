@@ -1,0 +1,34 @@
+{
+  "checked_on_sgt": "2026-11-17",
+  "vanda_project": "/scratch/xtt_ella/DSA5208_PROJECT_3_20261107",
+  "version": "Kokkos 4.5.01",
+  "commit": "175257a51ff29a0059ec48bcd233ee096b2c0438",
+  "local_and_vanda_hashes_match": {
+    "third_party/kokkos/core/src/traits/Kokkos_ScheduleTrait.hpp": "ef7be97363d9a4aab9d62e58b8a7dda4dc354c708f322d70cc4b8258c8f82a22",
+    "third_party/kokkos/core/src/OpenMP/Kokkos_OpenMP_Parallel_Reduce.hpp": "79de252d0e8b992ad8e5ce4823ff5125573427781f65047bac8e52962ad9f989",
+    "src/pagerank_kokkos.cpp": "e77c7c59869917ea4a4422d72c42eae01e05d683f83d4281c37a623e645b36b6",
+    "src/pagerank_mpi.cpp": "4af8553921af09a6f9d10ac6233eea4a1bd95b61c7f54b2bdcd665bb61a02293"
+  },
+  "interpretation": "Default Schedule<Static>; OpenMP RangePolicy reduction steals work only for Dynamic. These are implementation facts, not a measured policy ablation.",
+  "final128_layout_check": {
+    "source": "results/updated_vanda_scaling/performance_investigation_20261116/final128/results/p128_mpi128/mapping.jsonl",
+    "ranks": 128,
+    "physical_hosts": 4,
+    "ranks_per_host": 32,
+    "distinct_host_cpu_assignments": 128
+  },
+  "upstream_openmpi_selector": {
+    "version": "v4.1.8",
+    "source_url": "https://github.com/open-mpi/ompi/blob/v4.1.8/ompi/mca/coll/tuned/coll_tuned_decision_fixed.c",
+    "sha256": "25e3aaf9b5d17431f9228b4414db5621863f7b71c4e8da0cd400256cbdceb588",
+    "candidate_at_64": "pairwise",
+    "candidate_at_128": "basic_linear",
+    "candidate_at_256": "pairwise",
+    "runtime_component_observed": false,
+    "causal_algorithm_experiment_performed": false
+  },
+  "upstream_openmpi_implementation": {
+    "source_url": "https://github.com/open-mpi/ompi/blob/v4.1.8/ompi/mca/coll/base/coll_base_alltoallv.c",
+    "sha256": "026e3f5d1f014d81c8bde1d6068038db7ffe859469b4860d63e5e54dd0efeefd"
+  }
+}

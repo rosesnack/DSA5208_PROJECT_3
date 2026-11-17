@@ -203,6 +203,96 @@ def google_insights():
                 top10=[dict(node_id=x[1],rank=x[0],in_degree=x[2],out_degree=x[3]) for x in ordered[:10]])
 
 
+def analyze_mechanisms(records, weak):
+    """Derive workload/traffic diagnostics from saved records, without a new run."""
+    def pick(graph, method, context='cpu_node', **where):
+        matches=[r for r in records if r['graph']==graph and r['method']==method
+                 and r['context']==context and all(r[k]==v for k,v in where.items())]
+        assert len(matches)==1,(graph,method,where,len(matches))
+        return matches[0]
+
+    work=[]
+    for graph, hot_fraction in [('strong_uniform',0),('strong_hub',.75),('strong_controlled',.775)]:
+        for p in [1,2,4,8,16,32,64,128,256]:
+            r=pick(graph,'MPI',host_nodes=max(1,p//32),processes=p,threads=1,communication='Halo')
+            s=json.loads((ROOT/r['source_summary']).read_text())
+            share=s['max_local_edges']/s['edges']
+            model=(1/p if not hot_fraction else hot_fraction+(1-hot_fraction)*(1/p-.01)/.99
+                   if 1/p>=.01 else hot_fraction/(p*.01))
+            work.append(dict(graph=graph,processes=p,host_nodes=r['host_nodes'],
+                max_rank_edge_share=share,max_mean_edges=share*p,equivalent_balanced_ranks=1/share,
+                max_min_edges=r['edge_imbalance'],hot_edge_fraction=hot_fraction,
+                equal_rate_hot_block_model_share=model,solve_median_s=r['solve_median_s'],
+                communication_median_s=r['communication_median_s'],source_summary=r['source_summary']))
+    write_csv('rank_work_diagnostics.csv',work)
+    policy=[]
+    for graph in ['strong_uniform','strong_hub','strong_controlled']:
+        omp=pick(graph,'OpenMP',threads=32);kokkos=pick(graph,'Kokkos OpenMP',threads=32)
+        proxy=next(x for x in work if x['graph']==graph and x['processes']==32)
+        policy.append(dict(graph=graph,threads=32,openmp_s=omp['solve_median_s'],
+            kokkos_openmp_s=kokkos['solve_median_s'],kokkos_over_openmp=kokkos['solve_median_s']/omp['solve_median_s'],
+            contiguous_32way_edge_share_proxy=proxy['max_rank_edge_share'],
+            equivalent_balanced_workers_proxy=proxy['equivalent_balanced_ranks'],
+            openmp_source=omp['source_summary'],kokkos_source=kokkos['source_summary'],
+            partition_proxy_source=proxy['source_summary']))
+    write_csv('thread_policy_diagnostics.csv',policy)
+    traffic=[]
+    for r in weak:
+        if r['suite']!='rank_cpu_regular' or r['method']!='MPI':continue
+        path=ROOT/r['source_summary'];s=json.loads(path.read_text());timings=read_csv(path.with_name('timings.csv'))
+        traffic.append(dict(family=r['family'],processes=r['processes'],communication=r['communication'],
+            vertices=r['vertices'],edges=r['edges'],iterations=r['iterations'],
+            solve_ms_per_iteration=r['seconds_per_iteration']*1000,
+            communication_ms_per_iteration=stats.median(float(x['communication_s'])/int(x['iterations'])*1000 for x in timings),
+            counted_payload_bytes_per_rank=s['communication_bytes_per_iteration']/r['processes'],
+            max_mean_edges=s['max_local_edges']/(s['edges']/r['processes']),
+            source_summary=r['source_summary']))
+    assert len(traffic)==54
+    references={(r['family'],r['communication']):r['solve_ms_per_iteration'] for r in traffic if r['processes']==32}
+    for r in traffic:
+        r['weak_efficiency_vs_p32_per_iteration']=references[r['family'],r['communication']]/r['solve_ms_per_iteration']
+    write_csv('weak_traffic_diagnostics.csv',traffic)
+    selector=[]
+    for p in [64,128,256]:
+        strong=next(r for r in work if r['graph']=='strong_uniform' and r['processes']==p)
+        weaker=next(r for r in traffic if r['family']=='uniform' and r['processes']==p and r['communication']=='Halo')
+        source=json.loads((ROOT/strong['source_summary']).read_text())
+        selector.append(dict(processes=p,strong_vertices=source['nodes'],weak_vertices=weaker['vertices'],
+            strong_communication_ms_per_iteration=float(strong['communication_median_s'])/source['iterations']*1000,
+            weak_communication_ms_per_iteration=weaker['communication_ms_per_iteration'],
+            weak_payload_MB_per_rank=weaker['counted_payload_bytes_per_rank']/1e6,
+            default_tuned_source_candidate='basic_linear' if p==128 else 'pairwise',
+            actual_collective_component_recorded=False,forced_algorithm_experiment_performed=False))
+    write_csv('mpi_selector_consistency.csv',selector)
+    gpu=[]
+    for graph in ['strong_uniform','strong_hub','strong_controlled']:
+        for method in ['MPI+CUDA','MPI+Kokkos CUDA']:
+            one=pick(graph,method,'gpu_node',processes=1,communication='Allgatherv')
+            two=pick(graph,method,'gpu_node',processes=2,communication='Allgatherv')
+            s=json.loads((ROOT/two['source_summary']).read_text())
+            gpu.append(dict(graph=graph,method=method,p2_max_edge_share=s['max_local_edges']/s['edges'],
+                equal_edge_rate_speedup_proxy=s['edges']/s['max_local_edges'],
+                compute_speedup=one['compute_median_s']/two['compute_median_s'],
+                p1_solve_s=one['solve_median_s'],p2_solve_s=two['solve_median_s'],
+                p1_compute_s=one['compute_median_s'],p2_compute_s=two['compute_median_s'],
+                p1_communication_s=one['communication_median_s'],p2_communication_s=two['communication_median_s'],
+                p1_transfer_s=one['transfer_median_s'],p2_transfer_s=two['transfer_median_s'],
+                p1_source=one['source_summary'],p2_source=two['source_summary']))
+    write_csv('gpu_work_diagnostics.csv',gpu)
+    optima={}
+    for name,context,methods in [('cpu_all','cpu_node',None),('gpu_device_only','gpu_node',
+              {'CUDA','Kokkos CUDA','MPI+CUDA','MPI+Kokkos CUDA'}),('gpu_with_cpu_controls','gpu_node',None)]:
+        winners=[min((r for r in records if r['graph']==graph and r['context']==context
+                      and (methods is None or r['method'] in methods)),key=lambda r:(r['solve_median_s'],r['method']))
+                 for graph in sorted({r['graph'] for r in records})]
+        optima[name]={'method_counts':dict(Counter(r['method'] for r in winners)),
+            'multirank_winners':sum(r['processes']>1 for r in winners),
+            'selected':[{'graph':r['graph'],'method':r['method'],'processes':r['processes'],
+                         'threads':r['threads'],'host_nodes':r['host_nodes'],'solve_median_s':r['solve_median_s'],
+                         'source_summary':r['source_summary']} for r in winners]}
+    (OUT/'method_optima.json').write_text(json.dumps(optima,indent=2)+'\n')
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     records, median_error = load_fixed()
@@ -213,6 +303,7 @@ def main():
                                         if r['context']=='cpu_node' else '')
     write_csv('fixed_results_19530.csv', records)
     weak = load_weak(); write_csv('weak_results_372.csv', weak)
+    analyze_mechanisms(records,weak)
     graph_rows = []
     for graph in sorted({r['graph'] for r in records}, key=lambda g:(origin(g)!='original',origin(g),g)):
         row = next(r for r in records if r['graph']==graph and r['method']=='Serial' and r['context']=='cpu_node')
@@ -227,6 +318,7 @@ def main():
             selected = min((x for x in records if x['graph']==g['graph'] and x['context']==context and x['method']==method),key=lambda x:x['solve_median_s'])
             r[method+'_best_s']=selected['solve_median_s']
             r[method+'_configuration']=f"n{selected['host_nodes']}:p{selected['processes']}:T{selected['threads']}:{selected['communication']}"
+        r['GPU-node Serial_s']=baselines['gpu_node',g['graph']]
         matrix.append(r)
     supplement=[]
     for row in read_csv(INVENTORY/'experiment_manifest_20700.csv'):

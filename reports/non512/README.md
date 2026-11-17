@@ -14,7 +14,15 @@ are retained for stable repository links.
 - [Separate weak-suite records](data/weak_results_372.csv)
 - [Numerical and timing audit](data/audit.json)
 - [Measurement selection and provenance](measurement_selection.json)
-- [Nine vector figures and PNG exports](figures/)
+- [Review of the teammate draft and evidence changes](REVIEW_NOTES.md)
+- [Rank workload diagnostics](data/rank_work_diagnostics.csv)
+- [Thread-policy diagnostics](data/thread_policy_diagnostics.csv)
+- [Version-specific MPI selector consistency](data/mpi_selector_consistency.csv)
+- [Pinned source and CPU-layout checks](data/source_mechanism_checks.json)
+- [Weak-scaling payload and phase diagnostics](data/weak_traffic_diagnostics.csv)
+- [GPU work-distribution diagnostics](data/gpu_work_diagnostics.csv)
+- [Three precisely scoped optimum counts](data/method_optima.json)
+- [Ten vector figures and PNG exports](figures/)
 
 The 45 fixed graphs contain three original graphs and 42 extensions. Weak-suite
 standalone GPU runs on growing inputs are fixed-resource controls, not weak
@@ -26,7 +34,11 @@ Each configuration uses one warm-up and five timed runs. Primary solve-time
 tables and figures report the median of the five timed runs.
 
 The 512 supplement has only five validated cases, on one 50k-vertex graph. It is
-not a complete method comparison or a complete scaling curve. A hyphen (`-`) marks missing matrix cells. Its records are excluded from main-matrix aggregates.
+not a complete method comparison or a complete scaling curve. A hyphen (`-`)
+marks missing matrix cells. Its records are excluded from main-matrix aggregates.
+The 45-row CPU matrix keeps this partial column; the separate GPU matrix includes
+its own Serial reference. The root-level teammate PDF is a preserved input, while
+`output/pdf/pagerank_non512_report.pdf` is the current generated deliverable.
 
 ## Build the report without running a benchmark
 
@@ -57,9 +69,10 @@ is not an extra Git upload. Existing insight files are used when it is absent.
 
 ## Submission preparation
 
-Add actual group names and student IDs, review the AI disclosure and scientific
-interpretations, and confirm the current submission deadline. An optional
-`authors.json` list of objects with `name` and `student_id` adds an author block.
+Group names and student IDs in `authors.json` are transcribed from the supplied
+teammate draft. Verify that transcription, review the AI disclosure and scientific
+interpretations, and confirm the current submission deadline. The author file is
+a list of objects with `name` and `student_id`.
 Prepare the Canvas source package without operational logs or terminal output.
 
 The local report audit checks saved independent validation evidence, settings,
