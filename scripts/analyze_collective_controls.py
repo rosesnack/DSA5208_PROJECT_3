@@ -62,17 +62,17 @@ def main():
                 else:rows.append(row)
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     with OUTPUT.open('w', newline='') as stream:
-        writer = csv.DictWriter(stream, fieldnames=FIELDS); writer.writeheader(); writer.writerows(rows)
+        writer = csv.DictWriter(stream, fieldnames=FIELDS, lineterminator='\n'); writer.writeheader(); writer.writerows(rows)
     with (OUTPUT.parent/'launcher_controls.csv').open('w',newline='') as stream:
-        writer=csv.DictWriter(stream,fieldnames=FIELDS+['launcher']);writer.writeheader();writer.writerows(launcher_rows)
+        writer=csv.DictWriter(stream,fieldnames=FIELDS+['launcher'], lineterminator='\n');writer.writeheader();writer.writerows(launcher_rows)
     if launcher_manifest:
         assert len(launcher_manifest)==2
         with (SOURCE/'case_manifest_launcher_2.csv').open('w',newline='') as stream:
-            writer=csv.DictWriter(stream,fieldnames=list(launcher_manifest[0]));writer.writeheader();writer.writerows(launcher_manifest)
+            writer=csv.DictWriter(stream,fieldnames=list(launcher_manifest[0]), lineterminator='\n');writer.writeheader();writer.writerows(launcher_manifest)
     if manifest:
         assert len(manifest)==57 and len({(r['cores'],r['id']) for r in manifest})==57
         with (SOURCE/'case_manifest_57.csv').open('w',newline='') as stream:
-            writer=csv.DictWriter(stream,fieldnames=list(manifest[0]));writer.writeheader();writer.writerows(manifest)
+            writer=csv.DictWriter(stream,fieldnames=list(manifest[0]), lineterminator='\n');writer.writeheader();writer.writerows(manifest)
         accounting=[]
         for account in ('xtt_ella','hongxinran'):
             receipt=json.loads((SOURCE/('submission_'+account+'.json')).read_text())
@@ -87,7 +87,7 @@ def main():
                     exit_status=job.get('Exit_status'),walltime_limit=group['walltime'],walltime_used=elapsed,
                     max_reserved_cpuh=group['cores']*maximum,observed_allocated_cpuh=group['cores']*hours))
         with (SOURCE/'runtime_accounting.csv').open('w',newline='') as stream:
-            writer=csv.DictWriter(stream,fieldnames=list(accounting[0]));writer.writeheader();writer.writerows(accounting)
+            writer=csv.DictWriter(stream,fieldnames=list(accounting[0]), lineterminator='\n');writer.writeheader();writer.writerows(accounting)
     print('Independently validated collective controls:', len(rows), '/ 57')
     print('Independently validated launcher controls:',len(launcher_rows),'/ 2')
 
