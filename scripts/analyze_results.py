@@ -247,7 +247,11 @@ def analyze_mechanisms(records, weak):
             weak_communication_ms_per_iteration=weaker['communication_ms_per_iteration'],
             weak_payload_MB_per_rank=weaker['counted_payload_bytes_per_rank']/1e6,
             default_tuned_source_candidate='basic_linear' if p==128 else 'pairwise',
-            actual_collective_component_recorded=False,forced_algorithm_experiment_performed=False))
+            main_measurement_component_trace_recorded=False,
+            matched_policy_controls_performed=len([r for r in read_csv(OUT/'collective_controls.csv')
+                if r['graph']=='strong_uniform' and int(r['processes'])==p and r['implementation']=='mpi'
+                and r['communication']=='halo'])==3,
+            matched_control_table='results/tables/collective_controls.csv'))
     write_csv('mpi_selector_consistency.csv',selector)
     gpu=[]
     for graph in ['strong_uniform','strong_hub','strong_controlled']:

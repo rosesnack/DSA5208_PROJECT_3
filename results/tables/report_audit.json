@@ -1,0 +1,21 @@
+{
+  "shared_fixed_growing_specifications": 15,
+  "distinct_input_specifications": 57,
+  "aggregate_duration_ratio_checks": 32,
+  "fixed_matrix_exact": true,
+  "fixed_configurations": 19530,
+  "fixed_graphs": 45,
+  "five_run_timing_entries_checked": 99830,
+  "recorded_cpu_models": [
+    "Intel(R) Xeon(R) Platinum 8452Y"
+  ],
+  "protocol": "one warm-up; median of five timed solves; Release; alpha=.85; tolerance=1e-8",
+  "fixed_speedup_and_efficiency_recomputed": true,
+  "mpi_kokkos_actual_thread_records_checked": 7512,
+  "mpi_kokkos_original_single_thread_records": 48,
+  "cpu_work_scaled_rows_checked": 126,
+  "matched_policy_groups_checked": 9,
+  "policy_context_and_binding_cases": 59,
+  "coverage": "serial N/E grid; MPI and MPI+X fixed/growing inputs to 256 CPU cores; one/two GPUs",
+  "raw_score_validation": "saved independent full-vector/residual certificates; no new rank scan performed by this audit"
+}

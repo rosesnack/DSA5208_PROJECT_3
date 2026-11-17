@@ -4,7 +4,7 @@
 
 C++17 implementations of synchronous, uniform-preference PageRank: Serial, OpenMP, MPI, MPI+OpenMP, CUDA, Kokkos OpenMP/CUDA, MPI+CUDA, and MPI+Kokkos. Every MPI implementation supports complete-vector **Allgatherv** and exact selective **Halo** exchange.
 
-The published results contain **45 fixed graphs and 19,530 configurations**, **372 growing-input configurations/controls**, **59 matched collective-policy/context/binding configurations**, and **five additional 512-core measurements**. Each configuration uses one warm-up and five timed solves; reported times are their median. Cross-graph speedup summaries explicitly use geometric means of matched ratios. The report combines full runtime tables with Serial-relative heatmap colors: cell numbers are seconds; bold, outlined cells mark the fastest observed method within each graph and node class.
+The published results contain **45 fixed graphs and 19,530 configurations**, **372 growing-input configurations/controls**, **59 matched collective-policy/context/binding configurations**, and **five additional 512-core measurements**. Each configuration uses one warm-up and five timed solves; reported times are their median. Cross-graph speedup summaries explicitly use geometric means of matched ratios. The complete configuration heatmaps print solve milliseconds (k=1,000 ms), with Serial-relative color, faster Allgatherv/Halo values in bold, and the fastest observed graph/node-class result in green. No fixed-input configuration is omitted.
 
 ## Repository
 
@@ -33,6 +33,7 @@ python3 -m pip install -r requirements-report.txt
 python3 scripts/analyze_results.py
 python3 scripts/analyze_controls.py
 python3 scripts/build_report.py
+python3 scripts/check_report_results.py
 ```
 
 Python 3.9+ is required. Analysis verifies archive SHA-256 values, the five original timings, numerical criteria and saved validation evidence. `results/tables/audit.json` records the counts and source-manifest hashes. The display tables retain their exact source locations and comparison baselines.
@@ -182,3 +183,9 @@ qsub -W depend=afterok:<performance-job-id> \
 ```
 
 For the Allgatherv transition, select `--implementation hybrid --threads 4 --communication allgather`, p=8/16/32 on n=1/2/4, and policies `default agv_bruck agv_ring`. The certificate checker can be exercised independently with `python3 scripts/check_collective_certificate.py`.
+
+## Submission package
+
+Run `python3 scripts/package_submission.py` to create `submission.zip`. It contains the current PDF, C++ source, CMake build, input generators, run/validation scripts and this README. The package also includes five clean result CSVs as machine-readable copies of the complete results printed in the PDF. Experimental logs, terminal output, graph data and raw result archives are excluded, following Lecture 12. The complete archived results and report assets remain in the GitHub repository; use the full clone for published-table/report regeneration and `check_report_results.py`. The source package can build and run the algorithms using the build/input instructions above.
+
+The portrait PDF includes every fixed-input configuration in Section 3.7: grouped numerical heatmaps combine all T=1/2/4/8/16/32, node and ranks-per-node settings. Section 3.5.3 prints all diagnostic settings and 3.6.3 prints every growing-input record. PDF bookmarks navigate graph groups. `results/tables/report_full_coverage.json` checks exact in-report configuration coverage. Section 3.0 explains setup, thread scheduling and recurring GPU-staging timing boundaries.

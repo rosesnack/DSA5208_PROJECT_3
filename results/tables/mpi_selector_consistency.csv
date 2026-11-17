@@ -1,4 +1,4 @@
-processes,strong_vertices,weak_vertices,strong_communication_ms_per_iteration,weak_communication_ms_per_iteration,weak_payload_MB_per_rank,default_tuned_source_candidate,actual_collective_component_recorded,forced_algorithm_experiment_performed
-64,12800000,3200000,56.374215916666614,17.280567333333313,6.29990225,pairwise,False,False
-128,12800000,6400000,343.5304555833333,271.0078615833336,6.349933875,basic_linear,False,False
-256,12800000,12800000,42.58005958333325,38.07042083333331,6.37494325,pairwise,False,False
+processes,strong_vertices,weak_vertices,strong_communication_ms_per_iteration,weak_communication_ms_per_iteration,weak_payload_MB_per_rank,default_tuned_source_candidate,main_measurement_component_trace_recorded,matched_policy_controls_performed,matched_control_table
+64,12800000,3200000,56.374215916666614,17.280567333333313,6.29990225,pairwise,False,True,results/tables/collective_controls.csv
+128,12800000,6400000,343.5304555833333,271.0078615833336,6.349933875,basic_linear,False,True,results/tables/collective_controls.csv
+256,12800000,12800000,42.58005958333325,38.07042083333331,6.37494325,pairwise,False,True,results/tables/collective_controls.csv
