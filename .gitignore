@@ -18,3 +18,5 @@ __pycache__/
 /results/updated_local_macos_local_runner.log
 /results/updated_local_weak_generation.log
 /results/updated_local_macos_weak_runner.log
+
+/tmp/

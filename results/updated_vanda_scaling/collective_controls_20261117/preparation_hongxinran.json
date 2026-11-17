@@ -1,0 +1,26 @@
+{
+  "time": "2026-11-17T15:50:10.515698+08:00",
+  "user": "hongxinran",
+  "home": "/home/svu/hongxinran/dsa5208_collective_controls_20261117",
+  "project": "/home/svu/hongxinran/dsa5208_collective_controls_20261117/project",
+  "free_preflight": "1576279.stdct-mgmt-02",
+  "groups": [
+    {
+      "id": "c64",
+      "plan": "/home/svu/hongxinran/dsa5208_collective_controls_20261117/c64.json",
+      "cores": 64,
+      "nodes": 2,
+      "walltime": "01:00:00",
+      "cells": 19
+    },
+    {
+      "id": "c128",
+      "plan": "/home/svu/hongxinran/dsa5208_collective_controls_20261117/c128.json",
+      "cores": 128,
+      "nodes": 4,
+      "walltime": "01:00:00",
+      "cells": 19
+    }
+  ],
+  "previous_free_preflight": "1576266.stdct-mgmt-02"
+}

@@ -1,0 +1,21 @@
+{
+  "OMPI_MCA_btl": "self,vader,tcp",
+  "OMPI_MCA_pml": "ob1",
+  "OMPI_MCA_hwloc_base_binding_policy": "socket",
+  "OMP_NUM_THREADS": "4",
+  "PAGERANK_ENVIRONMENT": "vanda-gcc13-release",
+  "PAGERANK_REPEATS": "5",
+  "PAGERANK_WARMUPS": "1",
+  "PAGERANK_RESULTS_ROOT": "/home/svu/hongxinran/dsa5208_collective_controls_20261117/results/c128/strong_hub_hybrid_p32_t4_halo_default",
+  "OMP_DYNAMIC": "FALSE",
+  "OMP_PROC_BIND": "spread",
+  "OMP_PLACES": "cores",
+  "PAGERANK_HYBRID_THREADS": "4",
+  "PAGERANK_KOKKOS_THREADS": "4",
+  "PAGERANK_HYBRID_MAX_TOTAL_THREADS": "128",
+  "OMPI_MCA_coll": "tuned,basic,libnbc,self",
+  "OMPI_MCA_coll_tuned_use_dynamic_rules": "0",
+  "OMPI_MCA_coll_tuned_alltoallv_algorithm": "0",
+  "OMPI_MCA_coll_tuned_allgatherv_algorithm": "0",
+  "PAGERANK_DATASET_MANIFEST": "/home/svu/hongxinran/dsa5208_collective_controls_20261117/results/c128/strong_hub_hybrid_p32_t4_halo_default/dataset.tsv"
+}

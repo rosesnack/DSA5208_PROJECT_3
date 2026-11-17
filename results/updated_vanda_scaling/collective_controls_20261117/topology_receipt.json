@@ -1,0 +1,5 @@
+{
+  "job": "1577092.stdct-mgmt-02",
+  "host": "cn-118",
+  "purpose": "Physical core/socket/SMT check on a validated CPU-model host; free metadata-only job"
+}

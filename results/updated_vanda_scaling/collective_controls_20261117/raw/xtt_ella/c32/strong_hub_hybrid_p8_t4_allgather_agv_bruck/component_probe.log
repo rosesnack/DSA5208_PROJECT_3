@@ -1,0 +1,410 @@
+["mpiexec", "-x", "LD_LIBRARY_PATH", "--map-by", "ppr:8:node", "--bind-to", "none", "-n", "8", "python3", "scripts/mpi_affinity_exec.py", "4", "/home/svu/xtt_ella/dsa5208_collective_controls_20261117/results/c32/collective_probe"]
+[CN-096:3533426] mca: base: components_register: registering framework coll components
+[CN-096:3533426] mca: base: components_register: found loaded component libnbc
+[CN-096:3533426] mca: base: components_register: component libnbc register function successful
+[CN-096:3533426] mca: base: components_register: found loaded component tuned
+[CN-096:3533426] mca: base: components_register: component tuned register function successful
+[CN-096:3533426] mca: base: components_register: found loaded component basic
+[CN-096:3533426] mca: base: components_register: component basic register function successful
+[CN-096:3533426] mca: base: components_register: found loaded component self
+[CN-096:3533426] mca: base: components_register: component self register function successful
+[CN-096:3533426] mca: base: components_open: opening coll components
+[CN-096:3533426] mca: base: components_open: found loaded component libnbc
+[CN-096:3533426] mca: base: components_open: component libnbc open function successful
+[CN-096:3533426] mca: base: components_open: found loaded component tuned
+[CN-096:3533426] mca: base: components_open: component tuned open function successful
+[CN-096:3533426] mca: base: components_open: found loaded component basic
+[CN-096:3533426] mca: base: components_open: found loaded component self
+[CN-096:3533426] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-096:3533420] mca: base: components_register: registering framework coll components
+[CN-096:3533420] mca: base: components_register: found loaded component libnbc
+[CN-096:3533420] mca: base: components_register: component libnbc register function successful
+[CN-096:3533420] mca: base: components_register: found loaded component tuned
+[CN-096:3533420] mca: base: components_register: component tuned register function successful
+[CN-096:3533420] mca: base: components_register: found loaded component basic
+[CN-096:3533420] mca: base: components_register: component basic register function successful
+[CN-096:3533420] mca: base: components_register: found loaded component self
+[CN-096:3533420] mca: base: components_register: component self register function successful
+[CN-096:3533420] mca: base: components_open: opening coll components
+[CN-096:3533420] mca: base: components_open: found loaded component libnbc
+[CN-096:3533420] mca: base: components_open: component libnbc open function successful
+[CN-096:3533420] mca: base: components_open: found loaded component tuned
+[CN-096:3533420] mca: base: components_open: component tuned open function successful
+[CN-096:3533420] mca: base: components_open: found loaded component basic
+[CN-096:3533420] mca: base: components_open: found loaded component self
+[CN-096:3533423] mca: base: components_register: registering framework coll components
+[CN-096:3533423] mca: base: components_register: found loaded component libnbc
+[CN-096:3533424] mca: base: components_register: registering framework coll components
+[CN-096:3533424] mca: base: components_register: found loaded component libnbc
+[CN-096:3533423] mca: base: components_register: component libnbc register function successful
+[CN-096:3533423] mca: base: components_register: found loaded component tuned
+[CN-096:3533424] mca: base: components_register: component libnbc register function successful
+[CN-096:3533424] mca: base: components_register: found loaded component tuned
+[CN-096:3533423] mca: base: components_register: component tuned register function successful
+[CN-096:3533423] mca: base: components_register: found loaded component basic
+[CN-096:3533423] mca: base: components_register: component basic register function successful
+[CN-096:3533423] mca: base: components_register: found loaded component self
+[CN-096:3533423] mca: base: components_register: component self register function successful
+[CN-096:3533424] mca: base: components_register: component tuned register function successful
+[CN-096:3533424] mca: base: components_register: found loaded component basic
+[CN-096:3533424] mca: base: components_register: component basic register function successful
+[CN-096:3533424] mca: base: components_register: found loaded component self
+[CN-096:3533424] mca: base: components_register: component self register function successful
+[CN-096:3533424] mca: base: components_open: opening coll components
+[CN-096:3533424] mca: base: components_open: found loaded component libnbc
+[CN-096:3533424] mca: base: components_open: component libnbc open function successful
+[CN-096:3533424] mca: base: components_open: found loaded component tuned
+[CN-096:3533424] mca: base: components_open: component tuned open function successful
+[CN-096:3533424] mca: base: components_open: found loaded component basic
+[CN-096:3533424] mca: base: components_open: found loaded component self
+[CN-096:3533423] mca: base: components_open: opening coll components
+[CN-096:3533423] mca: base: components_open: found loaded component libnbc
+[CN-096:3533423] mca: base: components_open: component libnbc open function successful
+[CN-096:3533423] mca: base: components_open: found loaded component tuned
+[CN-096:3533423] mca: base: components_open: component tuned open function successful
+[CN-096:3533423] mca: base: components_open: found loaded component basic
+[CN-096:3533423] mca: base: components_open: found loaded component self
+[CN-096:3533420] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-096:3533424] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-096:3533423] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-096:3533425] mca: base: components_register: registering framework coll components
+[CN-096:3533425] mca: base: components_register: found loaded component libnbc
+[CN-096:3533425] mca: base: components_register: component libnbc register function successful
+[CN-096:3533425] mca: base: components_register: found loaded component tuned
+[CN-096:3533425] mca: base: components_register: component tuned register function successful
+[CN-096:3533425] mca: base: components_register: found loaded component basic
+[CN-096:3533425] mca: base: components_register: component basic register function successful
+[CN-096:3533425] mca: base: components_register: found loaded component self
+[CN-096:3533425] mca: base: components_register: component self register function successful
+[CN-096:3533422] mca: base: components_register: registering framework coll components
+[CN-096:3533422] mca: base: components_register: found loaded component libnbc
+[CN-096:3533425] mca: base: components_open: opening coll components
+[CN-096:3533425] mca: base: components_open: found loaded component libnbc
+[CN-096:3533425] mca: base: components_open: component libnbc open function successful
+[CN-096:3533425] mca: base: components_open: found loaded component tuned
+[CN-096:3533425] mca: base: components_open: component tuned open function successful
+[CN-096:3533425] mca: base: components_open: found loaded component basic
+[CN-096:3533425] mca: base: components_open: found loaded component self
+[CN-096:3533422] mca: base: components_register: component libnbc register function successful
+[CN-096:3533422] mca: base: components_register: found loaded component tuned
+[CN-096:3533421] mca: base: components_register: registering framework coll components
+[CN-096:3533421] mca: base: components_register: found loaded component libnbc
+[CN-096:3533421] mca: base: components_register: component libnbc register function successful
+[CN-096:3533421] mca: base: components_register: found loaded component tuned
+[CN-096:3533422] mca: base: components_register: component tuned register function successful
+[CN-096:3533422] mca: base: components_register: found loaded component basic
+[CN-096:3533422] mca: base: components_register: component basic register function successful
+[CN-096:3533422] mca: base: components_register: found loaded component self
+[CN-096:3533422] mca: base: components_register: component self register function successful
+[CN-096:3533422] mca: base: components_open: opening coll components
+[CN-096:3533422] mca: base: components_open: found loaded component libnbc
+[CN-096:3533422] mca: base: components_open: component libnbc open function successful
+[CN-096:3533422] mca: base: components_open: found loaded component tuned
+[CN-096:3533422] mca: base: components_open: component tuned open function successful
+[CN-096:3533422] mca: base: components_open: found loaded component basic
+[CN-096:3533422] mca: base: components_open: found loaded component self
+[CN-096:3533421] mca: base: components_register: component tuned register function successful
+[CN-096:3533421] mca: base: components_register: found loaded component basic
+[CN-096:3533421] mca: base: components_register: component basic register function successful
+[CN-096:3533421] mca: base: components_register: found loaded component self
+[CN-096:3533421] mca: base: components_register: component self register function successful
+[CN-096:3533421] mca: base: components_open: opening coll components
+[CN-096:3533421] mca: base: components_open: found loaded component libnbc
+[CN-096:3533421] mca: base: components_open: component libnbc open function successful
+[CN-096:3533421] mca: base: components_open: found loaded component tuned
+[CN-096:3533421] mca: base: components_open: component tuned open function successful
+[CN-096:3533421] mca: base: components_open: found loaded component basic
+[CN-096:3533421] mca: base: components_open: found loaded component self
+[CN-096:3533425] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-096:3533422] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-096:3533421] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-096:3533419] mca: base: components_register: registering framework coll components
+[CN-096:3533419] mca: base: components_register: found loaded component libnbc
+[CN-096:3533419] mca: base: components_register: component libnbc register function successful
+[CN-096:3533419] mca: base: components_register: found loaded component tuned
+[CN-096:3533419] mca: base: components_register: component tuned register function successful
+[CN-096:3533419] mca: base: components_register: found loaded component basic
+[CN-096:3533419] mca: base: components_register: component basic register function successful
+[CN-096:3533419] mca: base: components_register: found loaded component self
+[CN-096:3533419] mca: base: components_register: component self register function successful
+[CN-096:3533419] mca: base: components_open: opening coll components
+[CN-096:3533419] mca: base: components_open: found loaded component libnbc
+[CN-096:3533419] mca: base: components_open: component libnbc open function successful
+[CN-096:3533419] mca: base: components_open: found loaded component tuned
+[CN-096:3533419] mca: base: components_open: component tuned open function successful
+[CN-096:3533419] mca: base: components_open: found loaded component basic
+[CN-096:3533419] mca: base: components_open: found loaded component self
+[CN-096:3533419] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-096:3533422] coll:find_available: querying coll component libnbc
+[CN-096:3533422] coll:find_available: coll component libnbc is available
+[CN-096:3533422] coll:find_available: querying coll component tuned
+[CN-096:3533422] coll:find_available: coll component tuned is available
+[CN-096:3533422] coll:find_available: querying coll component basic
+[CN-096:3533422] coll:find_available: coll component basic is available
+[CN-096:3533422] coll:find_available: querying coll component self
+[CN-096:3533422] coll:find_available: coll component self is available
+[CN-096:3533423] coll:find_available: querying coll component libnbc
+[CN-096:3533423] coll:find_available: coll component libnbc is available
+[CN-096:3533423] coll:find_available: querying coll component tuned
+[CN-096:3533423] coll:find_available: coll component tuned is available
+[CN-096:3533423] coll:find_available: querying coll component basic
+[CN-096:3533423] coll:find_available: coll component basic is available
+[CN-096:3533423] coll:find_available: querying coll component self
+[CN-096:3533423] coll:find_available: coll component self is available
+[CN-096:3533419] coll:find_available: querying coll component libnbc
+[CN-096:3533419] coll:find_available: coll component libnbc is available
+[CN-096:3533419] coll:find_available: querying coll component tuned
+[CN-096:3533419] coll:find_available: coll component tuned is available
+[CN-096:3533419] coll:find_available: querying coll component basic
+[CN-096:3533419] coll:find_available: coll component basic is available
+[CN-096:3533419] coll:find_available: querying coll component self
+[CN-096:3533419] coll:find_available: coll component self is available
+[CN-096:3533426] coll:find_available: querying coll component libnbc
+[CN-096:3533426] coll:find_available: coll component libnbc is available
+[CN-096:3533426] coll:find_available: querying coll component tuned
+[CN-096:3533426] coll:find_available: coll component tuned is available
+[CN-096:3533426] coll:find_available: querying coll component basic
+[CN-096:3533426] coll:find_available: coll component basic is available
+[CN-096:3533426] coll:find_available: querying coll component self
+[CN-096:3533426] coll:find_available: coll component self is available
+[CN-096:3533425] coll:find_available: querying coll component libnbc
+[CN-096:3533425] coll:find_available: coll component libnbc is available
+[CN-096:3533425] coll:find_available: querying coll component tuned
+[CN-096:3533425] coll:find_available: coll component tuned is available
+[CN-096:3533425] coll:find_available: querying coll component basic
+[CN-096:3533425] coll:find_available: coll component basic is available
+[CN-096:3533425] coll:find_available: querying coll component self
+[CN-096:3533425] coll:find_available: coll component self is available
+[CN-096:3533424] coll:find_available: querying coll component libnbc
+[CN-096:3533424] coll:find_available: coll component libnbc is available
+[CN-096:3533424] coll:find_available: querying coll component tuned
+[CN-096:3533424] coll:find_available: coll component tuned is available
+[CN-096:3533424] coll:find_available: querying coll component basic
+[CN-096:3533424] coll:find_available: coll component basic is available
+[CN-096:3533424] coll:find_available: querying coll component self
+[CN-096:3533424] coll:find_available: coll component self is available
+[CN-096:3533420] coll:find_available: querying coll component libnbc
+[CN-096:3533420] coll:find_available: coll component libnbc is available
+[CN-096:3533420] coll:find_available: querying coll component tuned
+[CN-096:3533420] coll:find_available: coll component tuned is available
+[CN-096:3533420] coll:find_available: querying coll component basic
+[CN-096:3533420] coll:find_available: coll component basic is available
+[CN-096:3533420] coll:find_available: querying coll component self
+[CN-096:3533420] coll:find_available: coll component self is available
+[CN-096:3533421] coll:find_available: querying coll component libnbc
+[CN-096:3533421] coll:find_available: coll component libnbc is available
+[CN-096:3533421] coll:find_available: querying coll component tuned
+[CN-096:3533421] coll:find_available: coll component tuned is available
+[CN-096:3533421] coll:find_available: querying coll component basic
+[CN-096:3533421] coll:find_available: coll component basic is available
+[CN-096:3533421] coll:find_available: querying coll component self
+[CN-096:3533421] coll:find_available: coll component self is available
+[CN-096:3533423] coll:base:comm_select: new communicator: MPI_COMM_WORLD (cid 0)
+[CN-096:3533423] coll:base:comm_select: Checking all available modules
+[CN-096:3533423] coll:base:comm_select: component available: libnbc, priority: 10
+[CN-096:3533423] coll:base:comm_select: component available: tuned, priority: 30
+[CN-096:3533423] coll:base:comm_select: component available: basic, priority: 10
+[CN-096:3533423] coll:base:comm_select: component not available: self
+[CN-096:3533423] coll:base:comm_select: component disqualified: self (priority -1 < 0)
+[CN-096:3533423] coll:base:comm_select: selecting      libnbc, priority  10, Enabled
+[CN-096:3533423] coll:base:comm_select: selecting       basic, priority  10, Enabled
+[CN-096:3533423] coll:base:comm_select: selecting       tuned, priority  30, Enabled
+[CN-096:3533423] coll:base:comm_select: new communicator: MPI_COMM_SELF (cid 1)
+[CN-096:3533423] coll:base:comm_select: Checking all available modules
+[CN-096:3533423] coll:base:comm_select: component available: libnbc, priority: 10
+[CN-096:3533423] coll:base:comm_select: component not available: tuned
+[CN-096:3533423] coll:base:comm_select: component disqualified: tuned (priority -1 < 0)
+[CN-096:3533423] coll:base:comm_select: component available: basic, priority: 10
+[CN-096:3533424] coll:base:comm_select: new communicator: MPI_COMM_WORLD (cid 0)
+[CN-096:3533424] coll:base:comm_select: Checking all available modules
+[CN-096:3533424] coll:base:comm_select: component available: libnbc, priority: 10
+[CN-096:3533424] coll:base:comm_select: component available: tuned, priority: 30
+[CN-096:3533424] coll:base:comm_select: component available: basic, priority: 10
+[CN-096:3533424] coll:base:comm_select: component not available: self
+[CN-096:3533424] coll:base:comm_select: component disqualified: self (priority -1 < 0)
+[CN-096:3533424] coll:base:comm_select: selecting      libnbc, priority  10, Enabled
+[CN-096:3533424] coll:base:comm_select: selecting       basic, priority  10, Enabled
+[CN-096:3533422] coll:base:comm_select: new communicator: MPI_COMM_WORLD (cid 0)
+[CN-096:3533422] coll:base:comm_select: Checking all available modules
+[CN-096:3533422] coll:base:comm_select: component available: libnbc, priority: 10
+[CN-096:3533422] coll:base:comm_select: component available: tuned, priority: 30
+[CN-096:3533422] coll:base:comm_select: component available: basic, priority: 10
+[CN-096:3533422] coll:base:comm_select: component not available: self
+[CN-096:3533422] coll:base:comm_select: component disqualified: self (priority -1 < 0)
+[CN-096:3533422] coll:base:comm_select: selecting      libnbc, priority  10, Enabled
+[CN-096:3533422] coll:base:comm_select: selecting       basic, priority  10, Enabled
+[CN-096:3533422] coll:base:comm_select: selecting       tuned, priority  30, Enabled
+[CN-096:3533422] coll:base:comm_select: new communicator: MPI_COMM_SELF (cid 1)
+[CN-096:3533422] coll:base:comm_select: Checking all available modules
+[CN-096:3533422] coll:base:comm_select: component available: libnbc, priority: 10
+[CN-096:3533422] coll:base:comm_select: component not available: tuned
+[CN-096:3533422] coll:base:comm_select: component disqualified: tuned (priority -1 < 0)
+[CN-096:3533422] coll:base:comm_select: component available: basic, priority: 10
+[CN-096:3533422] coll:base:comm_select: component available: self, priority: 75
+[CN-096:3533422] coll:base:comm_select: selecting      libnbc, priority  10, Enabled
+[CN-096:3533422] coll:base:comm_select: selecting       basic, priority  10, Enabled
+[CN-096:3533422] coll:base:comm_select: selecting        self, priority  75, Enabled
+[CN-096:3533421] coll:base:comm_select: new communicator: MPI_COMM_WORLD (cid 0)
+[CN-096:3533421] coll:base:comm_select: Checking all available modules
+[CN-096:3533421] coll:base:comm_select: component available: libnbc, priority: 10
+[CN-096:3533421] coll:base:comm_select: component available: tuned, priority: 30
+[CN-096:3533421] coll:base:comm_select: component available: basic, priority: 10
+[CN-096:3533421] coll:base:comm_select: component not available: self
+[CN-096:3533421] coll:base:comm_select: component disqualified: self (priority -1 < 0)
+[CN-096:3533421] coll:base:comm_select: selecting      libnbc, priority  10, Enabled
+[CN-096:3533421] coll:base:comm_select: selecting       basic, priority  10, Enabled
+[CN-096:3533421] coll:base:comm_select: selecting       tuned, priority  30, Enabled
+[CN-096:3533421] coll:base:comm_select: new communicator: MPI_COMM_SELF (cid 1)
+[CN-096:3533421] coll:base:comm_select: Checking all available modules
+[CN-096:3533421] coll:base:comm_select: component available: libnbc, priority: 10
+[CN-096:3533421] coll:base:comm_select: component not available: tuned
+[CN-096:3533421] coll:base:comm_select: component disqualified: tuned (priority -1 < 0)
+[CN-096:3533421] coll:base:comm_select: component available: basic, priority: 10
+[CN-096:3533420] coll:base:comm_select: new communicator: MPI_COMM_WORLD (cid 0)
+[CN-096:3533420] coll:base:comm_select: Checking all available modules
+[CN-096:3533420] coll:base:comm_select: component available: libnbc, priority: 10
+[CN-096:3533420] coll:base:comm_select: component available: tuned, priority: 30
+[CN-096:3533420] coll:base:comm_select: component available: basic, priority: 10
+[CN-096:3533420] coll:base:comm_select: component not available: self
+[CN-096:3533420] coll:base:comm_select: component disqualified: self (priority -1 < 0)
+[CN-096:3533420] coll:base:comm_select: selecting      libnbc, priority  10, Enabled
+[CN-096:3533420] coll:base:comm_select: selecting       basic, priority  10, Enabled
+[CN-096:3533420] coll:base:comm_select: selecting       tuned, priority  30, Enabled
+[CN-096:3533420] coll:base:comm_select: new communicator: MPI_COMM_SELF (cid 1)
+[CN-096:3533420] coll:base:comm_select: Checking all available modules
+[CN-096:3533420] coll:base:comm_select: component available: libnbc, priority: 10
+[CN-096:3533420] coll:base:comm_select: component not available: tuned
+[CN-096:3533420] coll:base:comm_select: component disqualified: tuned (priority -1 < 0)
+[CN-096:3533420] coll:base:comm_select: component available: basic, priority: 10
+[CN-096:3533420] coll:base:comm_select: component available: self, priority: 75
+[CN-096:3533419] coll:base:comm_select: new communicator: MPI_COMM_WORLD (cid 0)
+[CN-096:3533419] coll:base:comm_select: Checking all available modules
+[CN-096:3533419] coll:base:comm_select: component available: libnbc, priority: 10
+[CN-096:3533419] coll:base:comm_select: component available: tuned, priority: 30
+[CN-096:3533419] coll:base:comm_select: component available: basic, priority: 10
+[CN-096:3533419] coll:base:comm_select: component not available: self
+[CN-096:3533419] coll:base:comm_select: component disqualified: self (priority -1 < 0)
+[CN-096:3533419] coll:base:comm_select: selecting      libnbc, priority  10, Enabled
+[CN-096:3533419] coll:base:comm_select: selecting       basic, priority  10, Enabled
+[CN-096:3533419] coll:base:comm_select: selecting       tuned, priority  30, Enabled
+[CN-096:3533419] coll:base:comm_select: new communicator: MPI_COMM_SELF (cid 1)
+[CN-096:3533419] coll:base:comm_select: Checking all available modules
+[CN-096:3533419] coll:base:comm_select: component available: libnbc, priority: 10
+[CN-096:3533419] coll:base:comm_select: component not available: tuned
+[CN-096:3533419] coll:base:comm_select: component disqualified: tuned (priority -1 < 0)
+[CN-096:3533419] coll:base:comm_select: component available: basic, priority: 10
+[CN-096:3533419] coll:base:comm_select: component available: self, priority: 75
+[CN-096:3533419] coll:base:comm_select: selecting      libnbc, priority  10, Enabled
+[CN-096:3533419] coll:base:comm_select: selecting       basic, priority  10, Enabled
+[CN-096:3533419] coll:base:comm_select: selecting        self, priority  75, Enabled
+[CN-096:3533426] coll:base:comm_select: new communicator: MPI_COMM_WORLD (cid 0)
+[CN-096:3533426] coll:base:comm_select: Checking all available modules
+[CN-096:3533426] coll:base:comm_select: component available: libnbc, priority: 10
+[CN-096:3533426] coll:base:comm_select: component available: tuned, priority: 30
+[CN-096:3533426] coll:base:comm_select: component available: basic, priority: 10
+[CN-096:3533426] coll:base:comm_select: component not available: self
+[CN-096:3533426] coll:base:comm_select: component disqualified: self (priority -1 < 0)
+[CN-096:3533426] coll:base:comm_select: selecting      libnbc, priority  10, Enabled
+[CN-096:3533426] coll:base:comm_select: selecting       basic, priority  10, Enabled
+[CN-096:3533426] coll:base:comm_select: selecting       tuned, priority  30, Enabled
+[CN-096:3533426] coll:base:comm_select: new communicator: MPI_COMM_SELF (cid 1)
+[CN-096:3533426] coll:base:comm_select: Checking all available modules
+[CN-096:3533426] coll:base:comm_select: component available: libnbc, priority: 10
+[CN-096:3533426] coll:base:comm_select: component not available: tuned
+[CN-096:3533426] coll:base:comm_select: component disqualified: tuned (priority -1 < 0)
+[CN-096:3533426] coll:base:comm_select: component available: basic, priority: 10
+[CN-096:3533426] coll:base:comm_select: component available: self, priority: 75
+[CN-096:3533426] coll:base:comm_select: selecting      libnbc, priority  10, Enabled
+[CN-096:3533426] coll:base:comm_select: selecting       basic, priority  10, Enabled
+[CN-096:3533426] coll:base:comm_select: selecting        self, priority  75, Enabled
+[CN-096:3533424] coll:base:comm_select: selecting       tuned, priority  30, Enabled
+[CN-096:3533424] coll:base:comm_select: new communicator: MPI_COMM_SELF (cid 1)
+[CN-096:3533424] coll:base:comm_select: Checking all available modules
+[CN-096:3533424] coll:base:comm_select: component available: libnbc, priority: 10
+[CN-096:3533424] coll:base:comm_select: component not available: tuned
+[CN-096:3533424] coll:base:comm_select: component disqualified: tuned (priority -1 < 0)
+[CN-096:3533424] coll:base:comm_select: component available: basic, priority: 10
+[CN-096:3533424] coll:base:comm_select: component available: self, priority: 75
+[CN-096:3533424] coll:base:comm_select: selecting      libnbc, priority  10, Enabled
+[CN-096:3533424] coll:base:comm_select: selecting       basic, priority  10, Enabled
+[CN-096:3533424] coll:base:comm_select: selecting        self, priority  75, Enabled
+[CN-096:3533421] coll:base:comm_select: component available: self, priority: 75
+[CN-096:3533421] coll:base:comm_select: selecting      libnbc, priority  10, Enabled
+[CN-096:3533421] coll:base:comm_select: selecting       basic, priority  10, Enabled
+[CN-096:3533421] coll:base:comm_select: selecting        self, priority  75, Enabled
+[CN-096:3533420] coll:base:comm_select: selecting      libnbc, priority  10, Enabled
+[CN-096:3533420] coll:base:comm_select: selecting       basic, priority  10, Enabled
+[CN-096:3533420] coll:base:comm_select: selecting        self, priority  75, Enabled
+[CN-096:3533425] coll:base:comm_select: new communicator: MPI_COMM_WORLD (cid 0)
+[CN-096:3533425] coll:base:comm_select: Checking all available modules
+[CN-096:3533425] coll:base:comm_select: component available: libnbc, priority: 10
+[CN-096:3533425] coll:base:comm_select: component available: tuned, priority: 30
+[CN-096:3533425] coll:base:comm_select: component available: basic, priority: 10
+[CN-096:3533425] coll:base:comm_select: component not available: self
+[CN-096:3533425] coll:base:comm_select: component disqualified: self (priority -1 < 0)
+[CN-096:3533425] coll:base:comm_select: selecting      libnbc, priority  10, Enabled
+[CN-096:3533425] coll:base:comm_select: selecting       basic, priority  10, Enabled
+[CN-096:3533425] coll:base:comm_select: selecting       tuned, priority  30, Enabled
+[CN-096:3533425] coll:base:comm_select: new communicator: MPI_COMM_SELF (cid 1)
+[CN-096:3533425] coll:base:comm_select: Checking all available modules
+[CN-096:3533425] coll:base:comm_select: component available: libnbc, priority: 10
+[CN-096:3533425] coll:base:comm_select: component not available: tuned
+[CN-096:3533425] coll:base:comm_select: component disqualified: tuned (priority -1 < 0)
+[CN-096:3533425] coll:base:comm_select: component available: basic, priority: 10
+[CN-096:3533425] coll:base:comm_select: component available: self, priority: 75
+[CN-096:3533425] coll:base:comm_select: selecting      libnbc, priority  10, Enabled
+[CN-096:3533425] coll:base:comm_select: selecting       basic, priority  10, Enabled
+[CN-096:3533425] coll:base:comm_select: selecting        self, priority  75, Enabled
+[CN-096:3533423] coll:base:comm_select: component available: self, priority: 75
+[CN-096:3533423] coll:base:comm_select: selecting      libnbc, priority  10, Enabled
+[CN-096:3533423] coll:base:comm_select: selecting       basic, priority  10, Enabled
+[CN-096:3533423] coll:base:comm_select: selecting        self, priority  75, Enabled
+collective_probe ranks=8 errors=0
+[CN-096:3533421] mca: base: close: component libnbc closed
+[CN-096:3533421] mca: base: close: unloading component libnbc
+[CN-096:3533421] mca: base: close: component tuned closed
+[CN-096:3533421] mca: base: close: unloading component tuned
+[CN-096:3533421] mca: base: close: unloading component basic
+[CN-096:3533419] mca: base: close: component libnbc closed
+[CN-096:3533419] mca: base: close: unloading component libnbc
+[CN-096:3533419] mca: base: close: component tuned closed
+[CN-096:3533419] mca: base: close: unloading component tuned
+[CN-096:3533425] mca: base: close: component libnbc closed
+[CN-096:3533425] mca: base: close: unloading component libnbc
+[CN-096:3533425] mca: base: close: component tuned closed
+[CN-096:3533425] mca: base: close: unloading component tuned
+[CN-096:3533425] mca: base: close: unloading component basic
+[CN-096:3533425] mca: base: close: unloading component self
+[CN-096:3533422] mca: base: close: component libnbc closed
+[CN-096:3533422] mca: base: close: unloading component libnbc
+[CN-096:3533422] mca: base: close: component tuned closed
+[CN-096:3533422] mca: base: close: unloading component tuned
+[CN-096:3533420] mca: base: close: component libnbc closed
+[CN-096:3533420] mca: base: close: unloading component libnbc
+[CN-096:3533420] mca: base: close: component tuned closed
+[CN-096:3533420] mca: base: close: unloading component tuned
+[CN-096:3533419] mca: base: close: unloading component basic
+[CN-096:3533419] mca: base: close: unloading component self
+[CN-096:3533426] mca: base: close: component libnbc closed
+[CN-096:3533426] mca: base: close: unloading component libnbc
+[CN-096:3533426] mca: base: close: component tuned closed
+[CN-096:3533426] mca: base: close: unloading component tuned
+[CN-096:3533426] mca: base: close: unloading component basic
+[CN-096:3533423] mca: base: close: component libnbc closed
+[CN-096:3533423] mca: base: close: unloading component libnbc
+[CN-096:3533423] mca: base: close: component tuned closed
+[CN-096:3533423] mca: base: close: unloading component tuned
+[CN-096:3533423] mca: base: close: unloading component basic
+[CN-096:3533423] mca: base: close: unloading component self
+[CN-096:3533424] mca: base: close: component libnbc closed
+[CN-096:3533424] mca: base: close: unloading component libnbc
+[CN-096:3533424] mca: base: close: component tuned closed
+[CN-096:3533424] mca: base: close: unloading component tuned
+[CN-096:3533424] mca: base: close: unloading component basic
+[CN-096:3533424] mca: base: close: unloading component self
+[CN-096:3533421] mca: base: close: unloading component self
+[CN-096:3533426] mca: base: close: unloading component self
+[CN-096:3533422] mca: base: close: unloading component basic
+[CN-096:3533422] mca: base: close: unloading component self
+[CN-096:3533420] mca: base: close: unloading component basic
+[CN-096:3533420] mca: base: close: unloading component self

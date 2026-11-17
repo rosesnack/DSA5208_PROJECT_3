@@ -1,5 +1,7 @@
 # Performance anomaly investigation
 
+Latest matched controls (17 November 2026): the p128 Uniform default/basic-linear/pairwise medians are 4.134/4.129/0.886 s in one allocation. All three pass full-vector residual certificates with zero L1 difference from Serial. The [matched-control study](COLLECTIVE_CONTROLS_20261117.md) holds the MPI policy directly and separately audits the 64-core node boundary; its current progress and ownership are independent of the complete main matrix. Historical evidence below is retained.
+
 Evidence checked on 16 November 2026. This investigation is additional to the
 completed non-512 matrix. No historical measurement is overwritten, deleted or
 reclassified as a newly validated reproduction. Numerical correctness does not

@@ -1,0 +1,26 @@
+{
+  "time": "2026-11-17T15:50:05.422055+08:00",
+  "user": "xtt_ella",
+  "home": "/home/svu/xtt_ella/dsa5208_collective_controls_20261117",
+  "project": "/home/svu/xtt_ella/dsa5208_collective_controls_20261117/project",
+  "free_preflight": "1576277.stdct-mgmt-02",
+  "groups": [
+    {
+      "id": "c32",
+      "plan": "/home/svu/xtt_ella/dsa5208_collective_controls_20261117/c32.json",
+      "cores": 32,
+      "nodes": 1,
+      "walltime": "01:00:00",
+      "cells": 16
+    },
+    {
+      "id": "c256",
+      "plan": "/home/svu/xtt_ella/dsa5208_collective_controls_20261117/c256.json",
+      "cores": 256,
+      "nodes": 8,
+      "walltime": "00:30:00",
+      "cells": 3
+    }
+  ],
+  "previous_free_preflight": "1576265.stdct-mgmt-02"
+}

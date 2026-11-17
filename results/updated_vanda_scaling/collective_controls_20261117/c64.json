@@ -1,0 +1,188 @@
+{
+  "id": "c64",
+  "cores": 64,
+  "nodes": 2,
+  "cores_per_node": 32,
+  "account": "hongxinran",
+  "walltime": "01:30:00",
+  "cells": [
+    {
+      "graph": "strong_uniform",
+      "implementation": "mpi",
+      "processes": 64,
+      "threads": 1,
+      "communication": "halo",
+      "policy": "default",
+      "id": "strong_uniform_mpi_p64_t1_halo_default"
+    },
+    {
+      "graph": "strong_uniform",
+      "implementation": "mpi",
+      "processes": 64,
+      "threads": 1,
+      "communication": "halo",
+      "policy": "a2av_linear",
+      "id": "strong_uniform_mpi_p64_t1_halo_a2av_linear"
+    },
+    {
+      "graph": "strong_uniform",
+      "implementation": "mpi",
+      "processes": 64,
+      "threads": 1,
+      "communication": "halo",
+      "policy": "a2av_pairwise",
+      "id": "strong_uniform_mpi_p64_t1_halo_a2av_pairwise"
+    },
+    {
+      "graph": "strong_hub",
+      "implementation": "hybrid",
+      "processes": 16,
+      "threads": 4,
+      "communication": "allgather",
+      "policy": "default",
+      "id": "strong_hub_hybrid_p16_t4_allgather_default"
+    },
+    {
+      "graph": "strong_hub",
+      "implementation": "hybrid",
+      "processes": 16,
+      "threads": 4,
+      "communication": "allgather",
+      "policy": "agv_bruck",
+      "id": "strong_hub_hybrid_p16_t4_allgather_agv_bruck"
+    },
+    {
+      "graph": "strong_hub",
+      "implementation": "hybrid",
+      "processes": 16,
+      "threads": 4,
+      "communication": "allgather",
+      "policy": "agv_ring",
+      "id": "strong_hub_hybrid_p16_t4_allgather_agv_ring"
+    },
+    {
+      "graph": "strong_hub",
+      "implementation": "hybrid",
+      "processes": 16,
+      "threads": 4,
+      "communication": "halo",
+      "policy": "default",
+      "id": "strong_hub_hybrid_p16_t4_halo_default"
+    },
+    {
+      "graph": "strong_hub",
+      "implementation": "mpi",
+      "processes": 64,
+      "threads": 1,
+      "communication": "allgather",
+      "policy": "default",
+      "id": "strong_hub_mpi_p64_t1_allgather_default"
+    },
+    {
+      "graph": "strong_hub",
+      "implementation": "mpi",
+      "processes": 64,
+      "threads": 1,
+      "communication": "halo",
+      "policy": "default",
+      "id": "strong_hub_mpi_p64_t1_halo_default"
+    },
+    {
+      "graph": "strong_hub",
+      "implementation": "mpi_kokkos",
+      "processes": 16,
+      "threads": 4,
+      "communication": "allgather",
+      "policy": "default",
+      "id": "strong_hub_mpi_kokkos_p16_t4_allgather_default"
+    },
+    {
+      "graph": "strong_hub",
+      "implementation": "mpi_kokkos",
+      "processes": 16,
+      "threads": 4,
+      "communication": "halo",
+      "policy": "default",
+      "id": "strong_hub_mpi_kokkos_p16_t4_halo_default"
+    },
+    {
+      "graph": "strong_controlled",
+      "implementation": "hybrid",
+      "processes": 16,
+      "threads": 4,
+      "communication": "allgather",
+      "policy": "default",
+      "id": "strong_controlled_hybrid_p16_t4_allgather_default"
+    },
+    {
+      "graph": "strong_controlled",
+      "implementation": "hybrid",
+      "processes": 16,
+      "threads": 4,
+      "communication": "allgather",
+      "policy": "agv_bruck",
+      "id": "strong_controlled_hybrid_p16_t4_allgather_agv_bruck"
+    },
+    {
+      "graph": "strong_controlled",
+      "implementation": "hybrid",
+      "processes": 16,
+      "threads": 4,
+      "communication": "allgather",
+      "policy": "agv_ring",
+      "id": "strong_controlled_hybrid_p16_t4_allgather_agv_ring"
+    },
+    {
+      "graph": "strong_controlled",
+      "implementation": "hybrid",
+      "processes": 16,
+      "threads": 4,
+      "communication": "halo",
+      "policy": "default",
+      "id": "strong_controlled_hybrid_p16_t4_halo_default"
+    },
+    {
+      "graph": "strong_controlled",
+      "implementation": "mpi",
+      "processes": 64,
+      "threads": 1,
+      "communication": "allgather",
+      "policy": "default",
+      "id": "strong_controlled_mpi_p64_t1_allgather_default"
+    },
+    {
+      "graph": "strong_controlled",
+      "implementation": "mpi",
+      "processes": 64,
+      "threads": 1,
+      "communication": "halo",
+      "policy": "default",
+      "id": "strong_controlled_mpi_p64_t1_halo_default"
+    },
+    {
+      "graph": "strong_controlled",
+      "implementation": "mpi_kokkos",
+      "processes": 16,
+      "threads": 4,
+      "communication": "allgather",
+      "policy": "default",
+      "id": "strong_controlled_mpi_kokkos_p16_t4_allgather_default"
+    },
+    {
+      "graph": "strong_controlled",
+      "implementation": "mpi_kokkos",
+      "processes": 16,
+      "threads": 4,
+      "communication": "halo",
+      "policy": "default",
+      "id": "strong_controlled_mpi_kokkos_p16_t4_halo_default"
+    }
+  ],
+  "output": "/home/svu/hongxinran/dsa5208_collective_controls_20261117/results/c64",
+  "serial_root": "/scratch/hongxinran/dsa5208_scaling/20261111_hongxinran_assist/results/serial_grid",
+  "datasets": {
+    "strong_controlled": "strong_controlled /scratch/hongxinran/dsa5208_scaling/20261102T092147Z/weak_scaling/weak_controlled_p256.edges /scratch/hongxinran/dsa5208_scaling/20261102T092147Z/weak_scaling/weak_controlled_p256.nodes",
+    "strong_hub": "strong_hub /scratch/hongxinran/dsa5208_scaling/20261102T092147Z/weak_scaling/weak_hub_p256.edges /scratch/hongxinran/dsa5208_scaling/20261102T092147Z/weak_scaling/weak_hub_p256.nodes",
+    "strong_uniform": "strong_uniform /scratch/hongxinran/dsa5208_scaling/20261102T092147Z/weak_scaling/weak_uniform_p256.edges /scratch/hongxinran/dsa5208_scaling/20261102T092147Z/weak_scaling/weak_uniform_p256.nodes"
+  }
+}

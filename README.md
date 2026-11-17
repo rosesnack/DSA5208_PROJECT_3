@@ -2,7 +2,7 @@
 
 Vanda experiments: [PDF report](output/pdf/pagerank_non512_report.pdf), [editable report and evidence](reports/non512/README.md). The complete main matrix and partial 512-core supplement are presented separately. Current execution details: [handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md).
 
-The report analyzes workload balance, execution policy, exact Halo traffic, MPI collective selection and matched CPU/GPU controls. See the [draft review and evidence changes](reports/non512/REVIEW_NOTES.md) and [selected measurement provenance](reports/non512/measurement_selection.json). Operational diagnostic history is retained separately in the [investigation log](docs/PERFORMANCE_INVESTIGATION.md).
+The report analyzes workload balance, execution policy, exact Halo traffic, MPI collective selection and matched CPU/GPU controls. See the [draft review and evidence changes](reports/non512/REVIEW_NOTES.md) and [selected measurement provenance](reports/non512/measurement_selection.json). Operational diagnostic history is retained separately in the [investigation log](docs/PERFORMANCE_INVESTIGATION.md). The [57 matched collective-policy controls](docs/COLLECTIVE_CONTROLS_20261117.md) isolate the MPI selector and 64-core node boundary.
 
 Full fixed-graph target: **20,700 configurations** (original 19,980 plus 720 later requested 512-core splits). **Current execution and teammate handover: [Vanda handoff](HANDOFF_VANDA_EXPERIMENTS_20261106.md).** It distinguishes completed, submitted, held, failed, deferred and owner-assigned missing cells; do not submit from an old plan or a fresh RUN_ID without ownership transfer. See also [CPU split coverage](HANDOFF_VANDA_EXPERIMENTS_20261106.md).
 

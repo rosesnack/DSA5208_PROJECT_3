@@ -1,0 +1,175 @@
+{
+  "job": "1576293.stdct-mgmt-02",
+  "group": {
+    "id": "c32",
+    "cores": 32,
+    "nodes": 1,
+    "cores_per_node": 32,
+    "account": "xtt_ella",
+    "walltime": "01:00:00",
+    "cells": [
+      {
+        "graph": "strong_hub",
+        "implementation": "hybrid",
+        "processes": 8,
+        "threads": 4,
+        "communication": "allgather",
+        "policy": "default",
+        "id": "strong_hub_hybrid_p8_t4_allgather_default"
+      },
+      {
+        "graph": "strong_hub",
+        "implementation": "hybrid",
+        "processes": 8,
+        "threads": 4,
+        "communication": "allgather",
+        "policy": "agv_bruck",
+        "id": "strong_hub_hybrid_p8_t4_allgather_agv_bruck"
+      },
+      {
+        "graph": "strong_hub",
+        "implementation": "hybrid",
+        "processes": 8,
+        "threads": 4,
+        "communication": "allgather",
+        "policy": "agv_ring",
+        "id": "strong_hub_hybrid_p8_t4_allgather_agv_ring"
+      },
+      {
+        "graph": "strong_hub",
+        "implementation": "hybrid",
+        "processes": 8,
+        "threads": 4,
+        "communication": "halo",
+        "policy": "default",
+        "id": "strong_hub_hybrid_p8_t4_halo_default"
+      },
+      {
+        "graph": "strong_hub",
+        "implementation": "mpi",
+        "processes": 32,
+        "threads": 1,
+        "communication": "allgather",
+        "policy": "default",
+        "id": "strong_hub_mpi_p32_t1_allgather_default"
+      },
+      {
+        "graph": "strong_hub",
+        "implementation": "mpi",
+        "processes": 32,
+        "threads": 1,
+        "communication": "halo",
+        "policy": "default",
+        "id": "strong_hub_mpi_p32_t1_halo_default"
+      },
+      {
+        "graph": "strong_hub",
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 4,
+        "communication": "allgather",
+        "policy": "default",
+        "id": "strong_hub_mpi_kokkos_p8_t4_allgather_default"
+      },
+      {
+        "graph": "strong_hub",
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 4,
+        "communication": "halo",
+        "policy": "default",
+        "id": "strong_hub_mpi_kokkos_p8_t4_halo_default"
+      },
+      {
+        "graph": "strong_controlled",
+        "implementation": "hybrid",
+        "processes": 8,
+        "threads": 4,
+        "communication": "allgather",
+        "policy": "default",
+        "id": "strong_controlled_hybrid_p8_t4_allgather_default"
+      },
+      {
+        "graph": "strong_controlled",
+        "implementation": "hybrid",
+        "processes": 8,
+        "threads": 4,
+        "communication": "allgather",
+        "policy": "agv_bruck",
+        "id": "strong_controlled_hybrid_p8_t4_allgather_agv_bruck"
+      },
+      {
+        "graph": "strong_controlled",
+        "implementation": "hybrid",
+        "processes": 8,
+        "threads": 4,
+        "communication": "allgather",
+        "policy": "agv_ring",
+        "id": "strong_controlled_hybrid_p8_t4_allgather_agv_ring"
+      },
+      {
+        "graph": "strong_controlled",
+        "implementation": "hybrid",
+        "processes": 8,
+        "threads": 4,
+        "communication": "halo",
+        "policy": "default",
+        "id": "strong_controlled_hybrid_p8_t4_halo_default"
+      },
+      {
+        "graph": "strong_controlled",
+        "implementation": "mpi",
+        "processes": 32,
+        "threads": 1,
+        "communication": "allgather",
+        "policy": "default",
+        "id": "strong_controlled_mpi_p32_t1_allgather_default"
+      },
+      {
+        "graph": "strong_controlled",
+        "implementation": "mpi",
+        "processes": 32,
+        "threads": 1,
+        "communication": "halo",
+        "policy": "default",
+        "id": "strong_controlled_mpi_p32_t1_halo_default"
+      },
+      {
+        "graph": "strong_controlled",
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 4,
+        "communication": "allgather",
+        "policy": "default",
+        "id": "strong_controlled_mpi_kokkos_p8_t4_allgather_default"
+      },
+      {
+        "graph": "strong_controlled",
+        "implementation": "mpi_kokkos",
+        "processes": 8,
+        "threads": 4,
+        "communication": "halo",
+        "policy": "default",
+        "id": "strong_controlled_mpi_kokkos_p8_t4_halo_default"
+      }
+    ],
+    "output": "/home/svu/xtt_ella/dsa5208_collective_controls_20261117/results/c32",
+    "serial_root": "/scratch/xtt_ella/dsa5208_scaling/20261106T185006Z/results/serial_grid",
+    "datasets": {
+      "strong_controlled": "strong_controlled /scratch/xtt_ella/dsa5208_scaling/20261106T185006Z/weak_scaling/weak_controlled_p256.edges /scratch/xtt_ella/dsa5208_scaling/20261106T185006Z/weak_scaling/weak_controlled_p256.nodes",
+      "strong_hub": "strong_hub /scratch/xtt_ella/dsa5208_scaling/20261106T185006Z/weak_scaling/weak_hub_p256.edges /scratch/xtt_ella/dsa5208_scaling/20261106T185006Z/weak_scaling/weak_hub_p256.nodes"
+    }
+  },
+  "binaries": {
+    "pagerank_hybrid": "8dbcb56426519e3fbc1c1c13d0af4cda0c6f0e1f2d5bba5dddf35f160da042f3",
+    "pagerank_mpi": "a8c9ccacf2b008080f42d11f0666cd5a22c7d5e9681a0f6abfe32c12dea27df6",
+    "pagerank_mpi_kokkos": "aaaa25abeb55e8208d0f6e151760798af37924b2cffa7a7820efc34ff5e6987a"
+  },
+  "inherited_ompi": {
+    "OMPI_MCA_btl": "self,vader,tcp",
+    "OMPI_MCA_pml": "ob1",
+    "OMPI_MCA_hwloc_base_binding_policy": "socket"
+  },
+  "controlled_component_population": "tuned,basic,libnbc,self",
+  "component_probes_outside_solver_timing": true
+}

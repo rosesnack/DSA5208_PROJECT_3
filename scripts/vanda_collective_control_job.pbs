@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#PBS -N dsa-collective-control
+#PBS -q auto
+#PBS -l select=1:ncpus=32:mpiprocs=32:ompthreads=1:mem=32gb:node_pool=cpu_node:switch=cpu_all
+#PBS -l place=scatter
+#PBS -l walltime=01:00:00
+#PBS -j oe
+#PBS -V
+set -euo pipefail
+cd "${PBS_O_WORKDIR:?Submit from the prepared project directory}"
+module load openmpi/gcc/64/4.1.8 CMake/3.29.3-GCCcore-13.3.0
+export LD_LIBRARY_PATH="/opt/pbs/lib:${LD_LIBRARY_PATH:-}"
+export OMPI_MCA_btl=self,vader,tcp OMPI_MCA_pml=ob1
+unset UCX_NET_DEVICES
+python3 scripts/investigate_collectives.py compute "${CONTROL_PLAN:?Set the group JSON path}"

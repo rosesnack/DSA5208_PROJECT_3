@@ -18,11 +18,12 @@ are retained for stable repository links.
 - [Rank workload diagnostics](data/rank_work_diagnostics.csv)
 - [Thread-policy diagnostics](data/thread_policy_diagnostics.csv)
 - [Version-specific MPI selector consistency](data/mpi_selector_consistency.csv)
+- [Matched collective-policy controls: 57 certified cases, plus two registered launch-binding cases](../../docs/COLLECTIVE_CONTROLS_20261117.md)
 - [Pinned source and CPU-layout checks](data/source_mechanism_checks.json)
 - [Weak-scaling payload and phase diagnostics](data/weak_traffic_diagnostics.csv)
 - [GPU work-distribution diagnostics](data/gpu_work_diagnostics.csv)
 - [Three precisely scoped optimum counts](data/method_optima.json)
-- [Ten vector figures and PNG exports](figures/)
+- [Vector figures and PNG/SVG exports](figures/)
 
 The 45 fixed graphs contain three original graphs and 42 extensions. Weak-suite
 standalone GPU runs on growing inputs are fixed-resource controls, not weak
@@ -37,8 +38,8 @@ The 512 supplement has only five validated cases, on one 50k-vertex graph. It is
 not a complete method comparison or a complete scaling curve. A hyphen (`-`)
 marks missing matrix cells. Its records are excluded from main-matrix aggregates.
 The 45-row CPU matrix keeps this partial column; the separate GPU matrix includes
-its own Serial reference. The root-level teammate PDF is a preserved input, while
-`output/pdf/pagerank_non512_report.pdf` is the current generated deliverable.
+its own Serial reference. The integrated deliverable is
+`output/pdf/pagerank_non512_report.pdf`; the superseded root-level draft was removed.
 
 ## Build the report without running a benchmark
 
@@ -47,6 +48,7 @@ Use Python 3.9+ and install `requirements-report.txt`:
 ```bash
 python3 scripts/select_report_measurements.py
 python3 scripts/analyze_report_results.py
+python3 scripts/analyze_collective_controls.py
 python3 scripts/build_non512_report.py --pdftoppm /path/to/pdftoppm
 ```
 
@@ -56,6 +58,9 @@ fastest repeat or fastest observed runtime policy. Every selected cell retains
 its source summary, original five timings and independent validator evidence.
 All tables, geometric aggregates, speedups and efficiencies are recalculated.
 Input-inventory and selection hashes are recorded in `data/audit.json`.
+
+Additional collective-policy controls are exported with `python3 scripts/analyze_collective_controls.py`.
+Only independently validated controls enter the extra paired tables; the main matrix stays unchanged.
 
 None of these commands submits a cluster job. Omit `--pdftoppm` to build only the PDF and
 vector figures. PNG exports support the editable Markdown report. ReportLab

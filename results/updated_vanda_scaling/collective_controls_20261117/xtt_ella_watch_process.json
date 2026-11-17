@@ -1,0 +1,13 @@
+{
+  "pid": 4059849,
+  "command": [
+    "python3",
+    "/home/svu/xtt_ella/dsa5208_collective_controls_20261117/project/scripts/watch_collective_controls.py",
+    "/home/svu/xtt_ella/dsa5208_collective_controls_20261117/submission_receipt.json",
+    "/home/svu/xtt_ella/dsa5208_collective_controls_20261117/validated_hosts.json",
+    "--until",
+    "2026-11-19T23:59:00+08:00",
+    "--interval",
+    "60"
+  ]
+}

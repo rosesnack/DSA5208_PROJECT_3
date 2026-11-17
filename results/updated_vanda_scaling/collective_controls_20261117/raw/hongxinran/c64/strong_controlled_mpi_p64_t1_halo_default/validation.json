@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "method": "Independent Serial raw-edge residual plus full-vector L1 residual certificate",
+  "residual_bound_formula": "residual(x) <= residual(s) + (1+alpha)*L1(x-s)",
+  "serial_l1_error": 0.0,
+  "independent_residual_l1_upper_bound": 1.6754631665904833e-09,
+  "reference": {
+    "dataset": "strong_controlled",
+    "passed": true,
+    "nodes": 12800000,
+    "edges": 204800000,
+    "iterations": 12,
+    "independent_residual_l1": 1.6754631665904833e-09,
+    "rank_sum_error": 1.4432899320127035e-15,
+    "reference": "/scratch/hongxinran/dsa5208_scaling/20261111_hongxinran_assist/results/serial_grid/strong_controlled/serial/strong_controlled",
+    "ranks_sha256": "379b5572beef0fb681ad9abd071a8fec2dfb7ed726f0dbefc90d0bee8760017e",
+    "validation_job": "1576290.stdct-mgmt-02",
+    "edge_path": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/weak_scaling/weak_controlled_p256.edges",
+    "node_path": "/scratch/hongxinran/dsa5208_scaling/20261102T092147Z/weak_scaling/weak_controlled_p256.nodes"
+  },
+  "performance_job": "1576291.stdct-mgmt-02",
+  "validation_job": "1576292.stdct-mgmt-02",
+  "settings_and_five_timings_checked": true
+}
