@@ -115,7 +115,7 @@ class CompleteResults:
             if start+1==len(ordered):
                 txt(d,0,342,'3.7.1 Additional 512-core example | small Controlled graph',10,True)
                 txt(d,0,326,'N=50,000; E=200,000; n=8, 64 active cores/node; p*T=512. Five-run solve medians.',7.5)
-                txt(d,0,313,'These five cases are an additional small-input example, not a complete 512-core scaling curve.',7.3)
+                txt(d,0,313,'c=64 differs from ordinary c<=32; this small-input supplement is not a constant-c scaling extension.',7.3)
                 for x,label in zip((0,150,195,235,303,370,434),('Implementation','p','T','Exchange','Solve ms','Speedup x','Efficiency %')):txt(d,x,290,label,7,True)
                 for i,r in enumerate(self.supplement):
                     uid=tuple(r[k] for k in ('method','processes','threads','communication'))

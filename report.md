@@ -70,15 +70,15 @@ Table 2. Symbols, terminology, and measurement units used in the experiment desi
 | MPI rank; p | An MPI rank identifies a participating process, not a PageRank score. p is the total process count; rank IDs are 0,...,p-1. Processes have separate local data. |
 | MPI+OpenMP; MPI+Kokkos OpenMP | MPI processes divide ownership; each process uses OpenMP or Kokkos OpenMP threads to update its owned rows. |
 | r; T | r is the number of MPI processes per node. T is the number of CPU threads per process (threads/process). |
-| C; G | C is active CPU parallelism (cores); G is the number of GPUs used by device computation (devices). |
+| C; c; G | C=pT total active CPU worker slots; c=rT per node; G counts GPUs. C is not reserved/billed slots or measured CPU utilization. |
 | t; I | t is solve time in seconds; I is the convergence iteration count. T denotes threads, never runtime. |
 | Affinity; NUMA | Affinity pins execution to assigned CPUs. NUMA (non-uniform memory access) means access cost can depend on the memory/socket placement. |
 | CSR; PPR | Compressed sparse row storage; personalized PageRank. We use the uniform-preference special case of PPR. |
 | OMP; KK; A; H | Figure abbreviations: OpenMP; Kokkos; Allgatherv; Halo. CUDA and Kokkos CUDA denote GPU computation. |
 
-$$p=nr,\qquad C=pT=nrT.$$
+$$p=nr,\qquad c=rT,\qquad C=pT=nc.$$
 
-**How MPI+OpenMP and MPI+Kokkos OpenMP work.** MPI divides the graph among p separate processes. Within each process, T OpenMP or Kokkos OpenMP threads update its assigned rows. The two threaded MPI methods are separate implementations, not a combined program. For example, n=8,p=64,T=4 uses 256 active CPU cores; pure MPI instead uses p=256,T=1 at the same core budget. C=pT counts the execution budget, not measured CPU utilization; n counts participating machines, not exclusive use of every core on a machine.
+**How MPI+OpenMP and MPI+Kokkos OpenMP work.** MPI divides the graph among p separate processes. Within each process, T OpenMP or Kokkos OpenMP threads update its assigned rows. The two threaded MPI methods are separate implementations, not a combined program. For example, n=8,p=64,T=4 uses 256 active CPU cores; pure MPI instead uses p=256,T=1 at the same core budget. C=pT counts active-worker parallelism, not measured CPU utilization or reserved/billed slots; n counts participating machines, not exclusive use of every core on a machine.
 
 Example: n=4,r=8,T=4 gives p=32 processes and C=128 active CPU cores. Distributed device methods use one process and GPU per node, G=p=n. GPU kernel threads are separate from host CPU threads T.
 
@@ -111,6 +111,8 @@ Both exchanges are exact and retain dangling-mass/convergence Allreduce calls. H
 Logical contribution payload excludes reductions, protocol overhead, and collective-internal traffic. Allgatherv counts 8N(p-1) aggregate bytes; Halo counts 8 bytes per requested remote contribution. MB denotes 10^6 bytes. Metadata setup is separate and untimed; smaller payload need not imply lower latency.
 
 Iteration progress waits for the slowest owner and the collectives. MPI phase time includes packing/copies, collective calls, and reduction waits, not only network transfer. Solve and phase times each take the maximum across ranks, then the median across runs; separately reduced phases are not additive components of one critical-path execution.
+
+**Reading logarithmic axes.** “Log” means logarithmic spacing, not that measured values were replaced by logarithms. Equal distances represent equal ratios: on the axis, 1→10 occupies the same distance as 10→100 because both are a 10× increase. Tick labels remain the actual cores, milliseconds, or payload values. This makes multiplicative changes visible across the wide ranges in the scaling plots.
 
 Distributed device methods stage contributions through host memory, without CUDA-aware MPI or computation/communication overlap. CUDA uses 256-thread blocks; Kokkos uses Views, parallel_for/parallel_reduce, and execution-space fences. Its OpenMP and CUDA backends execute on different hardware.
 
@@ -164,6 +166,21 @@ GPU-node total: 450 device cases + 1,215 CPU controls = 1,665; complete fixed-in
 
 All n/r/T layouts are displayed by thread/node groups in complete numerical heatmaps. Equal-core comparisons additionally hold C fixed and vary p=C/T; the C=256 aggregate is a summary across all 45 graphs, not a substitute for individual layouts.
 
+**Per-node concurrency is a measured variable, not always 32.** Ordinary CPU cases span c=rT=1,2,4,8,16,32 active workers/node. The same c permits several process/thread decompositions; total active parallelism is C=nc. CPU host probes record 72 logical CPUs on the machines, with affinity allowances of 1/2/4/8/16/32 in the ordinary records and 64 in the additional high-core records. Thus 32 is the ordinary experiment ceiling, not a statement that the whole machine has only 32 CPUs.
+
+Table 7. Ordinary CPU coverage by per-node active concurrency. Counts include applicable Serial, standalone and MPI variants and sum to 397 per graph; standalone methods use n=1. MPI+CPU choices apply to MPI+OpenMP/Kokkos OpenMP; pure MPI has T=1. These regroup existing cases, not additional configurations.
+
+| Active workers/node c | MPI+CPU r/T choices | Nodes n | Total active C | CPU configs/graph |
+| --- | --- | --- | --- | --- |
+| 1 | 1/1 | 1,2,4,8 | 1, 2, 4, 8 | 27 |
+| 2 | 1/2, 2/1 | 1,2,4,8 | 2, 4, 8, 16 | 42 |
+| 4 | 1/4, 2/2, 4/1 | 1,2,4,8 | 4, 8, 16, 32 | 58 |
+| 8 | 1/8, 2/4, 4/2, 8/1 | 1,2,4,8 | 8, 16, 32, 64 | 74 |
+| 16 | 1/16, 2/8, 4/4, 8/2, 16/1 | 1,2,4,8 | 16, 32, 64, 128 | 90 |
+| 32 | 1/32, 2/16, 4/8, 8/4, 16/2, 32/1 | 1,2,4,8 | 32, 64, 128, 256 | 106 |
+
+The design separates three questions: within a fixed n, increase c to study more local workers; at fixed C,p,T, vary n to study compact versus spread placement; at fixed c=32, increase n to study distributed scaling with constant workers/node. The power-of-two c32 budget supports every integer split in Q={1,2,4,8,16,32} and the C=32/64/128/256 node sequence under a common per-node profile. It is a controlled concurrency budget, not a maximum-capacity claim; the full matrix and placement controls retain smaller c. C counts active workers: a multi-configuration job can reserve more CPU slots than a particular row activates. Efficiency S/C and active core-seconds C*t therefore describe algorithmic parallelism, not utilization or scheduler charges. The C=512 supplement uses c=64 and is reported separately because it changes within-node concurrency as well as total C. GPU-node CPU controls follow their own T matrix; device methods use G GPUs and are not assigned 32 CPU workers by this convention.
+
 ### 2.4 Scaling questions and statistical summaries
 
 **Fixed graph, more workers:** hold N, E, structure, and stopping rule fixed; increase C. Ideal doubling of cores halves solve time. With t_ser and t(C) denoting matched Serial and parallel medians:
@@ -174,7 +191,7 @@ Speedup is dimensionless; CPU efficiency S/C is a reference-normalized percentag
 
 **More work with more workers:** grow graph size with resources and ask whether iteration time remains constant. Rank-normalized inputs use N=50,000p,E=800,000p; core-normalized inputs use N=50,000C,E=800,000C, allowing equal nominal work/core across process/thread decompositions. Fixed counts per worker do not ensure constant communication or balanced incoming edges.
 
-Table 7. Growing-input experiment groups. Counts refer to configurations, not five-run repetitions; fixed-resource controls are kept separate.
+Table 8. Growing-input experiment groups. Counts refer to configurations, not five-run repetitions; fixed-resource controls are kept separate.
 
 | Growing-input block | Graph scale | Resource layouts | Configurations |
 | --- | --- | --- | --- |
@@ -194,7 +211,7 @@ Ideal retained efficiency is 100%; 25% means four times the reference iteration 
 
 $$\widetilde{t}_{g,a}=\operatorname{median}(t_{g,a,1},\ldots,t_{g,a,5}),\qquad s_g=\frac{\widetilde{t}_{g,a}}{\widetilde{t}_{g,b}},\qquad \overline{s}_{\mathrm{geo}}=\left(\prod_{g=1}^{m}s_g\right)^{1/m}.$$
 
-g indexes m graphs; s_g>1 favors b. Geometric means weight proportional changes equally: 2× and 0.5× combine to 1×. Speedup is computed from matched per-graph ratios, never pooled seconds or the five repeats. Parentheses on aggregate ratios show the geometric mean of durations for the identical matched population (t_geo); this is descriptive, not a single run or suite wall time. The ratio of the reference and tested t_geo values equals the reported geometric-mean speedup. Communication pairs additionally match backend, nodes, p, and T. The 45-row overview selects each method's best observed median across layouts; its budgets may differ.
+g indexes m graphs; s_g>1 favors b. Geometric means weight proportional changes equally: 2× and 0.5× combine to 1×. Speedup is computed from matched per-graph ratios, never pooled seconds or the five repeats. Parentheses on aggregate ratios show the geometric mean of durations for the identical matched population (t_geo); this is descriptive, not a single run or suite wall time. The ratio of the reference and tested t_geo values equals the reported geometric-mean speedup. Communication pairs additionally match backend, nodes, p, and T. Best-observed comparisons in the conclusions can select different resource budgets; Section 3.7 prints every underlying layout, while matched-core comparisons address efficiency.
 
 Fixed-core aggregates use 45 graph ratios. Communication aggregates use explicitly counted matched graph/layout pairs. Payload reduction is the fraction of Allgatherv bytes avoided by Halo, summarized by the pairwise median.
 
@@ -212,7 +229,7 @@ Input identities, software/hardware metadata, original timings, and independent 
 
 **Controls: forced policies at selection boundaries.** Around 64 cores and 128 processes, hold graph, binary, layout, and allocation fixed and change only the named collective. coll_tuned_use_dynamic_rules=1 enables forced dispatch in these controls, not in the main matrix.
 
-Table 8. Collective algorithms exposed by the installed Open MPI 4.1.8 tuned component. Algorithm ID 0 retains automatic selection and is not another implementation.
+Table 9. Collective algorithms exposed by the installed Open MPI 4.1.8 tuned component. Algorithm ID 0 retains automatic selection and is not another implementation.
 
 | MPI operation | Algorithm ID | Implementation | Applicability |
 | --- | --- | --- | --- |
@@ -226,7 +243,7 @@ Table 8. Collective algorithms exposed by the installed Open MPI 4.1.8 tuned com
 
 ID 0 preserves automatic selection; it is not an algorithm. Allgatherv ID 1, named default, explicitly selects GatherV+Bcast rather than restoring automatic rules [9]. Allreduce and other collectives retain their own default choices.
 
-Table 9. Compiled automatic Alltoallv selection rules in Open MPI 4.1.8. p is communicator process count, not CPU core count or payload size.
+Table 10. Compiled automatic Alltoallv selection rules in Open MPI 4.1.8. p is communicator process count, not CPU core count or payload size.
 
 | Alltoallv communicator size p | Default tuned algorithm |
 | --- | --- |
@@ -243,7 +260,7 @@ These Open MPI 4.1.8 rules apply when tuned handles Alltoallv [7]; p=1 can use s
 
 Symmetric controls target each transition: automatic/Bruck/Ring at C=32/64/128,T=4 on Hub and Controlled; automatic/basic_linear/pairwise at p=64/128/256 on Uniform Halo. The Allgatherv comparison tests the two algorithms bordering this transition; the Alltoallv comparison covers its complete two-algorithm menu.
 
-Table 10. Installed tuned default-rule choices at the diagnostic resource points. Pure MPI uses T=1 and MPI+OpenMP and MPI+Kokkos OpenMP T=4; n is node count.
+Table 11. Installed tuned default-rule choices at the diagnostic resource points. Pure MPI uses T=1 and MPI+OpenMP and MPI+Kokkos OpenMP T=4; n is node count.
 
 | Active cores C | Nodes | MPI p / Alltoallv | MPI+threads p / Alltoallv | MPI+threads Allgatherv |
 | --- | --- | --- | --- | --- |
@@ -266,7 +283,7 @@ The tree is a general heuristic; controls test its suitability without replacing
 
 The performance question is the cost of repeated PageRank iterations on an already prepared graph. Solver timing includes local updates, synchronization and per-iteration data movement. One-time preparation is discussed separately so that graph loading and setup do not obscure the parallelization/scaling comparison. This common scope applies to Serial and parallel methods; it does not claim that complete application execution has no preparation cost.
 
-Table 11. Timing accounting. An uninstrumented stage is not a zero-cost stage. Independently rank-maximized phase medians are not additive critical-path components.
+Table 12. Timing accounting. An uninstrumented stage is not a zero-cost stage. Independently rank-maximized phase medians are not additive critical-path components.
 
 | Stage | Recorded timing and boundary | Interpretation |
 | --- | --- | --- |
@@ -276,7 +293,7 @@ Table 11. Timing accounting. An uninstrumented stage is not a zero-cost stage. I
 | Device staging | Distributed transfer_median_s is inside solver | Explicit host/device buffer movement is measured; standalone setup/final copies remain outside solver. |
 | MPI exchange / waiting | communication_median_s is inside solver | Includes contribution packing/copies, collectives and reduction waits; not pure network transmission. |
 
-Table 12. Supporting one-time Halo setup statistics over all fixed-input layouts on the relevant node classes. These pool different graph sizes/layouts for cost context, not a scaling or backend ranking.
+Table 13. Supporting one-time Halo setup statistics over all fixed-input layouts on the relevant node classes. These pool different graph sizes/layouts for cost context, not a scaling or backend ranking.
 
 | Implementation | Halo layouts | Median setup (s) | Setup range (s) |
 | --- | --- | --- | --- |
@@ -286,7 +303,7 @@ Table 12. Supporting one-time Halo setup statistics over all fixed-input layouts
 | MPI+CUDA | 90 | 0.0209 | 0.00116 - 11.2 |
 | MPI+Kokkos CUDA | 90 | 0.0211 | 0.00115 - 11.2 |
 
-Table 13. Illustration of recorded solver phases: Large Uniform, Allgatherv, one GPU per process/node. Five-run medians in seconds. Supporting phase times use consistent implementation-specific boundaries; the complete solver-time matrix appears in Section 3.7.
+Table 14. Illustration of recorded solver phases: Large Uniform, Allgatherv, one GPU per process/node. Five-run medians in seconds. Supporting phase times use consistent implementation-specific boundaries; the complete solver-time matrix appears in Section 3.7.
 
 | Implementation | n / p / T | Solve (s) | Compute (s) | Staging (s) | MPI/wait (s) |
 | --- | --- | --- | --- | --- | --- |
@@ -301,9 +318,11 @@ At one to two GPUs, Large Uniform approximately halves device compute time, whil
 
 All 19,530 fixed configurations, 372 growing-input entries and 59 diagnostic settings are printed in their corresponding Results subsections. Graph/thread/node groups are not replaced by a best-only summary. Bold and green indicate the explicitly named comparison metric; comparisons across different references do not imply identical absolute runtime.
 
+**Decision criteria.** At the same graph, node class and CPU core budget, shorter solve time also means higher Serial speedup and CPU efficiency: these are linked measures, not independent wins. Logical payload is a separate communication-volume objective. We call a configuration observationally dominant over a matched alternative if neither its median time nor its logical payload is higher and at least one is strictly lower. Win percentages describe stored medians, not statistical significance or a universal policy. When resource count changes, solver core-seconds C*t or GPU-seconds G*t capture the resource/time tradeoff; they are not scheduler charges.
+
 ### 3.1 Numerical agreement across implementations
 
-Table 14. Numerical consistency of the fixed-input results. L1 differences and probability-mass errors are dimensionless; 90 groups comprise 45 graphs on two node classes.
+Table 15. Numerical consistency of the fixed-input results. L1 differences and probability-mass errors are dimensionless; 90 groups comprise 45 graphs on two node classes.
 
 | Numerical check | Acceptance criterion | Observed outcome |
 | --- | --- | --- |
@@ -322,7 +341,7 @@ The 36-input grid varies N and mean degree within each family, with one process/
 
 ![Figure 1. Serial grid (36 inputs): 3 families × N=50k/100k/200k/400k × d=4/8/16 edges/vertex. One CPU process/thread; five-run median solve time (s); log-log axes.](report_assets/figures/01_serial_grid.png)
 
-Table 15. Serial density slice: N=100,000, varying E and mean out-degree. One CPU node/process/thread; five-run solve medians and solve/iteration. Column definitions match the baseline table.
+Table 16. Serial density slice: N=100,000, varying E and mean out-degree. One CPU node/process/thread; five-run solve medians and solve/iteration. Column definitions match the baseline table.
 
 | Graph | Vertices N | Edges E | Degree E/N | Iterations I | Solve (s) | Iteration (ms) |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -336,11 +355,11 @@ Table 15. Serial density slice: N=100,000, varying E and mean out-degree. One CP
 | Controlled | 100,000 | 800,000 | 8 | 22 | 0.0314 | 1.43 |
 | Controlled | 100,000 | 1,600,000 | 16 | 17 | 0.0532 | 3.13 |
 
-**Sparsity has two distinct meanings here.** Mean degree is E/N; adjacency density is E/N² (self-links are allowed). The grid spans densities 0.001%-0.032%; the large inputs have density 0.000125%. At fixed N, higher degree raises edge work; at fixed degree, increasing N lowers density while increasing CSR work/storage linearly. Sparse adjacency does not guarantee selective communication: a partition can reference nearly every remote source, explaining Uniform’s small Halo savings at p=2.
+**Sparsity has two distinct meanings here.** Mean degree is E/N; adjacency density is E/N² (self-links are allowed). The grid spans densities 0.001%-0.032%; the large inputs have density 0.000125%. At fixed N, higher degree raises edge work; at fixed degree, increasing N lowers density while increasing CSR work/storage linearly. This is because storage sparsity measures the fraction of possible edges present, whereas Halo depends on distinct remote source IDs touched by an entire partition. Sparse adjacency therefore does not guarantee selective communication: a partition can reference nearly every remote source, explaining Uniform’s small Halo savings at p=2.
 
 **Denser need not mean a longer solve.** Controlled at N=100,000 needs 35/22/17 iterations for degree 4/8/16. Fewer iterations can offset more edge work, while the generator also changes exact destination concentration (Section 1.2). Per-iteration cost also depends on row structure and memory locality, so measured time need not be monotone in E.
 
-Table 16. Original and large Serial inputs, using the same columns, CPU-node context, one-thread layout, and five-run statistic as the density slice. The Google graph has a non-integer mean degree.
+Table 17. Original and large Serial inputs, using the same columns, CPU-node context, one-thread layout, and five-run statistic as the density slice. The Google graph has a non-integer mean degree.
 
 | Graph | Vertices N | Edges E | Degree E/N | Iterations I | Solve (s) | Iteration (ms) |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -355,7 +374,7 @@ Table 16. Original and large Serial inputs, using the same columns, CPU-node con
 
 **Google scores are concentrated.** 136,259 vertices (15.6%) are dangling, requiring mass redistribution; the top 1% hold 27.1% of score mass. PageRank/in-degree Pearson correlation is 0.901: strongly associated, but degree is not the full weighting rule.
 
-Table 17. Five highest-scoring Google vertices. PageRank is a dimensionless probability score; in-degree and out-degree are edge counts.
+Table 18. Five highest-scoring Google vertices. PageRank is a dimensionless probability score; in-degree and out-degree are edge counts.
 
 | Node ID | PageRank | In-degree | Out-degree |
 | --- | --- | --- | --- |
@@ -365,7 +384,7 @@ Table 17. Five highest-scoring Google vertices. PageRank is a dimensionless prob
 | 537039 | 0.0008988 | 6326 | 27 |
 | 384666 | 0.0007869 | 4010 | 20 |
 
-The anonymized edge list does not identify websites or content quality; concentration and correlation describe graph structure, not causal importance.
+This concentration arises because contributions follow directed paths and are divided by each source out-degree: a link from an already high-scoring, low-out-degree source carries more weight. Consequently, in-degree is informative but cannot reproduce PageRank by itself. The anonymized edge list does not identify websites or content quality, so the conclusion concerns link structure and stationary scores.
 
 ### 3.3 Fixed graphs with more CPU processes and nodes
 
@@ -375,7 +394,9 @@ Every measured CPU layout is printed in Section 3.7, grouped by graph and T=1,2,
 
 Complete heatmaps report every solve median, grouped by node count and T; Serial-relative color shows proportional performance. Bold compares Allgatherv/Halo at identical layout; green marks the lowest time within a graph/node class. These are observed median winners, not significance tests.
 
-**More cores help large Uniform, not small Google.** MPI Halo at C=256 gives Uniform 28.6× Serial speedup (11.2% efficiency). Google instead goes from its best pure-MPI Halo point, n=1/p=32 = 0.149 s, to n=8/p=256 = 1.462 s: communication/synchronization outweigh local work. Equal-size Hub/Controlled also benefit less than Uniform.
+**Serial-relative scaling and practical resource efficiency differ.** MPI Halo at C=256 gives Uniform 28.6× Serial speedup (11.2% efficiency). Google instead goes from its best pure-MPI Halo point, n=1/p=32 = 0.149 s, to n=8/p=256 = 1.462 s: communication/synchronization outweigh local work. Equal-size Hub/Controlled also benefit less than Uniform.
+
+A large Serial speedup does not establish an efficient resource choice. Large Uniform standalone OpenMP T=32 takes 0.540 s; the fastest MPI-based result takes 0.519 s on n=8/C=256, only 1.041x faster while using 7.68x as many active solver core-seconds. For skewed large inputs, the standalone baseline is also faster than the best MPI-based result. This is because extra ranks/nodes add vector movement and synchronization, while dynamic local scheduling can already distribute hot rows effectively on one node. The useful choice depends on whether a small time gain justifies the resource cost, not on Serial speedup alone.
 
 The large Hub C=4 Halo MPI+OpenMP point takes 5.06 s: 4.59× its Serial reference and 114.7% normalized efficiency. This is an observed superlinear reference ratio, not greater than 100% hardware utilization; cache/locality, execution-path and placement effects can contribute.
 
@@ -385,7 +406,7 @@ The large Hub C=4 Halo MPI+OpenMP point takes 5.06 s: 4.59× its Serial referenc
 
 $$B_E=\frac{\max_i E_i}{E/p},\qquad p_{\mathrm{edge}}=\frac{E}{\max_i E_i}=\frac{p}{B_E}.$$
 
-Table 18. Work concentration at 256 processes. B_E is dimensionless. The equal-work process proxy assumes equal edge-scanning rates and describes load balance, not measured speedup. Amber marks concentrated work; all 256 processes were launched.
+Table 19. Work concentration at 256 processes. B_E is dimensionless. The equal-work process proxy assumes equal edge-scanning rates and describes load balance, not measured speedup. Amber marks concentrated work; all 256 processes were launched.
 
 | Large graph, p=256 | Max/mean edge load | Busiest process edge share (%) | Equal-work process proxy |
 | --- | --- | --- | --- |
@@ -395,7 +416,7 @@ Table 18. Work concentration at 256 processes. B_E is dimensionless. The equal-w
 
 **One process owns 29%-30% of Hub/Controlled edges at p=256.** All processes run, but the slowest row scans govern iteration progress. The edge-only load equals about 3.4/3.3 balanced processes under equal scanning rates; Uniform stays balanced. The 75.0%/77.5% hot-edge fractions occupy the first 1% of IDs, fitting one partition for p<=100 and crossing boundaries above it. Halo preserves this ownership.
 
-Table 19. One-node scheduling comparison on the same large graphs. Each method uses one process and 32 CPU threads; times are five-run solve medians. Ratio parentheses give Kokkos seconds (>1× means slower). The static-block share is an analytical proxy; amber marks skewed ownership and the associated gap.
+Table 20. One-node scheduling comparison on the same large graphs. Each method uses one process and 32 CPU threads; times are five-run solve medians. Ratio parentheses give Kokkos seconds (>1× means slower). The static-block share is an analytical proxy; amber marks skewed ownership and the associated gap.
 
 | Large graph; T=32 | OpenMP time (s) | Kokkos OpenMP time (s) | Kokkos/OpenMP (×) | Largest static block edge share (%) |
 | --- | --- | --- | --- | --- |
@@ -409,7 +430,7 @@ Table 19. One-node scheduling comparison on the same large graphs. Each method u
 
 **Fixed n=8,C=256; vary p/T.** MPI+OpenMP and MPI+Kokkos OpenMP use six splits and two exchanges. Each graph's median is divided into its same-method/exchange p=256/T=1 median, then ratios are geometrically averaged over 45 graphs.
 
-Table 20. Equal-core process/thread comparison. Values are geometric means of 45 paired speedups, each based on five-run median times. All rows satisfy pT=256; A=Allgatherv, H=Halo. Cells are speedup (t_geo seconds) over the identical 45 graphs. The reference is the corresponding method's T=1 row; green marks column maxima.
+Table 21. Equal-core process/thread comparison. Values are geometric means of 45 paired speedups, each based on five-run median times. All rows satisfy pT=256; A=Allgatherv, H=Halo. Cells are speedup (t_geo seconds) over the identical 45 graphs. The reference is the corresponding method's T=1 row; green marks column maxima.
 
 | Processes p | Threads/process T | MPI+OMP A (×) | MPI+OMP H (×) | MPI+KK A (×) | MPI+KK H (×) |
 | --- | --- | --- | --- | --- | --- |
@@ -422,9 +443,48 @@ Table 20. Equal-core process/thread comparison. Values are geometric means of 45
 
 ![Figure 3. Fixed n=8,C=256; p=256/T. Geometric-mean speedup versus the same method/exchange at T=1 (×), across 45 paired graph medians. Point labels are matched-population t_geo in ms (k=1,000 ms); green rings mark the largest relative gain at each T; these own-reference gains do not rank absolute durations across exchanges.](report_assets/figures/04_fixed_256_splits.png)
 
-**Fewer processes can use the same cores better.** At p=8/T=32, Allgatherv improves the T=1 aggregate by 3.40× (MPI+OpenMP) and 3.20× (MPI+Kokkos). Best Halo splits use T=16/T=16, gaining 13.12×/11.35×. Fewer ranks reduce collective participation; row sharing and memory locality can contribute to the observed gains; individual graph optima differ.
+**Fewer processes can use the same cores better.** At p=8/T=32, Allgatherv improves the T=1 aggregate by 3.40× (MPI+OpenMP) and 3.20× (MPI+Kokkos). Best Halo splits use T=16/T=16, gaining 13.12×/11.35×. This is because fewer ranks reduce repeated contribution-vector handling and collective peer participation while sharing local row work across threads. Ownership granularity, memory locality, local scheduling and default collective rules change together, so the result is a decomposition comparison rather than an isolated thread-count effect; individual graph optima differ.
 
-Section 3.7 prints every CPU layout in thread/node-grouped numerical heatmaps, rather than selecting a T=4 line. Each graph includes all T=1,2,4,8,16,32, every valid ranks/node choice and both exchanges. The standalone rows give all six thread choices as well.
+#### 3.3.3 Does the process/thread pattern persist across configurations?
+
+The next figure crosses all 45 graphs, all five T=2/4/8/16/32 choices, both exchanges, both threaded MPI methods, and n=1/2/4/8. Every node uses 32 active cores, giving the same C=32/64/128/256 populations in every thread panel. Each ratio compares its own T=1 reference at the identical graph, method, exchange, n and C; thus it changes the decomposition p=C/T rather than adding resources. T=1 here is the same MPI+ implementation with one thread per process, not the pure-MPI executable. These 3,600 ratios provide the common-population comparison; the following table includes all 10,800 valid-layout ratios, including lower cores/node.
+
+![Figure 4. All 45 fixed graphs; five thread groups and the common comparison matrix in a 2-column/3-row layout. Logarithmic axes; ordinates: geometric-mean T=1/tested time ratios (x); point labels: tested t_geo milliseconds, same 45 graphs. Identical C,n in each pair, C=32n across panels. Allgatherv/Halo are solid/dashed. Green rings select the lowest plotted t_geo at each C, not the largest own-reference gain. This is fixed-input decomposition evidence, not a growing-input experiment.](report_assets/figures/16_thread_robustness.png)
+
+Table 22. All valid CPU layouts, all 45 graphs: gain x (tested t_geo ms); fraction faster than its own T=1 reference. Pair counts differ because rT<=32. Compare t_geo for absolute time; gains use the corresponding method-specific T=1. Use the preceding common-population figure for cross-T comparisons. Lower-core layouts remain included, not silently discarded.
+
+| T | Pairs per method/mode | MPI+OMP Allgatherv | MPI+OMP Halo | MPI+KK Allgatherv | MPI+KK Halo |
+| --- | --- | --- | --- | --- | --- |
+| 2 | 900 | 1.32x (53.8 ms); 82.3% | 1.38x (44.6 ms); 67.1% | 1.08x (70.1 ms); 60.0% | 1.12x (58 ms); 45.8% |
+| 4 | 720 | 1.70x (41.5 ms); 88.5% | 1.93x (32.4 ms); 82.8% | 1.19x (63.1 ms); 66.4% | 1.29x (51.2 ms); 57.8% |
+| 8 | 540 | 2.14x (33.2 ms); 97.4% | 2.73x (25 ms); 86.3% | 1.33x (57.1 ms); 79.3% | 1.60x (45.2 ms); 65.4% |
+| 16 | 360 | 2.83x (26.5 ms); 98.6% | 3.48x (21.6 ms); 91.4% | 1.59x (50.2 ms); 89.2% | 1.88x (42.1 ms); 76.7% |
+| 32 | 180 | 3.63x (22.9 ms); 97.8% | 4.72x (20 ms); 93.3% | 1.84x (48.1 ms); 91.1% | 2.37x (41.5 ms); 80.0% |
+
+**A frequent advantage is not a dominant strategy.** MPI+OpenMP improves on T=1 in 82%-99% of Allgatherv cases for the tested T>1, but MPI+Kokkos OpenMP at T=2/Halo wins only 45.8% despite a 1.12x geometric-mean gain. The mean reflects proportional magnitudes, not majority voting. Every thread group contains counterexamples. Across all 10,800 pairs, the T>1 layout never increases logical contribution payload relative to its matched T=1 reference; consequently, its time wins also improve time without increasing that payload. Fewer ranks can reduce replicated vectors, peer participation and collective overhead, but also reduce rank-level load spreading and alter local scheduling and MPI selection. The C=256 table identifies the best aggregate split at that budget; it does not establish one best T for every graph or node count.
+
+**The local scheduler can amplify the decomposition effect.** With the same pT, default static thread ranges can reproduce the same concentration of hot destination rows, whereas OpenMP dynamic chunks can share them within a process. Matched MPI+OpenMP/Kokkos comparisons have identical payload: OpenMP gains only 1.07x/1.06x on average at T=1 (Allgatherv/Halo), versus 2.10x/2.07x at T=32, winning 88.3%/91.1% of T=32 pairs. This is consistent with the measured hot-row imbalance and scheduling policies, while kernel dispatch, reductions and locality remain bundled in each implementation; it is not a pure framework-overhead estimate.
+
+Table 23. Node placement at fixed graph, p,T,C and exchange: smallest-node-count time / largest-node-count time. Every eligible group with multiple placements contributes once. Values above 1x favor spreading; times in parentheses are larger-placement t_geo ms. Logical payload is identical in each pair. Rows have different eligible populations; they compare placement within each implementation, not backend speed.
+
+| Method | Allgatherv: gain; wins | Halo: gain; wins | Pairs per exchange |
+| --- | --- | --- | --- |
+| MPI | 0.53x (94.3 ms); 6.7% | 0.62x (75.8 ms); 11.1% | 315 |
+| MPI+OpenMP | 0.55x (60 ms); 7.7% | 0.64x (46.5 ms); 10.0% | 1125 |
+| MPI+Kokkos OpenMP | 0.66x (78.1 ms); 17.6% | 0.74x (62.7 ms); 20.3% | 1125 |
+
+Table 24. All 45 graphs, C=32 fixed: compact versus spread worker placement. Cells are t_geo milliseconds, lower is better. p,T and logical payload remain fixed within each row. C=32 permits all four node counts for the T=4 methods under the ordinary 32-workers/node ceiling; other eligible budgets enter the preceding all-layout placement analysis.
+
+| Method; fixed p/T | Exchange | n1; c32 (ms) | n2; c16 (ms) | n4; c8 (ms) | n8; c4 (ms) |
+| --- | --- | --- | --- | --- | --- |
+| MPI 32/1 | Allgatherv | **36.5** | 56.4 | 74.7 | 103 |
+| MPI 32/1 | Halo | **24.8** | 37.5 | 45.2 | 55.2 |
+| MPI+OpenMP 8/4 | Allgatherv | **18.3** | 39.3 | 55.8 | 62.1 |
+| MPI+OpenMP 8/4 | Halo | **18.7** | 27 | 35.2 | 40.3 |
+| MPI+Kokkos OpenMP 8/4 | Allgatherv | **36.5** | 63.8 | 73.7 | 73.3 |
+| MPI+Kokkos OpenMP 8/4 | Halo | **36.5** | 45.9 | 50.9 | 56.6 |
+
+**More nodes are not free parallelism at fixed pT.** Spreading fixed workers wins only 7%-20% of these contrasts, while logical payload is unchanged. The C=32 table makes the per-node effect explicit: packing 32 workers on one node gives the lowest aggregate time in all six method/exchange rows, although individual graphs can favor spreading. This is consistent with more inter-node messages and progress/synchronization costs replacing shared-memory communication. There are concrete exceptions: Large Uniform MPI p=32/T=1/Halo takes 1.633 s on one node versus 1.470 s on two; Controlled takes 11.800 s on one versus 10.242 s on four, at the same C=32 and payload. More memory channels and changed locality can outweigh communication costs on such inputs. Because n changes physical placement rather than logical ownership here, the result isolates a placement contrast, not a payload reduction or a universal network-only cause.
 
 ### 3.4 Standalone methods and one-to-two-GPU execution
 
@@ -432,13 +492,13 @@ Section 3.7 prints every CPU layout in thread/node-grouped numerical heatmaps, r
 
 All standalone CPU thread counts and GPU results are printed for every graph in Section 3.7, alongside their matched Serial references and distributed counterparts. This complete matrix also exposes one-process MPI overhead without choosing a single thread count as the standalone result.
 
-**MPI device overhead persists at one GPU.** Google CUDA/Kokkos CUDA take 0.115/0.094 s standalone versus 0.243/0.383 s under MPI Allgatherv p=1. The distributed path stages contributions every iteration; input/backend setup is excluded.
+**A genuine conditional dominating choice: standalone at one GPU.** For each of the 45 graphs, standalone CUDA beats MPI+CUDA p=1, and standalone Kokkos CUDA beats MPI+Kokkos CUDA p=1, under both exchanges. The geometric-mean MPI/standalone overhead is 2.52x for CUDA and 3.35x-3.36x for Kokkos. Input, backend initialization and final output copies are excluded consistently; the distributed path nevertheless stages contributions and invokes reductions every iteration, including p=1. Thus this conclusion controls the backend and one-GPU budget; it is not a claim that every distributed layout is slower in every possible workload.
 
 #### 3.4.2 One versus two GPUs on fixed inputs
 
 **Fixed graph; n=p=G changes 1→2**, one A40/process/node, automatic selection, both exchanges. CPU MPI and MPI+OpenMP T=1 on the same node class are layout-matched controls. Each line uses its own one-node reference.
 
-Table 21. Allgatherv GPU comparisons, presented identically for all three large graphs and both backends. Each ratio divides the p=1 median by the p=2 median; values above 1× favor two GPUs. Parentheses give the corresponding p=2 compute/solve seconds. The edge share is a partition statistic.
+Table 25. Allgatherv GPU comparisons, presented identically for all three large graphs and both backends. Each ratio divides the p=1 median by the p=2 median; values above 1× favor two GPUs. Parentheses give the corresponding p=2 compute/solve seconds. The edge share is a partition statistic.
 
 | Large graph | GPU method | Busiest p2 edge share (%) | Compute p1/p2 (×) | Solve p1/p2 (×) |
 | --- | --- | --- | --- | --- |
@@ -449,9 +509,22 @@ Table 21. Allgatherv GPU comparisons, presented identically for all three large 
 | Large controlled | MPI+CUDA | **88.6%** | 1.1× (0.489 s) | 0.882× (0.965 s) |
 | Large controlled | MPI+Kokkos CUDA | **88.6%** | 1.89× (0.955 s) | 1.46× (1.85 s) |
 
-**Uniform balances device work; skewed inputs do not.** Uniform obtains about 2× compute acceleration but MPI limits solve gains. Hub/Controlled leave 87%-89% of edges on one GPU: CUDA compute improves only about 1.1× while communication rises. Larger Kokkos gains are compatible with backend-specific kernel mapping, reduction, and locality costs; edge share is a mechanism, not a universal runtime bound.
+**Why the busiest GPU owns 87%-89% of edges.** Partitioning splits consecutive destination IDs, not edges. With two ranks, the entire first 1% hot-destination block lies in the first half of vertices. This is because the generator places hot edges in that contiguous block, while cold edges spread over the remaining 99%. Its predicted first-partition share is q+(1-q)*(0.50-0.01)/0.99: q=0.75 gives 87.37% for Hub and q=0.775 gives 88.64% for Controlled, matching the measured shares. Uniform has no hot block and is approximately 50/50. Halo changes dependencies transferred, not destination ownership, so it cannot fix this imbalance.
 
-The GPU-node subpanels in Section 3.7 print all 37 configurations per graph, including standalone methods, MPI+OpenMP CPU controls at T=1,2,4,8, all one/two-node choices and both exchanges. GPU kernel threads are independent of host T.
+Uniform nearly halves device compute time, but every rank still receives a full vector under Allgatherv and performs reductions: per-rank staging and communication need not halve. Native CUDA on the concentrated inputs therefore gains only about 1.1x in compute while solve time worsens. Kokkos compute gains near 1.9x do not contradict the edge-share calculation: the edge-only model assumes traversal-dominated work and constant per-edge rate; cache working sets, kernel/reduction mapping and locality can change with the partition. The compute clock also includes vertex passes and reductions, whose local N/p halves at p=2 even when edge work does not. Different proportions of that balanced vertex/reduction work, edge traversal and memory locality can therefore produce different backend gains. The measured compute phase therefore combines balanced vertex work and unbalanced edge work, with backend-dependent timing weights. A larger relative gain also does not imply a faster backend: Hub p=2 is 1.15 s for CUDA versus 2.13 s for Kokkos CUDA.
+
+Table 26. All 45 fixed graphs, matched within each method/exchange. Ratio is geometric mean of p=1/p=2 solve medians; parentheses are p=2 t_geo seconds. GPU-seconds ratio is 2/(time ratio), a solver resource-use proxy, not billing. One GPU/process/node throughout.
+
+| Implementation | Exchange | p1/p2 time ratio | Two GPUs faster | GPU-seconds p2/p1 |
+| --- | --- | --- | --- | --- |
+| MPI+CUDA | Allgatherv | 0.624x (0.0267 s) | 2/45 | 3.2x |
+| MPI+CUDA | Halo | 0.574x (0.029 s) | 1/45 | 3.48x |
+| MPI+Kokkos CUDA | Allgatherv | 0.803x (0.0356 s) | 13/45 | 2.49x |
+| MPI+Kokkos CUDA | Halo | 0.77x (0.0372 s) | 15/45 | 2.6x |
+
+**The large-graph examples are not the collection-wide GPU pattern.** Two GPUs are faster on only 1-2 of 45 native-CUDA graphs and 13-15 Kokkos-CUDA graphs, depending on exchange. Small problems do not amortize staging, launch, synchronization and communication, while concentrated rows limit useful concurrent work. Even the largest observed solve speedups remain below 2x, so the second GPU increases solver GPU-seconds in every measured pair. It can improve selected solve times, but is not a resource-efficient default across this collection.
+
+Section 3.7 includes all 37 GPU-node configurations/graph; device kernel threads are independent of host T.
 
 ### 3.5 Communication strategy and MPI implementation choice
 
@@ -461,9 +534,9 @@ The GPU-node subpanels in Section 3.7 print all 37 configurations per graph, inc
 
 Allgatherv assembles the complete contribution vector each iteration. Halo precomputes exact remote dependencies and exchanges only their current values through Alltoallv. Both retain the same PageRank equations, dangling-mass and convergence reductions. This comparison changes the exchange strategy; the next subsection changes its MPI implementation.
 
-![Figure 4. All 45 graphs, p>1: paired Allgatherv/Halo time ratio (geometric mean, ×; >1 favors Halo) and median logical payload reduction (%). Pairs match graph/method/n/p/T; explicit zero is measured. CPU/GPU-node layout populations differ, so bars are not hardware-only contrasts. Left-bar parentheses give Halo t_geo in ms (k=1,000 ms).](report_assets/figures/05_halo_pairs.png)
+![Figure 5. All 45 graphs, p>1: paired Allgatherv/Halo time ratio (geometric mean, ×; >1 favors Halo) and median logical payload reduction (%). Pairs match graph/method/n/p/T; explicit zero is measured. CPU/GPU-node layout populations differ, so bars are not hardware-only contrasts. Left-bar parentheses give Halo t_geo in ms (k=1,000 ms).](report_assets/figures/05_halo_pairs.png)
 
-Table 22. Populations and statistics behind the communication bars. Speedup is the geometric mean of paired five-run-median ratios. Payload reduction and the fraction of pairs favoring Halo are percentages; they are different statistics. Speedup parentheses show matched-population Halo t_geo in seconds.
+Table 27. Populations and statistics behind the communication bars. Speedup is the geometric mean of paired five-run-median ratios. Payload reduction and the fraction of pairs favoring Halo are percentages; they are different statistics. Speedup parentheses show matched-population Halo t_geo in seconds.
 
 | Node class | Family | Matched pairs | Halo speedup (×) | Payload reduction (%) | Halo faster (%) |
 | --- | --- | --- | --- | --- | --- |
@@ -476,13 +549,13 @@ Table 22. Populations and statistics behind the communication bars. Speedup is t
 | gpu node | Hub | 105 | 0.962× (0.042 s) | 11.6% | 24.8% |
 | gpu node | Controlled | 98 | 0.975× (0.0508 s) | 14.8% | 32.7% |
 
-![Figure 5. Pure MPI T=1, n=max(1,p/32): family-median payload reduction (%) across fixed graphs at each p. Each A/H pair fixes graph/layout. Logical bytes exclude reductions/protocol overhead; this separates p effects from aggregate population differences.](report_assets/figures/15_payload_by_process.png)
+![Figure 6. Pure MPI T=1, n=max(1,p/32): family-median payload reduction (%) across fixed graphs at each p. Each A/H pair fixes graph/layout. Logical bytes exclude reductions/protocol overhead; this separates p effects from aggregate population differences.](report_assets/figures/15_payload_by_process.png)
 
 **GPU Uniform savings are 0.0%, not missing.** Of 105 pairs, 91 save no contribution bytes: at p=2 most partitions require all other-process sources. Large Uniform exchanges 102.4 MB globally per iteration under either strategy. This follows from graph dependencies, not GPU arithmetic.
 
 **Payload savings do not determine runtime.** CPU Google gains 1.89× with 58.6% median payload reduction; synthetic families gain 1.19-1.23× in aggregate, while many cases favor Allgatherv. Packing, collective/reduction latency, imbalance, and device staging remain. Untimed Halo setup cannot cause timed-iteration slowdown.
 
-Table 23. Paired Allgatherv/Halo time ratios on the same six inputs at eight nodes and 256 CPU cores. Each cell holds method, p, and T fixed; ratios above 1× favor Halo. Parentheses give Halo solve seconds; the method columns use different p but the same total C.
+Table 28. Paired Allgatherv/Halo time ratios on the same six inputs at eight nodes and 256 CPU cores. Each cell holds method, p, and T fixed; ratios above 1× favor Halo. Parentheses give Halo solve seconds; the method columns use different p but the same total C.
 
 | Graph; C=256 | MPI p256/T1 (×) | MPI+OMP p64/T4 (×) | MPI+KK p64/T4 (×) |
 | --- | --- | --- | --- |
@@ -493,11 +566,24 @@ Table 23. Paired Allgatherv/Halo time ratios on the same six inputs at eight nod
 | Large hub | **0.943× (9.47 s)** | **1.1× (4.56 s)** | **0.966× (8.89 s)** |
 | Large controlled | **0.959× (6.88 s)** | **1.11× (3.4 s)** | **0.98× (6.37 s)** |
 
+Table 29. All fixed CPU graphs and valid p>1 layouts, stratified by every T: Allgatherv/Halo gain x (Halo t_geo ms); fraction of matched medians favoring Halo. Each pair fixes graph, backend,n,p,T. The pure-MPI result is 1.14x, with Halo faster in 66.5% of 1,035 pairs. Different T groups contain their respective valid layouts, rather than identical p,C populations.
+
+| T | MPI+OMP: gain; Halo faster | MPI+KK OMP: gain; Halo faster | Pairs per method |
+| --- | --- | --- | --- |
+| 1 | 1.15x (62.2 ms); 67.3% | 1.16x (65.8 ms); 67.9% | 1035 |
+| 2 | 1.22x (44.1 ms); 64.1% | 1.22x (57.4 ms); 69.1% | 855 |
+| 4 | 1.30x (32.6 ms); 65.0% | 1.25x (51.2 ms); 68.4% | 675 |
+| 8 | 1.36x (25.7 ms); 68.7% | 1.29x (46 ms); 69.1% | 495 |
+| 16 | 1.26x (23.4 ms); 67.0% | 1.22x (43.8 ms); 70.5% | 315 |
+| 32 | 1.20x (24.8 ms); 67.4% | 1.20x (45.9 ms); 68.1% | 135 |
+
+**Halo is payload-dominant, not universally time-dominant.** Its logical contribution payload never exceeds Allgatherv in these matched cases, but CPU time wins are only about 64%-71% across the threaded groups. On GPU nodes, Halo wins only 24.4% of native-CUDA and 26.7% of Kokkos-CUDA p=2 cases; complete-vector Allgatherv is faster in the majority. This is because sparse dependency lists still require packing, peer scheduling and synchronization, and sometimes retain nearly the complete remote vector. Equal payload removes the volume advantage without removing this extra work. Accordingly, a lower-byte choice can form a two-strategy time/payload tradeoff rather than dominate both objectives.
+
 #### 3.5.2 Default tuned selection versus fixed collective algorithms
 
 **Automatic means rule-driven selection.** Main results keep dynamic_rules=false and algorithm IDs 0: MPI chooses from its compiled tree. Alltoallv uses communicator size p; Allgatherv also uses mean contribution bytes b=8N/p. Nodes n and threads T are not direct selector inputs: they affect p through p=nr and C=pT. This is not online network adaptation. Controls enable dynamic_rules=true and override only the named operation.
 
-Table 24. Local guide to the policies compared below, for installed Open MPI 4.1.8. ID 0 preserves automatic selection; Allgatherv ID 1 is an implementation name, not the automatic mode. Full decision rules appear in Section 2.6.
+Table 30. Local guide to the policies compared below, for installed Open MPI 4.1.8. ID 0 preserves automatic selection; Allgatherv ID 1 is an implementation name, not the automatic mode. The algorithm menu and relevant selection boundaries appear in Section 2.6.
 
 | Exchange / MPI operation | Available tuned IDs | Automatic inputs | Fixed controls here |
 | --- | --- | --- | --- |
@@ -506,7 +592,7 @@ Table 24. Local guide to the policies compared below, for installed Open MPI 4.1
 
 Controls fix graph, layout, binary, affinity, and allocation within each policy comparison. Automatic uses dynamic_rules=0; forced runs use 1 plus one operation override (Section 2.6), not online learning.
 
-Table 25. Primary matched-policy matrix: nine Alltoallv configurations and eighteen Allgatherv configurations. Uniform uses pure MPI; Hub and Controlled use MPI+OpenMP. Each row tests the stated automatic choice plus both forced controls in one allocation, with C=pT=32n. Each configuration has one warm-up and five timed solves.
+Table 31. Primary matched-policy matrix: nine Alltoallv configurations and eighteen Allgatherv configurations. Uniform uses pure MPI; Hub and Controlled use MPI+OpenMP. Each row tests the stated automatic choice plus both forced controls in one allocation, with C=pT=32n. Each configuration has one warm-up and five timed solves.
 
 | Graph | Nodes n | Cores C | Processes p | Threads T | Exchange | Default-rule choice | Forced controls | Configs |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -524,9 +610,9 @@ Table 25. Primary matched-policy matrix: nine Alltoallv configurations and eight
 
 Both Alltoallv algorithms are tested. Allgatherv compares Bruck/Ring around p=8→16; GatherV+Bcast and neighbor exchange are outside this targeted contrast, and two_proc applies only at p=2 (complete menu: Section 2.6).
 
-![Figure 6. Large Uniform Halo; p=C=64/128/256. Automatic versus forced basic_linear/pairwise; five-run solve medians (s), whiskers=min..max (not confidence intervals). Policies share an allocation within p; allocations differ across p. Logarithmic process and time axes; labels give median seconds; green rings/bold labels mark the smallest median at each p. Markers are offset for visibility.](report_assets/figures/11_collective_policies.png)
+![Figure 7. Large Uniform Halo; p=C=64/128/256. Automatic versus forced basic_linear/pairwise; five-run solve medians (s), whiskers=min..max (not confidence intervals). Policies share an allocation within p; allocations differ across p. Logarithmic process and time axes; labels give median seconds; green rings/bold labels mark the smallest median at each p. Markers are offset for visibility.](report_assets/figures/11_collective_policies.png)
 
-Table 26. Uniform Halo / Alltoallv. Same graph, n/p/T and allocation within each row; five-run medians. Columns match the Allgatherv table: automatic time, two forced times, automatic/forced-2 gain and forced-1/forced-2 gain. Gain parentheses give forced-2 seconds. The p=128 contrast is highlighted.
+Table 32. Uniform Halo / Alltoallv. Same graph, n/p/T and allocation within each row; five-run medians. Columns match the Allgatherv table: automatic time, two forced times, automatic/forced-2 gain and forced-1/forced-2 gain. Gain parentheses give forced-2 seconds. The p=128 contrast is highlighted.
 
 | Graph | n / p / T | Automatic (s) | basic_linear (s) | pairwise (s) | Auto/pairwise (×) | linear/pairwise (×) |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -538,9 +624,9 @@ Table 26. Uniform Halo / Alltoallv. Same graph, n/p/T and allocation within each
 
 **The p=128 peak aligns with pairwise→basic_linear→pairwise at p=64/128/256.** The selector sees p, not payload/congestion. Different concurrency, buffering, and progress can change boundary costs. Growing Uniform also peaks at p=128 despite different mean peer payload, supporting a schedule effect beyond one message-size threshold; TCP eager/rendezvous and shared contention may interact.
 
-![Figure 7. Hub/Controlled, MPI+OpenMP Allgatherv: automatic/Bruck/Ring at n=1/2/4,C=32/64/128,T=4,p=C/4. Five-run solve medians (s), whiskers=min..max, common logarithmic time scale; labels give median seconds; green rings/bold labels mark the smallest observed median at each resource point. Policies share each resource-point allocation; markers offset for visibility.](report_assets/figures/12_allgatherv_policies.png)
+![Figure 8. Hub/Controlled, MPI+OpenMP Allgatherv: automatic/Bruck/Ring at n=1/2/4,C=32/64/128,T=4,p=C/4. Five-run solve medians (s), whiskers=min..max, common logarithmic time scale; labels give median seconds; green rings/bold labels mark the smallest observed median at each resource point. Policies share each resource-point allocation; markers offset for visibility.](report_assets/figures/12_allgatherv_policies.png)
 
-Table 27. Hub/Controlled Allgatherv. Identical column roles and five-run statistic to the Alltoallv table; forced alternatives are now Bruck and Ring. C=pT=32/64/128, T=4. Gain parentheses give Ring seconds. Amber/green highlights the C=64 Bruck/Ring contrast.
+Table 33. Hub/Controlled Allgatherv. Identical column roles and five-run statistic to the Alltoallv table; forced alternatives are now Bruck and Ring. C=pT=32/64/128, T=4. Gain parentheses give Ring seconds. Amber/green highlights the C=64 Bruck/Ring contrast.
 
 | Graph | n / p / T | Automatic (s) | Bruck (s) | Ring (s) | Auto/Ring (×) | Bruck/Ring (×) |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -553,7 +639,7 @@ Table 27. Hub/Controlled Allgatherv. Identical column roles and five-run statist
 
 **At C=64, Ring already matches automatic; Bruck is slower.** Hub: automatic/Ring/Bruck = 5.022/5.010/5.550 s; Controlled: 3.886/3.884/4.294 s. At C=32 automatic matches Bruck. Unlike Uniform p=128, switching back does not help this boundary.
 
-Table 28. Default-policy node-boundary context from the same diagnostic matrix. Each ratio compares two nodes/64 cores with one node/32 cores. MPI uses T=1 and MPI+OpenMP and MPI+Kokkos OpenMP T=4; graph structure and policy are unchanged. Parentheses give the C=64 solve seconds; values above 1 indicate slowdown, not speedup.
+Table 34. Default-policy node-boundary context from the same diagnostic matrix. Each ratio compares two nodes/64 cores with one node/32 cores. MPI uses T=1 and MPI+OpenMP and MPI+Kokkos OpenMP T=4; graph structure and policy are unchanged. Parentheses give the C=64 solve seconds; values above 1 indicate slowdown, not speedup.
 
 | Method | Exchange | Hub: time64/time32 (×) | Controlled: time64/time32 (×) |
 | --- | --- | --- | --- |
@@ -632,15 +718,15 @@ Table 28. Default-policy node-boundary context from the same diagnostic matrix. 
 | strong_controlled | MPI+Kokkos OpenMP | 2 | 16 | 4 | halo | default |  | 11.374036790000005 | 11.269637752000001 | 11.639396341999998 |
 | strong_uniform | MPI | 8 | 256 | 1 | halo | a2av_pairwise | ompi_core | 2.974793788000003 | 2.928389436 | 3.0394080830000014 |
 | strong_uniform | MPI | 8 | 256 | 1 | halo | a2av_pairwise | pin_wrapper | 3.110986186 | 2.978606450000001 | 4.508686406999999 |
-### 3.6 Growing graph size together with resources
+### 3.6 Growing inputs: scaling cost and endpoint choices
 
-#### 3.6.1 Constant nominal work per CPU core
+#### 3.6.1 CPU work growth and all-thread endpoint tradeoffs
 
-**Constant nominal work/core:** at C=4/8/16/32/64/128/256, all methods use N=50,000C,E=800,000C. MPI p=C,T=1; MPI+OpenMP and MPI+Kokkos OpenMP p=C/4,T=4. The common C=4 input/core reference permits matched efficiency comparisons; original rank-based p=1 references remain in the data.
+**Measured growing-input scope.** CPU growth runs use T=1 for MPI, T=1/T=4 for MPI+Kokkos OpenMP, and T=4 for MPI+OpenMP. The fixed-input experiment independently crosses all six thread counts; it is not restricted to the growth-suite settings. The figure includes every available CPU method/thread series with common N=50,000C,E=800,000C at C=4..256, including Kokkos T=1 from the rank-normalized records. Each curve uses its own C=4 reference; the complete rank-normalized tables retain their original p=1 reference. Rebaselining changes the efficiency percentage, not the measured time. Thus its conclusions concern these measured growth paths; Section 3.3.3 evaluates thread-decomposition consistency using all fixed-input layouts.
 
-Table 29. Common growing-input CPU matrix. All three families and both Allgatherv/Halo settings use every row. Node count follows n=max(1,C/32); the per-core vertex and edge counts remain fixed.
+Table 35. Complete matched-work/core CPU growth matrix. MPI and Kokkos T=1 use p=C; OpenMP and Kokkos T=4 use p=C/4. All three families and both exchanges use every row. Node count follows n=max(1,C/32); the per-core vertex and edge counts remain fixed.
 
-| Active cores C | Vertices N | Directed edges E | MPI p / T | MPI+OpenMP / MPI+Kokkos p / T |
+| Active cores C | Vertices N | Directed edges E | MPI / MPI+KK T1 p/T | MPI+OMP / MPI+KK T4 p/T |
 | --- | --- | --- | --- | --- |
 | 4 | 200,000 | 3,200,000 | 4 / 1 | 1 / 4 |
 | 8 | 400,000 | 6,400,000 | 8 / 1 | 2 / 4 |
@@ -650,31 +736,55 @@ Table 29. Common growing-input CPU matrix. All three families and both Allgather
 | 128 | 6,400,000 | 102,400,000 | 128 / 1 | 32 / 4 |
 | 256 | 12,800,000 | 204,800,000 | 256 / 1 | 64 / 4 |
 
-![Figure 8. N=50,000C,E=800,000C. Top: iteration time (ms); bottom: efficiency relative to own C=4 iteration time (%). MPI T=1, MPI+OpenMP and MPI+Kokkos OpenMP T=4; A/H line styles and scales match across panels. Ideal growth gives flat time and 100% efficiency; points derive from five-run medians. Efficiency-panel labels give measured iteration ms, prefixed A/H (k=1,000 ms). Green rings mark lowest iteration time above and highest retained efficiency below; these are distinct criteria.](report_assets/figures/07_core_weak.png)
+![Figure 9. Left: all measured common-work/core growth paths (four method/thread settings × two exchanges = eight curves per graph family), C=4..256, N=50,000C, E=800,000C. Right: all 26 MPI-based CPU options per family at the largest input, n=8/C=256 (2 pure MPI + 12 MPI+OpenMP + 12 MPI+Kokkos OpenMP; T=1/2/4/8/16/32). Axes use logarithmic spacing: equal distances mean equal ratios, while ticks show actual values. Left y: iteration ms; right x: global logical MB/iteration and y: iteration ms. A/H and color/shape/fill meanings are printed in the legend. Green marks lowest time on the left and the time/payload Pareto set on the right. The right panel reuses fixed-input results. Efficiency is tabulated because it is the normalized inverse of iteration time.](report_assets/figures/07_core_weak.png)
 
-Table 30. Retained per-iteration efficiency at 256 CPU cores, using the common C=4 reference of the preceding figure. Each percentage divides its C=4 iteration time by its C=256 iteration time; no Serial baseline enters. Parentheses give the measured C=256 iteration ms; bold compares Allgatherv/Halo within each row; green marks the best retained efficiency within each family, not the lowest absolute runtime.
+Table 36. All six thread counts on the common largest CPU input, C=256/n=8 fixed. OMP/KK mean MPI+OpenMP/MPI+Kokkos OpenMP. Payload depends on graph,p,exchange and is identical across these backends at matched layout. Bold compares exchanges within a method; green marks minimum iteration time within family. These reuse fixed-budget endpoint data from Section 3.7; the preceding paragraph defines the measured growth paths.
 
-| Family | Method | Allgatherv efficiency (%) | Halo efficiency (%) |
-| --- | --- | --- | --- |
-| Uniform | MPI | 1.93% (95.1 ms) | **5.16% (44.2 ms)** |
-| Uniform | MPI+OpenMP | **4.18% (50 ms)** | 3.80% (55.5 ms) |
-| Uniform | MPI+Kokkos OpenMP | 3.63% (62.6 ms) | **3.66% (60.7 ms)** |
-| Hub | MPI | **0.63% (651 ms)** | 0.58% (678 ms) |
-| Hub | MPI+OpenMP | 0.79% (349 ms) | **0.97% (281 ms)** |
-| Hub | MPI+Kokkos OpenMP | **1.41% (485 ms)** | 1.21% (496 ms) |
-| Controlled | MPI | **0.56% (545 ms)** | 0.55% (580 ms) |
-| Controlled | MPI+OpenMP | 0.66% (310 ms) | **0.86% (251 ms)** |
-| Controlled | MPI+Kokkos OpenMP | **1.09% (404 ms)** | 0.83% (530 ms) |
+| Family | T | p | Payload A / H (global MB/iter) | OMP A (ms/iter) | OMP H (ms/iter) | KK A (ms/iter) | KK H (ms/iter) |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Uniform | 1 | 256 | 2.61e+04 / 1.63e+03 | 88.9 | **45.7** | 117 | **47.8** |
+| Uniform | 2 | 128 | 1.3e+04 / 1.63e+03 | **57.4** | 403 | **78.4** | 400 |
+| Uniform | 4 | 64 | 6.45e+03 / 1.61e+03 | **46.8** | 58.6 | **59.8** | 66.1 |
+| Uniform | 8 | 32 | 3.17e+03 / 1.36e+03 | **43.2** | 159 | **54** | 179 |
+| Uniform | 16 | 16 | 1.54e+03 / 1.04e+03 | **57.5** | 71.9 | **71.8** | 79.6 |
+| Uniform | 32 | 8 | 717 / 717 | **66.8** | 89.5 | **80.5** | 96.7 |
+| Hub | 1 | 256 | 2.61e+04 / 680 | **775** | 798 | **771** | 802 |
+| Hub | 2 | 128 | 1.3e+04 / 575 | **631** | 1.02e+03 | **672** | 1.06e+03 |
+| Hub | 4 | 64 | 6.45e+03 / 448 | 360 | **326** | **613** | 635 |
+| Hub | 8 | 32 | 3.17e+03 / 364 | **212** | 216 | 601 | **586** |
+| Hub | 16 | 16 | 1.54e+03 / 311 | **107** | 131 | **600** | 601 |
+| Hub | 32 | 8 | 717 / 262 | 108 | **72.2** | 610 | **606** |
+| Controlled | 1 | 256 | 2.61e+04 / 614 | 1.28e+03 | **1.14e+03** | 1.31e+03 | **1.15e+03** |
+| Controlled | 2 | 128 | 1.3e+04 / 529 | **550** | 818 | **626** | 935 |
+| Controlled | 4 | 64 | 6.45e+03 / 418 | 315 | **283** | **520** | 531 |
+| Controlled | 8 | 32 | 3.17e+03 / 350 | **179** | 184 | 476 | **474** |
+| Controlled | 16 | 16 | 1.54e+03 / 305 | **115** | 115 | **458** | 502 |
+| Controlled | 32 | 8 | 717 / 260 | 88.5 | **82.3** | 458 | **447** |
+
+Table 37. Observed time/payload Pareto sets among all 26 MPI-based options at the same C=256/n=8. No competitor is faster with no more payload (or lower payload with no greater time). Iteration and solve-time rankings agree because I is identical within each graph. This is a matched-budget comparison, not a cross-budget optimum.
+
+| Large input | Nondominated method | p / T | Exchange | Iteration (ms) | Global payload (MB/iter) |
+| --- | --- | --- | --- | --- | --- |
+| Large uniform | MPI+OpenMP | 8 / 32 | Allgatherv | 66.8 | 717 |
+| Large uniform | MPI+OpenMP | 16 / 16 | Allgatherv | 57.5 | 1.54e+03 |
+| Large uniform | MPI+OpenMP | 32 / 8 | Allgatherv | 43.2 | 3.17e+03 |
+| Large uniform | MPI+OpenMP | 256 / 1 | Halo | 45.7 | 1.63e+03 |
+| Large hub | MPI+OpenMP | 8 / 32 | Halo | 72.2 | 262 |
+| Large controlled | MPI+OpenMP | 8 / 32 | Halo | 82.3 | 260 |
+
+**Conditional domination exists, but not everywhere.** At C=256/n=8, 14/45 graphs have one option that dominates all 25 alternatives; the other 31 retain a time/payload tradeoff. Large Hub and Controlled each select MPI+OpenMP p=8/T=32/Halo: about 1.011/0.988 s per solve and 262/260 global MB per iteration. Fewer ranks reduce replicated communication and dynamic local chunks redistribute the hot rows across 32 threads. Uniform instead has four nondominated choices: its fastest option uses about 3,174 MB/iteration, while the lowest-payload option uses 717 MB but is slower. Thus fixing a resource budget does not produce one universal best exchange or thread count. This optimum is conditional on C=256/n=8: standalone OpenMP T=32 takes only 0.704/0.537 s for Hub/Controlled with 32 cores and zero MPI payload, dominating their C=256 candidates across budgets. The fixed-budget frontier chooses among allocations already held fixed; it is not evidence that allocating 256 cores is preferable. These statements concern observed medians; the all-layout tables give the broader evidence.
 
 **Iteration time rises despite constant nominal work/core.** Uniform retains 1.9%-5.2% efficiency at C=256; concentrated inputs retain less. Each method uses its own C=4 time, so higher efficiency need not mean lower absolute time. With N proportional to p, Allgatherv traffic grows as p per process and p² globally; Hub/Controlled additionally retain edge imbalance.
 
-![Figure 9. Growing Uniform, pure MPI T=1: N=50,000p,E=800,000p. Left: logical payload (MB/rank/iteration); right: median MPI/wait divided by iterations (ms/iteration). Log-log axes; bytes exclude reductions/transport overhead. Green rings mark the lower payload/time at the same p; labels report MB/rank/iteration on the left and ms/iteration on the right.](report_assets/figures/14_growing_communication.png)
+**Why growing skewed graphs degrade more.** Constant N/C and E/C control average work, not the slowest worker. The hot block occupies h=1% of IDs: while p<=100, all hot destinations fit in one MPI partition, so its hot-edge work grows with total E rather than remaining E/p. Once the block spans multiple partitions, the max/mean edge-work ratio remains near q/h=75 or 77.5. This explains a structural synchronization penalty beyond the growing communication volume. T=4 with dynamic local scheduling can distribute hot rows inside their owner; changing Halo payload alone cannot redistribute ownership. These observations describe the measured T=1/T=4 growth paths; the separate all-T fixed-input study tests decomposition effects over the full thread range.
+
+![Figure 10. Growing Uniform, pure MPI T=1: N=50,000p,E=800,000p. Left: logical payload (MB/rank/iteration); right: median MPI/wait divided by iterations (ms/iteration). Log-log axes; bytes exclude reductions/transport overhead. Green rings mark the lower payload/time at the same p; labels report MB/rank/iteration on the left and ms/iteration on the right.](report_assets/figures/14_growing_communication.png)
 
 **Reading the figure: rank means one MPI process; p is the number of ranks, not the number of threads.** Here pure MPI uses T=1, so p=128 also means 128 active CPU cores, configured across four nodes. Payload is the logical volume of contribution values delivered per iteration, averaged over ranks: MB/rank/iteration, with MB=10^6 bytes. It excludes reductions, protocol overhead and one-time request metadata; it is neither bandwidth nor elapsed time.
 
-**The 128-rank Halo peak is communication-policy sensitive.** Halo MPI/wait is 17.28, 271.01 and 38.07 ms/iteration at p=64,128,256, while payload is nearly constant at 6.30,6.35,6.37 MB/rank/iteration. The installed Alltoallv rule switches pairwise -> basic_linear -> pairwise at these process counts. In the separate allocation-matched fixed Large Uniform control at p=128, automatic/basic_linear take 4.134/4.129 s, versus 0.886 s for pairwise (4.66x faster than automatic). This directly establishes sensitivity to the selected collective and supports the rule transition as an explanation for the growing-input peak. Request concurrency, MPI progress, buffering and shared-fabric conditions can also affect its amplitude; the fixed-input control uses N=12.8M, whereas the growing p=128 point uses N=6.4M.
+**The 128-rank Halo peak is communication-policy sensitive.** Halo MPI/wait is 17.28, 271.01 and 38.07 ms/iteration at p=64,128,256, while payload is nearly constant at 6.30,6.35,6.37 MB/rank/iteration. The installed Alltoallv rule switches pairwise -> basic_linear -> pairwise at these process counts. In the separate allocation-matched fixed Large Uniform control at p=128, automatic/basic_linear take 4.134/4.129 s, versus 0.886 s for pairwise (4.66x faster than automatic). This directly establishes sensitivity to the selected collective and supports the rule transition as an explanation for the growing-input peak. Request concurrency, MPI progress, buffering and shared-fabric conditions can also affect its amplitude; the fixed-input control uses N=12.8M, whereas the growing p=128 point uses N=6.4M. Kokkos T=1 Halo independently shows iteration times 25.5/278.5/53.9 ms at p=64/128/256. The common communicator-count peak across the two CPU drivers, rather than across all curves at C=128, further supports a collective-policy mechanism.
 
-Table 31. Matched contribution volume and communication duration for growing Uniform. Rows compare the two exchanges at the same graph and process count; per-iteration quantities, not total job traffic. Amber marks p=256 costs despite bounded Halo bytes.
+Table 38. Matched contribution volume and communication duration for growing Uniform. Rows compare the two exchanges at the same graph and process count; per-iteration quantities, not total job traffic. Amber marks p=256 costs despite bounded Halo bytes.
 
 | Processes p | Exchange | Payload (MB/rank/iteration) | MPI + waiting (ms/iteration) |
 | --- | --- | --- | --- |
@@ -691,24 +801,35 @@ Table 31. Matched contribution volume and communication duration for growing Uni
 
 #### 3.6.2 Constant nominal work per GPU or MPI process
 
-**GPU-node work/resource growth:** n=p=1→2, N=50,000p,E=800,000p, one GPU/process for device methods; CPU controls retain T=1. Efficiency uses each method/exchange's p=1 iteration time. This one-to-two-resource ratio has a different reference from CPU C=4→256.
+**GPU-node work/resource growth:** n=p=1→2, N=50,000p,E=800,000p, one GPU/process for device methods; MPI controls use T=1; MPI+OpenMP controls span T=1/2/4/8. Efficiency uses each method/thread/exchange's p=1 iteration time. This one-to-two-resource ratio has a different reference from CPU C=4→256.
 
-Table 32. GPU-node growth; same columns as the CPU table. n=p=1→2, T=1; one GPU/device process. Cells give own-reference efficiency (p=2 ms/iteration); CPU controls use no GPU. This p=1 reference differs from CPU C=4→C=256. Bold marks the higher efficiency per row; green marks the highest efficiency per family.
+Table 39. Every distributed GPU-node growth setting: n=p=1 to 2; all measured CPU-control T values. Cells: own p=1-reference efficiency (p=2 iteration ms). Device rows use one GPU/rank, CPU controls use none. Bold selects within row; green selects retained efficiency within family, not fastest absolute time.
 
-| Family | Method | Allgatherv efficiency (%) | Halo efficiency (%) |
+| Family | Method / T | Allgatherv efficiency (%) | Halo efficiency (%) |
 | --- | --- | --- | --- |
-| Uniform | MPI | **71.3% (1.26 ms)** | 62.2% (1.41 ms) |
-| Uniform | MPI+OpenMP | **76.5% (1.17 ms)** | 72.9% (1.22 ms) |
-| Uniform | MPI+CUDA | **40.3% (0.48 ms)** | 38.8% (0.507 ms) |
-| Uniform | MPI+Kokkos CUDA | **44.8% (0.551 ms)** | 41.6% (0.587 ms) |
-| Hub | MPI | **59.0% (1.6 ms)** | 55.9% (1.66 ms) |
-| Hub | MPI+OpenMP | **56.7% (1.66 ms)** | 53.2% (1.71 ms) |
-| Hub | MPI+CUDA | **59.6% (0.9 ms)** | 57.8% (0.953 ms) |
-| Hub | MPI+Kokkos CUDA | **58.1% (1.04 ms)** | 57.6% (1.02 ms) |
-| Controlled | MPI | **54.6% (1.73 ms)** | 50.0% (1.86 ms) |
-| Controlled | MPI+OpenMP | **59.8% (1.59 ms)** | 52.1% (1.78 ms) |
-| Controlled | MPI+CUDA | **59.8% (0.87 ms)** | 54.6% (0.979 ms) |
-| Controlled | MPI+Kokkos CUDA | **64.0% (0.91 ms)** | 55.1% (1.04 ms) |
+| Uniform | MPI T1 | **71.3% (1.26 ms)** | 62.2% (1.41 ms) |
+| Uniform | MPI+OpenMP T1 | **76.5% (1.17 ms)** | 72.9% (1.22 ms) |
+| Uniform | MPI+OpenMP T2 | **64.2% (0.835 ms)** | 51.6% (1.03 ms) |
+| Uniform | MPI+OpenMP T4 | **55.3% (0.551 ms)** | 35.9% (0.842 ms) |
+| Uniform | MPI+OpenMP T8 | 37.2% (0.494 ms) | **37.9% (0.481 ms)** |
+| Uniform | MPI+CUDA T1 | **40.3% (0.48 ms)** | 38.8% (0.507 ms) |
+| Uniform | MPI+Kokkos CUDA T1 | **44.8% (0.551 ms)** | 41.6% (0.587 ms) |
+| Hub | MPI T1 | **59.0% (1.6 ms)** | 55.9% (1.66 ms) |
+| Hub | MPI+OpenMP T1 | **56.7% (1.66 ms)** | 53.2% (1.71 ms) |
+| Hub | MPI+OpenMP T2 | **49.2% (1.12 ms)** | 44.1% (1.23 ms) |
+| Hub | MPI+OpenMP T4 | **43.4% (0.711 ms)** | 42.7% (0.718 ms) |
+| Hub | MPI+OpenMP T8 | 33.4% (0.564 ms) | **35.0% (0.535 ms)** |
+| Hub | MPI+CUDA T1 | **59.6% (0.9 ms)** | 57.8% (0.953 ms) |
+| Hub | MPI+Kokkos CUDA T1 | **58.1% (1.04 ms)** | 57.6% (1.02 ms) |
+| Controlled | MPI T1 | **54.6% (1.73 ms)** | 50.0% (1.86 ms) |
+| Controlled | MPI+OpenMP T1 | **59.8% (1.59 ms)** | 52.1% (1.78 ms) |
+| Controlled | MPI+OpenMP T2 | 46.1% (1.19 ms) | **48.8% (1.12 ms)** |
+| Controlled | MPI+OpenMP T4 | 44.0% (0.711 ms) | **44.5% (0.693 ms)** |
+| Controlled | MPI+OpenMP T8 | **39.3% (0.531 ms)** | 35.9% (0.524 ms) |
+| Controlled | MPI+CUDA T1 | **59.8% (0.87 ms)** | 54.6% (0.979 ms) |
+| Controlled | MPI+Kokkos CUDA T1 | **64.0% (0.91 ms)** | 55.1% (1.04 ms) |
+
+**Growth efficiency and absolute time answer different questions.** For Uniform at p=2, CPU MPI+OpenMP T=1 retains 76.5% at 1.17 ms/iteration, whereas CUDA retains only 40.3% but takes 0.48 ms/iteration. CUDA is faster in absolute time; OpenMP loses a smaller fraction relative to its own p=1 reference. This is because a faster reference leaves the same added communication latency as a larger fraction of its baseline. Comparing efficiencies alone would reverse the practical time ranking.
 
 Standalone cases keep one node/device at both input sizes: 54 fixed-resource size controls, not resource-scaling efficiencies. They accompany the 318 scaled cases with their original layouts/reference definitions.
 
@@ -20759,34 +20880,40 @@ Standalone cases keep one node/device at both input sizes: 54 fixed-resource siz
 
 ### 4.1 What the experiments establish
 
-**Workload structure determines the useful backend and parallel degree.** Standalone OpenMP/Kokkos OpenMP wins 42/45 CPU-node graphs; only 2 winning cases use multiple ranks. Standalone CUDA/Kokkos CUDA wins all device-only comparisons. Including GPU-node CPU controls gives OpenMP/CUDA/Kokkos CUDA 18/11/16 wins. These are cross-budget optima; matched layouts separately show that larger balanced work benefits from extra participants, while small/skewed inputs favor fewer processes.
+**The best implementation depends on graph structure and the resource budget.** On CPU nodes, standalone OpenMP/Kokkos OpenMP is fastest in 42/45 graph comparisons; standalone CUDA/Kokkos CUDA wins every device-only comparison. Including GPU-node CPU controls gives OpenMP/CUDA/Kokkos CUDA 18/11/16 wins. These cross-budget winners answer “which completed solve is fastest?” At equal cores, higher thread counts usually reduce time and never increase logical payload in the matched MPI layouts, but no split wins every graph/mode. The complete tables quantify exceptions.
 
-Edge ownership is the dominant structural constraint: equal vertex partitions leave 29%-30% of skewed edges on one process at p=256. Local scheduling and p/T determine useful core participation; Halo does not rebalance ownership.
+**Threading can improve time without increasing communication.** Across all 45 graphs and matched full-node CPU budgets, moving from T=1 to T=32 improves the geometric-mean MPI+OpenMP time by 3.63× for Allgatherv and 4.72× for Halo; MPI+Kokkos OpenMP improves by 1.84× and 2.37×. The payload is unchanged or lower because fewer ranks exchange contributions. Dynamic OpenMP chunks also redistribute expensive destination rows within their owner, whereas changing the MPI exchange alone does not alter ownership. These are broad observed tendencies with per-graph exceptions, not a universal best T.
 
-Communication volume alone predicts neither runtime nor multi-GPU benefit. Packing, collective schedules, synchronization, and staging remain; the matched p=128 pairwise control improves Uniform by 4.66×, without establishing a universal best collective.
+**Graph ordering and work ownership explain the strongest structural contrast.** At p=256, contiguous equal-vertex partitions balance Uniform edges to within 0.2%, but the hot destination block places about 29%-30% of Hub/Controlled edges on one rank. This is why reducing bytes with Halo cannot remove the skew penalty: it changes which source values move, not which rank owns the expensive destination rows. Thread scheduling can share those rows among local workers, while MPI-level re-partitioning would be needed to change cross-rank ownership.
+
+**Time and communication payload form a tradeoff, not one ranking.** At the fixed C=256 endpoint, Hub and Controlled each have one MPI+OpenMP T=32/Halo option that is both the fastest and lowest-payload choice among the 26 MPI-based options. Uniform retains four nondominated choices: the fastest uses about 3,174 global MB/iteration, while the lowest-payload choice uses about 717 MB and takes longer. Across all 45 graphs, only 14 have a single option dominating the other 25; the rest expose a time/payload tradeoff. The Pareto comparison is conditional on the same graph and C=256/n=8 budget.
+
+**Adding resources does not guarantee proportional benefit.** Large Uniform takes 0.540 s with 32 OpenMP cores and 0.519 s for the fastest MPI-based C=256 option: a 1.04× time gain for 7.68× active core-seconds. The fastest C=256 choice therefore should not be read as an allocation recommendation. Similarly, two GPUs do not halve solve time: every two-GPU solve is below 2× speedup, and GPU-seconds increase. Complete-solve timing correctly exposes communication and staging costs that a kernel-only comparison would miss.
+
+**Collective selection is a measurable performance factor.** Open MPI’s fixed rules select Alltoallv pairwise at p=64 and 256 but basic_linear at p=128; the matched p=128 fixed-input Uniform control is 4.66× faster with pairwise than automatic. The growing Uniform peak and the independent Kokkos T=1 peak at p=128 are consistent with this communicator-count boundary. The same control also shows why the result is conditional: collective choice affects the measured path, while request concurrency, progress and fabric conditions influence its realized cost.
 
 ### 4.2 Design implications supported by the experiments
 
 Choose optimizations by the measured bottleneck:
 
-Table 33. Practical implications of the measured cases. These are workload-dependent design choices, not claims that one backend or communication implementation is universally optimal.
+Table 40. Practical implications of the measured cases. These are conditional observed advantages. All-thread win rates and exceptions appear in Section 3.3.3, all-T communication rates in Section 3.5.1, and measured growth paths in Section 3.6; no row asserts a universal dominant strategy.
 
 | Workload or decision | Evidence-based implication | Basis in the results |
 | --- | --- | --- |
 | Small or moderate fixed graph | Evaluate a single-node backend before increasing MPI participation. | Standalone OpenMP/Kokkos OpenMP is fastest in 42 of 45 CPU-node best-observed comparisons. |
-| Large, balanced graph | Consider distributed execution and compare both exact exchanges at the target layout. | Large Uniform benefits from MPI resources; the selected 256-core Halo point reaches 28.6× Serial speedup. |
+| Large, balanced graph | Compare against the best smaller backend and charge the active-resource cost. | Large Uniform improves 0.540 to 0.519 s with 32 to 256 cores: 1.041x time gain for 7.68x active core-seconds; Serial-relative speedup alone hides this tradeoff. |
 | Concentrated incoming-edge work | Prioritize ownership balance and local scheduling; compare p/T at equal cores. | One process owns roughly 29%-30% of edges at p256. Changing the fixed-core split improves aggregate Halo ratios by over an order of magnitude. |
 | Collective-selection boundary | Retain the automatic baseline and test candidate implementations within matched allocations. | At p128 pairwise improves Uniform by 4.66×; at 64 cores Ring already matches or improves on Bruck for the tested concentrated graphs. |
-| Adding a second GPU | Measure end-to-end solve and staging/MPI costs alongside device computation. | Uniform obtains about 2× computation acceleration, while concentrated inputs leave most edge work on one GPU. |
-| Graph size grows with resources | Track iteration time and contribution volume separately from nominal vertices/edges per worker. | Allgatherv contribution traffic grows with the global vector; Halo bounds Uniform bytes but does not eliminate peer and synchronization costs. |
+| Adding a second GPU | Measure complete solver time and staging/MPI costs alongside device computation. | Uniform obtains about 2× computation acceleration, while concentrated inputs leave most edge work on one GPU. |
+| Graph size grows with resources | Track iteration time and contribution volume separately from nominal vertices/edges per worker. | Allgatherv contribution traffic grows with the global vector; Halo bounds Uniform bytes on the measured growth path but does not eliminate peer and synchronization costs. |
 
 Google's scores are concentrated and strongly associated with incoming links, though degree alone is not the weighting rule. Numerical agreement preserves this data conclusion across backends.
 
 ### 4.3 Study scope, timing definition and interpretation
 
-The chosen scope is synchronous uniform-preference PageRank on the stated directed graphs, generator families and vertex orderings. Vanda comparisons use Platinum 8452Y and one/two A40 GPUs; the five C=512 records form one small-graph example. Solver timing includes iteration work, MPI and staging, while excluding input, graph distribution and one-time setup. These choices define the question being measured.
+The chosen scope is synchronous uniform-preference PageRank on the stated directed graphs, generator families and vertex orderings. Vanda comparisons use Platinum 8452Y and one/two A40 GPUs; the five C=512 records use c64 and form one small-graph example, separate from ordinary c32 distributed scaling. Solver timing includes iteration work, MPI and staging, while excluding input, graph distribution and one-time setup. These choices define the question being measured.
 
-Comparisons measure the implemented partitioning, scheduling and data-movement paths together, not intrinsic framework overhead. Five repeats describe within-allocation variability; cross-allocation placement, NUMA and shared-fabric conditions can also affect timings. Best-observed overview cells may use different resource budgets; fixed-layout and equal-core results provide the matched comparisons.
+Comparisons measure the implemented partitioning, scheduling and data-movement paths together, not intrinsic framework overhead. Five repeats describe within-allocation variability; cross-allocation placement, NUMA and shared-fabric conditions can also affect timings. Green best-observed cells may use different resource budgets; fixed-layout and equal-core results provide the matched comparisons.
 
 Repository [5] contains source, input generators, original timings, independent proofs, and selection records; its tables/figures regenerate without new performance runs.
 
