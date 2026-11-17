@@ -4,7 +4,7 @@
 
 C++17 implementations of synchronous, uniform-preference PageRank: Serial, OpenMP, MPI, MPI+OpenMP, CUDA, Kokkos OpenMP/CUDA, MPI+CUDA, and MPI+Kokkos. Every MPI implementation supports complete-vector **Allgatherv** and exact selective **Halo** exchange.
 
-The published results contain **45 fixed graphs and 19,530 configurations**, **372 growing-input configurations/controls**, **59 matched collective-policy/context/binding configurations**, and **five additional 512-core measurements**. Each configuration uses one warm-up and five timed solves; reported times are their median. Cross-graph speedup summaries explicitly use geometric means of matched ratios.
+The published results contain **45 fixed graphs and 19,530 configurations**, **372 growing-input configurations/controls**, **59 matched collective-policy/context/binding configurations**, and **five additional 512-core measurements**. Each configuration uses one warm-up and five timed solves; reported times are their median. Cross-graph speedup summaries explicitly use geometric means of matched ratios. The report combines full runtime tables with Serial-relative heatmap colors: cell numbers are seconds; bold, outlined cells mark the fastest observed method within each graph and node class.
 
 ## Repository
 
